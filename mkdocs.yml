@@ -1,0 +1,11 @@
+site_name: DAQ Software Suite
+site_url: https://dune-daq.github.io/dont-readme 
+edit_uri: ""
+repo_url: https://github.com/DUNE-DAQ/dont-readme
+repo_name: DUNE-DAQ
+theme:
+  name: material
+
+# nav:
+    # - Home: 'Home.md'
+    # ll- About: 'about.md'
