@@ -1,6 +1,6 @@
 # DUNE DAQ Software Documentation Home
 
-To learn how to build an existing software package repo, take a look at the [daq-buildtools documentation](link_doesnt_exist_yet)
+To learn how to build an existing software package repo, take a look at the [daq-buildtools documentation](packages/daq-buildtools/README.md)
 
 To learn how to create a new package or modify the build of an existing one, take a look at the [daq-cmake documentation](link_doesnt_exist_yet)
 
