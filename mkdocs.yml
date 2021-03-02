@@ -1,5 +1,6 @@
 site_name: DUNE DAQ Software Documentation Home
 nav:
     - Home: README.md
+    - Packages:
 
 theme: mkdocs
