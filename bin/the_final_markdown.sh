@@ -5,9 +5,11 @@ tag=dunedaq-v2.2.0
 
 curl -O https://raw.githubusercontent.com/DUNE-DAQ/daq-release/develop/configs/$tag/release_manifest
 
-package_list=$( sed -r -n '/^dune_packages=\(/,/\)/{s/^\s*"(\S+)\s+\S+\s+\S+\s*$/\1/p}' release_manifest | tr "\n" " " | tr "_" "-")
-package_list="$package_list daq-buildtools"
-rm -f release_manifest
+#package_list=$( sed -r -n '/^dune_packages=\(/,/\)/{s/^\s*"(\S+)\s+\S+\s+\S+\s*$/\1/p}' release_manifest | tr "\n" " " | tr "_" "-")
+#package_list="$package_list daq-buildtools"
+#rm -f release_manifest
+package_list="appfwk cmdlib daq-buildtools daq-cmake daqdemos dataformats dfmessages dfmodules ers ipm listrev logging minidaqapp nwqueueadapters opmonlib rcif readout restcmd serialization trigemu"
+
 
 packages_dir="$here/../docs/packages"
 mkdir -p $packages_dir
