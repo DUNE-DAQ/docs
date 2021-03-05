@@ -23,6 +23,20 @@ else
     exit 3
 fi
 
+# JCF, Mar-5-2021
+
+# What I've discovered is that GitHub wiki pages recognize
+# indentations of three characters as implying a sublevel in a ToC,
+# but MkDocs doesn't. Furthermore, if a line starts with a bullet (*),
+# MkDocs won't interpret it as a bullet unless there's an empty line
+# above it.
+
+function rinse() {
+
+    sed -r -i 's/^(\*.*)$/\n\1/;s/^ {3,4}(\*.*)/    \1/;;s/^ {5,}(\*.*)/        \1/' $1
+
+}
+
 for package in $package_list ; do
     
     cd $tmpdir
@@ -58,6 +72,7 @@ for package in $package_list ; do
 
 	for mdfile in $( find $packages_dir/$package -name "*.md" ); do
 	    echo "Handling $mdfile"
+	    rinse $mdfile
 	    pagename=$( echo $mdfile | sed -r 's!^.*/(.*).md$!\1!' )
 	    mdfile_relative=$( echo $mdfile | sed -r 's!^.*/docs/(.*)!\1!' )
 	    sed -r -i '/^\s*-\s*'$package'\s*:.*/a \          - '$pagename': '$mdfile_relative $here/../mkdocs.yml
@@ -67,6 +82,7 @@ for package in $package_list ; do
 	if [[ -e $tmpdir/$package/README.md ]]; then
 	    cp -p $tmpdir/$package/README.md $packages_dir/$package
 	    mdfile=$packages_dir/$package/README.md 
+	    rinse $mdfile
 	    mdfile_relative=$( echo $mdfile | sed -r 's!^.*/docs/(.*)!\1!' )
 	    sed -r -i 's!^(\s*)-(\s*)'$package'(\s*):!\1-\2'$package'\3: '$mdfile_relative'!' $here/../mkdocs.yml
 	fi
