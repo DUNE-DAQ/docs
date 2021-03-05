@@ -34,7 +34,7 @@ fi
 function rinse() {
 
     sed -r -i 's/^(\*.*)$/\n\1/;s/^ {3,4}(\*.*)/    \1/;;s/^ {5,}(\*.*)/        \1/' $1
-
+    sed -r -i 's/^([0-9]+\..*)/\n\1/' $1
 }
 
 for package in $package_list ; do
