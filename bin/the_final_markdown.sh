@@ -38,7 +38,6 @@ function massage() {
 	header="$package README"
     fi
 
-    echo "header is \"$header\""
     sed -r -i "1s/^/# $header\n/" $markdown_file
     sed -r -i 's/^(\*.*)$/\n\1/;s/^ {3,4}(\*.*)/    \1/;;s/^ {5,}(\*.*)/        \1/' $markdown_file
     sed -r -i 's/^([0-9]+\..*)/\n\1/' $markdown_file
@@ -85,7 +84,7 @@ for package in $package_list ; do
 	    sed -r -i '/^\s*-\s*'$package'\s*:.*/a \          - '$pagename': '$mdfile_relative $here/../mkdocs.yml
 	done
 
-    else # No docs/ directory found
+    else # No docs/ directory with markdown files found
 	if [[ -e $tmpdir/$package/README.md ]]; then
 	    cp -p $tmpdir/$package/README.md $packages_dir/$package
 	    mdfile=$packages_dir/$package/README.md 
