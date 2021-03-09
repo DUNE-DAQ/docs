@@ -30,7 +30,7 @@ To read the documentation for other packages, please click on one of the links b
 
 [logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
 
-[minidaqapp](packages/minidaqapp/README.md) _application to read out Felix data and store it in HDF5 files on disk_
+[minidaqapp](packages/minidaqapp/Home.md) _application to read out Felix data and store it in HDF5 files on disk_
 
 [nwqueueadapters](packages/nwqueueadapters/README.md) _DAQModules that connect appfwk queues to IPM network connections_
 
