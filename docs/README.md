@@ -4,6 +4,10 @@ To learn how to build an existing software package repo, take a look at the [daq
 
 To learn how to create a new package or modify the build of an existing one, take a look at the [daq-cmake documentation](packages/daq-buildtools/README.md)
 
+To learn about the standard development workflow, take a look [here](packages/daq-release/development_workflow_gitflow.md)
+
+To learn about the C++ coding guidelines for DUNE DAQ package developers, go [here](packages/styleguide/README.md)
+
 To read the documentation for other packages, please click on one of the links below:
 
 [appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
@@ -15,6 +19,8 @@ To read the documentation for other packages, please click on one of the links b
 [daq-cmake](packages/daq-cmake/README.md) _CMake functions needed for DUNE DAQ packages_
 
 [daqdemos](packages/daqdemos/README.md) _demo modules and examples for DAQ applications_
+
+[daq-release](packages/daq-release/README.md) _manifest files for DUNE DAQ releases_
 
 [dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
 
@@ -43,6 +49,8 @@ To read the documentation for other packages, please click on one of the links b
 [restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
+
+[styleguide](packages/styleguide/README.md) _C++ coding guidelines DUNE DAQ developers should follow_
 
 [trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
 
