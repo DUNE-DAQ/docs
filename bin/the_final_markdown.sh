@@ -5,9 +5,25 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order so the packages in the drop-down menu will appear in regular alphabetical order
 package_list="trigemu styleguide serialization restcmd readout rcif opmonlib nwqueueadapters minidaqapp logging listrev ipm ers dfmodules dfmessages dataformats daq-release daqdemos daq-cmake daq-buildtools cmdlib appfwk"
 
+mkdocs_yml="$here/../mkdocs.yml"
+
+if [[ -e $mkdocs_yml ]]; then
+    echo "You need to delete the existing $mkdocs_yml file before running this script, " >&2
+    echo "since it will (re)construct $mkdocs_yml" >&2
+    exit 4
+fi
+
+cp $here/mkdocs_skeleton.yml $mkdocs_yml
 
 packages_dir="$here/../docs/packages"
-mkdir -p $packages_dir
+
+if [[ -d $packages_dir ]]; then
+    echo "You need to delete the existing $packages_dir directory before running this script, " >&2
+    echo "since it will (re)construct the $packages_dir directory" >&2
+    exit 5
+fi
+
+mkdir $packages_dir
 
 tmpdir=$(mktemp -d)
 
