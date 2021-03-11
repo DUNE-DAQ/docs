@@ -41,7 +41,7 @@ to (A) figure out an appropriate link to it from `docs/README.md`, and
 
 On that note: if you run `bin/the_final_markdown.sh`, make sure to blow away the entire `docs/packages` directory and `mkdocs.yml` first, since `bin/the_final_markdown.sh` will create them. It'll remind you if you don't. 
 
-Once you've got all the edits in place, make a commit. Assuming you're on the `develop` branch of the docs repo, when you push your commit to the central repo, it'll trigger a build under the jcfreeman2 account on the readthedocs website. After a couple of minutes, unless there was a syntax error, you'll be able to see your handiwork at https://dune-daq-sw.readthedocs.io/en/latest/. 
+Once you've got all the edits in place, make a commit. Assuming you're on the `develop` branch of the docs repo, when you push your commit to the central repo, it'll trigger a build under the dune-daq-docs account on the readthedocs website (ask JCF for the password). After a couple of minutes, unless there was a syntax error, you'll be able to see your handiwork at https://dune-daq-sw.readthedocs.io/en/latest/. 
 
 ## Seeing your edits without committing
 
