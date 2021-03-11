@@ -4,7 +4,7 @@ _JCF, Mar-11-2021: The following is currently intended just for members of the S
 # How the official documentation works
 
 The official documentation is housed in the [docs repo](https://github.com/DUNE-DAQ/docs). It includes 
-a [homepage located in a README.md file](README.md) as well as documentation for each package. It displays at `https://dune-daq-sw-docs.readthedocs.io/en/latest/`.
+a [homepage located in a README.md file](README.md) as well as documentation for each package. It displays at `https://dune-daq-sw.readthedocs.io/en/latest/`.
 
 ## Per-package documentation
 
@@ -41,7 +41,7 @@ to (A) figure out an appropriate link to it from `docs/README.md`, and
 
 On that note: if you run `bin/the_final_markdown.sh`, make sure to blow away the entire `docs/packages` directory and `mkdocs.yml` first, since `bin/the_final_markdown.sh` will create them. It'll remind you if you don't. 
 
-Once you've got all the edits in place, make a commit. Assuming you're on the `develop` branch of the docs repo, when you push your commit to the central repo, it'll trigger a build under the jcfreeman2 account on the readthedocs website. After a couple of minutes, unless there was a syntax error, you'll be able to see your handiwork at https://dune-daq-sw-docs.readthedocs.io/en/latest/. 
+Once you've got all the edits in place, make a commit. Assuming you're on the `develop` branch of the docs repo, when you push your commit to the central repo, it'll trigger a build under the jcfreeman2 account on the readthedocs website. After a couple of minutes, unless there was a syntax error, you'll be able to see your handiwork at https://dune-daq-sw.readthedocs.io/en/latest/. 
 
 ## Seeing your edits without committing
 
@@ -56,5 +56,5 @@ Assuming you've got mkdocs as described above:
 cd <your docs repo which you've edited>
 mkdocs serve
 ```
-It'll let you know if it can't parse the edits. Assuming it did, however, in another terminal open up `http://127.0.0.1:8000/` with your favorite browser, e.g. `firefox http://127.0.0.1:8000/ &`. You'll see what `https://dune-daq-sw-docs.readthedocs.io/en/latest/` hypothetically would look like with your changes. Note that as you edit your copy of the docs repo, your edits will actually appear in your browser in real time. 
+It'll let you know if it can't parse the edits. Assuming it did, however, in another terminal open up `http://127.0.0.1:8000/` with your favorite browser, e.g. `firefox http://127.0.0.1:8000/ &`. You'll see what `https://dune-daq-sw.readthedocs.io/en/latest/` hypothetically would look like with your changes. Note that as you edit your copy of the docs repo, your edits will actually appear in your browser in real time. 
 
