@@ -51,4 +51,4 @@ nav:
           - README: packages/styleguide/README.md
        - trigemu: packages/trigemu/README.md
 
-theme: Material
+theme: material
