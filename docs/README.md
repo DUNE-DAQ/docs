@@ -54,4 +54,7 @@ To read the documentation for other packages, please click on one of the links b
 
 [trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
 
+------
+
+_Mar-11-2021: For software coordinators only:_ [how to make edits to the webpage](how_to_make_edits.md)
 
