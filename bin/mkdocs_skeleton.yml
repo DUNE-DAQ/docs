@@ -4,5 +4,8 @@ nav:
     - For members of the Software Coordination Group: how_to_make_edits.md
     - Packages:
 
-theme: material
-
+theme: 
+   name: material
+   features:
+     - navigation.tabs
+     - navigation.instant

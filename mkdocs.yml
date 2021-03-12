@@ -1,6 +1,7 @@
 site_name: DUNE DAQ Software Documentation Home
 nav:
     - Home: README.md
+    - For members of the Software Coordination Group: how_to_make_edits.md
     - Packages:
        - appfwk:
           - How-to-write-your-DAQModule: packages/appfwk/How-to-write-your-DAQModule.md
@@ -51,4 +52,8 @@ nav:
           - README: packages/styleguide/README.md
        - trigemu: packages/trigemu/README.md
 
-theme: material
+theme: 
+   name: material
+   features:
+     - navigation.tabs
+     - navigation.instant
