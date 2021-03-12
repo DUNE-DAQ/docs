@@ -93,8 +93,13 @@ for package in $package_list ; do
 	    exit 2
 	fi
 
-	for mdfile in $( find $packages_dir/$package -name "*.md" ); do
-	    echo "Handling $mdfile"
+	mdfilelist=""
+	if [[ -n $( find  $packages_dir/$package -name "README.md" ) ]]; then
+	    mdfilelist="$packages_dir/$package/README.md"
+	fi
+	mdfilelist=$( find $packages_dir/$package -name "*.md" -not -name "README.md" | sort --reverse )" $mdfilelist"
+
+	for mdfile in $mdfilelist; do
 	    massage $mdfile
 	    pagename=$( echo $mdfile | sed -r 's!^.*/(.*).md$!\1!' )
 	    mdfile_relative=$( echo $mdfile | sed -r 's!^.*/docs/(.*)!\1!' )
