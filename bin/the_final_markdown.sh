@@ -53,7 +53,15 @@ function massage() {
 	header="$package README"
     fi
 
-    sed -r -i "1s/^/# $header\n/" $markdown_file
+    # Translation of the snippet below: "If the first non-empty,
+    # non-italics-statement line in the file doesn't begin with a
+    # single #, i.e., isn't a main title, then add one manually"
+
+    if [[ -n $( sed -r -n '0,/^\s*\#[^\#]/{/^\s*\#[^\#]/d;/^\s*_/d;/^\s*$/d;p}' $markdown_file ) ]]; then
+	sed -r -i "1s/^/# $header\n/"  $markdown_file 
+    fi
+
+
     sed -r -i 's/^(\*.*)$/\n\1/;s/^ {3,4}(\*.*)/    \1/;s/^ {5,}(\*.*)/        \1/' $markdown_file
     sed -r -i 's/^([0-9]+\..*)/\n\1/' $markdown_file
     sed -r -i 's/^([0-9]+\..*)/\n\1/;s/^ {3,4}([0-9]+\.*)/    \1/;' $markdown_file
