@@ -41,3 +41,12 @@ To help people understand/remember where the various pieces of the MiniDAQApp ar
 
 
 * [Reminders about tests that we want to run](Reminders-about-tests-that-we-want-to-run.md)
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Mon Mar 8 18:46:44 2021 -0600_

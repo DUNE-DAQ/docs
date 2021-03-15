@@ -46,3 +46,11 @@ For example:
 ```CMake
 add_library(appfwk_DummyModule_duneDAQModule test/DummyModule.cpp)
 ```
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 15:42:13 2021 -0600_

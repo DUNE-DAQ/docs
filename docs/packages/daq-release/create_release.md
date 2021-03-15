@@ -48,3 +48,12 @@ Here are the general steps of creating a new DAQ release.
 
 
 10. Wait 24 hours, for any possible hotfixes, before making the release tag with the [release tagging script](https://github.com/DUNE-DAQ/daq-release/blob/develop/scripts/create-release-tag.sh).
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 14:53:28 2021 -0600_

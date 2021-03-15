@@ -48,3 +48,12 @@ cvmfs_server ingest --delete <path/to/delete> dune.opensciencegrid.org
 
 
  
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 14:53:28 2021 -0600_

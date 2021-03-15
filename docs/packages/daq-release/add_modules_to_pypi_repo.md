@@ -37,3 +37,12 @@ If you do not have `pip2pi` available, you can do the following to install it. N
     * `pip install https://github.com/dingp/pip2pi/archive/1.0.0.tar.gz`
 
 Now you should have access to `pip2pi` and `dir2pi` commands. Next time, you can simply activate the virtual env for accessing these tools.
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 14:53:28 2021 -0600_

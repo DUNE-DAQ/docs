@@ -46,3 +46,12 @@ the ers methods or the TRACE macros as follow:
 6. LOG_DEBUG(lvl)  << ers::Issue or basic string/args
 
 Further, version specific, information can be found at https://github.com/DUNE-DAQ/logging/wiki
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: ron003_
+
+_Date: Mon Mar 15 10:53:27 2021 -0500_

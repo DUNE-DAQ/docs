@@ -64,3 +64,12 @@ A complete example can be found in [`non_moo_type.cxx`](./test/apps/non_moo_type
 ## Design notes
 
 Choice of serialization methods: there are many, many libraries and formats for serialization/deserialization, with a range of tradeoffs. I chose `nlohmann::json` and `msgpack` to get one human-readable format, and one faster binary format. `nlohmann::json` is chosen as the library for the human-readable format since it was already being used in DUNE DAQ code. For the binary format, I wanted a library that allows serialization of arbitrary types, rather than requiring types to be specified in, eg the library's DSL (this rules out, eg, `protobuf`). We may have to revisit that requirement if we find that `msgpack` does not meet performance requirements.
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: Philip Rodrigues_
+
+_Date: Tue Feb 2 17:50:58 2021 +0000_

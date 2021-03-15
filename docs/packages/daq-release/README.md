@@ -24,3 +24,12 @@
 
 
 8. [How to add new modules to `pypi-repo`](add_modules_to_pypi_repo.md)
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 14:53:28 2021 -0600_

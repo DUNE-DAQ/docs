@@ -186,3 +186,12 @@ And what you want to first is type `"init"`. The surrounding quotes are needed, 
 ```
 To stop this, send the "stop" command. Ctrl-c will exit you out of these applications. 
 
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Fri Feb 26 17:53:32 2021 -0600_

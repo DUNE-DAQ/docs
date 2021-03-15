@@ -20,3 +20,12 @@ outputs a json object in one line
 
 ### Building and running examples:
 
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: glehmannmiotto_
+
+_Date: Wed Mar 10 16:34:35 2021 +0100_

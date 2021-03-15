@@ -26,3 +26,12 @@ execute these command by typing their IDs on stdin:
     daq_application -c stdin://sourcecode/appfwk/schema/fdpc-job.json
 
 ![Demo](https://cernbox.cern.ch/index.php/s/BxvvU0PlPuyHjla/download)
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: roland-sipos_
+
+_Date: Thu Jan 28 22:31:39 2021 +0100_

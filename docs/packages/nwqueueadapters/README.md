@@ -53,3 +53,12 @@ This requires a slightly more complicated configuration (we have to pass both "m
 
 3. One shared library file can service multiple classes (have the `makeQToN` function switch on `plugin_name`). This is potentially useful for `moo`-generated classes, where many classes may be generated from the same file
 
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: Philip Rodrigues_
+
+_Date: Tue Feb 23 10:15:22 2021 +0000_

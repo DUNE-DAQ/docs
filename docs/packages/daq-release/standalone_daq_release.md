@@ -59,3 +59,12 @@ dbt-create.sh -r /scratch/dunedaq-local-releases dunedaq-v2.2.0
 ```
 
 Please also note that with the above docker command, only files created under `/scratch` are synced/saved to the host machine.
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 14:53:28 2021 -0600_

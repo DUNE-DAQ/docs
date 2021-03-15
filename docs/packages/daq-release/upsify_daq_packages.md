@@ -43,3 +43,12 @@ A few things to note as of now (Nov 24, 2020):
 
 
 3. DAQ packages by default are built without `debug` options, and only on SL7 or CentOS 7.
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 14:53:28 2021 -0600_

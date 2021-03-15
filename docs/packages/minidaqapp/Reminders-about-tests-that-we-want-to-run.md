@@ -293,3 +293,11 @@ This results in an expected Fragment payload size of 22,272 bytes for 1200 tick 
 
 See https://github.com/DUNE-DAQ/readout/issues/15 for details on this issue.
 </details>
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Thu Mar 4 12:56:41 2021 -0600_

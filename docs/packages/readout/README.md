@@ -35,3 +35,12 @@ To get the "tp_frames.bin" TP data:
 To test the fake raw WIB TP readout, run
 
     daq_application -c stdin://sourcecode/readout/test/tpenabled-fakereadout-commands.json
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: Roland Sipos_
+
+_Date: Wed Feb 24 09:18:52 2021 +0100_

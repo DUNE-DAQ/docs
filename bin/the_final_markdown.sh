@@ -91,6 +91,21 @@ for package in $package_list ; do
 	continue
     fi
 
+    # Add provenance of each markdown file
+
+    for packagefile in $( find . -name "*.md" ); do
+	echo >> $packagefile
+	echo "-----" >> $packagefile
+	echo >> $packagefile
+	echo "_Last git commit to the markdown source of this page:_" >> $packagefile
+	echo >> $packagefile
+	echo >> $packagefile
+	echo "_"$(git log -1 $packagefile | sed -r -n 's/^(Author.*)\s+\S+@.*/\1/p' )"_" >> $packagefile
+	echo >> $packagefile
+	echo "_"$(git log -1 $packagefile | grep Date )"_" >> $packagefile
+	
+    done
+
     if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" ) ]]; then
 	echo "Found a docs/ subdirectory in repo $package, ignoring any README.md in the base of the repo"
 
@@ -109,9 +124,11 @@ for package in $package_list ; do
 
 	for mdfile in $mdfilelist; do
 	    massage $mdfile
+	    
 	    pagename=$( echo $mdfile | sed -r 's!^.*/(.*).md$!\1!' )
 	    mdfile_relative=$( echo $mdfile | sed -r 's!^.*/docs/(.*)!\1!' )
 	    sed -r -i '/^\s*-\s*'$package'\s*:.*/a \          - '$pagename': '$mdfile_relative $here/../mkdocs.yml
+
 	done
 
     else # No docs/ directory with markdown files found

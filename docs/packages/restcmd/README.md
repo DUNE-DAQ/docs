@@ -71,3 +71,12 @@ The command facility enforces the content type. The following will fail:
     cmdfile=sourcecode/restcmd/test/test-init.json
     curl --header "Content-Type: application/xml" --header "X-Answer-Port: 12333" --request POST --data @$cmdfile http://epdtdi103:12345/command
 
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: Alessandro Thea_
+
+_Date: Tue Mar 2 14:04:14 2021 +0100_

@@ -11,3 +11,12 @@ This package provides the cmake support for DUNE-DAQ packages.
 
 * Toy library : **TODO**
 
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Mon Mar 8 22:34:19 2021 -0600_

@@ -122,3 +122,12 @@ daq_install()
 This function should be called at the bottom of a project's
 `CMakeLists.txt` file in order to install the project's targets. It takes no
 arguments.
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: Alessandro Thea_
+
+_Date: Fri Feb 26 01:38:36 2021 +0100_

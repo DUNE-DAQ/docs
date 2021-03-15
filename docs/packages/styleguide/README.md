@@ -1244,3 +1244,12 @@ may be confusing to future developers, it may be worth adding comments on
 how the style deviates from the standard. 
 
 -----
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 16:10:22 2021 -0600_

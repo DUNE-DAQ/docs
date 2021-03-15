@@ -139,3 +139,11 @@ Once you've edited this file as described, from the base of your development are
 dbt-build.sh --install 
 ```
 without receiving an error message informing you that installation isn't an option. 
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Mon Mar 8 22:34:19 2021 -0600_

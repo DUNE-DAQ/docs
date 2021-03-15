@@ -24,3 +24,12 @@
 
 
 10. Aug 31, 2020 [CI prototype](https://indico.fnal.gov/event/45266/contributions/195659/attachments/133754/165107/DUNE_DAQ_SW_2020831.pdf)
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 14:53:28 2021 -0600_

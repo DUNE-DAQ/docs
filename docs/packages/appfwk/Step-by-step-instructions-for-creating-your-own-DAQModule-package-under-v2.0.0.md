@@ -287,3 +287,11 @@ In a fresh shell, here are the steps that you would use to run the Fanout exampl
   * `stop`
   * `quit`
 -->
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 15:42:13 2021 -0600_

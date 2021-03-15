@@ -7,3 +7,12 @@ If you want to take a look at the classic appfwk wiki (unofficial home of DUNE D
 
 [How to write your DAQModule](How-to-write-your-DAQModule.md)
 
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 15:42:13 2021 -0600_

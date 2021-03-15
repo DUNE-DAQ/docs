@@ -14,3 +14,12 @@ To run the application issue the following command:
 
 You can now send run control commands to the application, as indicated in the prompt.
 
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: glehmannmiotto_
+
+_Date: Mon Mar 1 11:01:39 2021 +0100_

@@ -35,3 +35,12 @@ Here is a [presentation](https://indico.fnal.gov/event/45266/contributions/19565
 The major work of Phase Two is to set up customized runner nodes running CentOS 7/8 and then test CI jobs both with and without containers.
 
 
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Tue Mar 9 14:53:28 2021 -0600_
