@@ -1,4 +1,3 @@
-# styleguide README
 
 # C++ Style Guide (based on Google's C++ Style Guide)
 

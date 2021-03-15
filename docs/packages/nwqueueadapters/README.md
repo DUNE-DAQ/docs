@@ -1,4 +1,3 @@
-# nwqueueadapters README
 # nwqueueadapters
 
 DUNE `DAQModule`s that connect `appfwk` queues to [IPM](https://github.com/DUNE-DAQ/ipm) network connections. Implementation is in the `QueueToNetwork` and `NetworkToQueue` classes ("QToN" and "NToQ" for short). The type that's held by the queue must be (de)serializable by the functions in [the DUNE DAQ serialization package](https://github.com/DUNE-DAQ/serialization). For each type you want to use, you also have to generate a plugin to be used by QToN or NToQ, as follows:

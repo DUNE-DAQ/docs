@@ -1,4 +1,3 @@
-# create_release
 # Creating a new DAQ release
 
 ## Overview

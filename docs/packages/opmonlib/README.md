@@ -1,4 +1,3 @@
-# opmonlib README
 # opmonlib - Operational Monitoring library
 
 ### Desctription

@@ -1,4 +1,3 @@
-# listrev README
 # listrev
 
 The listrev package allows to excercise the basic functioning of DAQ applications, through three simple DAQ Modules that operate on lists of numbers.

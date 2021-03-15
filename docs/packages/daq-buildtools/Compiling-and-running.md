@@ -1,4 +1,3 @@
-# Compiling and running
 # Getting started
 
 ## System requirements

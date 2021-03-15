@@ -1,4 +1,3 @@
-# SchemaAndCodeGen
 # Schema and Code generation
 
 `daq-cmake` supports for schema distribution and code generation with [moo](https://github.com/brettviren/moo/)

@@ -1,4 +1,3 @@
-# daq-release README
 # Table of content
 
 

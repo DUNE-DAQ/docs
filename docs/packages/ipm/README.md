@@ -1,4 +1,3 @@
-# ipm README
 # ipm
 Inter-Process Messaging
 

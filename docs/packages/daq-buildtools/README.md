@@ -1,4 +1,3 @@
-# daq-buildtools README
 
 # DUNE DAQ Buildtools 
 

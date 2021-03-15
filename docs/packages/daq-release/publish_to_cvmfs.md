@@ -1,4 +1,3 @@
-# publish_to_cvmfs
 # Publish files to cvmfs
 
 ## Staging area for DUNE DAQ's cvmfs repo

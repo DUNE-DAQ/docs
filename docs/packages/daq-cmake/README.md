@@ -1,4 +1,3 @@
-# daq-cmake README
 # daq-cmake
 
 This package provides the cmake support for DUNE-DAQ packages.

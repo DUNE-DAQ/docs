@@ -1,4 +1,3 @@
-# upsify_daq_packages
 # How to make UPS products of currently built/installed DAQ packages
 
 A python3 script has been prepared for this purpose. It is [upsify-daq-pkgs.py](https://github.com/DUNE-DAQ/daq-release/blob/master/scripts/upsify-daq-pkgs.py).

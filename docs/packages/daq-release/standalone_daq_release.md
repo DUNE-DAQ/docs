@@ -1,4 +1,3 @@
-# standalone_daq_release
 # Use the standalone DUNE DAQ release tarballs
 
 ## Obtaining the release tarballs

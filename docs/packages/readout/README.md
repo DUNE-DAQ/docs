@@ -1,4 +1,3 @@
-# readout README
 # readout - Readout software and utilities 
 Appfwk DAQModules, utilities, and scripts for DUNE Upstream DAQ Readout Software.
 

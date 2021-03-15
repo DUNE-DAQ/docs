@@ -1,4 +1,3 @@
-# serialization README
 # DUNE DAQ C++ object serialization utilities
 
 This repository contains utilities for serializing/deserializing C++ objects for DUNE DAQ. Serialization allows objects to be sent across the network or persisted to disk.

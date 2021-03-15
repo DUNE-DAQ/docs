@@ -1,4 +1,3 @@
-# minidaqapp README
 # Home
 Welcome to the minidaqapp wiki!
 

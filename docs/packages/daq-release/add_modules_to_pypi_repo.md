@@ -1,4 +1,3 @@
-# add_modules_to_pypi_repo
 # Adding new modules to the Pypi-repo
 
 If you have `pip2pi` installed, you can simply do the following to add any modules from `pypi` or tarballs:

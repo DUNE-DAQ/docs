@@ -1,4 +1,3 @@
-# slides
 # DUNE DAQ Software Coordination Slides
 
 

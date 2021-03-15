@@ -1,4 +1,3 @@
-# ci_github_action
 # Instructions on setting up CI using GitHub Action
 
 This is a placeholder for instructions on setting up CI using GitHub action.
