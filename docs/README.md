@@ -8,6 +8,8 @@ To learn about the standard development workflow, take a look [here](packages/da
 
 To learn about the C++ coding guidelines for DUNE DAQ package developers, go [here](packages/styleguide/README.md)
 
+--------------
+
 To read the documentation for other packages, please click on one of the links below:
 
 [appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
