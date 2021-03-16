@@ -9,7 +9,7 @@ To learn how to create a new package or modify the build of an existing one, rea
 
 To learn about the standard development workflow, read the [daq-release documentation](packages/daq-release/README.md), in particular [this page](packages/daq-release/development_workflow_gitflow.md)
 
-To learn about the C++ coding guidelines for DUNE DAQ package developers, read [the styleguide](packages/styleguide/README.md)
+To learn about the C++ coding guidelines which DUNE DAQ package developers should follow, read [the styleguide](packages/styleguide/README.md)
 
 --------------
 
@@ -46,8 +46,6 @@ For the other packages, please click on one of the links below:
 [restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
-
-[styleguide](packages/styleguide/README.md) _C++ coding guidelines DUNE DAQ developers should follow_
 
 [trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
 
