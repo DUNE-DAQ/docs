@@ -3,7 +3,11 @@
 here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 
 # Reverse alphabetical order so the packages in the drop-down menu will appear in regular alphabetical order
-package_list="trigemu styleguide serialization restcmd readout rcif opmonlib nwqueueadapters minidaqapp logging listrev ipm ers dfmodules dfmessages dataformats daq-release daqdemos daq-cmake daq-buildtools cmdlib appfwk"
+
+# ...alphabetical, with the exception of the packages which are used
+# for package development themselves
+
+package_list="trigemu serialization restcmd readout rcif opmonlib nwqueueadapters minidaqapp logging listrev ipm ers dfmodules dfmessages dataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -13,8 +17,6 @@ if [[ -e $mkdocs_yml ]]; then
     exit 4
 fi
 
-cp $here/mkdocs_skeleton.yml $mkdocs_yml
-
 packages_dir="$here/../docs/packages"
 
 if [[ -d $packages_dir ]]; then
@@ -22,6 +24,8 @@ if [[ -d $packages_dir ]]; then
     echo "since it will (re)construct the $packages_dir directory" >&2
     exit 5
 fi
+
+cp $here/mkdocs_skeleton.yml $mkdocs_yml
 
 mkdir $packages_dir
 

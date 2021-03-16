@@ -1,28 +1,23 @@
 # DUNE DAQ Software Documentation Home
 
-To learn how to build an existing software package repo, take a look at the [daq-buildtools documentation](packages/daq-buildtools/README.md)
+There are four DUNE DAQ software packages which are used to aid
+developers in creating packages designed for the DAQ itself:
 
-To learn how to create a new package or modify the build of an existing one, take a look at the [daq-cmake documentation](packages/daq-buildtools/README.md)
+To learn how to build an existing software package, read the [daq-buildtools documentation](packages/daq-buildtools/README.md)
 
-To learn about the standard development workflow, take a look [here](packages/daq-release/development_workflow_gitflow.md)
+To learn how to create a new package or modify the build of an existing one, read the [daq-cmake documentation](packages/daq-buildtools/README.md)
 
-To learn about the C++ coding guidelines for DUNE DAQ package developers, go [here](packages/styleguide/README.md)
+To learn about the standard development workflow, read the [daq-release documentation](packages/daq-release/README.md), in particular [this page](packages/daq-release/development_workflow_gitflow.md)
+
+To learn about the C++ coding guidelines for DUNE DAQ package developers, read [the styleguide](packages/styleguide/README.md)
 
 --------------
 
-To read the documentation for other packages, please click on one of the links below:
+For the other packages, please click on one of the links below:
 
 [appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
 
 [cmdlib](packages/cmdlib/README.md) _interfaces for commanded objects_
-
-[daq-buildtools](packages/daq-buildtools/README.md) _scripts to set up a DUNE DAQ package development area_
-
-[daq-cmake](packages/daq-cmake/README.md) _CMake functions needed for DUNE DAQ packages_
-
-[daqdemos](packages/daqdemos/README.md) _demo modules and examples for DAQ applications_
-
-[daq-release](packages/daq-release/README.md) _manifest files for DUNE DAQ releases_
 
 [dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
 
