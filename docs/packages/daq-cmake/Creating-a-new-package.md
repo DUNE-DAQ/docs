@@ -1,4 +1,4 @@
-# Creating a new package under v2.3.0
+# Creating a new package
 
 ## Setting up a development area
 
@@ -146,6 +146,6 @@ without receiving an error message informing you that installation isn't an opti
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: John Freeman_
 
-_Date: Tue Mar 16 15:43:52 2021 -0500_
+_Date: Tue Mar 16 17:04:03 2021 -0500_

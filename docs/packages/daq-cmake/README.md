@@ -3,7 +3,7 @@
 This package provides CMake support for DUNE-DAQ packages.
 
 
-* [Overview of how to create a new package](Creating-a-new-package-under-v2.3.0.md)
+* [Overview of how to create a new package](Creating-a-new-package.md)
 
 * Description of the CMake functions provided by `daq-cmake` [link](CmakeFunctions.md)
 
@@ -16,6 +16,6 @@ This package provides CMake support for DUNE-DAQ packages.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: John Freeman_
 
-_Date: Tue Mar 16 15:35:11 2021 -0500_
+_Date: Tue Mar 16 17:04:03 2021 -0500_

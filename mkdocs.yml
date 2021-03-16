@@ -8,7 +8,7 @@ nav:
        - daq-cmake:
           - README: packages/daq-cmake/README.md
           - CmakeFunctions: packages/daq-cmake/CmakeFunctions.md
-          - Creating-a-new-package-under-v2.3.0: packages/daq-cmake/Creating-a-new-package-under-v2.3.0.md
+          - Creating-a-new-package: packages/daq-cmake/Creating-a-new-package.md
           - SchemaAndCodeGen: packages/daq-cmake/SchemaAndCodeGen.md
        - daq-release:
           - README: packages/daq-release/README.md
