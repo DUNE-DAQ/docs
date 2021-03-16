@@ -2,14 +2,14 @@
 
 ## Setting up a development area
 
-To create a new package, you'll want to install a DUNE-DAQ development environment and then create a new CMake project for the package. How to install and build the DUNE-DAQ development environment is described [[here|Compiling-and-running-under-v2.3.0]].
+To create a new package, you'll want to install a DUNE-DAQ development environment and then create a new CMake project for the package. How to install and build the DUNE-DAQ development environment is described [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/Compiling-and-running/).
 
 
 ## A package's subdirectory structure
 
-To learn a bit more about how to structure your package so that it can be incorporated into the DUNE DAQ software suite, we'll play with a contrived package called "toylibrary". It's actually contained within a subdirectory of the daq-cmake repo; however, in order to be able to build toylibrary we'll want to copy it into the `./sourcecode` directory so the build system can work with it. Assuming you're already in the base directory, do the following: 
+To learn a bit more about how to structure your package so that it can be incorporated into the DUNE DAQ software suite, we'll play with a contrived package called "toylibrary". It's actually contained within a subdirectory of the daq-cmake repo; however, in order to be able to build toylibrary we'll want to copy it into the `./sourcecode` directory so the build system can work with it. Assuming you're already in the base directory of your development environment, do the following: 
 ```
-git clone https://github.com/DUNE-DAQ/daq-cmake.git -b v1.3.2
+git clone https://github.com/DUNE-DAQ/daq-cmake.git -b v1.3.3
 mv daq-cmake/toylibrary sourcecode
 rm -rf daq-cmake
 ```
@@ -29,16 +29,16 @@ In terms of its actual functionality, it's pretty useless (it contains a class w
 
 * *test*: contains any applications or plugins you've written for the purpose of [integration testing](https://en.wikipedia.org/wiki/Integration_testing) - ensuring that your software components interact as expected
 
-If your package contains applications intended not for testing but for the end user, you'd put the code for it in a subdirectory called *apps*. toylibrary doesn't have this type of application, but, e.g., the appfwk package does. Similarly, plugins not intended for testing but for the end user would go in *plugins*. 
+If your package contains applications intended not for testing but for the end user, you'd put the code for it in a subdirectory called `apps/`. toylibrary doesn't have this type of application, but, e.g., the appfwk package does. Similarly, plugins not intended for testing but for the end user would go in `plugins/`. 
 
 
 ## Coding rules
 
-Along with having a standard directory structure, the C++ code itself in toylibrary conforms to the [DUNE C++ Style Guide](https://github.com/DUNE-DAQ/styleguide/blob/develop/dune-daq-cppguide.md). Here, "style" doesn't mean whitespace and formatting, but rather, a set of Modern C++ best practices designed to make your code more robust against bugs, easier to extend, easier to reuse, etc. The DUNE C++ Style Guide is derived from the Google C++ Style Guide, but is greatly simplified and has been modified to be more appropriate to the DUNE DAQ project than Google's projects. Code which is merged into a package's git develop branch should be in conformance with the guide; while it's encouraged for code on a package's unmerged feature branches to also be in conformance, this is less important. 
+Along with having a standard directory structure, the C++ code itself in toylibrary conforms to the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/). Here, "style" doesn't mean whitespace and formatting, but rather, a set of Modern C++ best practices designed to make your code more robust against bugs, easier to extend, easier to reuse, etc. The DUNE C++ Style Guide is derived from the Google C++ Style Guide, but is greatly simplified and has been modified to be more appropriate to the DUNE DAQ project than Google's projects. Code which is merged into a package's git develop branch should be in conformance with the guide; while it's encouraged for code on a package's unmerged feature branches to also be in conformance, this is less important. 
 
 ## Your project's CMakeLists.txt file
 
-Every DUNE DAQ package should have one and only one CMakeLists.txt file, in the base directory of the package (not to be confused with the base directory of the overall development area). To learn a bit about what that CMakeLists.txt file should look like, let's take a look at `sourcecode/toylibrary/CMakeLists.txt`. Because CMake is widely used and extensively documented online, this documentation will primarily focus on DUNE-specific CMake functions. The full documentation of the DUNE-specific CMake functions for users can be found as comments in the body of the CMake module which contains them (see https://github.com/DUNE-DAQ/daq-cmake/blob/v1.3.2/cmake/DAQ.cmake). Depending on your learning style, however, you may find it easier to start learning about some of what these functions are capable of by reading on in this wiki. 
+Every DUNE DAQ package should have one and only one `CMakeLists.txt` file, in the base directory of the package's repo (not to be confused with the base directory of the overall development area). To learn a bit about what that `CMakeLists.txt` file should look like, let's take a look at `sourcecode/toylibrary/CMakeLists.txt`. Because CMake is widely used and extensively documented online, this documentation will primarily focus on DUNE-specific CMake functions. The full documentation of the DUNE-specific CMake functions for users can be found as comments in the body of the CMake module which contains them (see https://github.com/DUNE-DAQ/daq-cmake/blob/v1.3.3/cmake/DAQ.cmake). Depending on your learning style, however, you may find it easier to start learning about some of what these functions are capable of by reading on in this wiki. 
 
 At the top of CMakeLists.txt: before doing anything else, we want to define the minimum version of CMake used (currently 3.12, which supports [modern CMake style](https://cliutils.gitlab.io/modern-cmake/)) as well as the name and version of the project. Concerning the version: it may not literally be the case that the code you're working with is exactly the same as the version-in-question's release code, because you may be on a feature branch, or there may have been commits to the develop branch since the last release. 
 ```
@@ -95,11 +95,11 @@ When you call it it will install the targets (executables, shared object librari
 
 ## In-depth documentation of the DUNE DAQ CMake functions
 
-...can be found in the DAQ module file itself, in the comments above each function: https://github.com/DUNE-DAQ/daq-cmake/blob/v1.3.2/cmake/DAQ.cmake 
+...can be found in the DAQ module file itself, in the comments above each function: https://github.com/DUNE-DAQ/daq-cmake/blob/v1.3.3/cmake/DAQ.cmake 
 
 ## If your package relies on nonstandard dependencies
 
-...go back and take a look at the "Adding extra UPS products and product pools" section of [[Compiling-and-running-under-v2.3.0|Compiling-and-running-under-v2.3.0]]
+...go back and take a look at the "Adding extra UPS products and product pools" section of [https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/Compiling-and-running/](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/Compiling-and-running/)
 
 ## Installing your project as a local package
 
@@ -116,7 +116,7 @@ A major thing you should be aware of is that when you call CMake's `find_package
 cd ./sourcecode/mypackage
 mkdir cmake
 cd cmake
-curl -O https://raw.githubusercontent.com/DUNE-DAQ/daq-cmake/v1.3.2/configs/Config.cmake.in
+curl -O https://raw.githubusercontent.com/DUNE-DAQ/daq-cmake/v1.3.3/configs/Config.cmake.in
 mv Config.cmake.in mypackageConfig.cmake.in
 ```
 and then let's look at the opening lines of `mypackageConfig.cmake.in`:
@@ -138,12 +138,14 @@ Once you've edited this file as described, from the base of your development are
 ```
 dbt-build.sh --install 
 ```
+
 without receiving an error message informing you that installation isn't an option. 
+
 -----
 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jcfreeman2_
 
-_Date: Mon Mar 8 22:34:19 2021 -0600_
+_Date: Tue Mar 16 15:43:52 2021 -0500_

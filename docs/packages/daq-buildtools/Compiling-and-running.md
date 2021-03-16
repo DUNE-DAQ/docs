@@ -3,7 +3,7 @@
 
 ## System requirements
 
-To get set up, you'll need access to the ups product area /cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products, as is the case, e.g., on the lxplus machines at CERN. 
+To get set up, you'll need access to the ups product area `/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products`, as is the case, e.g., on the lxplus machines at CERN. 
 
 ## Setup `daq-buildtools`
 `daq-buildtools` is a simple package that provides environment and building utilities for the DAQ Suite. 
@@ -15,7 +15,7 @@ git clone https://github.com/DUNE-DAQ/daq-buildtools.git -b develop
 ```
 This step doesn't have to be run more than once per daq-buildtools version. 
 
-The `dbt` setup script has to be sourced to make the `dbt` scripts available in the commandline regardless of the current work directory. Run:
+The daq-buildtools setup script has to be sourced to make the various daq-buildtools commands available. Run:
 ```bash
 source daq-buildtools/dbt-setup-env.sh
 ```
@@ -25,9 +25,9 @@ Added /your/path/to/daq-buildtools/bin to PATH
 Added /your/path/to/daq-buildtools/scripts to PATH
 DBT setuptools loaded
 ```
-After this step `daq-buildtools` scripts and aliases will be accessible from your commandline regardless of the current working directory. They include `dbt-create.sh`, `dbt-build.sh` and the aliases `dbt-setup-build-environment` and `dbt-setup-runtime-environment` which are used in the following sections.
+The commands include `dbt-create.sh`, `dbt-build.sh`, `dbt-setup-build-environment` and `dbt-setup-runtime-environment`; these are all described in the following sections.
 
-Each time that you want to work with a DUNE DAQ development area in a fresh Linux shell, you'll need to set up `daq-buildtools` using the `dbt-setup-env.sh` script, as described above.
+Each time that you want to work with a DUNE DAQ development area in a fresh Linux shell, you'll need to set up daq-buildtools using the `dbt-setup-env.sh` script, as described above.
 
 ## Creating a development area (AKA work area)
 
@@ -59,7 +59,7 @@ Note the assumption above is that you aren't developing listrev; if you were, th
 ## Adding extra UPS products and product pools
 
 Sometimes it is necessary to tweak the baseline list of UPS products or even UPS product pools to add extra dependencies. 
-This can be easily done by editing the `dbt-settings` file copied over from daq-buildtools by `dbt-create.sh` and adding the new entries to `dune_products_dirs`  and `dune_daqpackages` as needed. See "/example/of/additional/user/declared/product/pool" and "package_declared_by_user v1_2_3 e19:prof" in the example of an edited `dbt-settings` file, below:
+This can be easily done by editing the `dbt-settings` file copied over from daq-buildtools by `dbt-create.sh` and adding the new entries to `dune_products_dirs`  and `dune_daqpackages` as needed. See `/example/of/additional/user/declared/product/pool` and `package_declared_by_user v1_2_3 e19:prof` in the example of an edited `dbt-settings` file, below:
 
 ```bash
 dune_products_dirs=(
@@ -122,7 +122,7 @@ dbt-build.sh --install
 ...and this will build `listrev` in the local `./build` subdirectory and then install it as a package either in the local `./install` subdirectory or in whatever you pointed `DBT_INSTALL_DIR` to. 
 
 ### Working with more repos
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, `daq-buildtools` may not already know about this dependency. "New" in this context means "not found on https://github.com/DUNE-DAQ as of ~Mar-2-2021". If this is the case, you have one of two options:
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not found on https://github.com/DUNE-DAQ as of ~Mar-2-2021". If this is the case, you have one of two options:
 
 
 * (Recommended) Add the names of your new packages to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
@@ -139,7 +139,7 @@ dbt-build.sh --clean --install --unittest  # Blow away the contents of ./build, 
 ```
 ..where in the above case, you blow away the contents of `./build`,  run config+generate+build, install the result in `./install` and then run the unit tests. Be aware that for many packages, unit tests will only (fully) work if you've also set up their runtime environment; how to do this is described below in the "Running" section of this document. 
 
-To check for deviations from the coding rules described in the [DUNE C++ Style Guide](https://github.com/DUNE-DAQ/styleguide/blob/develop/dune-daq-cppguide.md), run with the `--lint` option:
+To check for deviations from the coding rules described in the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/), run with the `--lint` option:
 ```
 dbt-build.sh --lint
 ```
@@ -156,20 +156,20 @@ You can see all the options listed if you run the script with the `--help` comma
 ```
 dbt-build.sh --help
 ```
-Finally, note that both the output of your builds and your unit tests are logged to files in the `./log` subdirectory. These files may have ASCII color codes which make them difficult to read with some tools; `more` or `cat`, however, will display the colors and not the codes themselves. 
+Finally, note that both the output of your builds and your unit tests are logged to files in the `./log` subdirectory. These files will have ASCII color codes which make them difficult to read with some tools; `less -R <logfilename>`, however, will display the colors and not the codes themselves. 
 
 </details>
 
 ## Running
 
-In order to run the applications built during the above procedure, the system needs to be instructed on where to look for the libraries that can be used to instantiate objects. This is handled by the `dbt-setup-runtime-environment` script which was placed in MyTopDir when you ran dbt-create.sh; all you need to do is the following:
+In order to access the applications, libraries and plugins built in your `./build` area during the above procedure, the system needs to be instructed on where to look for them. This is handled by the `dbt-setup-runtime-environment` script which was placed in MyTopDir when you ran `dbt-create.sh`; all you need to do is the following:
 ```
 dbt-setup-runtime-environment
 ```
 
-Note that if you add a new repo to your development area, after building your new code you'll need to run the script again. 
+Note that if you add a new repo to your development area, after building your new code - and hence putting its output in `./build` - you'll need to run the script again. Also note that `dbt-setup-runtime-environment` is a superset of `dbt-setup-build-environment` in that if it sees that `dbt-setup-build-environment` hasn't already been sourced, it will source it for you. 
 
-Once the runtime environment is set, just run the application you need. listrev, however, has no applications; it's just a DAQ module plugin which get added to CET_PLUGIN_PATH.  
+Once the runtime environment is set, just run the application you need. listrev, however, has no applications; it's just a set of DAQ module plugins which get added to CET_PLUGIN_PATH.  
 
 We're now going to go through a demo in which we'll use a DAQ module from listrev called RandomDataListGenerator to generate vectors of random numbers and then reverse them with listrev's ListReverser module.  
 
@@ -190,7 +190,7 @@ What you want to do first is type `init`. Next, type `conf` to execute the confi
 ```
 To stop this, type the `stop` command. Ctrl-c will exit you out. 
 
-For a more realistic use-case where you can send commands to the application from other services and applications, the [restcmd](https://github.com/DUNE-DAQ/restcmd) package provides a command handling implementation through HTTP. To use this plugin, we call `daq_application` in the following manner:
+For a more realistic use-case where you can send commands to the application from other services and applications, the [restcmd](https://dune-daq-sw.readthedocs.io/en/latest/packages/restcmd/) package provides a command handling implementation through HTTP. To use this plugin, we call `daq_application` in the following manner:
 ```sh
 daq_application -n <some name for the application instance> --commandFacility rest://localhost:12345
 ```
@@ -212,46 +212,16 @@ Press enter a command to send next:
 ```
 And you can again type `init`, etc. However, unlike previously, now you'll want to look in the other terminal running daq_application to see it responding to the commands. As before, Ctrl-c will exit you out of these applications. 
 
-<details><summary>daq_application Command Line Arguments</summary>
-
-Use `daq_application --help` to see all of the possible options:
-```sh
-bash$ daq_application --help
-daq_application known arguments (additional arguments will be stored and passed on):
-  -c [ --commandFacility ] arg CommandFacility URI
-  -h [ --help ]                produce help message
-```
-
-</details>
-
-
-<details><summary>Some additional information</summary>
-
-### TRACE Messages
-
-To enable the sending of TRACE messages to a memory buffer, you can set one of several TRACE environmental variables _before_ running `appfwk/apps/simple_test_app`.  One example is to use a command like `export TRACE_NAME=TRACE`.  (For more details, please see the [TRACE package documentation](https://cdcvs.fnal.gov/redmine/projects/trace/wiki/Wiki). For example, the [Circular Memory Buffer](https://cdcvs.fnal.gov/redmine/projects/trace/wiki/Circular_Memory_Buffer) section in the TRACE Quick Start talks about the env vars that you can use to enable tracing.)
-
-To view the TRACE messages in the memory buffer, you can use the following additional steps:
-
-
-* [if not done already] `export SPACK_ROOT=<your spack root> ; source $SPACK_ROOT/setup-env.sh`
-
-* [if not done already] `spack load trace`
-
-* `trace_cntl show` or `trace_cntl show | trace_delta -ct 1` (The latter displays the timestamps in human-readable format.  Note that the messages are listed in reverse chronological order in both cases.)
-
-</details>
-
 ## Next Step
 
 
-* [[Creating a new package|Instructions-for-creating-a-new-package ]]
+* You can learn how to create a new package by taking a look at the [daq-cmake documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/)
 
 -----
 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jcfreeman2_
 
-_Date: Mon Mar 15 18:02:24 2021 -0500_
+_Date: Tue Mar 16 15:30:49 2021 -0500_
