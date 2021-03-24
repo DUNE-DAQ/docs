@@ -9,7 +9,7 @@ To create a new package, you'll want to install a DUNE-DAQ development environme
 
 To learn a bit more about how to structure your package so that it can be incorporated into the DUNE DAQ software suite, we'll play with a contrived package called "toylibrary". It's actually contained within a subdirectory of the daq-cmake repo; however, in order to be able to build toylibrary we'll want to copy it into the `./sourcecode` directory so the build system can work with it. Assuming you're already in the base directory of your development environment, do the following: 
 ```
-git clone https://github.com/DUNE-DAQ/daq-cmake.git -b v1.3.3
+git clone https://github.com/DUNE-DAQ/daq-cmake.git -b dunedaq-v2.4.0
 mv daq-cmake/toylibrary sourcecode
 rm -rf daq-cmake
 ```
@@ -38,7 +38,7 @@ Along with having a standard directory structure, the C++ code itself in toylibr
 
 ## Your project's CMakeLists.txt file
 
-Every DUNE DAQ package should have one and only one `CMakeLists.txt` file, in the base directory of the package's repo (not to be confused with the base directory of the overall development area). To learn a bit about what that `CMakeLists.txt` file should look like, let's take a look at `sourcecode/toylibrary/CMakeLists.txt`. Because CMake is widely used and extensively documented online, this documentation will primarily focus on DUNE-specific CMake functions. The full documentation of the DUNE-specific CMake functions for users can be found as comments in the body of the CMake module which contains them (see https://github.com/DUNE-DAQ/daq-cmake/blob/v1.3.3/cmake/DAQ.cmake). Depending on your learning style, however, you may find it easier to start learning about some of what these functions are capable of by reading on in this wiki. 
+Every DUNE DAQ package should have one and only one `CMakeLists.txt` file, in the base directory of the package's repo (not to be confused with the base directory of the overall development area). To learn a bit about what that `CMakeLists.txt` file should look like, let's take a look at `sourcecode/toylibrary/CMakeLists.txt`. Because CMake is widely used and extensively documented online, this documentation will primarily focus on DUNE-specific CMake functions. The full documentation of the DUNE-specific CMake functions for users can be found [here](CmakeFunctions.md). Depending on your learning style, however, you may find it easier to start learning about some of what these functions are capable of by reading on in this wiki. 
 
 At the top of CMakeLists.txt: before doing anything else, we want to define the minimum version of CMake used (currently 3.12, which supports [modern CMake style](https://cliutils.gitlab.io/modern-cmake/)) as well as the name and version of the project. Concerning the version: it may not literally be the case that the code you're working with is exactly the same as the version-in-question's release code, because you may be on a feature branch, or there may have been commits to the develop branch since the last release. 
 ```
@@ -95,11 +95,11 @@ When you call it it will install the targets (executables, shared object librari
 
 ## In-depth documentation of the DUNE DAQ CMake functions
 
-...can be found in the DAQ module file itself, in the comments above each function: https://github.com/DUNE-DAQ/daq-cmake/blob/v1.3.3/cmake/DAQ.cmake 
+...can be found [here](CmakeFunctions.md)
 
 ## If your package relies on nonstandard dependencies
 
-...go back and take a look at the "Adding extra UPS products and product pools" section of [https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/Compiling-and-running/](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/Compiling-and-running/)
+...go back and take a look at the "Adding extra UPS products and product pools" section of [the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/Compiling-and-running/)
 
 ## Installing your project as a local package
 
@@ -116,7 +116,7 @@ A major thing you should be aware of is that when you call CMake's `find_package
 cd ./sourcecode/mypackage
 mkdir cmake
 cd cmake
-curl -O https://raw.githubusercontent.com/DUNE-DAQ/daq-cmake/v1.3.3/configs/Config.cmake.in
+curl -O https://raw.githubusercontent.com/DUNE-DAQ/daq-cmake/dunedaq-v2.4.0/configs/Config.cmake.in
 mv Config.cmake.in mypackageConfig.cmake.in
 ```
 and then let's look at the opening lines of `mypackageConfig.cmake.in`:
@@ -146,6 +146,6 @@ without receiving an error message informing you that installation isn't an opti
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jcfreeman2_
 
-_Date: Tue Mar 16 17:04:03 2021 -0500_
+_Date: Wed Mar 24 13:13:32 2021 -0500_
