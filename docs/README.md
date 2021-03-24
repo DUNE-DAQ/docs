@@ -1,6 +1,6 @@
 # DUNE DAQ Software Documentation Home
 
--JCF, Mar-24-2021: this page will be updated for the dunedaq-v2.4.0 tag by the end of the day_
+_JCF, Mar-24-2021: this page will be updated for the dunedaq-v2.4.0 tag by the end of the day_
 
 There are four DUNE DAQ software packages which are used to aid
 developers in creating packages designed for the DAQ itself:
