@@ -11,7 +11,7 @@ Each cloned daq-buildtools can serve as many work areas as the developer wishes.
 
 The repository can simply be cloned via
 ```bash
-git clone https://github.com/DUNE-DAQ/daq-buildtools.git -b develop
+git clone https://github.com/DUNE-DAQ/daq-buildtools.git -b dunedaq-v2.4.0
 ```
 This step doesn't have to be run more than once per daq-buildtools version. 
 
@@ -27,13 +27,13 @@ DBT setuptools loaded
 ```
 The commands include `dbt-create.sh`, `dbt-build.sh`, `dbt-setup-build-environment` and `dbt-setup-runtime-environment`; these are all described in the following sections.
 
-Each time that you want to work with a DUNE DAQ development area in a fresh Linux shell, you'll need to set up daq-buildtools using the `dbt-setup-env.sh` script, as described above.
+Each time that you want to work with a DUNE DAQ work area in a fresh Linux shell, you'll need to set up daq-buildtools using the `dbt-setup-env.sh` script, as described above.
 
-## Creating a development area (AKA work area)
+## Creating a work area
 
-Once you've sourced `dbt-setup-env.sh`, you're now ready to create a development area. Find a directory in which you want your development area to be a subdirectory, and cd into it. Then think of a good name for the area (give it any name, but we'll refer to it as "MyTopDir" on this wiki). Then you can run:
+Once you've sourced `dbt-setup-env.sh`, you're now ready to create a work area. Find a directory in which you want your work area to be a subdirectory, and cd into it. Then think of a good name for the area (give it any name, but we'll refer to it as "MyTopDir" on this wiki). Then you can run:
 ```sh
-dbt-create.sh <release> <your work area subdirectory> # dunedaq-v2.3.0 is the most recent release as of Mar-2-2021
+dbt-create.sh <release> <your work area subdirectory> # dunedaq-v2.4.0 is the most recent release as of Mar-24-2021
 ```
 which will set up an area to place the repos you wish to build. Remember to cd into the subdirectory you just created after `dbt-create.sh` finishes running. 
 
@@ -42,6 +42,7 @@ MyTopDir
 ├── build
 ├── dbt-pyvenv
 ├── dbt-settings
+├── dbt-setup-env.sh -> /your/path/to/work/area/dbt-setup-env.sh
 ├── log
 └── sourcecode
     ├── CMakeLists.txt
@@ -51,10 +52,10 @@ MyTopDir
 For the purposes of instruction, let's build the `listrev` package. Downloading it is simple:
 ```
 cd sourcecode
-git clone https://github.com/DUNE-DAQ/listrev.git -b v2.1.1 
+git clone https://github.com/DUNE-DAQ/listrev.git -b dunedaq-v2.4.0 
 cd ..
 ```
-Note the assumption above is that you aren't developing listrev; if you were, then you'd want to replace `-b v2.1.1` with `-b <branch you want to work on>`.
+Note the assumption above is that you aren't developing listrev; if you were, then you'd want to replace `-b dunedaq-v2.4.0` with `-b <branch you want to work on>`.
 
 ## Adding extra UPS products and product pools
 
@@ -63,50 +64,64 @@ This can be easily done by editing the `dbt-settings` file copied over from daq-
 
 ```bash
 dune_products_dirs=(
-    "/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/releases/dunedaq-v2.3.0/externals"
-    "/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/releases/dunedaq-v2.3.0/packages"
+    "/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/releases/dunedaq-v2.4.0/externals"
+    "/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/releases/dunedaq-v2.4.0/packages"
     "/example/of/additional/user/declared/product/pool" 
-    #"/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products"
-    #"/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products_dev"
+    #"/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products" 
+    #"/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products_dev" 
 )
 
 dune_systems=(
-    "gcc v8_2_0"
-    "python v3_8_3b"
+    "gcc               v8_2_0"
+    "python            v3_8_3b"
     )
 
-dune_devtools=(
-    "cmake v3_17_2"
-    "gdb v9_2"
-    "ninja v1_10_0"
+    dune_devtools=(
+    "cmake             v3_17_2"
+    "gdb               v9_2"
+    "ninja             v1_10_0"
     )
 
-dune_externals=(
-    "cetlib v3_11_01 e19:prof"
-    "TRACE v3_16_02"
-    "folly v2020_05_25a e19:prof"
-    "nlohmann_json v3_9_0c e19:prof"
-    "pistache v2020_10_07 e19:prof"
-    "highfive v2_2_2b e19:prof"
-    "zmq v4_3_1c e19:prof"
-    "cppzmq v4_3_0 e19:prof"
-    "msgpack_c v3_3_0 e19:prof"
+    dune_externals=(
+    "cetlib            v3_11_01     e19:prof"
+    "TRACE             v3_16_02"
+    "folly             v2020_05_25a e19:prof"
+    "nlohmann_json     v3_9_0c      e19:prof"
+    "pistache          v2020_10_07  e19:prof"
+    "highfive          v2_2_2b      e19:prof"
+    "zmq               v4_3_1c      e19:prof"
+    "cppzmq            v4_3_0       e19:prof"
+    "msgpack_c         v3_3_0       e19:prof"
+    "felix             v1_1_1       e19:prof"
+    "pybind11          v2_6_2       e19:prof"
+    "uhal              v2_8_0       e19:prof"
     )
 
-dune_daqpackages=(
-    # Note: "daq_cmake" with underscore is the UPS product name.
-    # One can use either "daq-cmake" or "daq_cmake" in this file.
-    "daq-cmake v1_3_1 e19:prof"
-    "appfwk v2_2_0 e19:prof"
-    "cmdlib v1_1_1 e19:prof"
-    "restcmd v1_1_0 e19:prof"
-    "listrev v2_1_1 e19:prof"
-    "ers v1_1_0 e19:prof"
-    "logging v1_0_1 e19:prof"
-    "opmonlib v1_0_0 e19:prof"
-    "rcif v1_0_1 e19:prof"
+    dune_daqpackages=(
+    "daq_cmake         v1_3_3       e19:prof"
+    "ers               v1_1_2       e19:prof"
+    "logging           v1_0_1b      e19:prof"
+    "cmdlib            v1_1_2       e19:prof"
+    "restcmd           v1_1_2       e19:prof"
+    "opmonlib          v1_1_0       e19:prof"
+    "rcif              v1_0_1b      e19:prof"
+    "appfwk            v2_2_2       e19:prof"
+    "listrev           v2_1_1b      e19:prof"
+    "serialization     v1_1_0       e19:prof"
+    "flxlibs           v1_0_0       e19:prof"
+    "dataformats       v2_0_0       e19:prof"
+    "dfmessages        v2_0_0       e19:prof"
+    "dfmodules         v2_0_2       e19:prof"
+    "trigemu           v2_1_0       e19:prof"
+    "readout           v1_2_0       e19:prof"
+    "minidaqapp        v2_1_1       e19:prof"
+    "ipm               v2_0_1       e19:prof"
+    "timing            v5_3_0       e19:prof"
+    "timinglibs        v1_0_0       e19:prof"
+    "influxopmon       v1_0_1       e19:prof"
+    "nwqueueadapters   v1_2_0       e19:prof"
     "package_declared_by_user v1_2_3 e19:prof"
-)
+    )
 ```
 As the names suggest, `dune_products_dirs` contains the list of UPS product pools and `dune_daqpackages` contains a list of UPS products sourced by `dbt-setup-build-environment` (described below). If you've already sourced `dbt-setup-build-environment` before editing the `dbt-settings` file, you'll need to log into a fresh shell and source `dbt-setup-env.sh` and `dbt-setup-build-environment` again. 
 
@@ -122,7 +137,7 @@ dbt-build.sh --install
 ...and this will build `listrev` in the local `./build` subdirectory and then install it as a package either in the local `./install` subdirectory or in whatever you pointed `DBT_INSTALL_DIR` to. 
 
 ### Working with more repos
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not found on https://github.com/DUNE-DAQ as of ~Mar-2-2021". If this is the case, you have one of two options:
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not found in /cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/releases/dunedaq-v2.4.0/dbt-build-order.cmake". If this is the case, you have one of two options:
 
 
 * (Recommended) Add the names of your new packages to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
@@ -167,7 +182,7 @@ In order to access the applications, libraries and plugins built in your `./buil
 dbt-setup-runtime-environment
 ```
 
-Note that if you add a new repo to your development area, after building your new code - and hence putting its output in `./build` - you'll need to run the script again. Also note that `dbt-setup-runtime-environment` is a superset of `dbt-setup-build-environment` in that if it sees that `dbt-setup-build-environment` hasn't already been sourced, it will source it for you. 
+Note that if you add a new repo to your work area, after building your new code - and hence putting its output in `./build` - you'll need to run the script again. Also note that `dbt-setup-runtime-environment` is a superset of `dbt-setup-build-environment` in that if it sees that `dbt-setup-build-environment` hasn't already been sourced, it will source it for you. 
 
 Once the runtime environment is set, just run the application you need. listrev, however, has no applications; it's just a set of DAQ module plugins which get added to CET_PLUGIN_PATH.  
 
@@ -222,6 +237,6 @@ And you can again type `init`, etc. However, unlike previously, now you'll want 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: John Freeman_
 
-_Date: Tue Mar 16 15:30:49 2021 -0500_
+_Date: Wed Mar 24 12:12:45 2021 -0500_
