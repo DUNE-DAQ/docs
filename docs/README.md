@@ -13,7 +13,7 @@ To learn about the C++ coding guidelines which DUNE DAQ package developers shoul
 
 --------------
 
-For the other packages, please click on one of the links below:
+For the other packages, please click on one of the links below. To learn how to edit a package's documentation, click [here](editing_package_documentation.md)
 
 [appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
 
@@ -51,5 +51,5 @@ For the other packages, please click on one of the links below:
 
 ------
 
-_Mar-11-2021: For software coordinators only:_ [how to make edits to the webpage](how_to_make_edits.md)
+_Mar-11-2021: For software coordinators only:_ [how to make edits to this webpage](how_to_make_edits.md)
 
