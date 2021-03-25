@@ -3,11 +3,11 @@
 
 One of the main purposes of the official DUNE DAQ documentation is to
 provide info about each package for its users. The webpages for each
-package are generated off [markdown
+package are generated off [Markdown
 files](https://www.markdownguide.org/basic-syntax/) which need to be 
 located in a `docs/` subdirectory in that package's repo. The one file
 which must exist is `docs/README.md`; this serves as the homepage for
-the package's documentation. It may provide links to other markdown
+the package's documentation. It may provide links to other Markdown
 files, or to other webpages, where necessary. Note that in this model,
 it's possible to edit the documentation within a package's GitHub
 page, making it easy to check for Markdown syntax errors before
@@ -32,7 +32,7 @@ A few points need to be made:
 - Many packages will have wiki pages which already (Mar-25-2021)
   contain user-facing content. This content should be moved out of the
   wiki pages and into `docs/`. It's possible to grab a Markdown page
-  off a GitHub wiki with the command `curl -O https://raw.githubusercontent.com/wiki/DUNE-DAQ/<name of the  package>/<name of the file>.md"
+  off a GitHub wiki with the command `curl -O https://raw.githubusercontent.com/wiki/DUNE-DAQ/<name of the  package>/<name of the file>.md`
 
 - Any `README.md` files in the base of a repo should be moved into a
   `docs/` subdirectory of the repo
