@@ -2,14 +2,14 @@
 [Under development]
 # Introduction
 
-This page is intended to provide a step-by-step guide to setting up a work area in which you create software *modules* that run within the DUNE DAQ software application framework (*appfwk*). These modules are often called _DAQModules_ since that is the C++ base class that they inherit from. If you are impatient to get started, you can jump to the [[Step-by-step Instructions|Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.0.0#step-by-step Installation instructions]] now.  
+This page is intended to provide a step-by-step guide to setting up a work area in which you create software *modules* that run within the DUNE DAQ software application framework (*appfwk*). These modules are often called _DAQModules_ since that is the C++ base class that they inherit from. If you are impatient to get started, you can jump to the [Step-by-step Instructions](Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.0.0.md) now.  
 New users should probably continue reading this introduction, though, to learn a little bit of background information.
 
 This page draws from, and references, several other Wiki pages in the *appfwk* repository.  Links to these pages are listed in the text in the relevant places, and they are a good source of additional information for interested readers.  Here are some of these references collected for you in one place on this page:
 
-* [[Compiling and running the App Fwk|Compiling-and-running]]
+* [Compiling and running the App Fwk](Compiling-and-running.md)
 
-* [[Creating a new package|Creating-a-new-package-under-v1.2.1]]
+* [Creating a new package](Creating-a-new-package-under-v1.2.1.md)
 
 and last, but certainly not least
 
@@ -22,7 +22,7 @@ As a refresher:
 
 * a *DAQProcess* contains one or more *DAQModules*
 
-* when multiple *DAQModules* are present within a *DAQProcess*, they communicate with each other via *Queues* (the diagrams that are included [[later on this page|Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1#information-about-the-daqmodules-in-the-listrev-example]] might help explain this)
+* when multiple *DAQModules* are present within a *DAQProcess*, they communicate with each other via *Queues* (the diagrams that are included [later on this page](Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.md) might help explain this)
 
 * there are two classes that wrap *Queues* to provide the ability to push data onto the queue (*DAQSink*) or pull data from a queue (*DAQSource*). An individual *DAQModule* will only access one side of each *Queue*.  If the module pushes data onto the queue, it will use an instance of the *DAQSink* class (which wraps the desired *Queue*), and if the module pops data from the queue, it will use an instance of the *DAQSource* class.
 
@@ -48,18 +48,18 @@ Since DAQ Suite v2, the system has been enriched with automated generated code t
 # Step-by-step Installation instructions
 
 
-Instructions on setting up a work area in which you can create your new package can be found [[here|Compiling-and-running]]. After you've created your own working area, for our purposes the first things to do is to add the packages your new package will depend on and compile them. Most likely your dependencies will include `appfwk` and `cmdlib` as per the installation instructions. 
+Instructions on setting up a work area in which you can create your new package can be found [here](Compiling-and-running.md). After you've created your own working area, for our purposes the first things to do is to add the packages your new package will depend on and compile them. Most likely your dependencies will include `appfwk` and `cmdlib` as per the installation instructions. 
 For future reference we'll call your working area `WORK_DIR`, which is the directory that at this point should contain the following automatic generated sub-directories: `build`, `dbt-pyvenv`, `install`, `log` and `sourcecode`.
 
 
 <!-- 
-At this point, you could either check out the example DAQModule package, build it, and run the example application (recommended), or you could jump to [[creating your own package|Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.1.0#Create-your-own-software-package]].  
+At this point, you could either check out the example DAQModule package, build it, and run the example application (recommended), or you could jump to [creating your own package](Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.1.0.md).  
 These instructions will walk you through doing both, but of course you can skip to the latter by scrolling to the dedicated section.
 
 ## Install the example package
 
 
-Here are the steps for adding the *appfwk* Example package to your work area, building it, and running the example application... (For information on the *DAQModules* that are contained in the example application and how they interact, please see [[this section|Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.1.0#Information-about-the-DAQModules-in-the-listrev-example]] later on this page.)
+Here are the steps for adding the *appfwk* Example package to your work area, building it, and running the example application... (For information on the *DAQModules* that are contained in the example application and how they interact, please see [this section](Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.1.0.md) later on this page.)
 
 * `cd` into your work area directory (`WORK_DIR`), if you aren't there already
 
@@ -75,7 +75,7 @@ Here are the steps for adding the *appfwk* Example package to your work area, bu
 * Build the listrev in your work area by running
     * `./build_daq_software.sh --pkgname listrev`
 
-In order to run the example package follow the instruction in the [[dedicated section|Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.1.0#Running the example package]].
+In order to run the example package follow the instruction in the [dedicated section](Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.1.0.md).
 
 -->
 
@@ -124,7 +124,7 @@ Here are the commands to create your own software package that depends on appfwk
 ### How to create a command file
 
 ## How to write the C++ code of the DAQModule
-From the C++ point of view, DAQ modules are implementation of a [[DAQ Module interface|DAQModules]]. 
+From the C++ point of view, DAQ modules are implementation of a [DAQ Module interface](DAQModules.md). 
 That means that apart from the constructor (that receives a name) only one method has to be implemented: `init()`.  
 The function has to handle all those configuration items that are not supposed to be reconfigurable during the run. 
 Optionally it can configure all those variables that can be overridden during run time.

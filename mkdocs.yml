@@ -25,6 +25,7 @@ nav:
           - README: packages/styleguide/README.md
        - appfwk:
           - README: packages/appfwk/README.md
+          - DAQModules: packages/appfwk/DAQModules.md
           - How-to-write-your-DAQModule: packages/appfwk/How-to-write-your-DAQModule.md
           - Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.0.0: packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.0.0.md
        - cmdlib: packages/cmdlib/README.md

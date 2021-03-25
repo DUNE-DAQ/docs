@@ -2,7 +2,7 @@
 This page contains a starting point to write a new DAQ Module compatible withe operation of the application framework. 
 
 # Code
-From the C++ point of view, DAQ modules are implementation of a [[DAQ Module interface|DAQModules]]. 
+From the C++ point of view, DAQ modules are implementation of a [DAQ Module interface](DAQModules.md). 
 That means that apart from the constructor (that receives a name) only one method has to be implemented: `init()`.  
 The function has to handle all those configuration items that are not supposed to be reconfigurable during the run. 
 Optionally it can configure all those variables that can be overridden during run time.
