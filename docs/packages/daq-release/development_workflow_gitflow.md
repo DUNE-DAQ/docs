@@ -25,13 +25,13 @@ A team is usually managed by DAQ working group leaders. Developers obtain write 
 * Default branch: `develop`;
 
 * Short-lived branches:
-  * feature branches
+    * feature branches
     * branch off from `develop`,
     * merge back to `develop`;
-  * hotfix branches
+    * hotfix branches
     * branch off from `master`,
     * merge back to `develop` and `master`
-  * release branches
+    * release branches
     * branch off from `develop`,
     * merge back to `develop` and `master`
 

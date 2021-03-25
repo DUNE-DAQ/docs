@@ -60,7 +60,7 @@ These are its key features:
 - One or more template files must be defined.
 - The path of the generated C++ headers is a combination of the schema path and the template name:  
   `mypkg.myschema` applied to `MyTemplate.hpp.j2` will result in `include/mypkg/myschema/MyTemplate.hpp.j2`.  
-  **NOTE** The schema filename is converted to lowercase
+    **NOTE** The schema filename is converted to lowercase
 - Templates are specified as `<template package>/<template name .j2>`. If `<template package>` is omitted, a moo template will be assumed. Othewise `daq_codegen` will search for the template file in `<template package>/<template name .j2>`
 
 

@@ -14,23 +14,23 @@ The dependency is available under devevlopment products. Please pay attention to
 
 
 * create a software work area
-  * see https://github.com/DUNE-DAQ/appfwk/wiki/Compiling-and-running-under-v1.2.1
+    * see https://github.com/DUNE-DAQ/appfwk/wiki/Compiling-and-running-under-v1.2.1
 
 * clone this repo into your work/development area
-  * `cd <your_work_area>/sourcecode`
-  * `git clone https://github.com/DUNE-DAQ/restcmd.git`
-  * `cd ..`
+    * `cd <your_work_area>/sourcecode`
+    * `git clone https://github.com/DUNE-DAQ/restcmd.git`
+    * `cd ..`
 
 * build the software. Along with executing the commands below, you may also want to consider adding the `export PRODUCTS...` and `setup pistache...` lines to `setup_build_environment` for future sourcings
-  * `. ./setup_build_environment`
-  * `export PRODUCTS=/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products_dev:$PRODUCTS`
-  * `setup pistache v2020_10_07 -q e19:prof`
-  * `./build_daq_software.sh --install` 
+    * `. ./setup_build_environment`
+    * `export PRODUCTS=/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products_dev:$PRODUCTS`
+    * `setup pistache v2020_10_07 -q e19:prof`
+    * `./build_daq_software.sh --install` 
 
 * run the demos in another shell
-  * `cd <your work area>`
-  * `. ./setup_runtime_environment`
-  * `restcmd_test_rest_app`
+    * `cd <your work area>`
+    * `. ./setup_runtime_environment`
+    * `restcmd_test_rest_app`
     * the application will terminate in 20 seconds
     * from the first terminal, send commands via [curl](#sendcurl) or with the more preferred [send-restcmd.py](#sendcmd)
 

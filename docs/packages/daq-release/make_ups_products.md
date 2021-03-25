@@ -117,10 +117,10 @@ Once finished running the script, your working directory will look like
 Script [get_scisoft_pkgs.sh](https://github.com/DUNE-DAQ/daq-release/blob/master/scripts/ups_build_scripts/get_scisoft_pkgs.sh) is provided in this repo under `scripts/ups_build_scripts`.
 
 This script contains four lists of packages and their corresponding URLs of prebuilt tarballs on SciSoft's web server:
-  * `PKGS_MINIMAL` is a minimal set of packages needed for build opt variant of UPS products of the DAQ develop release;
-  * `PKGS_DEBUG` includes additional packages/variants needed for the debug build;
-  * `PKGS_OLDER_VERSIONS` contains older versions of packages in DUNE DAQ's cvmfs repo;
-  * `PKGS_NEWER_VERSIONS` contains packages/versions which have not been used by any release, but are currently in cvmfs for developers to play with.
+    * `PKGS_MINIMAL` is a minimal set of packages needed for build opt variant of UPS products of the DAQ develop release;
+    * `PKGS_DEBUG` includes additional packages/variants needed for the debug build;
+    * `PKGS_OLDER_VERSIONS` contains older versions of packages in DUNE DAQ's cvmfs repo;
+    * `PKGS_NEWER_VERSIONS` contains packages/versions which have not been used by any release, but are currently in cvmfs for developers to play with.
 By default, the script will retrieve packages listed in `PKGS_MINIMAL` and unpack them under the current directory.
 
 
@@ -129,11 +129,11 @@ Before building DAQ's own UPS packages, it's recommended to run this script firs
 ### Build `folly` and its dependencies with `cetbuildtools`
 
 `folly` and its dependencies are set up to be built into UPS packages with `cetbuildtools` using recipes written in [`daq-externals`](https://github.com/DUNE-DAQ/daq-externals) for building [folly](https://github.com/facebook/folly). The dependencies are:
-  * [double-conversion](https://github.com/google/double-conversion)
-  * [fmt](https://github.com/fmtlib/fmt)
-  * [glog](https://github.com/google/glog)
-  * [googletest](https://github.com/google/googletest)
-  * [libevent](https://github.com/libevent/libevent)
+    * [double-conversion](https://github.com/google/double-conversion)
+    * [fmt](https://github.com/fmtlib/fmt)
+    * [glog](https://github.com/google/glog)
+    * [googletest](https://github.com/google/googletest)
+    * [libevent](https://github.com/libevent/libevent)
 
 Here are the steps to build these UPS products (using `fmt` as an example):
 

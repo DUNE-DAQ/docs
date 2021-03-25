@@ -66,9 +66,9 @@ function massage() {
     fi
 
 
-    sed -r -i 's/^(\*.*)$/\n\1/;s/^ {3,4}(\*.*)/    \1/;s/^ {5,}(\*.*)/        \1/' $markdown_file
+    sed -r -i 's/^(\*.*)$/\n\1/;s/^ {2,4}(\*.*)/    \1/;s/^ {5,}(\*.*)/        \1/' $markdown_file
     sed -r -i 's/^([0-9]+\..*)/\n\1/' $markdown_file
-    sed -r -i 's/^([0-9]+\..*)/\n\1/;s/^ {3,4}([0-9]+\.*)/    \1/;' $markdown_file
+    sed -r -i 's/^([0-9]+\..*)/\n\1/;s/^ {2,4}([0-9]+\.*)/    \1/;' $markdown_file
 
 }
 
