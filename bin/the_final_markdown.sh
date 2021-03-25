@@ -38,14 +38,6 @@ else
     exit 3
 fi
 
-# JCF, Mar-5-2021
-
-# What I've discovered is that GitHub wiki pages recognize
-# indentations of three characters as implying a sublevel in a ToC,
-# but MkDocs doesn't. Furthermore, if a line starts with a bullet (*),
-# MkDocs won't interpret it as a bullet unless there's an empty line
-# above it.
-
 function massage() {
 
     markdown_file=$1
@@ -65,10 +57,22 @@ function massage() {
 	sed -r -i "1s/^/# $header\n/"  $markdown_file 
     fi
 
+    # JCF, Mar-5-2021
+
+    # What I've discovered is that GitHub wiki pages recognize
+    # indentations of three characters as implying a sublevel in a ToC,
+    # but MkDocs doesn't. Furthermore, if a line starts with a bullet (*),
+    # MkDocs won't interpret it as a bullet unless there's an empty line
+    # above it.
 
     sed -r -i 's/^(\*.*)$/\n\1/;s/^ {2,4}(\*.*)/    \1/;s/^ {5,}(\*.*)/        \1/' $markdown_file
     sed -r -i 's/^([0-9]+\..*)/\n\1/' $markdown_file
     sed -r -i 's/^([0-9]+\..*)/\n\1/;s/^ {2,4}([0-9]+\.*)/    \1/;' $markdown_file
+
+    # JCF, Mar-25-2021
+    # Convert wiki syntax of the form [[link name][other_markdown_page.md]] to [link name](other_markdown_page.md)
+    
+    sed -r -i 's/\[\[(.+)\|([^#]+).*\]\]/[\1](\2.md)/' $markdown_file 
 
 }
 
