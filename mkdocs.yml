@@ -10,17 +10,7 @@ nav:
           - CmakeFunctions: packages/daq-cmake/CmakeFunctions.md
           - Creating-a-new-package: packages/daq-cmake/Creating-a-new-package.md
           - SchemaAndCodeGen: packages/daq-cmake/SchemaAndCodeGen.md
-       - daq-release:
-          - README: packages/daq-release/README.md
-          - add_modules_to_pypi_repo: packages/daq-release/add_modules_to_pypi_repo.md
-          - ci_github_action: packages/daq-release/ci_github_action.md
-          - create_release: packages/daq-release/create_release.md
-          - development_workflow_gitflow: packages/daq-release/development_workflow_gitflow.md
-          - make_ups_products: packages/daq-release/make_ups_products.md
-          - publish_to_cvmfs: packages/daq-release/publish_to_cvmfs.md
-          - slides: packages/daq-release/slides.md
-          - standalone_daq_release: packages/daq-release/standalone_daq_release.md
-          - upsify_daq_packages: packages/daq-release/upsify_daq_packages.md
+       - daq-release: packages/daq-release/README.md
        - styleguide:
           - README: packages/styleguide/README.md
        - appfwk:
