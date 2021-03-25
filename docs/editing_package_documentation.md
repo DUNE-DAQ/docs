@@ -31,7 +31,7 @@ A few points need to be made:
 
 - Many packages will have wiki pages which already (Mar-25-2021)
   contain user-facing content. This content should be moved out of the
-  wiki pages and into `docs/`. It's possible to grab the Markdown file corresponding to a GitHub wiki page with the command `curl -O https://raw.githubusercontent.com/wiki/DUNE-DAQ/<name of the  package>/<title of the wiki page with spaces replaced by hyphens>.md`
+  wiki pages and into `docs/`. It's possible to grab the Markdown file corresponding to a GitHub wiki page with the command `curl -O https://raw.githubusercontent.com/wiki/DUNE-DAQ/<name of the  package>/<title of the wiki page with spaces replaced by hyphens>.md`. A concrete example would be `curl -O https://raw.githubusercontent.com/wiki/DUNE-DAQ/minidaqapp/MiniDAQApp-Diagrams.md`.
 
 - Any `README.md` files in the base of a repo should be moved into a
   `docs/` subdirectory of the repo
