@@ -1,5 +1,7 @@
 # daq-release
 
+![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
 This is a repo containing release manifest files of DUNE DAQ releases.
 
 For a specific release (e.g. development release or a tagged release like
@@ -90,6 +92,6 @@ Detailed explanations of the release manifest file:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: dingp_
+_Author: Pengfei Ding_
 
-_Date: Fri Sep 25 09:55:32 2020 -0500_
+_Date: Fri Mar 26 15:48:43 2021 -0500_
