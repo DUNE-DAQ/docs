@@ -36,14 +36,3 @@ A few points need to be made:
 - Any `README.md` files in the base of a repo should be moved into a
   `docs/` subdirectory of the repo
 
-
------
-
-_Last git commit to the markdown source of this page:_
-
-
-_Author: John Freeman_
-
-_Date: Mon Mar 29 13:54:02 2021 -0500_
-
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/docs/issues](https://github.com/DUNE-DAQ/docs/issues)_

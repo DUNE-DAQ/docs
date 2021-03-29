@@ -107,19 +107,6 @@ function add_trailer() {
     echo "_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/$package/issues](https://github.com/DUNE-DAQ/$package/issues)_" >> $packagefile
 }
 
-cd $docs_dir
-#for docsfile in $( ls -1 *.md ) ; do
-#     if [[ -n $( git diff HEAD -- $docsfile ) ]]; then
-# 	echo "Please manually commit changes to $docsfile (and any other markdown files in $docs_dir) so that"
-# 	echo "info this script adds about modification time to the file is correct. Exiting..."
-# 	exit 5
-#     fi
-#done
-
-for docsfile in $( ls -1 *.md) ; do
-    add_trailer docs $docs_dir/$docsfile
-done
-
 for package in $package_list ; do
     
     cd $tmpdir
