@@ -133,9 +133,15 @@ for package in $package_list ; do
 	for mdfile in $mdfilelist; do
 	    massage $mdfile
 	    
-	    pagename=$( echo $mdfile | sed -r 's!^.*/(.*).md$!\1!' )
 	    mdfile_relative=$( echo $mdfile | sed -r 's!^.*/docs/(.*)!\1!' )
-	    sed -r -i '/^\s*-\s*'$package'\s*:.*/a \          - '$pagename': '$mdfile_relative $here/../mkdocs.yml
+	    pagename=$( echo $mdfile | sed -r 's!^.*/(.*).md$!\1!' )
+	    if [ x"${pagename}" == "xREADME" ]; then
+		pagename=$( echo About ${package} )
+		echo "+===+++ ${package} ===== ${mdfile} ==== $pagename"
+		sed -r -i '/^\s*-\s*'$package'\s*:.*/a \          - '"$pagename"': '$mdfile_relative $here/../mkdocs.yml
+	    else
+		sed -r -i '/^\s*-\s*'$package'\s*:.*/a \          - '$mdfile_relative $here/../mkdocs.yml
+	    fi
 
 	done
 
