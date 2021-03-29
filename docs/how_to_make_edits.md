@@ -58,3 +58,36 @@ mkdocs serve
 ```
 It'll let you know if it can't parse the edits. Assuming it did, however, in another terminal open up `http://127.0.0.1:8000/` with your favorite browser, e.g. `firefox http://127.0.0.1:8000/ &`. You'll see what `https://dune-daq-sw.readthedocs.io/en/latest/` hypothetically would look like with your changes. Note that as you edit your copy of the docs repo, your edits will actually appear in your browser in real time. 
 
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+__
+
+__
+
+_If you see a problem with the documentation, please file an Issue at [https://github.com/DUNE-DAQ/docs/issues](https://github.com/DUNE-DAQ/docs/issues)_
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Thu Mar 11 17:02:52 2021 -0600_
+
+_If you see a problem with the documentation, please file an Issue at [https://github.com/DUNE-DAQ/docs/issues](https://github.com/DUNE-DAQ/docs/issues)_
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Thu Mar 11 17:02:52 2021 -0600_
+
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/docs/issues](https://github.com/DUNE-DAQ/docs/issues)_

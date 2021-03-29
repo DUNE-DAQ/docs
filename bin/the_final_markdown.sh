@@ -18,6 +18,7 @@ if [[ -e $mkdocs_yml ]]; then
 fi
 
 packages_dir="$here/../docs/packages"
+docs_dir="$here/../docs"
 
 if [[ -d $packages_dir ]]; then
     echo "You need to delete the existing $packages_dir directory before running this script, " >&2
@@ -76,6 +77,36 @@ function massage() {
 
 }
 
+function add_trailer() {
+    
+    package=$1
+    packagefile=$2
+
+    echo >> $packagefile
+    echo "-----" >> $packagefile
+    echo >> $packagefile
+    echo "_Last git commit to the markdown source of this page:_" >> $packagefile
+    echo >> $packagefile
+    echo >> $packagefile
+    echo "_"$(git log -1 $packagefile | sed -r -n 's/^(Author.*)\s+\S+@.*/\1/p' )"_" >> $packagefile
+    echo >> $packagefile
+    echo "_"$(git log -1 $packagefile | grep Date )"_" >> $packagefile
+    echo >> $packagefile
+    echo "_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/$package/issues](https://github.com/DUNE-DAQ/$package/issues)_" >> $packagefile
+}
+
+cd $docs_dir
+for docsfile in $( ls -1 *.md ) ; do
+    if [[ -n $( git diff HEAD -- $docsfile ) ]]; then
+	echo "Please manually commit changes to $docsfile (and any other markdown files in $docs_dir) so that"
+	echo "info this script adds about modification time to the file is correct. Exiting..."
+    fi
+done
+
+for docsfile in $( ls -1 *.md) ; do
+    add_trailer docs $docs_dir/$docsfile
+done
+
 for package in $package_list ; do
     
     cd $tmpdir
@@ -102,16 +133,7 @@ for package in $package_list ; do
     # Add provenance of each markdown file
 
     for packagefile in $( find . -name "*.md" ); do
-	echo >> $packagefile
-	echo "-----" >> $packagefile
-	echo >> $packagefile
-	echo "_Last git commit to the markdown source of this page:_" >> $packagefile
-	echo >> $packagefile
-	echo >> $packagefile
-	echo "_"$(git log -1 $packagefile | sed -r -n 's/^(Author.*)\s+\S+@.*/\1/p' )"_" >> $packagefile
-	echo >> $packagefile
-	echo "_"$(git log -1 $packagefile | grep Date )"_" >> $packagefile
-	
+	add_trailer $package $packagefile
     done
 
     if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" ) ]]; then
@@ -160,3 +182,4 @@ done
 if [[ -d $tmpdir && "$tmpdir" =~ ^/tmp/.*$ ]]; then
     rm -rf $tmpdir
 fi
+

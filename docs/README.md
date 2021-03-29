@@ -53,3 +53,36 @@ For the other packages, please click on one of the links below. To learn how to 
 
 _Mar-11-2021: For software coordinators only:_ [how to make edits to this webpage](how_to_make_edits.md)
 
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+__
+
+__
+
+_If you see a problem with the documentation, please file an Issue at [https://github.com/DUNE-DAQ/docs/issues](https://github.com/DUNE-DAQ/docs/issues)_
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Sun Mar 28 22:48:40 2021 -0500_
+
+_If you see a problem with the documentation, please file an Issue at [https://github.com/DUNE-DAQ/docs/issues](https://github.com/DUNE-DAQ/docs/issues)_
+
+-----
+
+_Last git commit to the markdown source of this page:_
+
+
+_Author: John Freeman_
+
+_Date: Sun Mar 28 22:48:40 2021 -0500_
+
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/docs/issues](https://github.com/DUNE-DAQ/docs/issues)_

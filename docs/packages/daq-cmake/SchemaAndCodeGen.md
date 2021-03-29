@@ -124,3 +124,5 @@ _Last git commit to the markdown source of this page:_
 _Author: Alessandro Thea_
 
 _Date: Fri Feb 26 01:35:54 2021 +0100_
+
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_

@@ -240,3 +240,5 @@ _Last git commit to the markdown source of this page:_
 _Author: John Freeman_
 
 _Date: Wed Mar 24 12:12:45 2021 -0500_
+
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
