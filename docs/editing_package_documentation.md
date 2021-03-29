@@ -42,30 +42,8 @@ A few points need to be made:
 _Last git commit to the markdown source of this page:_
 
 
-__
-
-__
-
-_If you see a problem with the documentation, please file an Issue at [https://github.com/DUNE-DAQ/docs/issues](https://github.com/DUNE-DAQ/docs/issues)_
-
------
-
-_Last git commit to the markdown source of this page:_
-
-
 _Author: John Freeman_
 
-_Date: Thu Mar 25 16:52:53 2021 -0500_
-
-_If you see a problem with the documentation, please file an Issue at [https://github.com/DUNE-DAQ/docs/issues](https://github.com/DUNE-DAQ/docs/issues)_
-
------
-
-_Last git commit to the markdown source of this page:_
-
-
-_Author: John Freeman_
-
-_Date: Thu Mar 25 16:52:53 2021 -0500_
+_Date: Mon Mar 29 13:35:47 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/docs/issues](https://github.com/DUNE-DAQ/docs/issues)_
