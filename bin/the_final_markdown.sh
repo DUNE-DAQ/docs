@@ -77,22 +77,10 @@ function massage() {
 
 }
 
-# JCF, Mar-29-2021
-# n.b. If you alter the output of this function, make SURE that lines_in_trailer gets set to the correct value
-
 function add_trailer() {
     
     package=$1
     packagefile=$2
-
-    # Chop off any existing trailer
-    lines_in_trailer_minus_one=10
-    line_from_trailer="Last git commit to the markdown source of this page"
-
-    if [[ -n $( grep "$line_from_trailer" $packagefile ) ]]; then
-	# See https://stackoverflow.com/questions/13380607/how-to-use-sed-to-remove-the-last-n-lines-of-a-file
-	sed -i "$(($(wc -l < $packagefile)-$lines_in_trailer_minus_one)),\$d" $packagefile
-    fi
 
     echo >> $packagefile
     echo "-----" >> $packagefile
