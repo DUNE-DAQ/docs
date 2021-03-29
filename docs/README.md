@@ -7,7 +7,7 @@ To learn how to build an existing software package, read the [daq-buildtools doc
 
 To learn how to create a new package or modify the build of an existing one, read the [daq-cmake documentation](packages/daq-cmake/README.md)
 
-To learn about the standard development workflow, read the [daq-release documentation](packages/daq-release/README.md)
+To learn about the standard development workflow, read the [daq-release documentation](packages/daq-release/README.md), in particular [this page](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-release/development_workflow_gitflow/)
 
 To learn about the C++ coding guidelines which DUNE DAQ package developers should follow, read [the styleguide](packages/styleguide/README.md)
 
