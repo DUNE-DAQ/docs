@@ -4,7 +4,11 @@
 
 
 
+
+
 1. Schemas (jsonnet), models (jsonnet) and templates (jinjia) in the `schema/<package name>` folder are automatically copied to the installation driector and into ups products eventually.
+
+
 
 
 1. The `daq_codegen` cmake function provides a simpliefied interface to `moo render` to generate C++ files from jinjia templates. It provides a mechanism to easily import schemas, templates or models from other packages and implements an out-of-date dependency check.
@@ -70,7 +74,11 @@ These are its key features:
 
 
 
+
+
 1. Create the `schema/<package>` directory and move existing schema files in there
+
+
 
 
 2. Rename the schema file according to the schema path
@@ -81,7 +89,11 @@ e.g. `schema/appfwk-cmd-schema.jsonnet` to `schema/appfwk/cmd.jsonnet`
 
 
 
+
+
 1. Remove `SCHEMA` from `daq_add_plugin(...)` if it's used
+
+
 
 
 2. Add `daq_codegen(...)` with appropriate parameters. In most of the cases the following should work
@@ -93,36 +105,35 @@ e.g. `schema/appfwk-cmd-schema.jsonnet` to `schema/appfwk/cmd.jsonnet`
 
 
 
+
+
 1. Add the following lines to `<pkg>Config.cmake.in`:
 
-   ```diff
-   add_library(@PROJECT_NAME@::@PROJECT_NAME@ ALIAS @PROJECT_NAME@)
+```
+add_library(@PROJECT_NAME@::@PROJECT_NAME@ ALIAS @PROJECT_NAME@)
    
-   + get_filename_component(@PROJECT_NAME@_DAQSHARE "${CMAKE_CURRENT_LIST_FILE}" DIRECTORY)
-   
-   else()
-   ```
++ get_filename_component(@PROJECT_NAME@_DAQSHARE "${CMAKE_CURRENT_LIST_FILE}" DIRECTORY)
+  
+else()
+```
    
    and
    
-   ```diff
-   include(${targets_file})
+```
+include(${targets_file})
    
-   + set(@PROJECT_NAME@_DAQSHARE "${CMAKE_CURRENT_LIST_DIR}/../../../share")
++ set(@PROJECT_NAME@_DAQSHARE "${CMAKE_CURRENT_LIST_DIR}/../../../share")
    
-   endif()
-   ```
-
-
-
+endif()
+```
 
 -----
 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Alessandro Thea_
+_Author: John Freeman_
 
-_Date: Fri Feb 26 01:35:54 2021 +0100_
+_Date: Mon Apr 5 16:05:51 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
