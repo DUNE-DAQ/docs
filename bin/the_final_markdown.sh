@@ -107,7 +107,8 @@ for package in $package_list ; do
     fi
 
     cd $tmpdir/$package
-    git checkout johnfreeman/dont-readme 2>/dev/null  # OK if this fails, just trying to see if the branch is available for developer purposes
+    git checkout develop
+    #git checkout johnfreeman/dont-readme 2>/dev/null  # OK if this fails, just trying to see if the branch is available for developer purposes
     echo $tmpdir/$package
 
     if [[ -d $tmpdir/$package/docs/ || -e $tmpdir/$package/README.md ]]; then

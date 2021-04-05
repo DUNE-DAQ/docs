@@ -1,4 +1,4 @@
-# daq-release
+# About daq-release
 
 ![GitHub issues](https://img.shields.io/github/issues/DUNE-DAQ/daq-release) ![GitHub pull requests](https://img.shields.io/github/issues-pr/DUNE-DAQ/daq-release) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/DUNE-DAQ/daq-release?label=latest%20tag) ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/DUNE-DAQ/daq-release)
 
@@ -38,6 +38,6 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Sun Mar 28 14:43:51 2021 -0500_
+_Date: Wed Mar 31 15:18:28 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_

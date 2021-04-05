@@ -23,11 +23,7 @@ nav:
           - packages/daq-release/upsify_daq_packages.md
        - styleguide:
           - About styleguide: packages/styleguide/README.md
-       - appfwk:
-          - About appfwk: packages/appfwk/README.md
-          - packages/appfwk/DAQModules.md
-          - packages/appfwk/How-to-write-your-DAQModule.md
-          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.0.0.md
+       - appfwk: packages/appfwk/README.md
        - cmdlib: packages/cmdlib/README.md
        - dataformats: packages/dataformats/README.md
        - dfmessages: packages/dfmessages/README.md
@@ -36,17 +32,11 @@ nav:
        - ipm: packages/ipm/README.md
        - listrev: packages/listrev/README.md
        - logging: packages/logging/README.md
-       - minidaqapp:
-          - About minidaqapp: packages/minidaqapp/README.md
-          - packages/minidaqapp/Coordination-notes-for-v2.3.0-and-v2.4.0.md
-          - packages/minidaqapp/Instructions-for-setting-up-a-v2.4.0-development-environment.md
-          - packages/minidaqapp/MiniDAQApp-Diagrams.md
-          - packages/minidaqapp/Notes-from-meetings-and-discussions.md
-          - packages/minidaqapp/Reminders-about-tests-that-we-want-to-run.md
-          - packages/minidaqapp/Simple-instructions-for-running-the-app.md
+       - minidaqapp: packages/minidaqapp/README.md
        - nwqueueadapters: packages/nwqueueadapters/README.md
        - opmonlib: packages/opmonlib/README.md
-       - readout: packages/readout/README.md
+       - readout:
+          - About readout: packages/readout/README.md
        - restcmd: packages/restcmd/README.md
        - serialization: packages/serialization/README.md
        - trigemu: packages/trigemu/README.md
