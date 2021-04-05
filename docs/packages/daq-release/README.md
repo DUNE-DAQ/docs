@@ -33,6 +33,7 @@ This is a repo containing DUNE DAQ release making tools, configuarion files, and
 
 -----
 
+<font size="1">
 _Last git commit to the markdown source of this page:_
 
 
@@ -41,3 +42,4 @@ _Author: Pengfei Ding_
 _Date: Wed Mar 31 15:18:28 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
+</font>

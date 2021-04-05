@@ -85,6 +85,7 @@ function add_trailer() {
     echo >> $packagefile
     echo "-----" >> $packagefile
     echo >> $packagefile
+    echo "<font size=\"1\">" >> $packagefile
     echo "_Last git commit to the markdown source of this page:_" >> $packagefile
     echo >> $packagefile
     echo >> $packagefile
@@ -93,6 +94,8 @@ function add_trailer() {
     echo "_"$(git log -1 $packagefile | grep Date )"_" >> $packagefile
     echo >> $packagefile
     echo "_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/$package/issues](https://github.com/DUNE-DAQ/$package/issues)_" >> $packagefile
+    echo "</font>" >> $packagefile
+    
 }
 
 for package in $package_list ; do

@@ -38,6 +38,7 @@ To test the fake raw WIB TP readout, run
 
 -----
 
+<font size="1">
 _Last git commit to the markdown source of this page:_
 
 
@@ -46,3 +47,4 @@ _Author: roland-sipos_
 _Date: Tue Mar 30 09:29:28 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readout/issues](https://github.com/DUNE-DAQ/readout/issues)_
+</font>

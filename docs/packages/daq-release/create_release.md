@@ -52,6 +52,7 @@ Here are the general steps of creating a new DAQ release.
 
 -----
 
+<font size="1">
 _Last git commit to the markdown source of this page:_
 
 
@@ -60,3 +61,4 @@ _Author: Pengfei Ding_
 _Date: Mon Mar 29 05:58:26 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
+</font>

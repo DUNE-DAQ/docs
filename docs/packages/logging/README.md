@@ -49,6 +49,7 @@ Further, version specific, information can be found at https://github.com/DUNE-D
 
 -----
 
+<font size="1">
 _Last git commit to the markdown source of this page:_
 
 
@@ -57,3 +58,4 @@ _Author: ron003_
 _Date: Mon Mar 15 10:53:27 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/logging/issues](https://github.com/DUNE-DAQ/logging/issues)_
+</font>

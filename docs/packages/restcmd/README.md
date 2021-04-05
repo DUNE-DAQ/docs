@@ -74,6 +74,7 @@ The command facility enforces the content type. The following will fail:
 
 -----
 
+<font size="1">
 _Last git commit to the markdown source of this page:_
 
 
@@ -82,3 +83,4 @@ _Author: Alessandro Thea_
 _Date: Tue Mar 2 14:04:14 2021 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/restcmd/issues](https://github.com/DUNE-DAQ/restcmd/issues)_
+</font>
