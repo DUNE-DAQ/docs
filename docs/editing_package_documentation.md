@@ -29,10 +29,7 @@ A few points need to be made:
   accordingly, and part of the review process for the merge into
   develop should be to ensure the new documentation is correct.
 
-- Many packages will have wiki pages which already (Mar-25-2021)
-  contain user-facing content. This content should be moved out of the
-  wiki pages and into `docs/`. It's possible to grab the Markdown file corresponding to a GitHub wiki page with the command `curl -O https://raw.githubusercontent.com/wiki/DUNE-DAQ/<name of the  package>/<title of the wiki page with spaces replaced by hyphens>.md`. A concrete example would be `curl -O https://raw.githubusercontent.com/wiki/DUNE-DAQ/minidaqapp/MiniDAQApp-Diagrams.md`.
+- Existing content on a package's GitHub Wiki pages can be copied into `docs/`. It's possible to grab the Markdown files corresponding to a GitHub Wiki with the command `git clone http://github.com/DUNE-DAQ/<package name>.wiki.git`, and then it's just a matter of copying the files into `docs/` and `git add`ing them. 
 
 - Any `README.md` files in the base of a repo should be moved into a
   `docs/` subdirectory of the repo
-
