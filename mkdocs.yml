@@ -32,7 +32,14 @@ nav:
        - ipm: packages/ipm/README.md
        - listrev: packages/listrev/README.md
        - logging: packages/logging/README.md
-       - minidaqapp: packages/minidaqapp/README.md
+       - minidaqapp:
+          - About minidaqapp: packages/minidaqapp/README.md
+          - packages/minidaqapp/Coordination-notes-for-v2.3.0-and-v2.4.0.md
+          - packages/minidaqapp/Instructions-for-setting-up-a-v2.4.0-development-environment.md
+          - packages/minidaqapp/MiniDAQApp-Diagrams.md
+          - packages/minidaqapp/Notes-from-meetings-and-discussions.md
+          - packages/minidaqapp/Reminders-about-tests-that-we-want-to-run.md
+          - packages/minidaqapp/Simple-instructions-for-running-the-app.md
        - nwqueueadapters: packages/nwqueueadapters/README.md
        - opmonlib: packages/opmonlib/README.md
        - readout:
