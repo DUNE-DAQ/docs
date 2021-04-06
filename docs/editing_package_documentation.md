@@ -16,7 +16,7 @@ committing.
 A few points need to be made:
 
 - The documentation should be directed to a package's users, not
-  its developers. Documentation for a package's developers (e.g., instructions
+  its developers. _JCF, Apr-6-2021: this is the long term plan. As of right now, the Issues filed for each package concerning documentation specify just to add all existing pages, whether user- or developer-focused_ Documentation for a package's developers (e.g., instructions
   on how to run its integration tests) should be located in the
   package's GitHub wiki
 
