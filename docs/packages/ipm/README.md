@@ -132,9 +132,9 @@ Once you're satisfied with the result, you can terminate `daq_application` as yo
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Philip Rodrigues_
+_Author: John Freeman_
 
-_Date: Tue Jan 26 13:39:59 2021 +0000_
+_Date: Tue Apr 6 14:19:44 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/ipm/issues](https://github.com/DUNE-DAQ/ipm/issues)_
 </font>

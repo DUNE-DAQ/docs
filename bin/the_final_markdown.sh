@@ -111,14 +111,13 @@ for package in $package_list ; do
 
     cd $tmpdir/$package
     git checkout develop
-    #git checkout johnfreeman/dont-readme 2>/dev/null  # OK if this fails, just trying to see if the branch is available for developer purposes
     echo $tmpdir/$package
 
-    if [[ -d $tmpdir/$package/docs/ || -e $tmpdir/$package/README.md ]]; then
+    if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" )  ]]; then
 	sed -r -i '/^\s*-\s*Packages\s*:.*/a \       - '$package':' $here/../mkdocs.yml
 	mkdir -p $packages_dir/$package
     else
-	echo "No docs/ subdirectory or README.md found for $package; no documentation will be generated" >&2
+	echo "No docs/ subdirectory containing Markdown files found for $package; no documentation will be generated" >&2
 	continue
     fi
 
@@ -129,7 +128,7 @@ for package in $package_list ; do
     done
 
     if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" ) ]]; then
-	echo "Found a docs/ subdirectory in repo $package, ignoring any README.md in the base of the repo"
+	echo "Found a docs/ subdirectory in repo $package containing Markdown files"
 
 	cp -rp $tmpdir/$package/docs/* $packages_dir/$package 
 
@@ -158,15 +157,6 @@ for package in $package_list ; do
 	    fi
 
 	done
-
-    else # No docs/ directory with markdown files found
-	if [[ -e $tmpdir/$package/README.md ]]; then
-	    cp -p $tmpdir/$package/README.md $packages_dir/$package
-	    mdfile=$packages_dir/$package/README.md 
-	    massage $mdfile
-	    mdfile_relative=$( echo $mdfile | sed -r 's!^.*/docs/(.*)!\1!' )
-	    sed -r -i 's!^(\s*)-(\s*)'$package'(\s*):!\1-\2'$package'\3: '$mdfile_relative'!' $here/../mkdocs.yml
-	fi
     fi
 
 done

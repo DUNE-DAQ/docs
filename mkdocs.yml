@@ -23,15 +23,13 @@ nav:
           - packages/daq-release/upsify_daq_packages.md
        - styleguide:
           - About styleguide: packages/styleguide/README.md
-       - appfwk: packages/appfwk/README.md
-       - cmdlib: packages/cmdlib/README.md
-       - dataformats: packages/dataformats/README.md
-       - dfmessages: packages/dfmessages/README.md
-       - dfmodules: packages/dfmodules/README.md
-       - ers: packages/ers/README.md
-       - ipm: packages/ipm/README.md
-       - listrev: packages/listrev/README.md
-       - logging: packages/logging/README.md
+       - dataformats:
+          - About dataformats: packages/dataformats/README.md
+          - packages/dataformats/Home.md
+       - dfmessages:
+          - About dfmessages: packages/dfmessages/README.md
+       - ipm:
+          - About ipm: packages/ipm/README.md
        - minidaqapp:
           - About minidaqapp: packages/minidaqapp/README.md
           - packages/minidaqapp/Coordination-notes-for-v2.3.0-and-v2.4.0.md
@@ -40,13 +38,13 @@ nav:
           - packages/minidaqapp/Notes-from-meetings-and-discussions.md
           - packages/minidaqapp/Reminders-about-tests-that-we-want-to-run.md
           - packages/minidaqapp/Simple-instructions-for-running-the-app.md
-       - nwqueueadapters: packages/nwqueueadapters/README.md
-       - opmonlib: packages/opmonlib/README.md
+       - nwqueueadapters:
+          - About nwqueueadapters: packages/nwqueueadapters/README.md
        - readout:
           - About readout: packages/readout/README.md
-       - restcmd: packages/restcmd/README.md
-       - serialization: packages/serialization/README.md
-       - trigemu: packages/trigemu/README.md
+          - packages/readout/Functional-elements.md
+       - serialization:
+          - About serialization: packages/serialization/README.md
 
 theme: 
    name: material

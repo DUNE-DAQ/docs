@@ -71,9 +71,9 @@ Choice of serialization methods: there are many, many libraries and formats for 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Philip Rodrigues_
+_Author: Eric Flumerfelt_
 
-_Date: Tue Feb 2 17:50:58 2021 +0000_
+_Date: Wed Apr 7 09:33:44 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/serialization/issues](https://github.com/DUNE-DAQ/serialization/issues)_
 </font>
