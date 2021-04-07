@@ -15,7 +15,7 @@ To learn about the C++ coding guidelines which DUNE DAQ package developers shoul
 
 For the other packages, please click on one of the links below. To learn how to edit a package's documentation, click [here](editing_package_documentation.md). Packages marked with an asterix don't yet have any official documentation; please see their Issues page to remedy this. 
 
-[* appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
+[appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
 
 [* cmdlib](packages/cmdlib/README.md) _interfaces for commanded objects_
 
@@ -39,7 +39,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [* opmonlib](packages/opmonlib/README.md) _operational monitoring library_
 
-[* rcif](nowhere) _official documentation not yet available_
+[* rcif](packages/rcif/README.md) _run control related_
 
 [readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
 
@@ -47,7 +47,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
 
-[* trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
+[trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
 
 ------
 

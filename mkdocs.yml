@@ -23,6 +23,51 @@ nav:
           - packages/daq-release/upsify_daq_packages.md
        - styleguide:
           - About styleguide: packages/styleguide/README.md
+       - appfwk:
+          - About appfwk: packages/appfwk/README.md
+          - packages/appfwk/App-Fwk-v1-pre-release-checklist.md
+          - packages/appfwk/Coding-style.md
+          - packages/appfwk/Compiling-and-running.md
+          - packages/appfwk/Compiling-and-running-old.md
+          - packages/appfwk/Compiling-and-running-under-v1.0.0.md
+          - packages/appfwk/Compiling-and-running-under-v1.1.0.md
+          - packages/appfwk/Compiling-and-running-under-v1.2.0.md
+          - packages/appfwk/Compiling-and-running-under-v1.2.1.md
+          - packages/appfwk/Compiling-and-running-under-v2.0.0.md
+          - packages/appfwk/Compiling-and-running-under-v2.1.0.md
+          - packages/appfwk/Compiling-and-running-under-v2.2.0.md
+          - packages/appfwk/Compiling-and-running-under-v2.3.0.md
+          - packages/appfwk/Compiling-and-running-under-v2.4.0.md
+          - packages/appfwk/Contributors-Guide.md
+          - packages/appfwk/Creating-a-new-package-old.md
+          - packages/appfwk/Creating-a-new-package-under-v1.1.0.md
+          - packages/appfwk/Creating-a-new-package-under-v1.2.0.md
+          - packages/appfwk/Creating-a-new-package-under-v1.2.1.md
+          - packages/appfwk/Creating-a-new-package-under-v2.0.0.md
+          - packages/appfwk/Creating-a-new-package-under-v2.1.0.md
+          - packages/appfwk/Creating-a-new-package-under-v2.2.0.md
+          - packages/appfwk/Creating-a-new-package-under-v2.3.0.md
+          - packages/appfwk/Creating-a-new-package-under-v2.4.0.md
+          - packages/appfwk/DAQModules.md
+          - packages/appfwk/Glossary-of-Terms.md
+          - packages/appfwk/Home.md
+          - packages/appfwk/How-to-write-your-DAQModule.md
+          - packages/appfwk/Instructions-for-creating-a-new-package.md
+          - packages/appfwk/Interfaces-between-DAQ-objects.md
+          - packages/appfwk/Queue-interfaces.md
+          - packages/appfwk/Queue-testing.md
+          - packages/appfwk/Simple-list-reversal-application.md
+          - packages/appfwk/Simple-readout-application.md
+          - packages/appfwk/Small-HLF-dispatcher-demo.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.1.0.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.0.0.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.2.0.md
+          - packages/appfwk/Testing.md
+          - packages/appfwk/Third-Party-Software.md
+          - packages/appfwk/ThreadHelper-Usage-Notes.md
+          - packages/appfwk/Trigger-Candidate-Generator-in-ProtoDUNE-I.md
        - dataformats:
           - About dataformats: packages/dataformats/README.md
           - packages/dataformats/Home.md
@@ -45,6 +90,8 @@ nav:
           - packages/readout/Functional-elements.md
        - serialization:
           - About serialization: packages/serialization/README.md
+       - trigemu:
+          - About trigemu: packages/trigemu/README.md
 
 theme: 
    name: material
