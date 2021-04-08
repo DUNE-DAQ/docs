@@ -73,6 +73,9 @@ nav:
           - packages/dataformats/Home.md
        - dfmessages:
           - About dfmessages: packages/dfmessages/README.md
+       - dfmodules:
+          - About dfmodules: packages/dfmodules/README.md
+          - packages/dfmodules/Developer-notes-for-v2.6.0.md
        - ipm:
           - About ipm: packages/ipm/README.md
        - minidaqapp:

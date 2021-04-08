@@ -23,7 +23,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [dfmessages](packages/dfmessages/README.md) _dataflow messages_
 
-[* dfmodules](packages/dfmodules/README.md) _dataflow applications_
+[dfmodules](packages/dfmodules/README.md) _dataflow applications_
 
 [* ers](packages/ers/README.md) _fork of the ATLAS Error Reporting System_
 
