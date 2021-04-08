@@ -68,6 +68,10 @@ nav:
           - packages/appfwk/Third-Party-Software.md
           - packages/appfwk/ThreadHelper-Usage-Notes.md
           - packages/appfwk/Trigger-Candidate-Generator-in-ProtoDUNE-I.md
+       - cmdlib:
+          - About cmdlib: packages/cmdlib/README.md
+          - packages/cmdlib/Home.md
+          - packages/cmdlib/User-Guide.md
        - dataformats:
           - About dataformats: packages/dataformats/README.md
           - packages/dataformats/Home.md
@@ -76,8 +80,16 @@ nav:
        - dfmodules:
           - About dfmodules: packages/dfmodules/README.md
           - packages/dfmodules/Developer-notes-for-v2.6.0.md
+       - ers:
+          - About ers: packages/ers/README.md
        - ipm:
           - About ipm: packages/ipm/README.md
+       - logging:
+          - About logging: packages/logging/README.md
+          - packages/logging/Home.md
+          - packages/logging/v1.0.0-documentation.md
+          - packages/logging/v1.0.0-pre-release-documentation.md
+          - packages/logging/v1.0.0-User-documentation.md
        - minidaqapp:
           - About minidaqapp: packages/minidaqapp/README.md
           - packages/minidaqapp/Coordination-notes-for-v2.3.0-and-v2.4.0.md
@@ -88,9 +100,15 @@ nav:
           - packages/minidaqapp/Simple-instructions-for-running-the-app.md
        - nwqueueadapters:
           - About nwqueueadapters: packages/nwqueueadapters/README.md
+       - opmonlib:
+          - About opmonlib: packages/opmonlib/README.md
+          - packages/opmonlib/Home.md
+          - packages/opmonlib/Instructions-for-DAQ-module-users.md
        - readout:
           - About readout: packages/readout/README.md
           - packages/readout/Functional-elements.md
+       - restcmd:
+          - About restcmd: packages/restcmd/README.md
        - serialization:
           - About serialization: packages/serialization/README.md
        - trigemu:
