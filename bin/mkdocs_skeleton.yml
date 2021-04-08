@@ -4,7 +4,7 @@ nav:
     - Packages:
 
 theme: 
-   name: material
+   name: mkdocs
    features:
      - navigation.tabs
      - navigation.instant
