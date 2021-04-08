@@ -29,7 +29,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [ipm](packages/ipm/README.md) _message passing between processes_
 
-[* listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
+[listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
 
 [logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
 
