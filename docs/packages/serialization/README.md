@@ -2,8 +2,6 @@
 
 This repository contains utilities for serializing/deserializing C++ objects for DUNE DAQ. Serialization allows objects to be sent across the network or persisted to disk.
 
-You'll need to edit your `dbt-settings` file to use the `msgpack_c` UPS product. Add `"/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products_dev"` to `dune_products_dirs` and `"msgpack_c v3_3_0 e19:prof"` to `dune_products`. See https://github.com/DUNE-DAQ/appfwk/wiki/Compiling-and-running-under-v2.2.0#adding-extra-ups-products-and-product-pools for more information.
-
 ## Quick start
 
 An appropriately-defined C++ type (see below) can be serialized/deserialized as follows:
@@ -12,28 +10,12 @@ An appropriately-defined C++ type (see below) can be serialized/deserialized as 
  MyClass m;
  m.some_member=3;
  // ... set other parts of m...
- dunedaq::serialization::SerializationType stype=dunedaq::serialization::MsgPack; // or JSON, which is human-readable but slower
+ dunedaq::serialization::SerializationType stype=dunedaq::serialization::kMsgPack; // or kJSON, which is human-readable but slower
  std::vector<uint8_t> bytes=dunedaq::serialization::serialize(m, stype);
  
  // ...elsewhere, after receiving the serialized object:
- MyClass m_recv=dunedaq::serialization::deserialize<MyClass>(bytes, stype);
+ MyClass m_recv=dunedaq::serialization::deserialize<MyClass>(bytes);
 ```
-
-If you want to send/receive the serialized object over [IPM](https://github.com/DUNE-DAQ/ipm), `NetworkObjectSender<T>` and `NetworkObjectReceiver<T>` provide a convenience wrapper:
-
-```cpp
-// Sender process:
-NetworkObjectSender<FakeData> sender(sender_conf);
-FakeData fd;
-fd.fake_count=25;
-sender.send(fd, std::chrono::milliseconds(2));
-// Receiver process:
-NetworkObjectReceiver<FakeData> receiver(receiver_conf);
-FakeData fd_recv=receiver.recv(std::chrono::milliseconds(2));
-// Now fd_recv.fake_count==25
-```
-
-See [network_object_send_receive.cxx](./test/apps/network_object_send_receive.cxx) for a full example, including setting the `sender_conf` and `receiver_conf` objects.
 
 ## Making types serializable
 
@@ -43,23 +25,49 @@ If your type is specified via a `moo` schema, you just need to `moo render` your
 
 ### Without [`moo`](https://github.com/brettviren/moo)
 
-If your class is not specified via a `moo` schema, it can be made serializable by adding convertor functions for `nlohmann::json` and `msgpack`. (Right now, _both_ methods need to be implemented, even if you only plan to use one of them. Maybe this could be changed, but the serialization type can come from config, and might not necessarily be known at compile-time, so code for both has to be available). Full instructions for serializing arbitrary types with `nlohmann::json` are available [here](https://nlohmann.github.io/json/features/arbitrary_types/) and for `msgpack`, [here](https://github.com/msgpack/msgpack-c/wiki/v2_0_cpp_packer).
+If your class is not specified via a `moo` schema, it can be made serializable by adding convertor functions for `msgpack` and, optionally, `nlohmann::json`. If convertor functions are only provided for `msgpack` and not for `nlohmann::json`, json serialization is done by the serialization library: the object is converted to msgpack format and from there to json (and similarly to deserialize).
 
-The easiest way to achieve this is with the `DUNE_DAQ_SERIALIZE()` convenience macro provided in [`Serialization.hpp`](./include/serialization/Serialization.hpp):
+The easiest way to make your class (de)serializable is with the `DUNE_DAQ_SERIALIZE()` convenience macro provided in [`Serialization.hpp`](./include/serialization/Serialization.hpp):
 
 ```cpp
 // A type that's made serializable "intrusively", ie, by changing the type itself
+namespace ns {
 struct MyTypeIntrusive
 {
-  int i;
-  std::string s;
-  std::vector<double> v;
+  int some_int;
+  std::string some_string;
+  std::vector<double> some_vector;
 
-  DUNE_DAQ_SERIALIZE(MyTypeIntrusive, i, s, v);
+  DUNE_DAQ_SERIALIZE(MyTypeIntrusive, some_int, some_string, some_vector);
 };
+} // namespace ns
 ```
 
-A complete example can be found in [`non_moo_type.cxx`](./test/apps/non_moo_type.cxx), including an example of how to make a class serializable "non-intrusively", ie, without changes to the class itself.
+You may not be able to change the type itself, either because you
+don't have access to it, or because it lives in a package that cannot
+depend on the `serialization` package. In this case, you can use the
+`DUNE_DAQ_SERIALIZE_NON_INTRUSIVE()` macro instead. In the _global_
+namespace, call `DUNE_DAQ_SERIALIZE_NON_INTRUSIVE()` with first
+argument the namespace of your class, second argument the class name,
+and the rest of the arguments listing the member variables. For example:
+
+```cpp
+// A type that's made serializable "intrusively", ie, by changing the type itself
+namespace ns {
+struct MyType
+{
+  int some_int;
+  std::string some_string;
+  std::vector<double> some_vector;
+};
+} // namespace ns
+
+DUNE_DAQ_SERIALIZE_NON_INTRUSIVE(ns, MyType, some_int, some_string, some_vector);
+```
+
+A complete example, showing both intrusive and non-intrusive strategies, can be found in [`non_moo_type.cxx`](./test/apps/non_moo_type.cxx).
+
+Full instructions for serializing arbitrary types with `nlohmann::json` are available [here](https://nlohmann.github.io/json/features/arbitrary_types/) and for `msgpack`, [here](https://github.com/msgpack/msgpack-c/wiki/v2_0_cpp_packer). These include instructions for (de)serializing classes that are not default-constructible.
 
 ## Design notes
 
@@ -71,9 +79,9 @@ Choice of serialization methods: there are many, many libraries and formats for 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: Philip Rodrigues_
 
-_Date: Wed Apr 7 09:33:44 2021 -0500_
+_Date: Mon Apr 19 11:04:14 2021 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/serialization/issues](https://github.com/DUNE-DAQ/serialization/issues)_
 </font>
