@@ -79,7 +79,6 @@ nav:
           - About dfmessages: packages/dfmessages/README.md
        - dfmodules:
           - About dfmodules: packages/dfmodules/README.md
-          - packages/dfmodules/Developer-notes-for-v2.6.0.md
        - ers:
           - About ers: packages/ers/README.md
        - ipm:
