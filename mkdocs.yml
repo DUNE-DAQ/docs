@@ -27,6 +27,7 @@ nav:
           - packages/appfwk/App-Fwk-v1-pre-release-checklist.md
           - packages/appfwk/Coding-style.md
           - packages/appfwk/Contributors-Guide.md
+          - packages/appfwk/Daq-Application.md
           - packages/appfwk/DAQModules.md
           - packages/appfwk/Glossary-of-Terms.md
           - packages/appfwk/How-to-write-your-DAQModule.md
