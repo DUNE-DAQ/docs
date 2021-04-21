@@ -30,12 +30,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: checkout docs
+        uses: actions/checkout@v2
+        with:
+            path: docs
 
       # Blow away docs/pacakges and mkdocs.yml, run build script and commit.
       - name: prepare for running "bin/the_final_markdown.sh"
         run: |
-            cd DUNE-DAQ/docs
+            cd $GITHUB_WORKSPACE/docs
             rm -rf docs/packages mkdocs.yml
             pip --install -r docs/requirements.txt
             bin/the_final_markdown.sh | tee $GITHUB_WORKSPACE/build_log.txt
@@ -46,3 +49,8 @@ jobs:
             #git commit -m "generated"
             #git push
 
+      - name: upload build log
+        uses: actions/upload-artifact@v2
+        with:
+          name: docs build log
+          path: ${{ github.workspace }}/build_log.txt
