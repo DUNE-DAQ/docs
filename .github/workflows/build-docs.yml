@@ -10,11 +10,13 @@ on:
     paths-ignore:
       - 'docs/packages/*'
       - mkdocs.yml
+      - .github/*
   pull_request:
     branches: [ develop ]
     paths-ignore:
       - 'docs/packages/*'
       - mkdocs.yml
+      - .github/*
     
 
   # Allows you to run this workflow manually from the Actions tab
@@ -43,11 +45,11 @@ jobs:
             pip install -r docs/requirements.txt
             bin/the_final_markdown.sh | tee $GITHUB_WORKSPACE/build_log.txt
             date >> $GITHUB_WORKSPACE/build_log.txt
-            #git config user.name github-actions
-            #git config user.email github-actions@github.com
-            #git add .
-            #git commit -m "generated"
-            #git push
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add .
+            git commit -m "generated"
+            git push
 
       - name: upload build log
         uses: actions/upload-artifact@v2
