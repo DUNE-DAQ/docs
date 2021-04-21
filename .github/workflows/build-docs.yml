@@ -16,6 +16,8 @@ on:
       - 'docs/packages/**'
       - 'mkdocs.yml'
       - '.github/**'
+  schedule:
+    - cron: "*/15 * * * *"
     
 
   # Allows you to run this workflow manually from the Actions tab
