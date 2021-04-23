@@ -60,10 +60,10 @@ where N must be an integer number.
 * For N > 0 the issue attributes names and values are reported in addition to 0-level data
 
 * For N > 1 the following information is added to the issue:
-        * host name
-        * user name
-        * process id
-        * process current working directory
+    * host name
+    * user name
+    * process id
+    * process current working directory
 
 * For N > 2 a stack trace is added to each issue if the code was compiled without **ERS_NO_DEBUG** macro.
 
@@ -101,9 +101,7 @@ ers,                                                              // namespace
 ~~~
 
 Note that attribute names may appear in the message expression. Also note a special
-syntax of the attributes declaration, which must always be declared using a list of 
-
-**((attribute_type)attribute_name)** tokens.
+syntax of the attributes declaration, which must always be declared using a list of **((attribute_type)attribute_name)** tokens.
 All the brackets in this expression are essential. Do not use commas to separate attributes.
 The only requirement for the type of an issue attribute is that for this type must be defined the output
 operator to the standard C++ output stream and the input operator from the standard C++ input
@@ -515,9 +513,9 @@ catch( ers::Issue & ex ) {
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: John Freeman_
 
-_Date: Thu Apr 22 12:02:35 2021 -0500_
+_Date: Fri Apr 23 15:51:14 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/ers/issues](https://github.com/DUNE-DAQ/ers/issues)_
 </font>
