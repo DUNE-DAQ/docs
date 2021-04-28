@@ -15,7 +15,7 @@ To learn about the C++ coding guidelines which DUNE DAQ package developers shoul
 
 For the other packages, please click on one of the links below. To learn how to edit a package's documentation, click [here](editing_package_documentation.md). Packages marked with an asterix don't yet have any official documentation; please see their Issues page to remedy this. 
 
-## Core
+### Core
 
 [appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
 
@@ -25,13 +25,13 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
 
-## Readout
+### Readout
 
 [dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
 
 [readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
 
-## Control
+### Control
 
 [minidaqapp](packages/minidaqapp/README.md) _application to read out Felix data and store it in HDF5 files on disk_
 
@@ -39,7 +39,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
 
-## Dataflow (logical)
+### Dataflow (logical)
 
 [dfmessages](packages/dfmessages/README.md) _dataflow messages_
 
@@ -47,7 +47,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
 
-## Dataflow (physical)
+### Dataflow (physical)
 
 [ipm](packages/ipm/README.md) _message passing between processes_
 
@@ -55,11 +55,11 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
 
-## Monitoring
+### Monitoring
 
 [opmonlib](packages/opmonlib/README.md) _operational monitoring library_
 
-## Educational
+### Educational
 
 [listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
 
