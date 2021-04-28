@@ -15,7 +15,7 @@ To learn about the C++ coding guidelines which DUNE DAQ package developers shoul
 
 For the other packages, please click on one of the links below. To learn how to edit a package's documentation, click [here](editing_package_documentation.md). Packages marked with an asterix don't yet have any official documentation; please see their Issues page to remedy this. 
 
-## Packages containing core functionality (base classes, etc.)
+## Core
 
 [appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
 
@@ -25,7 +25,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
 
-## Packages which help read out data
+## Readout
 
 [dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
 
@@ -55,13 +55,13 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
 
-## Educational
-
-[listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
-
 ## Monitoring
 
 [opmonlib](packages/opmonlib/README.md) _operational monitoring library_
+
+## Educational
+
+[listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
 
 ------
 
