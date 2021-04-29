@@ -52,7 +52,11 @@ nav:
           - packages/cmdlib/User-Guide.md
        - dataformats:
           - About dataformats: packages/dataformats/README.md
+          - packages/dataformats/ComponentRequestV0.md
+          - packages/dataformats/FragmentHeaderV1.md
+          - packages/dataformats/GeoIDV0.md
           - packages/dataformats/Home.md
+          - packages/dataformats/TriggerRecordHeaderDataV1.md
        - dfmessages:
           - About dfmessages: packages/dfmessages/README.md
        - dfmodules:
