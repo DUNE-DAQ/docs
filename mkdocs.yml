@@ -2,6 +2,71 @@ site_name: DUNE DAQ Software Documentation Home
 nav:
     - Home: README.md
     - Packages:
+       - daq-buildtools:
+          - About daq-buildtools: packages/daq-buildtools/README.md
+       - daq-cmake:
+          - About daq-cmake: packages/daq-cmake/README.md
+          - packages/daq-cmake/CmakeFunctions.md
+          - packages/daq-cmake/Creating-a-new-package.md
+          - packages/daq-cmake/SchemaAndCodeGen.md
+       - daq-release:
+          - About daq-release: packages/daq-release/README.md
+          - packages/daq-release/add_modules_to_pypi_repo.md
+          - packages/daq-release/ci_github_action.md
+          - packages/daq-release/create_release.md
+          - packages/daq-release/development_workflow_gitflow.md
+          - packages/daq-release/make_ups_products.md
+          - packages/daq-release/publish_to_cvmfs.md
+          - packages/daq-release/slides.md
+          - packages/daq-release/standalone_daq_release.md
+          - packages/daq-release/upsify_daq_packages.md
+       - styleguide:
+          - About styleguide: packages/styleguide/README.md
+       - appfwk:
+          - About appfwk: packages/appfwk/README.md
+          - packages/appfwk/App-Fwk-v1-pre-release-checklist.md
+          - packages/appfwk/Coding-style.md
+          - packages/appfwk/Contributors-Guide.md
+          - packages/appfwk/DAQModules.md
+          - packages/appfwk/Daq-Application.md
+          - packages/appfwk/Glossary-of-Terms.md
+          - packages/appfwk/How-to-write-your-DAQModule.md
+          - packages/appfwk/Interfaces-between-DAQ-objects.md
+          - packages/appfwk/Queue-interfaces.md
+          - packages/appfwk/Queue-testing.md
+          - packages/appfwk/Simple-list-reversal-application.md
+          - packages/appfwk/Simple-readout-application.md
+          - packages/appfwk/Small-HLF-dispatcher-demo.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.1.0.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.0.0.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.2.0.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package.md
+          - packages/appfwk/Testing.md
+          - packages/appfwk/Third-Party-Software.md
+          - packages/appfwk/ThreadHelper-Usage-Notes.md
+          - packages/appfwk/Trigger-Candidate-Generator-in-ProtoDUNE-I.md
+       - cmdlib:
+          - About cmdlib: packages/cmdlib/README.md
+          - packages/cmdlib/Home.md
+          - packages/cmdlib/User-Guide.md
+       - dataformats:
+          - About dataformats: packages/dataformats/README.md
+          - packages/dataformats/ComponentRequestV0.md
+          - packages/dataformats/FragmentHeaderV1.md
+          - packages/dataformats/GeoIDV0.md
+          - packages/dataformats/Home.md
+          - packages/dataformats/TriggerRecordHeaderDataV1.md
+       - dfmessages:
+          - About dfmessages: packages/dfmessages/README.md
+       - dfmodules:
+          - About dfmodules: packages/dfmodules/README.md
+       - ers:
+          - About ers: packages/ers/README.md
+       - ipm:
+          - About ipm: packages/ipm/README.md
+       - listrev:
+          - About listrev: packages/listrev/README.md
        - logging:
           - About logging: packages/logging/README.md
           - packages/logging/Home.md
