@@ -27,8 +27,8 @@ nav:
           - packages/appfwk/App-Fwk-v1-pre-release-checklist.md
           - packages/appfwk/Coding-style.md
           - packages/appfwk/Contributors-Guide.md
-          - packages/appfwk/DAQModules.md
           - packages/appfwk/Daq-Application.md
+          - packages/appfwk/DAQModules.md
           - packages/appfwk/Glossary-of-Terms.md
           - packages/appfwk/How-to-write-your-DAQModule.md
           - packages/appfwk/Interfaces-between-DAQ-objects.md
@@ -37,11 +37,11 @@ nav:
           - packages/appfwk/Simple-list-reversal-application.md
           - packages/appfwk/Simple-readout-application.md
           - packages/appfwk/Small-HLF-dispatcher-demo.md
+          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package.md
           - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.1.0.md
           - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v1.md
           - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.0.0.md
           - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package-under-v2.2.0.md
-          - packages/appfwk/Step-by-step-instructions-for-creating-your-own-DAQModule-package.md
           - packages/appfwk/Testing.md
           - packages/appfwk/Third-Party-Software.md
           - packages/appfwk/ThreadHelper-Usage-Notes.md
@@ -69,11 +69,11 @@ nav:
           - About listrev: packages/listrev/README.md
        - logging:
           - About logging: packages/logging/README.md
-          - packages/logging/Home.md
           - packages/logging/ers-conventions.md
-          - packages/logging/v1.0.0-User-documentation.md
+          - packages/logging/Home.md
           - packages/logging/v1.0.0-documentation.md
           - packages/logging/v1.0.0-pre-release-documentation.md
+          - packages/logging/v1.0.0-User-documentation.md
        - minidaqapp:
           - About minidaqapp: packages/minidaqapp/README.md
           - packages/minidaqapp/Coordination-notes-for-v2.3.0-and-v2.4.0.md

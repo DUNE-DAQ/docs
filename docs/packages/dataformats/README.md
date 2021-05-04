@@ -2,6 +2,7 @@
 
 - This repository contains raw data bitfields and utilities used to decode them
 - This repository also contains classes which are generated within the DAQ and intended to be persisted to disk and read by Offline code.
+- Class Diagram: ![From dune_common_data_formats.dia](https://github.com/DUNE-DAQ/dataformats/raw/develop/docs/dune_common_data_formats.png)
 
 The following are brief descriptions of the various structs in this package, including links to fuller, field-by-field descriptions:
 
@@ -40,6 +41,7 @@ The following are brief descriptions of the various structs in this package, inc
 
 ----------------
 
+
 -----
 
 <font size="1">
@@ -48,7 +50,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: jcfreeman2_
 
-_Date: Thu Apr 29 14:22:49 2021 -0500_
+_Date: Thu Apr 29 14:25:20 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dataformats/issues](https://github.com/DUNE-DAQ/dataformats/issues)_
 </font>
