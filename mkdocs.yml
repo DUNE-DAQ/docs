@@ -49,11 +49,11 @@ nav:
           - About listrev: packages/listrev/README.md
        - logging:
           - About logging: packages/logging/README.md
-          - packages/logging/Home.md
           - packages/logging/ers-conventions.md
-          - packages/logging/v1.0.0-User-documentation.md
+          - packages/logging/Home.md
           - packages/logging/v1.0.0-documentation.md
           - packages/logging/v1.0.0-pre-release-documentation.md
+          - packages/logging/v1.0.0-User-documentation.md
        - minidaqapp:
           - About minidaqapp: packages/minidaqapp/README.md
           - packages/minidaqapp/Coordination-notes-for-v2.3.0-and-v2.4.0.md
@@ -62,6 +62,8 @@ nav:
           - packages/minidaqapp/Notes-from-meetings-and-discussions.md
           - packages/minidaqapp/Reminders-about-tests-that-we-want-to-run.md
           - packages/minidaqapp/Simple-instructions-for-running-the-app.md
+       - nanorc:
+          - About nanorc: packages/nanorc/README.md
        - nwqueueadapters:
           - About nwqueueadapters: packages/nwqueueadapters/README.md
        - opmonlib:

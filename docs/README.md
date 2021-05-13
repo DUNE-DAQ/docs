@@ -35,6 +35,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [minidaqapp](packages/minidaqapp/README.md) _application to read out Felix data and store it in HDF5 files on disk_
 
+[nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
+
 [* rcif](packages/rcif/README.md) _run control related_
 
 [restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
