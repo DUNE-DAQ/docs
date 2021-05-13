@@ -5,7 +5,7 @@ The toolset to simplify the development of DUNE DAQ packages
 
 # System requirements
 
-To get set up, you'll need access to the ups product area `/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products`, as is the case, e.g., on the lxplus machines at CERN. 
+To get set up, you'll need access to the ups product area `/cvmfs/dunedaq.opensciencegrid.org/products`, as is the case, e.g., on the lxplus machines at CERN. 
 
 # Setup `daq-buildtools`
 `daq-buildtools` is a simple package that provides environment and building utilities for the DAQ Suite. 
@@ -66,11 +66,11 @@ This can be easily done by editing the `dbt-settings` file copied over from daq-
 
 ```bash
 dune_products_dirs=(
-    "/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/releases/dunedaq-v2.4.0/externals"
-    "/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/releases/dunedaq-v2.4.0/packages"
+    "/cvmfs/dunedaq.opensciencegrid.org/releases/dunedaq-v2.4.0/externals"
+    "/cvmfs/dunedaq.opensciencegrid.org/releases/dunedaq-v2.4.0/packages"
     "/example/of/additional/user/declared/product/pool" 
-    #"/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products" 
-    #"/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products_dev" 
+    #"/cvmfs/dunedaq.opensciencegrid.org/products" 
+    #"/cvmfs/dunedaq-development.opensciencegrid.org/products" 
 )
 
 dune_systems=(
@@ -139,7 +139,7 @@ dbt-build.sh --install
 ...and this will build `listrev` in the local `./build` subdirectory and then install it as a package either in the local `./install` subdirectory or in whatever you pointed `DBT_INSTALL_DIR` to. 
 
 ## Working with more repos
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not found in /cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/releases/dunedaq-v2.4.0/dbt-build-order.cmake". If this is the case, you have one of two options:
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not found in /cvmfs/dunedaq.opensciencegrid.org/releases/dunedaq-v2.4.0/dbt-build-order.cmake". If this is the case, you have one of two options:
 
 
 * (Recommended) Add the names of your new packages to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
@@ -240,9 +240,9 @@ And you can again type `init`, etc. However, unlike previously, now you'll want 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Pengfei Ding_
 
-_Date: Tue Apr 20 11:31:35 2021 -0500_
+_Date: Thu May 13 11:54:09 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
