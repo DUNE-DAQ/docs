@@ -68,7 +68,8 @@ struct TriggerRecordHeaderData
   run_number_t run_number{ TypeDefaults::s_invalid_run_number };
   uint32_t error_bits{ s_default_error_bits };
   trigger_type_t trigger_type{ TypeDefaults::s_invalid_trigger_type };
-  uint64_t unused : 48;
+  uint16_t unusedA { 0xFFFF};
+  uint32_t unusedB { 0xFFFFFFFF};
 };
 ```
 
@@ -84,7 +85,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Thu Apr 29 13:13:57 2021 -0500_
+_Date: Fri May 14 13:33:25 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dataformats/issues](https://github.com/DUNE-DAQ/dataformats/issues)_
 </font>

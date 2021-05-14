@@ -33,8 +33,11 @@ nav:
        - dataformats:
           - About dataformats: packages/dataformats/README.md
           - packages/dataformats/ComponentRequestV0.md
+          - packages/dataformats/ComponentRequestV1.md
           - packages/dataformats/FragmentHeaderV1.md
+          - packages/dataformats/FragmentHeaderV2.md
           - packages/dataformats/GeoIDV0.md
+          - packages/dataformats/GeoIDV1.md
           - packages/dataformats/Home.md
           - packages/dataformats/TriggerRecordHeaderDataV1.md
        - dfmessages:
