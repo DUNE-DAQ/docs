@@ -999,7 +999,7 @@
         </dia:composite>
         <dia:composite type="umloperation">
           <dia:attribute name="name">
-            <dia:string>#get_link_id#</dia:string>
+            <dia:string>#get_element_id#</dia:string>
           </dia:attribute>
           <dia:attribute name="stereotype">
             <dia:string>##</dia:string>
@@ -1029,7 +1029,7 @@
         </dia:composite>
         <dia:composite type="umloperation">
           <dia:attribute name="name">
-            <dia:string>#set_link_id#</dia:string>
+            <dia:string>#set_element_id#</dia:string>
           </dia:attribute>
           <dia:attribute name="stereotype">
             <dia:string>##</dia:string>
@@ -1058,7 +1058,7 @@
           <dia:attribute name="parameters">
             <dia:composite type="umlparameter">
               <dia:attribute name="name">
-                <dia:string>#link_id#</dia:string>
+                <dia:string>#element_id#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
                 <dia:string>#GeoID#</dia:string>
@@ -2284,7 +2284,7 @@
         </dia:composite>
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#link_id#</dia:string>
+            <dia:string>#element_id#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#GeoID#</dia:string>

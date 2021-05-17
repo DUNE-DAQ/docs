@@ -81,7 +81,7 @@ struct FragmentHeader
   timestamp_t window_begin{ TypeDefaults::s_invalid_timestamp };
   timestamp_t window_end{ TypeDefaults::s_invalid_timestamp };
   run_number_t run_number{ TypeDefaults::s_invalid_run_number };
-  GeoID link_id;
+  GeoID element_id;
   uint32_t error_bits{ s_default_error_bits }; 
   fragment_type_t fragment_type{ TypeDefaults::s_invalid_fragment_type };
 };
@@ -99,7 +99,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Tue May 4 11:17:07 2021 -0500_
+_Date: Wed May 12 10:25:12 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dataformats/issues](https://github.com/DUNE-DAQ/dataformats/issues)_
 </font>
