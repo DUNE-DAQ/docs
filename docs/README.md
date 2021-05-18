@@ -53,3 +53,13 @@ For the other packages, please click on one of the links below. To learn how to 
 
 _Mar-11-2021: For software coordinators only:_ [how to make edits to this webpage](how_to_make_edits.md)
 
+```{toctree}
+:maxdepth: 2
+:hidden:
+:glob:
+:caption: Build Tools
+:numbered:
+
+packages/daq-buildtools/README
+packages/daq-cmake/README
+```
