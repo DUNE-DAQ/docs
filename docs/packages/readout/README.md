@@ -9,6 +9,10 @@ Clone the package into a work area as defined under the instructions of [DUNE-DA
 Before running the application, please download a small binary files that contains 120 WIB Frames from the following [CERNBox link](https://cernbox.cern.ch/index.php/s/VAqNtn7bwuQtff3/download). Like:
 
     curl https://cernbox.cern.ch/index.php/s/VAqNtn7bwuQtff3/download -o /tmp/frames.bin
+    
+For WIB2 frames, download the following file that contains 120 WIB-2 Frames from the following [CERNBox link](https://cernbox.cern.ch/index.php/s/ocrHxSU8PucxphE). Like:
+
+    curl https://cernbox.cern.ch/index.php/s/ocrHxSU8PucxphE/download -o /tmp/wib2-frames.bin
 
 If you download it to a different destination, please update the path of the source file in the configuration that you will use below. 
 
@@ -42,9 +46,9 @@ To test the fake raw WIB TP readout, run
 _Last git commit to the markdown source of this page:_
 
 
-_Author: roland-sipos_
+_Author: Roland Sipos_
 
-_Date: Tue Mar 30 09:29:28 2021 +0200_
+_Date: Fri Apr 23 10:44:25 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readout/issues](https://github.com/DUNE-DAQ/readout/issues)_
 </font>

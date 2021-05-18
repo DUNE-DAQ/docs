@@ -15,10 +15,14 @@ committing.
 
 A few points need to be made:
 
-- The documentation should be directed to a package's users, not
-  its developers. Documentation for a package's developers (e.g., instructions
-  on how to run its integration tests) should be located in the
-  package's GitHub wiki
+- The documentation should be directed to a package's users, not its
+  developers. Note that "a package's users" encompasses both those who
+  use the applications in a package as well as those who use parts of
+  the package's code (e.g., the base classes in the
+  package). Documentation for a package's developers should be located
+  in the package's GitHub wiki; examples of this would be discussion
+  of a utility class's implementation, or instructions on how to run
+  integration tests.
 
 - The documentation on a given branch should match up with the code on
   the branch. 

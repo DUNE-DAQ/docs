@@ -1,6 +1,6 @@
 # restcmd README
 ## restcmd - HTTP REST backend based CommandFacility
-This implementation of the CommandFacility interface from cmdlib, is providing a way to send
+This implementation of the CommandFacility interface from [cmdlib](https://dune-daq-sw.readthedocs.io/en/latest/packages/cmdlib), is providing a way to send
 commands to applications via HTTP. This is carried out by the small web-server that this plugin
 carries. The server answers to HTTP POST requests, where the request body is the content of the
 command itself. The package ships a really lightweight Python script to send commands from the
@@ -14,22 +14,16 @@ The dependency is available under devevlopment products. Please pay attention to
 
 
 * create a software work area
-    * see https://github.com/DUNE-DAQ/appfwk/wiki/Compiling-and-running-under-v1.2.1
+    * see the [daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools) for how to do this
 
 * clone this repo into your work/development area
     * `cd <your_work_area>/sourcecode`
     * `git clone https://github.com/DUNE-DAQ/restcmd.git`
     * `cd ..`
 
-* build the software. Along with executing the commands below, you may also want to consider adding the `export PRODUCTS...` and `setup pistache...` lines to `setup_build_environment` for future sourcings
-    * `. ./setup_build_environment`
-    * `export PRODUCTS=/cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products_dev:$PRODUCTS`
-    * `setup pistache v2020_10_07 -q e19:prof`
-    * `./build_daq_software.sh --install` 
+* build and install the software, as described in the daq-buildtools instructions
 
-* run the demos in another shell
-    * `cd <your work area>`
-    * `. ./setup_runtime_environment`
+* run the demos in another shell. Do `cd <your work area>` and then set up the environment in the new shell as before. Rather than building, however, run:
     * `restcmd_test_rest_app`
     * the application will terminate in 20 seconds
     * from the first terminal, send commands via [curl](#sendcurl) or with the more preferred [send-restcmd.py](#sendcmd)
@@ -38,7 +32,7 @@ The dependency is available under devevlopment products. Please pay attention to
 To select this CommandFacility implementation, use the `rest://` prefix for the application's commandFacility parameter as a URI.
 The URI is parsed, and the facility will listen to POST requests on the specified interface and port. 
 
-    daq_application --commandFacility rest://localhost:12345
+    daq_application --name <it doesn't matter what your name is> --commandFacility rest://localhost:12345
 
 ## Sending commands
 
@@ -78,9 +72,9 @@ The command facility enforces the content type. The following will fail:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jcfreeman2_
 
-_Date: Thu Apr 8 09:50:27 2021 -0500_
+_Date: Fri May 14 15:11:45 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/restcmd/issues](https://github.com/DUNE-DAQ/restcmd/issues)_
 </font>

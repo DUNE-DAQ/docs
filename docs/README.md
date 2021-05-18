@@ -15,39 +15,55 @@ To learn about the C++ coding guidelines which DUNE DAQ package developers shoul
 
 For the other packages, please click on one of the links below. To learn how to edit a package's documentation, click [here](editing_package_documentation.md). Packages marked with an asterix don't yet have any official documentation; please see their Issues page to remedy this. 
 
+### Core
+
 [appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
 
 [cmdlib](packages/cmdlib/README.md) _interfaces for commanded objects_
 
+[ers](packages/ers/README.md) _fork of the ATLAS Error Reporting System_
+
+[logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
+
+### Readout
+
 [dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
+
+[readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
+
+### Control
+
+[minidaqapp](packages/minidaqapp/README.md) _application to read out Felix data and store it in HDF5 files on disk_
+
+[nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
+
+[* rcif](packages/rcif/README.md) _run control related_
+
+[restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
+
+### Dataflow (logical)
 
 [dfmessages](packages/dfmessages/README.md) _dataflow messages_
 
 [dfmodules](packages/dfmodules/README.md) _dataflow applications_
 
-[ers](packages/ers/README.md) _fork of the ATLAS Error Reporting System_
+[trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
+
+### Dataflow (physical)
 
 [ipm](packages/ipm/README.md) _message passing between processes_
 
-[listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
-
-[logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
-
-[minidaqapp](packages/minidaqapp/README.md) _application to read out Felix data and store it in HDF5 files on disk_
-
 [nwqueueadapters](packages/nwqueueadapters/README.md) _DAQModules that connect appfwk queues to IPM network connections_
-
-[opmonlib](packages/opmonlib/README.md) _operational monitoring library_
-
-[* rcif](packages/rcif/README.md) _run control related_
-
-[readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
-
-[restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
 
-[trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
+### Monitoring
+
+[opmonlib](packages/opmonlib/README.md) _operational monitoring library_
+
+### Educational
+
+[listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
 
 ------
 

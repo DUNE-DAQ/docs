@@ -7,7 +7,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # ...alphabetical, with the exception of the packages which are used
 # for package development themselves
 
-package_list="trigemu serialization restcmd readout rcif opmonlib nwqueueadapters minidaqapp logging listrev ipm ers dfmodules dfmessages dataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
+package_list="trigemu serialization restcmd readout rcif opmonlib nwqueueadapters nanorc minidaqapp logging listrev ipm ers dfmodules dfmessages dataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -109,8 +109,11 @@ for package in $package_list ; do
 	exit 1
     fi
 
+    # The master branch of nanorc has been used for development instead of the develop branch
     cd $tmpdir/$package
-    git checkout develop
+    if ! [[ "$package" =~ "nanorc" ]]; then
+	git checkout develop
+    fi
     echo $tmpdir/$package
 
     if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" )  ]]; then

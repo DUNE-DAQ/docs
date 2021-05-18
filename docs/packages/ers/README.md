@@ -22,12 +22,16 @@ the **ers::fatal** stream. Further processing depends on the **ers::fatal** stre
 By default the issue is printed to the standard error stream.
 
 Here is a list of available macro:
- * **ERS_ASSERT( expression )** generic macro that checks whether a given expression is valid.
- * **ERS_PRECONDITION( expression )** the same as ERS_ASSERT but uses a message that is adopted
+
+* **ERS_ASSERT( expression )** generic macro that checks whether a given expression is valid.
+
+* **ERS_PRECONDITION( expression )** the same as ERS_ASSERT but uses a message that is adopted
 for reporting an invalid input parameter for a function.
- * **ERS_RANGE_CHECK( min, val, max )** is a special type of pre-condition, which checks that a value
+
+* **ERS_RANGE_CHECK( min, val, max )** is a special type of pre-condition, which checks that a value
 is in a range between min and max values. 
- * **ERS_STRICT_RANGE_CHECK( min, val, max )** is similar to the ERS_RANGE_CHECK
+
+* **ERS_STRICT_RANGE_CHECK( min, val, max )** is similar to the ERS_RANGE_CHECK
 but does not allow the checked value to be equal to either min or max values. 
 
 > **Note:** These macro are defined to empty statements if **ERS_NO_DEBUG** macro is defined at compilation time.
@@ -35,10 +39,14 @@ but does not allow the checked value to be equal to either min or max values.
 The amount of information, which is printed for an issue depends on the actual ERS verbosity level,
 which can be controlled via the **DUNEDAQ_ERS_VERBOSITY_LEVEL** macro. Default verbosity level is zero.
 In this case the following information is reported for any issue:
- * severity (DEBUG, LOG, INFO, WARNING, ERROR, FATAL)
- * the time of the issue occurrence
- * the issue's context, which includes package name, file name, function name and line number
- * the issue's message
+
+* severity (DEBUG, LOG, INFO, WARNING, ERROR, FATAL)
+
+* the time of the issue occurrence
+
+* the issue's context, which includes package name, file name, function name and line number
+
+* the issue's message
 
 One can control the current verbosity level via the **DUNEDAQ_ERS_VERBOSITY_LEVEL** macro:
 
@@ -48,26 +56,35 @@ export DUNEDAQ_ERS_VERBOSITY_LEVEL=N
 
 where N must be an integer number.
 
- * For N > 0 the issue attributes names and values are reported in addition to 0-level data
- * For N > 1 the following information is added to the issue:
-        * host name
-        * user name
-        * process id
-        * process current working directory
- * For N > 2 a stack trace is added to each issue if the code was compiled without **ERS_NO_DEBUG** macro.
+
+* For N > 0 the issue attributes names and values are reported in addition to 0-level data
+
+* For N > 1 the following information is added to the issue:
+    * host name
+    * user name
+    * process id
+    * process current working directory
+
+* For N > 2 a stack trace is added to each issue if the code was compiled without **ERS_NO_DEBUG** macro.
 
 ## Using Custom Issue Classes
 ERS assumes that user functions should throw exceptions in case of errors. If such exceptions
 are instances of classes, which inherit the **ers::Issue** one, ERS offers a number of advantages with 
 respect to their handling:
- * ERS issues can be reported to any ERS stream
- * One can create chains of issues to preserve the original cause of the problem as well as the error handling sequence
- * ERS issues can be printed to a standard C++ output stream using the output operator provided by ERS
+
+* ERS issues can be reported to any ERS stream
+
+* One can create chains of issues to preserve the original cause of the problem as well as the error handling sequence
+
+* ERS issues can be printed to a standard C++ output stream using the output operator provided by ERS
 
 In order to define a custom issue one has to do the following steps:
- * Declare a class, which inherits **ers::Issue**
- * Implement 3 pure virtual functions, declared in the ers:Issue class
- * Register new class using the **ers::IssueFactory::register_issue** function
+
+* Declare a class, which inherits **ers::Issue**
+
+* Implement 3 pure virtual functions, declared in the ers:Issue class
+
+* Register new class using the **ers::IssueFactory::register_issue** function
 
 ERS defines two helper macro, which implement all these steps. The macro are called ERS_DECLARE_ISSUE
 and ERS_DECLARE_ISSUE_BASE. The first one should be used to declare an issue class that inherits
@@ -84,9 +101,7 @@ ers,                                                              // namespace
 ~~~
 
 Note that attribute names may appear in the message expression. Also note a special
-syntax of the attributes declaration, which must always be declared using a list of 
-
-**((attribute_type)attribute_name)** tokens.
+syntax of the attributes declaration, which must always be declared using a list of **((attribute_type)attribute_name)** tokens.
 All the brackets in this expression are essential. Do not use commas to separate attributes.
 The only requirement for the type of an issue attribute is that for this type must be defined the output
 operator to the standard C++ output stream and the input operator from the standard C++ input
@@ -245,24 +260,33 @@ The following example shows a typical use case of handling ERS exceptions.
 ~~~
 
 This example demonstrates the main features of the ERS API:
- * An issue does not have severity by itself. Severity of the issue is defined by the stream to which this issue is reported.
- * An issue can be send to one of the existing ERS streams using one of the following functions:
-ers::debug, ers::info, ers::warning, ers::error, ers::fatal
- * Any ERS issue has a constructor, which accepts another issue as its last parameter. If this
+
+* An issue does not have severity by itself. Severity of the issue is defined by the stream to which this issue is reported.
+
+* An issue can be send to one of the existing ERS streams using one of the following functions: ers::debug, ers::info, ers::warning, ers::error, ers::fatal
+
+* Any ERS issue has a constructor, which accepts another issue as its last parameter. If this
 constructor is used the new issue will hold the copy of the original one and will report it as its cause.
- * Any ERS issue has a constructor, which accepts std::exception issue as its last parameter.
+
+* Any ERS issue has a constructor, which accepts std::exception issue as its last parameter.
     If it is used the new issue will hold the copy of the given std::exception one and will report it as its cause.
 
 ## Configuring ERS Streams
 The ERS system provides multiple instances of the stream API, one per severity level, to report issues.
 The issues which are sent to different streams may be forwarded to different destinations depending on a
 particular stream configuration. By default the ERS streams are configured in the following way:
- * ers::debug - "lstdout" - prints issues to the standard C++ output stream
- * ers::log - "lstdout" - prints issues to the standard C++ output stream
- * ers::info - "throttle,lstdout" - prints throttled issues to the standard C++ output stream
- * ers::warning - "throttle,lstderr" - prints throttled issues to the standard C++ error stream
- * ers::error - "throttle,lstderr" - prints throttled issues to the standard C++ error stream
- * ers::fatal - "lstderr" - prints issues to the standard C++ error stream
+
+* ers::debug - "lstdout" - prints issues to the standard C++ output stream
+
+* ers::log - "lstdout" - prints issues to the standard C++ output stream
+
+* ers::info - "throttle,lstdout" - prints throttled issues to the standard C++ output stream
+
+* ers::warning - "throttle,lstderr" - prints throttled issues to the standard C++ error stream
+
+* ers::error - "throttle,lstderr" - prints throttled issues to the standard C++ error stream
+
+* ers::fatal - "lstderr" - prints issues to the standard C++ error stream
 
 > **Note:** the letter "l" at the beginning of "lstdout" and "lstderr" names indicates that these stream
 > implementations are thread-safe and can be safely used in multi-threaded applications so that
@@ -301,21 +325,32 @@ This configuration will throw all the errors, which come neither from "ipc" nor 
 ### Existing Stream Implementations
 ERS provides several stream implementations which can be used in any combination in ERS streams configurations.
 Here is the list of available stream implementations:
- * "stdout" - prints issues to the standard C++ output stream. It is not thread-safe.
- * "stderr" - prints issues to the standard C++ error stream. It is not thread-safe.
- * "lstdout" - prints issues to the standard C++ output stream. It is thread-safe.
- * "lstderr" - prints issues to the standard C++ error stream. It is thread-safe.
- * "lock" - locks a global mutex for the duration of reporting an issue to the next streams in the given configuration.
+
+* "stdout" - prints issues to the standard C++ output stream. It is not thread-safe.
+
+* "stderr" - prints issues to the standard C++ error stream. It is not thread-safe.
+
+* "lstdout" - prints issues to the standard C++ output stream. It is thread-safe.
+
+* "lstderr" - prints issues to the standard C++ error stream. It is thread-safe.
+
+* "lock" - locks a global mutex for the duration of reporting an issue to the next streams in the given configuration.
 This stream can be used for adding thread-safety to an arbitrary non-thread-safe stream implementation. For example
 "lock,stdout" configuration is equivalent to "lstdout".
- * "null" - silently drop any reported issue.
- * "throw" - apply the C++ throw operator to the reported issue
- * "abort" - calls abort() function for any issue reported
- * "exit" - calls exit() function for any issue reported
- * "filter(A,B,!C,...)" - pass through only issues, which have either A or B and don't have C qualifier
- * "rfilter(RA,RB,!RC,...)" - the same as "filter" stream but treats all the given parameters as regular expressions.
- * "throttle(initial_threshold, time_interval)" - rejects the same issues reported within the **time_interval** after
-passing through the **initial_threshold** number of them.
+
+* "null" - silently drop any reported issue.
+
+* "throw" - apply the C++ throw operator to the reported issue
+
+* "abort" - calls abort() function for any issue reported
+
+* "exit" - calls exit() function for any issue reported
+
+* "filter(A,B,!C,...)" - pass through only issues, which have either A or B and don't have C qualifier
+
+* "rfilter(RA,RB,!RC,...)" - the same as "filter" stream but treats all the given parameters as regular expressions.
+
+* "throttle(initial_threshold, time_interval)" - rejects the same issues reported within the **time_interval** after passing through the **initial_threshold** number of them.
 
 ## Custom Stream Implementation
 While ERS provides a set of basic stream implementations one can also implement a custom one if this is required.
@@ -480,7 +515,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Apr 8 09:41:13 2021 -0500_
+_Date: Fri Apr 23 15:51:14 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/ers/issues](https://github.com/DUNE-DAQ/ers/issues)_
 </font>
