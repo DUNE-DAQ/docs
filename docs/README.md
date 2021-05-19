@@ -59,6 +59,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Monitoring
 
+[erses](packages/erses/README.md) _insert ERS messages into a searchable database_
 [opmonlib](packages/opmonlib/README.md) _operational monitoring library_
 
 ### Educational

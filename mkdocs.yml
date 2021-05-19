@@ -46,14 +46,16 @@ nav:
           - About dfmodules: packages/dfmodules/README.md
        - ers:
           - About ers: packages/ers/README.md
+       - erses:
+          - About erses: packages/erses/README.md
        - ipm:
           - About ipm: packages/ipm/README.md
        - listrev:
           - About listrev: packages/listrev/README.md
        - logging:
           - About logging: packages/logging/README.md
-          - packages/logging/Home.md
           - packages/logging/ers-conventions.md
+          - packages/logging/Home.md
           - packages/logging/v1.0.0-documentation.md
        - minidaqapp:
           - About minidaqapp: packages/minidaqapp/README.md
