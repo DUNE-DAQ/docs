@@ -7,4 +7,5 @@ sphinx_theme
 sphinx_copybutton
 sphinx_togglebutton
 sphinx_thebe
+sphinx_material
 sphinx>=3.4.2
