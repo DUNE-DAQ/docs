@@ -83,7 +83,7 @@ html_theme_options = {
     # If False, expand all TOC entries
     'globaltoc_collapse': True,
     # If True, show hidden TOC entries
-    'globaltoc_includehidden': False,
+    'globaltoc_includehidden': True,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

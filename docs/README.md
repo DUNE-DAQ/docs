@@ -3,6 +3,7 @@
 ```{toctree}
 :caption: Tools
 :maxdepth: 1
+:hidden:
 
 daq buildtools <packages/daq-buildtools/README>
 daq cmake <packages/daq-cmake/README>
@@ -13,6 +14,7 @@ styleguide <packages/styleguide/README>
 ```{toctree}
 :caption: Core
 :maxdepth: 1
+:hidden:
 
 appfwk <packages/appfwk/README>
 cmdlib <packages/cmdlib/README>
@@ -24,6 +26,7 @@ opmonlib <packages/opmonlib/README>
 ```{toctree}
 :caption: Readout
 :maxdepth: 1
+:hidden:
 
 dataformats <packages/dataformats/README>
 readout <packages/readout/README>
@@ -32,11 +35,12 @@ readout <packages/readout/README>
 ```{toctree}
 :caption: Editing Documentation
 :maxdepth: 1
+:hidden:
 
 Making edits <how_to_make_edits>
 Package documentation <editing_package_documentation.md>
 ```
-<!-- 
+
 There are four DUNE DAQ software packages which are used to aid
 developers in creating packages designed for the DAQ itself:
 
@@ -101,7 +105,7 @@ For the other packages, please click on one of the links below. To learn how to 
 ### Educational
 
 [listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
- -->
+
 ## Indices and tables
 
 * {ref}`genindex`
