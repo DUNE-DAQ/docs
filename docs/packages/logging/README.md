@@ -59,17 +59,17 @@ The TLOG_DEBUG(lvl) is to be used for messages which will be selectively enabled
 
 The TLOG_DEBUG(lvl) macro accepts an optional "name" parameter which defaults to the basename of the compilation file minus the extension. The level and name combination is ultimately used to enable and disable specific TLOG_DEBUG statements.
 
-# ERS/Slow-path configuration
+## ERS/Slow-path configuration
 
 By default, all ERS severities are configured to have at least standard out or standard error as a destination.
 This means that all fatal, error, warning, info and log messages will go to "the console" (standard out or standard error).
 
 
-# Controlling the DEBUG macros
+## Controlling the DEBUG macros
 
 As stated above, the TRACE TLOG_DEBUG(lvl) macro can be used for slow and fast path logging where the slow path is ERS to stdout and the fast path is TRACE to a circular memory buffer/file.
 
-## Slow-path debug messages
+### Slow-path debug messages
 
 Since "debug" messages (via `TLOG_DEBUG(dbglvl) << <Issue_or_message>`) are controlled by TRACE, they ultimately have to be enabled by TRACE. TRACE will only give these messages to ERS if the trace debug message is enabled. THEN, ERS will only send the debug messages to the standard out stream if the debug level (normally set via the environment variable DUNEDAQ_ERS_DEBUG_LEVEL) is less than or equal to the configured "debug level" (the default is zero).  Because this double enabling can be confusing, all applications should call the `dunedaq::logging::Logging::setup()` function, which will make sure the DUNEDAQ_ERS_DEBUG_LEVEL value is set appropriately.
 
@@ -77,12 +77,12 @@ The environment variable TRACE_LVLS can be used to enable/disable all DEBUG stat
 
 NOTE: TRACE allows individual levels to be enabled/disabled via the setting or clearing of bits in a 64-bit mask. TRACE has the concept of "system levels" and "debug levels." "debug levels" are a subset of "system levels." "System levels" 8-63 correspond to "debug levels" 0 through 55. So ultimately, TLOG_DEBUG(<dbg_lvl>) supports dbg_lvl from 0 to 55. This should not be overly restrictive because there are 56 controllable levels per TRACE NAME (which normally corresponds to a file).
 
-## Fast-path debug messages
+### Fast-path debug messages
 
 The environment variable TRACE_LVLM does the same for the fast path.
 
 
-## Slow/Fast-path debug messages
+### Slow/Fast-path debug messages
 
 The TRACE_NAMLVLSET environment varibale can be used to enable/disable specific TLOG_DEBUG statements by setting the value to lines with the format "name,lvlSmsk,lvlMmsk".
 
@@ -115,13 +115,13 @@ tonMg debug-debug+55  # "M" for fast/Memory
 tonMg debug-debug+55  # "S" for Slow/Stdout
 ```
 
-## Enabling/Disabling Slow Path (ERS) DEBUG messages dynamically
+### Enabling/Disabling Slow Path (ERS) DEBUG messages dynamically
 
 Assuming non-volatile tracing is enabled as described above. The enabling and disabling of debug messages can be done dynamically while the application is running if the trace functions mentioned above are run from a different command window on the same system if the TRACE_FILE environment variable is set to the same value.
 
 
 
-## Showing TRACE/debug memory "live" in another terminal window with color
+### Showing TRACE/debug memory "live" in another terminal window with color
 
 ```
 export TRACE_SHOW='%H%x%T %P %i %C %e %O%.3L %m%o'   # remove index, add linenumber and add color to output
@@ -149,16 +149,15 @@ The NFO lines below should/will be green with an actual show...
 
 
 
-
 -----
 
-<font size="1">
+<font size="1.5">
 _Last git commit to the markdown source of this page:_
-
 
 _Author: Ron Rechenmacher_
 
 _Date: Mon May 17 02:13:17 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/logging/issues](https://github.com/DUNE-DAQ/logging/issues)_
+
 </font>

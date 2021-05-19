@@ -1,7 +1,7 @@
 # cmdlib - Interfaces for commanded objects
 Details about commands and commanded object can be found under the [User's Guide](User-Guide.md).
 
-### Building and running examples:
+## Building and running examples:
 
 
 * create a software work area
@@ -18,7 +18,7 @@ Details about commands and commanded object can be found under the [User's Guide
     * `cmdlib_test_dummy_app`
     * `cmdlib_test_stdin_app`
 
-### Using the stdinCommandFacility
+## Using the stdinCommandFacility
 There is a really simple and basic implementation that comes with the package.
 The stdinCommandFacility reads the available commands from a file, then one can
 execute these command by typing their IDs on stdin:

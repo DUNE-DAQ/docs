@@ -1,13 +1,6 @@
 
 # DUNE DAQ Buildtools 
 
-```{toctree}
-:maxdepth: 1
-:hidden:
-:glob:
-:numbered:
-
-*
 ```
 
 The toolset to simplify the development of DUNE DAQ packages

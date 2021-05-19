@@ -32,14 +32,14 @@ master_doc = 'README'
 # ones.
 extensions = [
     "myst_parser",
-    "sphinx_copybutton",
-    "sphinx_togglebutton",
-    "sphinx_thebe",
+    # "sphinx_copybutton",
+    # "sphinx_togglebutton",
+    # "sphinx_thebe",
     "sphinx.ext.autodoc",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.viewcode",
-    "sphinx_tabs.tabs",
-    "sphinx_panels",
+    # "sphinx.ext.intersphinx",
+    # "sphinx.ext.viewcode",
+    # "sphinx_tabs.tabs",
+    # "sphinx_panels",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -55,25 +55,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
-html_theme = 'sphinx_book_theme'
-
-# html_title = ""
-# html_theme_options = {
-#     "path_to_docs": "docs",
-#     "repository_url": "https://github.com/DUNE-DAQ",
-#     # "repository_branch": "gh-pages",  # For testing
-#     # "use_edit_page_button": True,
-#     "use_issues_button": True,
-#     "use_repository_button": True,
-#     "expand_sections": ["reference/index"]
-#     # For testing
-#     # "home_page_in_toc": True,
-#     # "single_page": True
-#     # "extra_footer": "<a href='https://google.com'>Test</a>",
-#     # "extra_navbar": "<a href='https://google.com'>Test</a>",
-# }
-
 html_theme = 'sphinx_material'
 
 # Material theme options (see theme.conf for more information)
@@ -87,7 +68,7 @@ html_theme_options = {
 
     # Specify a base_url used to generate sitemap.xml. If not
     # specified, then no sitemap will be built.
-    'base_url': 'https://project.github.io/project',
+    'base_url': 'https://dune-daq-sw.readthedocs.io/',
 
     # Set the color and the accent color
     'color_primary': 'blue',
@@ -98,9 +79,9 @@ html_theme_options = {
     'repo_name': 'DUNE DAQ Documentation',
 
     # Visible levels of the global TOC; -1 means unlimited
-    'globaltoc_depth': 3,
+    'globaltoc_depth': 1,
     # If False, expand all TOC entries
-    'globaltoc_collapse': False,
+    'globaltoc_collapse': True,
     # If True, show hidden TOC entries
     'globaltoc_includehidden': False,
 }
@@ -109,6 +90,10 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_sidebars = {
+    "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
+}
 
 myst_enable_extensions = [
     "dollarmath",
@@ -122,4 +107,4 @@ myst_enable_extensions = [
 ]
 myst_url_schemes = ("http", "https", "mailto")
 myst_heading_anchors = 5
-panels_add_boostrap_css = False
+# panels_add_boostrap_css = False
