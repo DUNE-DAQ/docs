@@ -33,6 +33,46 @@ readout <packages/readout/README>
 ```
 
 ```{toctree}
+:caption: Control
+:maxdepth: 1
+:hidden:
+
+minidaqapp <packages/minidaqapp/README>
+nanorc <packages/nanorc/README>
+rcif <packages/rcif/README>
+restcmd <packages/restcmd/README>
+```
+
+
+```{toctree}
+:caption: Dataflow (logical)
+:maxdepth: 1
+:hidden:
+
+dfmessages <packages/dfmessages/README>
+dfmodules <packages/dfmodules/README>
+trigemu <packages/trigemu/README>
+```
+
+```{toctree}
+:caption: Dataflow (physical)
+:maxdepth: 1
+:hidden:
+
+ipm <packages/ipm/README>
+nwqueueadapters <packages/nwqueueadapters/README>
+serialization <packages/serialization/README>
+```
+
+```{toctree}
+:caption: Educational
+:maxdepth: 1
+:hidden:
+
+listrev <packages/listrev/README>
+```
+
+```{toctree}
 :caption: Editing Documentation
 :maxdepth: 1
 :hidden:
@@ -40,6 +80,7 @@ readout <packages/readout/README>
 Making edits <how_to_make_edits>
 Package documentation <editing_package_documentation.md>
 ```
+
 
 There are four DUNE DAQ software packages which are used to aid
 developers in creating packages designed for the DAQ itself:
@@ -65,6 +106,8 @@ For the other packages, please click on one of the links below. To learn how to 
 [ers](packages/ers/README.md) _fork of the ATLAS Error Reporting System_
 
 [logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
+
+[opmonlib](packages/opmonlib/README.md) _operational monitoring library_
 
 ### Readout
 
@@ -97,10 +140,6 @@ For the other packages, please click on one of the links below. To learn how to 
 [nwqueueadapters](packages/nwqueueadapters/README.md) _DAQModules that connect appfwk queues to IPM network connections_
 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
-
-### Monitoring
-
-[opmonlib](packages/opmonlib/README.md) _operational monitoring library_
 
 ### Educational
 
