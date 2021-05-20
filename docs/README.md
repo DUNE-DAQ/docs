@@ -13,61 +13,60 @@ To learn about the C++ coding guidelines which DUNE DAQ package developers shoul
 
 --------------
 
-For the other packages, please click on one of the links below. To learn how to edit a package's documentation, click [here](editing_package_documentation.md). Packages marked with an asterix don't yet have any official documentation; please see their Issues page to remedy this. 
+For the other packages, please click on one of the links below. To learn how to edit a package's documentation, click [here](editing_package_documentation.md). Packages marked with a &#x2611; have completed documentation, &#x26A0; means the documentation is a work in progress, and &#x26D4; means documentation doesn't (yet) exist. 
 
 ### Core
 
-[appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
+&#x2611; [appfwk](packages/appfwk/README.md) _home of_ daq_application _and tools for writing DAQModules_
 
-[cmdlib](packages/cmdlib/README.md) _interfaces for commanded objects_
+&#x26A0; [cmdlib](packages/cmdlib/README.md) _interfaces for commanded objects_
 
-[ers](packages/ers/README.md) _fork of the ATLAS Error Reporting System_
+&#x2611; [ers](packages/ers/README.md) _fork of the ATLAS Error Reporting System_
 
-[logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
+&#x2611; [logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
 
 ### Readout
 
-[dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
+&#x2611; [dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
 
-[readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
+&#x26A0; [readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
 
 ### Control
 
-[minidaqapp](packages/minidaqapp/README.md) _application to read out Felix data and store it in HDF5 files on disk_
+&#x26A0; [minidaqapp](packages/minidaqapp/README.md) _application to read out Felix data and store it in HDF5 files on disk_
 
-[nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
+&#x2611; [nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
 
-[* rcif](packages/rcif/README.md) _run control related_
+&#x26D4; [rcif](packages/rcif/README.md) _run control related_
 
-[restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
+&#x2611; [restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
 
 ### Dataflow (logical)
 
-[dfmessages](packages/dfmessages/README.md) _dataflow messages_
+&#x2611; [dfmessages](packages/dfmessages/README.md) _dataflow messages_
 
-[dfmodules](packages/dfmodules/README.md) _dataflow applications_
+&#x2611; [dfmodules](packages/dfmodules/README.md) _dataflow applications_
 
-[trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
+&#x26D4; [trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
 
 ### Dataflow (physical)
 
-[ipm](packages/ipm/README.md) _message passing between processes_
+&#x2611; [ipm](packages/ipm/README.md) _message passing between processes_
 
-[nwqueueadapters](packages/nwqueueadapters/README.md) _DAQModules that connect appfwk queues to IPM network connections_
+&#x2611; [nwqueueadapters](packages/nwqueueadapters/README.md) _DAQModules that connect appfwk queues to IPM network connections_
 
-[serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
+&#x2611; [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
 
 ### Monitoring
 
-[erses](packages/erses/README.md) _insert ERS messages into a searchable database_
+&#x2611; [erses](packages/erses/README.md) _insert ERS messages into a searchable database_
 
-[opmonlib](packages/opmonlib/README.md) _operational monitoring library_
+&#x26A0; [opmonlib](packages/opmonlib/README.md) _operational monitoring library_
 
 ### Educational
 
-[listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
+&#x2611; [listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
 
 ------
 
 _Mar-11-2021: For software coordinators only:_ [how to make edits to this webpage](how_to_make_edits.md)
-
