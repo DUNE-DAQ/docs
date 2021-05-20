@@ -62,7 +62,6 @@ nav:
           - About nwqueueadapters: packages/nwqueueadapters/README.md
        - opmonlib:
           - About opmonlib: packages/opmonlib/README.md
-          - packages/opmonlib/Home.md
           - packages/opmonlib/Instructions-for-DAQ-module-users.md
        - readout:
           - About readout: packages/readout/README.md
