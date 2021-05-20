@@ -35,7 +35,6 @@ nav:
           - packages/dataformats/FragmentHeaderV2.md
           - packages/dataformats/GeoIDV0.md
           - packages/dataformats/GeoIDV1.md
-          - packages/dataformats/Home.md
           - packages/dataformats/TriggerRecordHeaderDataV1.md
        - dfmessages:
           - About dfmessages: packages/dfmessages/README.md
