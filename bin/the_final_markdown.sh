@@ -83,6 +83,7 @@ function add_trailer() {
     packagefile=$2
 
     echo >> $packagefile
+    echo >> $packagefile
     echo "-----" >> $packagefile
     echo >> $packagefile
     echo "<font size=\"1\">" >> $packagefile
