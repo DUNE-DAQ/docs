@@ -6,9 +6,6 @@ nav:
           - About daq-buildtools: packages/daq-buildtools/README.md
        - daq-cmake:
           - About daq-cmake: packages/daq-cmake/README.md
-          - packages/daq-cmake/CmakeFunctions.md
-          - packages/daq-cmake/Creating-a-new-package.md
-          - packages/daq-cmake/SchemaAndCodeGen.md
        - daq-release:
           - About daq-release: packages/daq-release/README.md
           - packages/daq-release/add_modules_to_pypi_repo.md
