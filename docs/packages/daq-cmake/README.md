@@ -33,6 +33,10 @@ In terms of its actual functionality, it's pretty useless (it contains a class w
 
 * *test*: contains any applications or plugins you've written for the purpose of [integration testing](https://en.wikipedia.org/wiki/Integration_testing) - ensuring that your software components interact as expected
 
+* *pybindsrc* contains source files which expose C++ code to python via the `pybind11` library. In `toylibrary`, we have only one source file, `toy_wrapper.cpp`. The file provides a python interface to the `IntPrinter` and `ValueWrapper<int>` classes from main `toylibrary` library. `toy_wrapper.cpp` also implements several "toy" functions, `WindUp`, `WindDown`, and `PlayInts`, which are used to demonstrate how C++ code can also be exposed via python sub-modules.
+
+* *scripts* This directory is inteneded to hold executable scripts. In this case it contains the script, `toyscript.py`. The `python` script demonstrates how the C++ code exposed in `toy_wrapper.cpp` can be used from within `python`.
+
 If your package contains applications intended not for testing but for the end user, you'd put the code for it in a subdirectory called `apps/`. toylibrary doesn't have this type of application, but, e.g., the appfwk package does. Similarly, plugins not intended for testing but for the end user would go in `plugins/`. 
 
 
@@ -79,7 +83,11 @@ daq_add_library(IntPrinter.cpp LINK_LIBRARIES ers::ers)
 ```
 What `daq_add_library` does here is create the main project library. It looks in the project's `./src` subdirectory for a file called `IntPrinter.cpp`, which it then compiles and links against the ERS library. The result is output in the build area as a shared object library named after the project itself, in a subdirectory of the same name as that of the source file it used - `build/toylibrary/src/libtoylibrary.so`. When `--install` is passed to `./build_daq_software.sh`, as it was in the instructions above, this library in turn is installed in a subdirectory of the installation area called `toylibrary/lib64/libtoylibrary.so`. 
 
-The next function you see called in the CMakeLists.txt file is `daq_add_application`:
+The next function you see called in the CMakeLists.txt file is `daq_add_python_bindings`:
+```
+daq_add_python_bindings( toy_wrapper.cpp LINK_LIBRARIES ${PROJECT_NAME} )
+```
+is a function designed to allow the binding of C++ code to python. To do so, it relies on the header only library, `pybind11`. The function expects to find the source files exposing the C++ code, in the package directory, `pybindsrc`. In this `toylibrary` case, we have specified that the bindings are located in the file `toy_wrapper.cpp`. The resulting compiled file will be called, `_daq_${PROJECT_NAME}_py.so`, and will be placed in the output directory, `python/${PROJECT_NAME}`. Similarly to `daq_add_library`, `_daq_${PROJECT_NAME}_py.so` will be linked against the libraries specified after `LINK_LIBRARIES`. For how to import the exposed C++ in, see detailed description section. After the call of `daq_add_python_bindings`, you will see the call to the function `daq_add_application`.
 ```
 daq_add_application( toylibrary_test_program toylibrary_test_program.cxx TEST LINK_LIBRARIES ${Boost_PROGRAM_OPTIONS_LIBRARY} toylibrary )
 ```
@@ -212,6 +220,30 @@ System) library
 Public headers for users of the library should go in the project's
 `include/<project name>` directory. Private headers used in the
 library's implementation should be put in the `src/` directory.
+
+## daq_add_python_bindings:
+Usage:  
+```
+daq_add_python_bindings( <file | glob expression 1> ... [LINK_LIBRARIES <lib1> ...])
+```
+
+`daq_add_python_bindings` is designed to produce a library providing 
+a python interface to C++ code. It will compile a group
+of files, which are expected to expose the desired C++ interface via `pybind11`. 
+The set of files is defined by a set of one or more individual filenames and/or
+glob expressions, and link against the libraries listed after
+LINK_LIBRARIES. The set of files is expected to be in the `pybindsrc`
+subdirectory of the project.
+
+As an example,
+`daq_add_python_bindings(my_wrapper.cpp LINK_LIBRARIES ${PROJECT_NAME})`
+will create a library from `pybindsrc/my_wrapper.cpp` and link against 
+the main project library which would have been created via daq_add_library
+
+Please note that library shared object will be named `_daq_${PROJECT_NAME}_py.so`, and will be placed 
+in the `python/${PROJECT_NAME}` directory. You will need to have the corresponding init file, 
+`python/${PROJECT_NAME}/__init__.py` to import the appropiate componenets of the module.
+See toylibrary for a working example.
 
 ## daq_add_plugin:
 Usage:  
@@ -416,9 +448,9 @@ endif()
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Stoyan Trilov_
 
-_Date: Thu May 20 10:12:50 2021 -0500_
+_Date: Fri May 21 14:10:57 2021 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
