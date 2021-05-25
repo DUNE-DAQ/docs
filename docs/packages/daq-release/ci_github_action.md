@@ -1,5 +1,9 @@
 # Nightly releases and Continous Integration for DUNE DAQ Software
 
+## New Features
+
+🆕 Checkout the [CI Dashboard](https://tiny.one/dunedaq-ci-dashboard) to get an overview of recently CI build status for DAQ repositories in `DUNE-DAQ` organization.
+
 ## Introduction
 
 
@@ -126,7 +130,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Tue Apr 20 16:00:29 2021 -0500_
+_Date: Tue May 25 09:41:16 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

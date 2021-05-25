@@ -61,6 +61,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 &#x2705; [erses](packages/erses/README.md) _insert ERS messages into a searchable database_
 
+&#x2705; [influxopmon](packages/influxopmon/README.md) _Influx database based plugin for operational monitoring_
+
 &#x26A0; [opmonlib](packages/opmonlib/README.md) _operational monitoring library_
 
 ### Educational
