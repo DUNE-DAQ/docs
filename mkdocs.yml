@@ -44,6 +44,8 @@ nav:
           - About ers: packages/ers/README.md
        - erses:
           - About erses: packages/erses/README.md
+       - influxopmon:
+          - About influxopmon: packages/influxopmon/README.md
        - ipm:
           - About ipm: packages/ipm/README.md
        - listrev:
