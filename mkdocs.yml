@@ -71,6 +71,10 @@ nav:
           - About restcmd: packages/restcmd/README.md
        - serialization:
           - About serialization: packages/serialization/README.md
+       - timing:
+          - About timing: packages/timing/README.md
+       - timinglibs:
+          - About timinglibs: packages/timinglibs/README.md
        - trigemu:
           - About trigemu: packages/trigemu/README.md
 

@@ -47,6 +47,10 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [dfmodules](packages/dfmodules/README.md) _dataflow applications_
 
+[timing](packages/timing/README.md) _C++ interface to the timing firmware_
+
+[timinglibs](packages/timinglibs/README.md) _timing control and monitoring_
+
 [trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
 
 ### Dataflow (physical)
