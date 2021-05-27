@@ -16,9 +16,9 @@ The DUNE DAQ modules in `timnglibs` can be split in two groups:
 
 Each of the different aspects of `timinglibs` are described in more detail in the following sections.
 
-### DUNE DAQ Modules
+## DUNE DAQ Modules
 
-#### Control, configuration, and monitoring
+### Control, configuration, and monitoring
 The general principle of the modules providing the timing `CCM` interface is that there is one hardware interface module which handles all interactions between `CCM` and the timing hardware. This hardware interface module receives its low level commands from `controller` modules, which receive higher level commands from `CCM`, and translate them into the low level instructions consumed by the hardware interface. Each `controller` module is responsible for indepdently managing a particular logical entity within the timng system, e.g. `timing master`, `timing partition`, or `timing endpoint`. An illustration of the envisioned timing software stack can be found below.
 
 ![timing software](./timing_software_diagram.png)
@@ -29,7 +29,7 @@ A diagram of the connections between `timinglibs` DUNE DAQ modules inside of an 
 
 A list of the currently implemented control mdoules, along with their function, can be found below.
 
-##### TimingHardwareManagerPDI
+#### TimingHardwareManagerPDI
 
 It receives hardware commands from timing `controller` modules, and makes the appropriate calls to `PD-I` timing hardware over `IPBus`. The interface to the timing hardware is provided by the [`timing` package](https://github.com/DUNE-DAQ/timing). It is also responsible for extracting operational monitoring information from timing devices, e.g. `timing master`, `timing HSI`, `timing endpoint`. 
 
@@ -45,7 +45,7 @@ The module currently supports the following timing firmware and hardware combina
 * Endpoint designs
     * `Endpoint` on `FMC`
 
-##### TimingMasterController
+#### TimingMasterController
 
 `controller` module providing an interface to `timing master` devices. It receives commands from an external source, e.g. a timing system operator or `CCM`, and translates those commands to timing hardware commands which are then sent to the hardware interface module. Each instance of this module is responsible for managing one particular physical `timing master`. The commands currently supported by the module are:
 
@@ -56,7 +56,7 @@ The module currently supports the following timing firmware and hardware combina
 
 * master_print_status
 
-##### TimingPartitionController
+#### TimingPartitionController
 
 It receives `timing partition` commands from an external source, e.g. a timing system operator or `CCM`, and translates those commands to timing hardware commands which are then sent to the hardware interface module. Each instance of this module is responsible for managing one particular logical `timing partition`. The commands currently supported by the module are:
 
@@ -77,7 +77,7 @@ It receives `timing partition` commands from an external source, e.g. a timing s
 
 * partition_print_status
 
-##### TimingEndpointController
+#### TimingEndpointController
 
 It receives `timing endpoint` commands from an external source, e.g. a timing system operator or `CCM`, and translates those commands to timing hardware commands which are then sent to the hardware interface module. The endpoint hardware commands issued by this module are addressed endpoint `0` on the `timing endpint` device. The commands currently supported by the module are:
 
@@ -92,7 +92,7 @@ It receives `timing endpoint` commands from an external source, e.g. a timing sy
 
 * endpoint_print_status
 
-##### HSIController
+#### HSIController
 
 A module for controlling the `HD timing` implementation of an HSI. The HSI may or may not be in the same physical device as the `timing master`. The controller current accepts the following timing commands:
 
@@ -115,13 +115,13 @@ A module for controlling the `HD timing` implementation of an HSI. The HSI may o
 
 * hsi_print_status
 
-#### HSI readout and emulation
+### HSI readout and emulation
 
-##### HSIReadout
+#### HSIReadout
 
 A DUNE DAQ module for reading `HSIEvent` from `HSI` hardware. The module periodically polls the `HSI` firmware, and checks if there are complete events in the buffer. If there is at least one such event, the event is read out, a `dfmessages::HSIEvent` is constructed and sent out on the `HSIEvent` output queue. The interval between polls is configurable via the parameter `readout_period`.
 
-##### FakeHSIEventGenerator
+#### FakeHSIEventGenerator
 
 In the absence of real `HSI` hardware, this module can be used to emululate an `HSI`, and act as a source of `HSIEvent`s. The timestamp of the emulated `HSIEvent`s is obtained from timestamp estimates provided by `TimestampEstimator`. The distribution of signals in the `HSIEvent` bitmap along with their rate are configurable via the following parameters.
 
@@ -148,7 +148,7 @@ In the absence of real `HSI` hardware, this module can be used to emululate an `
     * `0`: enabled signals always on
     * `1`: enabled signals are emulated (independently) according to a Poisson with mean mean_signal_multiplicity; signal map generated with uniform distr. enabled signals only       
 
-### Python configuration generation
+## Python configuration generation
 
 The `timinglibs/python/timinglibs/timing_app_confgen.py` script generates a `json` configuration file for instantiation of timing control and monitoring application. The script takes in one argument which is the name of the produced `json` file. The default file name is `timing_app.json`. The script is also able to accept the following command line options:
 
@@ -271,7 +271,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Stoyan Trilov_
 
-_Date: Thu May 27 10:39:59 2021 +0100_
+_Date: Thu May 27 17:21:47 2021 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/timinglibs/issues](https://github.com/DUNE-DAQ/timinglibs/issues)_
 </font>
