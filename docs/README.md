@@ -29,6 +29,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
 
+[flxlibs](packages/flxlibs/README.md) _DAQModules, utilities, and scripts for Upstream FELIX Readout Software_
+
 [readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
 
 ### Control
