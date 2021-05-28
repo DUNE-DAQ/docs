@@ -1,5 +1,5 @@
 # flxlibs - FELIX card software and utilities 
-Appfwk DAQModules, utilities, and scripts for DUNE Upstream DAQ FELIX Readout Software.
+Appfwk DAQModules, utilities, and scripts for the FELIX readout card.
 
 ## Building
 
@@ -38,9 +38,9 @@ Then start typing commands as usual.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: roland-sipos_
 
-_Date: Thu May 27 19:24:24 2021 -0500_
+_Date: Fri May 28 11:33:24 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
