@@ -3,7 +3,7 @@ This short manual assumes:
 
 * That you have low-level FELIX tools in `$PATH`. This is the case if you've set up your DUNE DAQ software development area using `daq-buildtools`' dunedaq-v2.4.0 tag or later
 
-* That SuperLogic Region (SLR) configuration files `<slr1-config-file>` and `<slr2-config-file>` are downloaded to `/tmp`, and the card is programmed with a compatible firmware. The viable combinations can be found under [FELIX Assets]([FELIX Assets](FELIX-assets.md#compatibility_list).
+* That SuperLogic Region (SLR) configuration files `<slr1-config-file>` and `<slr2-config-file>` are downloaded to `/tmp`, and the card is programmed with a compatible firmware. The viable combinations can be found under [FELIX Assets](FELIX-assets.md#compatibility_list).
 
 If the card is programmed with the firmware and the SLR config files are successfully verified, one can do the following from the cloned repository's directory:
 
@@ -62,7 +62,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu May 27 18:55:38 2021 -0500_
+_Date: Thu May 27 19:24:24 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
