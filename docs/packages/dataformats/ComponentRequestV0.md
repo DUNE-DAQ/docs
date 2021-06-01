@@ -40,6 +40,7 @@ struct ComponentRequest
 
 ComponentRequest does not currently have a version field. If its format changes, it would have to either be rolled into a version update of the products that use it, or have a version number added.
 
+
 -----
 
 <font size="1">

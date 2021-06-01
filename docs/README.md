@@ -29,6 +29,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
 
+[flxlibs](packages/flxlibs/README.md) _DAQModules, utilities, and scripts for Upstream FELIX Readout Software_
+
 [readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
 
 ### Control
@@ -47,6 +49,10 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [dfmodules](packages/dfmodules/README.md) _dataflow applications_
 
+[timing](packages/timing/README.md) _C++ interface to the timing firmware_
+
+[timinglibs](packages/timinglibs/README.md) _timing control and monitoring_
+
 [trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
 
 ### Dataflow (physical)
@@ -59,7 +65,13 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Monitoring
 
+[erses](packages/erses/README.md) _insert ERS messages into a searchable database_
+
+[influxopmon](packages/influxopmon/README.md) _Influx database based plugin for operational monitoring_
+
 [opmonlib](packages/opmonlib/README.md) _operational monitoring library_
+
+
 
 ### Educational
 

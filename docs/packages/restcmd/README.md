@@ -66,6 +66,7 @@ The command facility enforces the content type. The following will fail:
     curl --header "Content-Type: application/xml" --header "X-Answer-Port: 12333" --request POST --data @$cmdfile http://epdtdi103:12345/command
 
 
+
 -----
 
 <font size="1">

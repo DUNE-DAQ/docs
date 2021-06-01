@@ -6,9 +6,6 @@ nav:
           - About daq-buildtools: packages/daq-buildtools/README.md
        - daq-cmake:
           - About daq-cmake: packages/daq-cmake/README.md
-          - packages/daq-cmake/CmakeFunctions.md
-          - packages/daq-cmake/Creating-a-new-package.md
-          - packages/daq-cmake/SchemaAndCodeGen.md
        - daq-release:
           - About daq-release: packages/daq-release/README.md
           - packages/daq-release/add_modules_to_pypi_repo.md
@@ -38,7 +35,6 @@ nav:
           - packages/dataformats/FragmentHeaderV2.md
           - packages/dataformats/GeoIDV0.md
           - packages/dataformats/GeoIDV1.md
-          - packages/dataformats/Home.md
           - packages/dataformats/TriggerRecordHeaderDataV1.md
        - dfmessages:
           - About dfmessages: packages/dfmessages/README.md
@@ -46,30 +42,37 @@ nav:
           - About dfmodules: packages/dfmodules/README.md
        - ers:
           - About ers: packages/ers/README.md
+       - erses:
+          - About erses: packages/erses/README.md
+       - flxlibs:
+          - About flxlibs: packages/flxlibs/README.md
+          - packages/flxlibs/Checking-Debugging-Optical-Fibre-Status.md
+          - packages/flxlibs/Configure-the-FELIX-card.md
+          - packages/flxlibs/Enabling-links-through-software.md
+          - packages/flxlibs/FELIX-Software-Suite-hack.md
+          - packages/flxlibs/FELIX-assets.md
+          - packages/flxlibs/Initial-setup-of-FELIX.md
+          - packages/flxlibs/Local-driver.md
+          - packages/flxlibs/Using-fdaq.md
+       - influxopmon:
+          - About influxopmon: packages/influxopmon/README.md
        - ipm:
           - About ipm: packages/ipm/README.md
        - listrev:
           - About listrev: packages/listrev/README.md
        - logging:
           - About logging: packages/logging/README.md
-          - packages/logging/Home.md
           - packages/logging/ers-conventions.md
-          - packages/logging/v1.0.0-documentation.md
        - minidaqapp:
           - About minidaqapp: packages/minidaqapp/README.md
-          - packages/minidaqapp/Coordination-notes-for-v2.3.0-and-v2.4.0.md
-          - packages/minidaqapp/Instructions-for-setting-up-a-v2.4.0-development-environment.md
+          - packages/minidaqapp/InstructionsForCasualUsers.md
           - packages/minidaqapp/MiniDAQApp-Diagrams.md
-          - packages/minidaqapp/Notes-from-meetings-and-discussions.md
-          - packages/minidaqapp/Reminders-about-tests-that-we-want-to-run.md
-          - packages/minidaqapp/Simple-instructions-for-running-the-app.md
        - nanorc:
           - About nanorc: packages/nanorc/README.md
        - nwqueueadapters:
           - About nwqueueadapters: packages/nwqueueadapters/README.md
        - opmonlib:
           - About opmonlib: packages/opmonlib/README.md
-          - packages/opmonlib/Home.md
           - packages/opmonlib/Instructions-for-DAQ-module-users.md
        - readout:
           - About readout: packages/readout/README.md
@@ -78,6 +81,10 @@ nav:
           - About restcmd: packages/restcmd/README.md
        - serialization:
           - About serialization: packages/serialization/README.md
+       - timing:
+          - About timing: packages/timing/README.md
+       - timinglibs:
+          - About timinglibs: packages/timinglibs/README.md
        - trigemu:
           - About trigemu: packages/trigemu/README.md
 

@@ -77,6 +77,7 @@ struct TriggerRecordHeaderData
 
 A TriggerRecordHeader instance is a flat array consisting of a TriggerRecordHeaderData instance followed immediately by zero or more ComponentRequest instances. For TriggerRecordHeaderData version 1, these are assumed to be [ComponentRequest version 0 (unversioned)](ComponentRequestV0.md).
 
+
 -----
 
 <font size="1">

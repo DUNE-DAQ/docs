@@ -18,7 +18,11 @@ outputs formatted json objects
 outputs a json object in one line
 - file:///file/path/file_name.out
 
-### Building and running examples:
+[Instructions for DAQ module users](Instructions-for-DAQ-module-users.md)
+
+### Building and running examples (_under construction_)
+
+
 
 
 -----
@@ -29,7 +33,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Apr 8 09:47:34 2021 -0500_
+_Date: Thu May 20 13:19:05 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/opmonlib/issues](https://github.com/DUNE-DAQ/opmonlib/issues)_
 </font>

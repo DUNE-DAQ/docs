@@ -58,6 +58,7 @@ here `DUNEDAQ_OPMON_INTERVAL` sets the interval in seconds between each instance
 
 Note: To disable operational monitoring set the interval to 0 seconds. 
 
+
 -----
 
 <font size="1">

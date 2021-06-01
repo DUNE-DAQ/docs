@@ -18,6 +18,7 @@ ThreadHelper defines a `stop_working_thread` method which will set the atomic bo
 ## Other Notes
 
 Users of ThreadHelper may call the `thread_running()` method to determine if `start_working_thread` has been called. Since the method run by ThreadHelper is in the caller's scope, the working method has access to all state variables in that scope. Beware that most STL container types are not intrinsically thread-safe, and care should be used when accessing shared data.
+
 -----
 
 <font size="1">

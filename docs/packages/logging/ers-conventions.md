@@ -109,6 +109,7 @@ Report an anomaly that is persistent and will likely not be solved without exter
 ### Fatal
 Report a major problem that does not allow the application to continue working (e.g. `DiskFull`, `NoMemoryLeft`). Note that issuing an `ers::fatal` does not necessarily terminate the application.
 
+
 -----
 
 <font size="1">

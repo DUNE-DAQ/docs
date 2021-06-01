@@ -19,7 +19,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # ...alphabetical, with the exception of the packages which are used
 # for package development themselves
 
-package_list="trigemu serialization restcmd readout rcif opmonlib nwqueueadapters nanorc minidaqapp logging listrev ipm ers dfmodules dfmessages dataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
+package_list="trigemu timinglibs timing serialization restcmd readout rcif opmonlib nwqueueadapters nanorc minidaqapp logging listrev ipm influxopmon flxlibs erses ers dfmodules dfmessages dataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -94,6 +94,7 @@ function add_trailer() {
     package=$1
     packagefile=$2
 
+    echo >> $packagefile
     echo >> $packagefile
     echo "-----" >> $packagefile
     echo >> $packagefile
