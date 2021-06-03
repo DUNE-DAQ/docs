@@ -10,7 +10,6 @@ The focus of this documentation is on providing instructions for using the tools
 
 [Instructions for casual or first-time users](InstructionsForCasualUsers.md)
 
-(Possibly we can/should add some instructions for the next level of user, for example, someone who wants to make changes in repoY as part of their development work...)
 
 
 -----
@@ -21,7 +20,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: bieryAtFnal_
 
-_Date: Wed May 26 15:39:09 2021 -0500_
+_Date: Thu Jun 3 11:57:32 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/minidaqapp/issues](https://github.com/DUNE-DAQ/minidaqapp/issues)_
 </font>
