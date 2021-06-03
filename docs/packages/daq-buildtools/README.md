@@ -97,7 +97,7 @@ dbt-build.sh --clean --install --unittest  # Blow away the contents of ./build, 
 ```
 ..where in the above case, you blow away the contents of `./build`,  run config+generate+build, install the result in `./install` and then run the unit tests. Be aware that for many packages, unit tests will only (fully) work if you've also rerun `dbt-workarea-env` with the argument `--refresh` added. 
 
-To check for deviations from the coding rules described in the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/), run with the `--lint` option:
+To check for deviations from the coding rules described in the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/styleguide/), run with the `--lint` option:
 ```
 dbt-build.sh --lint
 ```
@@ -153,7 +153,7 @@ What you want to do first is type `init`. Next, type `conf` to execute the confi
 ```
 To stop this, type the `stop` command. Ctrl-c will exit you out. 
 
-For a more realistic use-case where you can send commands to the application from other services and applications, the [restcmd](https://dune-daq-sw.readthedocs.io/en/latest/packages/restcmd/) package provides a command handling implementation through HTTP. To use this plugin, we call `daq_application` in the following manner:
+For a more realistic use-case where you can send commands to the application from other services and applications, the [restcmd](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/restcmd/) package provides a command handling implementation through HTTP. To use this plugin, we call `daq_application` in the following manner:
 ```sh
 daq_application -n <some name for the application instance> --commandFacility rest://localhost:12345
 ```
@@ -248,7 +248,7 @@ As the names suggest, `dune_products_dirs` contains the list of UPS product pool
 ## Next Step
 
 
-* You can learn how to create a new package by taking a look at the [daq-cmake documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/)
+* You can learn how to create a new package by taking a look at the [daq-cmake documentation](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/daq-cmake/)
 
 
 -----

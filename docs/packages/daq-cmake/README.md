@@ -6,7 +6,7 @@ This package provides CMake support for DUNE-DAQ packages.
 
 ## Setting up a development area
 
-To create a new package, you'll want to install a DUNE-DAQ development environment and then create a new CMake project for the package. How to install and build the DUNE-DAQ development environment is described [in the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/); some familiarity with the daq-buildtools documentation is assumed in these instructions. 
+To create a new package, you'll want to install a DUNE-DAQ development environment and then create a new CMake project for the package. How to install and build the DUNE-DAQ development environment is described [in the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/daq-buildtools/); some familiarity with the daq-buildtools documentation is assumed in these instructions. 
 
 
 ## A package's subdirectory structure
@@ -39,7 +39,7 @@ If your package contains applications intended not for testing but for the end u
 
 ## Coding rules
 
-Along with having a standard directory structure, the C++ code itself in toylibrary conforms to the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/). Here, "style" doesn't mean whitespace and formatting, but rather, a set of Modern C++ best practices designed to make your code more robust against bugs, easier to extend, easier to reuse, etc. The DUNE C++ Style Guide is derived from the Google C++ Style Guide, but is greatly simplified and has been modified to be more appropriate to the DUNE DAQ project than Google's projects. Code which is merged into a package's git develop branch should be in conformance with the guide; while it's encouraged for code on a package's unmerged feature branches to also be in conformance, this is less important. 
+Along with having a standard directory structure, the C++ code itself in toylibrary conforms to the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/styleguide/). Here, "style" doesn't mean whitespace and formatting, but rather, a set of Modern C++ best practices designed to make your code more robust against bugs, easier to extend, easier to reuse, etc. The DUNE C++ Style Guide is derived from the Google C++ Style Guide, but is greatly simplified and has been modified to be more appropriate to the DUNE DAQ project than Google's projects. Code which is merged into a package's git develop branch should be in conformance with the guide; while it's encouraged for code on a package's unmerged feature branches to also be in conformance, this is less important. 
 
 ## Your project's CMakeLists.txt file
 
@@ -104,7 +104,7 @@ When you call it it will install the targets (executables, shared object librari
 
 ## If your package relies on nonstandard dependencies
 
-...go back and take a look at the "Adding extra UPS products and product pools" section of [the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/#adding_extra_ups_products)
+...go back and take a look at the "Adding extra UPS products and product pools" section of [the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/daq-buildtools/#adding_extra_ups_products)
 
 ## Installing your project as a local package
 

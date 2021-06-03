@@ -4,7 +4,7 @@
 
 `timing` provides a low-level C++ interface to the [`HD` timing firmware](https://gitlab.cern.ch/dune-daq/timing/timing-board-firmware). The `HD` timing firmware is highly modular. Several "base" firmware blocks are re-used and combined in different patterns to obtain different functionality, e.g. `master` vs. `endpoint`. The same top level firmware design can also run on several different `IO`/`FPGA`  board combinations. The C++ code structure is envisioned to loosely mirror the structure of the firmware. For each firmware block, there is usually a C++ class which provides the necessary interface to control and monitor the firmware block. Certain firmware blocks also contain data event buffers which can be read out via the corresponding C++ class.
 
-In order to facilitate rapid code prototyping, and low level debugging of hardware, firmware, and software, `timing` provides a python interface to a large section of the C++ code. The python binding of C++ code is achieved using the header only library `pybind11`, see: [daq_add_python_bindings](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/#daq_add_python_bindings).
+In order to facilitate rapid code prototyping, and low level debugging of hardware, firmware, and software, `timing` provides a python interface to a large section of the C++ code. The python binding of C++ code is achieved using the header only library `pybind11`, see: [daq_add_python_bindings](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/daq-cmake/#daq_add_python_bindings).
 
 This package also provides the necessary schema and interface for the collection of operational monitoring information from the firmware and hardware supported by `timing`.
 
@@ -53,7 +53,7 @@ To enhance the usability of the python bound C++ code, a command line interface 
 The `CLI` is invoked through the executable python script, `pdtbutler`, located in the `scripts` directory.
 
 ## Operational monitoring
-A portion of the firmware interface classes implement a `get_info` method. The method takes as an arugment, a reference to a data structure, which it fills with its particular operational monitoring information. Several of these operational monitoring structures are combined together into one super-structure, which holds all the relevant information, e.g. hardware *and* firmware, about a particular timing device. The data structures are defined by schema, written in the language of `jsonnet`. These schema are turned into C++ `struct`s using the [`daq_codegen` `cmake` function](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/#daq_codegen).
+A portion of the firmware interface classes implement a `get_info` method. The method takes as an arugment, a reference to a data structure, which it fills with its particular operational monitoring information. Several of these operational monitoring structures are combined together into one super-structure, which holds all the relevant information, e.g. hardware *and* firmware, about a particular timing device. The data structures are defined by schema, written in the language of `jsonnet`. These schema are turned into C++ `struct`s using the [`daq_codegen` `cmake` function](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/daq-cmake/#daq_codegen).
 
 -----
 

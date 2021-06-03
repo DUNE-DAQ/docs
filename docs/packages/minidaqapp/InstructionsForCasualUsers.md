@@ -1,7 +1,7 @@
 # InstructionsForCasualUsers
 The intention of this page is to provide a few simple instructions that new or casual users can use to quickly demonstrate the operation of a small MiniDAQ system that uses emulators instead of real electronics.
 
-The steps fall into a few general categories, and they draw on more detailed instructions from other repositories, for example, _[daq-buildtools](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/)_ and _[nanorc](https://dune-daq-sw.readthedocs.io/en/latest/packages/nanorc/)_.
+The steps fall into a few general categories, and they draw on more detailed instructions from other repositories, for example, _[daq-buildtools](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/daq-buildtools/)_ and _[nanorc](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/nanorc/)_.
 
 
 1. setup the environment 

@@ -806,7 +806,7 @@ You should typically define your friend function in the same file as the class i
 <a name="exceptions"></a>
 ### 7.3  Exceptions 
 
-Thrown exceptions should be declared ERS Issues (for technical details on ERS, see the [ERS documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/ers/), and for ERS-specific usage recommendations, see the [logging documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/logging/)). 
+Thrown exceptions should be declared ERS Issues (for technical details on ERS, see the [ERS documentation](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/ers/), and for ERS-specific usage recommendations, see the [logging documentation](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/logging/)). 
 
 Throw an exception if your code's encountered a problem it can't
 recover from on its own. Don't throw if you can implement a local
@@ -880,7 +880,7 @@ MyAllocList<Foo> foos;
 
 ### 7.9  Printing Messages 
 
-Use the messaging functions available in the [DUNE DAQ logging package](https://dune-daq-sw.readthedocs.io/en/latest/packages/logging/) for output. Never use alternatives (this includes `printf`, `cout`, etc.)
+Use the messaging functions available in the [DUNE DAQ logging package](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/logging/) for output. Never use alternatives (this includes `printf`, `cout`, etc.)
 
 See the guidelines in [the Exceptions section](#exceptions) for declaring new ERS Issues.
 
@@ -1211,7 +1211,7 @@ doubt, send an e-mail.
 
 ## 9.  Formatting 
 
-For proper formatting, process your code using the `dbt-clang-format.sh` script from the daq-buildtools package; see more on this in [the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/) . Among other things, running the script will satisfy the following two rules:
+For proper formatting, process your code using the `dbt-clang-format.sh` script from the daq-buildtools package; see more on this in [the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/daq-buildtools/) . Among other things, running the script will satisfy the following two rules:
 
  - Indentation should involve two spaces. Tabs should NOT be used.
  - Lines should (almost) always be less than 120 characters

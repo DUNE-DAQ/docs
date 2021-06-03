@@ -2,7 +2,7 @@
 DUNE DAQ logging package
 
 This package is mainly based on ERS and secondarily based on TRACE.
-The primary user documentation starting point for the DUNE fork of ERS is found on the official DUNE DAQ software website [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/ers/).
+The primary user documentation starting point for the DUNE fork of ERS is found on the official DUNE DAQ software website [here](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/ers/).
 One link to TRACE information can be found [here](https://cdcvs.fnal.gov/redmine/projects/trace/wiki).
 
 ERS provides:

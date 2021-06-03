@@ -1,6 +1,6 @@
 # Conventions for ERS issues
 
-This document describes conventions and best practices for using ERS issues in the DUNE DAQ software. You can find more information about how ERS works in the [ERS documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/ers/).
+This document describes conventions and best practices for using ERS issues in the DUNE DAQ software. You can find more information about how ERS works in the [ERS documentation](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/ers/).
 
 ## Issue naming
 

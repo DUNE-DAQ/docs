@@ -10,7 +10,7 @@ This tutorial assumes you run on a linux host with /cvmfs mounted, such as lxplu
 
 ### Setup
 
-First, set up a working area according to [the daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/).
+First, set up a working area according to [the daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.6.0/packages/daq-buildtools/).
 
 Next, install nanorc:
 
