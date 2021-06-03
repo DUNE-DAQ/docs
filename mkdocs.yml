@@ -1,4 +1,5 @@
 site_name: DUNE DAQ Software Documentation Home
+site_description: The Official Documentation for DUNE DAQ Software Users
 nav:
     - Home: README.md
     - Packages:
