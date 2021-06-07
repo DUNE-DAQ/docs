@@ -14,7 +14,7 @@ Testing and development hosts with a FELIX card are the following:
 
 
 * **Bristol Lab**
-    * ??? - (Host with WIB to FELIX connectivity)
+    * it043261 - Host with ZCU102 to FELIX connectivity (Intel Xeon Bronze 3204 CPU with NVMe)
 
 _DS stands for: Dual Socket with 2 CPUs_
 
@@ -61,9 +61,9 @@ This section describes which DUNE-DAQ software and `flxlibs` version are compati
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: ShyamB97_
 
-_Date: Wed May 26 20:37:14 2021 -0500_
+_Date: Mon Jun 7 10:41:31 2021 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
