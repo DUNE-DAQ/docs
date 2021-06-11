@@ -76,7 +76,7 @@ Since the `dunedaq-v2.6.0` release, `dbt-create.sh` has supported not only froze
 
 ### Working with more repos
 
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not found in `/cvmfs/dunedaq.opensciencegrid.org/releases/dunedaq-v2.6.0/dbt-build-order.cmake`". If this is the case, you have one of two options:
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/releases/dunedaq-v2.6.0/dbt-build-order.cmake`". If this is the case, you have one of two options:
 
 
 * (Recommended) Add the names of your new packages to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
@@ -259,7 +259,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Jun 1 22:54:38 2021 -0500_
+_Date: Fri Jun 11 11:42:41 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
