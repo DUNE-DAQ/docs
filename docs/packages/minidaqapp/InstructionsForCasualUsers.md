@@ -69,6 +69,7 @@ When you return to this work area (for example, after logging out and back in), 
 7. `nanorc mdapp_fake boot init conf start 102 wait 2 resume wait 60 pause wait 2 stop scrap terminate`
 
 
+More detailed explanations on how to create different configurations can be found in [Instructions for different configurations for first-time users](ConfigurationsForCasualUsers.md)
 
 -----
 
@@ -76,9 +77,9 @@ When you return to this work area (for example, after logging out and back in), 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: Carlos Chavez Barajas_
 
-_Date: Thu Jun 3 13:45:10 2021 -0500_
+_Date: Sat Jun 12 05:41:55 2021 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/minidaqapp/issues](https://github.com/DUNE-DAQ/minidaqapp/issues)_
 </font>

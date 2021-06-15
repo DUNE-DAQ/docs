@@ -66,6 +66,7 @@ nav:
           - packages/logging/ers-conventions.md
        - minidaqapp:
           - About minidaqapp: packages/minidaqapp/README.md
+          - packages/minidaqapp/ConfigurationsForCasualUsers.md
           - packages/minidaqapp/InstructionsForCasualUsers.md
           - packages/minidaqapp/MiniDAQApp-Diagrams.md
        - nanorc:
