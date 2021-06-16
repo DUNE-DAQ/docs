@@ -18,11 +18,7 @@ If you download it to a different destination, please update the path of the sou
 
 After succesfully building the package, from another terminal go to your `workarea` directory and set up the runtime environment, covered in [the daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/).
     
-After that, launch a readout emaulation via:
-
-    daq_application -n <random name of your choosing> -c stdin://sourcecode/readout/test/fakereadout-commands.json
-    
-Then start typing commands as instructed by the command facility.
+_Instructions on how to launch a readout emulation will be provided here_    
 
 ## Enabling the fake TP source
 
@@ -34,9 +30,7 @@ To get the "tp_frames.bin" TP data:
 
     curl https://cernbox.cern.ch/index.php/s/686ndOgupTli2RW/download -o /tmp/tp_frames.bin
 
-To test the fake raw WIB TP readout, run
-
-    daq_application  -n <random name of your choosing> -c stdin://sourcecode/readout/test/tpenabled-fakereadout-commands.json
+_Instructions on how to test the fake raw WIB TP readout will be provided here_
     
 ## A Deeper Look Into Readout: Functional Elements
 
@@ -71,6 +65,10 @@ A zoomable visualization of [the readout code](https://github.com/DUNE-DAQ/reado
 
 ![class-diagram](https://cernbox.cern.ch/index.php/s/yCzzMYonKCNnfDw/download)
 
+## Looking into the directories
+
+At the top level, the readout package uses the same directory structure as other DUNE DAQ packages as described in [the daq-cmake documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/). However, due its large number of files, additional subdirectories have been added to organize them. This approach is covered [here](Directory-structure.md).
+
 
 
 -----
@@ -81,7 +79,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: jcfreeman2_
 
-_Date: Tue Jun 15 11:01:15 2021 -0500_
+_Date: Wed Jun 16 10:32:32 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readout/issues](https://github.com/DUNE-DAQ/readout/issues)_
 </font>
