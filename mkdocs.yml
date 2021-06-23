@@ -48,6 +48,10 @@ theme:
   include_search_page: false
   search_index_only: true
 
+  highlightjs: true
+  hljs_languages: []
+  hljs_style: github
+
   # Default values, taken from mkdocs_theme.yml
   language: en
   features:
