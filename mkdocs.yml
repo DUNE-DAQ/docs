@@ -27,6 +27,7 @@ copyright: Copyright &copy; 2016 - 2021 Martin Donath
 
 theme:
   name: material
+  custom_dir: overrides
 
   language: en
 
