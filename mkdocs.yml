@@ -25,24 +25,11 @@ site_description: The Official Documentation for DUNE DAQ Software Users
 # Copyright
 copyright: Copyright &copy; 2016 - 2021 Martin Donath
 
-# Configuration
 theme:
-  name: null
-  custom_dir: 'material/'
+  name: material
 
-  # Static files
-  static_templates:
-    - 404.html
-
-  include_search_page: false
-  search_index_only: true
-
-  highlightjs: true
-  hljs_languages: []
-  hljs_style: github
-
-  # Default values, taken from mkdocs_theme.yml
   language: en
+
   features:
     - content.tabs.link
     # - navigation.instant
@@ -53,25 +40,55 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-  palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - scheme: slate
-      primary: red
-      accent: red
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
-  font:
-    text: Roboto
-    code: Roboto Mono
-  favicon: assets/favicon.png
-  icon:
-    logo: logo
+
+
+# # Configuration
+# theme:
+#   name: null
+#   custom_dir: 'material/'
+
+#   # Static files
+#   static_templates:
+#     - 404.html
+
+#   include_search_page: false
+#   search_index_only: true
+
+#   highlightjs: true
+#   hljs_languages: []
+#   hljs_style: github
+
+#   # Default values, taken from mkdocs_theme.yml
+#   language: en
+#   features:
+#     - content.tabs.link
+#     # - navigation.instant
+#     - navigation.sections
+#     - navigation.tabs
+#     - navigation.tracking
+#     - navigation.top
+#     - search.highlight
+#     - search.share
+#     - search.suggest
+#   palette:
+#     - scheme: default
+#       primary: indigo
+#       accent: indigo
+#       toggle:
+#         icon: material/toggle-switch-off-outline
+#         name: Switch to dark mode
+#     - scheme: slate
+#       primary: red
+#       accent: red
+#       toggle:
+#         icon: material/toggle-switch
+#         name: Switch to light mode
+#   font:
+#     text: Roboto
+#     code: Roboto Mono
+#   favicon: assets/favicon.png
+#   icon:
+#     logo: logo
 
 # Plugins
 plugins:
