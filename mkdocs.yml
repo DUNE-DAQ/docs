@@ -41,6 +41,10 @@ theme:
     - search.share
     - search.suggest
 
+extra_javascript:
+  - javascripts/base.js
+  - javascripts/bootstrap.min.js
+  - javascripts/jquery-1.10.2.min.js
 
 # # Configuration
 # theme:
