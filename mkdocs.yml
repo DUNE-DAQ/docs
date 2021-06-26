@@ -44,63 +44,21 @@ theme:
     - search.suggest
 
   palette:
-    scheme: light
-    primary: teal
-    accent: indigo
-
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/eye-outline
+        name: Switch to teal
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/eye
+        name: Switch to yellow
 
 extra_javascript:
   - javascripts/base.js
   - javascripts/bootstrap.min.js
   - javascripts/jquery-1.10.2.min.js
-
-# # Configuration
-# theme:
-#   name: null
-#   custom_dir: 'material/'
-
-#   # Static files
-#   static_templates:
-#     - 404.html
-
-#   include_search_page: false
-#   search_index_only: true
-
-#   highlightjs: true
-#   hljs_languages: []
-#   hljs_style: github
-
-#   # Default values, taken from mkdocs_theme.yml
-#   language: en
-#   features:
-#     - content.tabs.link
-#     # - navigation.instant
-#     - navigation.sections
-#     - navigation.tabs
-#     - navigation.tracking
-#     - navigation.top
-#     - search.highlight
-#     - search.share
-#     - search.suggest
-#   palette:
-#     - scheme: default
-#       primary: indigo
-#       accent: indigo
-#       toggle:
-#         icon: material/toggle-switch-off-outline
-#         name: Switch to dark mode
-#     - scheme: slate
-#       primary: red
-#       accent: red
-#       toggle:
-#         icon: material/toggle-switch
-#         name: Switch to light mode
-#   font:
-#     text: Roboto
-#     code: Roboto Mono
-#   favicon: assets/favicon.png
-#   icon:
-#     logo: logo
 
 # Plugins
 plugins:
@@ -108,6 +66,10 @@ plugins:
 
 # Customization
 extra:
+  generator: false
+  version:
+    provider: mike
+
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/DUNE-DAQ
