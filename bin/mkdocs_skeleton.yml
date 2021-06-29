@@ -45,16 +45,16 @@ theme:
 
   palette:
     - media: "(prefers-color-scheme: light)"
-      scheme: slate
+      scheme: default
       primary: teal
       toggle:
         icon: material/eye
-        name: Switch to light background
-    - scheme: default
+        name: Switch to dark mode
+    - scheme: slate
       primary: teal
       toggle:
         icon: material/eye-outline
-        name: Switch to dark background
+        name: Switch to light mode
 
 extra_javascript:
   - javascripts/base.js
