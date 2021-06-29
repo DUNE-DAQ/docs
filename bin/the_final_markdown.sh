@@ -118,7 +118,6 @@ for package in $package_list ; do
     echo $tmpdir/$package
 
     if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" )  ]]; then
-	sed -r -i '/^\s*-\s*Packages\s*:.*/a \       - '$package':' $here/../mkdocs.yml
 	mkdir -p $packages_dir/$package
     else
 	echo "No docs/ subdirectory containing Markdown files found for $package; no documentation will be generated" >&2
@@ -155,9 +154,13 @@ for package in $package_list ; do
 	    if [ x"${pagename}" == "xREADME" ]; then
 		pagename=$( echo About ${package} )
 		echo "+===+++ ${package} ===== ${mdfile} ==== $pagename"
-		sed -r -i '/^\s*-\s*'$package'\s*:.*/a \          - '"$pagename"': '$mdfile_relative $here/../mkdocs.yml
+		if [[ -z $( sed -r -n '/^\s*-\s*'$package'\s*:.*/p' $here/../mkdocs.yml ) ]]; then
+		    echo "Error: package \"$package\" is meant to be handled by this script but isn't found in $here/../mkdocs.yml" >&2
+		    exit 3
+		fi
+		sed -r -i '/^\s*-\s*'$package'\s*:.*/a \             - '"$pagename"': '$mdfile_relative $here/../mkdocs.yml
 	    else
-		sed -r -i '/^\s*-\s*'$package'\s*:.*/a \          - '$mdfile_relative $here/../mkdocs.yml
+		sed -r -i '/^\s*-\s*'$package'\s*:.*/a \             - '$mdfile_relative $here/../mkdocs.yml
 	    fi
 
 	done
