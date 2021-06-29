@@ -166,8 +166,8 @@ nav:
              - packages/flxlibs/Checking-Debugging-Optical-Fibre-Status.md
              - packages/flxlibs/Configure-the-FELIX-card.md
              - packages/flxlibs/Enabling-links-through-software.md
-             - packages/flxlibs/FELIX-Software-Suite-hack.md
              - packages/flxlibs/FELIX-assets.md
+             - packages/flxlibs/FELIX-Software-Suite-hack.md
              - packages/flxlibs/Initial-setup-of-FELIX.md
              - packages/flxlibs/Local-driver.md
              - packages/flxlibs/Using-fdaq.md
@@ -187,7 +187,7 @@ nav:
        - Dataflow (logical):
           - dfmessages:
              - About dfmessages: packages/dfmessages/README.md
-          - dfmodules:
+	  - dfmodules:
              - About dfmodules: packages/dfmodules/README.md
           - timing:
              - About timing: packages/timing/README.md
@@ -213,5 +213,6 @@ nav:
        - Educational:
           - listrev:
              - About listrev: packages/listrev/README.md
+
 
 
