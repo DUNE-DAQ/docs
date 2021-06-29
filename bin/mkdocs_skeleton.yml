@@ -44,16 +44,16 @@ theme:
     - search.suggest
 
   palette:
-    - scheme: default
-      primary: teal
-      toggle:
-        icon: material/eye-outline
-        name: Switch to dark background
     - scheme: slate
       primary: teal
       toggle:
         icon: material/eye
         name: Switch to light background
+    - scheme: default
+      primary: teal
+      toggle:
+        icon: material/eye-outline
+        name: Switch to dark background
 
 extra_javascript:
   - javascripts/base.js
