@@ -44,7 +44,8 @@ theme:
     - search.suggest
 
   palette:
-    - scheme: slate
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
       primary: teal
       toggle:
         icon: material/eye
