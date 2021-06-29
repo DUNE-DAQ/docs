@@ -48,12 +48,12 @@ theme:
       primary: teal
       toggle:
         icon: material/eye-outline
-        name: Switch to teal
-    - scheme: default
-      primary: blue
+        name: Switch to dark background
+    - scheme: slate
+      primary: teal
       toggle:
         icon: material/eye
-        name: Switch to yellow
+        name: Switch to light background
 
 extra_javascript:
   - javascripts/base.js
