@@ -60,6 +60,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
 
+[trigger](packages/trigger/README.md) _modules that make up the DUNE FD DAQ trigger system_
+
 ### Dataflow (physical)
 
 [ipm](packages/ipm/README.md) _message passing between processes_
