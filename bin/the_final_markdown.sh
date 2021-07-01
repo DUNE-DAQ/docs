@@ -144,7 +144,7 @@ for package in $package_list ; do
 	if [[ -n $( find  $packages_dir/$package -name "README.md" ) ]]; then
 	    mdfilelist="$packages_dir/$package/README.md"
 	fi
-	mdfilelist=$( find $packages_dir/$package -name "*.md" -not -name "README.md" | sort --reverse )" $mdfilelist"
+	mdfilelist=$( find $packages_dir/$package -name "*.md" -not -name "README.md" | sort --reverse --ignore-case )" $mdfilelist"
 
 	for mdfile in $mdfilelist; do
 	    massage $mdfile
