@@ -6,21 +6,29 @@ The primary user documentation starting point for the DUNE fork of ERS is found 
 One link to TRACE information can be found [here](https://cdcvs.fnal.gov/redmine/projects/trace/wiki).
 
 ERS provides:
-- Assertion Macros
-- Macros for declaring Custom Issues
-- 6 logging streams and corresponding methods to work with (i.e. send to) them.
-- a mechanism to configure destination(s) for each of 6 loggings streams
+
+* Assertion Macros
+
+* Macros for declaring Custom Issues
+
+* 6 logging streams and corresponding methods to work with (i.e. send to) them.
+
+* a mechanism to configure destination(s) for each of 6 logging streams
 
 ERS also provides Logging Macros, but these have been removed in the DUNE DAQ fork.
 
 TRACE provides:
-- several macros to implement stream-style logging to different logging levels.
-- slow and fast-path logging
-- a mechanism to configure the slow-path logging, i.e to use ERS as the slow-path logging.
 
-<details><summary>One of the ERS *destinations* for first 4 of the 6 loggings
+* several macros to implement stream-style logging to different logging levels.
 
-*streams* will be a "TRACE fast path destination."</summary>
+* slow and fast-path logging (where "fast" corresponds to a memory-mapped file and "slow" corresponds to the console, a disk file, or another slower destination)
+
+* a mechanism to configure the slow-path logging, i.e to use ERS as the slow-path logging.
+
+<details><summary>All messages that are sent to one of the ERS streams will also be sent to the TRACE fast path.</summary>
+This is achieved by specifying one of the ERS *destinations* for first 4 of the 6 logging
+
+*streams* to be the "TRACE fast path destination."
 The Logging package setup function will ensure that the environment variables DUNEDAQ_ERS_{FATAL,ERROR,WARNING,INFO} (used to configure the stream destinations) will contain the "TRACE fast path destination." It is expected/required that all applications will call the Logging package setup function.</details>
 
 Only two of the TRACE logging macros (TLOG() and TLOG_DEBUG()) will be used and TRACE will be configured to use ERS for the slow-path logging.
@@ -159,7 +167,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Ron Rechenmacher_
 
-_Date: Mon May 17 02:13:17 2021 -0500_
+_Date: Sat Jul 3 13:03:42 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/logging/issues](https://github.com/DUNE-DAQ/logging/issues)_
 </font>
