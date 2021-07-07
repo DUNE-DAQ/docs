@@ -1,10 +1,10 @@
-# TriggerRecordHeaderData v1 (Deprecated)
+# TriggerRecordHeaderData v2
 
-This document describes the format of the TriggerRecordHeaderData class, version 1. It should **not** be updated, but rather kept as a historic record of the data format for this version.
+This document describes the format of the TriggerRecordHeaderData class, version 2. It should **not** be updated, but rather kept as a historic record of the data format for this version.
 
 # TriggerRecordHeaderData Description
 
-A TriggerRecordHeaderData version 1 consists of 12 32-bit words:
+A TriggerRecordHeaderData version 2 consists of 12 32-bit words:
 
 
 
@@ -38,10 +38,10 @@ A TriggerRecordHeaderData version 1 consists of 12 32-bit words:
 9. Error bits
 
 
-10. Upper 16 bits: Trigger type, Lower 16 bits: Unused
+10. Upper 16 bits: Trigger type, Lower 16 bits: Sequence Number
 
 
-11. Unused
+11. Upper 16 bits: Max Sequence Number, Lower 16 bits: Unused
 
 
 # C++ code for TriggerRecordHeaderData
@@ -51,12 +51,13 @@ using run_number_t = uint32_t;
 using trigger_number_t = uint64_t; 
 using timestamp_t = uint64_t;
 using trigger_type_t = uint16_t; 
+using sequence_number_t = uint16_t;
 
 struct TriggerRecordHeaderData
 {
   
   static constexpr uint32_t s_trigger_record_header_magic = 0x33334444;
-  static constexpr uint32_t s_trigger_record_header_version = 1;
+  static constexpr uint32_t s_trigger_record_header_version = 2;
   static constexpr uint64_t s_invalid_number_components = std::numeric_limits<uint64_t>::max();
   static constexpr uint32_t s_default_error_bits = 0;
 
@@ -68,8 +69,9 @@ struct TriggerRecordHeaderData
   run_number_t run_number{ TypeDefaults::s_invalid_run_number };
   uint32_t error_bits{ s_default_error_bits };
   trigger_type_t trigger_type{ TypeDefaults::s_invalid_trigger_type };
-  uint16_t unusedA { 0xFFFF};
-  uint32_t unusedB { 0xFFFFFFFF};
+  sequence_number_t sequence_number{ TypeDefaults::s_invalid_sequence_number };
+  sequence_number_t max_sequence_number{ TypeDefaults::s_invalid_sequence_number };
+  uint16_t unused { 0xFFFF};
 };
 ```
 

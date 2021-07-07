@@ -159,9 +159,11 @@ nav:
              - packages/dataformats/ComponentRequestV1.md
              - packages/dataformats/FragmentHeaderV1.md
              - packages/dataformats/FragmentHeaderV2.md
+             - packages/dataformats/FragmentHeaderV3.md
              - packages/dataformats/GeoIDV0.md
              - packages/dataformats/GeoIDV1.md
              - packages/dataformats/TriggerRecordHeaderDataV1.md
+             - packages/dataformats/TriggerRecordHeaderDataV2.md
           - flxlibs:
              - About flxlibs: packages/flxlibs/README.md
              - packages/flxlibs/Checking-Debugging-Optical-Fibre-Status.md

@@ -1,17 +1,17 @@
-# FragmentHeader v2 (Deprecated)
+# FragmentHeader v3
 
-This document describes the format of the FragmentHeader class, version 2. It should **not** be updated, but rather kept as a historic record of the data format for this version.
+This document describes the format of the FragmentHeader class, version 3. It should **not** be updated, but rather kept as a historic record of the data format for this version.
 
 # FragmentHeader Description
 
-A FragmentHeader version 2 consists of 20 32-bit words:
+A FragmentHeader version 3 consists of 20 32-bit words:
 
 
 
 0. Marker (0x11112222)
 
 
-1. Version (0x00000002)
+1. Version (0x00000003)
 
 
 2. Size in bytes, including header and Fragment payload (upper 32 bits)
@@ -53,7 +53,7 @@ A FragmentHeader version 2 consists of 20 32-bit words:
 14. Fragment Type
 
 
-15. Pad word (to ensure 64-bit alignment of FragmentHeader non-struct fields)
+15. Sequence Number (16b) / Padding
 
 
 16. [GeoID version 1](GeoIDV1.md) Component Type (upper 16 bits), Region ID (lower 16 bits)
@@ -75,11 +75,12 @@ using trigger_number_t = uint64_t;
 using fragment_type_t = uint32_t;
 using fragment_size_t = uint64_t; 
 using timestamp_t = uint64_t;
+using sequence_number_t = uint16_t;
 
 struct FragmentHeader
 {
   static constexpr uint32_t s_fragment_header_magic = 0x11112222;
-  static constexpr uint32_t s_fragment_header_version = 2;
+  static constexpr uint32_t s_fragment_header_version = 3;
   static constexpr uint32_t s_default_error_bits = 0;
 
   uint32_t fragment_header_marker = s_fragment_header_magic;
@@ -92,7 +93,8 @@ struct FragmentHeader
   run_number_t run_number{ TypeDefaults::s_invalid_run_number };
   uint32_t error_bits{ s_default_error_bits }; 
   fragment_type_t fragment_type{ TypeDefaults::s_invalid_fragment_type };
-  uint32_t unused {0xFFFFFFFF};
+  sequence_number_t sequence_number {TypeDefaults::s_invalid_sequence_number };
+  uint16_t unused {0xFFFF};
   GeoID link_id;
 };
 ```
