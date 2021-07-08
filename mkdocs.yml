@@ -192,6 +192,7 @@ nav:
              - About dfmessages: packages/dfmessages/README.md
           - dfmodules:
              - About dfmodules: packages/dfmodules/README.md
+             - packages/dfmodules/TRB_metrics.md
           - timing:
              - About timing: packages/timing/README.md
           - timinglibs:
