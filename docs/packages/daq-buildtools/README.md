@@ -12,8 +12,12 @@ To get set up, you'll need access to the ups product area `/cvmfs/dunedaq.opensc
 Simply do:
 
 ```bash
-source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt dunedaq-v2.6.0 # "dunedaq-v2.6.0" can be replaced with any other tags of daq-buildtools
+git clone http://github.com/DUNE-DAQ/daq-buildtools -b 6fcc0fd539
+source ./daq-buildtools/env.sh
+
+# Disregard these next two lines; you're reading instructions for the develop branch of daq-buildtools and not a frozen release
+#source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
+#setup_dbt dunedaq-v2.6.0 # "dunedaq-v2.6.0" can be replaced with any other tags of daq-buildtools
 ```
 
 Then you'll see something like:
@@ -251,7 +255,7 @@ As the names suggest, `dune_products_dirs` contains the list of UPS product pool
 ## Next Step
 
 
-* You can learn how to create a new package by taking a look at the [daq-cmake documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/)
+* You can learn how to create a new package by taking a look at the [daq-cmake documentation](https://github.com/DUNE-DAQ/daq-cmake/blob/9728173674/docs/README.md)
 
 
 -----
@@ -260,9 +264,9 @@ As the names suggest, `dune_products_dirs` contains the list of UPS product pool
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jcfreeman2_
 
-_Date: Wed Jun 30 15:03:32 2021 -0500_
+_Date: Tue Jul 13 11:51:35 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
