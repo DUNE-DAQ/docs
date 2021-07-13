@@ -11,12 +11,12 @@ The library should be used calling the library's "publish" function with as argu
 The library output is the return statement from the CPR message and, if successfull, the insertion of the JSON content to the TSDB.
 
 ### URI example :
-the influxopmon URI presents as such: `influx://188.185.88.195/write?db=db1`
+the influxopmon URI presents as such: `influx://188.185.88.195:80/write?db=db1`
 
 Translating in the full, following URI eyample:
 
 ```
-daq_application -c rest://localhost:12345 --name yourchoosenname -i influx://188.185.88.195/write?db=db1 
+daq_application -c rest://localhost:12345 --name yourchoosenname -i influx://188.185.88.195:80/write?db=db1 
 ```
 
 ### Step-by-step :
@@ -101,9 +101,9 @@ For any further information, contact Yann Donon (yann.donon@cern.ch).
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Alessandro Thea_
+_Author: Yann Donon_
 
-_Date: Wed Jun 2 13:32:51 2021 +0200_
+_Date: Tue Jul 13 15:54:28 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/influxopmon/issues](https://github.com/DUNE-DAQ/influxopmon/issues)_
 </font>
