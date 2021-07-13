@@ -13,7 +13,10 @@ To create a new package, you'll want to install a DUNE-DAQ development environme
 
 To learn a bit more about how to structure your package so that it can be incorporated into the DUNE DAQ software suite, we'll play with a contrived package called "toylibrary". It's actually contained within a subdirectory of the daq-cmake repo; however, in order to be able to build toylibrary we'll want to copy it into the `./sourcecode` directory so the build system can work with it. Assuming you're already in the base directory of your development environment, do the following: 
 ```
-git clone https://github.com/DUNE-DAQ/daq-cmake -b 5e2dd1378
+git clone https://github.com/DUNE-DAQ/daq-cmake
+cd daq-cmake
+git checkout 5e2dd1378
+cd ..
 mv daq-cmake/toylibrary sourcecode
 rm -rf daq-cmake
 ```
@@ -371,7 +374,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: jcfreeman2_
 
-_Date: Tue Jul 13 11:48:56 2021 -0500_
+_Date: Tue Jul 13 12:06:40 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>

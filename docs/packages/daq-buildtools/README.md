@@ -12,7 +12,10 @@ To get set up, you'll need access to the ups product area `/cvmfs/dunedaq.opensc
 Simply do:
 
 ```bash
-git clone http://github.com/DUNE-DAQ/daq-buildtools -b 6fcc0fd539
+git clone http://github.com/DUNE-DAQ/daq-buildtools
+cd daq-buildtools
+git checkout 6fcc0fd539   # Head of develop on July 13th
+cd ..
 source ./daq-buildtools/env.sh
 
 # Disregard these next two lines; you're reading instructions for the develop branch of daq-buildtools and not a frozen release
@@ -255,7 +258,7 @@ As the names suggest, `dune_products_dirs` contains the list of UPS product pool
 ## Next Step
 
 
-* You can learn how to create a new package by taking a look at the [daq-cmake documentation](https://github.com/DUNE-DAQ/daq-cmake/blob/9728173674/docs/README.md)
+* You can learn how to create a new package by taking a look at the [daq-cmake documentation](https://github.com/DUNE-DAQ/daq-cmake/blob/a1d8582c3cd5752b/docs/README.md)
 
 
 -----
@@ -266,7 +269,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: jcfreeman2_
 
-_Date: Tue Jul 13 11:51:35 2021 -0500_
+_Date: Tue Jul 13 12:10:01 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
