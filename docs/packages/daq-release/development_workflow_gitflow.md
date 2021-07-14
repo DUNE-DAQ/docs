@@ -127,23 +127,23 @@ Package maintainers are the primary developers who make version tags of a packag
 
 ### Repository access
 
-![repo-access](https://i.imgur.com/ddLJeif.png)
+![repo-access](https://home.fnal.gov/~dingpf/repo_access_role.png)
 
 ### Branch settings
 
-![branch-settings](https://i.imgur.com/WbBJB86.png)
+![branch-settings](https://home.fnal.gov/~dingpf/default-branch.png)
 
 ### Branch protection rules
 
-![branch-protection-rules](https://i.imgur.com/NMp0vMU.png)
+![branch-protection-rules](https://home.fnal.gov/~dingpf/branch-protection-rule.png)
 
 ### Managing branches
 
-![managing-branches](https://i.imgur.com/d25W5er.png)
+![managing-branches](https://home.fnal.gov/~dingpf/managing-branches.png)
 
 ### View Network Graph
 
-![network-graph](https://i.imgur.com/ogmjKYr.png)
+![network-graph](https://home.fnal.gov/~dingpf/network-graph.png)
 
 
 -----
@@ -154,7 +154,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Thu Jun 17 16:39:09 2021 -0500_
+_Date: Sun Mar 28 14:43:51 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

@@ -13,10 +13,7 @@ To create a new package, you'll want to install a DUNE-DAQ development environme
 
 To learn a bit more about how to structure your package so that it can be incorporated into the DUNE DAQ software suite, we'll play with a contrived package called "toylibrary". It's actually contained within a subdirectory of the daq-cmake repo; however, in order to be able to build toylibrary we'll want to copy it into the `./sourcecode` directory so the build system can work with it. Assuming you're already in the base directory of your development environment, do the following: 
 ```
-git clone https://github.com/DUNE-DAQ/daq-cmake
-cd daq-cmake
-git checkout 5e2dd1378
-cd ..
+git clone https://github.com/DUNE-DAQ/daq-cmake -b v1.4.1
 mv daq-cmake/toylibrary sourcecode
 rm -rf daq-cmake
 ```
@@ -81,7 +78,7 @@ Then, you'll see a call to a function called `daq_add_library`.
 ```
 daq_add_library(IntPrinter.cpp LINK_LIBRARIES ers::ers)
 ```
-What `daq_add_library` does here is create the main project library. It looks in the project's `./src` subdirectory for a file called `IntPrinter.cpp`, which it then compiles and links against the ERS library. The result is output in the installation area (`$DBT_INSTALL_DIR`) as a shared object library named after the project itself, `toylibrary/lib64/libtoylibrary.so`. 
+What `daq_add_library` does here is create the main project library. It looks in the project's `./src` subdirectory for a file called `IntPrinter.cpp`, which it then compiles and links against the ERS library. The result is output in the build area as a shared object library named after the project itself, in a subdirectory of the same name as that of the source file it used - `build/toylibrary/src/libtoylibrary.so`. If you build toylibrary using the `--install` option, this library in turn is installed in a subdirectory of the installation area called `toylibrary/lib64/libtoylibrary.so`. 
 
 The next function you see called in the CMakeLists.txt file is `daq_add_python_bindings`:
 ```
@@ -91,7 +88,7 @@ which is a function designed to allow the binding of C++ code to python. To do s
 ```
 daq_add_application( toylibrary_test_program toylibrary_test_program.cxx TEST LINK_LIBRARIES ${Boost_PROGRAM_OPTIONS_LIBRARY} toylibrary )
 ```
-which searches in the projects' `test/apps/` subdirectory for a file called `toylibrary_test_program.cxx`, builds it, and links against the project's main library which we created via the previous `daq_add_library` command as well as a Boost library used to parse program input. The output application is named after the first argument to the function, `toylibrary_test_program`; it can be found in `$DBT_INSTALL_DIR/toylibrary/test/apps/toylibrary_test_program`. Note that if the "TEST" argument hadn't been supplied, the build system would have looked in a subdirectory of the project called `apps/` rather than `test/apps/` for the source file. 
+which searches in the projects' `test/apps/` subdirectory for a file called `toylibrary_test_program.cxx`, builds it, and links against the project's main library which we created via the previous `daq_add_library` command as well as a Boost library used to parse program input. The output application is named after the first argument to the function, `toylibrary_test_program`; it can be found in `build/toylibrary/test/apps/toylibrary_test_program`. Since "TEST" was selected, the application won't be placed in the install area despite `--install` being used. Note that if the "TEST" argument hadn't been supplied, along with the installation occuring, the build system would have looked in a subdirectory of the project called `apps/` rather than `test/apps/` for the source file. In this sense, `toylibrary_test_program` is an example of an integration test program of interest to a project's developers but not its users. 
 
 Another function currently provided by the DAQ CMake module is `daq_add_unit_test`. Examples of this function's use can be found at the bottom of the `sourcecode/toylibrary/CMakeLists.txt` file, e.g.:
 ```
@@ -103,7 +100,7 @@ At the bottom of CMakeLists.txt, you'll see the following function:
 ```
 daq_install()
 ```
-When you call it it will install the targets (executables, shared object libraries) you wish to make available to others who want to use your package in a directory called `$DBT_INSTALL_DIR/<pkgname>` (by default that would be `./install/toylibrary`). You'll also need to add a special file to your project for this function to work; this is discussed more fully in the "Installing your project as a local package" section later in this document. 
+When you call it it will install the targets (executables, shared object libraries) you wish to make available to others who want to use your package in a directory called `<your installation directory>/<pkgname>` (by default that would be `./install/toylibrary`). You'll also need to add a special file to your project for this function to work; this is discussed more fully in the "Installing your project as a local package" section later in this document. 
 
 ## If your package relies on nonstandard dependencies
 
@@ -144,7 +141,7 @@ You can see a simple example of this kind of file with `toylibrary/cmake/toylibr
 
 Once you've edited this file as described, from the base of your development area you can then run 
 ```
-dbt-build.sh 
+dbt-build.sh --install 
 ```
 
 without receiving an error message informing you that installation isn't an option. 
@@ -172,7 +169,7 @@ daq_codegen( <schema filename1> ... [TEST] [DEP_PKGS <package 1> ...] [MODEL <mo
              [TEMPLATES <template filename1> ...] )
 ```             
 
-`daq_codegen` uses `moo` to generate C++ headers from schema files from `schema/<package>` applying
+`daq_codegen` uses `moo` to generate C++ headers from schema files from schema/<package> applying
 them to one or more templates.
 
 Arguments:
@@ -261,7 +258,9 @@ daq_add_plugin( <plugin name> <plugin type> [TEST] [LINK_LIBRARIES <lib1> ...])
 user-defined name `<plugin name>`. It will expect that there's a file
 with the name `<plugin name>.cpp` located either in the `plugins/`
 subdirectory of the project (if the `TEST` option isn't used) or in
-the `test/plugins/` subdirectory of the project (if it is). Like
+the `test/plugins/` subdirectory of the project (if it is). Note that if the
+plugin is deemed a "TEST" plugin, it's not installed as the
+assumption is that it's meant for developer testing. Like
 daq_add_library, daq_add_plugin can be provided a list of libraries
 to link against, following the `LINK_LIBRARIES` argument. 
 
@@ -281,7 +280,9 @@ project. Its first argument is simply the desired name of the
 executable, followed by a list of filenames and/or file glob
 expressions meant to build the executable. It expects the filenames
 to be either in the `apps/` subdirectory of the project, or, if the
-"TEST" option is chosen, the `test/apps/` subdirectory. Like
+"TEST" option is chosen, the `test/apps/` subdirectory. Note that if
+the plugin is deemed a "TEST" plugin, it's not installed as the
+assumption is that it's meant for developer testing. Like
 daq_add_library, daq_add_application can be provided a list of
 libraries to link against, following the `LINK_LIBRARIES` token.
 
@@ -325,7 +326,6 @@ arguments.
 
 1. The `daq_codegen` cmake function provides a simpliefied interface to `moo render` to generate C++ files from jinjia templates. It provides a mechanism to easily import schemas, templates or models from other packages and implements an out-of-date dependency check. Details are [above](#daq_codegen_documentation).
 
-<a name="daq_cmake_schema"></a>
 ## Schema files
 
 `daq-cmake` handles schemas in a similar fashion to C++ headers. Where header files are located according to the namespace of the class they declare (e.g. `mypkg::MyClass` in `include/mypkg/MyClass.hpp`, schemas location in the package is determined by the schema path (e.g. `mypkg.myschema` in `schema/mypkg/myschema.jsonnet`). In both cases the package name is integral part of the namespace/path to ensure uniqueness of the declared entities.
@@ -372,9 +372,9 @@ The matching between the schema file name/path and the jsonnet namespace is esse
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: John Freeman_
 
-_Date: Tue Jul 13 12:06:40 2021 -0500_
+_Date: Wed Jun 2 12:27:36 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
