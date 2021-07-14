@@ -110,9 +110,17 @@ for package in $package_list ; do
 	exit 1
     fi
 
-    # The master branch of nanorc has been used for development instead of the develop branch
     cd $tmpdir/$package
-    if ! [[ "$package" =~ "nanorc" ]]; then
+
+    # JCF, Jul-14-2021: prevent integration-period edits to the heads
+    # of the develop branches of daq-buildtools, daq-cmake and
+    # daq-release from making it into the official documentation;
+    # direct software integration groups to the GitHub pages if they
+    # want the latest-greatest
+
+    if [[ "$package" =~ "daq-buildtools" || "$package" =~ "daq-cmake" || "$package" =~ "daq-release" ]]; then
+	git checkout dunedaq-v2.6.0
+    else
 	git checkout develop
     fi
     echo $tmpdir/$package
