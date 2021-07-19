@@ -196,6 +196,13 @@ It can be instructive to take a closer look at how we can tell nanorc to `boot` 
 
 * `exec` defines the exact procedure by which an application will be launched
 
+It should be pointed out that some substitutions are made when nanorc uses a file such as this to boot the processes. Specifically:
+
+
+* `"getenv"` is replaced with the actual value of the environment variable
+
+* If a host is provided as `localhost` or `127.0.0.1`, the result of the Python call `socket.gethostname` is used in its place
+
 
 -----
 
@@ -205,7 +212,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: jcfreeman2_
 
-_Date: Mon Jul 19 16:31:46 2021 -0500_
+_Date: Mon Jul 19 16:55:32 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>
