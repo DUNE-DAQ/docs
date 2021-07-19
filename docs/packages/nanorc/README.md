@@ -124,6 +124,78 @@ For FragmentHeaders:
 python3 $DFMODULES_FQ_DIR/dfmodules/bin/hdf5dump/hdf5_dump.py -H -f swtest_run000666_0000_tapper_20210513T133527.hdf5
 ```
 
+## More on boot
+
+It can be instructive to take a closer look at how we can tell nanorc to `boot` the DAQ's applications. Let's take a look at a relatively simple example file, `examples/mdapp_fake/boot.json`:
+```
+{
+    "apps": {
+        "ruemu_df": {
+            "exec": "daq_application",
+            "host": "host_rudf",
+            "port": 3334
+        },
+        "trgemu": {
+            "exec": "daq_application",
+            "host": "host_trg",
+            "port": 3333
+        }
+    },
+    "response_listener": {
+        "port": 56789
+    },
+    "env": {
+        "DUNEDAQ_ERS_VERBOSITY_LEVEL": 1
+    },
+    "hosts": {
+        "host_rudf": "localhost",
+        "host_trg": "localhost"
+    },
+    "exec": {
+        "daq_application_ups" : {
+            "comment": "Application profile using dbt-setup to setup environment",
+            "env": {
+               "DBT_AREA_ROOT": "getenv"
+            },
+            "cmd": [
+                "CMD_FAC=rest://localhost:${APP_PORT}",
+                "INFO_SVC=file://info_${APP_ID}_${APP_PORT}.json",
+                "cd ${DBT_AREA_ROOT}",
+                "source dbt-setup-env.sh",
+                "dbt-setup-runtime-environment",
+                "cd ${APP_WD}",
+                "daq_application --name ${APP_ID} -c ${CMD_FAC} -i ${INFO_SVC}"
+            ]
+        },
+        "daq_application" : {
+            "comment": "Application profile using basic PATH variables (more efficient)",
+            "env":{
+                "CET_PLUGIN_PATH": "getenv",
+                "DUNEDAQ_SHARE_PATH": "getenv",
+                "LD_LIBRARY_PATH": "getenv",
+                "PATH": "getenv"
+            },
+            "cmd": [
+                "CMD_FAC=rest://localhost:${APP_PORT}",
+                "INFO_SVC=file://info_${APP_NAME}_${APP_PORT}.json",
+                "cd ${APP_WD}",
+                "daq_application --name ${APP_NAME} -c ${CMD_FAC} -i ${INFO_SVC}"
+            ]
+        }
+    }
+}
+```
+...you'll notice a few features about it which are common to boot files. Looking at the highest-level keys:
+
+
+* `apps` contains the definition of what applications will run, and what sockets they'll be controlled on
+
+* `env` contains a list of environment variables which can control the applications
+
+* `hosts` is the cheatsheet whereby `apps` maps the labels of hosts to their actual names
+
+* `exec` defines the exact procedure by which an application will be launched
+
 
 -----
 
@@ -131,9 +203,9 @@ python3 $DFMODULES_FQ_DIR/dfmodules/bin/hdf5dump/hdf5_dump.py -H -f swtest_run00
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Alessandro Thea_
+_Author: jcfreeman2_
 
-_Date: Thu May 27 15:06:14 2021 +0200_
+_Date: Mon Jul 19 16:31:46 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>
