@@ -173,7 +173,8 @@ It can be instructive to take a closer look at how we can tell nanorc to `boot` 
                 "CET_PLUGIN_PATH": "getenv",
                 "DUNEDAQ_SHARE_PATH": "getenv",
                 "LD_LIBRARY_PATH": "getenv",
-                "PATH": "getenv"
+                "PATH": "getenv",
+                "TRACE_FILE": "getenv:/tmp/trace_buffer_${HOSTNAME}_${USER}"
             },
             "cmd": [
                 "CMD_FAC=rest://localhost:${APP_PORT}",
@@ -199,7 +200,9 @@ It can be instructive to take a closer look at how we can tell nanorc to `boot` 
 It should be pointed out that some substitutions are made when nanorc uses a file such as this to boot the processes. Specifically:
 
 
-* `"getenv"` is replaced with the actual value of the environment variable
+* `"getenv"` is replaced with the actual value of the environment variable, throwing a Python exception if it is unset
+
+* `"getenv:<default value>"` is replaced with the actual value of the environment variable if it is set, with `<default value>` used if it is unset
 
 * If a host is provided as `localhost` or `127.0.0.1`, the result of the Python call `socket.gethostname` is used in its place
 
@@ -210,9 +213,9 @@ It should be pointed out that some substitutions are made when nanorc uses a fil
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: Eric Flumerfelt_
 
-_Date: Mon Jul 19 16:55:32 2021 -0500_
+_Date: Mon Jul 19 17:13:10 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>
