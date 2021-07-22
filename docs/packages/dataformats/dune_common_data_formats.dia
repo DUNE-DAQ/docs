@@ -6491,13 +6491,13 @@ using sequence_number_t = uint16_t;#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O13">
       <dia:attribute name="obj_pos">
-        <dia:point val="17.4296,37.5579"/>
+        <dia:point val="17.9296,41.5079"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="17.3796,37.5079;27.2771,66.4079"/>
+        <dia:rectangle val="17.8796,41.4579;27.7771,70.3579"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="17.4296,37.5579"/>
+        <dia:point val="17.9296,41.5079"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="9.7974999999999994"/>
@@ -7362,13 +7362,13 @@ using sequence_number_t = uint16_t;#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O14">
       <dia:attribute name="obj_pos">
-        <dia:point val="7.27853,37.4167"/>
+        <dia:point val="7.37853,41.7167"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="7.22853,37.3667;15.2735,66.2667"/>
+        <dia:rectangle val="7.32853,41.6667;15.3735,70.5667"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="7.27853,37.4167"/>
+        <dia:point val="7.37853,41.7167"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="7.9450000000000003"/>
@@ -8236,7 +8236,7 @@ using sequence_number_t = uint16_t;#</dia:string>
         <dia:point val="7.43188,28.2969"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="7.38188,28.2469;30.6969,36.5469"/>
+        <dia:rectangle val="7.38188,28.2469;30.6969,39.7469"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="7.43188,28.2969"/>
@@ -8245,7 +8245,7 @@ using sequence_number_t = uint16_t;#</dia:string>
         <dia:real val="23.215"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="8.2000000000000011"/>
+        <dia:real val="11.4"/>
       </dia:attribute>
       <dia:attribute name="name">
         <dia:string>#FragmentType#</dia:string>
@@ -8390,6 +8390,98 @@ using sequence_number_t = uint16_t;#</dia:string>
           </dia:attribute>
           <dia:attribute name="value">
             <dia:string>#2#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#kNDLArTPC#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>#3#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#kTriggerPrimitives#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>#4#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#kTriggerActivities#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>#5#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="3"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#kTriggerCandidates#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>#6#</dia:string>
           </dia:attribute>
           <dia:attribute name="comment">
             <dia:string>##</dia:string>
