@@ -5,7 +5,7 @@ Welcome! The purpose of this website is to provide information on how to use the
 If you're new to DUNE DAQ software, you'll want to start by reading the [daq-buildtools documentation](packages/daq-buildtools/README.md), which covers [how to set up a development environment](packages/daq-buildtools/README.md#Setup_of_daq-buildtools) and [build a package](packages/daq-buildtools/README.md#Cloning_and_building). Once you've done this, you'll likely want to learn about [how to write DAQ modules](packages/appfwk/README.md#Writing_DAQ_modules) in the [appfwk documentation](packages/appfwk/README.md), units of code which
 are meant to perform specific tasks and can be combined to define the overall behavior of a running DAQ application. At some point you may also need to learn about how to create a package from scratch by reading the [daq-cmake documentation](packages/daq-cmake/README.md); this documentation is also very useful for understanding how to get new source code files you've added to compile.  
 
-There are four DUNE DAQ software packages which are used to aid
+There are five DUNE DAQ software packages which are used to aid
 developers in creating packages designed for the DAQ itself:
 
 To learn how to build an existing software package, read the [daq-buildtools documentation](packages/daq-buildtools/README.md)
@@ -15,6 +15,8 @@ To learn how to create a new package or modify the build of an existing one, rea
 To learn about the standard development workflow, read the [daq-release documentation](packages/daq-release/README.md), in particular [this page](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-release/development_workflow_gitflow/)
 
 To learn about the C++ coding guidelines which DUNE DAQ package developers should follow, read [the styleguide](packages/styleguide/README.md)
+
+To learn how to run integration tests within our framework, go [here](packages/integrationtest/README.md)
 
 --------------
 
@@ -35,6 +37,8 @@ For the other packages, please click on one of the links below. To learn how to 
 [dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
 
 [flxlibs](packages/flxlibs/README.md) _DAQModules, utilities, and scripts for Upstream FELIX Readout Software_
+
+[lbrulibs](packages/lbrulibs/README.md) _DAQModules, utilities, and scripts for DUNE-ND Upstream DAQ Low Bandwidth Readout Unit_
 
 [readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
 

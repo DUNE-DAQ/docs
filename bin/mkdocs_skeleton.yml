@@ -124,6 +124,7 @@ nav:
           - daq-buildtools:
           - daq-cmake:
           - daq-release:
+          - integrationtest:
           - styleguide:
        - Core:   
           - appfwk:
@@ -133,6 +134,7 @@ nav:
        - Readout:
           - dataformats:
           - flxlibs:
+          - lbrulibs:
           - readout:
        - Control:
           - minidaqapp:

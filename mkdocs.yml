@@ -136,6 +136,8 @@ nav:
              - packages/daq-release/slides.md
              - packages/daq-release/standalone_daq_release.md
              - packages/daq-release/upsify_daq_packages.md
+          - integrationtest:
+             - About integrationtest: packages/integrationtest/README.md
           - styleguide:
              - About styleguide: packages/styleguide/README.md
        - Core:   
@@ -174,6 +176,8 @@ nav:
              - packages/flxlibs/Initial-setup-of-FELIX.md
              - packages/flxlibs/Local-driver.md
              - packages/flxlibs/Using-fdaq.md
+          - lbrulibs:
+             - About lbrulibs: packages/lbrulibs/README.md
           - readout:
              - About readout: packages/readout/README.md
              - packages/readout/Directory-structure.md
