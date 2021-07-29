@@ -21,12 +21,7 @@ After succesfully building the package, from another terminal go to your `workar
 _Instructions on how to launch a readout emulation will be provided here_    
 
 ## Enabling the Software TPG
-To enable the SIMD accelerated software hit finding, one needs to download the channel mapping files:
-
-    curl https://cernbox.cern.ch/index.php/s/5lREt4yOQisYCL0/download > /tmp/protoDUNETPCChannelMap_FELIX_v4.txt
-    curl https://cernbox.cern.ch/index.php/s/p4OAHdyKVELMZ2F/download > /tmp/protoDUNETPCChannelMap_RCE_v4.txt
-
-In order to generate meaningful hits, one can use raw data recorded from ProtoDUNE-SP. A subset of these raw files can be found under:
+To enable the SIMD accelerated software hit finding, one can use raw data recorded from ProtoDUNE-SP to get meaningful hits. A subset of these raw files can be found under:
 
     /eos/experiment/neutplatform/protodune/rawdata/np04/protodune-sp/raw/2020/detector/test/None/02/00/00/01/
     
@@ -93,9 +88,9 @@ At the top level, the readout package uses the same directory structure as other
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Roland Sipos_
+_Author: Philip Rodrigues_
 
-_Date: Thu Jul 29 10:12:10 2021 +0200_
+_Date: Thu Jul 29 15:23:26 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readout/issues](https://github.com/DUNE-DAQ/readout/issues)_
 </font>
