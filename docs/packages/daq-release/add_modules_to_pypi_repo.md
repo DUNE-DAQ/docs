@@ -39,6 +39,34 @@ If you do not have `pip2pi` available, you can do the following to install it. N
 Now you should have access to `pip2pi` and `dir2pi` commands. Next time, you can simply activate the virtual env for accessing these tools.
 
 
+## Preapre the repo in staging area on docker-bd
+
+
+
+1. The staging area including that for `pypi-repo` is under `/home/dingpf/cvmfs_dunedaq`;
+
+
+2. Run `docker run --rm -it -v /home/dingpf/cvmfs_dunedaq:/cvmfs/dunedaq.opensciencegrid.org -v $PWD:/scratch dunedaq/sl7` to start a container;
+
+
+3. Follow the instructions above to install `pip2pi`;
+
+
+4. Follow the instruction above to add new packages to the repo.
+
+## Publishing to cvmfs repo
+
+
+
+1. Login as `cvmfsdunedaq` to `oasiscfs01.fnal.gov`;
+
+
+2. Obtain a valid FNAL Kerberos ticket;
+
+
+3. run `~/bin/dunedaq-sync pypi-repo` to publish the staging area on `docker-bd.fnal.gov`.
+
+
 -----
 
 <font size="1">
@@ -47,7 +75,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Sun Mar 28 14:43:51 2021 -0500_
+_Date: Thu Jul 22 00:24:44 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

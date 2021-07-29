@@ -33,8 +33,9 @@
   - Just as a typical frozen release, 
   - use `-r` with the patth to the `nightly` directory in cvmfs
 ```sh
-dbt-create.sh –r /cvmfs/dunedaq-development.opensciencegrid.org/nightly <NYY-MM-DD> workdir
+dbt-create.sh -r /cvmfs/dunedaq-development.opensciencegrid.org/nightly <NYY-MM-DD> workdir
 ```
+  - or simply use `dbt-create.sh -n <NYY-MM-DD> workdir`
 
 ### How the nightly releases are made
 
@@ -130,7 +131,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Tue May 25 09:41:16 2021 -0500_
+_Date: Wed Jul 14 12:01:38 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
