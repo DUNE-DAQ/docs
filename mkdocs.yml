@@ -216,6 +216,8 @@ nav:
        - Monitoring:
           - erses:
              - About erses: packages/erses/README.md
+          - erskafka:	
+             - About erskafka: packages/erskafka/README.md
           - influxopmon:
              - About influxopmon: packages/influxopmon/README.md
           - kafkaopmon:

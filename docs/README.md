@@ -78,6 +78,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [erses](packages/erses/README.md) _insert ERS messages into a searchable database_
 
+[erskafka](packages/erskafka/README.md) _the erskafka plugin_
+
 [influxopmon](packages/influxopmon/README.md) _Influx database based plugin for operational monitoring_
 
 [kafkaopmon](packages/kafkaopmon/README.md) _converts JSON objects into [Kafka](https://en.wikipedia.org/wiki/Apache_Kafka) messages_

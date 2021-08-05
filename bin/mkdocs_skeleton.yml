@@ -153,6 +153,7 @@ nav:
           - serialization:
        - Monitoring:
           - erses:
+          - erskafka:	
           - influxopmon:
           - kafkaopmon:
           - opmonlib:
