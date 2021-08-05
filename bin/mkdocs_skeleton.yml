@@ -154,6 +154,7 @@ nav:
        - Monitoring:
           - erses:
           - influxopmon:
+          - kafkaopmon:
           - opmonlib:
        - Educational:
           - listrev:

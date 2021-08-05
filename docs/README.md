@@ -80,6 +80,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [influxopmon](packages/influxopmon/README.md) _Influx database based plugin for operational monitoring_
 
+[kafkaopmon](packages/kafkaopmon/README.md) _converts JSON objects into [Kafka](https://en.wikipedia.org/wiki/Apache_Kafka) messages_
+
 [opmonlib](packages/opmonlib/README.md) _operational monitoring library_
 
 

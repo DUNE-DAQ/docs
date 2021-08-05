@@ -218,6 +218,8 @@ nav:
              - About erses: packages/erses/README.md
           - influxopmon:
              - About influxopmon: packages/influxopmon/README.md
+          - kafkaopmon:
+             - About kafkaopmon: packages/kafkaopmon/README.md
           - opmonlib:
              - About opmonlib: packages/opmonlib/README.md
              - packages/opmonlib/Instructions-for-DAQ-module-users.md
