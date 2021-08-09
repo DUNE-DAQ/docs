@@ -45,10 +45,13 @@ Here are the general steps of creating a new DAQ release.
 8. Use the [release creating script](https://github.com/DUNE-DAQ/daq-release/blob/develop/scripts/create-release-dir.sh) to create a tarball of the new release, and deploy it on cvmfs;
 
 
-9. Up till this point, the new release should be available in cvmfs, give it a test, prepare new documentation for developers and make the announcement for beta testing the new release;
+9. tag `daq-buildtools` with the release tag, and publish the version used into cvmfs ([this script](../scripts/create-cvmfs-dbt.sh) prepares the desired `dbt` directory in cvmfs), created the symlink of the release tag to the actual versioned tags;
 
 
-10. Wait 24 hours, for any possible hotfixes, before making the release tag with the [release tagging script](https://github.com/DUNE-DAQ/daq-release/blob/develop/scripts/create-release-tag.sh).
+10. Up till this point, the new release should be available in cvmfs, give it a test, prepare new documentation for developers and make the announcement for beta testing the new release;
+
+
+11. Wait 24 hours, for any possible hotfixes, before making the release tag with the [release tagging script](https://github.com/DUNE-DAQ/daq-release/blob/develop/scripts/create-release-tag.sh).
 
 
 -----
@@ -59,7 +62,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Mon Mar 29 05:58:26 2021 -0500_
+_Date: Mon Aug 9 09:53:46 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
