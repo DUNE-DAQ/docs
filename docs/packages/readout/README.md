@@ -72,9 +72,9 @@ Individual domains represent a substantially different path of the raw data, inc
 
 ### Class diagram
 
-A zoomable visualization of [the readout code](https://github.com/DUNE-DAQ/readout/) for its `dunedaq-v2.6.0` release:
+A zoomable visualization of [the readout code](https://github.com/DUNE-DAQ/readout/) for its `dunedaq-v2.8.0` release:
 
-![class-diagram](https://cernbox.cern.ch/index.php/s/yCzzMYonKCNnfDw/download)
+![class-diagram](https://cernbox.cern.ch/index.php/s/Hvyb41Ndj2MfKlw/download)
 
 ## Looking into the directories
 
@@ -90,7 +90,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: floriangroetschla_
 
-_Date: Tue Aug 3 10:58:08 2021 +0200_
+_Date: Wed Aug 11 14:14:55 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readout/issues](https://github.com/DUNE-DAQ/readout/issues)_
 </font>
