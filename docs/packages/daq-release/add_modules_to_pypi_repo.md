@@ -6,9 +6,10 @@ If you have `pip2pi` installed, you can simply do the following to add any modul
 
 1. `pip2pi $PATH_TO_PYPI_REPO <pypi_module_name==version>`;
     * `$PATH_TO_PYPI_REPO/<new_module_name>.whl` will be added after this;
+    * This is the recommended way to install any packages from pypi.org as `pip2pi` will handle the dependencies automatically;
 
 
-3. For tarballs, you can simply copy them over to the `pypi-repo` directory;
+3. For tarballs, you can simply copy them over to the `pypi-repo` directory (NOTE: this is to be used only on our self-brewed packages);
     * Remember to rename the tarball to `module-name_X.X.X.tar.gz` before the next step;
 
 
@@ -75,7 +76,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Thu Jul 22 00:24:44 2021 -0500_
+_Date: Thu Aug 12 11:30:51 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
