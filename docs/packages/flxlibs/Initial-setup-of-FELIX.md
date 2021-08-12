@@ -28,14 +28,14 @@ This documentation assumes that you are using an FLX-712 card, on a Linux CentOS
 
 
 
-4. In order to program a different firmware (e.g.: DUNE specific JumboBlocks/SuperChunks variant FULLMODE, that are discussed under the [FELIX Assets](FELIX-assets.md#firmware_versions)) to the FELIX, connect the JTAG programmer to the card, and the USB side to a machine where you have Vivado Labs installed. (For further and in-depth description, please refer to the [User Manual's Firmware Programming section](https://atlas-project-felix.web.cern.ch/atlas-project-felix/user/felix-user-manual/versions/4.0.6/4_firmware_programming.html#_4_2_firmware_programming)!) After programming, reboot the machine in order for the firmware in the volatile memory to load:
+4. In order to program a different firmware (e.g.: DUNE specific JumboBlocks/SuperChunks variant FULLMODE, that are discussed under the [FELIX Assets](FELIX-assets.md#firmware_versions)) to the FELIX, connect the JTAG programmer to the card, and the USB side to a machine where you have Vivado Labs installed. (For further and in-depth description, please refer to the [User Manual's Firmware Programming section](https://atlas-project-felix.web.cern.ch/atlas-project-felix/user/felix-user-manual/versions/4.0.6/4_firmware_programming.html#_4_2_firmware_programming)! The dunedaq FELIX dependency package is shipped with the `fflashprog` tool.) After programming, reboot the machine in order for the firmware in the volatile memory to load:
    ```
    reboot
    ```
 
 
 
-5. Installing the driver has a well detailed explanation under [User Manual's Driver Installation section](https://atlas-project-felix.web.cern.ch/atlas-project-felix/user/felix-user-manual/versions/4.0.6/5_software_installation.html#_5_2_1_driver_rpm_installation_instructions) User Manual's Driver Installation section.
+5. The dunedaq FELIX dependency package comes with the local driver, which is favorable to be used. The details of that is discussed under the [Local driver](https://github.com/DUNE-DAQ/flxlibs/wiki/Local-driver) readme. Installing the driver has a well detailed explanation under [User Manual's Driver Installation section](https://atlas-project-felix.web.cern.ch/atlas-project-felix/user/felix-user-manual/versions/4.0.6/5_software_installation.html#_5_2_1_driver_rpm_installation_instructions) User Manual's Driver Installation section.
    Precisely, the FELIX driver needs `dkms` and `kernel-devel` installed on your system. After that, one can install the driver 4.5 with:
    ```
    wget https://atlas-project-felix.web.cern.ch/atlas-project-felix/user/dist/software/driver/tdaq_sw_for_Flx-4.5.0-2dkms.noarch.rpm
@@ -70,9 +70,9 @@ Preferably, acquire all the following tools' output:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Roland Sipos_
 
-_Date: Wed May 26 20:37:14 2021 -0500_
+_Date: Thu Aug 12 10:04:42 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
