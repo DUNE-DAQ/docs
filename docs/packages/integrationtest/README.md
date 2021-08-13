@@ -70,6 +70,12 @@ of the `run_nanorc` [fixture](https://docs.pytest.org/en/6.2.x/fixture.html#fixt
 
 * `completed_process`: [`subprocess.CompletedProcess`](https://docs.python.org/3/library/subprocess.html#subprocess.CompletedProcess) object with the output of the nanorc process
 
+* `confgen_name`: The name of the configuration generation module used as input to this test
+
+* `confgen_arguments`: The arguments that were passed to the configuration generation module for this test (useful when running multiple confgens/nanorc sessions as described below)
+
+* `nanorc_commands`:  The list of commands given to `nanorc` for this test (useful when running multiple confgens/nanorc sessions as described below)
+
 * `run_dir`:           [`pathlib.Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path) pointing to the directory in which nanorc was run
 
 * `json_dir`:          [`pathlib.Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path) pointing to the directory in which the run configuration json files are stored
@@ -80,6 +86,24 @@ of the `run_nanorc` [fixture](https://docs.pytest.org/en/6.2.x/fixture.html#fixt
 
 * `opmon_files`:       list of [`pathlib.Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path) with each of the opmon json files produced by the run
 
+## Running multiple confgens/nanorc sessions
+
+You may want to run the same tests on the output of multiple confgens (eg, to check that the system works with a particular option both on and off). To do this, change `confgen_arguments` to be a list of _lists_ of arguments to your `confgen` script. Eg:
+
+```python
+confgen_arguments=[ [ "arg1", "arg2" ], ["arg1", "arg2", "arg3"] ]
+```
+
+This will run the confgen script twice: once with arguments `["arg1", "arg2"]`, and once with arguments `["arg1", "arg2", "arg3"]`. `nanorc` will be run for each of outputs of the confgen script (in this example, two `nanorc` sessions would be run).
+
+You can have multiple `nanorc` runs per confgen script too: modify `nanorc_command_list` to be a list of lists of commands. The total number of `nanorc` runs will then be `len(confgen_arguments) * len(nanorc_command_list)`
+
+`pytest` will automatically generate names for each `(confgen_arguments, nanorc_command_list)` pair. You can provide more meaningful names by providing `confgen_arguments` and/or `nanorc_command_list` as a dictionary. Each key is the human-readable name of the instance, and the corresponding value is the list of arguments or commands. Eg, for two nanorc runs with different lengths, with names "longer" and "shorter":
+
+```python
+nanorc_command_list={ "longer": "boot init conf start 101 wait 1 resume wait 20 pause wait 1 stop wait 2 scrap terminate".split(),
+                      "shorter": "boot init conf start 101 wait 1 resume wait 10 pause wait 1 stop wait 2 scrap terminate".split() }
+```
 
 -----
 
@@ -89,7 +113,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Philip Rodrigues_
 
-_Date: Mon Jul 19 10:15:17 2021 +0100_
+_Date: Thu Aug 12 11:59:54 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/integrationtest/issues](https://github.com/DUNE-DAQ/integrationtest/issues)_
 </font>
