@@ -28,7 +28,11 @@ Please ensure the following:
 
 
 
-5. Run basic tests explained in the [Basic tests](Basic-tests.md) manual to ensure that the card is properly set up.
+5. Load data into the emulator of the FELIX card based on the [Configuring the EMU](Configuring-the-EMU.md) manual.
+
+
+
+6. Run basic tests explained in the [Basic tests](Basic-tests.md) manual to ensure that the card is properly set up.
 
 ## Examples
 After successfully following the configuration instructions, you can try to run a test app that uses the FELIX.
@@ -52,7 +56,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Roland Sipos_
 
-_Date: Tue Aug 17 11:31:06 2021 +0200_
+_Date: Tue Aug 17 13:17:53 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>

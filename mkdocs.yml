@@ -169,6 +169,7 @@ nav:
           - flxlibs:
              - About flxlibs: packages/flxlibs/README.md
              - packages/flxlibs/Basic-tests.md
+             - packages/flxlibs/Configuring-the-EMU.md
              - packages/flxlibs/Enabling-links-and-setting-the-superchunk-factor.md
              - packages/flxlibs/FELIX-assets.md
              - packages/flxlibs/Initial-setup-of-FELIX.md
