@@ -8,7 +8,7 @@ For the dependencies, you need the `felix` external package that ships a build o
 ## Disclaimer
 The [Initial setup of FELIX page](Initial-setup-of-FELIX.md) doesn't mean to be a replacement for the official FELIX User Manual. For a much more detailed documentation, always refer to that appropriate RegisterMap version and device's user manual, that are found under the official [FELIX Project Webpage](https://atlas-project-felix.web.cern.ch/atlas-project-felix/).
 
-## Configure the FELIX card
+## FELIX setup
 Please ensure the following:
 
 
@@ -17,15 +17,19 @@ Please ensure the following:
 
 
 
-2. Use the [Local driver](Local-driver.md) from the appropriate dunedaq release.
+2. For the card configuration, one needs compatible firmware and FELIX configuration sets. The list is under [FELIX Assets](FELIX-assets.md#compatibility_list).
 
 
 
-2. For the card configuration, one needs compatible firmware and FELIX configuration sets. The list is under [FELIX Assets](FELIX-assets.md#compatibility_list)
+3. Use the [Local driver](Local-driver.md) from the appropriate dunedaq release.
 
 
 
-3. Configure the FELIX card, as explained in the [Configure the FELIX card](Configure-the-FELIX-card.md) short manual.
+4. Configure the FELIX card, as explained in the [Enabling links and setting up the FELIX card](Enabling-links-and-setting-the-superchunk-factor.md) manual.
+
+
+
+5. Run basic tests explained in the [Basic tests](Basic-tests.md) manual to ensure that the card is properly set up.
 
 ## Examples
 After successfully following the configuration instructions, you can try to run a test app that uses the FELIX.
@@ -49,7 +53,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Roland Sipos_
 
-_Date: Tue Aug 17 09:59:28 2021 +0200_
+_Date: Tue Aug 17 11:04:46 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>

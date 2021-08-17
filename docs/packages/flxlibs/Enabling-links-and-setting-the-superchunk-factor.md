@@ -1,17 +1,12 @@
 # Enabling links and setting the superchunk factor
-You can do this either using the felix UPS product in the dune-daq software or a custom build of the felix software suite provided by ATLAS TDAQ
+## Enabling links and setting up the card
 
-To use the ups product make sure to setup your DUNE-DAQ workspace following the instructions [https://github.com/DUNE-DAQ/minidaqapp/wiki/Instructions-for-setting-up-a-v2.6.0-development-environment](here).
+You can do this either using the felix UPS product in the dune-daq software or a custom build of the felix software suite provided by ATLAS TDAQ.
 
-You also need to make sure that the felix ups product is part of dbt-settings e.g. `"felix  v1_2_0  e19:prof"`
-in `dune_externals`.
-
-then run:
+To use the UPS product, you can use these tools where you did run:
 ```
 dbt-workarea-env
 ```
-
-to setup the workspace including the ups product.
 
 In order to enable links, the corresponding registers need to be set: `DECODING_LINK00_EGROUP0_CTRL_EPATH_ENA`, where LINK marks the link identifier. In order to enable the 10 links on the card (5-5 on the 2 SLRs), do this:
 
@@ -49,15 +44,16 @@ for i in $(seq 0 9); do flx-config -d 1 set SUPER_CHUNK_FACTOR_LINK_0${i}=0x0c; 
 
 and then rerun `flx-config list | grep SUPER` to check all the values changed. The superchunk factor is changed to 0x0c as the readout software is prepared to receive chunks with an aggregation factor of 12.
 
+
 -----
 
 <font size="1">
 _Last git commit to the markdown source of this page:_
 
 
-_Author: roland-sipos_
+_Author: Roland Sipos_
 
-_Date: Tue Aug 17 10:21:54 2021 +0200_
+_Date: Tue Aug 17 10:45:01 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
