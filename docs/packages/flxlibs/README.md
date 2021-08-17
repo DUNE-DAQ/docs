@@ -17,6 +17,10 @@ Please ensure the following:
 
 
 
+2. Use the [Local driver](Local-driver.md) from the appropriate dunedaq release.
+
+
+
 2. For the card configuration, one needs compatible firmware and FELIX configuration sets. The list is under [FELIX Assets](FELIX-assets.md#compatibility_list)
 
 
@@ -43,9 +47,9 @@ You can now issue commands by typing their name and pressing enter. Use `init`, 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: floriangroetschla_
+_Author: Roland Sipos_
 
-_Date: Thu Aug 12 13:48:03 2021 +0200_
+_Date: Tue Aug 17 09:59:28 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
