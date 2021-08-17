@@ -168,8 +168,10 @@ nav:
              - packages/dataformats/TriggerRecordHeaderDataV2.md
           - flxlibs:
              - About flxlibs: packages/flxlibs/README.md
+             - packages/flxlibs/Basic-tests.md
              - packages/flxlibs/Checking-Debugging-Optical-Fibre-Status.md
              - packages/flxlibs/Configure-the-FELIX-card.md
+             - packages/flxlibs/Enabling-links-and-setting-the-superchunk-factor.md
              - packages/flxlibs/Enabling-links-through-software.md
              - packages/flxlibs/FELIX-assets.md
              - packages/flxlibs/FELIX-Software-Suite-hack.md

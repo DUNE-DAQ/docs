@@ -35,23 +35,8 @@ This documentation assumes that you are using an FLX-712 card, on a Linux CentOS
 
 
 
-5. The dunedaq FELIX dependency package comes with the local driver, which is favorable to be used. The details of that is discussed under the [Local driver](https://github.com/DUNE-DAQ/flxlibs/wiki/Local-driver) readme. Installing the driver has a well detailed explanation under [User Manual's Driver Installation section](https://atlas-project-felix.web.cern.ch/atlas-project-felix/user/felix-user-manual/versions/4.0.6/5_software_installation.html#_5_2_1_driver_rpm_installation_instructions) User Manual's Driver Installation section.
-   Precisely, the FELIX driver needs `dkms` and `kernel-devel` installed on your system. After that, one can install the driver 4.5 with:
-   ```
-   wget https://atlas-project-felix.web.cern.ch/atlas-project-felix/user/dist/software/driver/tdaq_sw_for_Flx-4.5.0-2dkms.noarch.rpm
-   ```
-   Preferably, install the drivers using RPM, instead of YUM, in order to avoid broken kernel header symlinks, and get proper errors in case 
-   depmod fails to load the drivers:
-   ```
-   sudo rpm -ivh tdaq_sw_for_Flx-4.5.0-2dkms.noarch.rpm
-   sudo /etc/init.d/drivers_flx start
-   ```
-   Check if the card recognized properly by the server:
-   ```
-   /etc/init.d/drivers_flx status
-   ```
-   The driver has 3 main kernel modules: `io_rcc`, `cmem_rcc` and `flx`. All three needs to show meaningful output, without errors, on the 
-   status output.
+5. The dunedaq FELIX dependency package comes with the local driver, which is favorable to be used. The details of that is discussed under the [Local driver](https://github.com/DUNE-DAQ/flxlibs/wiki/Local-driver) readme. Installing the ATLAS TDAQ driver has a well detailed explanation under [User Manual's Driver Installation section](https://atlas-project-felix.web.cern.ch/atlas-project-felix/user/felix-user-manual/versions/4.0.6/5_software_installation.html#_5_2_1_driver_rpm_installation_instructions) User Manual's Driver Installation section.
+Either of them needs `dkms` and `kernel-devel` installed on your system. The driver has 3 main kernel modules: `io_rcc`, `cmem_rcc` and `flx`. All three needs to show meaningful output, without errors, on the status output (see Local Driver doc).
 
 
 
@@ -72,7 +57,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Roland Sipos_
 
-_Date: Thu Aug 12 10:04:42 2021 +0200_
+_Date: Tue Aug 17 10:17:01 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
