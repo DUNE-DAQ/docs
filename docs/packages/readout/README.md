@@ -3,7 +3,7 @@ Appfwk DAQModules, utilities, and scripts for DUNE Upstream DAQ Readout Software
 
 ## Building and setting up the workarea
 
-How to clone and build DUNE DAQ packages, including readout, is covered in [the daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/). You should follow these steps to set up your workarea that you can then use to run the following examples.
+How to clone and build DUNE DAQ packages, including `readout`, is covered in [the daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/). You should follow these steps to set up your workarea that you can then use to run the following examples.
 
 ## Examples
 Before running the application, please download a small binary file that contains WIB Frames from the following [CERNBox link](https://cernbox.cern.ch/index.php/s/7qNnuxD8igDOVJT), or from the commandline:
@@ -97,7 +97,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Roland Sipos_
 
-_Date: Wed Aug 11 15:52:24 2021 +0200_
+_Date: Tue Aug 17 11:31:30 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readout/issues](https://github.com/DUNE-DAQ/readout/issues)_
 </font>

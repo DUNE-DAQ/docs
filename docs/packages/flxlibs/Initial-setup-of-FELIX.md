@@ -14,7 +14,7 @@ This documentation assumes that you are using an FLX-712 card, on a Linux CentOS
 2. **Warning:** The card requires 12V auxiliary power, connected from either the power supply unit (PSU), or directly from the motherboard. This is typically the same cable that feeds power for GPUs. Always check your motherboard's user-manual, as many vendors have proprietary pinouts on the motherboard side!
     * The Supermicro boards usually need this particular cable: SM CBL-PWEX-0665
     * Intel WolfPass (2600WF series) servers need GPU power cable: iPC – AXXGPGPUCABLE
-    * DELL PowerEdge R740 01YM03 servers need GPU power cable: 
+    * DELL PowerEdge R740 01YM03 servers need GPU power cable from the DELL GPU enablement kit (with mini MOLEX to motherboard).
 
 
 
@@ -57,7 +57,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Roland Sipos_
 
-_Date: Tue Aug 17 10:17:01 2021 +0200_
+_Date: Tue Aug 17 11:17:24 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>

@@ -9,8 +9,8 @@ Testing and development hosts with a FELIX card are the following:
 
 
 * **CERN DT-DI DAQ-lab**
-    * epdtdi104 - RM5 based development platform (DS Intel Cascade Lake Gold, SNC2, with PMEM and NVMe)
-    * epdtdi105 - RM5 based development platform (DS AMD EPYC with PCIe SSD and NVMe)
+    * epdtdi104 - RM5 based development platform (DS Intel Cascade Lake Gold, SNC2, with 1.5TB PMEM and 4TB NVMe)
+    * epdtdi105 - RM5 based development platform on mainline kernel (DS AMD EPYC with 20TB+ NVMe)
 
 
 * **Bristol Lab**
@@ -72,7 +72,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Roland Sipos_
 
-_Date: Tue Aug 17 10:33:50 2021 +0200_
+_Date: Tue Aug 17 11:15:22 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
