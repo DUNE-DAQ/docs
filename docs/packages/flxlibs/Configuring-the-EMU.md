@@ -48,14 +48,14 @@ The fanout selector tool is called `femu` that can toggle the emulator mode on a
 In order to toggle the fanout selector to use the emulated links instead of the optical links:
 ```
 femu -d 0 -e 
-femu -d 0 -e
+femu -d 1 -e
 
 ```
 
 In order to toggle back to real optical links from the MTP connectors, disable the emulator fanout via:
 ```
 femu -d 0 -n
-femu -d 0 -n
+femu -d 1 -n
 
 ```
 
@@ -66,9 +66,9 @@ femu -d 0 -n
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Roland Sipos_
+_Author: floriangroetschla_
 
-_Date: Tue Aug 17 13:26:35 2021 +0200_
+_Date: Mon Aug 23 14:28:11 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
