@@ -30,7 +30,7 @@ Here are the general steps of creating a new DAQ release.
     * checkout the desired version of `daq-buildtools`, and set up a working directory using the release configs created by the previous step;
     * checkout all DAQ packages into `sourcecode` and build them with `dbt-build.sh`;
     * run [upsify-daq-packages script](https://github.com/DUNE-DAQ/daq-release/blob/develop/scripts/upsify-daq-pkgs.py) to make tarballs of the DAQ packages ([instructions](upsify_daq_packages.md);
-    * note that if a new tag of a package has been used, all the downstream packages in the build order list shall be rebuilt and deployed. For example, the `logging` package is the same in `dunedaq-v2.3.0` and `dunedaq-v2.4.0`, but its dependent package `ers` has been advanced to `v1.1.2`, the `logging` package should be checked out and rebuilt when preparing for `dunedaq-v2.4.0`. Since `logging v1_1_0` is already in the `products` area, and the newly built `logging` is differnt from it, we should advance the UPS version to `v1_1_0b`;
+    * note that if a new tag of a package has been used, all the packages downstream of it in the build order list shall be rebuilt and deployed. For example, the `logging` package is the same in `dunedaq-v2.3.0` and `dunedaq-v2.4.0`, but its dependent package `ers` has been advanced to `v1.1.2`, the `logging` package should be checked out and rebuilt when preparing for `dunedaq-v2.4.0`. Since `logging v1_1_0` is already in the `products` area, and the newly built `logging` is differnt from it, we should advance the UPS version to `v1_1_0b`;
     * publish the DAQ packages into cvmfs ([instructions](publish_to_cvmfs.md)).
 
 
@@ -63,7 +63,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Wed Sep 8 16:58:27 2021 +0200_
+_Date: Tue Aug 17 11:43:57 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
