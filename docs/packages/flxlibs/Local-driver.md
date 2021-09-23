@@ -6,7 +6,7 @@ In order to ensure absolute consistency with the software externals, the DUNE re
 With `sudo` rights or as `root` one needs to do the following steps:
 ```
 mkdir /opt/felix
-cp -r /cvmfs/dune.opensciencegrid.org/dunedaq/DUNE/products/felix/v1_2_0 /opt/felix/
+cp -r /cvmfs/dunedaq.opensciencegrid.org/products/felix/v1_2_0 /opt/felix/
 cd /opt/felix/Linux64bit+3.10-2.17-e19-prof/drivers_rcc/src/
 make -j
 cd ../script
@@ -113,9 +113,9 @@ This step will be automated in the future.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: roland-sipos_
+_Author: Alessandro Thea_
 
-_Date: Tue Aug 17 10:14:42 2021 +0200_
+_Date: Thu Sep 23 16:39:14 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
