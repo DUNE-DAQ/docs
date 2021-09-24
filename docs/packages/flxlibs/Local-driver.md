@@ -7,7 +7,7 @@ With `sudo` rights or as `root` one needs to do the following steps:
 ```
 mkdir /opt/felix
 cp -r /cvmfs/dunedaq.opensciencegrid.org/products/felix/v1_2_0 /opt/felix/
-cd /opt/felix/Linux64bit+3.10-2.17-e19-prof/drivers_rcc/src/
+cd /opt/felix/v1_2_0/Linux64bit+3.10-2.17-e19-prof/drivers_rcc/src/
 make -j
 cd ../script
 sed -i 's/gfpbpa_size=4096/gfpbpa_size=8192/g' ./drivers_flx_local
@@ -115,7 +115,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Alessandro Thea_
 
-_Date: Thu Sep 23 16:39:14 2021 +0200_
+_Date: Fri Sep 24 12:08:07 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
