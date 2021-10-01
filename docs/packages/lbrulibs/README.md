@@ -12,7 +12,12 @@ To use the ND-LAr data generator you will need python packages:
 ## ND-LAr: Examples with PACMAN data snapshots
 In one terminal, launch a fake pacman emulation by navigating to the test folder and running:
 
-    pacman-generator.py example-pacman-data.h5
+    pacman-generator.py --input_file example-pacman-data.h5
+
+The script is able generate messages in a number of different ways. The interval of time between each message being sent, for example,
+is a configurable parameter. For more details run:
+
+    pacman-generator.py --help
 
 To test if the generator is working properly a simple python based ZMQ readout script is provided in the scripts folder:
 
@@ -53,9 +58,9 @@ Configuration steps:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Jose Guillermo Panduro Vazquez_
+_Author: Alexander Booth_
 
-_Date: Tue Jul 20 19:12:17 2021 +0200_
+_Date: Thu Sep 30 09:21:45 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/lbrulibs/issues](https://github.com/DUNE-DAQ/lbrulibs/issues)_
 </font>
