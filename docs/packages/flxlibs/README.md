@@ -36,10 +36,14 @@ Please ensure the following:
 
 ## Examples
 After successfully following the configuration instructions, you can try to run a test app that uses the FELIX.
-First, create a configuration file:
+First, create a configuration file if real front-end is connected to the card:
 
-    python -m flxlibs.app_confgen -x -n 10 felix-app.json
+    python -m flxlibs.app_confgen -n 10 felix-app.json
     
+If the FELIX is on the emulator fanout and the internal emulator is loaded, apply also frame specific emulation for the DatalinkHanders to overwrite frame signatures (e.g.: timestamp, sequence number, etc.):
+
+    python -m flxlibs.app_confgen -n 10 -e felix-app.json
+
 Then run it with:
 
     daq_application -c stdin://felix-app.json -n felix_10_links
@@ -54,9 +58,9 @@ You can now issue commands by typing their name and pressing enter. Use `init`, 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Roland Sipos_
+_Author: roland-sipos_
 
-_Date: Tue Aug 17 13:17:53 2021 +0200_
+_Date: Wed Oct 20 11:33:55 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
