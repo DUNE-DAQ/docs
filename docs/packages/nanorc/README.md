@@ -24,7 +24,7 @@ Generate a configuration:
 python -m minidaqapp.nanorc.mdapp_multiru_gen mdapp_fake
 ```
 
-Next, create a file called `top_level.json` which contains:
+Next (if you want to), you can create a file called `top_level.json` which contains:
 
 ```json
 {
@@ -39,7 +39,7 @@ Now you're ready to run.
 
 To see a list of options you can pass nanorc in order to control things such as the amount of information it prints and the timeouts for transitions, run `nanorc -h`. We'll skip those for now in the following demo:
 ```
-nanorc top_level.json
+nanorc top_level.json # or "nanorc mdapp_fake" if you didn't create the top_level.json
 
 ╭──────────────────────────────────────────────────────────────────────────╮
 │                              Shonky NanoRC                               │
@@ -228,7 +228,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pierre Lasorak_
 
-_Date: Mon Oct 25 10:32:26 2021 +0200_
+_Date: Mon Oct 25 21:00:13 2021 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>
