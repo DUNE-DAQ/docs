@@ -2,18 +2,21 @@
 
 This package provides CMake support for DUNE-DAQ packages.
 
-# Overview of how to create a new package
+## Overview of how to create a new package
 
-## Setting up a development area
+### Setting up a development area
 
-To create a new package, you'll want to install a DUNE-DAQ development environment and then create a new CMake project for the package. How to install and build the DUNE-DAQ development environment is described [in the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.8.0/packages/daq-buildtools/); some familiarity with the daq-buildtools documentation is assumed in these instructions. 
+To create a new package, you'll want to install a DUNE-DAQ development environment and then create a new CMake project for the package. How to install and build the DUNE-DAQ development environment is described [in the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/); some familiarity with the daq-buildtools documentation is assumed in these instructions. 
 
 
-## A package's subdirectory structure
+### A package's subdirectory structure
 
 To learn a bit more about how to structure your package so that it can be incorporated into the DUNE DAQ software suite, we'll play with a contrived package called "toylibrary". It's actually contained within a subdirectory of the daq-cmake repo; however, in order to be able to build toylibrary we'll want to copy it into the `./sourcecode` directory so the build system can work with it. Assuming you're already in the base directory of your development environment, do the following: 
 ```
-git clone https://github.com/DUNE-DAQ/daq-cmake -b dunedaq-v2.8.0
+git clone https://github.com/DUNE-DAQ/daq-cmake
+cd daq-cmake
+git checkout 5e2dd1378
+cd ..
 mv daq-cmake/toylibrary sourcecode
 rm -rf daq-cmake
 ```
@@ -37,11 +40,11 @@ In terms of its actual functionality, it's pretty useless (it contains a class w
 If your package contains applications intended not for testing but for the end user, you'd put the code for it in a subdirectory called `apps/`. toylibrary doesn't have this type of application, but, e.g., the appfwk package does. Similarly, plugins not intended for testing but for the end user would go in `plugins/`. 
 
 
-## Coding rules
+### Coding rules
 
 Along with having a standard directory structure, the C++ code itself in toylibrary conforms to the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/). Here, "style" doesn't mean whitespace and formatting, but rather, a set of Modern C++ best practices designed to make your code more robust against bugs, easier to extend, easier to reuse, etc. The DUNE C++ Style Guide is derived from the Google C++ Style Guide, but is greatly simplified and has been modified to be more appropriate to the DUNE DAQ project than Google's projects. Code which is merged into a package's git develop branch should be in conformance with the guide; while it's encouraged for code on a package's unmerged feature branches to also be in conformance, this is less important. 
 
-## Your project's CMakeLists.txt file
+### Your project's CMakeLists.txt file
 
 Every DUNE DAQ package should have one and only one `CMakeLists.txt` file, in the base directory of the package's repo (not to be confused with the base directory of the overall development area). To learn a bit about what that `CMakeLists.txt` file should look like, let's take a look at `sourcecode/toylibrary/CMakeLists.txt`. Because CMake is widely used and extensively documented online, this documentation will primarily focus on DUNE-specific CMake functions. The full documentation of the DUNE-specific CMake functions for users can be found [below](#cmake_function_descriptions). Depending on your learning style, however, you may find it easier to start learning about some of what these functions are capable of by reading on without skipping. 
 
@@ -102,11 +105,11 @@ daq_install()
 ```
 When you call it it will install the targets (executables, shared object libraries) you wish to make available to others who want to use your package in a directory called `$DBT_INSTALL_DIR/<pkgname>` (by default that would be `./install/toylibrary`). You'll also need to add a special file to your project for this function to work; this is discussed more fully in the "Installing your project as a local package" section later in this document. 
 
-## If your package relies on nonstandard dependencies
+### If your package relies on nonstandard dependencies
 
-...go back and take a look at the "Adding extra UPS products and product pools" section of [the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/dunedaq-v2.8.0/packages/daq-buildtools/#adding_extra_ups_products)
+...go back and take a look at the "Adding extra UPS products and product pools" section of [the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/#adding_extra_ups_products)
 
-## Installing your project as a local package
+### Installing your project as a local package
 
 Use the procedure described below in order to have your package installed. Once your package is installed, it means other packages can access the libraries, public headers, etc., provided by your package via CMake's `find_package` command, i.e.:
 ```
@@ -121,7 +124,7 @@ A major thing you should be aware of is that when you call CMake's `find_package
 cd ./sourcecode/mypackage
 mkdir cmake
 cd cmake
-curl -O https://raw.githubusercontent.com/DUNE-DAQ/daq-cmake/dunedaq-v2.8.0/configs/Config.cmake.in
+curl -O https://raw.githubusercontent.com/DUNE-DAQ/daq-cmake/dunedaq-v2.6.0/configs/Config.cmake.in
 mv Config.cmake.in mypackageConfig.cmake.in
 ```
 and then let's look at the opening lines of `mypackageConfig.cmake.in`:
@@ -147,9 +150,9 @@ dbt-build.sh
 without receiving an error message informing you that installation isn't an option. 
 
 <a name="cmake_function_descriptions"></a>
-# Description of the CMake functions provided by `daq-cmake`
+## Description of the CMake functions provided by `daq-cmake`
 
-## daq_setup_environment:
+### daq_setup_environment:
 Usage:  
 
 ```
@@ -162,7 +165,7 @@ that DUNE DAQ projects all have a common build environment. It takes
 no arguments. 
 
 <a name="daq_codegen_documentation"></a>
-## daq_codegen:
+### daq_codegen:
 Usage:
 ```
 daq_codegen( <schema filename1> ... [TEST] [DEP_PKGS <package 1> ...] [MODEL <model filename>]
@@ -177,7 +180,7 @@ Arguments:
 
 * `<schema filename1> ...`: 
 
-  The list of schema files to process from `<package>/schema/<package>`. Each schema file will applied to each template (specified by the TEMPLATE argument). Each schema/template pair will generate a code file named `build/<package>/codegen/include/<package>/<schema minus *.jsonnet extension>/<template minus *.j2 extension>`
+  The list of schema files to process from `<package>/schema/<package>`. Each schema file will applied to each template (specified by the TEMPLATES argument). Each schema/template pair will generate a code file named `build/<package>/codegen/include/<package>/<schema minus *.jsonnet extension>/<template minus *.j2 extension>`
 e.g. `my_schema.jsonnet` (from `my_pkg`) + `your_pkg/YourStruct.hpp.j2` will result in `build/my_pkg/codegen/include/my_pkg/my_schema/YourStruct.hpp`
 
 
@@ -201,7 +204,7 @@ e.g. `my_schema.jsonnet` (from `my_pkg`) + `your_pkg/YourStruct.hpp.j2` will res
   
    The list of templates to use. This is a mandatory argument. The template file format is `<template package>/<template name including *.j2 extension>`. If `<template package>` is omitted, the template is expected to be made available by moo.
 
-## daq_add_library:
+### daq_add_library:
 Usage:  
 ```
 daq_add_library( <file | glob expression 1> ... [LINK_LIBRARIES <lib1> ...])
@@ -224,7 +227,7 @@ Public headers for users of the library should go in the project's
 `include/<project name>` directory. Private headers used in the
 library's implementation should be put in the `src/` directory.
 
-## daq_add_python_bindings:
+### daq_add_python_bindings:
 Usage:  
 ```
 daq_add_python_bindings( <file | glob expression 1> ... [LINK_LIBRARIES <lib1> ...])
@@ -248,7 +251,7 @@ in the `python/${PROJECT_NAME}` directory. You will need to have the correspondi
 `python/${PROJECT_NAME}/__init__.py` to import the appropiate componenets of the module.
 See toylibrary for a working example.
 
-## daq_add_plugin:
+### daq_add_plugin:
 Usage:  
 ```
 daq_add_plugin( <plugin name> <plugin type> [TEST] [LINK_LIBRARIES <lib1> ...])
@@ -266,7 +269,7 @@ Your plugin will look in `include/` for your project's public headers
 and `src/` for its private headers. Additionally, if it's a "TEST"
 plugin, it will look in `test/src/`.
 
-## daq_add_application
+### daq_add_application
 
 Usage:  
 ```
@@ -286,7 +289,7 @@ Your application will look in `include/` for your project's public
 headers and `src/` for its private headers. Additionally, if it's a
 "TEST" plugin, it will look in `test/src/`.
 
-## daq_add_unit_test
+### daq_add_unit_test
 Usage:  
 ```
 daq_add_unit_test(<unit test name> [LINK_LIBRARIES <lib1> ...])
@@ -299,7 +302,7 @@ etc.). Like daq_add_library, daq_add_unit_test can be provided a
 list of libraries to link against, following the `LINK_LIBRARIES`
 token.
 
-## daq_install
+### daq_install
 Usage:  
 ```
 daq_install()
@@ -309,7 +312,7 @@ This function should be called at the bottom of a project's
 `CMakeLists.txt` file in order to install the project's targets. It takes no
 arguments.
 
-# Schemas and code generation
+## Schemas and code generation
 
 `daq-cmake` supports for schema distribution and code generation with [moo](https://github.com/brettviren/moo/)
 
@@ -323,7 +326,7 @@ arguments.
 1. The `daq_codegen` cmake function provides a simpliefied interface to `moo render` to generate C++ files from jinjia templates. It provides a mechanism to easily import schemas, templates or models from other packages and implements an out-of-date dependency check. Details are [above](#daq_codegen_documentation).
 
 <a name="daq_cmake_schema"></a>
-## Schema files
+### Schema files
 
 `daq-cmake` handles schemas in a similar fashion to C++ headers. Where header files are located according to the namespace of the class they declare (e.g. `mypkg::MyClass` in `include/mypkg/MyClass.hpp`, schemas location in the package is determined by the schema path (e.g. `mypkg.myschema` in `schema/mypkg/myschema.jsonnet`). In both cases the package name is integral part of the namespace/path to ensure uniqueness of the declared entities.
 
@@ -369,9 +372,9 @@ The matching between the schema file name/path and the jsonnet namespace is esse
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jcfreeman2_
 
-_Date: Tue Aug 3 15:03:05 2021 -0500_
+_Date: Thu Aug 26 15:32:04 2021 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
