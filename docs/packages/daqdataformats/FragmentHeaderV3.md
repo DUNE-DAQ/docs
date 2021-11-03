@@ -114,5 +114,5 @@ _Author: Eric Flumerfelt_
 
 _Date: Fri Jul 2 09:03:51 2021 -0500_
 
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dataformats/issues](https://github.com/DUNE-DAQ/dataformats/issues)_
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqdataformats/issues](https://github.com/DUNE-DAQ/daqdataformats/issues)_
 </font>

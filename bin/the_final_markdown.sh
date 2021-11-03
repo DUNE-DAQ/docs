@@ -2,12 +2,9 @@
 
 here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 
-# Reverse alphabetical order so the packages in the drop-down menu will appear in regular alphabetical order
+# Reverse-alphabetical order for historical reasons
 
-# ...alphabetical, with the exception of the packages which are used
-# for package development themselves
-
-package_list="trigger trigemu timinglibs timing serialization restcmd readout rcif opmonlib nwqueueadapters nanorc minidaqapp kafkaopmon logging listrev lbrulibs ipm integrationtest influxopmon flxlibs erskafka erses ers dfmodules dfmessages dataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
+package_list="trigger trigemu timinglibs timing serialization restcmd readout rcif opmonlib nwqueueadapters nanorc minidaqapp kafkaopmon logging listrev lbrulibs ipm integrationtest influxopmon flxlibs erskafka erses ers dfmodules dfmessages detdataformats detchannelmaps daqdataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -113,10 +110,10 @@ for package in $package_list ; do
     cd $tmpdir/$package
 
     # JCF, Jul-14-2021: prevent integration-period edits to the heads
-    # of the develop branches of daq-buildtools, daq-cmake and
-    # daq-release from making it into the official documentation;
-    # direct software integration groups to the GitHub pages if they
-    # want the latest-greatest
+    # of the develop branches of daq-buildtools and daq-cmake from
+    # making it into the official documentation; point software
+    # integration groups to the GitHub pages if they want the
+    # latest-greatest
 
     if [[ "$package" =~ "daq-buildtools" || "$package" =~ "daq-cmake" ]]; then
 	git checkout dunedaq-v2.8.1

@@ -1,17 +1,17 @@
-# FragmentHeader v1 (Deprecated)
+# FragmentHeader v2 (Deprecated)
 
-This document describes the format of the FragmentHeader class, version 1. It should **not** be updated, but rather kept as a historic record of the data format for this version.
+This document describes the format of the FragmentHeader class, version 2. It should **not** be updated, but rather kept as a historic record of the data format for this version.
 
 # FragmentHeader Description
 
-A FragmentHeader version 1 consists of 17 32-bit words:
+A FragmentHeader version 2 consists of 20 32-bit words:
 
 
 
 0. Marker (0x11112222)
 
 
-1. Version (0x00000001)
+1. Version (0x00000002)
 
 
 2. Size in bytes, including header and Fragment payload (upper 32 bits)
@@ -47,16 +47,25 @@ A FragmentHeader version 1 consists of 17 32-bit words:
 12. Run Number
 
 
-13. [GeoID version 0 (unversioned)](GeoIDV0.md) Component Type (upper 16 bits), Region ID (lower 16 bits)
+13. Error bits
 
 
-14. [GeoID version 0 (unversioned)](GeoIDV0.md) Element ID
+14. Fragment Type
 
 
-15. Error bits
+15. Pad word (to ensure 64-bit alignment of FragmentHeader non-struct fields)
 
 
-16. Fragment Type
+16. [GeoID version 1](GeoIDV1.md) Component Type (upper 16 bits), Region ID (lower 16 bits)
+
+
+17. [GeoID version 1](GeoIDV1.md) Element ID
+
+
+18. [GeoID version 1](GeoIDV1.md) Version
+
+
+19. [GeoID version 1](GeoIDV1.md) Pad Word
 
 # C++ code for FragmentHeader
 
@@ -70,7 +79,7 @@ using timestamp_t = uint64_t;
 struct FragmentHeader
 {
   static constexpr uint32_t s_fragment_header_magic = 0x11112222;
-  static constexpr uint32_t s_fragment_header_version = 1;
+  static constexpr uint32_t s_fragment_header_version = 2;
   static constexpr uint32_t s_default_error_bits = 0;
 
   uint32_t fragment_header_marker = s_fragment_header_magic;
@@ -81,9 +90,10 @@ struct FragmentHeader
   timestamp_t window_begin{ TypeDefaults::s_invalid_timestamp };
   timestamp_t window_end{ TypeDefaults::s_invalid_timestamp };
   run_number_t run_number{ TypeDefaults::s_invalid_run_number };
-  GeoID element_id;
   uint32_t error_bits{ s_default_error_bits }; 
   fragment_type_t fragment_type{ TypeDefaults::s_invalid_fragment_type };
+  uint32_t unused {0xFFFFFFFF};
+  GeoID link_id;
 };
 ```
 
@@ -100,7 +110,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Thu Jul 1 14:47:01 2021 -0500_
+_Date: Fri Jul 2 09:03:51 2021 -0500_
 
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dataformats/issues](https://github.com/DUNE-DAQ/dataformats/issues)_
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqdataformats/issues](https://github.com/DUNE-DAQ/daqdataformats/issues)_
 </font>

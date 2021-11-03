@@ -132,7 +132,9 @@ nav:
           - ers:
           - logging:
        - Readout:
-          - dataformats:
+          - daqdataformats:
+          - detchannelmaps:
+          - detdataformats:
           - flxlibs:
           - lbrulibs:
           - readout:

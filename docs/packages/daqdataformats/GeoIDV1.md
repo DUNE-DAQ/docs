@@ -56,5 +56,5 @@ _Author: Eric Flumerfelt_
 
 _Date: Thu Jul 1 14:47:01 2021 -0500_
 
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dataformats/issues](https://github.com/DUNE-DAQ/dataformats/issues)_
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqdataformats/issues](https://github.com/DUNE-DAQ/daqdataformats/issues)_
 </font>

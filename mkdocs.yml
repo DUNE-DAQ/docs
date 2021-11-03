@@ -155,17 +155,21 @@ nav:
              - About logging: packages/logging/README.md
              - packages/logging/ers-conventions.md
        - Readout:
-          - dataformats:
-             - About dataformats: packages/dataformats/README.md
-             - packages/dataformats/ComponentRequestV0.md
-             - packages/dataformats/ComponentRequestV1.md
-             - packages/dataformats/FragmentHeaderV1.md
-             - packages/dataformats/FragmentHeaderV2.md
-             - packages/dataformats/FragmentHeaderV3.md
-             - packages/dataformats/GeoIDV0.md
-             - packages/dataformats/GeoIDV1.md
-             - packages/dataformats/TriggerRecordHeaderDataV1.md
-             - packages/dataformats/TriggerRecordHeaderDataV2.md
+          - daqdataformats:
+             - About daqdataformats: packages/daqdataformats/README.md
+             - packages/daqdataformats/ComponentRequestV0.md
+             - packages/daqdataformats/ComponentRequestV1.md
+             - packages/daqdataformats/FragmentHeaderV1.md
+             - packages/daqdataformats/FragmentHeaderV2.md
+             - packages/daqdataformats/FragmentHeaderV3.md
+             - packages/daqdataformats/GeoIDV0.md
+             - packages/daqdataformats/GeoIDV1.md
+             - packages/daqdataformats/TriggerRecordHeaderDataV1.md
+             - packages/daqdataformats/TriggerRecordHeaderDataV2.md
+          - detchannelmaps:
+             - About detchannelmaps: packages/detchannelmaps/README.md
+          - detdataformats:
+             - About detdataformats: packages/detdataformats/README.md
           - flxlibs:
              - About flxlibs: packages/flxlibs/README.md
              - packages/flxlibs/Basic-tests.md

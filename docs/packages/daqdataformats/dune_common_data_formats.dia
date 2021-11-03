@@ -136,7 +136,7 @@
         <dia:string>##</dia:string>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#dataformats - Data Formats#</dia:string>
+        <dia:string>#daqdataformats - Data Formats#</dia:string>
       </dia:attribute>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O2">
