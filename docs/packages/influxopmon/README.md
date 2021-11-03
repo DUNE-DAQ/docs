@@ -41,32 +41,32 @@ the class inherits `dunedaq::opmonlib::OpmonService`
 The constructor takes as parameter the URI described in the "Building and running" chapter and initializes variables containing the address and database where the queries should be sent, the delimiter tag and 0..N influx db tags. The delimiter tag is the keyword in a json file delimiting and describing data entries, for a Time Series Database (TSDB), it is the time tag. A TSDB typically has 0..N data tags describing the specificities of a certain data entry, such as its position or a captor identifier.
 
 ##### `public publish`
-The publish function is called on data collection by the opmonlib. It calls setInsertsVector, getInsertsVector, transforms the vector returned by getInsertsVector into individual queries lines and calls the executionCommand.
+The publish function is called on data collection by the opmonlib. It calls set_inserts_vector, get_inserts_vector, transforms the vector returned by get_inserts_vector into individual queries lines and calls the execution_command.
 
-##### `private executionCommand`
+##### `private execution_command`
 Takes as parameters the url to which the message should be sent and the command to be sent.
 Uses cpr::Post and awaits cpr::Response.
 
 To debug the application, print the cpr::Response response.
 
 #### `JsonConverter`
-##### `public setInsertsVector/getInsertsVector`
+##### `public set_inserts_vector/get_inserts_vector`
 
-Handles the conversion by calling jsonToInfluxFunction and conversion errors has the following parameters:
+Handles the conversion by calling `json_to_influx_function` and conversion errors has the following parameters:
 
 Param 1 bool : if true, the tags are not added to the query.
 Param 2 vector : is a vector of key-words delimiting tags
 Param 3 string : is the keyword delimiting the timestamp
 Param 4 string : is a string formatted flattened json object
 
-setInsertsVector Void and sets sets insertsVector, insertsVector can be accessed using getInsertsVector.
+set_inserts_vector Void and sets sets insertsVector, insertsVector can be accessed using get_inserts_vector.
 
-##### `private jsonToInfluxFunction`
-Converts a flattened json into a vector of inserts according to a delimiter passed in parameter. Calls checkDataType and convertTimeToNS
+##### `private json_to_influx_function`
+Converts a flattened json into a vector of inserts according to a delimiter passed in parameter. Calls check_data_type and convertTimeToNS
 
 ##### `private convertTimeToNS`
 Influxopmon changes, if necessary, UNIX EPOCH time format to UNIX EPOCH time format in nanoseconds, to adapt to influx db the format put in parameter.
-##### `private checkDataType`
+##### `private check_data_type`
 Puts the correct influx parameter delimiter according to the data type of an entry, for example using ' " ' for string delimitation.
 
 ### Authentication
@@ -101,9 +101,9 @@ For any further information, contact Yann Donon (yann.donon@cern.ch).
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Tenkarast_
+_Author: Alessandro Thea_
 
-_Date: Fri Jul 16 15:10:25 2021 +0200_
+_Date: Wed Nov 3 09:54:34 2021 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/influxopmon/issues](https://github.com/DUNE-DAQ/influxopmon/issues)_
 </font>
