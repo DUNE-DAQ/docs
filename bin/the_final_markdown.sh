@@ -2,8 +2,6 @@
 
 here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 
-release_manifest_html="https://raw.githubusercontent.com/DUNE-DAQ/daq-release/prep-dunedaq-v2.8.2/configs/dunedaq-v2.8.2/release_manifest.sh"
-
 # Reverse-alphabetical order for historical reasons
 
 package_list="trigger trigemu timinglibs timing serialization restcmd readout rcif opmonlib nwqueueadapters nanorc minidaqapp kafkaopmon logging listrev lbrulibs ipm integrationtest influxopmon flxlibs erskafka erses ers dfmodules dfmessages detdataformats detchannelmaps daqdataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
@@ -111,29 +109,17 @@ for package in $package_list ; do
 
     cd $tmpdir/$package
 
-    if [[ "$package" =~ "daq-release" || "$package" =~ "styleguide" ]]; then
-	echo "Calling git checkout develop for $package in $PWD"
-	git checkout develop
+    # JCF, Jul-14-2021: prevent integration-period edits to the heads
+    # of the develop branches of daq-buildtools and daq-cmake from
+    # making it into the official documentation; point software
+    # integration groups to the GitHub pages if they want the
+    # latest-greatest
+
+    if [[ "$package" =~ "daq-buildtools" || "$package" =~ "daq-cmake" ]]; then
+	git checkout dunedaq-v2.8.2
     else
-	if [[ ! -e release_manifest.sh ]]; then
-	    curl -O $release_manifest_html
-	fi
-	package_dotted=$(echo $package | tr "-" ".") # Since all underscores, both in package names and versions, get subbed below
-	version=$( sed -r -n 's/_/./g;s/.*"'$package_dotted'\s+(v[0-9.]+).*/\1/p' release_manifest.sh )
-	if [[ "$version" == "" ]]; then
-	    echo "Unable to determine version of $package from $PWD/release_manifest.sh; exiting.." >&2
-	    exit 3
-	fi
-	
-	echo "Calling git checkout $version for $package in $PWD"
-	git checkout $version
-
-	if [[ "$?" != "0" ]]; then
-	    echo "There was a problem checking out version $version of the repo in $PWD; exiting..." >&2
-	    exit 2
-	fi
+	git checkout develop
     fi
-
     echo $tmpdir/$package
 
     if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" )  ]]; then
@@ -187,7 +173,7 @@ for package in $package_list ; do
 
 done
 
-#if [[ -d $tmpdir && "$tmpdir" =~ ^/tmp/.*$ ]]; then
-#    rm -rf $tmpdir
-#fi
+if [[ -d $tmpdir && "$tmpdir" =~ ^/tmp/.*$ ]]; then
+    rm -rf $tmpdir
+fi
 
