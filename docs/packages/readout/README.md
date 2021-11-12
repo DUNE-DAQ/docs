@@ -46,7 +46,7 @@ at /tmp/tp_frames.bin) and parsed using the "RawWibTp" format.
 
 To get the "tp_frames.bin" TP data:
 
-    curl https://cernbox.cern.ch/index.php/s/686ndOgupTli2RW/download -o /tmp/tp_frames.bin
+    curl https://cernbox.cern.ch/index.php/s/nd201XOcMCmHpIX/download -o /tmp/tp_frames.bin
 
 _Instructions on how to test the fake raw WIB TP readout will be provided here_
     
@@ -95,9 +95,9 @@ At the top level, the readout package uses the same directory structure as other
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: Florian Grötschla_
 
-_Date: Tue Nov 2 11:13:26 2021 -0500_
+_Date: Thu Nov 11 11:07:32 2021 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readout/issues](https://github.com/DUNE-DAQ/readout/issues)_
 </font>
