@@ -176,6 +176,7 @@ nav:
              - packages/flxlibs/Local-driver.md
           - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
+             - packages/lbrulibs/testing.md
           - readout:
              - About readout: packages/readout/README.md
              - packages/readout/Directory-structure.md
