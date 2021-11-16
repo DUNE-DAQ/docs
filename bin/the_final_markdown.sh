@@ -2,7 +2,7 @@
 
 here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 
-release_manifest_html="https://raw.githubusercontent.com/DUNE-DAQ/daq-release/prep-dunedaq-v2.8.2/configs/dunedaq-v2.8.2/release_manifest.sh"
+release_manifest_html="https://raw.githubusercontent.com/DUNE-DAQ/daq-release/dunedaq-v2.8.2/configs/dunedaq-v2.8.2/release_manifest.sh"
 
 # Reverse-alphabetical order for historical reasons
 
@@ -116,7 +116,12 @@ for package in $package_list ; do
 	git checkout develop
     else
 	if [[ ! -e release_manifest.sh ]]; then
-	    curl -O $release_manifest_html
+	    curl --fail -O $release_manifest_html
+
+	    if [[ "$?" != "0" ]]; then
+		echo "Unable to get $release_manifest_html off the web; exiting..." >&2
+		exit 4
+	    fi
 	fi
 	package_dotted=$(echo $package | tr "-" ".") # Since all underscores, both in package names and versions, get subbed below
 	version=$( sed -r -n 's/_/./g;s/.*"'$package_dotted'\s+(v[0-9.]+).*/\1/p' release_manifest.sh )
