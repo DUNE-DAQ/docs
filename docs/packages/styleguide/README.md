@@ -346,12 +346,12 @@ file that instantiates the template.
 
 All header files should have `#define` guards to prevent multiple
 inclusion. The format of the symbol name should be
-`<PROJECT>_<PATH>_<FILE>_HPP_`. The symbol should appear three times, like so:
+`<PACKAGE>_<PATH>_<FILE>_HPP_`. The symbol should appear three times, like so:
 ```c++
-#ifndef APP_FRAMEWORK_INCLUDE_APP_FRAMEWORK_DAQ_PROCESS_HPP_
-#define APP_FRAMEWORK_INCLUDE_APP_FRAMEWORK_DAQ_PROCESS_HPP_
+#ifndef FOOPACKAGE_INCLUDE_FOOPACKAGE_DAQ_PROCESS_HPP_
+#define FOOPACKAGE_INCLUDE_FOOPACKAGE_DAQ_PROCESS_HPP_
 ... 
-#endif // APP_FRAMEWORK_INCLUDE_APP_FRAMEWORK_DAQ_PROCESS_HPP_
+#endif // FOOPACKAGE_INCLUDE_FOOPACKAGE_DAQ_PROCESS_HPP_
 ```
 
 <a name="Forward_Declarations"></a>
@@ -1240,9 +1240,9 @@ how the style deviates from the standard.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: John Freeman_
 
-_Date: Fri May 28 15:54:03 2021 -0500_
+_Date: Wed Nov 17 14:35:58 2021 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>
