@@ -166,6 +166,8 @@ nav:
              - packages/dataformats/GeoIDV1.md
              - packages/dataformats/TriggerRecordHeaderDataV1.md
              - packages/dataformats/TriggerRecordHeaderDataV2.md
+          - fdreadoutlibs:
+             - About fdreadoutlibs: packages/fdreadoutlibs/README.md
           - flxlibs:
              - About flxlibs: packages/flxlibs/README.md
              - packages/flxlibs/Basic-tests.md
@@ -177,9 +179,12 @@ nav:
           - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
              - packages/lbrulibs/testing.md
-          - readout:
-             - About readout: packages/readout/README.md
-             - packages/readout/Directory-structure.md
+          - ndreadoutlibs:
+          - readoutlibs:
+             - About readoutlibs: packages/readoutlibs/README.md
+             - packages/readoutlibs/Directory-structure.md
+          - readoutmodules:
+             - About readoutmodules: packages/readoutmodules/README.md
        - Control:
           - minidaqapp:
              - About minidaqapp: packages/minidaqapp/README.md

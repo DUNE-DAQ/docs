@@ -95,9 +95,9 @@ At the top level, the readout package uses the same directory structure as other
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Florian Grötschla_
+_Author: roland-sipos_
 
-_Date: Thu Nov 11 11:07:32 2021 +0100_
+_Date: Fri Nov 12 11:02:03 2021 +0100_
 
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readout/issues](https://github.com/DUNE-DAQ/readout/issues)_
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readoutlibs/issues](https://github.com/DUNE-DAQ/readoutlibs/issues)_
 </font>

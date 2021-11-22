@@ -62,9 +62,9 @@ Lastly, `scripts/performance` contains code and configurations to do thread pinn
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Florian Grötschla_
+_Author: roland-sipos_
 
-_Date: Fri Jun 11 10:43:20 2021 +0200_
+_Date: Fri Nov 12 11:02:03 2021 +0100_
 
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readout/issues](https://github.com/DUNE-DAQ/readout/issues)_
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readoutlibs/issues](https://github.com/DUNE-DAQ/readoutlibs/issues)_
 </font>

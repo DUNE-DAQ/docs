@@ -36,11 +36,17 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
 
+[fdreadoutlibs](packages/fdreadoutlibs/README.md) _Classes for working with far detector data (WIB, SSP, etc.)_
+
 [flxlibs](packages/flxlibs/README.md) _DAQModules, utilities, and scripts for Upstream FELIX Readout Software_
 
 [lbrulibs](packages/lbrulibs/README.md) _DAQModules, utilities, and scripts for DUNE-ND Upstream DAQ Low Bandwidth Readout Unit_
 
-[readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
+[ndreadoutlibs](packages/ndreadoutlibs/README.md) _Classes for working with near detector data (e.g. PACMAN)_
+
+[readoutlibs](packages/readoutlibs/README.md) _Base classes for construction of readout-related DAQModules_
+
+[readoutmodules](packages/readoutmodules/README.md) _DAQModules for constructing readout-focused processes_
 
 ### Control
 

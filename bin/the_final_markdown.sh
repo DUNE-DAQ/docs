@@ -7,7 +7,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # ...alphabetical, with the exception of the packages which are used
 # for package development themselves
 
-package_list="trigger trigemu timinglibs timing serialization restcmd readout rcif opmonlib nwqueueadapters nanorc minidaqapp kafkaopmon logging listrev lbrulibs ipm integrationtest influxopmon flxlibs erskafka erses ers dfmodules dfmessages dataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
+package_list="trigger trigemu timinglibs timing serialization restcmd readoutmodules readoutlibs rcif opmonlib nwqueueadapters ndreadoutlibs nanorc minidaqapp kafkaopmon logging listrev lbrulibs ipm integrationtest influxopmon flxlibs fdreadoutlibs erskafka erses ers dfmodules dfmessages dataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
 
 mkdocs_yml="$here/../mkdocs.yml"
 

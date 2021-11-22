@@ -133,9 +133,12 @@ nav:
           - logging:
        - Readout:
           - dataformats:
+          - fdreadoutlibs:
           - flxlibs:
           - lbrulibs:
-          - readout:
+          - ndreadoutlibs:
+          - readoutlibs:
+          - readoutmodules:
        - Control:
           - minidaqapp:
           - nanorc:
