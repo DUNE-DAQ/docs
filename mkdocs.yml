@@ -179,7 +179,6 @@ nav:
           - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
              - packages/lbrulibs/testing.md
-          - ndreadoutlibs:
           - readoutlibs:
              - About readoutlibs: packages/readoutlibs/README.md
              - packages/readoutlibs/Directory-structure.md
