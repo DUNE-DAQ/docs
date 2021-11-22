@@ -1,55 +1,10 @@
-# readout - Readout software and utilities 
-Appfwk DAQModules, utilities, and scripts for DUNE Upstream DAQ Readout Software.
+# readoutlibs - Generic Readout software and utilities 
+Generic implementation for DUNE Upstream DAQ Readout Software.
 
 ## Building and setting up the workarea
 
-How to clone and build DUNE DAQ packages, including `readout`, is covered in [the daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/). You should follow these steps to set up your workarea that you can then use to run the following examples.
-
-## Examples
-Before running the application, please download a small binary file that contains WIB Frames from the following [CERNBox link](https://cernbox.cern.ch/index.php/s/7qNnuxD8igDOVJT), or from the commandline:
-
-    curl https://cernbox.cern.ch/index.php/s/7qNnuxD8igDOVJT/download -o frames.bin
-
-    
-For WIB2 frames, download the following file that contains 120 WIB-2 Frames from the following [CERNBox link](https://cernbox.cern.ch/index.php/s/ocrHxSU8PucxphE), or like so:
-
-    curl https://cernbox.cern.ch/index.php/s/ocrHxSU8PucxphE/download -o wib2-frames.bin
-
-If you download it to a different destination, please update the path of the source file in the configuration that you will use below. 
-
-To run a standalone readout app (instructions for the complete minidaqapp are included in the setup instructions above), you first create a config with:
-
-    python -m readout.app_confgen -n 2 app.json
-    
-Here, we use a fake card emulator with two WIB links. More options can be viewed with `-h`. Then, start the application with
-
-    daq_application -c stdin://app.json -n test
-    
-You can now issue commands by typing them and pressing enter. Issue the commands `init`, `conf` and then `start`. You will see some json output from the operational monitoring every 10 seconds.
-
-## Enabling the Software TPG
-To enable the SIMD accelerated software hit finding, one can use raw data recorded from ProtoDUNE-SP to get meaningful hits. A subset of these raw files can be found under:
-
-    /eos/experiment/neutplatform/protodune/rawdata/np04/protodune-sp/raw/2020/detector/test/None/02/00/00/01/
-    
-For single link tests, a good link file can be:
-
-    /eos/experiment/neutplatform/protodune/rawdata/np04/protodune-sp/raw/2020/detector/test/None/02/00/00/01/felix-2020-06-02-093338.0.0.0.bin
-
-The produced hit rate should be around 100kHz.
-
-## Enabling the fake TP source
-
-The FakeCardReader module is capable of reading raw WIB TP data by enabling the corresponding link 
-via configuration. Currently the fake TPs are read out from a binary file (with default location 
-at /tmp/tp_frames.bin) and parsed using the "RawWibTp" format.
-
-To get the "tp_frames.bin" TP data:
-
-    curl https://cernbox.cern.ch/index.php/s/nd201XOcMCmHpIX/download -o /tmp/tp_frames.bin
-
-_Instructions on how to test the fake raw WIB TP readout will be provided here_
-    
+How to clone and build DUNE DAQ packages, including `readoutlibs`, is covered in [the daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/). For some sample examples that demonstrate how to use `readoutlibs` check out the documentation of `readoutmodules`.
+ 
 ## A Deeper Look Into Readout: Functional Elements
 
 ### Data-flow Diagram (DFD)
@@ -95,9 +50,9 @@ At the top level, the readout package uses the same directory structure as other
 _Last git commit to the markdown source of this page:_
 
 
-_Author: roland-sipos_
+_Author: floriangroetschla_
 
-_Date: Fri Nov 12 11:02:03 2021 +0100_
+_Date: Mon Nov 22 15:05:47 2021 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readoutlibs/issues](https://github.com/DUNE-DAQ/readoutlibs/issues)_
 </font>
