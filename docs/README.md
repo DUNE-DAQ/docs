@@ -34,7 +34,11 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Readout
 
-[dataformats](packages/dataformats/README.md) _raw data reinterpretation utilities_
+[daqdataformats](packages/daqdataformats/README.md) _DUNE DAQ data formats_
+
+[detchannelmaps](packages/detchannelmaps/README.md) _DUNE detectors channel maps_
+
+[detdataformats](packages/detdataformats/README.md) _DUNE detectors data formats_
 
 [fdreadoutlibs](packages/fdreadoutlibs/README.md) _Classes for working with far detector data (WIB, SSP, etc.)_
 
