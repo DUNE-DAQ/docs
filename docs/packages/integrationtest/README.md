@@ -58,6 +58,8 @@ To run the test, go to the directory holding it and:
 pytest -s test_integration.py --frame-file /path/to/frames.bin
 ```
 
+Note that `--frame-file` must be given an _absolute_ path.
+
 The test framework handles running python with the confgen specified in the test file, then runs nanorc with the generated json files. Finally, the actual test functions are run.
 
 (The framework searches for the `nanorc` script in `$PATH`. If you want to use a `nanorc` from elsewhere, you can use the `--nanorc-path` argument to point the test to the `nanorc` script).
@@ -105,6 +107,7 @@ nanorc_command_list={ "longer": "boot init conf start 101 wait 1 resume wait 20 
                       "shorter": "boot init conf start 101 wait 1 resume wait 10 pause wait 1 stop wait 2 scrap terminate".split() }
 ```
 
+
 -----
 
 <font size="1">
@@ -113,7 +116,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Philip Rodrigues_
 
-_Date: Thu Aug 12 11:59:54 2021 +0200_
+_Date: Tue Nov 30 12:13:20 2021 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/integrationtest/issues](https://github.com/DUNE-DAQ/integrationtest/issues)_
 </font>
