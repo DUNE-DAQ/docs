@@ -337,36 +337,13 @@
         </dia:composite>
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#window_begin#</dia:string>
+            <dia:string>#request_information#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#timestamp_t#</dia:string>
+            <dia:string>#ComponentRequest#</dia:string>
           </dia:attribute>
           <dia:attribute name="value">
-            <dia:string>#s_invalid_timestamp#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="comment">
             <dia:string>##</dia:string>
-          </dia:attribute>
-          <dia:attribute name="visibility">
-            <dia:enum val="0"/>
-          </dia:attribute>
-          <dia:attribute name="abstract">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-          <dia:attribute name="class_scope">
-            <dia:boolean val="false"/>
-          </dia:attribute>
-        </dia:composite>
-        <dia:composite type="umlattribute">
-          <dia:attribute name="name">
-            <dia:string>#window_end#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="type">
-            <dia:string>#timestamp_t#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="value">
-            <dia:string>#s_invalid_timestamp#</dia:string>
           </dia:attribute>
           <dia:attribute name="comment">
             <dia:string>##</dia:string>
@@ -427,6 +404,29 @@
             <dia:boolean val="false"/>
           </dia:attribute>
         </dia:composite>
+        <dia:composite type="umlattribute">
+          <dia:attribute name="name">
+            <dia:string>#data_destination#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="type">
+            <dia:string>#std::string#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="value">
+            <dia:string>#""#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="comment">
+            <dia:string>##</dia:string>
+          </dia:attribute>
+          <dia:attribute name="visibility">
+            <dia:enum val="0"/>
+          </dia:attribute>
+          <dia:attribute name="abstract">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+          <dia:attribute name="class_scope">
+            <dia:boolean val="false"/>
+          </dia:attribute>
+        </dia:composite>
       </dia:attribute>
       <dia:attribute name="operations"/>
       <dia:attribute name="template">
@@ -437,13 +437,13 @@
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O3">
       <dia:attribute name="obj_pos">
-        <dia:point val="6.1,32.15"/>
+        <dia:point val="6.1,32.45"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="6.05,32.1;13.965,35"/>
+        <dia:rectangle val="6.05,32.4;13.965,35.3"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="6.1,32.15"/>
+        <dia:point val="6.1,32.45"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="7.8150000000000004"/>
@@ -572,13 +572,13 @@
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O4">
       <dia:attribute name="obj_pos">
-        <dia:point val="6.05,14.15"/>
+        <dia:point val="6.05,14.45"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="6,14.1;35.09,21"/>
+        <dia:rectangle val="6,14.4;35.09,21.3"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="6.05,14.15"/>
+        <dia:point val="6.05,14.45"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="28.989999999999998"/>
@@ -822,13 +822,13 @@
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O5">
       <dia:attribute name="obj_pos">
-        <dia:point val="6.1,21.5"/>
+        <dia:point val="6.1,21.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="6.05,21.45;34.37,27.35"/>
+        <dia:rectangle val="6.05,21.75;34.37,27.65"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="6.1,21.5"/>
+        <dia:point val="6.1,21.8"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="28.219999999999999"/>
@@ -1374,13 +1374,13 @@ class TypeDefaults : public daqdataformats::TypeDefaults {};#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O8">
       <dia:attribute name="obj_pos">
-        <dia:point val="6.15,27.8"/>
+        <dia:point val="6.15,28.1"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="6.1,27.75;35.19,31.45"/>
+        <dia:rectangle val="6.1,28.05;35.19,31.75"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="6.15,27.8"/>
+        <dia:point val="6.15,28.1"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="28.989999999999998"/>
@@ -1532,13 +1532,13 @@ class TypeDefaults : public daqdataformats::TypeDefaults {};#</dia:string>
     </dia:object>
     <dia:object type="UML - Class" version="0" id="O9">
       <dia:attribute name="obj_pos">
-        <dia:point val="6.15,35.65"/>
+        <dia:point val="6.15,35.95"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="6.1,35.6;41.35,39.3"/>
+        <dia:rectangle val="6.1,35.9;41.35,39.6"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="6.15,35.65"/>
+        <dia:point val="6.15,35.95"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="35.149999999999999"/>
