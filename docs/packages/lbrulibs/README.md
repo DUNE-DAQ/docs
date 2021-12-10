@@ -12,16 +12,16 @@ Current version tested with nightly: 23rd Nov 2021.
 ## ND-LAr: Examples with PACMAN data snapshots
 In one terminal, launch a fake pacman emulation by navigating to the test folder and running:
 
-    pacman-generator.py --input_file example-pacman-data.h5
+    python pacman-generator.py --input_file example-pacman-data.h5
 
 The script is able generate messages in a number of different ways. The interval of time between each message being sent, for example,
 is a configurable parameter. For more details run:
 
-    pacman-generator.py --help
+    python pacman-generator.py --help
 
 To test if the generator is working properly a simple python based ZMQ readout script is provided in the scripts folder:
 
-    python-readout.py
+    python python-readout.py
 
 This will receive the packets sent out by the generator over ZMQ and print out some useful debug information.
 
@@ -66,9 +66,9 @@ Configuration steps:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Krzysztof Furman_
+_Author: willpvazquez_
 
-_Date: Wed Nov 24 10:01:31 2021 -0600_
+_Date: Fri Dec 10 13:07:34 2021 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/lbrulibs/issues](https://github.com/DUNE-DAQ/lbrulibs/issues)_
 </font>
