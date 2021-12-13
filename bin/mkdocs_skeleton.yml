@@ -153,6 +153,7 @@ nav:
           - trigger:
        - Dataflow (physical):
           - ipm:
+          - networkmanager:
           - nwqueueadapters:
           - serialization:
        - Monitoring:

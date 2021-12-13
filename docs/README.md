@@ -80,6 +80,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [ipm](packages/ipm/README.md) _message passing between processes_
 
+[networkmanager](packages/networkmanager/README.md) _interface for performing network sends and receives directly from DAQ modules_
+
 [nwqueueadapters](packages/nwqueueadapters/README.md) _DAQModules that connect appfwk queues to IPM network connections_
 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
