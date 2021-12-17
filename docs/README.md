@@ -40,11 +40,17 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [detdataformats](packages/detdataformats/README.md) _DUNE detectors data formats_
 
+[fdreadoutlibs](packages/fdreadoutlibs/README.md) _Classes for working with far detector data (WIB, SSP, etc.)_
+
 [flxlibs](packages/flxlibs/README.md) _DAQModules, utilities, and scripts for Upstream FELIX Readout Software_
 
 [lbrulibs](packages/lbrulibs/README.md) _DAQModules, utilities, and scripts for DUNE-ND Upstream DAQ Low Bandwidth Readout Unit_
 
-[readout](packages/readout/README.md) _upstream DAQ readout, DAQModules, CCM interface implementations_
+[ndreadoutlibs](packages/ndreadoutlibs/README.md) _Classes for working with near detector data (e.g. PACMAN)_
+
+[readoutlibs](packages/readoutlibs/README.md) _Base classes for construction of readout-related DAQModules_
+
+[readoutmodules](packages/readoutmodules/README.md) _DAQModules for constructing readout-focused processes_
 
 ### Control
 
@@ -74,13 +80,13 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [ipm](packages/ipm/README.md) _message passing between processes_
 
+[networkmanager](packages/networkmanager/README.md) _interface for performing network sends and receives directly from DAQ modules_
+
 [nwqueueadapters](packages/nwqueueadapters/README.md) _DAQModules that connect appfwk queues to IPM network connections_
 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
 
 ### Monitoring
-
-[erses](packages/erses/README.md) _insert ERS messages into a searchable database_
 
 [erskafka](packages/erskafka/README.md) _the erskafka plugin_
 

@@ -135,9 +135,11 @@ nav:
           - daqdataformats:
           - detchannelmaps:
           - detdataformats:
+          - fdreadoutlibs:
           - flxlibs:
           - lbrulibs:
-          - readout:
+          - readoutlibs:
+          - readoutmodules:
        - Control:
           - minidaqapp:
           - nanorc:
@@ -151,10 +153,10 @@ nav:
           - trigger:
        - Dataflow (physical):
           - ipm:
+          - networkmanager:
           - nwqueueadapters:
           - serialization:
        - Monitoring:
-          - erses:
           - erskafka:
           - influxopmon:
           - kafkaopmon:
