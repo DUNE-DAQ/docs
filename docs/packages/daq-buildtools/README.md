@@ -23,7 +23,7 @@ Added /your/path/to/daq-buildtools/bin to PATH
 Added /your/path/to/daq-buildtools/scripts to PATH
 DBT setuptools loaded
 ```
-If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create.sh`, `dbt-build.sh`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections.
+If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create.py`, `dbt-build.py`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. Note that while `dbt-create.sh` and `dbt-build.sh` continue to work as of the dunedaq-v2.9.0 release their use is considered deprecated and they will be removed from daq-buildtools in the future. 
 
 Each time that you want to work with a DUNE DAQ work area in a fresh Linux shell, you'll need to set up daq-buildtools, either by repeating the method above, or by `cd`'ing into your work area and sourcing the link file named `dbt-env.sh`. Work areas are described momentarily. 
 
@@ -44,13 +44,13 @@ It will set up both the external packages and DAQ packages, as well as activate 
 
 Find a directory in which you want your work area to be a subdirectory (home directories are a popular choice) and `cd` into that directory. Then think of a good name for the work area (give it any name, but we'll refer to it as "MyTopDir" on this wiki). Run:
 ```sh
-dbt-create.sh [-c/--clone-pyvenv] <release> <name of work area subdirectory> # dunedaq-v2.9.0 is the most recent frozen release as of Dec-16-2021
+dbt-create.py [-c/--clone-pyvenv] <release> <name of work area subdirectory> # dunedaq-v2.9.0 is the most recent frozen release as of Dec-16-2021
 cd <name of work area subdirectory>
 ```
 
-The option `-c/--clone-pyvenv` for `dbt-create.sh` is optional. If used, the python virtual environment created in the work area will be a clone of an existing one from the release directory. This avoids the compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory, and speeds up the work-area creation significantly. The first time running `dbt-create.sh` with this option on a node may take longer timer since cvmfs needs to fetch these files into local cache first.
+The option `-c/--clone-pyvenv` for `dbt-create.py` is optional. If used, the python virtual environment created in the work area will be a clone of an existing one from the release directory. This avoids the compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory, and speeds up the work-area creation significantly. The first time running `dbt-create.py` with this option on a node may take longer timer since cvmfs needs to fetch these files into local cache first.
 
-The second step's important: remember to `cd` into the subdirectory you just created after `dbt-create.sh` finishes running. 
+The second step's important: remember to `cd` into the subdirectory you just created after `dbt-create.py` finishes running. 
 
 The structure of your work area will look like the following:
 ```txt
@@ -83,11 +83,11 @@ We're about to build and install the `listrev` package. (&#x1F534; Note: if you 
 Now, do the following:
 ```sh
 dbt-workarea-env  # If you haven't already run this
-dbt-build.sh
+dbt-build.py
 ```
 ...and this will build `listrev` in the local `./build` subdirectory and then install it as a package either in the local `./install` subdirectory or in whatever you pointed `DBT_INSTALL_DIR` to. 
 
-Since the `dunedaq-v2.6.0` release, `dbt-create.sh` has supported not only frozen releases but the use of nightly built releases as well. Add `-n` to the `dbt-create.sh` command above to use nightly releases, e.g. `dbt-create.sh -n N21-05-13 <your work area subdirectory>`. Pass `-l` to `dbt-create.sh` in order to list all available frozen releases, and `-l -n` to list all available nightly releases.
+Since the `dunedaq-v2.6.0` release, `dbt-create.py` has supported not only frozen releases but the use of nightly built releases as well. Add `-n` to the `dbt-create.py` command above to use nightly releases, e.g. `dbt-create.py -n N21-05-13 <your work area subdirectory>`. Pass `-l` to `dbt-create.py` in order to list all available frozen releases, and `-l -n` to list all available nightly releases.
 
 
 ### Working with more repos
@@ -103,39 +103,39 @@ Once you've added your repos and built them, you'll want to run `dbt-workarea-en
 
 ### Useful build options
 
-`dbt-build.sh` will by default skip CMake's config+generate stages and go straight to the build stage _unless_ either the `CMakeCache.txt` file isn't found in `./build` or you've just added a new repo to `./sourcecode`. If you want to remove all the contents of `./build` and run config+generate+build, all you need to do is add the `--clean` option, i.e.
+`dbt-build.py` will by default skip CMake's config+generate stages and go straight to the build stage _unless_ either the `CMakeCache.txt` file isn't found in `./build` or you've just added a new repo to `./sourcecode`. If you want to remove all the contents of `./build` and run config+generate+build, all you need to do is add the `--clean` option, i.e.
 ```
-dbt-build.sh --clean
+dbt-build.py --clean
 ```
 One case where you'd want to do this is if you changed the installation directory variable as described above. 
 
 And if, after the build, you want to run the unit tests, just add the `--unittest` option. Note that it can be used with or without `--clean`, so, e.g.:
 ```
-dbt-build.sh --clean --unittest  # Blow away the contents of ./build, run config+generate+build, and then run the unit tests
+dbt-build.py --clean --unittest  # Blow away the contents of ./build, run config+generate+build, and then run the unit tests
 ```
 ..where in the above case, you blow away the contents of `./build`,  run config+generate+build, install the result in `$DBT_INSTALL_DIR` and then run the unit tests. Be aware that for many packages, unit tests will only (fully) work if you've also rerun `dbt-workarea-env` with the argument `--force-ups-reload` added. 
 
 To check for deviations from the coding rules described in the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/), run with the `--lint` option:
 ```
-dbt-build.sh --lint
+dbt-build.py --lint
 ```
 ...though be aware that some guideline violations (e.g., having a function which tries to do unrelated things) can't be picked up by the automated linter. Also note that you can use `dbt-clang-format.sh` in order to automatically fix whitespace issues in your code; type it at the command line without arguments to learn how to use it. 
 
-Note that unlike the other options to `dbt-build.sh`, `--lint` and `--unittest` are both capable of taking an optional argument, which is the name of a specific repo in your work area which you'd like to either lint or run unit tests for. This can be useful if you're focusing on developing one of several repos in your work area. It should appear after an equals sign, e.g., `dbt-build.sh --lint=<repo you're working on>`.
+Note that unlike the other options to `dbt-build.py`, `--lint` and `--unittest` are both capable of taking an optional argument, which is the name of a specific repo in your work area which you'd like to either lint or run unit tests for. This can be useful if you're focusing on developing one of several repos in your work area. It should appear after an equals sign, e.g., `dbt-build.py --lint=<repo you're working on>`.
 
 If you want to see verbose output from the compiler, all you need to do is add the `--cpp-verbose` option:
 ```
-dbt-build.sh --cpp-verbose 
+dbt-build.py --cpp-verbose 
 ```
 
 If you want to change cmake message log level, you can use the `--cmake-msg-lvl` option:
 ```
-dbt-build.sh --cmake-msg-lvl=<ERROR|WARNING|NOTICE|STATUS|VERBOSE|DEBUG|TRACE>
+dbt-build.py --cmake-msg-lvl=<ERROR|WARNING|NOTICE|STATUS|VERBOSE|DEBUG|TRACE>
 ```
 
 You can see all the options listed if you run the script with the `--help` command, i.e.
 ```
-dbt-build.sh --help
+dbt-build.py --help
 ```
 Finally, note that both the output of your builds and your unit tests are logged to files in the `./log` subdirectory. These files will have ASCII color codes which make them difficult to read with some tools; `less -R <logfilename>`, however, will display the colors and not the codes themselves. 
 
@@ -197,7 +197,7 @@ And you can again type `init`, etc. However, unlike previously, now you'll want 
 <a name="adding_extra_ups_products"></a>
 ## Adding extra UPS products and product pools
 
-Sometimes it is necessary to tweak the baseline list of UPS products or even UPS product pools to add extra dependencies; skip ahead to the next section if you don't need to worry about this. Adding extra dependencies can be easily done by editing the `dbt-settings` file copied over from daq-buildtools by `dbt-create.sh` and adding the new entries to `dune_products_dirs`  and `dune_daqpackages` as needed. See `/example/of/additional/user/declared/product/pool` and `package_declared_by_user v1_2_3 e19:prof` in the example of an edited `dbt-settings` file, below. Please note that package versions in your `dbt-settings` file may be different than those in this example since what you see below is simply a snapshot used for educational reasons:
+Sometimes it is necessary to tweak the baseline list of UPS products or even UPS product pools to add extra dependencies; skip ahead to the next section if you don't need to worry about this. Adding extra dependencies can be easily done by editing the `dbt-settings` file copied over from daq-buildtools by `dbt-create.py` and adding the new entries to `dune_products_dirs`  and `dune_daqpackages` as needed. See `/example/of/additional/user/declared/product/pool` and `package_declared_by_user v1_2_3 e19:prof` in the example of an edited `dbt-settings` file, below. Please note that package versions in your `dbt-settings` file may be different than those in this example since what you see below is simply a snapshot used for educational reasons:
 
 ```bash
 dune_products_dirs=(
@@ -278,7 +278,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Dec 17 16:52:07 2021 -0600_
+_Date: Sat Dec 18 10:57:09 2021 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
