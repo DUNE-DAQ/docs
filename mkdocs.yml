@@ -144,7 +144,6 @@ nav:
           - minidaqapp:
           - nanorc:
           - restcmd:
-             - About restcmd: packages/restcmd/README.md
        - Dataflow (logical):
           - dfmessages:
           - dfmodules:
