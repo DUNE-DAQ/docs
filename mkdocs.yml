@@ -131,8 +131,6 @@ nav:
           - cmdlib:
           - ers:
           - logging:
-             - About logging: packages/logging/README.md
-             - packages/logging/ers-conventions.md
        - Readout:
           - daqdataformats:
           - detchannelmaps:
@@ -147,12 +145,7 @@ nav:
              - About readoutmodules: packages/readoutmodules/README.md
        - Control:
           - minidaqapp:
-             - About minidaqapp: packages/minidaqapp/README.md
-             - packages/minidaqapp/ConfigurationsForCasualUsers.md
-             - packages/minidaqapp/InstructionsForCasualUsers.md
-             - packages/minidaqapp/MiniDAQApp-Diagrams.md
           - nanorc:
-             - About nanorc: packages/nanorc/README.md
           - restcmd:
              - About restcmd: packages/restcmd/README.md
        - Dataflow (logical):
@@ -170,7 +163,6 @@ nav:
        - Dataflow (physical):
           - ipm:
           - networkmanager:
-             - About networkmanager: packages/networkmanager/README.md
           - nwqueueadapters:
              - About nwqueueadapters: packages/nwqueueadapters/README.md
           - serialization:
@@ -180,13 +172,11 @@ nav:
           - erskafka:
           - influxopmon:
           - kafkaopmon:
-             - About kafkaopmon: packages/kafkaopmon/README.md
           - opmonlib:
              - About opmonlib: packages/opmonlib/README.md
              - packages/opmonlib/Instructions-for-DAQ-module-users.md
        - Educational:
           - listrev:
-             - About listrev: packages/listrev/README.md
 
 
 
