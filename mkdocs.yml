@@ -151,8 +151,6 @@ nav:
           - timinglibs:
           - trigemu:
           - trigger:
-             - About trigger: packages/trigger/README.md
-             - packages/trigger/trigger-alg-howto.md
        - Dataflow (physical):
           - ipm:
           - networkmanager:
