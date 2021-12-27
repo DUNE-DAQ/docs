@@ -164,7 +164,6 @@ nav:
           - ipm:
           - networkmanager:
           - nwqueueadapters:
-             - About nwqueueadapters: packages/nwqueueadapters/README.md
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:
@@ -173,8 +172,6 @@ nav:
           - influxopmon:
           - kafkaopmon:
           - opmonlib:
-             - About opmonlib: packages/opmonlib/README.md
-             - packages/opmonlib/Instructions-for-DAQ-module-users.md
        - Educational:
           - listrev:
 
