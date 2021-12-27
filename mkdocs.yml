@@ -139,11 +139,16 @@ nav:
           - flxlibs:
           - lbrulibs:
           - readoutlibs:
+             - About readoutlibs: packages/readoutlibs/README.md
+             - packages/readoutlibs/Directory-structure.md
           - readoutmodules:
+             - About readoutmodules: packages/readoutmodules/README.md
        - Control:
           - minidaqapp:
           - nanorc:
+             - About nanorc: packages/nanorc/README.md
           - restcmd:
+             - About restcmd: packages/restcmd/README.md
        - Dataflow (logical):
           - dfmessages:
           - dfmodules:
@@ -159,7 +164,9 @@ nav:
        - Dataflow (physical):
           - ipm:
           - networkmanager:
+             - About networkmanager: packages/networkmanager/README.md
           - nwqueueadapters:
+             - About nwqueueadapters: packages/nwqueueadapters/README.md
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:
@@ -168,6 +175,8 @@ nav:
           - influxopmon:
           - kafkaopmon:
           - opmonlib:
+             - About opmonlib: packages/opmonlib/README.md
+             - packages/opmonlib/Instructions-for-DAQ-module-users.md
        - Educational:
           - listrev:
 
