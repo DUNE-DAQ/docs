@@ -144,7 +144,6 @@ nav:
           - appfwk:
              - About appfwk: packages/appfwk/README.md
              - packages/appfwk/Daq-Application.md
-             - packages/appfwk/ThreadHelper-Usage-Notes.md
           - cmdlib:
              - About cmdlib: packages/cmdlib/README.md
              - packages/cmdlib/Home.md
