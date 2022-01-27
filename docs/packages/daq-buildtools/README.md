@@ -23,7 +23,7 @@ Added /your/path/to/daq-buildtools/bin to PATH
 Added /your/path/to/daq-buildtools/scripts to PATH
 DBT setuptools loaded
 ```
-If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create.py`, `dbt-build.py`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. Note that while `dbt-create.sh` and `dbt-build.sh` continue to work as of the dunedaq-v2.9.0 release their use is considered deprecated and they will be removed from daq-buildtools in the future. 
+If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create.sh`, `dbt-build.py`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. Note that while `dbt-build.sh` continues to work as of the dunedaq-v2.9.0 release its use is considered deprecated and it will be removed from daq-buildtools in the future. 
 
 Each time that you want to work with a DUNE DAQ work area in a fresh Linux shell, you'll need to set up daq-buildtools, either by repeating the method above, or by `cd`'ing into your work area and sourcing the link file named `dbt-env.sh`. Work areas are described momentarily. 
 
@@ -44,13 +44,13 @@ It will set up both the external packages and DAQ packages, as well as activate 
 
 Find a directory in which you want your work area to be a subdirectory (home directories are a popular choice) and `cd` into that directory. Then think of a good name for the work area (give it any name, but we'll refer to it as "MyTopDir" on this wiki). Run:
 ```sh
-dbt-create.py [-c/--clone-pyvenv] <release> <name of work area subdirectory> # dunedaq-v2.9.0 is the most recent frozen release as of Dec-16-2021
+dbt-create.sh [-c/--clone-pyvenv] <release> <name of work area subdirectory> # dunedaq-v2.9.0 is the most recent frozen release as of Dec-16-2021
 cd <name of work area subdirectory>
 ```
 
-The option `-c/--clone-pyvenv` for `dbt-create.py` is optional. If used, the python virtual environment created in the work area will be a clone of an existing one from the release directory. This avoids the compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory, and speeds up the work-area creation significantly. The first time running `dbt-create.py` with this option on a node may take longer timer since cvmfs needs to fetch these files into local cache first.
+The option `-c/--clone-pyvenv` for `dbt-create.sh` is optional. If used, the python virtual environment created in the work area will be a clone of an existing one from the release directory. This avoids the compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory, and speeds up the work-area creation significantly. The first time running `dbt-create.sh` with this option on a node may take longer timer since cvmfs needs to fetch these files into local cache first.
 
-The second step's important: remember to `cd` into the subdirectory you just created after `dbt-create.py` finishes running. 
+The second step's important: remember to `cd` into the subdirectory you just created after `dbt-create.sh` finishes running. 
 
 The structure of your work area will look like the following:
 ```txt
@@ -87,7 +87,7 @@ dbt-build.py
 ```
 ...and this will build `listrev` in the local `./build` subdirectory and then install it as a package either in the local `./install` subdirectory or in whatever you pointed `DBT_INSTALL_DIR` to. 
 
-Since the `dunedaq-v2.6.0` release, `dbt-create.py` has supported not only frozen releases but the use of nightly built releases as well. Add `-n` to the `dbt-create.py` command above to use nightly releases, e.g. `dbt-create.py -n N21-05-13 <your work area subdirectory>`. Pass `-l` to `dbt-create.py` in order to list all available frozen releases, and `-l -n` to list all available nightly releases.
+Since the `dunedaq-v2.6.0` release, `dbt-create.sh` has supported not only frozen releases but the use of nightly built releases as well. Add `-n` to the `dbt-create.sh` command above to use nightly releases, e.g. `dbt-create.sh -n N21-05-13 <your work area subdirectory>`. Pass `-l` to `dbt-create.sh` in order to list all available frozen releases, and `-l -n` to list all available nightly releases.
 
 
 ### Working with more repos
@@ -197,7 +197,7 @@ And you can again type `init`, etc. However, unlike previously, now you'll want 
 <a name="adding_extra_ups_products"></a>
 ## Adding extra UPS products and product pools
 
-Sometimes it is necessary to tweak the baseline list of UPS products or even UPS product pools to add extra dependencies; skip ahead to the next section if you don't need to worry about this. Adding extra dependencies can be easily done by editing the `dbt-settings` file copied over from daq-buildtools by `dbt-create.py` and adding the new entries to `dune_products_dirs`  and `dune_daqpackages` as needed. See `/example/of/additional/user/declared/product/pool` and `package_declared_by_user v1_2_3 e19:prof` in the example of an edited `dbt-settings` file, below. Please note that package versions in your `dbt-settings` file may be different than those in this example since what you see below is simply a snapshot used for educational reasons:
+Sometimes it is necessary to tweak the baseline list of UPS products or even UPS product pools to add extra dependencies; skip ahead to the next section if you don't need to worry about this. Adding extra dependencies can be easily done by editing the `dbt-settings` file copied over from daq-buildtools by `dbt-create.sh` and adding the new entries to `dune_products_dirs`  and `dune_daqpackages` as needed. See `/example/of/additional/user/declared/product/pool` and `package_declared_by_user v1_2_3 e19:prof` in the example of an edited `dbt-settings` file, below. Please note that package versions in your `dbt-settings` file may be different than those in this example since what you see below is simply a snapshot used for educational reasons:
 
 ```bash
 dune_products_dirs=(
@@ -278,7 +278,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Sat Dec 18 10:57:09 2021 -0600_
+_Date: Thu Jan 27 10:53:52 2022 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
