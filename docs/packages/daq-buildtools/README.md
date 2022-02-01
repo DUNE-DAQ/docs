@@ -13,8 +13,8 @@ To get set up, you'll need access to the ups product area `/cvmfs/dunedaq.opensc
 Simply do:
 
 ```bash
-source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt <frozen release>
+git clone https://github.com/DUNE-DAQ/daq-buildtools -b develop
+source daq-buildtools/env.sh
 ```
 
 Then you'll see something like:
@@ -278,7 +278,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Jan 27 10:53:52 2022 -0600_
+_Date: Tue Feb 1 12:51:06 2022 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
