@@ -119,7 +119,7 @@ for package in $package_list ; do
     # want the latest-greatest
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout v4.1.2_for_docs
+	git checkout v4.1.3_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout v2.1.0
     else
