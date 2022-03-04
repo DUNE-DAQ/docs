@@ -158,6 +158,7 @@ nav:
              - About daqdataformats: packages/daqdataformats/README.md
              - packages/daqdataformats/ComponentRequestV0.md
              - packages/daqdataformats/ComponentRequestV1.md
+             - packages/daqdataformats/DataFormatNotes.md
              - packages/daqdataformats/FragmentHeaderV1.md
              - packages/daqdataformats/FragmentHeaderV2.md
              - packages/daqdataformats/FragmentHeaderV3.md
