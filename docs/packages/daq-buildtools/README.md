@@ -20,9 +20,10 @@ Simply do:
 
 ```bash
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt <frozen release>
+setup_dbt <frozen release> # dunedaq-v2.10.0-cs8
+# setup_dbt latest # for the latest frozen release.
 ```
-where as of Mar-15-2022 the latest frozen release is `dunedaq-v2.10.0`. 
+where as of Mar-15-2022 the latest frozen release is <span style="color:blue">dunedaq-v2.10.0</span><span style="color:red">-cs8</span> for CentOS Stream 8 and <span style="color:blue">dunedaq-v2.10.0</span><span style="color:red">-c7</span> for CentOS 7 or SL7.
 
 Then you'll see something like:
 ```
@@ -37,10 +38,10 @@ Each time that you want to work with a DUNE DAQ work area in a fresh Linux shell
 <a name="Running_a_release_from_cvmfs"></a>
 ## Running a release from cvmfs
 
-Running a release from cvmfs without creating a work area is supported since the `dunedaq-v2.8.1` release. To do that, simply run the following:
+Running a release from cvmfs without creating a work area is supported since the `dunedaq-v2.8.1` release. To do that, simply run the following (&#x1F53A; Please note: &#x1F53A; there are two variants of the release for `dunedaq-v2.10.0`. The `<release>` field mentioned in this page should be either `dunedaq-v2.10.0-cs8` or `dunedaq-v2.10.0-c7`):
 
 ```sh
-dbt-setup-release <release> 
+dbt-setup-release <release> # e.g. dbt-setup-release dunedaq-v2.10.0-cs8
 ```
 
 It will set up both the external packages and DAQ packages, as well as activate the python virtual environment. Note that the python virtual environment activated here is read-only. You'd want to run `dbt-setup-release` only if you weren't developing DUNE DAQ software, the topic covered for the remainder of this document. However, if you don't want a frozen set of versioned packages - which you wouldn't, if you were developing code - please continue reading.
@@ -54,7 +55,7 @@ Find a directory in which you want your work area to be a subdirectory (home dir
 dbt-create.py [-c/--clone-pyvenv] -n <nightly release> <name of work area subdirectory> 
 cd <name of work area subdirectory>
 ```
-...where examples of nightly releases are `last_successful`, `N22-03-13`, `N22-03-13-cs8`, etc. To see all available nightly releases, run `dbt-create.py -l -n`. Less common but also possible is to build your repos not against a nightly release but against a frozen release; the commands you pass to `dbt-create.py` are the same, but with the `-n` dropped. 
+...where examples of nightly releases are `last_successful` (for the CentOS 7 release variant), `last_successful_cs8` (for the CentOS Stream 8 variant), `N22-03-13`, `N22-03-13-cs8`, etc. To see all available nightly releases, run `dbt-create.py -l -n`. Less common but also possible is to build your repos not against a nightly release but against a frozen release; the commands you pass to `dbt-create.py` are the same, but with the `-n` dropped.
 
 The option `-c/--clone-pyvenv` for `dbt-create.py` is optional. If used, the python virtual environment created in the work area will be a clone of an existing one from the release directory. This avoids the compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory, and speeds up the work-area creation significantly. The first time running `dbt-create.py` with this option on a node may take a longer time since cvmfs needs to fetch these files into local cache first.
 
@@ -282,9 +283,9 @@ As the names suggest, `dune_products_dirs` contains the list of UPS product pool
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: Pengfei Ding_
 
-_Date: Tue Mar 15 12:53:42 2022 -0500_
+_Date: Fri Mar 18 10:42:11 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
