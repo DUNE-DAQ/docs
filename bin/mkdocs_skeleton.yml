@@ -147,7 +147,7 @@ nav:
        - Dataflow (logical):
           - dfmessages:
           - dfmodules:
-	  - hdf5libs:
+          - hdf5libs:
           - timing:
           - timinglibs:
           - trigemu:
