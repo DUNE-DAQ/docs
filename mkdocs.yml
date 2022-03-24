@@ -204,6 +204,8 @@ nav:
           - dfmodules:
              - About dfmodules: packages/dfmodules/README.md
              - packages/dfmodules/TRB_metrics.md
+	  - hdf5libs:
+             - About hdf5libs: packages/hdf5libs/README.md
           - timing:
              - About timing: packages/timing/README.md
           - timinglibs:

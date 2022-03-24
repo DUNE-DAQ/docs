@@ -68,6 +68,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [dfmodules](packages/dfmodules/README.md) _dataflow applications_
 
+[hdf5libs](packages/hdf5libs/README.md) _Support for reading/writing HDF5 data files_
+
 [timing](packages/timing/README.md) _C++ interface to the timing firmware_
 
 [timinglibs](packages/timinglibs/README.md) _timing control and monitoring_
