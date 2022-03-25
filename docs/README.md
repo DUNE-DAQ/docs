@@ -32,6 +32,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
 
+[utilities](packages/utilities/README.md) _a toolbox of classes and functions_
+
 ### Readout
 
 [daqdataformats](packages/daqdataformats/README.md) _DUNE DAQ data formats_
