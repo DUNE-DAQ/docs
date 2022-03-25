@@ -20,8 +20,6 @@ export DUNEDAQ_ERS_ERROR="erstrace,throttle(30,100),lstderr,erskafka(dqmbroadcas
 export DUNEDAQ_ERS_FATAL="erstrace,lstderr,erskafka(dqmbroadcast:9092)"
 ```
 
-erskafka is not included in the `dunedaq-2.6.0` frozen release, if you are running `dunedaq-v2.6.0`, modify the build order to add erskafka directly after [erses](https://dune-daq-sw.readthedocs.io/en/latest/packages/erses/) (by default `YourWorkarea/sourcecode/dbt-build-order.cmake`). Do check that you have access to the kafka library from dune externals (`librdkafka        v1_7_0       e19:prof`) from `/cvmfs/dunedaq-development.opensciencegrid.org/products`.
-
 Default platform: https://dunedaqreporting.app.cern.ch/ErrorReports
 
 For any further information, contact Yann Donon (yann.donon@cern.ch).
@@ -33,9 +31,9 @@ For any further information, contact Yann Donon (yann.donon@cern.ch).
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jcfreeman2_
 
-_Date: Thu Aug 5 14:02:15 2021 -0500_
+_Date: Fri Mar 25 15:34:41 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/erskafka/issues](https://github.com/DUNE-DAQ/erskafka/issues)_
 </font>

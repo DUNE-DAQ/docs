@@ -158,7 +158,6 @@ nav:
           - nwqueueadapters:
           - serialization:
        - Monitoring:
-          - erses:
           - erskafka:
           - influxopmon:
           - kafkaopmon:

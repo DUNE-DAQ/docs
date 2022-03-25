@@ -225,8 +225,6 @@ nav:
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:
-          - erses:
-             - About erses: packages/erses/README.md
           - erskafka:
              - About erskafka: packages/erskafka/README.md
           - influxopmon:

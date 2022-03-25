@@ -90,8 +90,6 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Monitoring
 
-[erses](packages/erses/README.md) _insert ERS messages into a searchable database_
-
 [erskafka](packages/erskafka/README.md) _the erskafka plugin_
 
 [influxopmon](packages/influxopmon/README.md) _Influx database based plugin for operational monitoring_
