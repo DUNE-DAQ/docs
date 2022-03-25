@@ -189,11 +189,11 @@ nav:
           - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
        - Control:
-          - minidaqapp:
-             - About minidaqapp: packages/minidaqapp/README.md
-             - packages/minidaqapp/ConfigurationsForCasualUsers.md
-             - packages/minidaqapp/InstructionsForCasualUsers.md
-             - packages/minidaqapp/MiniDAQApp-Diagrams.md
+          - daqconf:
+             - About daqconf: packages/daqconf/README.md
+             - packages/daqconf/ConfigurationsForCasualUsers.md
+             - packages/daqconf/daqconf-Diagrams.md
+             - packages/daqconf/InstructionsForCasualUsers.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
           - restcmd:

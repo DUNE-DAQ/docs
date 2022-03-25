@@ -54,7 +54,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Control
 
-[minidaqapp](packages/minidaqapp/README.md) _application to read out Felix data and store it in HDF5 files on disk_
+[daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_
 
 [nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
 

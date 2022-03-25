@@ -141,7 +141,7 @@ nav:
           - readoutlibs:
           - readoutmodules:
        - Control:
-          - minidaqapp:
+          - daqconf:
           - nanorc:
           - restcmd:
        - Dataflow (logical):
