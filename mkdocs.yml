@@ -1,3 +1,5 @@
+# REMINDER: USE SPACES INSTEAD OF TABS IN THIS FILE
+
 # Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -144,7 +146,6 @@ nav:
           - appfwk:
              - About appfwk: packages/appfwk/README.md
              - packages/appfwk/Daq-Application.md
-             - packages/appfwk/ThreadHelper-Usage-Notes.md
           - cmdlib:
              - About cmdlib: packages/cmdlib/README.md
              - packages/cmdlib/Home.md
@@ -154,11 +155,15 @@ nav:
           - logging:
              - About logging: packages/logging/README.md
              - packages/logging/ers-conventions.md
+          - utilities:
+             - About utilities: packages/utilities/README.md
+             - packages/utilities/WorkerThread-Usage-Notes.md
        - Readout:
           - daqdataformats:
              - About daqdataformats: packages/daqdataformats/README.md
              - packages/daqdataformats/ComponentRequestV0.md
              - packages/daqdataformats/ComponentRequestV1.md
+             - packages/daqdataformats/DataFormatNotes.md
              - packages/daqdataformats/FragmentHeaderV1.md
              - packages/daqdataformats/FragmentHeaderV2.md
              - packages/daqdataformats/FragmentHeaderV3.md
@@ -189,11 +194,11 @@ nav:
           - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
        - Control:
-          - minidaqapp:
-             - About minidaqapp: packages/minidaqapp/README.md
-             - packages/minidaqapp/ConfigurationsForCasualUsers.md
-             - packages/minidaqapp/InstructionsForCasualUsers.md
-             - packages/minidaqapp/MiniDAQApp-Diagrams.md
+          - daqconf:
+             - About daqconf: packages/daqconf/README.md
+             - packages/daqconf/ConfigurationsForCasualUsers.md
+             - packages/daqconf/daqconf-Diagrams.md
+             - packages/daqconf/InstructionsForCasualUsers.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
           - restcmd:
@@ -204,6 +209,8 @@ nav:
           - dfmodules:
              - About dfmodules: packages/dfmodules/README.md
              - packages/dfmodules/TRB_metrics.md
+          - hdf5libs:
+             - About hdf5libs: packages/hdf5libs/README.md
           - timing:
              - About timing: packages/timing/README.md
           - timinglibs:

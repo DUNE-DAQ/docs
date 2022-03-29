@@ -11,12 +11,12 @@ The library should be used calling the library's "publish" function with as argu
 The library output is the return statement from the CPR message and, if successfull, the insertion of the JSON content to the TSDB.
 
 ### URI example :
-the influxopmon URI presents as such: `influx://188.185.88.195:80/write?db=db1`
+the influxopmon URI presents as such: `influx://opmondb.cern.ch:31002/write?db=influxdb`
 
 Translating in the full, following URI eyample:
 
 ```
-daq_application -c rest://localhost:12345 --name yourchoosenname -i influx://188.185.88.195:80/write?db=db1 
+daq_application -c rest://localhost:12345 --name yourchoosenname -i influx://opmondb.cern.ch:31002/write?db=influxdb 
 ```
 
 ### Step-by-step :
@@ -69,22 +69,6 @@ Influxopmon changes, if necessary, UNIX EPOCH time format to UNIX EPOCH time for
 ##### `private check_data_type`
 Puts the correct influx parameter delimiter according to the data type of an entry, for example using ' " ' for string delimitation.
 
-### Authentication
-For security and information disclosure reasons, influxopmon, does not handle database authentication. The authentication is instead handled by an nginx instance is installed on a CERN openstack centos7 server.
-
-#### Configuration
-the redirection is handled at the server's / as following.
-```
-location / {
-	proxy_pass https://dbod-testinfluxyd.cern.ch:8095/write;
-	proxy_set_header Authorization "Token username:password";
-}
-```
-#### Logs
-Nginx redirection logs is available at 188.185.88.195/var/log/nginx/access.log 
-
-Access to the server can be requested in necessary to Yann Donon (yann.donon@cern.ch).
-
 ## Notes :
 The database is queried using [CPR](https://github.com/whoshuu/cpr "CPR"), which is a [libcurl](https://curl.se/libcurl/ "libcurl") wrapper.
 
@@ -101,9 +85,9 @@ For any further information, contact Yann Donon (yann.donon@cern.ch).
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Alessandro Thea_
+_Author: glehmannmiotto_
 
-_Date: Wed Nov 3 09:54:34 2021 +0100_
+_Date: Mon Mar 14 13:02:05 2022 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/influxopmon/issues](https://github.com/DUNE-DAQ/influxopmon/issues)_
 </font>

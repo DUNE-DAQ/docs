@@ -32,6 +32,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [logging](packages/logging/README.md) _contains the functions DUNE DAQ packages use to output text_
 
+[utilities](packages/utilities/README.md) _a toolbox of classes and functions_
+
 ### Readout
 
 [daqdataformats](packages/daqdataformats/README.md) _DUNE DAQ data formats_
@@ -54,7 +56,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Control
 
-[minidaqapp](packages/minidaqapp/README.md) _application to read out Felix data and store it in HDF5 files on disk_
+[daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_
 
 [nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
 
@@ -67,6 +69,8 @@ For the other packages, please click on one of the links below. To learn how to 
 [dfmessages](packages/dfmessages/README.md) _dataflow messages_
 
 [dfmodules](packages/dfmodules/README.md) _dataflow applications_
+
+[hdf5libs](packages/hdf5libs/README.md) _Support for reading/writing HDF5 data files_
 
 [timing](packages/timing/README.md) _C++ interface to the timing firmware_
 

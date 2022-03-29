@@ -2,11 +2,12 @@
 
 here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 
-#release_manifest_html="https://raw.githubusercontent.com/DUNE-DAQ/daq-release/dunedaq-v2.8.2/configs/dunedaq-v2.8.2/release_manifest.sh"
+# Reverse alphabetical order so the packages in the drop-down menu will appear in regular alphabetical order
 
-# Reverse-alphabetical order for historical reasons
+# ...alphabetical, with the exception of the packages which are used
+# for package development themselves
 
-package_list="trigger trigemu timinglibs timing serialization restcmd readoutmodules readoutlibs rcif opmonlib nwqueueadapters networkmanager ndreadoutlibs nanorc minidaqapp kafkaopmon logging listrev lbrulibs ipm integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dfmodules dfmessages detdataformats detchannelmaps daqdataformats cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
+package_list="utilities trigger trigemu timinglibs timing serialization restcmd readoutmodules readoutlibs rcif opmonlib nwqueueadapters networkmanager ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -111,35 +112,19 @@ for package in $package_list ; do
 
     cd $tmpdir/$package
 
-    if [[ "$package" =~ "daq-release" || "$package" =~ "styleguide" ]]; then
-	echo "Calling git checkout develop for $package in $PWD"
-	git checkout develop
+    # JCF, Jul-14-2021: prevent integration-period edits to the heads
+    # of the develop branches of daq-buildtools, daq-cmake and
+    # daq-release from making it into the official documentation;
+    # direct software integration groups to the GitHub pages if they
+    # want the latest-greatest
+
+    if [[ "$package" =~ "daq-buildtools" ]]; then
+	git checkout dunedaq-v2.10.1_for_docs
+    elif [[ "$package" =~ "daq-cmake" ]]; then
+	git checkout v2.1.2_for_docs
     else
-	# if [[ ! -e release_manifest.sh ]]; then
-	#     curl --fail -O $release_manifest_html
-
-	#     if [[ "$?" != "0" ]]; then
-	# 	echo "Unable to get $release_manifest_html off the web; exiting..." >&2
-	# 	exit 4
-	#     fi
-	# fi
-	# package_dotted=$(echo $package | tr "-" ".") # Since all underscores, both in package names and versions, get subbed below
-	# version=$( sed -r -n 's/_/./g;s/.*"'$package_dotted'\s+(v[0-9.]+).*/\1/p' release_manifest.sh )
-	# if [[ "$version" == "" ]]; then
-	#     echo "Unable to determine version of $package from $PWD/release_manifest.sh; exiting.." >&2
-	#     exit 3
-	# fi
-
-	version="rc-dunedaq-v2.9.0-1"
-	echo "Calling git checkout $version for $package in $PWD"
-	git checkout $version
-
-	if [[ "$?" != "0" ]]; then
-	    echo "There was a problem checking out version $version of the repo in $PWD; exiting..." >&2
-	    exit 2
-	fi
+	git checkout develop
     fi
-
     echo $tmpdir/$package
 
     if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" )  ]]; then

@@ -1,3 +1,5 @@
+# REMINDER: USE SPACES INSTEAD OF TABS IN THIS FILE
+
 # Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -131,6 +133,7 @@ nav:
           - cmdlib:
           - ers:
           - logging:
+          - utilities:
        - Readout:
           - daqdataformats:
           - detchannelmaps:
@@ -141,12 +144,13 @@ nav:
           - readoutlibs:
           - readoutmodules:
        - Control:
-          - minidaqapp:
+          - daqconf:
           - nanorc:
           - restcmd:
        - Dataflow (logical):
           - dfmessages:
           - dfmodules:
+          - hdf5libs:
           - timing:
           - timinglibs:
           - trigemu:
