@@ -21,7 +21,7 @@ import integrationtest.log_file_checks as log_file_checks
 # to run the config generation and nanorc
 
 # The name of the python module for the config generation
-confgen_name="minidaqapp.nanorc.mdapp_multiru_gen"
+confgen_name="daqconf_multiru_gen"
 # The arguments to pass to the config generator, excluding the json
 # output directory (the test framework handles that)
 confgen_arguments=[ "-o", ".", "-s", "10", "-n", "2"]
@@ -114,9 +114,9 @@ nanorc_command_list={ "longer": "boot init conf start 101 wait 1 resume wait 20 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Philip Rodrigues_
+_Author: Pierre Lasorak_
 
-_Date: Tue Nov 30 12:13:20 2021 +0000_
+_Date: Tue Mar 29 14:57:39 2022 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/integrationtest/issues](https://github.com/DUNE-DAQ/integrationtest/issues)_
 </font>
