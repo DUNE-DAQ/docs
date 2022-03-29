@@ -109,6 +109,8 @@ shonky rc> status
 
 When you've seen enough use `stop`, `scrap` and `terminate` commands. In case you experience timeout problems booting applications or sending commands, consider changing the `hosts` values from `localhost` to the hostname of your machine. This has to do with SSH authentication.
 
+nanorc commands can be autocompleted with TAB, for example, TAB will autocomplete `r` to `resume`. Options like `--disable-data-storage` will be completed with TAB after typing `start --d`.
+
 You can also control nanorc in "batch mode", e.g.:
 ```
 run_number=999
@@ -226,9 +228,9 @@ It should be pointed out that some substitutions are made when nanorc uses a fil
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: jmcarcell_
 
-_Date: Tue Mar 29 14:44:52 2022 +0200_
+_Date: Tue Mar 29 17:22:30 2022 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>
