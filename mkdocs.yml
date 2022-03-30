@@ -197,7 +197,6 @@ nav:
           - daqconf:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigurationsForCasualUsers.md
-             - packages/daqconf/daqconf-Diagrams.md
              - packages/daqconf/InstructionsForCasualUsers.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
