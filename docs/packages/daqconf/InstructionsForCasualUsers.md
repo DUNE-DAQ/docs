@@ -13,16 +13,16 @@ Here are the steps that should be used when you first create your local software
 2. `source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh`
 
 
-3. `setup_dbt dunedaq-v2.8.0`
+3. `setup_dbt dunedaq-v2.10.1`
 
 
-4. `dbt-create.sh dunedaq-v2.8.0 <work_dir>`
+4. `dbt-create.py -c dunedaq-v2.10.1-c7 <work_dir>  # or dbt-create.py -c dunedaq-v2.10.1-cs8, depend on the OS on the computer`
 
 
-5. `cd <work_dir>`
+6. `cd <work_dir>`
 
 
-6. `dbt-workarea-env`
+7. `dbt-workarea-env`
 
 
 9. download a raw data file, either by running
@@ -30,7 +30,7 @@ Here are the steps that should be used when you first create your local software
    or clicking on the [CERNBox link](https://cernbox.cern.ch/index.php/s/7qNnuxD8igDOVJT/download)) and put it into `<work_dir>`
 
 
-11. `daqconf_multiru_gen -d ./frames.bin -o . -s 10 daq_fake`
+11. `daqconf_multiru_gen -d $PWD/frames.bin -o . -s 10 daq_fake`
 
 
 12. `nanorc daq_fake boot init conf start 101 wait 2 resume wait 60 pause wait 2 stop scrap terminate`
@@ -39,7 +39,7 @@ Here are the steps that should be used when you first create your local software
 13. examine the contents of the HDf5 file with commands like the following:
     * `h5dump-shared -H -A swtest_run000101_0000_*.hdf5`
     * and
-    * `python3 $DFMODULES_FQ_DIR/dfmodules/bin/hdf5dump/hdf5_dump.py -p both -f swtest_run000101_0000_*.hdf5`
+    * `hdf5_dump.py -n 3 -p all -f swtest_run000101_0000_*.hdf5`
 
 When you return to this work area (for example, after logging out and back in), you can skip the 'setup' steps in the instructions above.  For example:
 
@@ -48,10 +48,7 @@ When you return to this work area (for example, after logging out and back in), 
 1. `cd <work_dir>`
 
 
-2. `source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh`
-
-
-3. `setup_dbt dunedaq-v2.8.0`
+2. `source ./dbt-env.sh`
 
 
 4. `dbt-workarea-env`
@@ -69,10 +66,7 @@ If and when you are ready to start looking at existing code and possibly modifyi
 1. `cd <work_dir>`
 
 
-2. `source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh`
-
-
-3. `setup_dbt dunedaq-v2.8.0`
+2. `source ./dbt-env.sh`
 
 
 4. `dbt-workarea-env`
@@ -92,7 +86,7 @@ If and when you are ready to start looking at existing code and possibly modifyi
 9. `dbt-build.sh`
 
 
-4. `dbt-workarea-env --refresh`
+4. `dbt-workarea-env`
 
 
 10. continue as described above...
@@ -104,9 +98,9 @@ If and when you are ready to start looking at existing code and possibly modifyi
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: bieryAtFnal_
 
-_Date: Fri Feb 25 17:28:21 2022 +0100_
+_Date: Wed Mar 30 12:10:44 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
