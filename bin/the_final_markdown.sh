@@ -122,6 +122,8 @@ for package in $package_list ; do
 	git checkout dunedaq-v2.10.2_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout v2.1.2_for_docs
+    elif [[ "$package" =~ "lbrulibs" ]]; then
+	git checkout dunedaq-v2.10.2
     else
 	git checkout develop
     fi
