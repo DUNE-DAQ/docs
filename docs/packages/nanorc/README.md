@@ -221,6 +221,11 @@ It should be pointed out that some substitutions are made when nanorc uses a fil
 
 * If a host is provided as `localhost` or `127.0.0.1`, the result of the Python call `socket.gethostname` is used in its place
 
+## How to run WebUI
+
+WebUI running is handled by `nanocrestrc` command. WebUI needs you to provide only one parameter in addition.
+
+* `-s` - serveraddress - as your browser is running on your side, it needs the information where to find REST endpoints. Simply provide address of the interface of the computer you are running the server on. Default value is `localhost`
 
 -----
 
@@ -228,9 +233,9 @@ It should be pointed out that some substitutions are made when nanorc uses a fil
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jmcarcell_
+_Author: Pierre Lasorak_
 
-_Date: Tue Mar 29 17:22:30 2022 +0200_
+_Date: Wed Apr 20 13:57:44 2022 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>
