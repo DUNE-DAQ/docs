@@ -37,13 +37,18 @@ The module currently supports the following timing firmware and hardware combina
 
 
 * Master designs
-    * `Boreas` on `TLU`
-    * `Boreas` on `FMC`
-    * `Overlord` on `TLU`
-    * `Overlord` on `FMC`
+
+   * `Boreas` on `TLU`
+
+   * `Boreas` on `FMC`
+
+   * `Overlord` on `TLU`
+
+   * `Overlord` on `FMC`
 
 * Endpoint designs
-    * `Endpoint` on `FMC`
+
+   * `Endpoint` on `FMC`
 
 #### TimingMasterController
 
@@ -145,8 +150,10 @@ In the absence of real `HSI` hardware, this module can be used to emululate an `
 
 
 * `signal_emulation_mode`: Signal bit map emulation mode; default: `0`
-    * `0`: enabled signals always on
-    * `1`: enabled signals are emulated (independently) according to a Poisson with mean mean_signal_multiplicity; signal map generated with uniform distr. enabled signals only       
+
+   * `0`: enabled signals always on
+
+   * `1`: enabled signals are emulated (independently) according to a Poisson with mean mean_signal_multiplicity; signal map generated with uniform distr. enabled signals only       
 
 ## Python configuration generation
 
@@ -249,9 +256,11 @@ The `timinglibs/python/timinglibs/timing_app_confgen.py` script generates a `jso
    
    Interger controlling the source of signals coming into the `HSI`. Used with `hsi_configure` commands sent by `hsi0`. Default: `0`
 
-    * `0`: signals are taken from the physical interface of the `HSI` device
 
-    * `1`: signals are taken to be bits `39-8` of the `HSI` endpoint timestamp. This is `emulation mode`, a constant rate of `HSI` triggers are generated according to the configured `re`, `fe`, and `inv` masks. 
+   * `0`: signals are taken from the physical interface of the `HSI` device
+
+
+   * `1`: signals are taken to be bits `39-8` of the `HSI` endpoint timestamp. This is `emulation mode`, a constant rate of `HSI` triggers are generated according to the configured `re`, `fe`, and `inv` masks. 
 
 
 * `-u` or `--uhal-log-level`

@@ -5,10 +5,14 @@ This package contains DAQ modules for controlling DUNE Trigger Primitive generat
 ## DTPController
 
 This is the module which controls TP firmware. It is a very simple module, with no I/O queues.  It responds to several RC commands :
-    * conf : this command will establish the connection to the firmware (ipbus over flx), issue a reset, and then configure it
-    * reset : this command just resets firmware
-    * start : enables TP production
-    * stop  : disables TP production
+
+   * conf : this command will establish the connection to the firmware (ipbus over flx), issue a reset, and then configure it
+
+   * reset : this command just resets firmware
+
+   * start : enables TP production
+
+   * stop  : disables TP production
 
 ### Configuration
 

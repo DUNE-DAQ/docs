@@ -72,9 +72,12 @@ Any meaningful combination of commands is allowed.  Note that the `start` comman
 
 
 8) examine the contents of the HDf5 file with commands like the following:
-    * `h5dump-shared -H -A swtest_run000103_0000_*.hdf5`
-    * and
-    * `hdf5_dump.py -p both -f swtest_run000103_0000_*.hdf5`
+
+   * `h5dump-shared -H -A swtest_run000103_0000_*.hdf5`
+
+   * and
+
+   * `hdf5_dump.py -p both -f swtest_run000103_0000_*.hdf5`
 
 
 -----
