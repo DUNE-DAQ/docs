@@ -2,12 +2,10 @@
 
 here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 
-# Reverse alphabetical order so the packages in the drop-down menu will appear in regular alphabetical order
-
-# ...alphabetical, with the exception of the packages which are used
+# Reverse alphabetical order
 # for package development themselves
 
-package_list="utilities trigger trigemu timinglibs timing serialization restcmd readoutmodules readoutlibs rcif opmonlib nwqueueadapters networkmanager ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf cmdlib appfwk styleguide daq-release daq-cmake daq-buildtools"
+package_list="utilities trigger trigemu timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib nwqueueadapters networkmanager ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-release daq-cmake daq-buildtools cmdlib appfwk"
 
 mkdocs_yml="$here/../mkdocs.yml"
 

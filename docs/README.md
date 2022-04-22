@@ -36,11 +36,15 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Readout
 
-[daqdataformats](packages/daqdataformats/README.md) _DUNE DAQ data formats_
+[daqdataformats](packages/daqdataformats/README.md) _DAQ data formats_
 
-[detchannelmaps](packages/detchannelmaps/README.md) _DUNE detectors channel maps_
+[detchannelmaps](packages/detchannelmaps/README.md) _Channel maps for the detectors_
 
-[detdataformats](packages/detdataformats/README.md) _DUNE detectors data formats_
+[detdataformats](packages/detdataformats/README.md) _Data formats for the detectors_
+
+[dtpctrllibs](packages/dtpctrllibs/README.md) _DAQ modules for controlling Trigger Primitive generation firmware_
+
+[dtpcontrols](packages/dtpcontrols/README.md) _Python tools for control of the Trigger Primitive firmware_
 
 [fdreadoutlibs](packages/fdreadoutlibs/README.md) _Classes for working with far detector data (WIB, SSP, etc.)_
 
