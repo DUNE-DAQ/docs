@@ -20,9 +20,9 @@ cd ..
 mv daq-cmake/toylibrary sourcecode
 rm -rf daq-cmake
 ```
-You can now build toylibrary like you would a standard DUNE DAQ package. 
+You can now build toylibrary like you would a standard DUNE DAQ package. Please note that if you do so, since toylibrary isn't an official DUNE DAQ package and isn't a git repository, you'll get a couple of warnings; unlike most warnings, you can disregard these. Specifically, these warnings are `Package "toylibrary" not provided to the daq_add_subpackages` and `warning: Not a git repository.` (and surrounding text). 
 
-In terms of its actual functionality, it's pretty useless (it contains a class which can wrap an integer, and another class which can print that wrapped integer). However, its functionality is beside the point; toylibrary contains many features which DUNE DAQ packages have in common, in particular DUNE DAQ packages which provide a library other developers want to link against. For starters, take a look at the subdirectories, `ls sourcecode/toylibrary`:
+In terms of its actual functionality, toylibrary is pretty useless (it contains a class which can wrap an integer, and another class which can print that wrapped integer). However, its functionality is beside the point; toylibrary contains many features which DUNE DAQ packages have in common, in particular DUNE DAQ packages which provide a library other developers want to link against. For starters, take a look at the subdirectories, `ls sourcecode/toylibrary`:
 
 
 * *src*: contains the source files meant to be built into the package's shared object library/libraries
@@ -362,9 +362,6 @@ The same applies to `app.jsonnet`, `appinfo.jsonnet` and `queueinfo.jsonnet` for
 The matching between the schema file name/path and the jsonnet namespace is essential for code generation with `daq-cmake`. A mismatch between the two will result in empty generated files in most of the cases.
 
 
-
-
-
 -----
 
 <font size="1">
@@ -373,7 +370,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: jcfreeman2_
 
-_Date: Tue Mar 15 12:40:04 2022 -0500_
+_Date: Sun Apr 17 14:14:54 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
