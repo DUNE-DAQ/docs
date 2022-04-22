@@ -13,10 +13,10 @@ Here are the steps that should be used when you first create your local software
 2. `source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh`
 
 
-3. `setup_dbt dunedaq-v2.10.1`
+3. `setup_dbt dunedaq-v2.11.0  # or setup_dbt latest-spack, if you want to use the Spack-based base release`
 
 
-4. `dbt-create.py -c dunedaq-v2.10.1-c7 <work_dir>  # or dbt-create.py -c dunedaq-v2.10.1-cs8, depend on the OS on the computer`
+4. `dbt-create.py -c dunedaq-v2.11.0-c7 <work_dir>  # or dbt-create.py -c dunedaq-v2.11.0-cs8, depend on the OS on the computer`
 
 
 6. `cd <work_dir>`
@@ -33,7 +33,7 @@ Here are the steps that should be used when you first create your local software
 11. `daqconf_multiru_gen -d $PWD/frames.bin -o . -s 10 daq_fake`
 
 
-12. `nanorc daq_fake boot init conf start 101 wait 2 resume wait 60 pause wait 2 stop scrap terminate`
+12. `nanorc daq_fake boot init conf start 101 wait 60 stop scrap terminate`
 
 
 13. examine the contents of the HDf5 file with commands like the following:
@@ -54,7 +54,7 @@ When you return to this work area (for example, after logging out and back in), 
 4. `dbt-workarea-env`
 
 
-7. `nanorc daq_fake boot init conf start 102 wait 2 resume wait 60 pause wait 2 stop scrap terminate`
+7. `nanorc daq_fake boot init conf start 102 wait 60 stop scrap terminate`
 
 
 More detailed explanations on how to create different configurations can be found in [Instructions for different configurations for first-time users](ConfigurationsForCasualUsers.md)
@@ -100,7 +100,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: bieryAtFnal_
 
-_Date: Wed Mar 30 12:10:44 2022 -0500_
+_Date: Thu Apr 21 16:53:28 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
