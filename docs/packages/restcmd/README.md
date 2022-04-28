@@ -14,18 +14,25 @@ The dependency is available under devevlopment products. Please pay attention to
 
 
 * create a software work area
-    * see the [daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools) for how to do this
+
+  * see the [daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools) for how to do this
 
 * clone this repo into your work/development area
-    * `cd <your_work_area>/sourcecode`
-    * `git clone https://github.com/DUNE-DAQ/restcmd.git`
-    * `cd ..`
+
+  * `cd <your_work_area>/sourcecode`
+
+  * `git clone https://github.com/DUNE-DAQ/restcmd.git`
+
+  * `cd ..`
 
 * build and install the software, as described in the daq-buildtools instructions
 
 * run the demos in another shell. Do `cd <your work area>` and then set up the environment in the new shell as before. Rather than building, however, run:
-    * `restcmd_test_rest_app`
+
+  * `restcmd_test_rest_app`
+
     * the application will terminate in 20 seconds
+
     * from the first terminal, send commands via [curl](#sendcurl) or with the more preferred [send-restcmd.py](#sendcmd)
 
 ## Running DAQ applications

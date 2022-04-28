@@ -3,18 +3,24 @@
 Testing and development hosts with a FELIX card are the following:
 
 * **CERN NP04**
-    * np04-srv-028 - RM5 based test platform & hosting 2 FELIX cards (DS Intel Cascade Lake Gold, SNC2)
-    * np04-srv-029 - RM5 based test platform (DS Intel Cascade Lake Gold) 
-    * np04-srv-030 - RM5 based test platform (DS Intel Cascade Lake Silver)
+
+   * np04-srv-028 - RM5 based test platform & hosting 2 FELIX cards (DS Intel Cascade Lake Gold, SNC2)
+
+   * np04-srv-029 - RM5 based test platform (DS Intel Cascade Lake Gold) 
+
+   * np04-srv-030 - RM5 based test platform (DS Intel Cascade Lake Silver)
 
 
 * **CERN DT-DI DAQ-lab**
-    * epdtdi104 - RM5 based development platform (DS Intel Cascade Lake Gold, SNC2, with 1.5TB PMEM and 4TB NVMe)
-    * epdtdi105 - RM5 based development platform on mainline kernel (DS AMD EPYC with 20TB+ NVMe)
+
+   * epdtdi104 - RM5 based development platform (DS Intel Cascade Lake Gold, SNC2, with 1.5TB PMEM and 4TB NVMe)
+
+   * epdtdi105 - RM5 based development platform on mainline kernel (DS AMD EPYC with 20TB+ NVMe)
 
 
 * **Bristol Lab**
-    * it043261 - Host with ZCU102 to FELIX connectivity (Intel Xeon Bronze 3204 CPU with NVMe)
+
+   * it043261 - Host with ZCU102 to FELIX connectivity (Intel Xeon Bronze 3204 CPU with NVMe)
 
 _DS stands for: Dual Socket with 2 CPUs_
 

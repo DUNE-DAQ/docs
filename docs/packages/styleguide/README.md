@@ -4,84 +4,163 @@
 -------
 
 * Table of Contents
+
     * [Background](#background)
+
     * [1.  C++ Version](#1-c-version)
+
     * [2. Naming Conventions](#2-naming-conventions)
+
         * [2.1 General Naming Rules](#21-general-naming-rules)
+
         * [2.2 File Names](#22-file-names)
+
         * [2.3 Type Names](#23-type-names)
+
         * [2.4 Variable Names](#24-variable-names)
+
         * [2.5 Function Names](#25-function-names)
+
         * [2.6 Namespace Names](#26-namespace-names)
+
         * [2.7 Enumerator Names](#27-enumerator-names)
+
         * [2.8 Macro Names](#28-macro-names)
+
     * [3.  Header Files](#3-header-files)
+
         * [3.1  Self-contained Headers](#31-self-contained-headers)
+
         * [3.2  The #define Guard](#32-the-define-guard)
+
         * [3.3  Forward Declarations [DUNE VERSION]](#33-forward-declarations-dune-version)
+
         * [3.4  Inline Functions](#34-inline-functions)
+
         * [3.5  Names and Order of Includes](#35-names-and-order-of-includes)
+
         * [3.6 Quotes vs. Angle Brackets for includes](#36-quotes-vs-angle-brackets-for-includes)
+
     * [4.  Scoping](#4-scoping)
+
         * [4.1  Namespaces](#41-namespaces)
+
         * [4.2  Unnamed Namespaces and Static Variables](#42-unnamed-namespaces-and-static-variables)
+
         * [4.3  Nonmember, Static Member, and Global Functions](#43-nonmember-static-member-and-global-functions)
+
         * [4.4  Local Variables](#44-local-variables)
+
         * [4.5  Static and Global Variables](#45-static-and-global-variables)
+
     * [5.  Classes](#5-classes)
+
         * [5.1  Doing Work in Constructors](#51-doing-work-in-constructors)
+
         * [5.2  Implicit Conversions](#52-implicit-conversions)
+
         * [5.3  Copyable and Movable Types](#53-copyable-and-movable-types)
+
         * [5.4  Structs vs. Classes](#54-structs-vs-classes)
+
         * [5.5  Structs vs. Pairs and Tuples](#55-structs-vs-pairs-and-tuples)
+
         * [5.6  Inheritance](#56-inheritance)
+
         * [5.7  Operator Overloading](#57-operator-overloading)
+
         * [5.8  Access Control](#58-access-control)
+
         * [5.9  Declaration Order](#59-declaration-order)
+
     * [6.  Functions](#6-functions)
+
         * [6.1  General guidelines for writing a function](#61-general-guidelines-for-writing-a-function)
+
         * [6.2  Output Parameters](#62-output-parameters)
+
         * [6.3  Write Short Functions](#63-write-short-functions)
+
         * [6.4  Reference Arguments](#64-reference-arguments)
+
         * [6.5  Function Overloading](#65-function-overloading)
+
         * [6.6  Default Arguments](#66-default-arguments)
+
         * [6.7  Trailing Return Type Syntax](#67-trailing-return-type-syntax)
+
         * [6.8  Ownership and Smart Pointers](#68-ownership-and-smart-pointers)
+
     * [7.  Other C++ Features](#7-other-c-features)
+
         * [7.1  Rvalue References](#71-rvalue-references)
+
         * [7.2  Friends](#72-friends)
+
         * [7.3  Exceptions](#73-exceptions)
+
         * [7.4  noexcept](#74-noexcept)
+
         * [7.5  Run-Time Type Information (RTTI)](#75-run-time-type-information-rtti)
+
         * [7.6  Casting](#76-casting)
+
         * [7.7  alias declarations and typedefs](#77-alias-declarations-and-typedefs)
+
         * [7.8  Streams](#78-streams)
+
         * [7.9  Printing Messages](#79-printing-messages)
+
         * [7.10  Increment and Decrement](#710-increment-and-decrement)
+
         * [7.11  Use of const](#711-use-of-const)
+
         * [7.12  Use of constexpr](#712-use-of-constexpr)
+
         * [7.13  Integer Types](#713-integer-types)
+
         * [7.14  Preprocessor Macros](#714-preprocessor-macros)
+
         * [7.15  0 and nullptr/NULL](#715-0-and-nullptrnull)
+
         * [7.16  sizeof](#716-sizeof)
+
         * [7.17  Type deduction](#717-type-deduction)
+
     * [8.  Comments](#8-comments)
+
         * [8.1  Intro](#81-intro)
+
         * [8.2  Comment Style](#82-comment-style)
+
         * [8.3  File Comments](#83-file-comments)
-        * [8.3.1  Legal Notice and Author Line](#831-legal-notice-and-author-line)
-        * [8.3.2  File Contents](#832-file-contents)
+
+            * [8.3.1  Legal Notice and Author Line](#831-legal-notice-and-author-line)
+
+            * [8.3.2  File Contents](#832-file-contents)
+
         * [8.4  Class Comments](#84-class-comments)
+
         * [8.5  Function Comments](#85-function-comments)
-        * [8.5.1  Function Declarations](#851-function-declarations)
-        * [8.5.2  Function Definitions](#852-function-definitions)
+
+            * [8.5.1  Function Declarations](#851-function-declarations)
+
+            * [8.5.2  Function Definitions](#852-function-definitions)
+
         * [8.6  Variable Comments](#86-variable-comments)
-        * [8.6.1  Class Data Members](#861-class-data-members)
-        * [8.6.2  Global Variables](#862-global-variables)
+
+            * [8.6.1  Class Data Members](#861-class-data-members)
+
+            * [8.6.2  Global Variables](#862-global-variables)
+
         * [8.7  Implementation Comments](#87-implementation-comments)
+
         * [8.8  Punctuation, Spelling, and Grammar](#88-punctuation-spelling-and-grammar)
+
         * [8.9  TODO Comments](#89-todo-comments)
+
     * [9.  Formatting](#9-formatting)
+
     * [10.  Exceptions to the Rules](#10-exceptions-to-the-rules)
 -------
 

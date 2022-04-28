@@ -60,9 +60,13 @@ where N must be an integer number.
 * For N > 0 the issue attributes names and values are reported in addition to 0-level data
 
 * For N > 1 the following information is added to the issue:
+
     * host name
+
     * user name
+
     * process id
+
     * process current working directory
 
 * For N > 2 a stack trace is added to each issue if the code was compiled without **ERS_NO_DEBUG** macro.

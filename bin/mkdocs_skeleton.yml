@@ -138,6 +138,8 @@ nav:
           - daqdataformats:
           - detchannelmaps:
           - detdataformats:
+          - dtpcontrols:
+          - dtpctrllibs:
           - fdreadoutlibs:
           - flxlibs:
           - lbrulibs:

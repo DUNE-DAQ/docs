@@ -37,9 +37,12 @@ Here are the steps that should be used when you first create your local software
 
 
 13. examine the contents of the HDf5 file with commands like the following:
-    * `h5dump-shared -H -A swtest_run000101_0000_*.hdf5`
-    * and
-    * `hdf5_dump.py -n 3 -p all -f swtest_run000101_0000_*.hdf5`
+
+   * `h5dump-shared -H -A swtest_run000101_0000_*.hdf5`
+
+   * and
+
+   * `hdf5_dump.py -n 3 -p all -f swtest_run000101_0000_*.hdf5`
 
 When you return to this work area (for example, after logging out and back in), you can skip the 'setup' steps in the instructions above.  For example:
 
@@ -76,8 +79,10 @@ If and when you are ready to start looking at existing code and possibly modifyi
 
 
 6. `git clone https://github.com/DUNE-DAQ/<package_name>.git -b develop`
-    * e.g. `git clone https://github.com/DUNE-DAQ/dfmodules.git -b develop`
-    * the full list of available repository is [here](https://github.com/orgs/DUNE-DAQ/repositories)
+
+   * e.g. `git clone https://github.com/DUNE-DAQ/dfmodules.git -b develop`
+
+   * the full list of available repository is [here](https://github.com/orgs/DUNE-DAQ/repositories)
 
 
 8. `cd ..`

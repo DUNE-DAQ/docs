@@ -6,9 +6,12 @@ This repository is structured as follows:
 * `docs`
 
 * `include/readoutlibs`
-    * `concepts`
-    * `models`
-    * `utils`
+
+  * `concepts`
+
+  * `models`
+
+  * `utils`
 
 * `schema/readoutlibs`
 

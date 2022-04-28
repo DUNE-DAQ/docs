@@ -8,16 +8,23 @@
 
 
 * Continous Integration:
+
     * developers integrate code into share repository frequently;
+
     * each integration will be verified by automated build and tests;
 
 * CI configuration is easy in the case of one or a few packages; however, things can become quickly complicated when number of packages grows:
+
     * PRs for same feature affecting multiple packages need to be built together;
+
     * Each repo to have CI jobs building the whole release is just too expensive;
 
 * Nightly release becomes necessary.
+
     * at the end of day, the develop release will be re-made;
+
     * it will be the base for each repo's CI in the next day;
+
     * releated PRs in multiple repos should be merged to develop on the same day.
 
 
