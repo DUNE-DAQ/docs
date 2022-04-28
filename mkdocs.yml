@@ -188,7 +188,7 @@ nav:
              - packages/flxlibs/Local-driver.md
           - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
-             - packages/lbrulibs/testing.md
+             - packages/lbrulibs/socket-implementation.md
           - readoutlibs:
              - About readoutlibs: packages/readoutlibs/README.md
              - packages/readoutlibs/Directory-structure.md

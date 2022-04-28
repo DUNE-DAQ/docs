@@ -112,18 +112,10 @@ for package in $package_list ; do
 
     cd $tmpdir/$package
 
-    # JCF, Jul-14-2021: prevent integration-period edits to the heads
-    # of the develop branches of daq-buildtools, daq-cmake and
-    # daq-release from making it into the official documentation;
-    # direct software integration groups to the GitHub pages if they
-    # want the latest-greatest
-
-    if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout release #dunedaq-v2.10.2_for_docs
-    elif [[ "$package" =~ "daq-cmake" ]]; then
-	git checkout v2.1.2_for_docs
-    elif [[ "$package" =~ "lbrulibs" ]]; then
-	git checkout dunedaq-v2.10.2
+    if [[ "$package" =~ "daq-buildtools" || "$package" =~ "daq-cmake" ]]; then
+	git checkout dunedaq-v2.11.0_for_docs
+    elif ! [[ "$package" =~ "influxopmon" || "$package" =~ "erskafka" ]]; then
+	git checkout rc-dunedaq-v2.11.0-3
     else
 	git checkout develop
     fi
