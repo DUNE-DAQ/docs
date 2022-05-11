@@ -35,7 +35,7 @@ python -m dtpctrllibs.dtp_app_confgen dtp_app.json
 daq_application --name dtp_app -c stdin://dtp_app.json
 ```
 
-At the terminal that now appears, run 'init', 'conf', 'enable' commands in order to produce TPs.
+At the terminal that now appears, run 'init', 'conf', 'start', 'stop' commands in order to produce TPs.
 
 
 -----
@@ -46,7 +46,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Jim B_
 
-_Date: Tue Apr 5 13:14:57 2022 +0100_
+_Date: Fri Apr 29 13:17:36 2022 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dtpctrllibs/issues](https://github.com/DUNE-DAQ/dtpctrllibs/issues)_
 </font>
