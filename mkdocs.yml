@@ -229,8 +229,6 @@ nav:
              - About ipm: packages/ipm/README.md
           - networkmanager:
              - About networkmanager: packages/networkmanager/README.md
-          - nwqueueadapters:
-             - About nwqueueadapters: packages/nwqueueadapters/README.md
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:

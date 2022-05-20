@@ -160,7 +160,6 @@ nav:
        - Dataflow (physical):
           - ipm:
           - networkmanager:
-          - nwqueueadapters:
           - serialization:
        - Monitoring:
           - erskafka:
