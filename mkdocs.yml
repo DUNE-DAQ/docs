@@ -225,6 +225,10 @@ nav:
              - About trigger: packages/trigger/README.md
              - packages/trigger/trigger-alg-howto.md
        - Dataflow (physical):
+          - iomanager:
+             - About iomanager: packages/iomanager/README.md
+             - packages/iomanager/Queue.md
+             - packages/iomanager/Updating.md
           - ipm:
              - About ipm: packages/ipm/README.md
           - networkmanager:

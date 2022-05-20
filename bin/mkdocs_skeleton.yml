@@ -158,6 +158,7 @@ nav:
           - trigemu:
           - trigger:
        - Dataflow (physical):
+          - iomanager:
           - ipm:
           - networkmanager:
           - serialization:

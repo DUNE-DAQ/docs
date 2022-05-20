@@ -86,6 +86,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Dataflow (physical)
 
+[iomanager](packages/iomanager/README.md) _simplified API for passing messages between DAQModules_
+
 [ipm](packages/ipm/README.md) _message passing between processes_
 
 [networkmanager](packages/networkmanager/README.md) _interface for performing network sends and receives directly from DAQ modules_
