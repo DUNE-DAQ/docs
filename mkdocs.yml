@@ -189,6 +189,7 @@ nav:
              - packages/flxlibs/Enabling-links-and-setting-the-superchunk-factor.md
              - packages/flxlibs/FELIX-assets.md
              - packages/flxlibs/Initial-setup-of-FELIX.md
+             - packages/flxlibs/Integration-tests.md
              - packages/flxlibs/Local-driver.md
           - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
