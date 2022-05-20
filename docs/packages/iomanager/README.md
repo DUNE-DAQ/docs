@@ -117,15 +117,24 @@ A simplified API for passing messages between DAQModules
 
 ```
 
+## Updating existing code to use IOManager
+
+Please see [this page](Updating.md) for information about updating your code to use IOManager.
+
+## APIs used by IOManager
+
+The API used for queues is documented [here](Queue.md). Network connections use [IPM](https://dune-daq-sw.readthedocs.io/en/latest/packages/ipm/) and [NetworkManager](https://dune-daq-sw.readthedocs.io/en/latest/packages/networkmanager/)
+
+
 -----
 
 <font size="1">
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: eflumerf_
 
-_Date: Wed May 4 10:55:30 2022 -0500_
+_Date: Fri May 20 09:35:46 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/iomanager/issues](https://github.com/DUNE-DAQ/iomanager/issues)_
 </font>
