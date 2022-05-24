@@ -144,7 +144,7 @@ You can see a simple example of this kind of file with `toylibrary/cmake/toylibr
 
 Once you've edited this file as described, from the base of your development area you can then run 
 ```
-dbt-build.py 
+dbt-build 
 ```
 
 without receiving an error message informing you that installation isn't an option. 
@@ -368,9 +368,9 @@ The matching between the schema file name/path and the jsonnet namespace is esse
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: John Freeman_
 
-_Date: Sun Apr 17 14:14:54 2022 -0500_
+_Date: Tue May 24 10:34:42 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
