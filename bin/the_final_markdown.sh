@@ -120,6 +120,8 @@ for package in $package_list ; do
 	git checkout dunedaq-v3.0.0_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout dunedaq-v3.0.0_for_docs
+    elif [[ "$package" =~ "networkmanager" ]]; then
+	git checkout eflumerf/UpdateDocumentation
     else
 	git checkout develop
     fi

@@ -55,6 +55,8 @@ This section describes which DUNE-DAQ software and `flxlibs` version are compati
    |  v2.4.0       | v1.0.0        | v1_1_1 e19:prof  | RM5 (2.)     | 1.1 & 1.2 below |
    |  v2.6.0       | v1.1.0        | v1_1_1 e19:prof  | RM5 (2.)     | 1.1 & 1.2 below |
    |  v2.8.0       | v1.2.0        | v1_2_0 e19:prof  | RM5 (3.)     | [Follow this](Enabling-links-and-setting-the-superchunk-factor.md) |
+   |  v3.0.0       | v1_6_0        | v1_2_2 e19:prof  | RM5 (3.)     | [Follow this](Enabling-links-and-setting-the-superchunk-factor.md) |
+   
 
 
 ## Register Map configuration files (SLR config files)
@@ -78,7 +80,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Roland Sipos_
 
-_Date: Tue Aug 17 11:15:22 2021 +0200_
+_Date: Mon May 30 11:39:55 2022 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
