@@ -1,13 +1,10 @@
 # NetworkManager
 
-This repository contains the _NetworkManager_ class, which is used to provide a convenient interface for performing network sends and receives directly from DAQModules. 
-
-
-**NOTE:** Use of NetworkManager in DAQ modules is **deprecated**, users should most likely be using [IOManager](https://dune-daq-sw.readthedocs.io/en/latest/packages/iomanager/) instead! Original documentation follows.
+This repository contains the _NetworkManager_ class, which is used to provide a convenient interface for performing network sends and receives directly from DAQModules.
 
 ## Using Network Manager
 
-NetworkManager is available within all `daq_application` instances, by calling the static `NetworkManager::get()` method. 
+NetworkManager is available within all `daq_application` instances, by calling the static `NetworkManager::get()` method.
 
 ### Receiving Data from Network Connections
 
@@ -55,9 +52,9 @@ Currently, NetworkManager is statically configured during the `init` step. Each 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: jcfreeman2_
 
-_Date: Wed Jun 1 10:43:52 2022 -0500_
+_Date: Mon Dec 13 15:01:18 2021 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/networkmanager/issues](https://github.com/DUNE-DAQ/networkmanager/issues)_
 </font>
