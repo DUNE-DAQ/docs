@@ -220,8 +220,6 @@ nav:
              - About timing: packages/timing/README.md
           - timinglibs:
              - About timinglibs: packages/timinglibs/README.md
-          - trigemu:
-             - About trigemu: packages/trigemu/README.md
           - trigger:
              - About trigger: packages/trigger/README.md
              - packages/trigger/trigger-alg-howto.md
