@@ -161,7 +161,8 @@
 
     * [9.  Formatting](#9-formatting)
 
-    * [10.  Exceptions to the Rules](#10-exceptions-to-the-rules)
+    * [10. Exceptions to the Rules](#10-exceptions-to-the-rules)
+
 -------
 
 ## Background 
@@ -284,7 +285,7 @@ such as acronyms (e.g. "DAQ", "CERN"). Two naming conventions you need to be awa
 
 * *Pascal case*: Capitals used to distinguish words, with first letter capitalized: ThisIsInPascalCase
 
-* *Snake case*: Underscores used to distinguish words, with all letters lowercase except optionally for acronyms
+* *Snake case*: Underscores used to distinguish words, with all letters lowercase except optionally for acronyms: this_is_in_snake_case
 
 In Pascal case, it's preferred that you treat acronyms like other words, e.g., `StartRpc()` rather than
 `StartRPC()`.
@@ -381,7 +382,7 @@ stand-in for the name of the package). Private headers typically are kept with
 source files in the same directory.
 
 In general, every `.cpp` file should have an associated `.hpp` file. There
-are some common exceptions, such as unittests. Files which contain a `main()` function don't need a corresponding `.hpp` file, and end in `.cxx` rather than `.cpp`. 
+are some common exceptions, such as files dedicated to unit tests. Files which contain a `main()` function don't need a corresponding `.hpp` file, and end in `.cxx` rather than `.cpp`. 
 
 
 ### 3.1  Self-contained Headers 
@@ -642,10 +643,10 @@ For pointer variables, this would translate to initializing the pointer to nullp
 std::unique_ptr<Foo> fptr = nullptr;
 
 if (able_to_read_data) {
-  fptr.reset( new Foo() ); 
+  fptr = std::make_unique<Foo>(foo_arg1, foo_arg2);
   // fill the Foo instance with the data
 }
-if (fptr != nullptr) {
+if (fptr) {
   // send data
 }
 ```
@@ -844,7 +845,7 @@ in all cases.
  - Use of raw pointers should be very rare. One of the few times it's OK is when you want to point to an object where you don't want to change anything about its ownership.  
 
  - A corollary is that you should (almost) never use delete on a raw
-pointer because we expect that the use of raw pointers in DUNE DAQ
+pointer because we expect that the use of raw pointers which own memory in DUNE DAQ
 will be limited to low-overhead access to pre-existing memory
 buffers, in which the user does not have ownership of the memory
 that is pointed to.
@@ -950,7 +951,7 @@ there's not a simple way to do this with `typedef`s. E.g.
 template<typename T>
 using MyAllocList_t = std::list<T, MyAlloc<T>>;
 
-MyAllocList<Foo> foos;
+MyAllocList_t<Foo> foos;
 ```
 
 ### 7.8  Streams 
@@ -974,8 +975,8 @@ should be used for this purpose.
 Overload `<<` for streaming only for types representing values, and write only
 the user-visible value, not any implementation details.
 
-Take care that a given print statement not swamp other the output of
-other equally-or-even-more-important messages
+Take care that a given print statement not print so often that it
+obscures the output of other equally (or even more) important messages
 
 
 ### 7.10  Increment and Decrement 
@@ -1011,7 +1012,7 @@ see this ever changing" since similar to "const" or "noexcept", changing this la
 ### 7.13  Integer Types 
 
 Unless you have a good reason not to, use `int`. An obvious good
-reason would be that you need 64 bits to represent a value, e.g., a timestamp. Another would be that the variable represents a discrete quantity, in which case `size_t` would clarify its semantics. 
+reason not to would be that you need to be guaranteed 64 bits to represent a value, e.g., a timestamp.
 
 When you want a specific size in bytes, don't use C integer types
 besides `int`: no `short`, `long`, etc. Use `intN_t`, N being the
@@ -1037,7 +1038,7 @@ Code should be 64-bit friendly. [does it need to be 32-bit friendly?]
 ### 7.14  Preprocessor Macros 
 
 While not explicitly forbidden, macros come with the very heavy price of the code you see not being the code the compiler sees, a problem compounded by their de-facto global scope. Avoid them if at all possible, using inline functions,
-enums, `const` variables, and putting repeated code inside of functions. 
+enums, `const` variables, `constexpr`, and putting repeated code inside of functions. 
 
 If you *must* write a macro, this will avoid many of their problems:
 
@@ -1066,8 +1067,7 @@ Prefer `sizeof(varname)` to `sizeof(type)`, unless you really do mean that you w
 
 The `auto` and `decltype` keywords save a lot of hassle for the _writer_ of a piece of code, but not necessarily for the _reader_. Keep in mind the reader might be you in 18 months. Use your
 best judgement as to when the benefits of these keywords (reduced code
-clutter) outweigh the costs (the reader has trouble figuring out
-the type of a variable).
+clutter) outweigh the costs (the reader needs to know the type of a variable but has trouble determining it from the code).
 
 While a function template can deduce the type of the argument, making
 this explicit will typically make it clearer to both the code's reader
@@ -1321,7 +1321,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed Nov 17 14:35:58 2021 -0600_
+_Date: Wed Jun 1 13:02:26 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>

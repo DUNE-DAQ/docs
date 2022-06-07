@@ -116,10 +116,10 @@ for package in $package_list ; do
     # direct software integration groups to the GitHub pages if they
     # want the latest-greatest
 
-    if [[ "$package" =~ "daq-buildtools" || "$package" =~ "daq-cmake" ]]; then
+    if [[ "$package" =~ "daq-buildtools" ]]; then 
+	git checkout dunedaq-v2.11.1_for_docs
+    elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout dunedaq-v2.11.0_for_docs
-    elif ! [[ "$package" =~ "influxopmon" || "$package" =~ "erskafka" ]]; then
-	git checkout rc-dunedaq-v2.11.0-3
     else
 	git checkout develop
     fi

@@ -21,9 +21,8 @@ Simply do:
 
 ```bash
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt <frozen release> # "latest" for the latest frozen release
+setup_dbt v4.1.7 # v4.1.7 corresponds to the dunedaq-v2.11.1 release
 ```
-where as of Apr-22-2022 the latest frozen release is <span style="color:blue">dunedaq-v2.11.0</span><span style="color:red">-cs8</span> for CentOS Stream 8 and <span style="color:blue">dunedaq-v2.11.0</span><span style="color:red">-c7</span> for CentOS 7 or SL7.
 
 Then you'll see something like:
 ```
@@ -31,7 +30,7 @@ Added /your/path/to/daq-buildtools/bin -> PATH
 Added /your/path/to/daq-buildtools/scripts -> PATH
 DBT setuptools loaded
 ```
-If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create.py`, `dbt-build.py`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. Note that while `dbt-create.sh` and `dbt-build.sh` continue to work as of the dunedaq-v2.9.0 release their use is considered deprecated and they will be removed from daq-buildtools in the future. 
+If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create`, `dbt-build`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. 
 
 Each time that you want to work with a DUNE DAQ work area in a fresh Linux shell, you'll need to set up daq-buildtools, either by repeating the method above, or by `cd`'ing into your work area and sourcing the link file named `dbt-env.sh`. Work areas are described momentarily. 
 
@@ -52,14 +51,14 @@ It will set up both the external packages and DAQ packages, as well as activate 
 
 Find a directory in which you want your work area to be a subdirectory (home directories are a popular choice) and `cd` into that directory. Then think of a good name for the work area (give it any name, but we'll refer to it as "MyTopDir" on this wiki). If you want to build against the nightly release (i.e., the official DUNE DAQ package installation which updates every night), run:
 ```sh
-dbt-create.py [-c/--clone-pyvenv] -n <nightly release> <name of work area subdirectory> 
+dbt-create [-c/--clone-pyvenv] -n <nightly release> <name of work area subdirectory> 
 cd <name of work area subdirectory>
 ```
-...where examples of nightly releases are `last_successful` (for the CentOS 7 release variant), `last_successful_cs8` (for the CentOS Stream 8 variant), `N22-03-13`, `N22-03-13-cs8`, etc. To see all available nightly releases, run `dbt-create.py -l -n`. Less common but also possible is to build your repos not against a nightly release but against a frozen release; the commands you pass to `dbt-create.py` are the same, but with the `-n` dropped.
+...where examples of nightly releases are `last_successful` (for the CentOS 7 release variant), `last_successful_cs8` (for the CentOS Stream 8 variant), `N22-03-13`, `N22-03-13-cs8`, etc. To see all available nightly releases, run `dbt-create -l -n`. Less common but also possible is to build your repos not against a nightly release but against a frozen release; the commands you pass to `dbt-create` are the same, but with the `-n` dropped.
 
-The option `-c/--clone-pyvenv` for `dbt-create.py` is optional. If used, the python virtual environment created in the work area will be a clone of an existing one from the release directory. This avoids the compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory, and speeds up the work-area creation significantly. The first time running `dbt-create.py` with this option on a node may take a longer time since cvmfs needs to fetch these files into local cache first.
+The option `-c/--clone-pyvenv` for `dbt-create` is optional. If used, the python virtual environment created in the work area will be a clone of an existing one from the release directory. This avoids the compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory, and speeds up the work-area creation significantly. The first time running `dbt-create` with this option on a node may take a longer time since cvmfs needs to fetch these files into local cache first.
 
-The second of the two commands above is important: remember to `cd` into the subdirectory you just created after `dbt-create.py` finishes running. 
+The second of the two commands above is important: remember to `cd` into the subdirectory you just created after `dbt-create` finishes running. 
 
 The structure of your work area will look like the following:
 ```txt
@@ -92,7 +91,7 @@ We're about to build and install the `listrev` package. (&#x1F534; Note: if you 
 Now, do the following:
 ```sh
 dbt-workarea-env  # To set up your work area's environment
-dbt-build.py
+dbt-build
 ```
 ...and this will build `listrev` in the local `./build` subdirectory and then install it as a package either in the local `./install` subdirectory or in whatever you pointed `DBT_INSTALL_DIR` to. Note that whenever you add a new repo to your work area, you'll want to rerun `dbt-workarea-env` so that environment variables such as `LD_LIBRARY_PATH`, etc, are updated accordingly. 
 
@@ -110,39 +109,40 @@ As a reminder, once you've added your repos and built them, you'll want to run `
 
 ### Useful build options
 
-`dbt-build.py` will by default skip CMake's config+generate stages and go straight to the build stage _unless_ either the `CMakeCache.txt` file isn't found in `./build` or you've just added a new repo to `./sourcecode`. If you want to remove all the contents of `./build` and run config+generate+build, all you need to do is add the `--clean` option, i.e.
+`dbt-build` will by default skip CMake's config+generate stages and go straight to the build stage _unless_ either the `CMakeCache.txt` file isn't found in `./build` or you've just added a new repo to `./sourcecode`. If you want to remove all the contents of `./build` and run config+generate+build, all you need to do is add the `--clean` option, i.e.
 ```
-dbt-build.py --clean
+dbt-build --clean
 ```
 One case where you'd want to do this is if you changed the installation directory variable as described above. 
 
 And if, after the build, you want to run the unit tests, just add the `--unittest` option. Note that it can be used with or without `--clean`, so, e.g.:
 ```
-dbt-build.py --clean --unittest  # Blow away the contents of ./build, run config+generate+build, and then run the unit tests
+dbt-build --clean --unittest  # Blow away the contents of ./build, run config+generate+build, and then run the unit tests
 ```
 ..where in the above case, you blow away the contents of `./build`,  run config+generate+build, install the result in `$DBT_INSTALL_DIR` and then run the unit tests. Be aware that for many packages, unit tests will only (fully) work if you've also rerun `dbt-workarea-env` with the argument `--force-ups-reload` added. 
 
 To check for deviations from the coding rules described in the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/), run with the `--lint` option:
 ```
-dbt-build.py --lint
+dbt-build --lint
 ```
 ...though be aware that some guideline violations (e.g., having a function which tries to do unrelated things) can't be picked up by the automated linter. Also note that you can use `dbt-clang-format.sh` in order to automatically fix whitespace issues in your code; type it at the command line without arguments to learn how to use it. 
 
-Note that unlike the other options to `dbt-build.py`, `--lint` and `--unittest` are both capable of taking an optional argument, which is the name of a specific repo in your work area which you'd like to either lint or run unit tests for. This can be useful if you're focusing on developing one of several repos in your work area. It should appear after an equals sign, e.g., `dbt-build.py --lint=<repo you're working on>`.
+Note that unlike the other options to `dbt-build`, `--lint` and `--unittest` are both capable of taking an optional argument, which is the name of a specific repo in your work area which you'd like to either lint or run unit tests for. This can be useful if you're focusing on developing one of several repos in your work area. It should appear after an equals sign, e.g., `dbt-build --lint=<repo you're working on>`.
+
 
 If you want to see verbose output from the compiler, all you need to do is add the `--cpp-verbose` option:
 ```
-dbt-build.py --cpp-verbose 
+dbt-build --cpp-verbose 
 ```
 
 If you want to change cmake message log level, you can use the `--cmake-msg-lvl` option:
 ```
-dbt-build.py --cmake-msg-lvl=<ERROR|WARNING|NOTICE|STATUS|VERBOSE|DEBUG|TRACE>
+dbt-build --cmake-msg-lvl=<ERROR|WARNING|NOTICE|STATUS|VERBOSE|DEBUG|TRACE>
 ```
 
 You can see all the options listed if you run the script with the `--help` command, i.e.
 ```
-dbt-build.py --help
+dbt-build --help
 ```
 Finally, note that both the output of your builds and your unit tests are logged to files in the `./log` subdirectory. These files will have ASCII color codes which make them difficult to read with some tools; `less -R <logfilename>`, however, will display the colors and not the codes themselves. 
 
@@ -167,7 +167,7 @@ In both the links above you'll notice you'll be running a program called `nanorc
 <a name="adding_extra_ups_products"></a>
 ## Adding extra UPS products and product pools
 
-Sometimes it is necessary to tweak the baseline list of UPS products or even UPS product pools to add extra dependencies; skip ahead to the next section if you don't need to worry about this. Adding extra dependencies can be easily done by editing the `dbt-settings` file copied over from daq-buildtools by `dbt-create.py` and adding the new entries to `dune_products_dirs`  and `dune_daqpackages` as needed. See `/example/of/additional/user/declared/product/pool` and `package_declared_by_user v1_2_3 e19:prof` in the example of an edited `dbt-settings` file, below. Please note that package versions in your `dbt-settings` file may be different than those in this example since what you see below is simply a snapshot used for educational reasons:
+Sometimes it is necessary to tweak the baseline list of UPS products or even UPS product pools to add extra dependencies; skip ahead to the next section if you don't need to worry about this. Adding extra dependencies can be easily done by editing the `dbt-settings` file copied over from daq-buildtools by `dbt-create` and adding the new entries to `dune_products_dirs`  and `dune_daqpackages` as needed. See `/example/of/additional/user/declared/product/pool` and `package_declared_by_user v1_2_3 e19:prof` in the example of an edited `dbt-settings` file, below. Please note that package versions in your `dbt-settings` file may be different than those in this example since what you see below is simply a snapshot used for educational reasons:
 
 ```bash
 dune_products_dirs=(
@@ -248,7 +248,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Apr 28 11:45:29 2022 -0500_
+_Date: Mon Jun 6 18:00:45 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
