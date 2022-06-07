@@ -37,10 +37,10 @@ Each time that you want to work with a DUNE DAQ work area in a fresh Linux shell
 <a name="Running_a_release_from_cvmfs"></a>
 ## Running a release from cvmfs
 
-Running a release from cvmfs without creating a work area is supported since the `dunedaq-v2.8.1` release. To do that, simply run the following (&#x1F53A; Please note: &#x1F53A; there are two variants of the release for `dunedaq-v2.11.0`. The `<release>` field mentioned in this page should be either `dunedaq-v2.11.0-cs8` or `dunedaq-v2.11.0-c7`):
+Running a release from cvmfs without creating a work area is supported since the `dunedaq-v2.8.1` release. To do that, simply run the following (&#x1F53A; Please note: &#x1F53A; there are two variants of the release for `dunedaq-v2.11.1`. The `<release>` field mentioned in this page should be either `dunedaq-v2.11.1-cs8` or `dunedaq-v2.11.1-c7`):
 
 ```sh
-dbt-setup-release <release> # e.g. dbt-setup-release dunedaq-v2.11.0-cs8
+dbt-setup-release <release> # e.g. dbt-setup-release dunedaq-v2.11.1-cs8
 ```
 
 It will set up both the external packages and DAQ packages, as well as activate the python virtual environment. Note that the python virtual environment activated here is read-only. You'd want to run `dbt-setup-release` only if you weren't developing DUNE DAQ software, the topic covered for the remainder of this document. However, if you don't want a frozen set of versioned packages - which you wouldn't, if you were developing code - please continue reading.
@@ -98,7 +98,7 @@ dbt-build
 
 ### Working with more repos
 
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/releases/dunedaq-v2.11.0-cs8/dbt-build-order.cmake`". If this is the case, you have one of two options:
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/releases/dunedaq-v2.11.1-cs8/dbt-build-order.cmake`". If this is the case, you have one of two options:
 
 
 * (Recommended) Add the names of your new packages to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
@@ -248,7 +248,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Mon Jun 6 18:00:45 2022 -0500_
+_Date: Tue Jun 7 09:20:08 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
