@@ -125,7 +125,6 @@ nav:
        - Toolset:
           - daq-buildtools:
              - About daq-buildtools: packages/daq-buildtools/README.md
-             - packages/daq-buildtools/README_spack.md
           - daq-cmake:
              - About daq-cmake: packages/daq-cmake/README.md
           - daq-release:
