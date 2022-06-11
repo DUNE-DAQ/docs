@@ -219,18 +219,18 @@ nav:
              - About timing: packages/timing/README.md
           - timinglibs:
              - About timinglibs: packages/timinglibs/README.md
-          - trigemu:
-             - About trigemu: packages/trigemu/README.md
           - trigger:
              - About trigger: packages/trigger/README.md
              - packages/trigger/trigger-alg-howto.md
        - Dataflow (physical):
+          - iomanager:
+             - About iomanager: packages/iomanager/README.md
+             - packages/iomanager/Queue.md
+             - packages/iomanager/Updating.md
           - ipm:
              - About ipm: packages/ipm/README.md
           - networkmanager:
              - About networkmanager: packages/networkmanager/README.md
-          - nwqueueadapters:
-             - About nwqueueadapters: packages/nwqueueadapters/README.md
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:

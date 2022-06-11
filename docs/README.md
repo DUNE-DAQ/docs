@@ -80,17 +80,15 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [timinglibs](packages/timinglibs/README.md) _timing control and monitoring_
 
-[trigemu](packages/trigemu/README.md) _trigger decision emulator for readout application tests_
-
 [trigger](packages/trigger/README.md) _modules that make up the DUNE FD DAQ trigger system_
 
 ### Dataflow (physical)
 
+[iomanager](packages/iomanager/README.md) _simplified API for passing messages between DAQModules_
+
 [ipm](packages/ipm/README.md) _message passing between processes_
 
 [networkmanager](packages/networkmanager/README.md) _interface for performing network sends and receives directly from DAQ modules_
-
-[nwqueueadapters](packages/nwqueueadapters/README.md) _DAQModules that connect appfwk queues to IPM network connections_
 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
 

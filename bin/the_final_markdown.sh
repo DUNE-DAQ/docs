@@ -5,7 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="utilities trigger trigemu timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib nwqueueadapters networkmanager ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-release daq-cmake daq-buildtools cmdlib appfwk"
+package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib networkmanager ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-release daq-cmake daq-buildtools cmdlib appfwk"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -116,14 +116,13 @@ for package in $package_list ; do
     # direct software integration groups to the GitHub pages if they
     # want the latest-greatest
 
-    if [[ "$package" =~ "daq-buildtools" ]]; then 
+    if [[ "$package" =~ "daq-buildtools" ]]; then
 	git checkout dunedaq-v3.0.0_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
-	git checkout dunedaq-v2.11.0_for_docs
+	git checkout dunedaq-v3.0.0_for_docs
     else
 	git checkout develop
     fi
-
     echo $tmpdir/$package
 
     if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" )  ]]; then
@@ -177,7 +176,7 @@ for package in $package_list ; do
 
 done
 
-if [[ -d $tmpdir && "$tmpdir" =~ ^/tmp/.*$ ]]; then
-    rm -rf $tmpdir
-fi
+#if [[ -d $tmpdir && "$tmpdir" =~ ^/tmp/.*$ ]]; then
+#    rm -rf $tmpdir
+#fi
 
