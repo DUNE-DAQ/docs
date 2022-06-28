@@ -225,6 +225,7 @@ nav:
        - Dataflow (physical):
           - iomanager:
              - About iomanager: packages/iomanager/README.md
+             - packages/iomanager/NetworkManager.md
              - packages/iomanager/Queue.md
              - packages/iomanager/Updating.md
           - ipm:
