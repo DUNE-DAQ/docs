@@ -343,7 +343,7 @@ then exit the program with Ctrl-D then Ctrl-C.
 
 Create the following nanorc configuration:
 ```bash
-daqconf_multiru_gen -f -e --host-ru localhost --region-id 0 --host-df localhost -o . -s 1 --number-of-data-producers 10 -t 0 --enable-firmware-tpg --enable-raw-recording --enable-tpset-writing --trigger-activity-config 'dict(prescale=500)' --trigger-candidate-config 'dict(prescale=20)' --tpg-channel-map ProtoDUNESP1ChannelMap flx-fw-json
+daqconf_multiru_gen -f -e --host-ru localhost --region-id 0 --host-df localhost -o . -s 1 --number-of-data-producers 10 --enable-firmware-tpg --enable-raw-recording --enable-tpset-writing --trigger-activity-config 'dict(prescale=500)' --trigger-candidate-config 'dict(prescale=20)' --tpg-channel-map ProtoDUNESP1ChannelMap flx-fw-json
 ```
 to raw record data in nanorc you must create a file `record-cmd.json` with the following contents:
 ```json
@@ -387,6 +387,7 @@ note if you are unsure of your local host url it will appear during the boot pro
 if you are unable to run the above commands in time then extend the wait period, and if you want to record for more than 1s you can modify record-cmd.json **but be warned, the data rate is very high**.
 if successful, you will see output files for each link with a rather with file sizes of ~1GB.
 
+
 -----
 
 <font size="1">
@@ -395,7 +396,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: ShyamB97_
 
-_Date: Thu May 19 20:07:32 2022 +0100_
+_Date: Thu Jun 23 21:17:24 2022 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
