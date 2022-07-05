@@ -9,46 +9,56 @@ A simplified API for passing messages between DAQModules
 
 * Main point-of-contact for Unified API
 
-* Methods to retrieve Sender/Receiver instances using ConnectionRefs or uid
+* Methods to retrieve `Sender`/`Receiver` instances using `ConnectionRef`s or `uid` (defined below)
 
-* Configures Queues and NetworkManager automatically in `configure`
+* Configures `Queue`s and `NetworkManager` automatically in `configure`
 
 ### ConnectionId & ConnectionRef
 
 
-* ConnectionId defines a connection, with required initialization
+* `ConnectionId` defines a connection, with required initialization
 
-  * uid Field uniquely identifies the connection
+  * `uid`: this field is a name which uniquely identifies the connection
 
-  * partition Field identifies the partition that the connection is associated with
+  * `service_type`: Describes what kind of connection (Queue, Net Send/Receive, Pub/Sub)
 
-  * uri Field is used by lower-level code to configure the connection
+  * `data_type`: Indicates the type of data carried on the connection
+
+  * `uri`: Field is used by lower-level code to configure the connection
 
     * Scheme `queue://` should be used for queues, with the queue type and size, e.g. `queue://StdDeQueue:10` creating a StdDeQueue of size 10
 
     * For network connections, standard ZMQ URI should be used, e.g. `tcp://localhost:1234` (name translation is provided by IPM)
 
-* ConnectionRef is a user-facing reference to a connection
+  * `topics`: Potential Pub/Sub topics for the connection
+
+* `ConnectionRef` is a user-facing reference to a connection
+
+  * `name`: Name of the connection for DAQModule use
+
+  * `uid`: UID of the connection
+
+  * `dir`: Direction (input/output)
 
 ### Receiver
 
 
-* Receiver is base type without template (for use in IOManager::m_receivers)
+* `Receiver` is base type without template (for use in `IOManager::m_receiver`s)
 
-* ReceiverConcept introduces template and serves as class given by IOManager::get_receiver
+* `ReceiverConcept` introduces template and serves as class given by `IOManager::get_receiver`
 
-* QueueReceiverModel and NetworkReceiverModel implement receives and callback loop for queues and network
+* `QueueReceiverModel` and `NetworkReceiverModel` implement receives and callback loop for queues and network
 
-  * NetworkReceiverModel::read_network determines if type is serializable using template metaprogramming
+  * `NetworkReceiverModel::read_network` determines if type is serializable using template metaprogramming
 
 ### Sender
 
 
-* Similar design as for Receivers
+* Similar design as for `Receiver`s
 
-* QueueSenderModel and NetworkSenderModel implement sends for queues and network
+* `QueueSenderModel` and `NetworkSenderModel` implement sends for queues and network
 
-* NetworkReceiverModel::write_network determines if type is serializable using template metaprogramming
+* `NetworkReceiverModel::write_network` determines if type is serializable using template metaprogramming
 
 ### API Diagram
 
@@ -125,7 +135,7 @@ A simplified API for passing messages between DAQModules
 ```
 ## When to use "try_" methods
 
-The standard send() and receive() methods will throw an ERS exception if they time out. This is ideal for cases where timeouts are an exceptional condition (this applies to most, if not all send calls, for example). In cases where the timeout condition can be safely ignored (such as the callback-driving methods which are retrying the receive in a tight loop), the `try_send` and `try_receive` methods may be used. Note that these methods are **not** `noexcept`, any non-timeout issues will result in an ERS exception.
+The standard `send()` and `receive()` methods will throw an ERS exception if they time out. This is ideal for cases where timeouts are an exceptional condition (this applies to most, if not all send calls, for example). In cases where the timeout condition can be safely ignored (such as the callback-driving methods which are retrying the receive in a tight loop), the `try_send` and `try_receive` methods may be used. Note that these methods are **not** `noexcept`, any non-timeout issues will result in an ERS exception.
 
 ## Updating existing code to use IOManager
 
@@ -142,9 +152,9 @@ The API used for queues is documented [here](Queue.md). Network connections use 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: jcfreeman2_
 
-_Date: Wed Jun 22 13:18:16 2022 -0500_
+_Date: Tue Jul 5 11:19:54 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/iomanager/issues](https://github.com/DUNE-DAQ/iomanager/issues)_
 </font>
