@@ -223,7 +223,29 @@ It should be pointed out that some substitutions are made when nanorc uses a fil
 
 ## How to run WebUI
 
-WebUI running is handled by `nanorc --web` command. WebUI needs you to provide only one parameter in addition.
+To access the WebUI, add the --web option when running nanorc. When nanorc starts up, it will display a box like this :
+
+![node](node.png)
+
+which shows what lxplus node to connect to (in dark blue in the picture above lxplusXXXX.cern.ch).
+
+Before you can connect, a SOCKS proxy must be set up to that node in another terminal window, using `ssh -N -D 8080 username@lxplusXXXX.cern.ch` and substituting XXXX with whatever number is shown.
+
+Once you have set up your browser to use a SOCKS proxy, connect to the address in the browser, and you should see something like this:
+
+![GUI](GUI.png)
+
+
+From here, using nanorc is just about the same as in the terminal: 
+
+
+*  transitions between FSM states can be done using the State Control Buttons, 
+
+*  the information that nanorc outputs can be viewed by clicking the expansion triangle under "Last response from nanorc" to see the details of the response.
+
+
+**Note that this information will also be shown as output to the terminal.**
+
 
 
 -----
@@ -232,9 +254,9 @@ WebUI running is handled by `nanorc --web` command. WebUI needs you to provide o
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: carloschavez_
 
-_Date: Tue Jul 5 19:59:57 2022 +0200_
+_Date: Fri Jul 8 17:22:24 2022 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>
