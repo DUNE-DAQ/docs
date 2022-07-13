@@ -137,6 +137,7 @@ nav:
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
              - packages/daq-release/standalone_daq_release.md
+             - packages/daq-release/team_repos.md
              - packages/daq-release/upsify_daq_packages.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
