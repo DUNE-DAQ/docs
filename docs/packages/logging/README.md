@@ -67,6 +67,33 @@ The TLOG_DEBUG(lvl) is to be used for messages which will be selectively enabled
 
 The TLOG_DEBUG(lvl) macro accepts an optional "name" parameter which defaults to the basename of the compilation file minus the extension. The level and name combination is ultimately used to enable and disable specific TLOG_DEBUG statements.
 
+## Examples
+
+```CPP
+
+#include "logging/Logging.hpp"
+
+namespace dunedaq {
+ERS_DECLARE_ISSUE(test, TestERSIssue, "TestERSIssue: " << text, ((std::string)text))
+} // namespace dunedaq
+
+using namespace dunedaq::test;
+
+int main() {
+    // ERS log ouput:
+    ers::fatal ( TestERSIssue("Fatal message") );
+    ers::error ( TestERSIssue("Error message") );
+    ers::warning ( TestERSIssue("Warning messag") );
+    ers::info ( TestERSIssue("Info message") );
+    
+    // TRACE log (stdout and TRACE memory only, no central log)
+    TLOG() << "Info log message, can also send " << TestERSIssue("here");
+    // TRACE memory (no stdout unless enabled via tlvls)
+    TLOG_DEBUG(10) << "Verbose Debug message to TRACE buffer";
+}
+
+```
+
 # ERS/Slow-path configuration
 
 By default, all ERS severities are configured to have at least standard out or standard error as a destination.
@@ -165,9 +192,9 @@ The NFO lines below should/will be green with an actual show...
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Ron Rechenmacher_
+_Author: eflumerf_
 
-_Date: Sat Jul 3 13:03:42 2021 -0500_
+_Date: Tue Jul 5 09:58:32 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/logging/issues](https://github.com/DUNE-DAQ/logging/issues)_
 </font>
