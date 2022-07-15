@@ -1,47 +1,26 @@
 # User Guide
 ## Commands
-Commands are JSON objects. They have a signature of having an `id` string element, and a `data` object which is a user defined custom parameter list. For an example, please have a look on the `-job.json` files in appfwk. For better names, these field might be renamed in the future. This is how the init command looks like in order to create a fake data producer and a consumer modules, connected by a queue:
+Commands are JSON objects. They have a signature of having an `id` string element, the FSM entry and resulting states, and a `data` object which is a user defined custom parameter list. For an example, please have a look on the `cmd.json` file in cmdlib/data. For better names, these field might be renamed in the future. This is how the start command looks like:
 ```
-{
-        "id": "init",
+    {
         "data": {
             "modules": [
                 {
                     "data": {
-                        "qinfos": [
-                            {
-                                "dir": "output",
-                                "inst": "hose",
-                                "name": "output"
-                            }
-                        ]
+                        "run": 42,
+                        "disable_data_storage": false,
+                        "trigger_rate": 1.5
                     },
-                    "inst": "fdp",
-                    "plugin": "FakeDataProducerDAQModule"
-                },
-                {
-                    "data": {
-                        "qinfos": [
-                            {
-                                "dir": "input",
-                                "inst": "hose",
-                                "name": "input"
-                            }
-                        ]
-                    },
-                    "inst": "fdc",
-                    "plugin": "FakeDataConsumerDAQModule"
-                }
-            ],
-            "queues": [
-                {
-                    "capacity": 10,
-                    "inst": "hose",
-                    "kind": "StdDeQueue"
+                    "match": ""
                 }
             ]
-        }
-    }
+        },
+        "id": "start",
+        "entry_state": "CONFIGURED",
+        "exit_state": "READY"
+
+    },
+
 ```
 
 ## CommandedObject
@@ -67,9 +46,10 @@ There is a really simple and basic implementation that comes with the package.
 The stdinCommandFacility reads the available commands from a file, then one can
 execute these command by typing their IDs on stdin:
 
-    daq_application -c stdin://sourcecode/appfwk/schema/fdpc-job.json
+    daq_application -c stdin://${CMDLIB_SHARE}/config/cmd.json
 
 ![Demo](https://cernbox.cern.ch/index.php/s/BxvvU0PlPuyHjla/download)
+
 
 -----
 
@@ -77,9 +57,9 @@ execute these command by typing their IDs on stdin:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Giovanna Lehmann Miotto_
 
-_Date: Thu Apr 8 09:37:47 2021 -0500_
+_Date: Thu Jul 14 18:18:42 2022 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/cmdlib/issues](https://github.com/DUNE-DAQ/cmdlib/issues)_
 </font>
