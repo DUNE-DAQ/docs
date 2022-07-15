@@ -132,6 +132,7 @@ nav:
              - packages/daq-release/add_modules_to_pypi_repo.md
              - packages/daq-release/ci_github_action.md
              - packages/daq-release/create_release.md
+             - packages/daq-release/create_release_spack.md
              - packages/daq-release/development_workflow_gitflow.md
              - packages/daq-release/make_ups_products.md
              - packages/daq-release/publish_to_cvmfs.md
