@@ -34,6 +34,8 @@ The release YAML file `dunedaq-<vX.Y.Z>.yaml` contains the following sections:
 - field name: `dunedaq`, data type: list; description: each element is for one DAQ package, with its name, version/tag, and commit hash. Commit hash can be left as `null`. The commit hash will be captured at the time of building the release using the tag. 
 - field name: `pymodules`, data type: list; description: each element is for one python module, with information of module name, source site (`pypi.org` or on GitHub).
 
+Update the file with the new versions (and, if needed, new packages) in the release. Please note that if you need to update or add a Python package (i.e., an entry under `pymodules`) then you'll need to do a little preparation by updating `/cvmfs/dunedaq.opensciencegrid.org/pypi-repo`. How do to that is described [here](add_modules_to_pypi_repo.md). 
+
 ## Building candidate releases
 
 Once the release configuration is ready, one can start the CI build for candidate releases. The build can be started via GitHub API or webUI. Go to the "Actions" tab of `daq-release` repo on GitHub, and select "Build candidate release" in the list of workflows in the workflows tab, click the "run workflow" button. A drop-down menu will show up. Put in the release name for the release cycle (for locating the release configuration in the repo) and the candidate release name for this build, and then click "Run workflow" to start the build.
@@ -54,9 +56,9 @@ To deploy the release, login to `cvmfsdunedaq@oasiscfs01.fnal.gov` and run `~/pu
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pengfei Ding_
+_Author: jcfreeman2_
 
-_Date: Fri Jul 15 04:19:49 2022 -0500_
+_Date: Sat Jul 16 10:01:10 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
