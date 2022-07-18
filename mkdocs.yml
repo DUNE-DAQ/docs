@@ -232,8 +232,6 @@ nav:
              - packages/iomanager/Updating.md
           - ipm:
              - About ipm: packages/ipm/README.md
-          - networkmanager:
-             - About networkmanager: packages/networkmanager/README.md
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:

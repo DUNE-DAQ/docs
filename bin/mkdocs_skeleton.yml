@@ -159,7 +159,6 @@ nav:
        - Dataflow (physical):
           - iomanager:
           - ipm:
-          - networkmanager:
           - serialization:
        - Monitoring:
           - erskafka:
