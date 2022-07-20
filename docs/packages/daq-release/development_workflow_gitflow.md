@@ -121,10 +121,13 @@ This period is begun on the developer side by bumping the version of the package
 2. Update the `project(<package name> VERSION <X.Y.Z>)` line at the top of `CMakeLists.txt`, and go through a trivial PR if the `develop` branch hasn't yet had its protection rule removed by the software coordination team for the release process.
 
 
-3. With `CMakeLists.txt` modified on `develop`, perform an annotated tag on `develop`: `git tag -a v<X.Y.Z> -m "<your initials>: version v<X.Y.Z>"`
+3. With the `CMakeLists.txt` modification committed on `develop`, perform an annotated tag on `develop`: `git tag -a v<X.Y.Z> -m "<your initials>: version v<X.Y.Z>"`
 
 
-4. Mark your package as "Tag Ready" on the tag collector spreadsheet
+4. Push your `develop` branch and your tag to the central repo: `git push origin develop; git push --tags`
+
+
+5. Mark your package as "Tag Ready" on the tag collector spreadsheet
 
 The start of the testing period is marked by the tag collection date and the build of initial candidate release. Any further changes made during the testing period should be agreed upon and significant - this is not a time for introducing minor new features, as we want to test as consistent a codebase as possible. Changes which do get made will be made to a `prep-release/dunedaq-v<X.Y.Z>` branch; if one doesn't exist, it should be created. This branch should be based on the initial tag for the release. The fixes can be made to the `prep-release/dunedaq-v<X.Y.Z>` branch via pull requests with at lease one approval review.
 
@@ -198,7 +201,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Jul 19 10:42:40 2022 -0500_
+_Date: Wed Jul 20 14:00:19 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
