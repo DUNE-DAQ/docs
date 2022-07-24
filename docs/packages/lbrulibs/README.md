@@ -48,7 +48,7 @@ to generate a config and then:
 
     nanorc mdapp_4proc_pacman_1Hz_pt1second_mode3
 
-to run it. With run commands: boot, init, conf, start 1, resume, (here receive data), stop, scrap, exit
+to run it. With run commands: boot (insance-name), init, conf, start (run number), resume, (here receive data), stop, scrap, exit
 
 ## ND-GAr: TBD
 Configuration steps:
@@ -87,7 +87,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Krzysztof Furman_
 
-_Date: Mon Apr 11 17:42:53 2022 +0100_
+_Date: Mon Jun 13 08:40:41 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/lbrulibs/issues](https://github.com/DUNE-DAQ/lbrulibs/issues)_
 </font>

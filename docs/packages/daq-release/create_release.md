@@ -1,5 +1,7 @@
 # Creating a new DAQ release
 
+:red_circle: Note: this page is outdated as we discontinued UPS-based releases.
+
 ## Overview
 
 Here are the general steps of creating a new DAQ release.
@@ -82,7 +84,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Wed Sep 8 16:58:27 2021 +0200_
+_Date: Fri Jul 15 04:19:49 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

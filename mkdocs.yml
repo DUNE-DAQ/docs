@@ -132,11 +132,13 @@ nav:
              - packages/daq-release/add_modules_to_pypi_repo.md
              - packages/daq-release/ci_github_action.md
              - packages/daq-release/create_release.md
+             - packages/daq-release/create_release_spack.md
              - packages/daq-release/development_workflow_gitflow.md
              - packages/daq-release/make_ups_products.md
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
              - packages/daq-release/standalone_daq_release.md
+             - packages/daq-release/team_repos.md
              - packages/daq-release/upsify_daq_packages.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
@@ -225,12 +227,11 @@ nav:
        - Dataflow (physical):
           - iomanager:
              - About iomanager: packages/iomanager/README.md
+             - packages/iomanager/NetworkManager.md
              - packages/iomanager/Queue.md
              - packages/iomanager/Updating.md
           - ipm:
              - About ipm: packages/ipm/README.md
-          - networkmanager:
-             - About networkmanager: packages/networkmanager/README.md
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:

@@ -48,8 +48,12 @@ Running a release from cvmfs without creating a work area can be done if you sim
 ```sh
 dbt-setup-release dunedaq-v3.0.0
 ```
+Instead of a frozen release you can also set up nightly releases and candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up a candidate release you can do:
+```
+dbt-setup-release -b candidate rc-dunedaq-v3.1.0-1 # rc-dunedaq-v3.1.0-1 is the latest candidate release as of Jul-18-2022
+```
 
-It will set up both the external packages and DAQ packages, as well as activate the python virtual environment. Note that the python virtual environment activated here is read-only. You'd want to run `dbt-setup-release` only if you weren't developing DUNE DAQ software, the topic covered for the remainder of this document. However, if you don't want a frozen set of versioned packages - which you wouldn't, if you were developing code - please continue reading.
+`dbt-setup-release` will set up both the external packages and DAQ packages, as well as activate the python virtual environment. Note that the python virtual environment activated here is read-only. You'd want to run `dbt-setup-release` only if you weren't developing DUNE DAQ software, the topic covered for the remainder of this document. However, if you don't want a frozen set of versioned packages - which you wouldn't, if you were developing code - please continue reading.
 
 
 <a name="Creating_a_work_area"></a>
@@ -235,9 +239,9 @@ In order to create a work area which builds against UPS-installed packages rathe
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jcfreeman2_
 
-_Date: Sat Jun 11 09:36:12 2022 -0500_
+_Date: Mon Jul 18 12:42:24 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
