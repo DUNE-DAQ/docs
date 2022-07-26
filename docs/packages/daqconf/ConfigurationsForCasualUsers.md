@@ -23,7 +23,7 @@ The tools to generate these configurations consist of a single Python script tha
 The config_gen files under `python/daqconf/` directory were developed to work with _nanorc_ package, which itself can be seen as a basic Finite State Machine that sends commands and drives the DAQ system.
 
 The created configurations will be called `daq_fakeNN` and there will be a `daq_fakeNN` directory created containing the produced configuration to be used with  _nanorc_.
-The configurations can be run interactively with `nanorc daq_fakeNN` from the `<work_dir>`.
+The configurations can be run interactively with `nanorc daq_fakeNN <partition_name>` from the `<work_dir>`.
 
 1) In order to get the full set of configuration options and their `help` , run :
 `daqconf_multiru_gen -h`
@@ -65,7 +65,7 @@ the default for any unspecified host options will be `localhost`
 
 7) Running _nanorc_ can be done in interactively or in batch mode, for the later you can specify a sequence of commands to drive MiniDAQ app, for example run :
 
- `nanorc daq_fake03 boot <partition_name> init conf start 103 wait 60 stop scrap terminate`
+ `nanorc daq_fake03 <partition_name> boot conf start_run 103 wait 60 stop_run shutdown`
 
 Where the `start <run_number>` command specifies the run_number value to be used.
 Any meaningful combination of commands is allowed.  Note that the `start` command includes an automatically-generated `resume` command to start the flow of triggers, and the `stop` command includes an automatically-generated `pause` command to stop the flow of triggers.
@@ -88,7 +88,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: bieryAtFnal_
 
-_Date: Tue Jun 7 15:47:28 2022 -0500_
+_Date: Thu Jul 21 10:20:03 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>

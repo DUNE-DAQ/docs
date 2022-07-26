@@ -13,10 +13,10 @@ Here are the steps that should be used when you first create your local software
 2. `source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh`
 
 
-3. `setup_dbt dunedaq-v3.0.0`
+3. `setup_dbt dunedaq-v3.1.0`
 
 
-4. `dbt-create -c dunedaq-v3.0.0 <work_dir>`
+4. `dbt-create -c dunedaq-v3.1.0 <work_dir>`
 
 
 6. `cd <work_dir>`
@@ -33,7 +33,7 @@ Here are the steps that should be used when you first create your local software
 11. `daqconf_multiru_gen -d $PWD/frames.bin -o . -s 10 daq_fake`
 
 
-12. `nanorc daq_fake boot ${USER}-test init conf start 101 wait 60 stop scrap terminate`
+12. `nanorc daq_fake ${USER}-test boot conf start_run 101 wait 60 stop_run shutdown`
 
 
 13. examine the contents of the HDf5 file with commands like the following:
@@ -57,7 +57,7 @@ When you return to this work area (for example, after logging out and back in), 
 4. `dbt-workarea-env`
 
 
-7. `nanorc daq_fake boot ${USER}-test init conf start 102 wait 60 stop scrap terminate`
+7. `nanorc daq_fake ${USER}-test boot conf start_run 102 wait 60 stop_run shutdown`
 
 
 More detailed explanations on how to create different configurations can be found in [Instructions for different configurations for first-time users](ConfigurationsForCasualUsers.md)
@@ -105,7 +105,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: bieryAtFnal_
 
-_Date: Wed Jun 8 10:27:10 2022 -0500_
+_Date: Thu Jul 21 10:11:09 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
