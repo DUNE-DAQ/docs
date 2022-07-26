@@ -121,10 +121,7 @@ for package in $package_list ; do
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout dunedaq-v3.0.0_for_docs  # Also applies to dunedaq-v3.1.0
     else
-	git checkout prep-release/dunedaq-v3.1.0 
-	if [[ "$?" != "0" ]]; then
-	    git checkout develop
-	fi
+	git checkout develop
     fi
     echo $tmpdir/$package
 
