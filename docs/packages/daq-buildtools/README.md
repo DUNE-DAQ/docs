@@ -27,7 +27,7 @@ In a directory which doesn't contain a daq-buildtools repository, simply do:
 
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt latest-spack
+setup_dbt v5.0.9
 ```
 
 Then you'll see something like:
@@ -241,7 +241,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Mon Jul 25 13:36:23 2022 -0500_
+_Date: Tue Jul 26 20:38:27 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
