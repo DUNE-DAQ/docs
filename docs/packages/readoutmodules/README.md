@@ -38,15 +38,65 @@ The produced hit rate should be around 100kHz.
 
 ## Enabling the fake TP source
 
-The FakeCardReader module is capable of reading raw WIB TP data by enabling the corresponding link 
-via configuration. Currently the fake TPs are read out from a binary file (with default location 
-at /tmp/tp_frames.bin) and parsed using the "RawWibTp" format.
+The FakeCardReader module is capable of reading raw WIB2 TP data by enabling the corresponding link 
+via configuration. In emulator mode, the fake TPs are read out from a binary file (with default location 
+at ./tp_frames.bin) and parsed using the "RawTp" format `detdataformats`.
 
 To get the "tp_frames.bin" TP data:
 
-    curl https://cernbox.cern.ch/index.php/s/nd201XOcMCmHpIX/download -o /tmp/tp_frames.bin
+    curl https://cernbox.cern.ch/index.php/s/FqMXxSpM3WjgeCN/download -o tp_frames.bin
 
-_Instructions on how to test the fake raw WIB TP readout will be provided here_
+_Instructions on how to test the fake raw WIB TP readout will be provided/updated here:
+
+Testing TP standalone configuration script with dunedaq-v3.1.0:
+
+
+
+1. Download tp_frames.bin file
+```
+curl https://cernbox.cern.ch/index.php/s/FqMXxSpM3WjgeCN/download -o tp_frames.bin
+```
+
+
+
+2. Setup v3.1.0 work area and checkout branch
+```
+git clone https://github.com/DUNE-DAQ/readoutmodules.git -b hristova/tp_appconfgen_fix
+dbt-build -j16
+```
+
+
+
+3. Check TP standalone configuration script was installed
+```
+find . -name readoutapp_gen -type f -print
+readoutapp_gen -h
+```
+
+
+
+4. Generate configuration (TP links only, WIB2 format)
+
+4a. WIB2
+```
+readoutapp_gen -n 0 -t 1 -c 2048 -m VDColdboxChannelMap tpapp.json
+```
+4b. WIB1 (currently default)
+```
+readoutapp_gen -n 0 -t 1 tpapp.json
+```
+
+
+
+5. Run test job with nanorc
+```
+rm -Rf RunConf_1; nanorc tpapp.json test boot conf start_run 001 wait 10 stop_run scrap terminate
+```
+
+The fix in branch https://github.com/DUNE-DAQ/readoutmodules/tree/hristova/tp_appconfgen_fix
+allows the WIB2 configuration options to be used.
+
+
 
 ## Modules provided by readoutmodules
 `readoutmodules` provides several `DAQModule`s that are listed here:
@@ -70,9 +120,9 @@ _Instructions on how to test the fake raw WIB TP readout will be provided here_
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jmcarcell_
+_Author: hristovaivana_
 
-_Date: Fri Jun 3 10:00:53 2022 +0200_
+_Date: Tue Aug 2 09:41:03 2022 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readoutmodules/issues](https://github.com/DUNE-DAQ/readoutmodules/issues)_
 </font>
