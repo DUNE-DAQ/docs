@@ -27,7 +27,7 @@ In a directory which doesn't contain a daq-buildtools repository, simply do:
 
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt dunedaq-v3.1.0   # dunedaq-v3.1.0 is identical to dunedaq-v3.0.0
+setup_dbt dunedaq-v3.1.1   # dunedaq-v3.1.1 is identical to dunedaq-v3.0.0 and dunedaq-v3.1.0
 ```
 
 Then you'll see something like:
@@ -46,7 +46,7 @@ Each time that you want to work with a DUNE DAQ work area in a fresh Linux shell
 Running a release from cvmfs without creating a work area can be done if you simply run the following:
 
 ```sh
-dbt-setup-release <release> # dunedaq-v3.1.0 is the latest release as of Jul-25-2022
+dbt-setup-release <release> # dunedaq-v3.1.1 is the latest release as of Aug-04-2022
 ```
 Instead of a frozen release you can also set up nightly releases and candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up a candidate release you can do:
 ```
@@ -241,7 +241,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Jul 28 12:58:06 2022 -0500_
+_Date: Thu Aug 4 14:09:19 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
