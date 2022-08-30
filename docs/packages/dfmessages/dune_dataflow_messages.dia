@@ -1135,7 +1135,7 @@
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#using GeoID = daqdataformats::GeoID;
+            <dia:string>#using GeoID = daqdataformats::SourceID;
 using ComponentRequest = daqdataformats::ComponentRequest;
 using run_number_t = daqdataformats::run_number_t;
 using trigger_number_t = daqdataformats::trigger_number_t;

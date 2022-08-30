@@ -9,27 +9,33 @@ The following are brief descriptions of the various structs in this package, inc
 ----------
 
 
-**Fragment**: the data fragment interface, representing the data response of one part of the detector (TPC link, etc.) to a Dataflow DataRequest message. Contains a FragmentHeader and the data payload.
+**Fragment**: the data fragment interface, representing the data response of one part of the detector (TPC link, etc.) to a dataflow `DataRequest` message. Contains a `FragmentHeader` and the data payload.
 
 
-**FragmentHeader**: data-about-the-data, e.g. run number, trigger timestamp, etc.
+**FragmentHeader**: data-about-the-data, e.g. source, run number, trigger timestamp, etc.
 
-[FragmentHeader description](FragmentHeaderV3.md)
+[FragmentHeader description](FragmentHeaderV4.md)
 
 ---------------
 
 
-**TriggerRecordHeaderData**: An assortment of information about the trigger. Trigger timestamp, trigger type, etc.
+**TriggerRecordHeaderData**: An assortment of information about a trigger. Trigger timestamp, trigger type, etc.
+
+[TriggerRecordHeaderData description](TriggerRecordHeaderDataV3.md)
 
 
-**TriggerRecordHeader**: contains an instance of TriggerRecordHeaderData and a set of component requests
+**TriggerRecordHeader**: contains an instance of `TriggerRecordHeaderData` and a set of component requests
 
 
-**TriggerRecord**: contains an instance of TriggerRecordHeader and a set of fragments
+**TriggerRecord**: contains an instance of `TriggerRecordHeader` and a set of fragments
 
-[TriggerRecordHeader description](TriggerRecordHeaderDataV2.md)
+---------------
 
-[ComponentRequest description](ComponentRequestV1.md)
+[SourceID description](SourceIDV2.md)
+
+---------------
+
+[ComponentRequest description](ComponentRequestV2.md)
 
 --------------
 
@@ -43,7 +49,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed Nov 24 18:01:02 2021 -0600_
+_Date: Mon Jul 11 15:41:08 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqdataformats/issues](https://github.com/DUNE-DAQ/daqdataformats/issues)_
 </font>
