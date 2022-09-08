@@ -30,7 +30,7 @@ Here are the steps that should be used when you first create your local software
    or clicking on the [CERNBox link](https://cernbox.cern.ch/index.php/s/0XzhExSIMQJUsp0/download)) and put it into `<work_dir>`
 
 
-11. `daqconf_multiru_gen -d $PWD/frames.bin -o . -s 10 daq_fake`
+11. `daqconf_multiru_gen daq_fake`
 
 
 12. `nanorc daq_fake ${USER}-test boot conf start_run 101 wait 60 stop_run shutdown`
@@ -103,9 +103,9 @@ If and when you are ready to start looking at existing code and possibly modifyi
 _Last git commit to the markdown source of this page:_
 
 
-_Author: bieryAtFnal_
+_Author: Eric Flumerfelt_
 
-_Date: Thu Jul 21 10:11:09 2022 -0500_
+_Date: Wed Sep 7 15:10:27 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
