@@ -206,6 +206,7 @@ nav:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigurationsForCasualUsers.md
              - packages/daqconf/InstructionsForCasualUsers.md
+             - packages/daqconf/MigratingToNewConfgen.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
           - restcmd:
