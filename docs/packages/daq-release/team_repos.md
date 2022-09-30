@@ -1,12 +1,11 @@
 # List of teams and repositories 
 
 
-##  ccm
+## ccm
 
+* Maintainer(s): Pierre Lasorak ,Alex Tapper
 
-* Maintainer: Pierre Lasorak, Alex Tapper
-
-* Repos with write access:
+* Repositories with write access:
   - appfwk
   - cmdlib
   - daq-systemtest
@@ -27,15 +26,14 @@
   - pocket
   - rcif
   - restcmd
-  - utilities
 
 ## core-sw
 
+* Maintainer(s): Kurt Biery ,Roland Sipos
 
-* Maintainer: Kurt Biery, Roland Sipos
-
-* Repos with write access:
+* Repositories with write access:
   - appfwk
+  - ctbmodules
   - daq-systemtest
   - daqconf
   - daqdataformats
@@ -43,33 +41,40 @@
   - ddpdemo
   - dfmessages
   - dfmodules
+  - dpdklibs
+  - fdreadoutlibs
   - hdf5libs
+  - hsilibs
   - integrationtest
   - iomanager
   - ipm
+  - lbrulibs
   - minidaqapp
+  - ndreadoutlibs
   - networkmanager
   - nwqueueadapters
+  - performancetest
+  - readoutlibs
+  - readoutmodules
   - serialization
+  - sspmodules
   - trigemu
   - utilities
 
 ## datafmts
 
+* Maintainer(s): Alessandro Thea
 
-* Maintainer: Alessandro Thea
-
-* Repos with write access:
+* Repositories with write access:
   - daqdataformats
   - detchannelmaps
   - detdataformats
 
 ## dqm
 
+* Maintainer(s): Pip Hamilton
 
-* Maintainer: Pip Hamilton
-
-* Repos with write access:
+* Repositories with write access:
   - daq-systemtest
   - dqm
   - dqm-backend
@@ -79,59 +84,42 @@
 
 ## nd-udaq
 
+* Maintainer(s): Patrick Dunne
 
-* Maintainer: Patrick Dunne
-
-* Repos with write access:
+* Repositories with write access:
   - lbrulibs
   - minidaqapp
 
-## trigger
-
-
-* Maintainer: Philip Rodrigues
-
-* Repos with write access:
-  - daq-systemtest
-  - datafilter
-  - minidaqapp
-  - trigger
-  - triggeralgs
-  - triggermodules
-
 ## udaq
 
+* Maintainer(s): Jim Brooke
 
-* Maintainer: Jim Brooke
-
-* Repos with write access:
+* Repositories with write access:
   - daq-systemtest
-  - dpdklibs
   - dtpcontrols
   - dtpctrllibs
-  - fdreadoutlibs
+  - dtpemulator
+  - dtpfeedbacktools
   - flx-k8s-device-plugin
   - flxlibs
   - minidaqapp
-  - ndreadoutlibs
   - readout
-  - readoutlibs
-  - readoutmodules
-  - sspmodules
   - timing
   - timinglibs
   - uhallibs
-  - utilities
 
 ## wib
 
+* Maintainer(s): Alessandro Thea
 
-* Maintainer: David Rivera
-
-* Repos with write access:
+* Repositories with write access:
   - dune-wib-firmware
   - protodune-wib-firmware
   - wibmod
+
+
+Page was generated at: 30/09/2022 18:13:11
+
 
 
 -----
@@ -142,7 +130,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Wed Jul 13 01:50:43 2022 -0500_
+_Date: Fri Sep 30 18:15:19 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
