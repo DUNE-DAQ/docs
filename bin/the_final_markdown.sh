@@ -5,8 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-systemtest daq-release daq-cmake daq-buildtools cmdlib appfwk"
-#package_list="appfwk daq-systemtest"
+package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-release daq-cmake daq-buildtools cmdlib appfwk"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -119,8 +118,6 @@ for package in $package_list ; do
 	git checkout dunedaq-v3.2.0_candidate_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout dunedaq-v3.2.0_candidate_for_docs
-    elif [[ "$package" =~ "daq-systemtest" ]]; then
-        git checkout johnfreeman/documentation_org	
     else
 	git checkout develop
     fi
@@ -154,7 +151,6 @@ for package in $package_list ; do
 
 	for mdfile_candidate in $(ls $dir/*.md 2>/dev/null  ) ; do
 	    already_in_docs=false
-	    #echo "Candidate is $mdfile_candidate"
 	    for mdfile_official in $( find $packages_dir/$package -name "*.md" 2>/dev/null ) ; do
 		cmp $mdfile_candidate $mdfile_official > /dev/null 2>&1
 
@@ -174,10 +170,10 @@ for package in $package_list ; do
 
     mdfilelist=""
     if [[ -e $packages_dir/$package/README.md ]]; then
-	mdfilelist="$packages_dir/$package/README.md "
+	mdfilelist=" $packages_dir/$package/README.md"
     fi
 
-    mdfilelist=$mdfilelist$( find $packages_dir/$package -name "*.md" -not -regex ".*$package/README.md" | sort --reverse --ignore-case )
+    mdfilelist=$( find $packages_dir/$package -name "*.md" -not -regex ".*$package/README.md" | sort --reverse --ignore-case )$mdfilelist
 
     for mdfile in $mdfilelist; do
 
