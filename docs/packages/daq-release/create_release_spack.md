@@ -69,6 +69,19 @@ To do so, login to `cvmfsdunedaq@oasiscfs01.fnal.gov` as `cvmfsdunedaq`, then do
 * After the frozen release is rolled out, regarding the `prep-release/dunedaq-vX.Y.Z` or `patch/dunedaq-vX.Y.Z` branches, the release coordinator should notify the software coordination team if anything should be kept out of the merge to develop. The software coordination team will do the merge across all relevant repositories. Developers should handle any partial merge (cherry-pick).
 
 
+* The last step of making a frozen release is to create release tags for all packages used by the release. To do so, use the script `daq-release/scripts/create-release-tag.py`:
+
+  * `daq-release/scripts/create-release-tag.py -h` to show the usage of the script;
+
+  * `daq-release/scripts/create-release-tag.py -a -t <release-tag> -i <release YAML file>` to tag all packages used by the release;
+
+  * `daq-release/scripts/create-release-tag.py -p <package> -r <ref_tag_or_branch_or_commit>` to tag a single package using specified ref;
+
+  * `daq-release/scripts/create-release-tag.py -p <package> -i <release YAML file>` to tag a single package using ref found in in release YAML file;
+
+  * `-d` to delete release tags if found, `-f` to recreate release tags.
+
+
 -----
 
 <font size="1">
@@ -77,7 +90,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Mon Oct 10 09:23:34 2022 -0500_
+_Date: Mon Oct 10 12:27:25 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
