@@ -3,7 +3,7 @@ The intention of this page is to provide a few simple instructions that new or c
 
 The steps fall into a few general categories (setup the environment, generate the sample system configuration, and use _nanorc_ to run the sample system), and they draw on more detailed instructions from other repositories, for example, _[daq-buildtools](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/)_ and _[nanorc](https://dune-daq-sw.readthedocs.io/en/latest/packages/nanorc/)_.
 
-Here are the steps that should be used when you first create your local software working area (i.e. `<work_dir>`):
+As of Oct-4-2022, here are the steps that should be used when you first create your local software working area (i.e. `<work_dir>`):
 
 
 
@@ -13,10 +13,10 @@ Here are the steps that should be used when you first create your local software
 2. `source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh`
 
 
-3. `setup_dbt dunedaq-v3.1.0`
+3. `setup_dbt latest-gcc12`
 
 
-4. `dbt-create -c dunedaq-v3.1.0 <work_dir>`
+4. `dbt-create -c -b candidate rc-v3.2.0-2 <work_dir>`
 
 
 6. `cd <work_dir>`
@@ -30,7 +30,10 @@ Here are the steps that should be used when you first create your local software
    or clicking on the [CERNBox link](https://cernbox.cern.ch/index.php/s/0XzhExSIMQJUsp0/download)) and put it into `<work_dir>`
 
 
-11. `daqconf_multiru_gen daq_fake`
+10. `git clone https://github.com/DUNE-DAQ/daq-systemtest`
+
+
+11. `daqconf_multiru_gen --hardware-map-file daq-systemtest/config/default_system_HardwareMap.txt daq_fake`
 
 
 12. `nanorc daq_fake ${USER}-test boot conf start_run 101 wait 60 stop_run shutdown`
@@ -60,7 +63,7 @@ When you return to this work area (for example, after logging out and back in), 
 7. `nanorc daq_fake ${USER}-test boot conf start_run 102 wait 60 stop_run shutdown`
 
 
-More detailed explanations on how to create different configurations can be found in [Instructions for different configurations for first-time users](ConfigurationsForCasualUsers.md)
+More detailed explanations on what's going on with the steps above and how to create different configurations can be found in [Instructions for different configurations for first-time users](ConfigurationsForCasualUsers.md)
 
 If and when you are ready to start looking at existing code and possibly modifying it, you can use steps like the following:
 
@@ -103,9 +106,9 @@ If and when you are ready to start looking at existing code and possibly modifyi
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: John Freeman_
 
-_Date: Wed Sep 7 15:10:27 2022 -0500_
+_Date: Tue Oct 4 11:23:27 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>

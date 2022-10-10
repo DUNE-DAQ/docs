@@ -3,7 +3,7 @@ The intention of this page is to provide a few simple configurations that new or
 
 After you have successfully followed the steps described in [Instructions for casual or first-time users](InstructionsForCasualUsers.md), we will focus now on a few variations to the default configuration used in those instructions.
 
-First, a reminder to set up your working software environment and downloaded the fake input data file
+First, a reminder to set up your working software environment and download the fake input data file
 
 
 1. `cd <work_dir>`
@@ -19,15 +19,15 @@ First, a reminder to set up your working software environment and downloaded the
 
 Next we generate some sample system configurations and use _[nanorc](https://dune-daq-sw.readthedocs.io/en/latest/packages/nanorc/)_ to run a demo system with them.
 
-The tools to generate these configurations consist of a single Python script that generates DAQ system configurations with different characteristics based on the configuration file given to the script. This script is daqconf/scripts/daqconf_multiru_gen. It uses schema/daqconf/confgen.jsonnet to define the format for configuration JSON files.
-The config_gen files under `python/daqconf/` directory were developed to work with _nanorc_ package, which itself can be seen as a basic Finite State Machine that sends commands and drives the DAQ system.
+The tools to generate these configurations consist of a single Python script that generates DAQ system configurations with different characteristics based on the configuration file given to the script. This script is `daqconf/scripts/daqconf_multiru_gen`. It uses `daqconf/schema/daqconf/confgen.jsonnet` to define the format for configuration JSON files.
+The configuration generation files under the `daqconf/python/daqconf/apps` directory were developed to work with the _nanorc_ package, which itself can be seen as a basic Finite State Machine that sends commands and drives the DAQ system.
 
-Here is an example command line which uses the provided JSON file that has all of the default values populated (so it is equivalent to running without any options at all!):
-
-`daqconf_multiru_gen --config daqconf/scripts/daqconf_full_config.json daq_fake00`
-
-The created configurations will be called `daq_fakeNN` and there will be a `daq_fakeNN` directory created containing the produced configuration to be used with  _nanorc_.
-The configurations can be run interactively with `nanorc daq_fakeNN <partition_name>` from the `<work_dir>`.
+Here is an example command line which uses the provided JSON file that has all of the default values populated (so it is equivalent to running without any options at all!). Note for the reader that it scrolls horizontally. The command below assumes you also have a hardware map file available, e.g. [this basic example](https://raw.githubusercontent.com/DUNE-DAQ/daq-systemtest/develop/config/default_system_HardwareMap.txt). Further details on hardware map files can be found at the bottom of this page. 
+```
+daqconf_multiru_gen --hardware-map-file <your hardware map file> --config daqconf/config/daqconf_full_config.json daq_fake00
+```
+The created configurations will be called `daq_fake<NN>` and there will be a `daq_fake<NN>` directory created containing the produced configuration to be used with  _nanorc_.
+The configurations can be run interactively with `nanorc daq_fake<NN> <partition_name>` from the `<work_dir>`.
 
 In the following sections, we will use "dot" notation to indicate JSON paths, so that `readout.data_file $PWD/frames.bin` is equvalent to `"readout": { "data_file": "$PWD/frames.bin" }`.
 
@@ -43,21 +43,22 @@ Command-line options override any options set in the configuration file, which i
 
 5) Use options `dataflow.apps[n].host_df TEXT` , `trigger.host_trigger TEXT` , `hsi.host_hsi TEXT`  to specify different hosts for the different applications (processes). The default for any unspecified host options will be `localhost`
 
-6) Running _nanorc_ can be done in interactively or in batch mode, for the later you can specify a sequence of commands to drive MiniDAQ app, for example run :
+6) As described in the _nanorc_ documentation, running _nanorc_ can be done in interactively or in batch mode. For batch mode you can specify a sequence of commands to drive MiniDAQ app, for example run :
 
  `nanorc daq_fake03 <partition_name> boot conf start_run 103 wait 60 stop_run shutdown`
 
-Where the `start <run_number>` command specifies the run_number value to be used.
-Any meaningful combination of commands is allowed.  Note that the `start` command includes an automatically-generated `resume` command to start the flow of triggers, and the `stop` command includes an automatically-generated `pause` command to stop the flow of triggers.
+The `start_run <run_number>` command specifies the run_number value to be used. Any meaningful combination of commands is allowed.  Note that the `start_run` command includes an automatically-generated `enable_triggers` command to start the flow of triggers, and the `stop_run` command includes an automatically-generated `disable_triggers` command to stop the flow of triggers.
 
 
-7) examine the contents of the HDf5 file with commands like the following:
+7) Examine the contents of the HDf5 file with commands like the following:
 
    * `h5dump-shared -H -A swtest_run000103_0000_*.hdf5`
 
    * and
 
    * `hdf5_dump.py -p both -f swtest_run000103_0000_*.hdf5`
+   
+   For more on `hdf5_dump.py`, run `hdf5_dump.py -h`.
 
 8) Some examples:
 
@@ -86,15 +87,16 @@ multi_df.json (Running two dataflow apps):
 
 9) One of the key options is the `--hardware-map-file`, or `readout.hardware_map_file`, which points the configuration generators to a `detchannelmaps` hardware map. An example of this file is available [here](https://github.com/DUNE-DAQ/detchannelmaps/blob/develop/test/config/TestHardwareMap.txt). This file defines the links that will be active for this configuration. It can also be generated using [this utility from dfmodules](https://github.com/DUNE-DAQ/dfmodules/blob/develop/python/dfmodules/integtest_file_gen.py)
 
+
 -----
 
 <font size="1">
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: jcfreeman2_
 
-_Date: Wed Sep 7 15:10:27 2022 -0500_
+_Date: Tue Oct 4 12:32:38 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
