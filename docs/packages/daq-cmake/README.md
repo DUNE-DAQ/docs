@@ -1,12 +1,84 @@
 # daq-cmake
 
+_JCF, Sep-28-2022: the following daq-cmake documentation assumes you're using (a candidate) dunedaq-v3.2.0 or a recent nightly as it covers the new `create_dunedaq_package` script. For daq-cmake documentation prior to this addition please go [here](https://dune-daq-sw.readthedocs.io/en/v3.1.1/packages/daq-cmake/)_
+
 This package provides CMake support for DUNE-DAQ packages.
 
-## Overview of how to create a new package
+The documentation for this package is divided into four parts:
+1) Instructions for `create_dunedaq_package`, a script which will generate a good deal of CMake/C++ code which is standard across all DUNE DAQ packages
+2) A description of the standard structure and CMake build code in a DUNE DAQ package
+3) A complete reference manual for the DUNE-DAQ-specific CMake functions developers can call in order to specify their package's build
+4) A description of how we use schema in order to consistently define data structures
+
+Note that this documentation assumes you have some familiarity with the [daq-buildtools package](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools) and know how to set up a development area and run commands to build code in it. 
+
+## The `create_dunedaq_package` script
+
+A DUNE DAQ software package is composed of various types of software components - standalone applications, libraries, [DAQModules](https://dune-daq-sw.readthedocs.io/en/latest/packages/appfwk/), etc. Across the packages there are common ways these are implemented, whether as a result of our [official coding guidelines](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/) or simply through tradition. `create_dunedaq_package` takes advantage of these patterns and saves you work by generating much of the boilerplate code which makes up a DUNE DAQ package. 
+
+Before using `create_dunedaq_package`, you'll want to have some idea of what software components will make up your package, and what their names should be. While the only argument actually required by `create_dunedaq_package` is the name of your new package, it won't do much unless you provide it with options and arguments. You can see what these are by running `create_dunedaq_package -h`, reprinted here for your convenience.
+
+Arguments and options:
+
+`--main-library`: package will contain a main, package-wide library which other packages can link in
+
+`--python-bindings`: whether there will be Python bindings to the main library. Requires the `--main-library` option as well.
+
+`--daq-module`: for each "`--daq-module <module name>`" provided at the command line, the framework for a DAQModule will be auto-generated
+
+`--user-app`: same as `--daq-module`, but for user applications
+
+`--test-app`: same as `--daq-module`, but for integration test applications
+
+`--config-generation`: whether to generate a script which itself will generate JSON code to create an application based on the package. Requires at least one `--daq-module` as well. 
+
+Note that some of these concepts, e.g. a user-oriented app vs. an app designed for integration tests of the package itself, are covered below in the [Overview of a DUNE DAQ package](#package_overview) section. 
+
+In the directory `create_dunedaq_package` is run out of, `create_dunedaq_package` will create a subdirectory named after your package if such a subdirectory doesn't exist. If a subdirectory with that name already _does_ exist, it should be empty with the possible exceptions of a `README.md` documentation file and/or a `.git/` version control directory. These exceptions allow you to run the script using as an argument the name of a new repo which you've cloned into your area. An example of using `create_dunedaq_package` would be the following (note you can horizontal-scroll the command below):
+```
+cd ./sourcecode  # If we were in the base of a development area
+create_dunedaq_package --daq-module AFirstModule --config-generation --user-app an_app_for_users --user-app another_app_for_users --python-bindings --main-library thenewpackage
+```
+(Of course in real life please use better names for your package and its components than those in the example). If you were to `ls thenewpackage`, you would see that the script had set up several new directories for you, as well as a `CMakeLists.txt` file:
+```
+apps
+cmake
+CMakeLists.txt
+docs
+include
+plugins
+pybindsrc
+python
+schema
+src
+unittest
+```
+where most of the directories contain boilerplate code for the software components you requested. While you'd be able to build this boilerplate package if it were in the `sourcecode/` directory of a standard DUNE DAQ development environment, the new package's components do almost nothing, although in the case of DAQModules code is generated which provide an example of how to set a member variable via Run Control configuration. Nonetheless this boilerplate code will need to be replaced, filled in and extended by the package's developers. Also if you look at `CMakeLists.txt`, you'll see that many of the function calls you'd need will have been added, though generally missing the arguments you'd need to provide them so they would know what libraries to link against, e.g.:
+```
+daq_add_application(an_app_for_users an_app_for_users.cxx LINK_LIBRARIES ) # Any libraries to link in not yet determined
+```
+Obviously comments such as `# Any libraries to link in not yet determined` should be deleted when it becomes appropriate. 
+
+Note also that a unit test is automatically generated for you _which is designed to fail_. Developers are strongly encouraged to replace it with appropriate unit tests for their package, unless it's one of those rare packages which don't need unit tests, in which case the unit test functionality should be entirely stripped from the package. 
+
+If the `--config-generation` option is chosen, the script which gets produced is called `<your package>_gen`. You can pass it the `-h` option to see its arguments, but the main thing to know is that to pass it a set of arguments you'd want to do so via the `-c <JSON file>` argument. An example of such a JSON file can be found in `<your package>/scripts/<your package>_example_config.json` file which is produced after you've run `create_dunedaq_package` with the `--config-generation` option. 
+
+Assuming you're in the base of a development area [whose environment has been set up](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools) and have run the example `create_dunedaq_package` command above, you can now build your newly generated code and then try out the configuration generation script:
+```
+dbt-build
+dbt-workarea-env
+thenewpackage_gen -c ./sourcecode/thenewpackage/scripts/thenewpackage_example_config.json anewconfig 
+```
+...where you can edit the values `num_afirstmodules` and `some_configured_value` in (a copy of) `thenewpackage_example_config.json` to generate a different configuration. Note that while this _legally_ runs in [`nanorc`](https://dune-daq-sw.readthedocs.io/en/latest/packages/nanorc/), it doesn't actually do anything -- in particular, the DAQ module(s) you've specified only set a member variable when configured, and don't communicate with anything. 
+
+Now that you know how to generate the boilerplate for a DUNE DAQ package, please read on for a more in-depth understanding of what a typical DUNE DAQ package looks like. 
+
+<a name="package_overview"></a>
+## Overview of a DUNE DAQ package
 
 ### Setting up a development area
 
-To create a new package, you'll want to install a DUNE-DAQ development environment and then create a new CMake project for the package. How to install and build the DUNE-DAQ development environment is described [in the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/); some familiarity with the daq-buildtools documentation is assumed in these instructions. 
+To create a new package, you'll want to install a DUNE-DAQ development environment and then create a new CMake project for the package as described in [in the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/). 
 
 
 ### A package's subdirectory structure
@@ -15,7 +87,7 @@ To learn a bit more about how to structure your package so that it can be incorp
 ```
 git clone https://github.com/DUNE-DAQ/daq-cmake
 cd daq-cmake
-git checkout 50ac27dfd8c
+git checkout v2.2.0   # v2.2.0 corresponds to the dunedaq-v3.2.0 release
 cd ..
 mv daq-cmake/toylibrary sourcecode
 rm -rf daq-cmake
@@ -105,10 +177,6 @@ daq_install()
 ```
 When you call it it will install the targets (executables, shared object libraries) you wish to make available to others who want to use your package in a directory called `$DBT_INSTALL_DIR/<pkgname>` (by default that would be `./install/toylibrary`). You'll also need to add a special file to your project for this function to work; this is discussed more fully in the "Installing your project as a local package" section later in this document. 
 
-### If your package relies on nonstandard dependencies
-
-...go back and take a look at the "Adding extra UPS products and product pools" section of [the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/#adding_extra_ups_products)
-
 ### Installing your project as a local package
 
 Use the procedure described below in order to have your package installed. Once your package is installed, it means other packages can access the libraries, public headers, etc., provided by your package via CMake's `find_package` command, i.e.:
@@ -144,7 +212,7 @@ You can see a simple example of this kind of file with `toylibrary/cmake/toylibr
 
 Once you've edited this file as described, from the base of your development area you can then run 
 ```
-dbt-build 
+dbt-build
 ```
 
 without receiving an error message informing you that installation isn't an option. 
@@ -317,12 +385,12 @@ arguments.
 
 
 
-1. Schemas (jsonnet), models (jsonnet) and templates (jinjia) in the `schema/<package name>` folder are automatically copied to the installation directory and into ups products eventually.
+1. Schemas (jsonnet), models (jsonnet) and templates (Jinja) in the `schema/<package name>` folder are automatically copied to the installation directory and into Spack products eventually.
 
 
 
 
-1. The `daq_codegen` cmake function provides a simpliefied interface to `moo render` to generate C++ files from jinjia templates. It provides a mechanism to easily import schemas, templates or models from other packages and implements an out-of-date dependency check. Details are [above](#daq_codegen_documentation).
+1. The `daq_codegen` cmake function provides a simpliefied interface to `moo render` to generate C++ files from Jinja templates. It provides a mechanism to easily import schemas, templates or models from other packages and implements a time-related dependency check. Details are [above](#daq_codegen_documentation).
 
 <a name="daq_cmake_schema"></a>
 ### Schema files
@@ -344,7 +412,6 @@ appfwk/
 │   │   ├── appinfo.jsonnet
 │   │   ├── app.jsonnet
 │   │   ├── cmd.jsonnet
-|   |   └── queueinfo.jsonnet
 │   ├── README.md
 ├── src
 ├── test
@@ -357,7 +424,7 @@ appfwk/
 local s = moo.oschema.schema("dunedaq.appfwk.cmd");
 ```
 
-The same applies to `app.jsonnet`, `appinfo.jsonnet` and `queueinfo.jsonnet` for `dunedaq.appfwk.app`,`dunedaq.appfwk.appinfo` and `dunedaq.appfwk.queueinfo` respectively.
+The same applies to `app.jsonnet` and `appinfo.jsonnet` for `dunedaq.appfwk.app` and `dunedaq.appfwk.appinfo`.
 
 The matching between the schema file name/path and the jsonnet namespace is essential for code generation with `daq-cmake`. A mismatch between the two will result in empty generated files in most of the cases.
 
@@ -368,9 +435,9 @@ The matching between the schema file name/path and the jsonnet namespace is esse
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jcfreeman2_
 
-_Date: Tue May 24 10:34:42 2022 -0500_
+_Date: Wed Sep 28 13:54:30 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>

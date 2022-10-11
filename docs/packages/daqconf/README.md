@@ -1,6 +1,6 @@
 # daqconf
 
-This repository contains tools for generating DAQ system configurations, the [`daqconf_multiru_gen` script](https://github.com/DUNE-DAQ/daqconf/blob/develop/scripts/daqconf_multiru_gen) ("DAQ configuration, multiple readout unit generator") and [`daqconf_timing_gen` script](https://github.com/DUNE-DAQ/daqconf/blob/develop/scripts/daqconf_timing_gen) ("DAQ configuration, global timing generator"). They generate DAQ system configurations with different characteristics based on command-line parameters that are given to them. 
+This repository contains tools for generating DAQ system configurations, the [`daqconf_multiru_gen` script](https://github.com/DUNE-DAQ/daqconf/blob/develop/scripts/daqconf_multiru_gen) ("DAQ configuration, multiple readout unit generator"). It generates DAQ system configurations with different characteristics based on the configuration file and command-line parameters given to it. 
 
 The focus of this documentation is on providing instructions for using the tools and running sample DAQ systems. If you're starting out, take a look at:
 
@@ -9,6 +9,8 @@ The focus of this documentation is on providing instructions for using the tools
 and for a slightly more in-depth look into how to generate configurations for a DAQ system, take a look at:
 
 [Configuration options for casual or first-time users](ConfigurationsForCasualUsers.md)
+
+Traditionally multiple command line options were passed to `daqconf_multiru_gen` in order to control how it generated configurations. However, for the `dunedaq-v3.2.0` release (September 2022) we're switching to passing a single JSON file whose contents contain the information needed to control `daqconf_multiru_gen`. For `daqconf_multiru_gen` users who want to learn about how to make the switch to this new approach, take a look at [these migration instructions](MigratingToNewConfgen.md).
 
 Finally, here's nice visual representation of the type of DAQ system which can be configured: 
 
@@ -22,9 +24,9 @@ Finally, here's nice visual representation of the type of DAQ system which can b
 _Last git commit to the markdown source of this page:_
 
 
-_Author: bieryAtFnal_
+_Author: John Freeman_
 
-_Date: Wed Jun 8 10:33:25 2022 -0500_
+_Date: Tue Oct 4 11:23:27 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>

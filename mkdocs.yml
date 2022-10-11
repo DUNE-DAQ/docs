@@ -134,6 +134,7 @@ nav:
              - packages/daq-release/create_release.md
              - packages/daq-release/create_release_spack.md
              - packages/daq-release/development_workflow_gitflow.md
+             - packages/daq-release/feature_branch_ci_build.md
              - packages/daq-release/make_ups_products.md
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
@@ -165,14 +166,18 @@ nav:
              - About daqdataformats: packages/daqdataformats/README.md
              - packages/daqdataformats/ComponentRequestV0.md
              - packages/daqdataformats/ComponentRequestV1.md
+             - packages/daqdataformats/ComponentRequestV2.md
              - packages/daqdataformats/DataFormatNotes.md
              - packages/daqdataformats/FragmentHeaderV1.md
              - packages/daqdataformats/FragmentHeaderV2.md
              - packages/daqdataformats/FragmentHeaderV3.md
+             - packages/daqdataformats/FragmentHeaderV4.md
              - packages/daqdataformats/GeoIDV0.md
              - packages/daqdataformats/GeoIDV1.md
+             - packages/daqdataformats/SourceIDV2.md
              - packages/daqdataformats/TriggerRecordHeaderDataV1.md
              - packages/daqdataformats/TriggerRecordHeaderDataV2.md
+             - packages/daqdataformats/TriggerRecordHeaderDataV3.md
           - detchannelmaps:
              - About detchannelmaps: packages/detchannelmaps/README.md
           - detdataformats:
@@ -205,6 +210,7 @@ nav:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigurationsForCasualUsers.md
              - packages/daqconf/InstructionsForCasualUsers.md
+             - packages/daqconf/MigratingToNewConfgen.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
           - restcmd:
@@ -217,6 +223,7 @@ nav:
              - packages/dfmodules/TRB_metrics.md
           - hdf5libs:
              - About hdf5libs: packages/hdf5libs/README.md
+             - packages/hdf5libs/V3FileFormatInterfaceChanges.md
           - timing:
              - About timing: packages/timing/README.md
           - timinglibs:

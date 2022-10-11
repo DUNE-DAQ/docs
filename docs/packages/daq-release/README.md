@@ -12,6 +12,9 @@ This is a repo containing DUNE DAQ release making tools, configuarion files, and
 1. [DAQ software development workflow -- Gitflow](development_workflow_gitflow.md)
 
 
+2. [How to trigger a special nightly release build with feature branches](feature_branch_ci_build.md)
+
+
 2. [To-be-updated: Continous Integraion for DUNE DAQ software](ci_github_action.md)
 
 ### For DAQ software coordiantion team:
@@ -35,7 +38,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Thu Aug 4 12:25:51 2022 -0500_
+_Date: Thu Aug 4 13:25:37 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

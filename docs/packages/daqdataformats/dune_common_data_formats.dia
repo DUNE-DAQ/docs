@@ -1005,7 +1005,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#GeoID#</dia:string>
+            <dia:string>#SourceID#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -1061,7 +1061,7 @@
                 <dia:string>#element_id#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#GeoID#</dia:string>
+                <dia:string>#SourceID#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -2476,7 +2476,7 @@
             <dia:string>#element_id#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#GeoID#</dia:string>
+            <dia:string>#SourceID#</dia:string>
           </dia:attribute>
           <dia:attribute name="value">
             <dia:string>##</dia:string>
@@ -2719,7 +2719,7 @@
         <dia:real val="17"/>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#GeoID#</dia:string>
+        <dia:string>#SourceID#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
         <dia:string>##</dia:string>
@@ -2808,7 +2808,7 @@
       <dia:attribute name="attributes">
         <dia:composite type="umlattribute">
           <dia:attribute name="name">
-            <dia:string>#s_geo_id_version#</dia:string>
+            <dia:string>#s_source_id_version#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
             <dia:string>#uint32_t#</dia:string>
@@ -2883,7 +2883,7 @@
             <dia:string>#uint32_t#</dia:string>
           </dia:attribute>
           <dia:attribute name="value">
-            <dia:string>#s_geo_id_version#</dia:string>
+            <dia:string>#s_source_id_version#</dia:string>
           </dia:attribute>
           <dia:attribute name="comment">
             <dia:string>##</dia:string>
@@ -2903,10 +2903,10 @@
             <dia:string>#system_type#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#GeoID::SystemType#</dia:string>
+            <dia:string>#SourceID::Subsystem#</dia:string>
           </dia:attribute>
           <dia:attribute name="value">
-            <dia:string>#GeoID::SystemType::kInvalid#</dia:string>
+            <dia:string>#SourceID::Subsystem::kInvalid#</dia:string>
           </dia:attribute>
           <dia:attribute name="comment">
             <dia:string>##</dia:string>
@@ -2971,7 +2971,7 @@
       <dia:attribute name="operations">
         <dia:composite type="umloperation">
           <dia:attribute name="name">
-            <dia:string>#GeoID#</dia:string>
+            <dia:string>#SourceID#</dia:string>
           </dia:attribute>
           <dia:attribute name="stereotype">
             <dia:string>##</dia:string>
@@ -3001,7 +3001,7 @@
         </dia:composite>
         <dia:composite type="umloperation">
           <dia:attribute name="name">
-            <dia:string>#GeoID#</dia:string>
+            <dia:string>#SourceID#</dia:string>
           </dia:attribute>
           <dia:attribute name="stereotype">
             <dia:string>##</dia:string>
@@ -3115,7 +3115,7 @@
                 <dia:string>#other#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#const GeoID&amp;#</dia:string>
+                <dia:string>#const SourceID&amp;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -3163,7 +3163,7 @@
                 <dia:string>#other#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#const GeoID&amp;#</dia:string>
+                <dia:string>#const SourceID&amp;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -3211,7 +3211,7 @@
                 <dia:string>#other#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#const GeoID&amp;#</dia:string>
+                <dia:string>#const SourceID&amp;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -3259,7 +3259,7 @@
                 <dia:string>#type#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#GeoID::SystemType#</dia:string>
+                <dia:string>#SourceID::Subsystem#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -3281,7 +3281,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#GeoID::SystemType#</dia:string>
+            <dia:string>#SourceID::Subsystem#</dia:string>
           </dia:attribute>
           <dia:attribute name="visibility">
             <dia:enum val="0"/>
@@ -3372,7 +3372,7 @@
                 <dia:string>#id#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#GeoID const&amp;#</dia:string>
+                <dia:string>#SourceID const&amp;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -3437,7 +3437,7 @@
                 <dia:string>#id#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#GeoID&amp;#</dia:string>
+                <dia:string>#SourceID&amp;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -3502,7 +3502,7 @@
                 <dia:string>#type#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#GeoID::SystemType const&amp;#</dia:string>
+                <dia:string>#SourceID::Subsystem const&amp;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -3567,7 +3567,7 @@
                 <dia:string>#t#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#GeoID::SystemType&amp;#</dia:string>
+                <dia:string>#SourceID::Subsystem&amp;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -3802,7 +3802,7 @@ using sequence_number_t = uint16_t;#</dia:string>
             <dia:string>#component#</dia:string>
           </dia:attribute>
           <dia:attribute name="type">
-            <dia:string>#GeoID#</dia:string>
+            <dia:string>#SourceID#</dia:string>
           </dia:attribute>
           <dia:attribute name="value">
             <dia:string>##</dia:string>
@@ -3932,7 +3932,7 @@ using sequence_number_t = uint16_t;#</dia:string>
                 <dia:string>#comp#</dia:string>
               </dia:attribute>
               <dia:attribute name="type">
-                <dia:string>#GeoID const&amp;#</dia:string>
+                <dia:string>#SourceID const&amp;#</dia:string>
               </dia:attribute>
               <dia:attribute name="value">
                 <dia:string>##</dia:string>
@@ -8666,7 +8666,7 @@ using sequence_number_t = uint16_t;#</dia:string>
         <dia:real val="5.6000000000000005"/>
       </dia:attribute>
       <dia:attribute name="name">
-        <dia:string>#GeoID::SystemType#</dia:string>
+        <dia:string>#SourceID::Subsystem#</dia:string>
       </dia:attribute>
       <dia:attribute name="stereotype">
         <dia:string>#enumeration#</dia:string>

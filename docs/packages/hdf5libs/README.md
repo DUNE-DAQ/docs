@@ -117,7 +117,7 @@ There is no need to provide file layout parameters, as these are read from the e
 `dunedaq` raw data files can be interrogated with any HDF5 reading utilities, and the data payloads for each dataset are simple dimension 1 byte (`char`) arrays.
 However, there are a number of useful accessors included in `HDF5RawDataFile` to aid in file interrogation, traversal, and data extraction:
 - `get_dataset_paths(std::string top_level_group_name = "")` returns all dataset paths (`std::vector<std::string>`) located beneath the specified group (defaulting to the whole file), including the full list of datasets in any subgroups of the specified group;
-- `get_all_record_numbers()` returns an `std::set` of trigger record numbers located in the file;
+- `get_all_record_ids()` returns an `std::set` of record IDs (std::pair of record number and sequence number) located in the file;
 -  `get_trigger_record_header_dataset_paths(int max_trigger_records = -1)` returns all datset paths (up to a maximum number of desired trigger records, default is all) for `TriggerRecordHeader` objects;
 -  `get_all_fragment_dataset_paths(int max_trigger_records = -1)` returns all datset paths (up to a maximum number of desired trigger records, default is all) for `Fragment` objects of any system type;
 -  `get_trh_ptr(...)` members return a unique ptr to a `TriggerRecordHeader`, with inputs either being a full path as you may get from `get_trigger_record_header_dataset_paths()`, or with an input specifying the desired trigger number;
@@ -190,9 +190,9 @@ Note that for all previously written files, `get_dataset_paths()` will work to r
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Wesley Ketchum_
+_Author: Kurt Biery_
 
-_Date: Tue Mar 1 15:00:37 2022 +0100_
+_Date: Mon Aug 29 10:35:52 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/hdf5libs/issues](https://github.com/DUNE-DAQ/hdf5libs/issues)_
 </font>
