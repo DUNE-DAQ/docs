@@ -24,15 +24,19 @@ A team is usually managed by DAQ working group leaders. Developers obtain write 
 
     * branch off from the tag created on the `develop` branch at the time of tag collection during a release cycle;
 
-    * can be updated via PRs with at lease one approval review before release cut-off time, 
+    * can be updated via PRs with at least one approval review before release cut-off time; 
 
-    * in general, should be merged to `develop` after release cut-off.
+    * in general, should be merged to `develop` after release cut-off by the software coordination team;
+
+    * in case of partial merge (cherry-pick) to develop or no merge at all, developers should notify the software coordination team, and handle the partial merge by themselves. 
 
 * **Patch branches `patch/dunedaq-vX.Y.x`** (i.e. `patch/dunedaq-v3.0.x`)
 
     * branch off from a tagged version used in the release where the fixes apply;
 
-    * merge back to `develop` if the fixes apply and should be used by the future releases
+    * if the fixes apply to develop branch and should be used by the future releases, merge the patch branch to `develop` after the patch release is made;
+
+    * in case of partial merge (cherry-pick) to develop or no merge at all, developers should notify the software coordination team, and handle the partial merge by themselves.
 
 ## Branch protection rules
 
@@ -199,9 +203,9 @@ This is marked by the deployment of the release to cvmfs. No changes will be mad
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: Pengfei Ding_
 
-_Date: Tue Aug 2 10:27:11 2022 -0500_
+_Date: Mon Oct 10 09:10:00 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
