@@ -18,7 +18,7 @@ To learn about the C++ coding guidelines which DUNE DAQ package developers shoul
 
 To learn how to run integration tests within our framework, go [here](packages/integrationtest/README.md)
 
-To learn about how to run even more comprehensive tests (particularly relevant during a DUNE DAQ release period), go [here](packages/daq-systemtest/README.md)
+To learn about how to run even more comprehensive tests (particularly relevant during a DUNE DAQ release period), read about the [daq-systemtest package](packages/daq-systemtest/README.md)
 
 --------------
 
