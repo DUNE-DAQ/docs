@@ -3,7 +3,7 @@
 These files have successfully been used on the iceberg01.fnal.gov computer, but they may need local modifications before they can be used elsewhere.  For example, in the JSON file, the following parameters may need to be changed:
 
 
-* "output_paths" (in dataflow::apps) - this parameter should be set to a disk location that is local to the computer *and* has sufficient free space to handle an extra 10+ GB of data. The reason that it should be local is that otherwise the disk writing might be slow, and you may see problems with inhibitted triggers and timeouts at run stop time.
+* `output_paths` (in `dataflow::apps`) - this parameter should be set to a disk location that is local to the computer *and* has sufficient free space to handle an extra 10+ GB of data. The reason that it should be local is that otherwise the disk writing might be slow, and you may see problems with inhibitted triggers and timeouts at run stop time.
 
 The existing parameter values in the JSON file specify a trigger every 20 seconds, a readout window of 2 seconds, a TriggerRecord max window of 4 msec, and a dataflow token count of 1 (to avoid overloading the system with multiple triggers in flight).
 
@@ -36,9 +36,9 @@ The data is split into multiple files based on the max_file_size parameter that 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Kurt Biery_
+_Author: John Freeman_
 
-_Date: Tue Oct 4 11:16:42 2022 -0500_
+_Date: Wed Oct 12 12:05:41 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>
