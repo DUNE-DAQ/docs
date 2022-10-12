@@ -135,7 +135,6 @@ nav:
           - logging:
           - utilities:
        - Readout:
-          - complex_documentation:
           - daqdataformats:
           - detchannelmaps:
           - detdataformats:

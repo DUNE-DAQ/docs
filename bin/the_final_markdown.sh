@@ -174,7 +174,8 @@ for package in $package_list ; do
 	    
 	mdfile_relative=$( echo $mdfile | sed -r 's!^.*/docs/(.*)!\1!' )
 	pagename=$( echo $mdfile | sed -r 's!^.*/(.*).md$!\1!' )
-	if [ x"${pagename}" == "xREADME" ]; then
+
+        if [[ "$mdfile_relative" == "packages/$package/README.md" ]]; then
 	    pagename=$( echo About ${package} )
 	    echo "+===+++ ${package} ===== ${mdfile} ==== $pagename"
 	    if [[ -z $( sed -r -n '/^\s*-\s*'$package'\s*:.*/p' $here/../mkdocs.yml ) ]]; then
