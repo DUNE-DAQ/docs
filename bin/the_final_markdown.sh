@@ -5,7 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-release daq-cmake daq-buildtools cmdlib appfwk"
+package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-systemtest daq-release daq-cmake daq-buildtools cmdlib appfwk"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -118,6 +118,8 @@ for package in $package_list ; do
 	git checkout dunedaq-v3.2.0_candidate_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout dunedaq-v3.2.0_candidate_for_docs
+    elif [[ "$package" =~ "daq-systemtest" ]]; then
+	git checkout johnfreeman/issue24_update_doc_structure
     else
 	git checkout develop
     fi
