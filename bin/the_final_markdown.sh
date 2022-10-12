@@ -136,35 +136,28 @@ for package in $package_list ; do
 	add_trailer $package $packagefile
     done
 
-    cp -rpL ./docs/* $packages_dir/$package/
+    # We care about the original Markdown files in non-docs/ directories rather than any symlinks to them
+    
+    for linkfile in $( find ./docs -type l -name "*.md" ); do
+	echo "WARNING: symlinks in ./docs not supported in this script ($linkfile)" >&2
+        rm -f $linkfile
+    done
+
+    cp -rp ./docs/* $packages_dir/$package/
 
     if [[ "$?" != 0 ]]; then
 	echo "There was a problem copying the contents of $PWD/$package/docs into $packages_dir/$package ; exiting..." >&2
 	exit 2
     fi
 
-    mdfiles_in_docs=$( find ./docs -name "*.md" 2>/dev/null )
-
-    other_dirs_to_search=$( find . -mindepth 1 -type d -not -regex ".*\.git.*" -not -regex "\./docs.*" )
-
-    for dir in $other_dirs_to_search; do
-
-	for mdfile_candidate in $(ls $dir/*.md 2>/dev/null  ) ; do
-	    already_in_docs=false
-	    for mdfile_official in $( find $packages_dir/$package -name "*.md" 2>/dev/null ) ; do
-		cmp $mdfile_candidate $mdfile_official > /dev/null 2>&1
-
-		if [[ "$?" == "0" ]]; then
-		    already_in_docs=true
-		    break
-		fi
-	    done
-
-	    if ! $already_in_docs; then
-		mdfile_candidate_copyname=$(echo $mdfile_candidate | sed -r 's!^[/\.]*(.*)!\1!;s!/!_!g' )
-		cp -p $mdfile_candidate $packages_dir/$package/$mdfile_candidate_copyname
-	    fi
-	done
+    for mdfile in $( find . -mindepth 2 -type f  -not -type l  -not -regex ".*\.git.*" -not -regex "\./docs.*" -name "*.md" ); do
+	reldir=$( echo $mdfile | sed -r 's!(.*)/.*!\1!' )
+        mkdir -p $packages_dir/$package/$reldir
+        cp -p $mdfile $packages_dir/$package/$reldir
+        if [[ "$?" != "0" ]]; then
+	    echo "There was a problem copying $mdfile to $packages_dir/$package/$reldir in $PWD; exiting..." >&2
+	    exit 3
+	fi
 
     done
 

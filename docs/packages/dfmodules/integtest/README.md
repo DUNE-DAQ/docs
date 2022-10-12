@@ -3,7 +3,7 @@
 Here is a command for fetching a file that has WIB data in it (to be used in generating emulated data):
 
 
-* `curl -o frames.bin -O https://cernbox.cern.ch/index.php/s/0XzhExSIMQJUsp0/download`
+* `curl -o frames.bin https://cernbox.cern.ch/index.php/s/0XzhExSIMQJUsp0/download`
 
 Here is a sample command for invoking a test:
 
@@ -13,8 +13,6 @@ Here is a sample command for invoking a test:
 For reference, here are the ideas behind the existing tests:
 
 * minimal_system_quick_test.py - verify that a small emulator system works fine and data gets written in a short run
-
-* readout_type_scan.py - verify that we can write different types of data (WIB2, PDS, TPG, etc.)
 
 * 3ru_3df_multirun_test.py - verify that a system with multiple DF Apps works as expected
 
@@ -33,8 +31,6 @@ For reference, here are the ideas behind the existing tests:
 * disabled_output_test.py - verify that the --disable-data-storage option works
 
 * multi_output_file_test.py - test that the file size maximum config parameter works
-
-* command_order_test.py - verify that only certain sequences of commands are allowed
 
 Specialty tests:
 
@@ -71,7 +67,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Kurt Biery_
 
-_Date: Wed Aug 10 12:04:14 2022 -0500_
+_Date: Wed Oct 5 14:50:57 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dfmodules/issues](https://github.com/DUNE-DAQ/dfmodules/issues)_
 </font>
