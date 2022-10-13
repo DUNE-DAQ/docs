@@ -118,6 +118,8 @@ for package in $package_list ; do
 	git checkout dunedaq-v3.2.0_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout dunedaq-v3.2.0_for_docs
+    elif [[ "$package" =~ "nanorc" ]]; then
+        git checkout johnfreeman/documentation_syntax_edits
     else
 	git checkout develop
     fi
