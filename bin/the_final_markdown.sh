@@ -5,7 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-release daq-cmake daq-buildtools cmdlib appfwk"
+package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest influxopmon flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-systemtest daq-release daq-cmake daq-buildtools cmdlib appfwk"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -39,12 +39,12 @@ fi
 
 function massage() {
 
-    markdown_file=$1
+    package=$1
+    markdown_file=$2
 
     if ! [[ "$markdown_file" =~ .*README.md$ ]]; then
 	header=$( echo $markdown_file | sed -r 's!.*/(.*)!\1!;s/\-/ /g;s/\.md$//' )
     else
-	package=$( echo $markdown_file | sed -r 's!.*/([^/]+)/README.md!\1!' )
 	header="$package README"
     fi
 
@@ -110,11 +110,9 @@ for package in $package_list ; do
 
     cd $tmpdir/$package
 
-    # JCF, Jul-14-2021: prevent integration-period edits to the heads
-    # of the develop branches of daq-buildtools, daq-cmake and
-    # daq-release from making it into the official documentation;
-    # direct software integration groups to the GitHub pages if they
-    # want the latest-greatest
+    # JCF, Oct-5-2022: we want documentation on the tools used to
+    # develop packages to be stable even while DAQ packages are
+    # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
 	git checkout dunedaq-v3.2.0_for_docs
@@ -125,55 +123,72 @@ for package in $package_list ; do
     fi
     echo $tmpdir/$package
 
-    if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" )  ]]; then
+    if [[ -d ./docs/ && -n $(find . -name "*.md" )  ]]; then
 	mkdir -p $packages_dir/$package
     else
-	echo "No docs/ subdirectory containing Markdown files found for $package; no documentation will be generated" >&2
+	echo "No docs/ subdirectory for Markdown files found for $package and/or no Markdown files found anywhere; no documentation will be generated" >&2
 	continue
     fi
 
     # Add provenance of each markdown file
 
-    for packagefile in $( find . -name "*.md" ); do
+    for packagefile in $( find . -name "*.md" -not -type l ); do
 	add_trailer $package $packagefile
     done
 
-    if [[ -d $tmpdir/$package/docs/ && -n $(find $tmpdir/$package/docs -name "*.md" ) ]]; then
-	echo "Found a docs/ subdirectory in repo $package containing Markdown files"
+    # We care about the original Markdown files in non-docs/ directories rather than any symlinks to them
+    
+    for linkfile in $( find ./docs -type l -name "*.md" ); do
+	echo "WARNING: symlinks in ./docs not supported in this script ($linkfile)" >&2
+        rm -f $linkfile
+    done
 
-	cp -rp $tmpdir/$package/docs/* $packages_dir/$package 
+    cp -rp ./docs/* $packages_dir/$package/
 
-	if [[ "$?" != 0 ]]; then
-	    echo "There was a problem copying the contents of $tmpdir/$package/docs into $packages_dir/$package ; exiting..." >&2
-	    exit 2
-	fi
-
-	mdfilelist=""
-	if [[ -n $( find  $packages_dir/$package -name "README.md" ) ]]; then
-	    mdfilelist="$packages_dir/$package/README.md"
-	fi
-	mdfilelist=$( find $packages_dir/$package -name "*.md" -not -name "README.md" | sort --reverse --ignore-case )" $mdfilelist"
-
-	for mdfile in $mdfilelist; do
-	    massage $mdfile
-	    
-	    mdfile_relative=$( echo $mdfile | sed -r 's!^.*/docs/(.*)!\1!' )
-	    pagename=$( echo $mdfile | sed -r 's!^.*/(.*).md$!\1!' )
-	    if [ x"${pagename}" == "xREADME" ]; then
-		pagename=$( echo About ${package} )
-		echo "+===+++ ${package} ===== ${mdfile} ==== $pagename"
-		if [[ -z $( sed -r -n '/^\s*-\s*'$package'\s*:.*/p' $here/../mkdocs.yml ) ]]; then
-		    echo "Error: package \"$package\" is meant to be handled by this script but isn't found in $here/../mkdocs.yml" >&2
-		    exit 3
-		fi
-		sed -r -i '/^\s*-\s*'$package'\s*:.*/a \             - '"$pagename"': '$mdfile_relative $here/../mkdocs.yml
-	    else
-		sed -r -i '/^\s*-\s*'$package'\s*:.*/a \             - '$mdfile_relative $here/../mkdocs.yml
-	    fi
-
-	done
+    if [[ "$?" != 0 ]]; then
+	echo "There was a problem copying the contents of $PWD/$package/docs into $packages_dir/$package ; exiting..." >&2
+	exit 2
     fi
 
+    for mdfile in $( find . -mindepth 2 -type f  -not -type l  -not -regex ".*\.git.*" -not -regex "\./docs.*" -name "*.md" ); do
+	reldir=$( echo $mdfile | sed -r 's!(.*)/.*!\1!' )
+        mkdir -p $packages_dir/$package/$reldir
+        cp -p $mdfile $packages_dir/$package/$reldir
+        if [[ "$?" != "0" ]]; then
+	    echo "There was a problem copying $mdfile to $packages_dir/$package/$reldir in $PWD; exiting..." >&2
+	    exit 3
+	fi
+
+    done
+
+    mdfilelist=""
+    if [[ -e $packages_dir/$package/README.md ]]; then
+	mdfilelist=" $packages_dir/$package/README.md"
+    fi
+
+    mdfilelist=$( find $packages_dir/$package -name "*.md" -not -regex ".*$package/README.md" | sort --reverse --ignore-case )$mdfilelist
+
+    for mdfile in $mdfilelist; do
+
+	massage $package $mdfile
+	    
+	mdfile_relative=$( echo $mdfile | sed -r 's!^.*/docs/(.*)!\1!' )
+	pagename=$( echo $mdfile | sed -r 's!^.*/(.*).md$!\1!' )
+
+        if [[ "$mdfile_relative" == "packages/$package/README.md" ]]; then
+	    pagename=$( echo About ${package} )
+	    echo "+===+++ ${package} ===== ${mdfile} ==== $pagename"
+	    if [[ -z $( sed -r -n '/^\s*-\s*'$package'\s*:.*/p' $here/../mkdocs.yml ) ]]; then
+		echo "Error: package \"$package\" is meant to be handled by this script but isn't found in $here/../mkdocs.yml" >&2
+		exit 3
+	    fi
+
+	    sed -r -i '/^\s*-\s*'$package'\s*:.*/a \             - '"$pagename"': '$mdfile_relative $here/../mkdocs.yml
+	else
+	    sed -r -i '/^\s*-\s*'$package'\s*:.*/a \             - '$mdfile_relative $here/../mkdocs.yml
+	fi
+
+    done
 done
 
 #if [[ -d $tmpdir && "$tmpdir" =~ ^/tmp/.*$ ]]; then
