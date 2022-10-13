@@ -1,4 +1,7 @@
-# 04-Oct-2022, KAB: Notes on the long-window-readout systemtest config files...
+# Long-Window Readout
+
+
+* 04-Oct-2022, KAB: Notes on the long-window-readout systemtest config files...
 
 These files have successfully been used on the iceberg01.fnal.gov computer, but they may need local modifications before they can be used elsewhere.  For example, [in the JSON file](https://raw.githubusercontent.com/DUNE-DAQ/daq-systemtest/develop/config/long_window_readout/long_window_readout.json), the following parameters may need to be changed:
 
@@ -36,9 +39,9 @@ The data is split into multiple files based on the max_file_size parameter that 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: eflumerf_
 
-_Date: Wed Oct 12 13:23:21 2022 -0500_
+_Date: Wed Oct 12 15:13:30 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>

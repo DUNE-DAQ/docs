@@ -1,8 +1,4 @@
 
-
-_JCF, Apr-18-2022: These instructions are for early testers of Spack installations of the DUNE DAQ packages. For the regular daq-buildtools instructions, please go [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/)._
-
-
 # DUNE DAQ Buildtools
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
@@ -25,17 +21,16 @@ spack load python@3.8.3%gcc@8.2.0
 <a name="Setup_of_daq-buildtools"></a>
 ## Setup of `daq-buildtools`
 
-In a directory which doesn't contain a daq-buildtools repository, simply do:
-
+Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt latest-spack
+setup_dbt dunedaq-v3.2.0
 ```
 
-Then you'll see something like:
+After running these two commands, then you'll see something like:
 ```
-Added /tmp/daq-buildtools/bin -> PATH
-Added /tmp/daq-buildtools/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v6.0.3/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v6.0.3/scripts -> PATH
 DBT setuptools loaded
 ```
 If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create`, `dbt-build`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. 
@@ -48,10 +43,14 @@ Each time that you want to work with a DUNE DAQ work area in a fresh Linux shell
 Running a release from cvmfs without creating a work area can be done if you simply run the following:
 
 ```sh
-dbt-setup-release dunedaq-v2.11.0
+dbt-setup-release <release> # dunedaq-v3.2.0 is the latest frozen release as of Oct-11-2022
+```
+Instead of a frozen release you can also set up nightly releases and candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up a candidate release you can do:
+```
+dbt-setup-release -b candidate <candidate release> # e.g., rc-dunedaq-v3.2.0-1
 ```
 
-It will set up both the external packages and DAQ packages, as well as activate the python virtual environment. Note that the python virtual environment activated here is read-only. You'd want to run `dbt-setup-release` only if you weren't developing DUNE DAQ software, the topic covered for the remainder of this document. However, if you don't want a frozen set of versioned packages - which you wouldn't, if you were developing code - please continue reading.
+`dbt-setup-release` will set up both the external packages and DAQ packages, as well as activate the python virtual environment. Note that the python virtual environment activated here is read-only. You'd want to run `dbt-setup-release` only if you weren't developing DUNE DAQ software, the topic covered for the remainder of this document. However, if you don't want a frozen set of versioned packages - which you wouldn't, if you were developing code - please continue reading.
 
 
 <a name="Creating_a_work_area"></a>
@@ -62,10 +61,11 @@ Find a directory in which you want your work area to be a subdirectory (home dir
 dbt-create [-c/--clone-pyvenv] -n <nightly release> <name of work area subdirectory> # E.g., N22-04-18 or last_successful
 cd <name of work area subdirectory>
 ```
+...where in general the most popular `<nightly release>` is `last_successful`, which as the name suggests will translate to the date of the most recent successful nightly release. 
 
 If you want to build against a candidate release (which is built and deployed during the beta testing period of a release cycle), run:
 ```sh
-dbt-create [-c/--clone-pyvenv] -b candidate <candidate release> <name of work area subdirectory> # E.g., rc-dunedaq-v3.0.0-1 as of May-23-2022.
+dbt-create [-c/--clone-pyvenv] -b candidate <candidate release> <name of work area subdirectory> # E.g., rc-dunedaq-v3.2.0-1 as of Sep-23-2022.
 cd <name of work area subdirectory>
 ```
 
@@ -79,8 +79,8 @@ The structure of your work area will look like the following:
 ```txt
 MyTopDir
 ├── build
-├── dbt-pyvenv
 ├── dbt-env.sh -> /path/to/daq-buildtools/env.sh
+├── dbt-pyvenv
 ├── dbt-workarea-constants.sh
 ├── log
 └── sourcecode
@@ -116,12 +116,7 @@ dbt-build
 
 ### Working with more repos
 
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/releases/dunedaq-v2.11.0-c7/dbt-build-order.cmake`". If this is the case, you have one of two options:
-
-
-* (Recommended) Add the names of your new packages to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
-
-* First clone and build your new base repo, and THEN clone and build your other new repo which depends on your new base repo. 
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/spack-releases/dunedaq-v3.2.0/dbt-build-order.cmake`". If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
 
 As a reminder, once you've added your repos and built them, you'll want to run `dbt-workarea-env` so the environment picks up their applications, libraries, etc. 
 
@@ -143,9 +138,9 @@ To check for deviations from the coding rules described in the [DUNE C++ Style G
 ```
 dbt-build --lint
 ```
-...though be aware that some guideline violations (e.g., having a function which tries to do unrelated things) can't be picked up by the automated linter. Also note that you can use `dbt-clang-format.sh` in order to automatically fix whitespace issues in your code; type it at the command line without arguments to learn how to use it. (_n.b. Apr-11-2022: dbt-clang-format.sh is not yet supported for Spack-based work areas_)
+...though be aware that some guideline violations (e.g., having a function which tries to do unrelated things) can't be picked up by the automated linter. Also note that you can use `dbt-clang-format.sh` in order to automatically fix whitespace issues in your code; type it at the command line without arguments to learn how to use it.
 
-Note that unlike the other options to `dbt-build`, `--lint` and `--unittest` are both capable of taking an optional argument, which is the name of a specific repo in your work area which you'd like to either lint or run unit tests for. This can be useful if you're focusing on developing one of several repos in your work area. It should appear after an equals sign, e.g., `dbt-build --lint=<repo you're working on>`. With `--lint` you can get even more fine grained by passing it the name of a single file in your repository area; either the absolute path for the file or its path relative to the directory you ran `dbt-build` from will work. 
+Note that unlike the other options to `dbt-build`, `--lint` and `--unittest` are both capable of taking an optional argument, which is the name of a specific repo in your work area which you'd like to either lint or run unit tests for. This can be useful if you're focusing on developing one of several repos in your work area; e.g. `dbt-build --lint <repo you're working on>`. With `--lint` you can get even more fine grained by passing it the name of a single file in your repository area; either the absolute path for the file or its path relative to the directory you ran `dbt-build` from will work. 
 
 If you want to see verbose output from the compiler, all you need to do is add the `--cpp-verbose` option:
 ```
@@ -193,9 +188,9 @@ A couple of things need to be kept in mind when you're building code in a work a
 
 As such, it's important to know the assumptions a work area makes when you use it to build code. In the base of your work area is a file called `dbt-workarea-constants.sh`, which will look something like the following:
 ```
-export SPACK_RELEASE="N22-04-09"
-export SPACK_RELEASES_DIR="/cvmfs/dunedaq-development.opensciencegrid.org/spack-nightly"
-export DBT_ROOT_WHEN_CREATED="/home/jcfree/daq-buildtools"
+export SPACK_RELEASE="N22-09-23"
+export SPACK_RELEASES_DIR="/cvmfs/dunedaq-development.opensciencegrid.org/nightly"
+export DBT_ROOT_WHEN_CREATED="/cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v6.0.2"
 ```
 This file is sourced whenever you run `dbt-workarea-env`, and it tells both the build system and the developer where they can find crucial information about the work areas' builds. Specifically, these environment variables mean the following:
 
@@ -205,9 +200,9 @@ This file is sourced whenever you run `dbt-workarea-env`, and it tells both the 
 
 * `DBT_ROOT_WHEN_CREATED`: The directory containing the `env.sh` file which was sourced before this work area was first created
 
-There are also useful Spack commands which can be executed to learn about the versions of the individual packages you're working with. An [excellent Spack tutorial](https://spack-tutorial.readthedocs.io/en/latest/tutorial_basics.html) inside the official Spack documentation is worth a look, but a few Spack commands can be used right away to learn about a work area:
+There are also useful Spack commands which can be executed to learn about the versions of the individual packages you're working with, once you've run `dbt-workarea-env` or `dbt-setup-release`. An [excellent Spack tutorial](https://spack-tutorial.readthedocs.io/en/latest/tutorial_basics.html) inside the official Spack documentation is worth a look, but a few Spack commands can be used right away to learn about a work area:
 
-* `spack find --loaded -N | grep $SPACK_RELEASE` will tell you all the DUNE DAQ packages which have been loaded by `dbt-workarea-env` (or `dbt-setup-release`, for that matter)
+* `spack find --loaded -N | grep $SPACK_RELEASE` will tell you all the DUNE DAQ packages which have been loaded by `dbt-workarea-env` or `dbt-setup-release`
 
 * `spack find --loaded -N | grep dunedaq-externals` is the same, but will tell you all the external packages
 
@@ -220,6 +215,7 @@ There are also useful Spack commands which can be executed to learn about the ve
 * You can learn how to create a new package by taking a look at the [daq-cmake documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/)
 
 
+
 -----
 
 <font size="1">
@@ -228,7 +224,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue May 31 12:44:34 2022 -0500_
+_Date: Tue Oct 11 09:13:40 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>

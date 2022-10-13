@@ -1,4 +1,7 @@
-# 11-Oct-2022, KAB and ELF: Notes on the emulated system config files...
+# Emulated System Configurations
+
+
+* 11-Oct-2022, KAB and ELF: Notes on the emulated system config files...
 
 These files are intended to serve as examples for systems that use emulated data producers.
 
@@ -31,9 +34,9 @@ Here are sample commands for using them
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Kurt Biery_
+_Author: eflumerf_
 
-_Date: Tue Oct 11 09:14:47 2022 -0500_
+_Date: Wed Oct 12 15:12:55 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>

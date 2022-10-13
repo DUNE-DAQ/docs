@@ -1,4 +1,7 @@
-# integtest/ README, 21-Sep-2022, ELF and KAB
+# integtest/ README
+
+
+* 21-Sep-2022, ELF and KAB
 
 Here is the command for fetching a file that has WIB data in it (to be used in generating emulated data):
 
@@ -44,9 +47,9 @@ Specialty tests:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: eflumerf_
 
-_Date: Wed Oct 12 13:23:21 2022 -0500_
+_Date: Wed Oct 12 15:12:25 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>
