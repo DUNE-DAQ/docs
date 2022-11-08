@@ -47,9 +47,9 @@ Either of them needs `dkms` and `kernel-devel` installed on your system. The dri
 Preferably, acquire all the following tools' output:
 
 
-    * flx-info
+    * flx-info -c <0 or 1>
 
-    * flx-init
+    * flx-init -c <0 or 1>
 
     * flx-dma-test
 
@@ -61,9 +61,9 @@ Preferably, acquire all the following tools' output:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Roland Sipos_
+_Author: glehmannmiotto_
 
-_Date: Tue Aug 17 11:17:24 2021 +0200_
+_Date: Tue Nov 8 10:26:40 2022 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
