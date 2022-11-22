@@ -258,8 +258,6 @@ nav:
        - Monitoring:
           - erskafka:
              - About erskafka: packages/erskafka/README.md
-          - influxopmon:
-             - About influxopmon: packages/influxopmon/README.md
           - kafkaopmon:
              - About kafkaopmon: packages/kafkaopmon/README.md
           - opmonlib:

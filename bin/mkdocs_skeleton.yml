@@ -163,7 +163,6 @@ nav:
           - serialization:
        - Monitoring:
           - erskafka:
-          - influxopmon:
           - kafkaopmon:
           - opmonlib:
        - Educational:
