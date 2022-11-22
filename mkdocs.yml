@@ -263,6 +263,8 @@ nav:
           - opmonlib:
              - About opmonlib: packages/opmonlib/README.md
              - packages/opmonlib/Instructions-for-DAQ-module-users.md
+          - rawdatautils:
+             - About rawdatautils: packages/rawdatautils/README.md
        - Educational:
           - listrev:
              - About listrev: packages/listrev/README.md

@@ -100,7 +100,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [opmonlib](packages/opmonlib/README.md) _operational monitoring library_
 
-
+[rawdatautils](packages/rawdatautils/README.md) _tools for looking at output files_
 
 ### Educational
 
