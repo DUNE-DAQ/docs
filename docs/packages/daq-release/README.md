@@ -1,6 +1,6 @@
 # About daq-release
 
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/DUNE-DAQ/daq-release?label=latest%20tag)[![GCC 12 Spack Nightly Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack-gcc12.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack-gcc12.yml)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/DUNE-DAQ/daq-release?label=latest%20tag)[![Spack Nightly Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack.yml)
 
 This is a repo containing DUNE DAQ release making tools, configuarion files, and build scripts of external packages. 
 
@@ -38,7 +38,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Wed Nov 9 14:32:12 2022 -0600_
+_Date: Wed Nov 23 23:34:17 2022 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
