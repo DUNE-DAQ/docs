@@ -1,6 +1,6 @@
 
 
-_Nov 28, 2022 : These instructions describe the new daq-buildtools v6.0.5. Note that as of this writing v6.0.5 will only work with nightlies from N22-11-24 onward or the rc-v3.2.1-2 candidate release. This is because v6.0.5 assumes that the releases you work with have the new .env directory for Python modules, rather than the traditional dbt-pyvenv. If you wish to work with other releases, please go to these [instructions for a previous daq-buildtools version](https://dune-daq-sw.readthedocs.io/en/v3.2.0/packages/daq-buildtools/)_
+_Nov 28, 2022 : These instructions describe the new daq-buildtools v6.0.5. Note that as of this writing v6.0.5 will only work with nightlies from N22-11-24 onward or the rc-v3.2.1-2 candidate release. This is because v6.0.5 assumes that the releases you work with have the new .env directory for Python modules, rather than the traditional dbt-pyvenv. If you wish to work with other releases, please go to these [instructions for a previous daq-buildtools version](https://dune-daq-sw.readthedocs.io/en/v3.2.1/packages/daq-buildtools/)_
 
 # DUNE DAQ Buildtools
 
@@ -241,7 +241,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Mon Nov 28 12:18:24 2022 -0600_
+_Date: Mon Nov 28 16:14:04 2022 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
