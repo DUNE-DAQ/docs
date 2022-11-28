@@ -137,6 +137,7 @@ nav:
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
              - packages/daq-release/team_repos.md
+          - daq-systemtest:
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
           - styleguide:
@@ -145,6 +146,7 @@ nav:
           - appfwk:
              - About appfwk: packages/appfwk/README.md
              - packages/appfwk/Daq-Application.md
+             - packages/appfwk/schema/README.md
           - cmdlib:
              - About cmdlib: packages/cmdlib/README.md
              - packages/cmdlib/Home.md
@@ -178,6 +180,7 @@ nav:
              - About detchannelmaps: packages/detchannelmaps/README.md
           - detdataformats:
              - About detdataformats: packages/detdataformats/README.md
+             - packages/detdataformats/include/detdataformats/trigger/README.md
           - dtpcontrols:
              - About dtpcontrols: packages/dtpcontrols/README.md
           - dtpctrllibs:
@@ -199,6 +202,7 @@ nav:
           - readoutlibs:
              - About readoutlibs: packages/readoutlibs/README.md
              - packages/readoutlibs/Directory-structure.md
+             - packages/readoutlibs/scripts/README.md
           - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
        - Control:
@@ -207,21 +211,30 @@ nav:
              - packages/daqconf/ConfigurationsForCasualUsers.md
              - packages/daqconf/InstructionsForCasualUsers.md
              - packages/daqconf/MigratingToNewConfgen.md
+             - packages/daqconf/pytest/README.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
+             - packages/nanorc/FAQ.md
+             - packages/nanorc/src/nanorc/webuidata/static/vendor/jquery-machine/README.md
+             - packages/nanorc/src/nanorc/webuidata/static/vendor/jstree/demo/README.md
+             - packages/nanorc/src/nanorc/webuidata/static/vendor/jstree/README.md
           - restcmd:
              - About restcmd: packages/restcmd/README.md
+             - packages/restcmd/scripts/README.md
        - Dataflow (logical):
           - dfmessages:
              - About dfmessages: packages/dfmessages/README.md
           - dfmodules:
              - About dfmodules: packages/dfmodules/README.md
+             - packages/dfmodules/integtest/README.md
+             - packages/dfmodules/python/dfmodules/tpset_demo/README.md
              - packages/dfmodules/TRB_metrics.md
           - hdf5libs:
              - About hdf5libs: packages/hdf5libs/README.md
              - packages/hdf5libs/V3FileFormatInterfaceChanges.md
           - timing:
              - About timing: packages/timing/README.md
+             - packages/timing/test/Notes.md
           - timinglibs:
              - About timinglibs: packages/timinglibs/README.md
           - trigger:
@@ -240,13 +253,13 @@ nav:
        - Monitoring:
           - erskafka:
              - About erskafka: packages/erskafka/README.md
-          - influxopmon:
-             - About influxopmon: packages/influxopmon/README.md
           - kafkaopmon:
              - About kafkaopmon: packages/kafkaopmon/README.md
           - opmonlib:
              - About opmonlib: packages/opmonlib/README.md
              - packages/opmonlib/Instructions-for-DAQ-module-users.md
+          - rawdatautils:
+             - About rawdatautils: packages/rawdatautils/README.md
        - Educational:
           - listrev:
              - About listrev: packages/listrev/README.md

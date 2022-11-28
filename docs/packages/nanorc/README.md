@@ -2,6 +2,8 @@
 
 Poor man's Run Control for DUNE DAQ applications
 
+Pssst! Check out the FAQ [here](FAQ.md)!
+
 ## How to run me
 
 This tutorial will guide you through the one-host minidaq example.
@@ -526,7 +528,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pierre Lasorak_
 
-_Date: Wed Oct 5 16:28:56 2022 +0200_
+_Date: Thu Oct 27 12:17:07 2022 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>

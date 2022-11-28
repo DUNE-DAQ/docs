@@ -24,7 +24,7 @@ spack load python@3.8.3%gcc@8.2.0
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt dunedaq-v3.2.0
+setup_dbt dunedaq-v3.2.1
 ```
 
 After running these two commands, then you'll see something like:
@@ -43,7 +43,7 @@ Each time that you want to work with a DUNE DAQ work area in a fresh Linux shell
 Running a release from cvmfs without creating a work area can be done if you simply run the following:
 
 ```sh
-dbt-setup-release <release> # dunedaq-v3.2.0 is the latest frozen release as of Oct-11-2022
+dbt-setup-release <release> # dunedaq-v3.2.1 is the latest frozen release as of Nov-28-2022
 ```
 Instead of a frozen release you can also set up nightly releases and candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up a candidate release you can do:
 ```
@@ -116,7 +116,7 @@ dbt-build
 
 ### Working with more repos
 
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/spack-releases/dunedaq-v3.2.0/dbt-build-order.cmake`". If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/spack/releases/dunedaq-v3.2.1/dbt-build-order.cmake`". If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
 
 As a reminder, once you've added your repos and built them, you'll want to run `dbt-workarea-env` so the environment picks up their applications, libraries, etc. 
 
@@ -224,7 +224,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Oct 11 09:13:40 2022 -0500_
+_Date: Mon Nov 28 12:46:42 2022 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
