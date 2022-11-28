@@ -137,7 +137,6 @@ nav:
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
              - packages/daq-release/team_repos.md
-          - daq-systemtest:
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
           - styleguide:
