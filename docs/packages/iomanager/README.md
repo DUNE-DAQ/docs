@@ -13,32 +13,66 @@ A simplified API for passing messages between DAQModules
 
 * Configures `Queue`s and `NetworkManager` automatically in `configure`
 
-### ConnectionId & ConnectionRef
+### Using IOManager from DAQModule code
 
 
-* `ConnectionId` defines a connection, with required initialization
+* `dunedaq::get_iomanager()` will return a pointer to the IOManager singleton
 
-  * `uid`: this field is a name which uniquely identifies the connection
+* `IOManager::get_sender<DataType>(std::string uid)` and `IOManager::get_receiver<DataType>(std::string uid)` should be used to get Sender and Receiver objects connected to the appropriate connections. Note that `ConnectionId` objects are not required, as they will be constructed from the provided DataType and uid arguments.
 
-  * `service_type`: Describes what kind of connection (Queue, Net Send/Receive, Pub/Sub)
+* Subscribers interested in multiple connections for a single DataType should use a Regular Expression to match the desired connections; this can be anywhere from a full wildcard (`".*"`) to a specific connection UID, depending on the desired scope of the subscription. Topics are now automatically assigned by IOManager as the string representation of DataType.
 
-  * `data_type`: Indicates the type of data carried on the connection
+* The `topic` argument has been removed from `SenderConcept<T>::send`
+
+* `appfwk` will give DAQModules a list of `appfwk::app::ConnectionReference` objects, which associate a "name" to connection UIDs. Methods in `DAQModuleHelper.hpp` take DAQModule configuration objects and extract specific UIDs for given names.
+```C++
+  auto mandatory_connections =
+    appfwk::connection_index(init_data, { "token_connection", "td_connection", "busy_connection" });
+
+  m_token_connection = mandatory_connections["token_connection"];
+  m_td_connection = mandatory_connections["td_connection"];
+  auto busy_connection = mandatory_connections["busy_connection"];
+
+  m_busy_sender = iom->get_sender<dfmessages::TriggerInhibit>(busy_connection);
+```
+
+* Upon agreement from both endpoints, a connection can use a generated UID string (e.g. from SourceID::to_string()). 
+
+### Other Notes for Framework Developers
+
+
+* The `serialization` library provides a new macro `DUNE_DAQ_TYPESTRING(Type, string)` which is included in the standard `DUNE_DAQ_SERIALIZABLE` and `DUNE_DAQ_SERIALIZE_NON_INTRUSIVE` macros (called from the `dunedaq` namespace only). These macros define the function `datatype_to_string<T>` which is used by IOManager to translate a datatype to the appropriate string. This template function **must** be visible in every compilation unit sending or receiving a given type!
+
+  * If it is not available, an error message will be produced at runtime that IOManager was unable to find connection "uid" of type Unknown
+
+* In `daqconf`, all connections and queues **must** have a declared data type that matches a call to `DUNE_DAQ_TYPESTRING`. `add_endpoint` and `connect_modules` have changed their API to accomodate this.
+
+### ConnectionId, Connection, & Queue
+
+
+* `ConnectionId` uniquely identifies a network connection or queue
+
+  * `uid`: String identifier for connection
+
+  * `data_type`: String representation of data type
+
+* `Connection` defines a network connection, with required initialization
+
+  * `id`: `ConnectionId`
+
+  * `connection_type`: Describes what kind of connection (kSendReceive, kPubSub)
 
   * `uri`: Field is used by lower-level code to configure the connection
 
-    * Scheme `queue://` should be used for queues, with the queue type and size, e.g. `queue://StdDeQueue:10` creating a StdDeQueue of size 10
+    * Standard ZMQ URI should be used, e.g. `tcp://localhost:1234` (name translation is provided by IPM)
 
-    * For network connections, standard ZMQ URI should be used, e.g. `tcp://localhost:1234` (name translation is provided by IPM)
+* `QueueConfig` represents an app-internal queue
 
-  * `topics`: Potential Pub/Sub topics for the connection
+  *  `id`: `ConectionId`
 
-* `ConnectionRef` is a user-facing reference to a connection
+  *  `queue_type`: Type of the queue implementation (e.g. kStdDeQueue, kFollySPSCQueue, kFollyMPMCQueue)
 
-  * `name`: Name of the connection for DAQModule use
-
-  * `uid`: UID of the connection
-
-  * `dir`: Direction (input/output)
+  *  `capacity`: Capacity of the queue
 
 ### Receiver
 
@@ -70,18 +104,16 @@ A simplified API for passing messages between DAQModules
 
 ```CPP
   // Int sender
-  dunedaq::iomanager::ConnectionRef cref;
-  cref.uid = "bar";
-  cref.topics = {};
-
+  std::string uid = "bar";
+  
   int msg = 5;
   std::chrono::milliseconds timeout(100);
-  auto isender = IOManager::get()->get_sender<int>(cref);
+  auto isender = IOManager::get()->get_sender<int>(uid);
   isender->send(msg, timeout);
   isender->send(msg, timeout);
 
   // One line send
-  IOManager::get()->get_sender<int>(cref)->send(msg, timeout);
+  IOManager::get()->get_sender<int>(uid)->send(msg, timeout);
   
   // Send when timeouts may occur
   bool sent = isender->try_send(msg, timeout);
@@ -92,11 +124,9 @@ A simplified API for passing messages between DAQModules
 
 ```CPP
 // String receiver
-  dunedaq::iomanager::ConnectionRef cref3;
-  cref3.uid = "dsa";
-  cref3.topics = {};
+  std::string uid = "bar";
 
-  auto receiver = IOManager::get()->get_receiver<std::string>(cref3);
+  auto receiver = IOManager::get()->get_receiver<std::string>(uid);
   std::string got;
   try {
     got = receiver->receive(timeout);
@@ -114,23 +144,21 @@ A simplified API for passing messages between DAQModules
 
 ```CPP
   // Callback receiver
-  dunedaq::iomanager::ConnectionRef cref4;
-  cref4.uid = "zyx";
-  cref4.topics = {};
+  std::string uid = "zyx";
 
   // CB function
   std::function<void(std::string)> str_receiver_cb = [&](std::string data) {
     std::cout << "Str receiver callback called with data: " << data << '\n';
   };
 
-  auto cbrec = IOManager::get()->get_receiver<std::string>(cref4);
+  auto cbrec = IOManager::get()->get_receiver<std::string>(uid);
   cbrec->add_callback(str_receiver_cb);
   try {
     got = cbrec->receive(timeout);
   } catch (dunedaq::iomanager::ReceiveCallbackConflict&) {
     // This is expected
   }
-  IOManager::get()->remove_callback(cref4);
+  IOManager::get()->remove_callback(uid);
 
 ```
 ## When to use "try_" methods
@@ -152,9 +180,9 @@ The API used for queues is documented [here](Queue.md). Network connections use 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: Eric Flumerfelt_
 
-_Date: Tue Jul 5 11:19:54 2022 -0500_
+_Date: Wed Oct 26 09:56:58 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/iomanager/issues](https://github.com/DUNE-DAQ/iomanager/issues)_
 </font>
