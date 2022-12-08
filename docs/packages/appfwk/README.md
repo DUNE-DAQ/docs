@@ -217,7 +217,9 @@ DEFINE_DUNE_DAQ_MODULE(dunedaq::mypackage::MyDaqModule)
 Now that you've been given an overview of appfwk and how to write DAQ modules, you're encouraged to look at the various repos to see how other DUNE DAQ developers have written DAQ modules. The [listrev](https://github.com/DUNE-DAQ/listrev) package is maintained as an example of simple DAQ modules, and another package with plenty of real DAQ modules to study is [dfmodules](https://github.com/DUNE-DAQ/dfmodules/tree/develop/plugins), modules used for dataflow purposes. Keep in mind that not all DAQ modules will adhere to the model described above, and you can judge for yourself what techniques you feel will make it easiest to write and maintain a DAQ module. 
 
 
+### API Diagram
 
+![Class Diagrams](https://github.com/DUNE-DAQ/appfwk/raw/develop/docs/appfwk.png)
 
 -----
 
@@ -225,9 +227,9 @@ Now that you've been given an overview of appfwk and how to write DAQ modules, y
 _Last git commit to the markdown source of this page:_
 
 
-_Author: eflumerf_
+_Author: Eric Flumerfelt_
 
-_Date: Tue May 31 12:27:09 2022 -0500_
+_Date: Thu Dec 8 13:51:31 2022 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appfwk/issues](https://github.com/DUNE-DAQ/appfwk/issues)_
 </font>

@@ -63,6 +63,9 @@ Receiver::Response response=subscriber->receive(std::chrono::milliseconds(10));
 More complete examples can be found in the `test/plugins` directory.
 
 
+### API Diagram
+
+![Class Diagrams](https://github.com/DUNE-DAQ/ipm/raw/develop/docs/ipm.png)
 
 -----
 
@@ -70,9 +73,9 @@ More complete examples can be found in the `test/plugins` directory.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Eric Flumerfelt_
 
-_Date: Thu Apr 22 14:21:23 2021 -0500_
+_Date: Thu Dec 8 13:48:36 2022 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/ipm/issues](https://github.com/DUNE-DAQ/ipm/issues)_
 </font>
