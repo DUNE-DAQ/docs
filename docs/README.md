@@ -2,9 +2,9 @@
 
 Welcome! The purpose of this website is to provide information on how to use the applications, plugins, base classes, etc. offered by the suite of DUNE DAQ packages. You can learn both how to run the DAQ as well as use various tools to extend its functionality. 
 
-If you're new to DUNE DAQ software and plan to do development, before your first keystroke please read the [developer rules](developer_rules.md). This covers personal conduct related to software development meant to minimize friction between developers, code reversions, etc. 
+If you're new and plan to develop DUNE DAQ software, before your first keystroke please take five minutes to read the [developer rules](developer_rules.md). These cover personal conduct related to software development meant to make the process run as smoothly as possible for all of us.
 
-you'll want to start by reading the [daq-buildtools documentation](packages/daq-buildtools/README.md), which covers [how to set up a development environment](packages/daq-buildtools/README.md#Setup_of_daq-buildtools) and [build a package](packages/daq-buildtools/README.md#Cloning_and_building). Once you've done this, you'll likely want to learn about [how to write DAQ modules](packages/appfwk/README.md#Writing_DAQ_modules) in the [appfwk documentation](packages/appfwk/README.md), units of code which
+To begin developing, you'll then want to start by reading the [daq-buildtools documentation](packages/daq-buildtools/README.md), which covers [how to set up a development environment](packages/daq-buildtools/README.md#Setup_of_daq-buildtools) and [build a package](packages/daq-buildtools/README.md#Cloning_and_building). Once you've done this, you'll likely want to learn about [how to write DAQ modules](packages/appfwk/README.md#Writing_DAQ_modules) in the [appfwk documentation](packages/appfwk/README.md), units of code which
 are meant to perform specific tasks and can be combined to define the overall behavior of a running DAQ application. At some point you may also need to learn about how to create a package from scratch by reading the [daq-cmake documentation](packages/daq-cmake/README.md); this documentation is also very useful for understanding how to get new source code files you've added to compile.  
 
 There are six DUNE DAQ software packages which are used to aid
