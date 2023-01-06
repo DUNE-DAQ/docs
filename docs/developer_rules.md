@@ -1,15 +1,23 @@
 # DUNE DAQ Software Developer Rules
 
-Any software project consisting of multiple individuals will suffer if those individuals fail to communicate clearly with one another. A lack of communication can result in code reversions and ill-timed code merges, along with frustration and hurt feelings which can slow the progress of a project. To avoid this, the DUNE DAQ software project has a couple of rules (with examples) about who to communicate with when you make changes to the code. 
+Any software project consisting of multiple individuals will suffer if those individuals fail to communicate clearly with one another. A lack of communication can result in code reversions and ill-timed code merges, along with frustration and hurt feelings which can slow the progress of a project. To avoid this, the DUNE DAQ software project has rules about who to communicate with when you make different types of changes to the code. 
 
-The use cases below are presented in order of increasing need for
-communication. Note that these cases also require adherence to our
-[git versioning system development
+These different types of code change are described below, each with an
+accompanying communication rule. They are presented in order of
+increasing need for communication, with concrete examples given. Note
+that code changes also require adherence to our [git versioning system
+development
 workflow](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-release/development_workflow_gitflow/),
 though the focus here is on the human communication aspect of software
 development.
 
-## Minor documentation changes changes within a single package
+Also be aware that while these rules apply for most of the development
+cycle, they don't apply when we're in the one-to-two week official
+release period before a frozen release is cut. During the release
+period, we have just one rule, and it's simple: any planned change
+needs to be announced to the project at our morning release meetings as well as on the `dunedaq-integration` Slack channel. 
+
+## Minor documentation changes within a single package
 
 You can make these on your own. Examples are limited to:
 
@@ -34,12 +42,12 @@ changes before they can be merged into `develop`. Examples include:
 
 This type of change needs to be mentioned to the maintainer(s) of the repository or repositories affected by the changes, including obviously the repository directly modified. To find the maintainer(s) if you're not sure who they are you can look [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-release/team_repos/). Examples of this kind of change are:
 
-* Altering behavior in a function or function(s) which other parts of the code rely on
+* Altering behavior in a function which other parts of the code rely on
 
 * Refactoring large parts of the codebase after a code review
 
 ## Changes across many packages 
 
-A change which is planned to be made across many packages all at once needs to be brought to the attention not only of the mantainer(s) of the relevant repos, but also to at least one member of Software Coordination (John Freeman, `jcfree@fnal.gov` and Pengfei Ding, `dingpf@fnal.gov`). [WHAT ELSE?] No examples are needed as this rule is self-explanatory. 
+A change which is planned to be made across many packages all at once needs to be brought to the attention not only of the maintainer(s) of the relevant repositories, but also to the project has a whole. This means at least one member of Software Coordination (John Freeman, `jcfree@fnal.gov` and Pengfei Ding, `dingpf@fnal.gov`) should be notified, and the planned change announced on the `dunedaq-integration` Slack channel. No examples are needed as this rule is self-explanatory. 
 
 [Back to the DUNE DAQ software documentation homepage](README.md)
