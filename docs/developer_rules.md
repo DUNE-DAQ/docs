@@ -48,6 +48,6 @@ This type of change needs to be mentioned to the maintainer(s) of the repository
 
 ## Changes across many packages 
 
-A change which is planned to be made across many packages all at once needs to be brought to the attention not only of the maintainer(s) of the relevant repositories, but also to the project has a whole. This means at least one member of Software Coordination (John Freeman, `jcfree@fnal.gov` and Pengfei Ding, `dingpf@fnal.gov`) should be notified, and the planned change announced on the `dunedaq-integration` Slack channel. No examples are needed as this rule is self-explanatory. 
+A change which is planned to be made across many repositories all at once needs to be brought to the attention not only of the maintainers of the repositories, but also to the project as a whole. This means the members of Software Coordination (John Freeman, `jcfree@fnal.gov` and Pengfei Ding, `dingpf@fnal.gov`) should be notified, and the planned change announced on the `dunedaq-integration` Slack channel. No examples are needed as this rule is self-explanatory. 
 
 [Back to the DUNE DAQ software documentation homepage](README.md)
