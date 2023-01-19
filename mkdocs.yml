@@ -135,8 +135,6 @@ nav:
           - cmdlib:
           - ers:
           - logging:
-             - About logging: packages/logging/README.md
-             - packages/logging/ers-conventions.md
           - utilities:
              - About utilities: packages/utilities/README.md
              - packages/utilities/WorkerThread-Usage-Notes.md
@@ -149,8 +147,6 @@ nav:
           - fdreadoutlibs:
           - flxlibs:
           - lbrulibs:
-             - About lbrulibs: packages/lbrulibs/README.md
-             - packages/lbrulibs/socket-implementation.md
           - readoutlibs:
              - About readoutlibs: packages/readoutlibs/README.md
              - packages/readoutlibs/Directory-structure.md
@@ -160,11 +156,6 @@ nav:
        - Control:
           - daqconf:
           - nanorc:
-             - About nanorc: packages/nanorc/README.md
-             - packages/nanorc/FAQ.md
-             - packages/nanorc/src/nanorc/webuidata/static/vendor/jquery-machine/README.md
-             - packages/nanorc/src/nanorc/webuidata/static/vendor/jstree/demo/README.md
-             - packages/nanorc/src/nanorc/webuidata/static/vendor/jstree/README.md
           - restcmd:
              - About restcmd: packages/restcmd/README.md
              - packages/restcmd/scripts/README.md
@@ -172,8 +163,6 @@ nav:
           - dfmessages:
           - dfmodules:
           - hdf5libs:
-             - About hdf5libs: packages/hdf5libs/README.md
-             - packages/hdf5libs/V3FileFormatInterfaceChanges.md
           - timing:
              - About timing: packages/timing/README.md
              - packages/timing/test/Notes.md
@@ -190,7 +179,6 @@ nav:
        - Monitoring:
           - erskafka:
           - kafkaopmon:
-             - About kafkaopmon: packages/kafkaopmon/README.md
           - opmonlib:
              - About opmonlib: packages/opmonlib/README.md
              - packages/opmonlib/Instructions-for-DAQ-module-users.md
@@ -198,7 +186,6 @@ nav:
              - About rawdatautils: packages/rawdatautils/README.md
        - Educational:
           - listrev:
-             - About listrev: packages/listrev/README.md
 
 
 
