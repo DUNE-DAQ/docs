@@ -252,6 +252,7 @@ nav:
              - packages/iomanager/NetworkManager.md
              - packages/iomanager/Queue.md
              - packages/iomanager/Updating.md
+             - packages/iomanager/Using-dynamic-connection-names.md
           - ipm:
              - About ipm: packages/ipm/README.md
           - serialization:

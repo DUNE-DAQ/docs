@@ -167,7 +167,7 @@ The standard `send()` and `receive()` methods will throw an ERS exception if the
 
 ## Updating existing code to use IOManager
 
-Please see [this page](Updating.md) for information about updating your code to use IOManager.
+Please see [this page](Updating.md) for information about updating your code to use IOManager. Also, if you are interested in using dynamic connection names, look at [this page](Using-dynamic-connection-names.md)
 
 ## APIs used by IOManager
 
@@ -182,7 +182,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Thu Dec 8 13:54:40 2022 -0600_
+_Date: Thu Jan 19 08:48:13 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/iomanager/issues](https://github.com/DUNE-DAQ/iomanager/issues)_
 </font>
