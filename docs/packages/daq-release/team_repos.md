@@ -8,6 +8,7 @@
 * Repositories with write access:
   - appfwk
   - cmdlib
+  - dal
   - daq-systemtest
   - daqconf
   - dqm
@@ -22,6 +23,9 @@
   - logging
   - minidaqapp
   - nanorc
+  - oksconfig
+  - okssystem
+  - oks_utils
   - opmonlib
   - pocket
   - rcif
@@ -49,6 +53,7 @@
   - iomanager
   - ipm
   - lbrulibs
+  - listrev
   - minidaqapp
   - ndreadoutlibs
   - networkmanager
@@ -82,6 +87,13 @@
   - dqmplatform
   - rawdatautils
 
+## facility
+
+* Maintainer(s): Bonnie King ,Alec Habig
+
+* Repositories with write access:
+  - microservices
+
 ## nd-udaq
 
 * Maintainer(s): Patrick Dunne
@@ -89,6 +101,26 @@
 * Repositories with write access:
   - lbrulibs
   - minidaqapp
+
+## timing
+
+* Maintainer(s): David Cussans
+
+* Repositories with write access:
+  - timing
+  - timinglibs
+
+## trigger
+
+* Maintainer(s): Jim Brooke
+
+* Repositories with write access:
+  - daq-systemtest
+  - datafilter
+  - minidaqapp
+  - trigger
+  - triggeralgs
+  - triggermodules
 
 ## udaq
 
@@ -118,7 +150,7 @@
   - wibmod
 
 
-Page was generated at: 30/09/2022 18:13:11
+Page was generated at: 30/01/2023 08:22:52
 
 
 
@@ -130,7 +162,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Fri Sep 30 18:15:19 2022 -0500_
+_Date: Mon Jan 30 08:25:15 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
