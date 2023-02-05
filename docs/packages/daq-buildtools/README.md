@@ -1,6 +1,6 @@
 
 
-_Jan 13, 2023 : These instructions describe the latest daq-buildtools version, v6.0.5. This will only work with nightlies from N22-11-24 onward, and will NOT work with dunedaq-v3.2.1. This is because v6.0.5 assumes that the releases you work with have the new .env directory for Python modules, rather than the traditional dbt-pyvenv. If you wish to work with the dunedaq-v3.2.1 release, please go to these [instructions for a previous daq-buildtools version](https://dune-daq-sw.readthedocs.io/en/v3.2.1/packages/daq-buildtools/)_
+_Feb 5, 2023 : These instructions describe the latest daq-buildtools version, v7.0.0. This will only work with nightlies from N22-11-24 onward, and will NOT work with dunedaq-v3.2.1. This is because v7.0.0 assumes that the releases you work with have the new .env directory for Python modules, rather than the traditional dbt-pyvenv. If you wish to work with the dunedaq-v3.2.1 release, please go to these [instructions for a previous daq-buildtools version](https://dune-daq-sw.readthedocs.io/en/v3.2.1/packages/daq-buildtools/)_
 
 # DUNE DAQ Buildtools
 
@@ -27,13 +27,13 @@ spack load python@3.8.3%gcc@8.2.0
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt v6.0.5  # v6.0.5 is the latest daq-buildtools version as of Nov-27-2022
+setup_dbt v7.0.0  # v7.0.0 is the latest daq-buildtools version as of Feb-05-2023
 ```
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v6.0.5/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v6.0.5/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.0/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.0/scripts -> PATH
 DBT setuptools loaded
 ```
 If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create`, `dbt-build`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. 
@@ -241,7 +241,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Jan 13 09:43:22 2023 -0600_
+_Date: Sun Feb 5 14:03:14 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
