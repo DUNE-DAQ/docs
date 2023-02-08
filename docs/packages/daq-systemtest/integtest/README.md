@@ -3,12 +3,13 @@
 
 * 21-Sep-2022, ELF and KAB
 
-Here is the command for fetching a file that has WIB data in it (to be used in generating emulated data):
+Here is a command for fetching a file that has WIB data in it (to be used in generating emulated data).  [Please note that this command assumes that the "DAQ assettools" (`daq-assettools` repo) are available in your software area.  If you are using a relatively recent release or nightly build, this will be the case.]
 
+```
+cp -v `assets-list -c 9f14e12a0ebdaf207e9e740044b2433c | awk '{print $NF}'` .
+```
 
-* `curl -o frames.bin -O https://cernbox.cern.ch/index.php/s/0XzhExSIMQJUsp0/download`
-
-Here is a sample command for invoking a test:
+Here is a sample command for invoking a test (feel free to keep or drop the options in brackets, as you prefer):
 
 
 * `pytest -s readout_type_scan.py [--frame-file $PWD/frames.bin] [--nanorc-option partition-number 3] [--nanorc-option timeout 300]`
@@ -47,9 +48,9 @@ Specialty tests:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: eflumerf_
+_Author: Kurt Biery_
 
-_Date: Wed Oct 12 15:12:25 2022 -0500_
+_Date: Wed Feb 8 12:32:10 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>
