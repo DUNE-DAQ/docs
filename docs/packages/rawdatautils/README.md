@@ -94,6 +94,29 @@ number of frames in the fragment it will try to read out of bounds.
 `np_array_timestamp_data` under the hood with the correct checks on the number
 of frames.
 
+## File conversion
+It's possible to transform binary files using the old `WIBFrame` format to the
+newer `WIB2Frame` or `WIBEthFrame` format. That means that the ADC values will
+be preserved, as well as other values found in the header such as the crate,
+slot, fiber number. The timestamps will be overwritten to differ by 32 (by 32 *
+64 for `WIBEthFrame`) to avoid warnings and other issues when these files are
+being read by readout. In python:
+
+For WIB -> WIB2
+```
+from rawdatautils import file_conversion
+file_conversion.wib_binary_to_wib2_binary('/path/to/input/file', '/path/to/output/file')
+```
+and for WIB -> WIBEth
+```
+from rawdatautils import file_conversion
+file_conversion.wib_binary_to_wibeth_binary('/path/to/input/file', '/path/to/output/file')
+```
+
+When transforming WIB -> WIBEth it will create 4 files lblecause `WIBFrames`
+have 256 channels and `WIBEthFrames` have 64, so the first file has the first 64
+channels, the second file has the next 64 channels and so on.
+
 
 
 -----
@@ -102,9 +125,9 @@ of frames.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: jmcarcell_
 
-_Date: Wed Nov 23 14:56:14 2022 -0600_
+_Date: Wed Jan 18 13:42:13 2023 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/rawdatautils/issues](https://github.com/DUNE-DAQ/rawdatautils/issues)_
 </font>
