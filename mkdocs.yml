@@ -140,6 +140,11 @@ nav:
              - packages/daq-release/slides.md
              - packages/daq-release/team_repos.md
           - daq-systemtest:
+             - About daq-systemtest: packages/daq-systemtest/README.md
+             - packages/daq-systemtest/config/emulated_systems/README.md
+             - packages/daq-systemtest/config/hd_coldbox_tests/README.md
+             - packages/daq-systemtest/config/long_window_readout/README.md
+             - packages/daq-systemtest/integtest/README.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
           - styleguide:
@@ -208,6 +213,9 @@ nav:
           - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
           - wibmod:
+             - About wibmod: packages/wibmod/README.md
+             - packages/wibmod/src/WIB1/README.md
+             - packages/wibmod/src/wibmod/WIB1/README.md
        - Control:
           - daqconf:
              - About daqconf: packages/daqconf/README.md

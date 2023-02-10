@@ -118,8 +118,8 @@ for package in $package_list ; do
 	git checkout dunedaq-v3.2.2_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout dunedaq-v3.2.0_for_docs
-    elif [[ "$package" =~ "listrev" ]]; then
-	git checkout develop  # Feb-10-2023, an important bugfix to the listrev documentation added since dunedaq-v3.2.2
+    elif [[ "$package" =~ "listrev" || "$package" =~ "daq-systemtest" || "$package" =~ "wibmod" ]]; then
+	git checkout develop  
     else
 	git checkout dunedaq-v3.2.2
     fi
