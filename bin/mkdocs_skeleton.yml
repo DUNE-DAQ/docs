@@ -123,6 +123,7 @@ nav:
        - Overview:
           - README.md
        - Toolset:
+          - daq-assettools:
           - daq-buildtools:
           - daq-cmake:
           - daq-release:

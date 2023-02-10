@@ -5,7 +5,7 @@ Welcome! The purpose of this website is to provide information on how to use the
 If you're new to DUNE DAQ software, you'll want to start by reading the [daq-buildtools documentation](packages/daq-buildtools/README.md), which covers [how to set up a development environment](packages/daq-buildtools/README.md#Setup_of_daq-buildtools) and [build a package](packages/daq-buildtools/README.md#Cloning_and_building). Once you've done this, you'll likely want to learn about [how to write DAQ modules](packages/appfwk/README.md#Writing_DAQ_modules) in the [appfwk documentation](packages/appfwk/README.md), units of code which
 are meant to perform specific tasks and can be combined to define the overall behavior of a running DAQ application. At some point you may also need to learn about how to create a package from scratch by reading the [daq-cmake documentation](packages/daq-cmake/README.md); this documentation is also very useful for understanding how to get new source code files you've added to compile.  
 
-There are six DUNE DAQ software packages which are used to aid
+There are seven DUNE DAQ software packages which are used to aid
 developers in creating packages designed for the DAQ itself:
 
 To learn how to build an existing software package, read the [daq-buildtools documentation](packages/daq-buildtools/README.md)
@@ -19,6 +19,8 @@ To learn about the C++ coding guidelines which DUNE DAQ package developers shoul
 To learn how to run integration tests within our framework, go [here](packages/integrationtest/README.md)
 
 To learn about how to run even more comprehensive tests (particularly relevant during a DUNE DAQ release period), read about the [daq-systemtest package](packages/daq-systemtest/README.md)
+
+To learn how to keep track of assets (files, etc. which affect the behavior of the DAQ but aren't part of a standard software package), go [here](packages/daq-assettools/README.md)
 
 --------------
 
