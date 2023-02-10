@@ -212,6 +212,10 @@ nav:
              - packages/readoutlibs/scripts/README.md
           - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
+          - wibmod:
+             - About wibmod: packages/wibmod/README.md
+             - packages/wibmod/src/WIB1/README.md
+             - packages/wibmod/src/wibmod/WIB1/README.md
        - Control:
           - daqconf:
              - About daqconf: packages/daqconf/README.md
@@ -260,6 +264,8 @@ nav:
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:
+          - dqm:
+             - About dqm: packages/dqm/README.md
           - erskafka:
              - About erskafka: packages/erskafka/README.md
           - kafkaopmon:

@@ -147,6 +147,7 @@ nav:
           - lbrulibs:
           - readoutlibs:
           - readoutmodules:
+          - wibmod:
        - Control:
           - daqconf:
           - nanorc:
@@ -163,6 +164,7 @@ nav:
           - ipm:
           - serialization:
        - Monitoring:
+          - dqm:
           - erskafka:
           - kafkaopmon:
           - opmonlib:

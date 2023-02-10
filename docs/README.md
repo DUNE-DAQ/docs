@@ -62,6 +62,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [readoutmodules](packages/readoutmodules/README.md) _DAQModules for constructing readout-focused processes_
 
+[wibmod](packages/wibmod/README.md) _WIB configuration and monitoring interface_
+
 ### Control
 
 [daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_
@@ -95,6 +97,8 @@ For the other packages, please click on one of the links below. To learn how to 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
 
 ### Monitoring
+
+[dqm](packages/dqm/README.md) _Data Quality Monitor_
 
 [erskafka](packages/erskafka/README.md) _the erskafka plugin_
 
