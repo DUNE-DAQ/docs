@@ -1,6 +1,5 @@
 
-
-_Feb 5, 2023 : These instructions describe the latest daq-buildtools version, v7.0.0. This will only work with nightlies from N22-11-24 onward, and will NOT work with dunedaq-v3.2.1. This is because v7.0.0 assumes that the releases you work with have the new .env directory for Python modules, rather than the traditional dbt-pyvenv. If you wish to work with the dunedaq-v3.2.1 release, please go to these [instructions for a previous daq-buildtools version](https://dune-daq-sw.readthedocs.io/en/v3.2.1/packages/daq-buildtools/)_
+_JCF: This document was last edited Feb-10-2023_
 
 # DUNE DAQ Buildtools
 
@@ -27,7 +26,7 @@ spack load python@3.8.3%gcc@8.2.0
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt v7.0.0  # v7.0.0 is the latest daq-buildtools version as of Feb-05-2023
+setup_dbt dunedaq-v3.2.2  # dunedaq-v3.2.2 is the latest daq-buildtools version as of Feb-10-2023
 ```
 
 After running these two commands, then you'll see something like:
@@ -46,9 +45,8 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you simply want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
 
 ```sh
-dbt-setup-release <release> # dunedaq-v3.2.1 is the latest frozen release starting Nov-14-2022
+dbt-setup-release <release> # dunedaq-v3.2.2 is the latest frozen release as of Feb-10-2023
 ```
-(_n.b. As of Nov-27-2022, there aren't yet any frozen releases which can be set up by daq-buildtools v6.0.5 due to an interface change_)
 
 Instead of a frozen release you can also set up nightly releases, candidate releases or test releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `rc-v3.2.1-2` you can do:
 ```
@@ -66,11 +64,9 @@ Each work area is based on a DUNE DAQ software release, which defines what exter
 
 * **Nightly Releases**: packages in nightly releases are built each night using the heads of their `develop` branches. Generally labeled as `N<YY>-<MM>-<DD>`, e.g. `N22-11-27`.
 
-* **Frozen Releases**: a frozen release typically comes out every couple of months, and only after extensive testing supervised by a Release Coordinator. Generally labeled as `dunedaq-vX.Y.X`, e.g. `dunedaq-v3.2.1`
+* **Frozen Releases**: a frozen release typically comes out every couple of months, and only after extensive testing supervised by a Release Coordinator. Generally labeled as `dunedaq-vX.Y.X`, e.g. `dunedaq-v3.2.2`
 
 * **Candidate Releases**: a type of release meant specifically for frozen release testing. Generally labeled as `rc-vX.Y.Z-<candidate iteration>`, e.g. `rc-v3.2.1-1`
-
-* **Test Releases**: a type of release which broadly speaking covers a set of packages which developers wish to build against but which don't fall into any of the first three categories. E.g., a release which contains builds of several feature branches, or a special version of an external package. As of Nov-27-2022, there's not yet really a standard labeling scheme for them. 
 
 The majority of work areas are set up to build against the most recent nightly release. To do so, run:
 ```sh
@@ -135,7 +131,7 @@ dbt-build
 
 ### Working with more repos
 
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/spack-releases/dunedaq-v3.2.1/dbt-build-order.cmake`". If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/spack/releases/dunedaq-v3.2.2/dbt-build-order.cmake`". If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
 
 As a reminder, once you've added your repos and built them, you'll want to run `dbt-workarea-env` so the environment picks up their applications, libraries, etc. 
 
@@ -241,7 +237,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Sun Feb 5 14:03:14 2023 -0600_
+_Date: Fri Feb 10 09:43:50 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
