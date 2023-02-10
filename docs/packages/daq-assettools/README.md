@@ -15,13 +15,14 @@ Files listed in this [spreadsheet](https://docs.google.com/spreadsheets/d/1oDYe1
 
 ### Installation
 
-`pip install git+https://github.com/DUNE-DAQ/daq-assettools@v1.0.0#egg=daq-assettools`
+`pip install git+https://github.com/DUNE-DAQ/daq-assettools@v1.10.0#egg=daq-assettools # Change the version to the desired version.`
 
 ## How to get path to asset files
 
 `assets-list` is the tool for getting the path to asset files. 
 
 Examples:
+
 - `assets-list --subsystem readout`
 - `assets-list --subsystem readout --copy-to ./`: list files of `readout` subsystem, and copy them to the current directory. The copied file will be renamed as `file-<short_checksum>.ext`, assuming its original file name is `file.ext`; 
 - `assets-list -c dc74fe934cfb603d74ab6e54a0af7980`: list single file matching the MD5 file checksum;
@@ -73,6 +74,7 @@ Note: these operations require write permissions to the database file, and file 
 The tool can take metadata fields from command line as well as from a JSON file. If both are presented, command-line entries take the precedence.
 
 Examples:
+
 - `assets-add -s ./frames.bin --db-file ./dunedaq-asset-db.sqlite -n frames.bin -f binary --status valid --subsystem readout --label ProtoWIB --description "Used for FE emulation in FakeCardReader"`
 
 ```
@@ -115,6 +117,7 @@ optional arguments:
 Use `assets-update` to update certain metadata fields of a file. Similar as other tools, it takes the metadata fields from command-line for matching files in the database. Additionally, it takes a JSON string from command-line for the new metadata.
 
 Examples:
+
 - `assets-update --subsystem readout --label ProtoWIB --json-string '{"description": "Used for FE emulation in FakeCardReader during Integration Week."}'`
 - `assets-update -c dc74fe934cfb603d74ab6e54a0af7980 --json-string '{"status": "valid"}'`
 
@@ -155,6 +158,7 @@ optional arguments:
 `assets-retire` is the tool to retire a file. The operation is as simple as change its metadata field 'status' to 'expired'. It will not delete the file itself.
 
 Examples:
+
 - `assets-retire -c dc74fe934cfb603d74ab6e54a0af7980`
 
 ```
@@ -196,7 +200,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Fri Feb 10 02:43:31 2023 -0600_
+_Date: Fri Feb 10 16:16:50 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-assettools/issues](https://github.com/DUNE-DAQ/daq-assettools/issues)_
 </font>
