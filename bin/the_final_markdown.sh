@@ -5,7 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif rawdatautils opmonlib ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-release daq-cmake daq-buildtools cmdlib appfwk"
+package_list="wibmod utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif rawdatautils opmonlib ndreadoutlibs nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest flxlibs fdreadoutlibs erskafka ers dtpctrllibs dtpcontrols dqm dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daq-systemtest daq-release daq-cmake daq-buildtools daq-assettools cmdlib appfwk"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -115,13 +115,13 @@ for package in $package_list ; do
     # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout dunedaq-v3.2.1_for_docs
+	git checkout dunedaq-v3.2.2_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout dunedaq-v3.2.0_for_docs
-    elif [[ "$package" =~ "daq-release" ]]; then
-	git checkout develop  # Nov-28-2022, no dunedaq-v3.2.1 tag available
+    elif [[ "$package" =~ "listrev" ]]; then
+	git checkout develop  # Feb-10-2023, an important bugfix to the listrev documentation added since dunedaq-v3.2.2
     else
-	git checkout dunedaq-v3.2.1
+	git checkout dunedaq-v3.2.2
     fi
     echo $tmpdir/$package
 

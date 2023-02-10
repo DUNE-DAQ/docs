@@ -123,9 +123,11 @@ nav:
        - Overview:
           - README.md
        - Toolset:
+          - daq-assettools:
           - daq-buildtools:
           - daq-cmake:
           - daq-release:
+          - daq-systemtest:
           - integrationtest:
           - styleguide:
        - Core:   
@@ -145,6 +147,7 @@ nav:
           - lbrulibs:
           - readoutlibs:
           - readoutmodules:
+          - wibmod:
        - Control:
           - daqconf:
           - nanorc:
@@ -161,6 +164,7 @@ nav:
           - ipm:
           - serialization:
        - Monitoring:
+          - dqm:
           - erskafka:
           - kafkaopmon:
           - opmonlib:

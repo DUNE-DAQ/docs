@@ -123,6 +123,8 @@ nav:
        - Overview:
           - README.md
        - Toolset:
+          - daq-assettools:
+             - About daq-assettools: packages/daq-assettools/README.md
           - daq-buildtools:
              - About daq-buildtools: packages/daq-buildtools/README.md
           - daq-cmake:
@@ -137,6 +139,7 @@ nav:
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
              - packages/daq-release/team_repos.md
+          - daq-systemtest:
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
           - styleguide:
@@ -204,6 +207,7 @@ nav:
              - packages/readoutlibs/scripts/README.md
           - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
+          - wibmod:
        - Control:
           - daqconf:
              - About daqconf: packages/daqconf/README.md
@@ -250,6 +254,8 @@ nav:
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:
+          - dqm:
+             - About dqm: packages/dqm/README.md
           - erskafka:
              - About erskafka: packages/erskafka/README.md
           - kafkaopmon:

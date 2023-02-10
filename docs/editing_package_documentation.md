@@ -4,14 +4,17 @@
 One of the main purposes of the official DUNE DAQ documentation is to
 provide info about each package for its users. The webpages for each
 package are generated off [Markdown
-files](https://www.markdownguide.org/basic-syntax/) which need to be 
-located in a `docs/` subdirectory in that package's repo. The one file
-which must exist is `docs/README.md`; this serves as the homepage for
-the package's documentation. It may provide links to other Markdown
-files, or to other webpages, where necessary. Note that in this model,
-it's possible to edit the documentation within a package's GitHub
-page, making it easy to check for Markdown syntax errors before
-committing. 
+files](https://www.markdownguide.org/basic-syntax/) as long as a
+`docs/` subdirectory exists in that package's repo. The one file which
+must exist is `docs/README.md`; this serves as the homepage for the
+package's documentation. It may provide links to other Markdown files,
+or to other webpages, where necessary. As of October 2022, Markdown
+files in other directories of the repo besides `docs/` also get picked
+up and added to the official documentation (see, e.g., the ToC for
+`daq-systemtest` in the left sidebar of the main page). Note that in
+this model, it's possible to edit the documentation within a package's
+GitHub page, making it easy to check for Markdown syntax errors before
+committing.
 
 A few points need to be made:
 
