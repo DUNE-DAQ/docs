@@ -27,7 +27,7 @@ Examples:
 - `assets-list --subsystem readout --copy-to ./`: list files of `readout` subsystem, and copy them to the current directory. The copied file will be renamed as `file-<short_checksum>.ext`, assuming its original file name is `file.ext`; 
 - `assets-list -c dc74fe934cfb603d74ab6e54a0af7980`: list single file matching the MD5 file checksum;
 - `assets-list -c dc74fe934cfb603d74ab6e54a0af7980 --copy-to ./`: list single file matching the MD5 file checksum and copy the file to the current directory;
-- `assets-list -c dc74fe934cfb603d74ab6e54a0af7980 | awk '{print $NF}'`: get the file path only;
+- `assets-list -c dc74fe934cfb603d74ab6e54a0af7980 | tail -n +2| awk '{print $NF}'`: get the file path only;
 - `assets-list --subsystem readout --format binary --status valid --print-metadata`
 
 ```
@@ -200,7 +200,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Fri Feb 10 16:16:50 2023 -0600_
+_Date: Tue Feb 14 11:35:00 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-assettools/issues](https://github.com/DUNE-DAQ/daq-assettools/issues)_
 </font>
