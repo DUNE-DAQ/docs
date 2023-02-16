@@ -12,7 +12,7 @@ Making a new DAQ release consists of:
 
    * Check version tags with version numbers used in `CMakeLists.txt`;
 
-   * Check dependencies in `CMakeLists.txt` matches those in `cmake.in` files;
+   * Check if dependencies in `CMakeLists.txt` matches those in `cmake/<pkgname>Config.cmake.in` files;
 
    * Update spack recipe files with new dependencies;
 
@@ -59,9 +59,9 @@ Update the file with the new versions (and, if needed, new packages) in the rele
 It's worth to do several checks before starting any test builds. These checks include:
 
 
-* Check version tags with version numbers used in `CMakeLists.txt`; The script `script/checkout-daq-package.py` in this repo can help here. `python3 script/checkout-daq-package.py -i <path-to-release-config-xml> -a -c -o /tmp` will checkout all the DAQ packages used in the release into `/tmp` and verify if the version tags match cmake version numbers;
+* Check version tags with version numbers used in `CMakeLists.txt`; The script `script/checkout-daq-package.py` in this repo can help here. `python3 script/checkout-daq-package.py -i <path-to-release-config-yaml> -a -c -o /tmp` will checkout all the DAQ packages used in the release into `/tmp` and verify if the version tags match cmake version numbers;
 
-* Check dependencies in `CMakeLists.txt` matches those in `cmake.in` files;
+* Check if dependencies in `CMakeLists.txt` matches those in `cmake/<pkgname>Config.cmake.in` files;
 
 * Update spack recipe files for DAQ packages with newly added dependencies.
 
@@ -116,6 +116,7 @@ To do so, login to `cvmfsdunedaq@oasiscfs01.fnal.gov` as `cvmfsdunedaq`, then do
 
   * `-d` to delete release tags if found, `-f` to recreate release tags.
 
+
 -----
 
 <font size="1">
@@ -124,7 +125,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Fri Feb 10 16:56:25 2023 -0600_
+_Date: Thu Feb 16 09:26:24 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
