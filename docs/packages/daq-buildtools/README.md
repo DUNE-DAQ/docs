@@ -1,5 +1,5 @@
 
-_JCF: This document was last edited Feb-10-2023_
+_JCF: This document was last edited Feb-17-2023_
 
 # DUNE DAQ Buildtools
 
@@ -7,12 +7,14 @@ _JCF: This document was last edited Feb-10-2023_
 
 ## System requirements
 
-To get set up, you'll need access to the cvmfs Spack area
-`/cvmfs/dunedaq-development.opensciencegrid.org/spack-nightly` as is
-the case, e.g., on the lxplus machines at CERN. If you've been doing
-your own Spack work on the system in question, you may also want to
-back up (rename) your existing `~/.spack` directory to give Spack a
-clean slate to start from in these instructions.
+To get set up, you'll need access to the cvmfs Spack areas:
+`/cvmfs/dunedaq.opensciencegrid.org/spack/releases` for frozen DUNE
+DAQ releases, `/cvmfs/dunedaq-development.opensciencegrid.org/nightly`
+for nightly releases, etc. This is the case, e.g., on the lxplus
+machines at CERN. If you've been doing your own Spack work on the
+system in question, you may also want to back up (rename) your
+existing `~/.spack` directory to give Spack a clean slate to start
+from in these instructions.
 
 You'll also want `python` to be version 3; to find out whether this is the case, run `python --version`. If it isn't, then you can switch over to Python 3 with the following simple commands:
 ```
@@ -47,8 +49,7 @@ If you simply want access to a DUNE DAQ software release (its executables, etc.)
 ```sh
 dbt-setup-release <release> # dunedaq-v3.2.2 is the latest frozen release as of Feb-10-2023
 ```
-
-Instead of a frozen release you can also set up nightly releases, candidate releases or test releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `rc-v3.2.1-2` you can do:
+Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. However, instead of a frozen release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `rc-v3.2.1-2` you can do:
 ```
 dbt-setup-release -b candidate rc-v3.2.1-2
 ```
@@ -82,7 +83,7 @@ dbt-create [-i/--install-pyvenv] -b candidate <candidate release> <name of work 
 ```
 ...where to see all available candidate releases, run `dbt-create -l -b candidate`.
 
-To build against a test release, simply replace `candidate` above with `test`. And to build against a frozen release, you don't need the `-b <release type>` argument at all. You can simply do:
+And to build against a frozen release (not recommended, as the codebase changes fairly rapidly), you don't need the `-b <release type>` argument at all. You can simply do:
 ```
 dbt-create [-i/--install-pyvenv] <frozen release> <name of work area subdirectory> 
 ```
@@ -237,7 +238,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Feb 10 09:43:50 2023 -0600_
+_Date: Fri Feb 17 12:28:38 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
