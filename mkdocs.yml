@@ -124,17 +124,40 @@ nav:
           - README.md
        - Toolset:
           - daq-assettools:
+             - About daq-assettools: packages/daq-assettools/README.md
           - daq-buildtools:
+             - About daq-buildtools: packages/daq-buildtools/README.md
           - daq-cmake:
+             - About daq-cmake: packages/daq-cmake/README.md
           - daq-release:
+             - About daq-release: packages/daq-release/README.md
+             - packages/daq-release/add_modules_to_pypi_repo.md
+             - packages/daq-release/ci_github_action.md
+             - packages/daq-release/create_release_spack.md
+             - packages/daq-release/development_workflow_gitflow.md
+             - packages/daq-release/feature_branch_ci_build.md
+             - packages/daq-release/publish_to_cvmfs.md
+             - packages/daq-release/slides.md
+             - packages/daq-release/team_repos.md
           - daq-systemtest:
+             - About daq-systemtest: packages/daq-systemtest/README.md
+             - packages/daq-systemtest/config/emulated_systems/README.md
+             - packages/daq-systemtest/config/hd_coldbox_tests/README.md
+             - packages/daq-systemtest/config/long_window_readout/README.md
+             - packages/daq-systemtest/integtest/README.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
           - styleguide:
              - About styleguide: packages/styleguide/README.md
        - Core:   
           - appfwk:
+             - About appfwk: packages/appfwk/README.md
+             - packages/appfwk/Daq-Application.md
+             - packages/appfwk/schema/README.md
           - cmdlib:
+             - About cmdlib: packages/cmdlib/README.md
+             - packages/cmdlib/Home.md
+             - packages/cmdlib/User-Guide.md
           - ers:
              - About ers: packages/ers/README.md
           - logging:
@@ -145,10 +168,30 @@ nav:
              - packages/utilities/WorkerThread-Usage-Notes.md
        - Readout:
           - daqdataformats:
+             - About daqdataformats: packages/daqdataformats/README.md
+             - packages/daqdataformats/ComponentRequestV0.md
+             - packages/daqdataformats/ComponentRequestV1.md
+             - packages/daqdataformats/ComponentRequestV2.md
+             - packages/daqdataformats/DataFormatNotes.md
+             - packages/daqdataformats/FragmentHeaderV1.md
+             - packages/daqdataformats/FragmentHeaderV2.md
+             - packages/daqdataformats/FragmentHeaderV3.md
+             - packages/daqdataformats/FragmentHeaderV4.md
+             - packages/daqdataformats/GeoIDV0.md
+             - packages/daqdataformats/GeoIDV1.md
+             - packages/daqdataformats/SourceIDV2.md
+             - packages/daqdataformats/TriggerRecordHeaderDataV1.md
+             - packages/daqdataformats/TriggerRecordHeaderDataV2.md
+             - packages/daqdataformats/TriggerRecordHeaderDataV3.md
           - detchannelmaps:
+             - About detchannelmaps: packages/detchannelmaps/README.md
           - detdataformats:
+             - About detdataformats: packages/detdataformats/README.md
+             - packages/detdataformats/include/detdataformats/trigger/README.md
           - dtpcontrols:
+             - About dtpcontrols: packages/dtpcontrols/README.md
           - dtpctrllibs:
+             - About dtpctrllibs: packages/dtpctrllibs/README.md
           - fdreadoutlibs:
              - About fdreadoutlibs: packages/fdreadoutlibs/README.md
           - flxlibs:
@@ -175,6 +218,12 @@ nav:
              - packages/wibmod/src/wibmod/WIB1/README.md
        - Control:
           - daqconf:
+             - About daqconf: packages/daqconf/README.md
+             - packages/daqconf/ConfigurationsForCasualUsers.md
+             - packages/daqconf/InstructionsForCasualUsers.md
+             - packages/daqconf/MigratingToNewConfgen.md
+             - packages/daqconf/pytest/README.md
+             - packages/daqconf/UpdatedIOManagerAPI.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
              - packages/nanorc/FAQ.md
@@ -186,7 +235,12 @@ nav:
              - packages/restcmd/scripts/README.md
        - Dataflow (logical):
           - dfmessages:
+             - About dfmessages: packages/dfmessages/README.md
           - dfmodules:
+             - About dfmodules: packages/dfmodules/README.md
+             - packages/dfmodules/integtest/README.md
+             - packages/dfmodules/python/dfmodules/tpset_demo/README.md
+             - packages/dfmodules/TRB_metrics.md
           - hdf5libs:
              - About hdf5libs: packages/hdf5libs/README.md
              - packages/hdf5libs/V3FileFormatInterfaceChanges.md
@@ -211,6 +265,7 @@ nav:
              - About serialization: packages/serialization/README.md
        - Monitoring:
           - dqm:
+             - About dqm: packages/dqm/README.md
           - erskafka:
              - About erskafka: packages/erskafka/README.md
           - kafkaopmon:
