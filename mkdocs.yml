@@ -257,6 +257,7 @@ nav:
              - About iomanager: packages/iomanager/README.md
              - packages/iomanager/NetworkManager.md
              - packages/iomanager/Queue.md
+             - packages/iomanager/Test-Applications.md
              - packages/iomanager/Updating.md
              - packages/iomanager/Using-dynamic-connection-names.md
           - ipm:
