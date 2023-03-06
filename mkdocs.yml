@@ -136,6 +136,7 @@ nav:
              - packages/daq-release/create_release_spack.md
              - packages/daq-release/development_workflow_gitflow.md
              - packages/daq-release/feature_branch_ci_build.md
+             - packages/daq-release/nd_development_workflow_gitflow.md
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
              - packages/daq-release/team_repos.md
