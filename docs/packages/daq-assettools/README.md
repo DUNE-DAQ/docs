@@ -191,6 +191,72 @@ optional arguments:
                         replica URI (default: None)
 ```
 
+### Publishing changes to cvmfs
+
+Publishing changes to cvmfs can be done via the following steps:
+
+
+
+1. Prepare changes in a local mirror of the `assets` directory in cvmfs repository;
+
+
+2. On cvmfs publisher node, open a cvmfs transaction, sync the `assets` directory in the repo to the local mirror with new changes, and publish the changes.
+
+The following code snippet shows a real-case example of adding a new file to the database, and "retire" a previous file.
+
+#### Prepare changes in a local "assets" mirror
+
+```bash
+# Prepare the changes in a local mirror of "assets"
+
+$ rsync -vlprt /cvmfs/dunedaq.opensciencegrid.org/assets .
+$ cd assets
+
+# Inside a dunedaq environment (to have access to the asset-tools module)
+
+$ source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
+$ setup_dbt latest
+$ dbt-setup-release -n last_successful
+
+# Make changes to the local assets mirror
+# Specify the db file path with `--db-file` option so that the changes goes to the local mirror;
+# checksum and repllica-uri can be automatically calculated, so they are not needed with `assets-add`.
+
+## Adding a new file
+
+$ cd ./assets
+$ assets-add -s /nfs/home/glehmann/tdeframes.bin --db-file ./dunedaq-asset-db.sqlite -n tdeframes.bin -f binary --status valid --subsystem readout --label TDE16 --description "ProtoWIB frames converted to TDE16 frames, using the original frames.bin file, and the file converter from rawdatautils" ass
+
+
+## Mark an existing file as "expired"
+
+$ assets-update --db-file ./dunedaq-asset-db.sqlite -c a0ddae8343e82ba1a3668c5aea20f3d2 --json-string '{"status": "expired"}'
+
+## This is equivalent to the line below
+
+$ assets-retire --db-file ./dunedaq-asset-db.sqlite -c a0ddae8343e82ba1a3668c5aea20f3d2
+
+```
+
+#### Publish changes to cvmfs
+
+```bash
+# log on to the cvmfs publisher node
+
+$ ssh cvmfsdunedaq@oasiscfs01.fnal.gov
+
+# open a cvmfs transaction
+
+$ cvmfs_server transaction dunedaq.opensciencegrid.org
+
+# sync changes from the local mirror to cvmfs publisher node
+
+$ rsync -vlprt <user@node_with_local_assets_mirror>:<path_to_local_assets_mirror> /cvmfs/dunedaq.opensciencegrid.org
+
+$ cvmfs_server publish dunedaq.opensciencegrid.org
+
+```
+
 
 -----
 
@@ -200,7 +266,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Tue Feb 14 11:35:00 2023 -0600_
+_Date: Thu Mar 23 11:29:22 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-assettools/issues](https://github.com/DUNE-DAQ/daq-assettools/issues)_
 </font>
