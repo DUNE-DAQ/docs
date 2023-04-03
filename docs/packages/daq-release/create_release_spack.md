@@ -68,7 +68,7 @@ It's worth to do several checks before starting any test builds. These checks in
 ## Building candidate releases
 
 
-* Once the release configuration is ready, one can start the CI build for candidate releases. The build can be started via GitHub API or webUI. Go to the "Actions" tab of `daq-release` repo on GitHub, and select "Build candidate release" in the list of workflows in the workflows tab, click the "run workflow" button. A drop-down menu will show up. Put in the release name for the release cycle (e..g `dunedaq-v3.2.2` for locating the release configuration in the repo) and the candidate release name for this build (e.g. `rc-v3.2.2-1`, `-1` indicates the first build of the candidate release), and then click "Run workflow" to start the build. The release name need to have less than 12 characters to make some spack path within its limit of characters.
+* Once the release configuration is ready, one can start the CI build for candidate releases. The build can be started via GitHub API or webUI. Go to the "Actions" tab of `daq-release` repo on GitHub, and select "Build candidate release" in the list of workflows in the workflows tab, click the "run workflow" button. A drop-down menu will show up. Put in the release name for the release cycle (e..g `dunedaq-v3.2.2` for locating the release configuration in the repo) and the candidate release name for this build (e.g. `rc-v3.2.2-1`, `-1` indicates the first build of the candidate release. **Note that there is a limit of 127 characters in spack's path names. `rc-dunedaq-v3.2.2-1` combined with cvmfs path is likely too long. Omit `dunedaq` in this case**), and then click "Run workflow" to start the build. The release name need to have less than 12 characters to make some spack path within its limit of characters.
 
 * Once the build is completed successfully, verify if the same version tags shown in the CI log match those in the tag collector spreadsheet;
 
@@ -125,7 +125,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Thu Feb 16 09:26:24 2023 -0600_
+_Date: Mon Apr 3 12:29:56 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
