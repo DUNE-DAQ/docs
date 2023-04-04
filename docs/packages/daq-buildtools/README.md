@@ -33,8 +33,8 @@ setup_dbt dunedaq-v4.0.0  # dunedaq-v4.0.0 is the latest daq-buildtools version 
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.0/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.0/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.1/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.1/scripts -> PATH
 DBT setuptools loaded
 ```
 If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create`, `dbt-build`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. 
@@ -238,7 +238,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Apr 4 12:13:24 2023 -0500_
+_Date: Tue Apr 4 12:31:42 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
