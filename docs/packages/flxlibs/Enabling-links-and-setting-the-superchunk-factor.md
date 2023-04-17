@@ -13,24 +13,22 @@ In order to enable links, the corresponding registers need to be set: `DECODING_
 
 ```
 echo Disabling every link on SLR 0...
-for i in $(seq 0 9); do flx-config -d 0 set DECODING_LINK0${i}_EGROUP0_CTRL_EPATH_ENA=0; done;
-for i in $(seq 10 11); do flx-config -d 0 set DECODING_LINK${i}_EGROUP0_CTRL_EPATH_ENA=0; done;
+for i in {00..11}; do flx-config -d 0 set DECODING_LINK${i}_EGROUP0_CTRL_EPATH_ENA=0; done;
 
 echo Disabling every link on SLR 1...
-for i in $(seq 0 9); do flx-config -d 1 set DECODING_LINK0${i}_EGROUP0_CTRL_EPATH_ENA=0; done;
-for i in $(seq 10 11); do flx-config -d 1 set DECODING_LINK${i}_EGROUP0_CTRL_EPATH_ENA=0; done;
+for i in {00..11}; do flx-config -d 1 set DECODING_LINK${i}_EGROUP0_CTRL_EPATH_ENA=0; done;
 
 echo Enable 5-5 links on the 2 SLRs
-for i in $(seq 0 4); do flx-config -d 0 set DECODING_LINK0${i}_EGROUP0_CTRL_EPATH_ENA=1; done;
-for i in $(seq 0 4); do flx-config -d 1 set DECODING_LINK0${i}_EGROUP0_CTRL_EPATH_ENA=1; done;
+for i in {00..04}; do flx-config -d 0 set DECODING_LINK${i}_EGROUP0_CTRL_EPATH_ENA=1; done;
+for i in {00..04}; do flx-config -d 1 set DECODING_LINK${i}_EGROUP0_CTRL_EPATH_ENA=1; done;
 
 ```
 If two cards are installed in the host, repeat those operations also using the commandline options -d2 and -d3!
 ### Set SuperChunk factors per link
 Be careful, as these register are SuperLogic Region (SLR) based! To change the register values for factor 12, for both SLRs' first 10 virtual links, run the following:
 ```
-for i in $(seq 0 9); do flx-config -d 0 set SUPER_CHUNK_FACTOR_LINK_0${i}=0x0c; done;
-for i in $(seq 0 9); do flx-config -d 1 set SUPER_CHUNK_FACTOR_LINK_0${i}=0x0c; done;
+for i in {00 11}; do flx-config -d 0 set SUPER_CHUNK_FACTOR_LINK_${i}=0x0c; done;
+for i in {00 11}; do flx-config -d 1 set SUPER_CHUNK_FACTOR_LINK_${i}=0x0c; done;
 
 ```
 If two cards are installed in the host, repeat those operations also using the commandline options -d2 and -d3!
@@ -51,7 +49,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: glehmannmiotto_
 
-_Date: Tue Nov 8 10:22:50 2022 +0100_
+_Date: Thu Jan 12 16:46:55 2023 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>

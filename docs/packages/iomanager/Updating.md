@@ -65,11 +65,11 @@ For modules which loop over `ModInit::qinfos`, they should now loop over `ModIni
  auto ini = init_data.get<appfwk::app::ModInit>();
   iomanager::IOManager iom;
   for (const auto& cr : ini.conn_refs) {
-    if (cr.dir != iomanager::connection::Direction::kOutput) {
+    if (cr.name.find("output") == std::string::npos) {
       continue; // skip all but "output" direction
     }
     try {
-      outputQueues_.emplace_back(IOManager::get()->get_sender<IntList>(cr));
+      outputQueues_.emplace_back(IOManager::get()->get_sender<IntList>(cr.uid));
     } catch (const ers::Issue& excpt) {
       throw InvalidQueueFatalError(ERS_HERE, get_name(), cr.name, excpt);
     }
@@ -125,7 +125,7 @@ Unfortunately, the signature changes are not easily replaceable with `sed`.
 
 * `#include "appfwk/DAQSink.hpp` becomes `#include "iomanager/Sender.hpp"`
 
-* `queue_.reset(new DAQSink<T>("name"));` must become `queue_ = IOManager::get()->get_sender<T>(ref);`
+* `queue_.reset(new DAQSink<T>("name"));` must become `queue_ = IOManager::get()->get_sender<T>(uid);`
 
 * Instead of `std::unique_ptr<DAQSink<T>>`, use `std::shared_ptr<iomanager::SenderConcept<T>>`
 
@@ -136,7 +136,7 @@ Unfortunately, the signature changes are not easily replaceable with `sed`.
 
 * `#include "appfwk/DAQSource.hpp` becomes `#include "iomanager/Receiver.hpp"`
 
-* `queue_.reset(new DAQSource<T>("name"));` must become `queue_ = IOManager::get()->get_receiver<T>(ref);`
+* `queue_.reset(new DAQSource<T>("name"));` must become `queue_ = IOManager::get()->get_receiver<T>(uid);`
 
 * Instead of `std::unique_ptr<DAQSource<T>>`, use `std::shared_ptr<iomanager::ReceiverConcept<T>>`
 
@@ -183,11 +183,7 @@ try {
 
   * `iomanager::IOManager::get()` -> `get_iomanager()`
 
-  * `iomanager::IOManager::get()->get_sender<T>(ref)` -> `get_iom_sender<T>(ref)`
-
   * `iomanager::IOManager::get()->get_sender<T>(uid)` -> `get_iom_sender<T>(uid)`
-
-  * `iomanager::IOManager::get()->get_receiver<T>(ref)` -> `get_iom_receiver<T>(ref)`
 
   * `iomanager::IOManager::get()->get_receiver<T>(uid)` -> `get_iom_receiver<T>(uid)`
 
@@ -199,7 +195,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Wed May 4 10:55:30 2022 -0500_
+_Date: Wed Oct 19 13:36:05 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/iomanager/issues](https://github.com/DUNE-DAQ/iomanager/issues)_
 </font>

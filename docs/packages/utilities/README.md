@@ -9,6 +9,9 @@
 
 * [`WorkerThread`](WorkerThread-Usage-Notes/) -- Wrapper around a `std::thread` for long-lived tasks (e.g. DAQModule work loops) 
 
+### API Diagram
+
+![Class Diagrams](https://github.com/DUNE-DAQ/utilities/raw/develop/docs/utilities.png)
 
 -----
 
@@ -16,9 +19,9 @@
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: Eric Flumerfelt_
 
-_Date: Fri Mar 25 16:42:21 2022 -0500_
+_Date: Thu Dec 8 13:55:27 2022 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/utilities/issues](https://github.com/DUNE-DAQ/utilities/issues)_
 </font>

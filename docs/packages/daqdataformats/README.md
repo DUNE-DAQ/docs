@@ -2,7 +2,6 @@
 
 - This repository contains raw data bitfields and utilities used to decode them
 - This repository also contains classes which are generated within the DAQ and intended to be persisted to disk and read by Offline code.
-- Class Diagram: ![From dune_common_data_formats.dia](https://github.com/DUNE-DAQ/daqdataformats/raw/develop/docs/dune_common_data_formats.png)
 
 The following are brief descriptions of the various structs in this package, including links to fuller, field-by-field descriptions:
 
@@ -40,6 +39,19 @@ The following are brief descriptions of the various structs in this package, inc
 --------------
 
 
+### API Diagrams
+
+Common dataformat classes:
+![Class Diagrams](https://github.com/DUNE-DAQ/daqdataformats/raw/develop/docs/daqdataformats-common.png)
+
+Fragment classes:
+![Class Diagrams](https://github.com/DUNE-DAQ/daqdataformats/raw/develop/docs/daqdataformats-fragment.png)
+
+TriggerRecord classes:
+![Class Diagrams](https://github.com/DUNE-DAQ/daqdataformats/raw/develop/docs/daqdataformats-record.png)
+
+TimeSlice classes:
+![Class Diagrams](https://github.com/DUNE-DAQ/daqdataformats/raw/develop/docs/daqdataformats-slice.png)
 
 -----
 
@@ -47,9 +59,9 @@ The following are brief descriptions of the various structs in this package, inc
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Eric Flumerfelt_
 
-_Date: Mon Jul 11 15:41:08 2022 -0500_
+_Date: Thu Dec 8 13:52:18 2022 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqdataformats/issues](https://github.com/DUNE-DAQ/daqdataformats/issues)_
 </font>

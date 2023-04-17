@@ -22,7 +22,7 @@ Next we generate some sample system configurations and use _[nanorc](https://dun
 The tools to generate these configurations consist of a single Python script that generates DAQ system configurations with different characteristics based on the configuration file given to the script. This script is `daqconf/scripts/daqconf_multiru_gen`. It uses `daqconf/schema/daqconf/confgen.jsonnet` to define the format for configuration JSON files.
 The configuration generation files under the `daqconf/python/daqconf/apps` directory were developed to work with the _nanorc_ package, which itself can be seen as a basic Finite State Machine that sends commands and drives the DAQ system.
 
-Here is an example command line which uses the provided JSON file that has all of the default values populated (so it is equivalent to running without any options at all!). Note for the reader that it scrolls horizontally. The command below assumes you also have a hardware map file available, e.g. [this basic example](https://raw.githubusercontent.com/DUNE-DAQ/daq-systemtest/develop/config/default_system_HardwareMap.txt). Further details on hardware map files can be found at the bottom of this page. 
+Here is an example command line which uses the provided JSON file that has all of the default values populated (so it is equivalent to running without any options at all!). Note for the reader that it scrolls horizontally. The command below assumes you also have a hardware map file available, e.g. [this basic example](https://raw.githubusercontent.com/DUNE-DAQ/daq-systemtest/develop/config/default_system/default_system_HardwareMap.txt). Further details on hardware map files can be found at the bottom of this page. 
 ```
 daqconf_multiru_gen --hardware-map-file <your hardware map file> --config daqconf/config/daqconf_full_config.json daq_fake00
 ```
@@ -96,7 +96,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: jcfreeman2_
 
-_Date: Tue Oct 4 12:32:38 2022 -0500_
+_Date: Sun Oct 16 18:13:27 2022 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>

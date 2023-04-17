@@ -2,7 +2,7 @@
 
 Poor man's Run Control for DUNE DAQ applications
 
-Pssst! Check out the FAQ [here](FAQ.md)!
+If you're already familiar with nanorc and wish to troubleshoot a problem, skip to the FAQ [here](FAQ.md)
 
 ## How to run me
 
@@ -16,10 +16,19 @@ _If you want to run with Kubernetes support, the "Kubernetes support" section is
 
 First, set up a working area according to [the daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/).
 
-Get the example data file:
+Information can be found in `daqconf` [wiki](https://github.com/DUNE-DAQ/daqconf/wiki), or in [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/daqconf/InstructionsForCasualUsers/), following is to generate a configuration and run nanorc only.
+
+Get the example data file (TODO: asset manager and configuration - likely to change for v4.0.0):
 
 ```bash
 curl -o frames.bin -O https://cernbox.cern.ch/index.php/s/0XzhExSIMQJUsp0/download
+```
+
+Generate a hardware map, with the name `HardwareMap.txt`:
+```text
+# DRO_SourceID DetLink DetSlot DetCrate DetID DRO_Host DRO_Card DRO_SLR DRO_Link 
+100 0 4 6 3 localhost 0 0 0
+101 1 4 6 3 localhost 0 0 1
 ```
 
 Generate a configuration:
@@ -287,16 +296,33 @@ From here, using nanorc is just about the same as in the terminal:
 
 **Note that this information will also be shown as output to the terminal.**
 
+## How to run the TUI
+
+To use the TUI (Terminal User Interface), add the --tui option when running nanorc. No proxy is required in this case.
+
+![TUI](TUI.png)
+
+Again, using nanorc is similar to the terminal:
+
+
+* Transitions between states are done with the buttons in the top right: press I on the keyboard to toggle whether optional inputs are taken.
+
+* Logs are displayed in the bottom right, and can be searched by typing in the box above them.
+
 ## Kubernetes support
 
 This page describes the functionality which is supported within Kubernetes in v3.1.0.
 
 ### Requirements
 Before you go off and try this, you at least need to have:
- - A k8s cluster running. To check that this is the case, you can head to the dashboard (on the NP04 cluster, that's [here](http://np04-srv-015:31001/#/workloads?namespace=default), after you have setup a SOCKS proxy to lxplus).
- - All the nodes being able to access `/cvmfs`.
- - The configuration service running in the cluster. To check that, you can head to the configuration service URL (at NP04, it's [here](http://np04-srv-015:31011/)) and making sure that you see text "DAQLing Configuration Management Service v1.0.0".
- - The dunedaq images on which you want to run available from all the nodes. The simplest way to do that is to have your image on dockerhub (at NP04, we have a repository [here](np04docker.cern.ch), but at the time this is being written, on the 2nd Aug 2022, it doesn't work).
+
+* A k8s cluster running. To check that this is the case, you can head to the dashboard (on the NP04 cluster, that's [here](http://np04-srv-015:31001/#/workloads?namespace=default), after you have setup a SOCKS proxy to lxplus).
+
+* All the nodes being able to access `/cvmfs`.
+
+* The configuration service running in the cluster. To check that, you can head to the configuration service URL (at NP04, it's [here](http://np04-srv-015:31011/)) and making sure that you see text "DAQLing Configuration Management Service v1.0.0".
+
+* The dunedaq images on which you want to run available from all the nodes. The simplest way to do that is to have your image on dockerhub (at NP04, we have a repository [here](np04docker.cern.ch), but at the time this is being written, on the 2nd Aug 2022, it doesn't work).
 
 All of this is available on the NP04 cluster.
 
@@ -363,8 +389,10 @@ Current nodes list (on the 2nd Aug 2022):
 ### Getting started
 Log on to the np04 cluster and follow the instructions in [here](https://twiki.cern.ch/twiki/bin/view/CENF/NP04k8s).
 2 important notes:
- - You **do not** need to be on `np04-srv-015` to use nanorc and K8s. But you will need to have the correct `KUBECONFIG` properly set as described in the previous link.
- - You **do not** need to create your namespace. That is handled automatically by nanorc.
+
+* You **do not** need to be on `np04-srv-015` to use nanorc and K8s. But you will need to have the correct `KUBECONFIG` properly set as described in the previous link.
+
+* You **do not** need to create your namespace. That is handled automatically by nanorc.
 
 #### Setup the nightly/release
 Using the instructions at this [link](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/#setup-of-daq-buildtools), set up a work area or a release.
@@ -526,9 +554,9 @@ username-image-name        N22-06-27   3e53688480dc   9 hours ago    1.79GB
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: John Freeman_
 
-_Date: Thu Oct 27 12:17:07 2022 +0200_
+_Date: Tue Apr 11 11:28:18 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>

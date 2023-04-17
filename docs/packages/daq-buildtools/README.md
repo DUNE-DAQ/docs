@@ -1,5 +1,5 @@
 
-_JCF: This document was last edited Feb-10-2023_
+_JCF: This document was last edited Apr-04-2023_
 
 # DUNE DAQ Buildtools
 
@@ -7,12 +7,14 @@ _JCF: This document was last edited Feb-10-2023_
 
 ## System requirements
 
-To get set up, you'll need access to the cvmfs Spack area
-`/cvmfs/dunedaq-development.opensciencegrid.org/spack-nightly` as is
-the case, e.g., on the lxplus machines at CERN. If you've been doing
-your own Spack work on the system in question, you may also want to
-back up (rename) your existing `~/.spack` directory to give Spack a
-clean slate to start from in these instructions.
+To get set up, you'll need access to the cvmfs Spack areas:
+`/cvmfs/dunedaq.opensciencegrid.org/spack/releases` for frozen DUNE
+DAQ releases, `/cvmfs/dunedaq-development.opensciencegrid.org/nightly`
+for nightly releases, etc. This is the case, e.g., on the lxplus
+machines at CERN. If you've been doing your own Spack work on the
+system in question, you may also want to back up (rename) your
+existing `~/.spack` directory to give Spack a clean slate to start
+from in these instructions.
 
 You'll also want `python` to be version 3; to find out whether this is the case, run `python --version`. If it isn't, then you can switch over to Python 3 with the following simple commands:
 ```
@@ -26,13 +28,13 @@ spack load python@3.8.3%gcc@8.2.0
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt dunedaq-v3.2.2  # dunedaq-v3.2.2 is the latest daq-buildtools version as of Feb-10-2023
+setup_dbt dunedaq-v4.0.0  # dunedaq-v4.0.0 is the latest daq-buildtools version as of Apr-04-2023
 ```
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.0/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.0/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.1/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.1/scripts -> PATH
 DBT setuptools loaded
 ```
 If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create`, `dbt-build`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. 
@@ -47,10 +49,9 @@ If you simply want access to a DUNE DAQ software release (its executables, etc.)
 ```sh
 dbt-setup-release <release> # dunedaq-v3.2.2 is the latest frozen release as of Feb-10-2023
 ```
-
-Instead of a frozen release you can also set up nightly releases, candidate releases or test releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `rc-v3.2.1-2` you can do:
+Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. However, instead of a frozen release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `rc-v4.0.0-1` you can do:
 ```
-dbt-setup-release -b candidate rc-v3.2.1-2
+dbt-setup-release -b candidate rc-v4.0.0-1
 ```
 
 `dbt-setup-release` will set up both the external packages and DAQ packages, as well as activate the Python virtual environment. Note that the Python virtual environment activated here is read-only. 
@@ -78,11 +79,11 @@ To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l 
 
 If you want to build against a candidate release, run:
 ```sh
-dbt-create [-i/--install-pyvenv] -b candidate <candidate release> <name of work area subdirectory> # E.g., rc-v3.2.1-1 as of Nov-11-2022.
+dbt-create [-i/--install-pyvenv] -b candidate <candidate release> <name of work area subdirectory> # E.g., rc-v4.0.0-1 as of Apr-04-2023.
 ```
 ...where to see all available candidate releases, run `dbt-create -l -b candidate`.
 
-To build against a test release, simply replace `candidate` above with `test`. And to build against a frozen release, you don't need the `-b <release type>` argument at all. You can simply do:
+And to build against a frozen release (not recommended, as the codebase changes fairly rapidly), you don't need the `-b <release type>` argument at all. You can simply do:
 ```
 dbt-create [-i/--install-pyvenv] <frozen release> <name of work area subdirectory> 
 ```
@@ -153,7 +154,7 @@ To check for deviations from the coding rules described in the [DUNE C++ Style G
 ```
 dbt-build --lint
 ```
-...though be aware that some guideline violations (e.g., having a function which tries to do unrelated things) can't be picked up by the automated linter. (_n.b.: As of Nov-11-2022, the `llvm` package needed for linting has been removed from the environment. It's possible by the time you read this that the issue has been fixed_) Also note that you can use `dbt-clang-format.sh` in order to automatically fix whitespace issues in your code; type it at the command line without arguments to learn how to use it.
+...though be aware that some guideline violations (e.g., having a function which tries to do unrelated things) can't be picked up by the automated linter. Also note that you can use `dbt-clang-format.sh` in order to automatically fix whitespace issues in your code; type it at the command line without arguments to learn how to use it.
 
 Note that unlike the other options to `dbt-build`, `--lint` and `--unittest` are both capable of taking an optional argument, which is the name of a specific repo in your work area which you'd like to either lint or run unit tests for. This can be useful if you're focusing on developing one of several repos in your work area; e.g. `dbt-build --lint <repo you're working on>`. With `--lint` you can get even more fine grained by passing it the name of a single file in your repository area; either the absolute path for the file or its path relative to the directory you ran `dbt-build` from will work. 
 
@@ -237,7 +238,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Feb 10 09:43:50 2023 -0600_
+_Date: Tue Apr 4 12:31:42 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>

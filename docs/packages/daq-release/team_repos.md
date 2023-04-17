@@ -112,7 +112,7 @@
 
 ## trigger
 
-* Maintainer(s): Jim Brooke
+* Maintainer(s): Josh Klein
 
 * Repositories with write access:
   - daq-systemtest
@@ -162,7 +162,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Mon Jan 30 08:25:15 2023 -0600_
+_Date: Fri Mar 10 13:25:15 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

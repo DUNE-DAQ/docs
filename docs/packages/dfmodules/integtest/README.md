@@ -1,14 +1,10 @@
 # 21-Jul-2022, KAB: notes on some initial integrationtests...
 
-Here is a command for fetching a file that has WIB data in it (to be used in generating emulated data):
+Here is a sample command for invoking a test (feel free to keep or drop the options in brackets, as you prefer):
 
-
-* `curl -o frames.bin https://cernbox.cern.ch/index.php/s/0XzhExSIMQJUsp0/download`
-
-Here is a sample command for invoking a test:
-
-
-* `pytest -s minimal_system_quick_test.py [--frame-file $PWD/frames.bin] [--nanorc-option partition-number 3] [--nanorc-option timeout 300]`
+```
+pytest -s minimal_system_quick_test.py [--nanorc-option partition-number 3] [--nanorc-option timeout 300]
+```
 
 For reference, here are the ideas behind the existing tests:
 
@@ -65,9 +61,9 @@ Not ready for general use:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Kurt Biery_
+_Author: Pierre Lasorak_
 
-_Date: Wed Oct 5 14:50:57 2022 -0500_
+_Date: Tue Feb 28 15:58:49 2023 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dfmodules/issues](https://github.com/DUNE-DAQ/dfmodules/issues)_
 </font>

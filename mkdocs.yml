@@ -136,6 +136,8 @@ nav:
              - packages/daq-release/create_release_spack.md
              - packages/daq-release/development_workflow_gitflow.md
              - packages/daq-release/feature_branch_ci_build.md
+             - packages/daq-release/install_additional_external_pkgs.md
+             - packages/daq-release/nd_development_workflow_gitflow.md
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
              - packages/daq-release/team_repos.md
@@ -223,6 +225,7 @@ nav:
              - packages/daqconf/InstructionsForCasualUsers.md
              - packages/daqconf/MigratingToNewConfgen.md
              - packages/daqconf/pytest/README.md
+             - packages/daqconf/UpdatedIOManagerAPI.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
              - packages/nanorc/FAQ.md
@@ -256,7 +259,9 @@ nav:
              - About iomanager: packages/iomanager/README.md
              - packages/iomanager/NetworkManager.md
              - packages/iomanager/Queue.md
+             - packages/iomanager/Test-Applications.md
              - packages/iomanager/Updating.md
+             - packages/iomanager/Using-dynamic-connection-names.md
           - ipm:
              - About ipm: packages/ipm/README.md
           - serialization:
