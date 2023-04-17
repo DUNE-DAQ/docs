@@ -2,7 +2,7 @@
 
 Poor man's Run Control for DUNE DAQ applications
 
-Pssst! Check out the FAQ [here](FAQ.md)!
+If you're already familiar with nanorc and wish to troubleshoot a problem, skip to the FAQ [here](FAQ.md)
 
 ## How to run me
 
@@ -554,9 +554,9 @@ username-image-name        N22-06-27   3e53688480dc   9 hours ago    1.79GB
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: John Freeman_
 
-_Date: Mon Mar 27 18:22:44 2023 +0200_
+_Date: Tue Apr 11 11:28:18 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>
