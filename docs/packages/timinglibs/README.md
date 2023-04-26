@@ -131,7 +131,7 @@ A DUNE DAQ module for reading `HSIEvent` from `HSI` hardware. The module periodi
 In the absence of real `HSI` hardware, this module can be used to emululate an `HSI`, and act as a source of `HSIEvent`s. The timestamp of the emulated `HSIEvent`s is obtained from timestamp estimates provided by `TimestampEstimator`. The distribution of signals in the `HSIEvent` bitmap along with their rate are configurable via the following parameters.
 
 
-* `clock_frequency`: Assumed clock frequency in Hz (for current-timestamp estimation); default: `50000000`
+* `clock_frequency`: Assumed clock frequency in Hz (for current-timestamp estimation); default: `62500000`
 
 
 * `timestamp_offset`: Offset for HSIEvent timestamps in units of clock ticks. Positive offset increases timestamp estimate; default: `0`
@@ -278,9 +278,9 @@ The `timinglibs/python/timinglibs/timing_app_confgen.py` script generates a `jso
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Stoyan Trilov_
+_Author: Kurt Biery_
 
-_Date: Thu May 27 17:21:47 2021 +0100_
+_Date: Wed Apr 19 10:29:13 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/timinglibs/issues](https://github.com/DUNE-DAQ/timinglibs/issues)_
 </font>
