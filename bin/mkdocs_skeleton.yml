@@ -142,9 +142,11 @@ nav:
           - detdataformats:
           - dtpcontrols:
           - dtpctrllibs:
+          - fddetdataformats:
           - fdreadoutlibs:
           - flxlibs:
           - lbrulibs:
+          - nddetdataformats:
           - readoutlibs:
           - readoutmodules:
           - wibmod:

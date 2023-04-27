@@ -193,6 +193,8 @@ nav:
              - About dtpcontrols: packages/dtpcontrols/README.md
           - dtpctrllibs:
              - About dtpctrllibs: packages/dtpctrllibs/README.md
+          - fddetdataformats:
+             - About fddetdataformats: packages/fddetdataformats/README.md
           - fdreadoutlibs:
              - About fdreadoutlibs: packages/fdreadoutlibs/README.md
           - flxlibs:
@@ -207,6 +209,8 @@ nav:
           - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
              - packages/lbrulibs/socket-implementation.md
+          - nddetdataformats:
+             - About nddetdataformats: packages/nddetdataformats/README.md
           - readoutlibs:
              - About readoutlibs: packages/readoutlibs/README.md
              - packages/readoutlibs/Directory-structure.md

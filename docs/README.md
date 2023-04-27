@@ -44,17 +44,21 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [detchannelmaps](packages/detchannelmaps/README.md) _Channel maps for the detectors_
 
-[detdataformats](packages/detdataformats/README.md) _Data formats for the detectors_
+[detdataformats](packages/detdataformats/README.md) _General-purpose data formats and related tools_
 
 [dtpctrllibs](packages/dtpctrllibs/README.md) _DAQ modules for controlling Trigger Primitive generation firmware_
 
 [dtpcontrols](packages/dtpcontrols/README.md) _Python tools for control of the Trigger Primitive firmware_
+
+[fddetdataformats](packages/fddetdataformats/README.md) _Bitfields of far detector raw data and related tools_
 
 [fdreadoutlibs](packages/fdreadoutlibs/README.md) _Classes for working with far detector data (WIB, SSP, etc.)_
 
 [flxlibs](packages/flxlibs/README.md) _DAQModules, utilities, and scripts for Upstream FELIX Readout Software_
 
 [lbrulibs](packages/lbrulibs/README.md) _DAQModules, utilities, and scripts for DUNE-ND Upstream DAQ Low Bandwidth Readout Unit_
+
+[nddetdataformats](packages/nddetdataformats/README.md) _Bitfields of near detector raw data and related tools_
 
 [ndreadoutlibs](packages/ndreadoutlibs/README.md) _Classes for working with near detector data (e.g. PACMAN)_
 
