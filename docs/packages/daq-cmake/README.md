@@ -1,5 +1,8 @@
 # daq-cmake
 
+Hopefully [this link](html/index.html) will point you to some Doxygen-generated documentation
+
+
 _JCF, Sep-28-2022: the following daq-cmake documentation assumes you're using (a candidate) dunedaq-v3.2.0 or a recent nightly as it covers the new `create_dunedaq_package` script. For daq-cmake documentation prior to this addition please go [here](https://dune-daq-sw.readthedocs.io/en/v3.1.1/packages/daq-cmake/)_
 
 This package provides CMake support for DUNE-DAQ packages.
