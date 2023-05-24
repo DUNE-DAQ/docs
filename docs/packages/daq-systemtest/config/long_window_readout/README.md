@@ -20,7 +20,7 @@ Here are the steps that I used in my tests:
 
 * make any necessary edits to `long_window_readout.json`
 
-* `daqconf_multiru_gen -c ./long_window_readout.json --hardware-map-file ./long_window_readout_HardwareMap.txt lwr_config`
+* `daqconf_multiru_gen -c ./long_window_readout.json --hardware-map-file ./long_window_readout_DetReadoutMap.json lwr_config`
 
 * `wget https://www.dropbox.com/s/9b1xtkjbkfyakij/frames_wib2.bin`  # if needed
 
@@ -39,9 +39,9 @@ The data is split into multiple files based on the max_file_size parameter that 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: eflumerf_
+_Author: Eric Flumerfelt_
 
-_Date: Wed Oct 12 15:13:30 2022 -0500_
+_Date: Wed May 24 10:31:30 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>

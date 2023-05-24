@@ -85,7 +85,7 @@ multi_df.json (Running two dataflow apps):
 ```
 `daqconf_multiru_gen --config multi_df.json daq_fake02`
 
-9) One of the key options is the `--hardware-map-file`, or `readout.hardware_map_file`, which points the configuration generators to a `detchannelmaps` hardware map. An example of this file is available [here](https://github.com/DUNE-DAQ/detchannelmaps/blob/develop/test/config/TestHardwareMap.txt). This file defines the links that will be active for this configuration. It can also be generated using [this utility from dfmodules](https://github.com/DUNE-DAQ/dfmodules/blob/develop/python/dfmodules/integtest_file_gen.py)
+9) One of the key options is the `--detector-readout-map-file`, or `readout.detector_readout_map_file`, which points the configuration generators to a JSON file describing the readout links in the current configuration. It can be generated using [this utility from daqconf](https://github.com/DUNE-DAQ/daqconf/blob/develop/test/scripts/daqconf_dromap_gen) and edited using [this utility](https://github.com/DUNE-DAQ/daqconf/blob/develop/scripts/dromap_editor).
 
 
 -----
@@ -94,9 +94,9 @@ multi_df.json (Running two dataflow apps):
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: Eric Flumerfelt_
 
-_Date: Sun Oct 16 18:13:27 2022 -0500_
+_Date: Wed May 24 10:18:12 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>

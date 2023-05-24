@@ -9,16 +9,16 @@ Some of them have been verified to work, and some of them are placeholders, for 
 
 The ones that have been demonstrated to work are the following:
 
-* `emulated_wib2_system.json` with `emulated_wib2_system_HardwareMap.txt`
+* `emulated_wib2_system.json` with `emulated_wib2_system_DetReadoutMap.json`
 
-* `emulated_wib2_system_k8s.json` with `emulated_wib2_system_HardwareMap.txt`
+* `emulated_wib2_system_k8s.json` with `emulated_wib2_system_DetReadoutMap.json`
 
 <!--
 Here are sample commands for using them
 
 * make any necessary edits to `long_window_readout.json`
 
-* `daqconf_multiru_gen -c ./long_window_readout.json --hardware-map-file ./long_window_readout_HardwareMap.txt lwr_config`
+* `daqconf_multiru_gen -c ./long_window_readout.json --hardware-map-file ./long_window_readout_DetReadoutMap.json lwr_config`
 
 * `wget https://www.dropbox.com/s/9b1xtkjbkfyakij/frames_wib2.bin`  # if needed
 
@@ -34,9 +34,9 @@ Here are sample commands for using them
 _Last git commit to the markdown source of this page:_
 
 
-_Author: eflumerf_
+_Author: Eric Flumerfelt_
 
-_Date: Wed Oct 12 15:12:55 2022 -0500_
+_Date: Wed May 24 10:31:30 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>

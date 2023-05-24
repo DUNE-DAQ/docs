@@ -226,7 +226,8 @@ nav:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigurationsForCasualUsers.md
              - packages/daqconf/InstructionsForCasualUsers.md
-             - packages/daqconf/MigratingToNewConfgen.md
+             - packages/daqconf/MigratingTov3_2_0Confgen.md
+             - packages/daqconf/MigratingTov4_1_0Confgen.md
              - packages/daqconf/pytest/README.md
              - packages/daqconf/UpdatedIOManagerAPI.md
           - nanorc:
