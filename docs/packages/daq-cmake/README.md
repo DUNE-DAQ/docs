@@ -1,7 +1,5 @@
 # daq-cmake
 
-_JCF, Sep-28-2022: the following daq-cmake documentation assumes you're using (a candidate) dunedaq-v3.2.0 or a recent nightly as it covers the new `create_dunedaq_package` script. For daq-cmake documentation prior to this addition please go [here](https://dune-daq-sw.readthedocs.io/en/v3.1.1/packages/daq-cmake/)_
-
 This package provides CMake support for DUNE-DAQ packages.
 
 The documentation for this package is divided into four parts:
@@ -294,6 +292,37 @@ Public headers for users of the library should go in the project's
 `include/<project name>` directory. Private headers used in the
 library's implementation should be put in the `src/` directory.
 
+### daq_protobuf_codegen:
+Usage:
+```
+daq_protobuf_codegen( <protobuf filename1> ... [DEP_PKGS <package 1> ...] )
+```
+
+Arguments:
+
+
+* `<protobuf filename1> ...`: these arguments are the list of `*.proto` files for protobuf's "protoc" program to process from `<package>/schema/<package>`. Globs also allowed. 
+
+
+* `DEP_PKGS`: if a `*.proto` file given depends on `*.proto files` provided by other DAQ packages, the `DEP_PKGS` argument must contain the list of packages.
+
+Each `*.proto` file will have a C++ header/source file generated as well as a Python file. 
+The names of the generated files are the same as per the [ProtoBuf API](https://protobuf.dev/): `*.pb.h` and `*.pb.cc` for the C++ header and source, respectivelly. 
+The header will be installed in the public include directory. 
+Code can link against the header in the form:
+```C++
+#include "<package>/<file_name>.pb.h"
+```
+The generated python file will be called `*_pb2.py` and will be installed in `lib64/python/<package>`. 
+
+The source file will be built as part of the main package library.
+Its compilation will be done automatically, i.e. there is no need to add `*.pb.cc` in the `daq_add_library` directive of your package: `daq_protobuf_codegen` will suffice. 
+
+Two requirements for calling this function:
+1) You need to call `find_package(Protobuf REQUIRED)` to make the protobuf library available
+2) You also need to call `daq_add_library`, i.e., have a main package-wide library
+
+
 ### daq_add_python_bindings:
 Usage:  
 ```
@@ -369,6 +398,9 @@ etc.). Like daq_add_library, daq_add_unit_test can be provided a
 list of libraries to link against, following the `LINK_LIBRARIES`
 token.
 
+### daq_oks_codegen
+_See [the genconfig documentation](https://github.com/DUNE-DAQ/genconfig/tree/develop#readme)_
+
 ### daq_install
 Usage:  
 ```
@@ -435,9 +467,9 @@ The matching between the schema file name/path and the jsonnet namespace is esse
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: Alessandro Thea_
 
-_Date: Wed Sep 28 13:54:30 2022 -0500_
+_Date: Tue Jun 13 13:44:01 2023 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
