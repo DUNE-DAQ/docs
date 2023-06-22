@@ -1,5 +1,5 @@
 
-_JCF: This document was last edited Apr-04-2023_
+_JCF: This document was last edited Jun-22-2023_
 
 # DUNE DAQ Buildtools
 
@@ -28,13 +28,13 @@ spack load python@3.8.3%gcc@8.2.0
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt dunedaq-v4.0.0  # dunedaq-v4.0.0 is the latest daq-buildtools version as of Apr-04-2023
+setup_dbt latest  # v7.2.0 is the latest daq-buildtools version as of Jun-22-2023
 ```
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.1/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.0.1/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.2.0/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.2.0/scripts -> PATH
 DBT setuptools loaded
 ```
 If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create`, `dbt-build`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. 
@@ -88,8 +88,6 @@ And to build against a frozen release (not recommended, as the codebase changes 
 dbt-create [-i/--install-pyvenv] <frozen release> <name of work area subdirectory> 
 ```
 
-The option `-i/--install-pyvenv` for `dbt-create` is optional. By default, the Python virtual environment created in the work area will be a clone of an existing one from the release directory. This avoids the compilation/installation of Python modules using the `pyvenv_requirements.txt` in the release directory, and speeds up the work-area creation significantly. However, the first time running `dbt-create` with cloning on a node may take several minutes since cvmfs needs to fetch these files into local cache first, and `-i` is an option to avoid this.   
-
 The structure of your work area will look like the following:
 ```txt
 MyTopDir
@@ -102,6 +100,20 @@ MyTopDir
     └── dbt-build-order.cmake
 ```
 The next section of this document concerns how to build code in your new work area. However, if you'd like to learn about how to retrieve information about your work area such as the release of the DUNE DAQ suite it builds against, you can skip ahead to [Finding Info on Your Work Area](#Finding_Info).
+
+### Advanced `dbt-create` options
+
+Along with telling `dbt-create` what you want your work area to be named and what release you want it to be based off of, there are a few more options that give you finer-grained control over the work area. You can simply run `dbt-create -h` for a summary, but they're described in fuller detail here.
+
+
+* `-s/--spack`: Install a local Spack instance in the work area. This will allow you to install and load whatever Spack packages you wish into your work area. 
+
+
+* `-c/--clone-pyvenv`: By default, the Python virtual environment your work area uses is in the release area on cvmfs. However, if you choose this option, `dbt-create` will actually copy this virtual environment over to your work area, thereby giving you write permission.
+  
+
+* `-i/--install-pyvenv`: With this option, there will be compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory. This is typically slower than cloning, but not always. You can take further control by combining it with the `-p <requirements file>` argument, though it's unlikely as a typical developer that you'd want a non-standard set of Python packages. 
+
 
 <a name="Cloning_and_building"></a>
 ## Cloning and building a package repo
@@ -202,9 +214,10 @@ A couple of things need to be kept in mind when you're building code in a work a
 
 As such, it's important to know the assumptions a work area makes when you use it to build code. In the base of your work area is a file called `dbt-workarea-constants.sh`, which will look something like the following:
 ```
-export SPACK_RELEASE="N22-09-23"
+export SPACK_RELEASE="NFD23-06-21"
 export SPACK_RELEASES_DIR="/cvmfs/dunedaq-development.opensciencegrid.org/nightly"
-export DBT_ROOT_WHEN_CREATED="/cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v6.0.2"
+export DBT_ROOT_WHEN_CREATED="/cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.1.0"
+export LOCAL_SPACK_DIR="/home/jcfree/daqbuild_test_mypackage/.spack"
 ```
 This file is sourced whenever you run `dbt-workarea-env`, and it tells both the build system and the developer where they can find crucial information about the work areas' builds. Specifically, these environment variables mean the following:
 
@@ -213,6 +226,8 @@ This file is sourced whenever you run `dbt-workarea-env`, and it tells both the 
 * `$SPACK_RELEASES_DIR`: The base of the directory containing the DUNE DAQ software installations. The directory `$SPACK_RELEASES_DIR/$SPACK_RELEASE` contains the installation of the packages for your release
 
 * `DBT_ROOT_WHEN_CREATED`: The directory containing the `env.sh` file which was sourced before this work area was first created
+
+* `LOCAL_SPACK_DIR`: If the `-s/--spack` was passed to `dbt-create` when the work area was built, this points to where the local Spack area is located
 
 There are also useful Spack commands which can be executed to learn about the versions of the individual packages you're working with, once you've run `dbt-workarea-env` or `dbt-setup-release`. An [excellent Spack tutorial](https://spack-tutorial.readthedocs.io/en/latest/tutorial_basics.html) inside the official Spack documentation is worth a look, but a few Spack commands can be used right away to learn about a work area:
 
@@ -238,7 +253,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Apr 4 12:31:42 2023 -0500_
+_Date: Thu Jun 22 08:05:04 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
