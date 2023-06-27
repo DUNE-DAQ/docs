@@ -22,8 +22,6 @@ Specialty tests:
 
     * for now, it needs the global timing partition to be started separately (hints provided in output of the test script)
 
-    * this test does not need `--frame-file $PWD/frames.bin`
-
     * it is useful to run this test with a couple of partition numbers to verify that it can talk to the global timing partition independent of its own partition number
 
 
@@ -33,8 +31,6 @@ Specialty tests:
 
     * has only been tested at the ICEBERG teststand so far
 
-    * this test does not need `--frame-file $PWD/frames.bin`
-
 
 -----
 
@@ -42,9 +38,9 @@ Specialty tests:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: Kurt Biery_
 
-_Date: Tue Feb 28 16:19:04 2023 +0100_
+_Date: Tue Jun 27 16:03:50 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>
