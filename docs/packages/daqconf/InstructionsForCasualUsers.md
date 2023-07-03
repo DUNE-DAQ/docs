@@ -47,6 +47,8 @@ As of Oct-4-2022, here are the steps that should be used when you first create y
 
    * `hdf5_dump.py -n 3 -p all -f swtest_run000101_0000_*.hdf5`
 
+If you intend to run _nanorc_ on the Kubernetes cluster, then [these instructions](ConfigDatabase.md) may be useful.
+
 When you return to this work area (for example, after logging out and back in), you can skip the 'setup' steps in the instructions above.  For example:
 
 
@@ -106,9 +108,9 @@ If and when you are ready to start looking at existing code and possibly modifyi
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Jonathan Hancock_
 
-_Date: Tue Oct 4 11:23:27 2022 -0500_
+_Date: Fri Jun 30 14:02:34 2023 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>

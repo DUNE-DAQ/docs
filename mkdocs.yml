@@ -224,6 +224,7 @@ nav:
        - Control:
           - daqconf:
              - About daqconf: packages/daqconf/README.md
+             - packages/daqconf/ConfigDatabase.md
              - packages/daqconf/ConfigurationsForCasualUsers.md
              - packages/daqconf/InstructionsForCasualUsers.md
              - packages/daqconf/MigratingTov3_2_0Confgen.md
