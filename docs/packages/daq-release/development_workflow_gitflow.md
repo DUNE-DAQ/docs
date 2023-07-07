@@ -116,7 +116,9 @@ Details on the first two steps above can be found in the [daq-buildtools documen
 
 ### Phase 2 - Testing Period
 
-This period is begun on the developer side by bumping the version of the package on the develop branch. Either on or before the tag collection date, the person in charge of tagging the package (typically the package maintainer, or whoever is marked as such on the tag collector spreadsheet) should do the following:
+#### Before the testing period starts
+
+Developers need to bump the version of the package on the develop branch. Either on or before the tag collection date, the person in charge of tagging the package (typically the package maintainer, or whoever is marked as such on the tag collector spreadsheet) should do the following:
 
 
 1. Consult the tag collector spreadsheet to confirm they're assigned as the package tagger, and to confirm the new version number `<X.Y.Z>`. Any disagreement or confusion about either of these should be resolved before the next step. The spreadsheet is by convention linked to [from the top of the "Instructions for setting up a development area" page of the daqconf Wiki](https://github.com/DUNE-DAQ/daqconf/wiki/Instructions-for-setting-up-a-development-software-area)
@@ -133,7 +135,18 @@ This period is begun on the developer side by bumping the version of the package
 
 5. Mark your package as "Tag Ready" on the tag collector spreadsheet
 
-The start of the testing period is marked by the tag collection date and the build of initial candidate release. Any further changes made during the testing period should be agreed upon and significant - this is not a time for introducing minor new features, as we want to test as consistent a codebase as possible. Changes which do get made will be made to a `prep-release/dunedaq-v<X.Y.Z>` branch; if one doesn't exist, it should be created. This branch should be based on the initial tag for the release. The fixes can be made to the `prep-release/dunedaq-v<X.Y.Z>` branch via pull requests with at lease one approval review.
+#### During the testing period
+
+An initial candidate release will be built once the first round of tags are collected. That marks the start of the testing period. Any further changes made during the testing period should be agreed upon and significant - this is not a time for introducing minor new features, as we want to test as consistent a codebase as possible.
+
+
+1. Changes which do get made will be made to a `prep-release/dunedaq-v<X.Y.Z>` branch; if one doesn't exist, it should be created;
+
+
+2. This branch should be based on the initial tag for the release; 
+
+
+3. The fixes can be made to the `prep-release/dunedaq-v<X.Y.Z>` branch via pull requests with at lease one approval review.
 
 ### Phase 3 - Post Release Period
 
@@ -205,7 +218,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Mon Oct 10 09:10:00 2022 -0500_
+_Date: Fri Jul 7 12:20:43 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
