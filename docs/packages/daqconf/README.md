@@ -6,9 +6,13 @@ The focus of this documentation is on providing instructions for using the tools
 
 [Instructions for casual or first-time users](InstructionsForCasualUsers.md)
 
-and for a slightly more in-depth look into how to generate configurations for a DAQ system, take a look at:
+For a slightly more in-depth look into how to generate configurations for a DAQ system, take a look at:
 
 [Configuration options for casual or first-time users](ConfigurationsForCasualUsers.md)
+
+If you want to view existing configs stored in the MongoDB, take a look at:
+
+[Interacting with the Configuration Database](ConfigDatabase.md)
 
 Traditionally multiple command line options were passed to `daqconf_multiru_gen` in order to control how it generated configurations. However, for the `dunedaq-v3.2.0` release (September 2022) we're switching to passing a single JSON file whose contents contain the information needed to control `daqconf_multiru_gen`. For `daqconf_multiru_gen` users who want to learn about how to make the switch to this new approach, take a look at [these migration instructions](MigratingToNewConfgen.md).
 
@@ -87,9 +91,9 @@ Note that daqconf will _not_ use an expired asset.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: Jonathan Hancock_
 
-_Date: Tue Feb 28 16:24:57 2023 +0100_
+_Date: Thu Jul 13 15:10:27 2023 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
