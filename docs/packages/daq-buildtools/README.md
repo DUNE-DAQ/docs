@@ -1,7 +1,6 @@
-
-_JCF: This document was last edited Jul-12-2023_
-
 # DUNE DAQ Buildtools
+
+_This document was last edited Jul-15-2023_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -10,8 +9,7 @@ _JCF: This document was last edited Jul-12-2023_
 To get set up, you'll need access to the cvmfs Spack areas:
 `/cvmfs/dunedaq.opensciencegrid.org/spack/releases` for frozen DUNE
 DAQ releases, `/cvmfs/dunedaq-development.opensciencegrid.org/nightly`
-for nightly releases, etc. This is the case, e.g., on the lxplus
-machines at CERN. If you've been doing your own Spack work on the
+for nightly releases, etc. This is the case, e.g., on the np04 cluster at CERN. If you've been doing your own Spack work on the
 system in question, you may also want to back up (rename) your
 existing `~/.spack` directory to give Spack a clean slate to start
 from in these instructions.
@@ -28,7 +26,7 @@ spack load python@3.8.3%gcc@8.2.0
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt latest  # v7.2.1 is the latest daq-buildtools version as of Jul-12-2023
+setup_dbt latest  # v7.2.1 is the latest daq-buildtools version as of Jul-15-2023
 ```
 
 After running these two commands, then you'll see something like:
@@ -47,8 +45,10 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you simply want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
 
 ```sh
-dbt-setup-release <release> 
+dbt-setup-release <release> # fddaq-v4.1.0 the latest frozen release as of July 15, 2023
 ```
+As of July 2023, the DUNE DAQ software stack has been split into far detector and near detector-specific parts. As of the `v4.1.0` release of the stack, do _not_ use the traditional convention of `dunedaq-vX.Y.Z` as the frozen release label, but instead, `fddaq-vX.Y.Z` and `nddaq-vX.Y.Z`, although for `v4.1.0` we only have a far detector-specific stack. 
+
 Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. However, instead of a frozen release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fd-v4.1.0-c5` you can do:
 ```
 dbt-setup-release -b candidate fd-v4.1.0-c5
@@ -253,9 +253,9 @@ produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generall
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jcfreeman2_
 
-_Date: Wed Jul 12 16:51:10 2023 -0500_
+_Date: Sat Jul 15 09:11:07 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
