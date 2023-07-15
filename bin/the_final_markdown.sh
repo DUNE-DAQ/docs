@@ -118,6 +118,8 @@ for package in $package_list ; do
 	git checkout v7.2.1_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout v2.3.2
+    elif [[ "$package" =~ "dal" || "$package" =~ "dbe" ]]; then
+	git checkout develop
     else
 	git checkout dunedaq-v4.1.0
     fi

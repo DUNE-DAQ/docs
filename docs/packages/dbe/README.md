@@ -2,9 +2,9 @@
 
 ## Intro
 
-The DBE package provides a GUI interface to the OKS suite, allowing you to edit both schema files and data files. Note that these instructions will assume you have a basic familiarity with OKS as [described here](https://github.com/DUNE-DAQ/dal#readme). They also assume that you [know how to download and build repositories](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/) and are able to display windows from your command line (e.g. `xclock &` or `emacs &` pop up windows for you). 
+The DBE package provides a GUI interface to the OKS suite, allowing you to edit both schema files and data files. Note that these instructions will assume you have a basic familiarity with OKS as [described here](https://dune-daq-sw.readthedocs.io/en/latest/packages/dal/). They also assume that you [know how to download and build repositories](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/) and are able to display windows from your command line (e.g. `xclock &` or `emacs &` pop up windows for you). 
 
-While DBE was [originally written as part of the ATLAS TDAQ effort](https://gitlab.cern.ch/atlas-tdaq-software/dbe.git), it has been modified to build within the DUNE DAQ framework. To get started working with DBE, you'll want to set up a work area based on a nightly release produced on or after June 9, 2023; these nightly releases will among other things provide the core packages of the OKS suite and the Qt GUI package DBE depends on. However, you'll need to explicitly check out and build this repo. 
+While DBE was [originally written as part of the ATLAS TDAQ effort](https://gitlab.cern.ch/atlas-tdaq-software/dbe.git), it has been modified to build within the DUNE DAQ framework. To get started working with DBE, you'll need to do two things. (1) load in the core OKS packages by setting up a work area, and (2) run `spack load dbe`. This second command is needed since loading in `dbe` will cause emacs to no longer work in the terminal, an undesirable side effect developers don't want to have to experience whenever they set up a work area for reasons unrelated to dbe. 
 
 ## Walkthrough, Part 1: Editing Objects in a Configuration
 
@@ -13,7 +13,7 @@ Let's get started seeing what functionality DBE provides. You can do the followi
 tutorial.py   # Generates a data file, tutorial.data.xml, which we can use for educational purposes 
 dbe_main -f ./tutorial.data.xml
 ```
-`tutorial.data.xml` describes a very simple DAQ system which consists of one run control, one TPC readout application and one photon readout application; it's covered more thoroughly [here](https://github.com/DUNE-DAQ/dal#overview-of-tutorialdataxml). When DBE launches, you'll see a subwindow on the left side of the DBE window titled "Class View". As you can see, this lists the classes available to the data file you provided DBE, as well as the number of objects of each class type. Click on `ReadoutApplication`, and you'll see the following:
+`tutorial.data.xml` describes a very simple DAQ system which consists of one run control, one TPC readout application and one photon readout application; it's covered more thoroughly [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/dal/#overview-of-tutorialdataxml). When DBE launches, you'll see a subwindow on the left side of the DBE window titled "Class View". As you can see, this lists the classes available to the data file you provided DBE, as well as the number of objects of each class type. Click on `ReadoutApplication`, and you'll see the following:
 
 ![Main Window](main_dbe_window2.png)
 
@@ -92,9 +92,9 @@ dot -Tsvg $tmpfile > tutorial_diagram.svg
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: John Freeman_
 
-_Date: Fri Jun 9 12:31:21 2023 -0500_
+_Date: Sat Jul 15 12:45:51 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dbe/issues](https://github.com/DUNE-DAQ/dbe/issues)_
 </font>

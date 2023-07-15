@@ -17,7 +17,7 @@ This document provides a taste of what OKS has to offer.
 
 ## Getting Started
 
-To get started working with the DUNE-repurposed OKS packages, you'll want to [set up a work area](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/) based off of a nightly from June 9, 2023 or later; these nightlies will contain the suite of OKS packages as well as a version of daq-cmake (`v2.3.1`) capable of handling the code generation facilities of OKS. You can also develop and build the OKS packages in a work area based on this release; these packages include [dbe (the DataBase Editor GUI)](https://github.com/DUNE-DAQ/dbe#readme), dal (Data Access Library, this repo), [oksutils](https://github.com/DUNE-DAQ/oksutils), [genconfig](https://github.com/DUNE-DAQ/genconfig) (contains code generation executable), [oks](https://github.com/DUNE-DAQ/oks) (core OKS functionality, not to be confused with the entire OKS suite), [oksdbinterfaces](https://github.com/DUNE-DAQ/oksdbinterfaces), [oksconfig](https://github.com/DUNE-DAQ/oksconfig) and [okssystem](https://github.com/DUNE-DAQ/okssystem). Some of these packages you may never need to worry about, others (such as the dbe GUI) may benefit from further development. 
+To get started working with the DUNE-repurposed OKS packages, you'll want to [set up a work area](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/). These packages include [dbe (the DataBase Editor GUI)](https://dune-daq-sw.readthedocs.io/en/latest/packages/dbe/), dal (Data Access Library, this repo), [oksutils](https://github.com/DUNE-DAQ/oksutils), [genconfig](https://github.com/DUNE-DAQ/genconfig) (contains code generation executable), [oks](https://github.com/DUNE-DAQ/oks) (core OKS functionality, not to be confused with the entire OKS suite), [oksdbinterfaces](https://github.com/DUNE-DAQ/oksdbinterfaces), [oksconfig](https://github.com/DUNE-DAQ/oksconfig) and [okssystem](https://github.com/DUNE-DAQ/okssystem). Some of these packages you may never need to worry about, others (such as the dbe GUI) may benefit from further development. 
   
 With the work area set up, it's time to run some tests to make sure things are in working order. These include:
 
@@ -160,7 +160,7 @@ You can play around with `dal_dump_apps/dal_dump_apps.py`, pass the
 
 ## Next Step
 
-Now that we've learned a bit about OKS, let's take a look at the [GUI interfaces to OKS](https://github.com/DUNE-DAQ/dbe#readme)
+Now that we've learned a bit about OKS, let's take a look at the [GUI interfaces to OKS](https://dune-daq-sw.readthedocs.io/en/latest/packages/dbe/)
 
 
 
@@ -171,9 +171,9 @@ Now that we've learned a bit about OKS, let's take a look at the [GUI interfaces
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: John Freeman_
 
-_Date: Fri Jun 9 10:07:19 2023 -0500_
+_Date: Sat Jul 15 12:35:53 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dal/issues](https://github.com/DUNE-DAQ/dal/issues)_
 </font>
