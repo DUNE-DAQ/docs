@@ -70,7 +70,11 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Control
 
+[dal](packages/dal/README.md) _Used for configuration design and part of the OKS (Object Kernel Support) suite_
+
 [daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_
+
+[dbe](packages/dbe/README.md) _A GUI interface for the OKS-based configuration design offered by dal_
 
 [nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
 

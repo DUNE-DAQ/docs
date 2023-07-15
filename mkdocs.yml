@@ -222,6 +222,9 @@ nav:
              - packages/wibmod/src/WIB1/README.md
              - packages/wibmod/src/wibmod/WIB1/README.md
        - Control:
+          - dal:
+             - About dal: packages/dal/README.md
+             - packages/dal/RELEASE_NOTES.md
           - daqconf:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigDatabase.md
@@ -231,6 +234,8 @@ nav:
              - packages/daqconf/MigratingTov4_1_0Confgen.md
              - packages/daqconf/pytest/README.md
              - packages/daqconf/UpdatedIOManagerAPI.md
+          - dbe:
+             - About dbe: packages/dbe/README.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
              - packages/nanorc/FAQ-k8s.md

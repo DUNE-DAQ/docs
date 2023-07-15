@@ -151,7 +151,9 @@ nav:
           - readoutmodules:
           - wibmod:
        - Control:
+          - dal:
           - daqconf:
+          - dbe:
           - nanorc:
           - restcmd:
        - Dataflow (logical):
