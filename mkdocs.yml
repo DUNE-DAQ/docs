@@ -146,6 +146,7 @@ nav:
              - packages/daq-systemtest/config/emulated_systems/README.md
              - packages/daq-systemtest/config/hd_coldbox_tests/README.md
              - packages/daq-systemtest/config/long_window_readout/README.md
+             - packages/daq-systemtest/config/timing_systems/README.md
              - packages/daq-systemtest/integtest/README.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
@@ -189,11 +190,12 @@ nav:
              - About detchannelmaps: packages/detchannelmaps/README.md
           - detdataformats:
              - About detdataformats: packages/detdataformats/README.md
-             - packages/detdataformats/include/detdataformats/trigger/README.md
           - dtpcontrols:
              - About dtpcontrols: packages/dtpcontrols/README.md
           - dtpctrllibs:
              - About dtpctrllibs: packages/dtpctrllibs/README.md
+          - fddetdataformats:
+             - About fddetdataformats: packages/fddetdataformats/README.md
           - fdreadoutlibs:
              - About fdreadoutlibs: packages/fdreadoutlibs/README.md
           - flxlibs:
@@ -208,6 +210,8 @@ nav:
           - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
              - packages/lbrulibs/socket-implementation.md
+          - nddetdataformats:
+             - About nddetdataformats: packages/nddetdataformats/README.md
           - readoutlibs:
              - About readoutlibs: packages/readoutlibs/README.md
              - packages/readoutlibs/Directory-structure.md
@@ -219,13 +223,20 @@ nav:
              - packages/wibmod/src/WIB1/README.md
              - packages/wibmod/src/wibmod/WIB1/README.md
        - Control:
+          - dal:
+             - About dal: packages/dal/README.md
+             - packages/dal/RELEASE_NOTES.md
           - daqconf:
              - About daqconf: packages/daqconf/README.md
+             - packages/daqconf/ConfigDatabase.md
              - packages/daqconf/ConfigurationsForCasualUsers.md
              - packages/daqconf/InstructionsForCasualUsers.md
-             - packages/daqconf/MigratingToNewConfgen.md
+             - packages/daqconf/MigratingTov3_2_0Confgen.md
+             - packages/daqconf/MigratingTov4_1_0Confgen.md
              - packages/daqconf/pytest/README.md
              - packages/daqconf/UpdatedIOManagerAPI.md
+          - dbe:
+             - About dbe: packages/dbe/README.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
              - packages/nanorc/FAQ.md

@@ -142,14 +142,18 @@ nav:
           - detdataformats:
           - dtpcontrols:
           - dtpctrllibs:
+          - fddetdataformats:
           - fdreadoutlibs:
           - flxlibs:
           - lbrulibs:
+          - nddetdataformats:
           - readoutlibs:
           - readoutmodules:
           - wibmod:
        - Control:
+          - dal:
           - daqconf:
+          - dbe:
           - nanorc:
           - restcmd:
        - Dataflow (logical):

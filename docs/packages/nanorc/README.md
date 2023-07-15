@@ -547,6 +547,82 @@ username-image-name        N22-06-27   3e53688480dc   9 hours ago    1.79GB
 ...
 ```
 
+## Running the Felix with Kubernetes
+
+Clone the np04daq-configs and checkout `feature/k8s`, 
+
+``` 
+git clone ssh://git@gitlab.cern.ch:7999/dune-daq/online/np04daq-configs.git 
+cd np04daq-configs 
+git checkout feature/k8s 
+``` 
+
+
+This branch uses a special image in the configuration `(np04docker.cern.ch/dunedaq-local/k8s-v400-rc3:rc-v4.0.0-3-01)` which has Eric’s modifications to IPM. Other modifications are: 
+- Removing the cern.ch postfix from the hostname 
+- Setting the parameter start\_connectivity\_service to false 
+- Adding a use\_k8s = true and the name of the image as described above
+
+Run the daq-config bash script:
+``` 
+./recreate_np04_daq_configurations.sh 
+``` 
+
+Upload the new nanorc configuration of your choice 
+
+``` 
+upload-conf [np04_daq_APA_conf] [flx-k8s-test] 
+``` 
+
+Here are some examples of [np04\_daq\_APA\_conf]'s that you can upload: 
+
+- `np02_coldbox_daq_100mHz_conf/` 
+- `np02_coldbox_daq_268ms_conf/` 
+- `np02_coldbox_daq_5Hz/` 
+- `np02_coldbox_daq_conf/` 
+- `np02_coldbox_daq_hma_conf/` 
+- `np02_coldbox_daq_tp_conf/` 
+- `np02_coldbox_flxcard_conf/` 
+- `np02_coldbox_flxcard_WIB12_conf/` 
+- `np02_coldbox_flxcard_WIB34_conf/` 
+- `np02_coldbox_flxcard_WIB56_conf/` 
+- `np02_coldbox_timing_tlu_conf/` 
+- `np02_coldbox_wib_conf/` 
+- `np02_coldbox_wib_pulser_conf/` 
+- `np02_coldbox_wib_WIB12_conf/` 
+- `np02_coldbox_wib_WIB34_conf/` 
+- `np02_coldbox_wib_WIB56_conf/` 
+- `np04_daq_APA1_conf/` 
+- `np04_daq_APA1_tp_conf/` 
+- `np04_daq_APA2_conf/` 
+- `np04_daq_APA2_tp_conf/` 
+- `np04_daq_APA3_conf/` 
+- `np04_daq_APA4_conf/` 
+- `np04_daq_conf/` 
+- `np04_daq_DAPHNE_conf/` 
+- `np04_daq_DAPHNE_test_conf/` 
+- `np04_daq_TPC_conf/` 
+- `np04_flxcard_APA1_conf/` 
+- `np04_flxcard_APA2_conf/` 
+- `np04_flxcard_APA3_conf/` 
+- `np04_flxcard_APA4_conf/` 
+- `np04_flxcard_conf/` 
+- `np04_flxcard_TPC_conf/` 
+
+For this to work you need to be able to use `kubectl` which can be is done by, 
+
+``` 
+export KUBECONFIG=/nfs/home/np04daq/np04-kubernetes/config 
+```
+
+
+**Remember to inform** `np04_shifterassistant` **on slack that you are taking one of the APA’s for a spin and make sure no one else is running anything on it first.** 
+
+Now you can run the nanorc using the following command: 
+```
+nanorc --pm k8s://np04-srv-015:31000 db://[flx-k8s-test] [yourname-flx-k8s-test-run] 
+``` 
+
 
 -----
 
@@ -554,9 +630,9 @@ username-image-name        N22-06-27   3e53688480dc   9 hours ago    1.79GB
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: tta20_
 
-_Date: Tue Apr 11 11:28:18 2023 -0500_
+_Date: Sun May 21 13:07:38 2023 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>

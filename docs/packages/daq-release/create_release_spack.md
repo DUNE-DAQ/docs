@@ -106,6 +106,8 @@ To do so, login to `cvmfsdunedaq@oasiscfs01.fnal.gov` as `cvmfsdunedaq`, then do
 
 * The last step of making a frozen release is to create release tags for all packages used by the release. To do so, use the script `daq-release/scripts/create-release-tag.py`:
 
+  * make sure `daq-release` is tagged for the new release, and the version is updated in the release YAML file. It will be tagged by the `create-release-tag.py` script;
+
   * `daq-release/scripts/create-release-tag.py -h` to show the usage of the script;
 
   * `daq-release/scripts/create-release-tag.py -a -t <release-tag> -i <release YAML file>` to tag all packages used by the release;
@@ -125,7 +127,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Mon Apr 3 12:29:56 2023 -0500_
+_Date: Mon Apr 17 13:59:52 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
