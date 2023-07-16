@@ -190,6 +190,10 @@ nav:
              - About detchannelmaps: packages/detchannelmaps/README.md
           - detdataformats:
              - About detdataformats: packages/detdataformats/README.md
+          - dpdklibs:
+             - About dpdklibs: packages/dpdklibs/README.md
+             - packages/dpdklibs/utils/intel/README.md
+             - packages/dpdklibs/utils/mlx/READOUT.md
           - dtpcontrols:
              - About dtpcontrols: packages/dtpcontrols/README.md
           - dtpctrllibs:

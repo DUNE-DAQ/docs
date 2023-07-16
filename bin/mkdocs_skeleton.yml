@@ -140,6 +140,7 @@ nav:
           - daqdataformats:
           - detchannelmaps:
           - detdataformats:
+          - dpdklibs:
           - dtpcontrols:
           - dtpctrllibs:
           - fddetdataformats:

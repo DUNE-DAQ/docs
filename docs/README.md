@@ -46,6 +46,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [detdataformats](packages/detdataformats/README.md) _General-purpose data formats and related tools_
 
+[dpdklibs](packages/dpdklibs/README.md) _Data Plane Development Kit software and utilities_
+
 [dtpctrllibs](packages/dtpctrllibs/README.md) _DAQ modules for controlling Trigger Primitive generation firmware_
 
 [dtpcontrols](packages/dtpcontrols/README.md) _Python tools for control of the Trigger Primitive firmware_
