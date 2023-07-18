@@ -146,6 +146,7 @@ nav:
              - packages/daq-systemtest/config/emulated_systems/README.md
              - packages/daq-systemtest/config/hd_coldbox_tests/README.md
              - packages/daq-systemtest/config/long_window_readout/README.md
+             - packages/daq-systemtest/config/timing_systems/README.md
              - packages/daq-systemtest/integtest/README.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md

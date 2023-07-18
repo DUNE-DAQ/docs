@@ -105,6 +105,22 @@ Stream (1, 2, 3, 4)   : n.pkts 0 (tot. 23786829)
 ```
 ...since `dpdklibs_test_frame_transmitter` intentionally constructs the `detdataformats::DAQEthHeader` in its packets to have a `det_id` of 1, a `crate_id` of 2, a `slot_id` of 3, and a `stream_id` of 4.  
 
+## Configuring stats reporting from the `NICReceiver`
+
+The way packet statistics are reported from the `NICReceiver` is on a per-interface basis. An example JSON snippet which can control this reporting is as follows:
+```
+                "ifaces": [
+                    {
+                        "stats_reporting_cfg": {
+                            "expected_packet_size": 7243,
+                            "expected_timestamp_step": -1,
+                            "expected_seq_id_step": 1,                          
+                            "analyze_nth_packet": 2                        
+                        },
+                        ...
+```
+This tells the interface to check that the packet size is 7243 bytes, to ignore the timestamp (any negative value for a variable beginning with `expected_` means "ignore"), and to check the sequence ID step is 1. It also tells it to only do this for every other packet, as a way of saving computation time. Note that all these variables have defaults and thus `"stats_reporting_cfg"` doesn't need to be defined if the defaults are satisfactory; these defaults are: expect a sequence ID step of 1 for each new packet in a stream, a packet size of 7243 bytes, ignore the timestamp, and analyze all packets. 
+
 
   
 
@@ -117,7 +133,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: jcfreeman2_
 
-_Date: Sun May 7 19:15:49 2023 -0500_
+_Date: Thu Jul 6 13:15:54 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dpdklibs/issues](https://github.com/DUNE-DAQ/dpdklibs/issues)_
 </font>
