@@ -104,7 +104,7 @@
 
 ## timing
 
-* Maintainer(s): David Cussans
+* Maintainer(s): Stoyan Trilov, David Cussans
 
 * Repositories with write access:
   - timing
@@ -160,9 +160,9 @@ Page was generated at: 30/01/2023 08:22:52
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pengfei Ding_
+_Author: David Cussans_
 
-_Date: Fri Mar 10 13:25:15 2023 -0600_
+_Date: Tue Jul 18 09:18:22 2023 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
