@@ -227,6 +227,8 @@ nav:
              - packages/wibmod/src/WIB1/README.md
              - packages/wibmod/src/wibmod/WIB1/README.md
        - Control:
+          - coredal:
+             - About coredal: packages/coredal/README.md
           - dal:
              - About dal: packages/dal/README.md
              - packages/dal/RELEASE_NOTES.md

@@ -72,6 +72,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Control
 
+[coredal](packages/coredal/README.md) _A core schema for DAQ configuration_
+
 [dal](packages/dal/README.md) _Used for configuration design and part of the OKS (Object Kernel Support) suite_
 
 [daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_

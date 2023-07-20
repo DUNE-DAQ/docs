@@ -152,6 +152,7 @@ nav:
           - readoutmodules:
           - wibmod:
        - Control:
+          - coredal:
           - dal:
           - daqconf:
           - dbe:
