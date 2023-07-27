@@ -10,7 +10,7 @@ For a slightly more in-depth look into how to generate configurations for a DAQ 
 
 [Configuration options for casual or first-time users](ConfigurationsForCasualUsers.md)
 
-If you want to view existing configs stored in the MongoDB, take a look at:
+If you want to view existing configs stored in the MongoDB, or run configurations accessible through the run-registry microservice, take a look at:
 
 [Interacting with the Configuration Database](ConfigDatabase.md)
 
@@ -93,7 +93,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Jonathan Hancock_
 
-_Date: Thu Jul 13 15:10:27 2023 +0200_
+_Date: Thu Jul 27 10:53:44 2023 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>

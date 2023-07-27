@@ -9,11 +9,11 @@ _nanorc_ should then be started with `nanorc --pm k8s://np04-srv-015:31000 db://
 Keep in mind that the config directory can contain underscores, but the name it will be given in the database cannot (hyphens are fine).
 
 ## Viewing configurations
-To inspect the contents of the database, run `daqconf_viewer` after setting up the software environment. This will open a graphical UI in the terminal. There are three optional arguments that can be provided:
+To inspect the contents of the database, run `daqconf_viewer` after setting up the software environment. This will open a graphical UI in the terminal. There are five optional arguments that can be provided:
 
-* --host to manually enter the host of the microservice (defaults to http://np04-srv-023)
+* --conf-host and reg-host to manually enter the host of the microservices (defaults to http://np04-srv-023 and http://dunedaq-microservices.cern.ch)
 
-* --port to manually enter the port that the service listens on (defaults to 31011)
+* --conf-port and reg-port to manually enter the port that the service listens on (defaults to 31011 and 5005)
 
 * --dir to tell the config viewer where to look for local config files (defaults to ./)
 ![Config Viewer](ConfViewerScreenshot.png)
@@ -32,6 +32,12 @@ differences between the two in a format similar to how commits are displayed on 
 Again, the L key can be used to switch to local files, allowing for comparisons of local and DB configs in any combination.
 Finally, once you are done press q to quit (or use ctrl+c).
 
+## Interacting with the run registry
+Pressing the R key while on the first screen will take you to the run registry screen. Metadata for the chosen run is shown in the top right, and the associated config files are displayed in a tree on the bottom left. Selecting one brings up the JSON on the bottom right, with expandable schema as before.
+![Run Reg Viewer](RunRegScreenshot.png)
+
+When the application is initialised, the most recent run is shown by default. To navigate to different runs, simply click the back/forward buttons, or type the desired run into the input box and click the Get Data button. The R key can be used to return to browsing the MongoDB when you are done.
+
 
 -----
 
@@ -41,7 +47,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Jonathan Hancock_
 
-_Date: Thu Jul 13 14:10:33 2023 +0200_
+_Date: Thu Jul 27 11:15:48 2023 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
