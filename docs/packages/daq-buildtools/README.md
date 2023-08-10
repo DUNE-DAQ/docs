@@ -17,9 +17,9 @@ from in these instructions.
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt fddaq-v4.1.0  
+setup_dbt fddaq-v4.1.1  
 ```
-Here `fddaq-v4.1.0` is an alias for `v7.2.1`; this is the latest daq-buildtools version as of Jul-15-2023.
+Here `fddaq-v4.1.1` is an alias for `v7.2.1`; this is the latest daq-buildtools version as of Aug-10-2023.
 After running these two commands, then you'll see something like:
 ```
 Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.2.1/bin -> PATH
@@ -36,9 +36,9 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v4.1.0 the latest frozen release as of Jul-15-2023
+dbt-setup-release <release> # fddaq-v4.1.1 the latest frozen release as of Aug-10-2023
 ```
-As of July 2023, the DUNE DAQ software stack has been split into far detector and near detector-specific parts. Starting with the `v4.1.0` release of the stack, do _not_ use the traditional convention of `dunedaq-vX.Y.Z` as the frozen release label, but instead, `fddaq-vX.Y.Z` and `nddaq-vX.Y.Z`. Note that for `v4.1.0` we only have a far detector-specific stack. 
+As of July 2023, the DUNE DAQ software stack has been split into far detector and near detector-specific parts. Starting with the `v4.1.0` release of the stack, do _not_ use the traditional convention of `dunedaq-vX.Y.Z` as the frozen release label, but instead, `fddaq-vX.Y.Z` and `nddaq-vX.Y.Z`. Note that for `v4.1.0` and `v4.1.1` we only have a far detector-specific stack. 
 
 Instead of a frozen release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fd-v4.1.0-c5` you can do:
 ```
@@ -133,7 +133,7 @@ dbt-build
 
 ### Working with more repos
 
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/spack/releases/fddaq-v4.1.0/dbt-build-order.cmake`". If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/spack/releases/fddaq-v4.1.1/dbt-build-order.cmake`". If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
 
 As a reminder, once you've added your repos and built them, you'll want to run `dbt-workarea-env` so the environment picks up their applications, libraries, etc. 
 
@@ -244,9 +244,9 @@ produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generall
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: John Freeman_
 
-_Date: Sat Jul 15 12:07:32 2023 -0500_
+_Date: Thu Aug 10 16:30:28 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
