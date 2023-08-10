@@ -121,7 +121,7 @@ for package in $package_list ; do
     elif [[ "$package" =~ "dal" || "$package" =~ "dbe" ]]; then
 	git checkout develop
     else
-	git checkout dunedaq-v4.1.0
+	git checkout dunedaq-v4.1.1
     fi
     echo $tmpdir/$package
 
