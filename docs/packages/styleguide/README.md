@@ -191,7 +191,8 @@ familiar with the language.
 
 ## 1.  C++ Version 
 
-Currently, code should target C++20
+Currently, code should target C++17, i.e., should not use C++2x
+features.
 
 ## 2. Naming Conventions
 
@@ -1320,7 +1321,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Aug 24 08:15:43 2023 -0500_
+_Date: Thu Aug 31 11:09:45 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>
