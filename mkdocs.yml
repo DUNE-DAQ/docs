@@ -138,6 +138,7 @@ nav:
              - packages/daq-release/feature_branch_ci_build.md
              - packages/daq-release/install_additional_external_pkgs.md
              - packages/daq-release/nd_development_workflow_gitflow.md
+             - packages/daq-release/onboarding_page.md
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
              - packages/daq-release/team_repos.md
