@@ -125,9 +125,9 @@ The `tutorial.schema.xml` file and `tutorial.data.xml` files are fairly easy to 
 ```
 daq_oks_codegen(core.schema.xml)
   
-daq_add_library(algorithms.cpp disabled-components.cpp test_circular_dependency.cpp LINK_LIBRARIES oksdbinterfaces::oksdbinterfaces okssystem::okssystem logging::logging dal_oks)
+daq_add_library(algorithms.cpp disabled-components.cpp test_circular_dependency.cpp LINK_LIBRARIES oksdbinterfaces::oksdbinterfaces okssystem::okssystem logging::logging)
 ```
-`core.schema.xml` gets fed into `daq_oks_codegen` which proceeds to (1) generate code off of the classes defined in `core.schema.xml` and (2) produce a shared object library which you can subsequently refer to as `dal_oks`. Details on `daq_oks_codegen` can be found [here](https://github.com/DUNE-DAQ/genconfig/tree/develop#readme). 
+`core.schema.xml` gets fed into `daq_oks_codegen` which proceeds to generate code off of the classes defined in `core.schema.xml` that will subsequently be built into the package's main library. Details on `daq_oks_codegen` can be found [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/#daq_oks_codegen). 
 
 You'll notice also that the classes in `core.schema.xml` contain not only Attributes and Relationships as in the tutorial example above, but also Methods. If you look at the `Partition` class (l. 415) and scroll down a bit, you'll see a `get_all_applications` Method declared, along with its accompanying C++ declaration (as well as Java declaration, but we ignore this). The implementation of `get_all_applications` needs to be done manually, however, and is accomplished on l. 1301 of `src/algorithms.cpp`. If you scroll to the top of that file you'll see a `#include "dal/Partition.hpp"` line. In the actual dal repo, there's no such include file. However, assuming you followed the build instructions at the top of this document, you'll find it in the `build/` area of your work area, as the header was in fact generated. 
 
@@ -173,7 +173,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Sat Jul 15 12:35:53 2023 -0500_
+_Date: Tue Aug 29 12:34:54 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dal/issues](https://github.com/DUNE-DAQ/dal/issues)_
 </font>
