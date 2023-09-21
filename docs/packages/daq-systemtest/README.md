@@ -4,7 +4,7 @@ This repository contains configurations for system-level DAQ tests. Currently, t
 
 * `integtest/`: `pytest`-based integration tests
 
-* `config/`: JSON configurations for the `daqconf` package's `daqconf_multiru_gen` (and the `timinglibs` package's `daqconf_timing_gen`)
+* `config/`: JSON configurations for the `fddaqconf` package's `fddaqconf_gen` (and the `timinglibs` package's `daqconf_timing_gen`)
 
 These tests are meant to be run as part of the release testing procedure to ensure that all of the functionality needed by DUNE-DAQ is present. An example of this would be the [`dunedaq-v3.2.0` release test spreadsheet](https://docs.google.com/spreadsheets/d/1VCIrNpCJmxFIntKK-6MynWt0kQ-v7wrTS46KjMe0_EY) from October 2022. 
 
@@ -19,7 +19,7 @@ For more on emulated systems tests (`config/emulated_systems`), click [here](con
 # Test-specific notes
 
 
-* The tests in [`config/timing_systems`](https://github.com/DUNE-DAQ/daq-systemtest/tree/develop/config/timing_systems) consist of a `*_daq.json` file which should be run through `daqconf_multiru_gen` and a `*_timing.json` file which should be run through `daqconf_timing_gen`
+* The tests in [`config/timing_systems`](https://github.com/DUNE-DAQ/daq-systemtest/tree/develop/config/timing_systems) consist of a `*_daq.json` file which should be run through `fddaqconf_gen` and a `*_timing.json` file which should be run through `daqconf_timing_gen`
 
 * [`detector_configurations/wib_hd_coldbox.json`](https://raw.githubusercontent.com/DUNE-DAQ/daq-systemtest/develop/config/detector_configurations/wib_hd_coldbox.json) is a configuration for `wibconf_gen`
 
@@ -31,9 +31,9 @@ For more on emulated systems tests (`config/emulated_systems`), click [here](con
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: jtenavidal_
 
-_Date: Wed Oct 12 13:36:10 2022 -0500_
+_Date: Tue Sep 19 07:28:55 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>

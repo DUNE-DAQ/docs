@@ -15,7 +15,7 @@ Here are the steps that I used in my tests:
 
 * make any necessary edits to `long_window_readout.json`
 
-* `daqconf_multiru_gen -c ./long_window_readout.json --detector-readout-map-file ./long_window_readout_DetReadoutMap.json lwr_config`
+* `fddaqconf_gen -c ./long_window_readout.json --detector-readout-map-file ./long_window_readout_DetReadoutMap.json lwr_config`
 
 * `nanorc lwr_config ${USER}-test boot conf start_run 101 wait 35 stop_run scrap terminate`
 
@@ -32,9 +32,9 @@ The data is split into multiple files based on the max_file_size parameter that 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: jtenavidal_
 
-_Date: Thu Jul 6 08:57:54 2023 -0500_
+_Date: Tue Sep 19 07:28:55 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>

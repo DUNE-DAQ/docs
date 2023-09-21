@@ -1,24 +1,24 @@
 # Migrating to v3.2.0 _daqconf_ Configuration Generation
 
 ## Introduction
-v3.2.0 introduced several changes to the configuration generation scripts (e.g. _daqconf_multiru_gen_), most notably introducing the use of configuration files as a replacement for most of the command-line options. This document will serve as a guide for updating a pre-v3.2.0 confgen command line to a v3.2.0 configuration file.
+v3.2.0 introduced several changes to the configuration generation scripts (e.g. _fddaqconf_gen_), most notably introducing the use of configuration files as a replacement for most of the command-line options. This document will serve as a guide for updating a pre-v3.2.0 confgen command line to a v3.2.0 configuration file.
 
 ## Notable Changes in v3.2.0
 
 
-1. Most of the command-line options have been removed from _daqconf_multiru_gen_
+1. Most of the command-line options have been removed from _fddaqconf_gen_
 
 
 2. Readout apps are configured through the HardwareMapService from _detchannelmaps_, using a "Hardware Map File"
 
 ### Creating a configuration file
-A default configuration can be generated via `echo '{}' >daqconf.json;daqconf_multiru_gen -c daqconf.json`. This is the basic starting point, and any non-default options can be specified, using `daqconf_multiru_gen -h` as the guide for constructing the JSON file (or use the [schema](https://github.com/DUNE-DAQ/daqconf/blob/develop/schema/daqconf/confgen.jsonnet)). For this release, option names have been kept the same as much as possible, so it should be a fairly direct translation.
+A default configuration can be generated via `echo '{}' >daqconf.json;fddaqconf_gen -c daqconf.json`. This is the basic starting point, and any non-default options can be specified, using `fddaqconf_gen -h` as the guide for constructing the JSON file (or use the [schema](https://github.com/DUNE-DAQ/daqconf/blob/develop/schema/daqconf/confgen.jsonnet)). For this release, option names have been kept the same as much as possible, so it should be a fairly direct translation.
 
 Example:
 
 v3.1.0 Command line
 ```
-daqconf_multiru_gen -e -n 10 -a 62144 -b 200000 -f --tpc-region-name-prefix=gio --host-ru np04-srv-030 --host-df np04-srv-004 -o /data0/test --frontend-type wib2 --clock-speed-hz 62500000 --ers-impl cern --opmon-impl cern felix_wib2_10links
+fddaqconf_gen -e -n 10 -a 62144 -b 200000 -f --tpc-region-name-prefix=gio --host-ru np04-srv-030 --host-df np04-srv-004 -o /data0/test --frontend-type wib2 --clock-speed-hz 62500000 --ers-impl cern --opmon-impl cern felix_wib2_10links
 ```
 
 Let's first reformat that command line so we can see what options we're dealing with:
@@ -85,12 +85,12 @@ For our configuration example, we see that we have one readout app on np04-srv-0
 
 The first column is the Source ID for a given link. Multiple links may have the same SourceID, depending on the detector configuration. The next four fields specify the physical location of the link in hardware coordinates and the [DetID](https://github.com/DUNE-DAQ/detdataformats/blob/develop/include/detdataformats/DetID.hpp). Next comes the FELIX card location, as host/card #, and the final two numbers are the link location within the FELIX (Super Logic Region and Link #). For physical (e.g. FELIX links), there are up to 2 SLRs each supporting up to 5 links. For the HD_TPC detector, "DetCrate" corresponds to "APA".
 
-_daqconf_multiru_gen_ will create a readout app for each unique host/card pair in the given hardware map file. The hardware map can be passed using the `--hardware-map-file` command-line option or via `readout.hardware_map_file`. Note that detector type HD_TPC can be used for both ProtoWIB and DUNEWIB configurations, they are distinguished using `readout.clock_speed_hz`.
+_fddaqconf_gen_ will create a readout app for each unique host/card pair in the given hardware map file. The hardware map can be passed using the `--hardware-map-file` command-line option or via `readout.hardware_map_file`. Note that detector type HD_TPC can be used for both ProtoWIB and DUNEWIB configurations, they are distinguished using `readout.clock_speed_hz`.
 
 ### Bonus Example (Coldbox Config)
 Command line version:
 ```
-daqconf_multiru_gen --host-ru np04-srv-028 --host-df np04-srv-001 --host-dfo np04-srv-001 --host-hsi np04-srv-001 --host-trigger np04-srv-001 --op-env np04_coldbox -o /data1 --opmon-impl cern --ers-impl cern -n 10 -b 260000 -a 2144 --clock-speed-hz 62500000 -f --region-id 0 --frontend-type wib2 --thread-pinning-file /nfs/sw/dunedaq/dunedaq-v3.1.0/configurations/thread_pinning_files/cpupin-np04-srv-028.json --hsi-trigger-type-passthrough --enable-dqm --host-dqm np04-srv-001 --dqm-cmap HDCB --dqm-impl cern np04_coldbox_daq_4ms 
+fddaqconf_gen --host-ru np04-srv-028 --host-df np04-srv-001 --host-dfo np04-srv-001 --host-hsi np04-srv-001 --host-trigger np04-srv-001 --op-env np04_coldbox -o /data1 --opmon-impl cern --ers-impl cern -n 10 -b 260000 -a 2144 --clock-speed-hz 62500000 -f --region-id 0 --frontend-type wib2 --thread-pinning-file /nfs/sw/dunedaq/dunedaq-v3.1.0/configurations/thread_pinning_files/cpupin-np04-srv-028.json --hsi-trigger-type-passthrough --enable-dqm --host-dqm np04-srv-001 --dqm-cmap HDCB --dqm-impl cern np04_coldbox_daq_4ms 
 ```
 
 Options
@@ -180,9 +180,9 @@ HardwareMap.txt:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: jtenavidal_
 
-_Date: Wed May 24 10:18:12 2023 -0500_
+_Date: Tue Sep 19 09:58:44 2023 -0400_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
