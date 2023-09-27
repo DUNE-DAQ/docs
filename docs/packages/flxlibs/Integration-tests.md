@@ -371,7 +371,7 @@ quit
 
 Create the following nanorc configuration:
 ```bash
-daqconf_multiru_gen -f -e --host-ru localhost --region-id 0 --host-df localhost -o . -s 1 --number-of-data-producers 10 --enable-firmware-tpg --enable-raw-recording --enable-tpset-writing --trigger-activity-config 'dict(prescale=500)' --trigger-candidate-config 'dict(prescale=20)' --tpg-channel-map ProtoDUNESP1ChannelMap flx-fw-json
+fddaqconf_gen -f -e --host-ru localhost --region-id 0 --host-df localhost -o . -s 1 --number-of-data-producers 10 --enable-firmware-tpg --enable-raw-recording --enable-tpset-writing --trigger-activity-config 'dict(prescale=500)' --trigger-candidate-config 'dict(prescale=20)' --tpg-channel-map ProtoDUNESP1ChannelMap flx-fw-json
 ```
 to raw record data in nanorc you must create a file `record-cmd.json` with the following contents:
 ```json
@@ -422,9 +422,9 @@ if successful, you will see output files for each link with a rather with file s
 _Last git commit to the markdown source of this page:_
 
 
-_Author: ShyamB97_
+_Author: roland-sipos_
 
-_Date: Thu Aug 4 12:26:10 2022 +0100_
+_Date: Wed Sep 27 09:53:05 2023 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/flxlibs/issues](https://github.com/DUNE-DAQ/flxlibs/issues)_
 </font>
