@@ -386,7 +386,7 @@ NAME        READY   STATUS    RESTARTS   AGE
 dataflow0   1/1     Running   0          66s
 ...
 ```
-to get a list of pods corresponding to DAQ applications. This should be run from the node that hosts the control plane, which is `np04-srv-015`. (The control plane is a collection of top level components that manage the whole kubernetes cluster, including the API server and a data store that keeps track of current/desired state.)
+to get a list of pods corresponding to DAQ applications.
 
 Now do:
 ```bash
@@ -436,7 +436,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pierre Lasorak_
 
-_Date: Thu Oct 5 17:35:32 2023 +0200_
+_Date: Thu Oct 5 17:55:09 2023 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>
