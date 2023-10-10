@@ -23,6 +23,19 @@ The **Application** class has attibutes defining the application's
 
  **Session** is provided in the `scripts` directory.
 
+## ReadoutMap
+
+ ![ReadoutMap schema](ReadoutMap.png)
+
+ The **ReadoutMap** included here is currently a direct translation
+from the jsonnet schema in the `daqconf` package with the addition of
+a grouping class **ReadoutGroup**.
+
+ The **DROStreamConf** class inherits from **ResourceBase** allowing
+individual streams to be disabled.  **DROStreamConfs** are grouped
+into **ReadoutGroups** which inherit from **ResourceSetAND** so if all
+streams in a group are disabled the group itself is disabled.
+
 
 ## Notes
 
@@ -56,7 +69,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Gordon Crone_
 
-_Date: Wed Aug 9 17:01:16 2023 +0100_
+_Date: Thu Oct 5 11:55:30 2023 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/coredal/issues](https://github.com/DUNE-DAQ/coredal/issues)_
 </font>
