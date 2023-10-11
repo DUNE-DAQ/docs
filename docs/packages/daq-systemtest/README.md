@@ -1,4 +1,4 @@
-# daq-systemtest
+# daqsystemtest
 
 This repository contains configurations for system-level DAQ tests. Currently, there are two subdirectories:
 
@@ -19,9 +19,9 @@ For more on emulated systems tests (`config/emulated_systems`), click [here](con
 # Test-specific notes
 
 
-* The tests in [`config/timing_systems`](https://github.com/DUNE-DAQ/daq-systemtest/tree/develop/config/timing_systems) consist of a `*_daq.json` file which should be run through `fddaqconf_gen` and a `*_timing.json` file which should be run through `daqconf_timing_gen`
+* The tests in [`config/timing_systems`](https://github.com/DUNE-DAQ/daqsystemtest/tree/develop/config/timing_systems) consist of a `*_daq.json` file which should be run through `fddaqconf_gen` and a `*_timing.json` file which should be run through `daqconf_timing_gen`
 
-* [`detector_configurations/wib_hd_coldbox.json`](https://raw.githubusercontent.com/DUNE-DAQ/daq-systemtest/develop/config/detector_configurations/wib_hd_coldbox.json) is a configuration for `wibconf_gen`
+* [`detector_configurations/wib_hd_coldbox.json`](https://raw.githubusercontent.com/DUNE-DAQ/daqsystemtest/develop/config/detector_configurations/wib_hd_coldbox.json) is a configuration for `wibconf_gen`
 
 
 
@@ -31,9 +31,9 @@ For more on emulated systems tests (`config/emulated_systems`), click [here](con
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jtenavidal_
+_Author: Pengfei Ding_
 
-_Date: Tue Sep 19 07:28:55 2023 -0500_
+_Date: Wed Oct 11 13:34:51 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>

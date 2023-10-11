@@ -17,7 +17,7 @@
 
     * dal
 
-    * daq-systemtest
+    * daqsystemtest
 
     * daqconf
 
@@ -75,7 +75,7 @@
 
     * ctbmodules
 
-    * daq-systemtest
+    * daqsystemtest
 
     * daqconf
 
@@ -151,7 +151,7 @@
 
 * **Repositories with write access**:
 
-    * daq-systemtest
+    * daqsystemtest
 
     * dqm
 
@@ -197,7 +197,7 @@
 
 * **Repositories with write access**:
 
-    * daq-systemtest
+    * daqsystemtest
 
     * datafilter
 
@@ -213,7 +213,7 @@
 
 * **Repositories with write access**:
 
-    * daq-systemtest
+    * daqsystemtest
 
     * dtpcontrols
 
@@ -256,9 +256,9 @@ Page was generated at: 18/08/2023 11:01:27
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Pengfei Ding_
 
-_Date: Fri Aug 18 11:03:35 2023 -0500_
+_Date: Wed Oct 11 13:42:58 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
