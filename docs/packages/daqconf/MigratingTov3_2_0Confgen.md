@@ -113,10 +113,6 @@ Options
 --frontend-type wib2 
 --thread-pinning-file /nfs/sw/dunedaq/dunedaq-v3.1.0/configurations/thread_pinning_files/cpupin-np04-srv-028.json # (readout.thread_pinning_file)
 --hsi-trigger-type-passthrough  # (trigger.hsi_trigger_type_passthrough)
---enable-dqm # (dqm.enable_dqm, or --enable-dqm)
---host-dqm np04-srv-001 # (dqm.host_dqm (note that host_dqm is a list of allowed hosts for dqm processing)
---dqm-cmap HDCB # (dqm.dqm_cmap)
---dqm-impl cern # (dqm.dqm_impl)
 ```
 
 Configuration file
@@ -180,9 +176,9 @@ HardwareMap.txt:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jtenavidal_
+_Author: Alessandro Thea_
 
-_Date: Tue Sep 19 09:58:44 2023 -0400_
+_Date: Thu Oct 12 16:27:36 2023 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
