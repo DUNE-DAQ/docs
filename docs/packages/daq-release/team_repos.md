@@ -7,6 +7,8 @@
 
 * **Repositories with write access**:
 
+    * appdal
+
     * appfwk
 
     * cmdlib
@@ -17,9 +19,9 @@
 
     * dal
 
-    * daqsystemtest
-
     * daqconf
+
+    * daqsystemtest
 
     * dbe
 
@@ -34,6 +36,8 @@
     * ers
 
     * erskafka
+
+    * fddaqconf
 
     * flx-k8s-device-plugin
 
@@ -75,17 +79,19 @@
 
     * ctbmodules
 
-    * daqsystemtest
-
     * daqconf
 
     * daqdataformats
+
+    * daqsystemtest
 
     * dfmessages
 
     * dfmodules
 
     * dpdklibs
+
+    * fddaqconf
 
     * fdreadoutlibs
 
@@ -147,7 +153,7 @@
 
 ## dqm
 
-* **People to contact**: Wes Ketchum, Pip Hamilton
+* **People to contact**: Wes Ketchum 
 
 * **Repositories with write access**:
 
@@ -156,6 +162,8 @@
     * dqm
 
     * dqm-backend
+
+    * dqmtools
 
     * rawdatautils
 
@@ -246,7 +254,7 @@
     * wibmod
 
 
-Page was generated at: 18/08/2023 11:01:27
+Page was generated at: 16/10/2023 14:28:53
 
 
 
@@ -256,9 +264,9 @@ Page was generated at: 18/08/2023 11:01:27
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pengfei Ding_
+_Author: John Freeman_
 
-_Date: Wed Oct 11 13:42:58 2023 -0500_
+_Date: Mon Oct 16 14:37:26 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
