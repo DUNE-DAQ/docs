@@ -18,10 +18,13 @@ This is a repo containing DUNE DAQ release making tools, configuarion files, and
 1. [DAQ software development workflow -- Gitflow](development_workflow_gitflow.md)
 
 
-2. [How to trigger a special nightly release build with feature branches](feature_branch_ci_build.md)
+2. [List of GitHub Teams and Repositories](team_repos.md)
 
 
-2. [To-be-updated: Continous Integraion for DUNE DAQ software](ci_github_action.md)
+3. [How to build external software with spack in a local workarea](Build-external-packages-with-spack-in-a-work-area.md)
+
+
+4. [To-be-updated: Continous Integraion for DUNE DAQ software](ci_github_action.md)
 
 ### For DAQ software coordiantion team:
 
@@ -36,6 +39,9 @@ This is a repo containing DUNE DAQ release making tools, configuarion files, and
 3. [How to add new modules to `pypi-repo`](add_modules_to_pypi_repo.md)
 
 
+4. [How to build a new stack of external software](Build-new-external-software-stack.md)
+
+
 -----
 
 <font size="1">
@@ -44,7 +50,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pengfei Ding_
 
-_Date: Fri Sep 15 16:55:22 2023 -0500_
+_Date: Wed Oct 25 11:29:29 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
