@@ -203,6 +203,7 @@ nav:
              - About fddetdataformats: packages/fddetdataformats/README.md
           - fdreadoutlibs:
              - About fdreadoutlibs: packages/fdreadoutlibs/README.md
+             - packages/fdreadoutlibs/apps/README.md
              - packages/fdreadoutlibs/test/apps/README.md
           - flxlibs:
              - About flxlibs: packages/flxlibs/README.md
