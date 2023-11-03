@@ -19,12 +19,12 @@ First, a reminder to set up your working software environment and download the f
 
 Next we generate some sample system configurations and use _[nanorc](https://dune-daq-sw.readthedocs.io/en/latest/packages/nanorc/)_ to run a demo system with them.
 
-The tools to generate these configurations consist of a single Python script that generates DAQ system configurations with different characteristics based on the configuration file given to the script. This script is `daqconf/scripts/daqconf_multiru_gen`. It uses `daqconf/schema/daqconf/confgen.jsonnet` to define the format for configuration JSON files.
+The tools to generate these configurations consist of a single Python script that generates DAQ system configurations with different characteristics based on the configuration file given to the script. This script is `daqconf/scripts/fddaqconf_gen`. It uses `daqconf/schema/daqconf/confgen.jsonnet` to define the format for configuration JSON files.
 The configuration generation files under the `daqconf/python/daqconf/apps` directory were developed to work with the _nanorc_ package, which itself can be seen as a basic Finite State Machine that sends commands and drives the DAQ system.
 
 Here is an example command line which uses the provided JSON file that has all of the default values populated (so it is equivalent to running without any options at all!). Note for the reader that it scrolls horizontally. The command below assumes you also have a hardware map file available, e.g. [this basic example](https://raw.githubusercontent.com/DUNE-DAQ/daq-systemtest/develop/config/default_system/default_system_HardwareMap.txt). Further details on hardware map files can be found at the bottom of this page. 
 ```
-daqconf_multiru_gen --hardware-map-file <your hardware map file> --config daqconf/config/daqconf_full_config.json daq_fake00
+fddaqconf_gen --hardware-map-file <your hardware map file> --config daqconf/config/daqconf_full_config.json daq_fake00
 ```
 The created configurations will be called `daq_fake<NN>` and there will be a `daq_fake<NN>` directory created containing the produced configuration to be used with  _nanorc_.
 The configurations can be run interactively with `nanorc daq_fake<NN> <partition_name>` from the `<work_dir>`.
@@ -32,7 +32,7 @@ The configurations can be run interactively with `nanorc daq_fake<NN> <partition
 In the following sections, we will use "dot" notation to indicate JSON paths, so that `readout.data_file $PWD/frames.bin` is equvalent to `"readout": { "data_file": "$PWD/frames.bin" }`.
 
 1) In order to get the set of configuration options that can be overridden from the command line and their `help` , run :
-`daqconf_multiru_gen -h`
+`fddaqconf_gen -h`
 Command-line options override any options set in the configuration file, which in turn override any default values.
 
 2) The data `Input` and `Output` system configuration options allow the user to change the input data file location and the output data directory path as needed. To specify an input `frames.bin` file from the current directory, a user would use `readout.data_file $PWD/frames.bin`. This file contains data frames that are replayed by fake cards in the current system, and as mentioned above, this file can be downloaded with "`curl -o frames.bin -O https://cernbox.cern.ch/index.php/s/7qNnuxD8igDOVJT/download`". The output data path option `dataflow.apps[n].output_dirs` can be used to specify the directory where output data files are written. If more than one path is provided in the array, the DataWriter will use those directories in rotation for writting TriggerRecords.
@@ -70,7 +70,7 @@ slowdown_conf.json (Applying the data slowdown factor from point 4):
 }
 }
 ```
-`daqconf_multiru_gen --config slowdown_conf.json daq_fake01`
+`fddaqconf_gen --config slowdown_conf.json daq_fake01`
 
 multi_df.json (Running two dataflow apps):
 ```JSON
@@ -83,7 +83,7 @@ multi_df.json (Running two dataflow apps):
 }
 }
 ```
-`daqconf_multiru_gen --config multi_df.json daq_fake02`
+`fddaqconf_gen --config multi_df.json daq_fake02`
 
 9) One of the key options is the `--detector-readout-map-file`, or `readout.detector_readout_map_file`, which points the configuration generators to a JSON file describing the readout links in the current configuration. It can be generated using [this utility from daqconf](https://github.com/DUNE-DAQ/daqconf/blob/develop/test/scripts/daqconf_dromap_gen) and edited using [this utility](https://github.com/DUNE-DAQ/daqconf/blob/develop/scripts/dromap_editor).
 
@@ -94,9 +94,9 @@ multi_df.json (Running two dataflow apps):
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: jtenavidal_
 
-_Date: Wed May 24 10:18:12 2023 -0500_
+_Date: Tue Sep 19 09:58:44 2023 -0400_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>

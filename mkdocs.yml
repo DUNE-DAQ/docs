@@ -132,11 +132,12 @@ nav:
           - daq-release:
              - About daq-release: packages/daq-release/README.md
              - packages/daq-release/add_modules_to_pypi_repo.md
+             - packages/daq-release/Build-external-packages-with-spack-in-a-work-area.md
+             - packages/daq-release/Build-new-external-software-stack.md
              - packages/daq-release/ci_github_action.md
              - packages/daq-release/create_release_spack.md
              - packages/daq-release/development_workflow_gitflow.md
              - packages/daq-release/feature_branch_ci_build.md
-             - packages/daq-release/install_additional_external_pkgs.md
              - packages/daq-release/nd_development_workflow_gitflow.md
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
@@ -202,6 +203,7 @@ nav:
              - About fddetdataformats: packages/fddetdataformats/README.md
           - fdreadoutlibs:
              - About fdreadoutlibs: packages/fdreadoutlibs/README.md
+             - packages/fdreadoutlibs/test/apps/README.md
           - flxlibs:
              - About flxlibs: packages/flxlibs/README.md
              - packages/flxlibs/Basic-tests.md
@@ -243,7 +245,9 @@ nav:
              - About dbe: packages/dbe/README.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
+             - packages/nanorc/FAQ-k8s.md
              - packages/nanorc/FAQ.md
+             - packages/nanorc/integtests/README.md
              - packages/nanorc/src/nanorc/webuidata/static/vendor/jquery-machine/README.md
              - packages/nanorc/src/nanorc/webuidata/static/vendor/jstree/demo/README.md
              - packages/nanorc/src/nanorc/webuidata/static/vendor/jstree/README.md

@@ -18,7 +18,7 @@ Here are sample commands for using them
 
 * make any necessary edits to `long_window_readout.json`
 
-* `daqconf_multiru_gen -c ./long_window_readout.json --hardware-map-file ./long_window_readout_DetReadoutMap.json lwr_config`
+* `fddaqconf_gen -c ./long_window_readout.json --hardware-map-file ./long_window_readout_DetReadoutMap.json lwr_config`
 
 * `wget https://www.dropbox.com/s/9b1xtkjbkfyakij/frames_wib2.bin`  # if needed
 
@@ -34,9 +34,9 @@ Here are sample commands for using them
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: jtenavidal_
 
-_Date: Wed May 24 10:31:30 2023 -0500_
+_Date: Tue Sep 19 07:28:55 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
 </font>

@@ -115,13 +115,9 @@ for package in $package_list ; do
     # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout v7.2.1_for_docs
-    elif [[ "$package" =~ "daq-cmake" ]]; then
-	git checkout v2.3.2
-    elif [[ "$package" =~ "dal" || "$package" =~ "dbe" ]]; then
-	git checkout develop
+	git checkout v7.4.0_for_docs
     else
-	git checkout dunedaq-v4.1.1
+	git checkout dunedaq-v4.2.0 || git checkout fddaq-v4.2.0 || git checkout nddaq-v4.2.0
     fi
     echo $tmpdir/$package
 

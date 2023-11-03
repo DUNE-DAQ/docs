@@ -1,15 +1,12 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited Aug-10-2023_
+_This document was last edited Nov-3-2023_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
 ## System requirements
 
-To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.opensciencegrid.org` and `/cvmfs/dunedaq-development.opensciencegrid.org`. This is the case, e.g., on the np04 cluster at CERN. If you've been doing your own Spack work on the
-system in question, you may also want to back up (rename) your
-existing `~/.spack` directory to give Spack a clean slate to start
-from in these instructions.
+To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.opensciencegrid.org` and `/cvmfs/dunedaq-development.opensciencegrid.org`. This is the case, e.g., on the np04 cluster at CERN. By default, the environment variable `SPACK_DISABLE_LOCAL_CONFIG` is set to `true`, which allows spack to skip user configurations found under `~/.spack`. In rare cases, if you want spack to pick up your local configurations, you can unset this environment variable by issuing `unset SPACK_DISABLE_LOCAL_CONFIG`. However, the recommended way of using customized spack configrations is via the use of a workarea with a local spack instance. Customizations to spack configurations can be directly put into that local instance. More details about how to create a workarea with a spack instance can be found in the "[Advanced dbt-create options section](#Advanced dbt-create options)" on this page. 
 
 <a name="Setup_of_daq-buildtools"></a>
 ## Setup of `daq-buildtools`
@@ -17,15 +14,16 @@ from in these instructions.
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt fddaq-v4.1.1  
+setup_dbt fddaq-v4.2.0
 ```
-Here `fddaq-v4.1.1` is an alias for `v7.2.1`; this is the latest daq-buildtools version as of Aug-10-2023.
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.2.1/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.2.1/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.4.0/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.4.0/scripts -> PATH
 DBT setuptools loaded
 ```
+where `fddaq-v4.2.0` is aliased to daq-buildtools `v7.4.0`. 
+
 If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create`, `dbt-build`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. 
 
 Each time that you log into a fresh Linux shell and want to either (1) set up an existing cvmfs-based DUNE DAQ software release or (2) develop code within a pre-existing DUNE DAQ work area, you'll need to set up daq-buildtools. These two cases are described in detail momentarily. For (1) you'd want to repeat the method above to set up daq-buildtools. For (2) it's easier instead to `cd` into the work area and source the file named `env.sh`. 
@@ -36,7 +34,7 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v4.1.1 the latest frozen release as of Aug-10-2023
+dbt-setup-release <release> # fddaq-v4.2.0-a9 the latest frozen release as of Nov-3-2023
 ```
 As of July 2023, the DUNE DAQ software stack has been split into far detector and near detector-specific parts. Starting with the `v4.1.0` release of the stack, do _not_ use the traditional convention of `dunedaq-vX.Y.Z` as the frozen release label, but instead, `fddaq-vX.Y.Z` and `nddaq-vX.Y.Z`. Note that for `v4.1.0` and `v4.1.1` we only have a far detector-specific stack. 
 
@@ -98,7 +96,7 @@ Along with telling `dbt-create` what you want your work area to be named and wha
 * `-s/--spack`: Install a local Spack instance in the work area. This will allow you to install and load whatever Spack packages you wish into your work area. 
 
 
-* `-c/--clone-pyvenv`: By default, the Python virtual environment your work area uses is in the release area on cvmfs. However, if you choose this option, `dbt-create` will actually copy this virtual environment over to your work area, thereby giving you write permission.
+* `-c/--clone-pyvenv`: Use this if you wish to develop a Python package. By default, the Python virtual environment your work area uses is in the release area on cvmfs. However, if you choose this option, `dbt-create` will actually copy this virtual environment over to your work area, thereby giving you write permission.
   
 
 * `-i/--install-pyvenv`: With this option, there will be compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory. This is typically slower than cloning, but not always. You can take further control by combining it with the `-p <requirements file>` argument, though it's unlikely as a typical developer that you'd want a non-standard set of Python packages. 
@@ -199,7 +197,20 @@ In the listrev instructions you'll be running a program called `nanorc` to run t
 
 A couple of things need to be kept in mind when you're building code in a work area. The first is that when you call `dbt-build`, it will build your repos against a specific release of the DUNE DAQ software stack - namely, the release you (or someone else) provided to `dbt-create` when the work area was first created. Another is that the layout and behavior of a work area is a function of the version of daq-buildtools which was used to create it. As a work area ages it becomes increasingly likely that a problem will occur when you try to build a repo in it; this is natural and unavoidable. 
 
-As such, it's important to know the assumptions a work area makes when you use it to build code. In the base of your work area is a file called `dbt-workarea-constants.sh`, which will look something like the following:
+As such, it's important to know the assumptions a work area makes when you use it to build code. This section covers ways to learn details about your work area and its contents.
+
+### Convenience scripts
+
+
+* `dbt-release-info`: will provide the release type the work area is based on (far detector vs. near detector), as well as the name of the full release and the base release 
+
+* `dbt-pkg-info <pkgname>`: will provide the version/branch of the package referred to by `<pkgname>`, as well as the corresponding git commit hash of its code, whether the package is built in the local work area or is on cvmfs
+
+* `dbt-src-status`: will tell you the branch each of the repos in your work area is on, as well as whether the code on the branch has been edited (indicated by an `*`) 
+
+### `dbt-workarea-constants.sh`
+
+In the base of your work area is a file called `dbt-workarea-constants.sh`, which will look something like the following:
 ```
 export SPACK_RELEASE="fddaq-v4.1.0"
 export SPACK_RELEASES_DIR="/cvmfs/dunedaq.opensciencegrid.org/spack/releases"
@@ -216,13 +227,15 @@ This file is sourced whenever you run `dbt-workarea-env`, and it tells both the 
 
 * `LOCAL_SPACK_DIR`: If the `-s/--spack` was passed to `dbt-create` when the work area was built, this points to where the local Spack area is located
 
-There are also useful Spack commands which can be executed to learn about the versions of the individual packages you're working with, once you've run `dbt-workarea-env` or `dbt-setup-release`. An [excellent Spack tutorial](https://spack-tutorial.readthedocs.io/en/latest/tutorial_basics.html) inside the official Spack documentation is worth a look, but a few Spack commands can be used right away to learn more about your environment:
+### Useful Spack commands
 
-* `spack find --loaded -N | grep dunedaq-vX.Y.Z` will tell you all the DUNE DAQ packages common to both far- and near detector software which have been loaded by `dbt-workarea-env` or `dbt-setup-release`
+There are also useful Spack commands which can be executed to learn about the versions of the individual packages you're working with, once you've run `dbt-workarea-env` or `dbt-setup-release`. An [excellent Spack tutorial](https://spack-tutorial.readthedocs.io/en/latest/tutorial_basics.html) inside the official Spack documentation is worth a look, but a few Spack commands can be used right away to learn more about your environment. They're presented both for the case of you having set up a nightly release and a frozen release:
 
-* `spack find --loaded -N | grep fddaq-vX.Y.Z` for far detector DUNE DAQ packages
+* `spack find --loaded -N | grep dunedaq-vX.Y.Z` or `spack find --loaded -N | grep NB` will tell you all the DUNE DAQ packages shared by both far- and near detector software which have been loaded by `dbt-workarea-env` or `dbt-setup-release`
 
-* `spack find --loaded -N | grep nddaq-vX.Y.Z` for near detector DUNE DAQ packages
+* `spack find --loaded -N | grep fddaq-vX.Y.Z` or `spack find --loaded -N | grep FD` for far detector DUNE DAQ packages
+
+* `spack find --loaded -N | grep nddaq-vX.Y.Z` or `spack find --loaded -N | grep ND` for near detector DUNE DAQ packages
 
 * `spack find --loaded -N | grep dunedaq-externals` for external packages not developed by DUNE collaborators
 
@@ -246,7 +259,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Aug 10 16:46:48 2023 -0500_
+_Date: Fri Nov 3 11:51:24 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
