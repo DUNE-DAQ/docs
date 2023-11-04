@@ -11,7 +11,7 @@ package's documentation. It may provide links to other Markdown files,
 or to other webpages, where necessary. As of October 2022, Markdown
 files in other directories of the repo besides `docs/` also get picked
 up and added to the official documentation (see, e.g., the ToC for
-`daq-systemtest` in the left sidebar of the main page). Note that in
+`daqsystemtest` in the left sidebar of the main page). Note that in
 this model, it's possible to edit the documentation within a package's
 GitHub page, making it easy to check for Markdown syntax errors before
 committing.
