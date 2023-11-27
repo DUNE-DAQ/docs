@@ -1,4 +1,4 @@
-# daq-systemtest README
+# daqsystemtest README
 
 * 19-Jul-2023, ELF, KAB, and others: notes on existing integtests
 
@@ -40,5 +40,5 @@ _Author: Kurt Biery_
 
 _Date: Wed Jul 19 15:16:12 2023 -0500_
 
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-systemtest/issues](https://github.com/DUNE-DAQ/daq-systemtest/issues)_
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqsystemtest/issues](https://github.com/DUNE-DAQ/daqsystemtest/issues)_
 </font>

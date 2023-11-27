@@ -5,7 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="wibmod utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif rawdatautils opmonlib ndreadoutlibs nddetdataformats nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest flxlibs fdreadoutlibs fddetdataformats erskafka ers dtpctrllibs dtpcontrols dqm dpdklibs dfmodules dfmessages detdataformats detchannelmaps daqdataformats dbe daqconf dal daq-systemtest daq-release daq-cmake daq-buildtools daq-assettools coredal cmdlib appfwk"
+package_list="wibmod utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif rawdatautils opmonlib ndreadoutlibs nddetdataformats nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest flxlibs fdreadoutlibs fddetdataformats erskafka ers dtpctrllibs dtpcontrols dqm dpdklibs dfmodules dfmessages detdataformats detchannelmaps daqdataformats dbe daqconf dal daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools coredal cmdlib appfwk"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -115,9 +115,9 @@ for package in $package_list ; do
     # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout v7.2.1_for_docs
+	git checkout latest_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
-	git checkout v2.3.2
+	git checkout v2.4.0
     elif [[ "$package" =~ "daq-release" ]]; then
         git checkout johnfreeman/daq-deliverables_issue108_onboarding_page
     else

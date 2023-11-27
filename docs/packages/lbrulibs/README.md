@@ -42,7 +42,7 @@ requests. These can be safely ignored.
 
 To use nanorc instead (preffered for testing) use:
 
-    daqconf_multiru_gen --host-ru localhost -o . --number-of-data-producers 1 --frontend-type pacman --trigger-window-before-ticks 2500000 --trigger-window-after-ticks 2500000 --trigger-rate-hz 1.0 --enable-raw-recording mdapp_4proc_pacman_1Hz_pt1second_mode3
+    nddaqconf_gen --host-ru localhost -o . --number-of-data-producers 1 --frontend-type pacman --trigger-window-before-ticks 2500000 --trigger-window-after-ticks 2500000 --trigger-rate-hz 1.0 --enable-raw-recording mdapp_4proc_pacman_1Hz_pt1second_mode3
 
 to generate a config and then:
 
@@ -85,9 +85,9 @@ Python scripts for testing as well as a full integration test for this are still
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Krzysztof Furman_
+_Author: jtenavidal_
 
-_Date: Mon Jun 13 08:40:41 2022 -0500_
+_Date: Tue Sep 19 09:35:21 2023 -0400_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/lbrulibs/issues](https://github.com/DUNE-DAQ/lbrulibs/issues)_
 </font>

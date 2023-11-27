@@ -33,7 +33,7 @@ As of Oct-4-2022, here are the steps that should be used when you first create y
 10. `git clone https://github.com/DUNE-DAQ/daq-systemtest`
 
 
-11. `daqconf_multiru_gen --hardware-map-file daq-systemtest/config/default_system_HardwareMap.txt daq_fake`
+11. `fddaqconf_gen --hardware-map-file daq-systemtest/config/default_system_HardwareMap.txt daq_fake`
 
 
 12. `nanorc daq_fake ${USER}-test boot conf start_run 101 wait 60 stop_run shutdown`
@@ -108,9 +108,9 @@ If and when you are ready to start looking at existing code and possibly modifyi
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Jonathan Hancock_
+_Author: jtenavidal_
 
-_Date: Fri Jun 30 14:02:34 2023 +0200_
+_Date: Tue Sep 19 09:58:44 2023 -0400_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>

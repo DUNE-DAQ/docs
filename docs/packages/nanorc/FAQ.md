@@ -100,6 +100,14 @@ the expert command could be:`
 expert_command /config/config/rulocalhosteth0 the-file.json
 ```
 
+## Ports clashing
+The usual answer is that you need to feed a different `--partition-number`. Nanorc offset automatically ports in your configuration here is what is used:
+- `nanorc`: `port_offset` = 0 + `partition_number` * 500 + `subsystem_number` * 50
+- `nano04rc`: `port_offset` = 0 + `partition_number` * 500 + `subsystem_number` * 50
+- `nanotimingrc`: `port_offset` = 300 + `partition_number` * 500 + `subsystem_number` * 50
+
+If the offsets are the same and you are running nanorc on the same host, you will get port clash errors.
+
 -----
 
 <font size="1">
@@ -108,7 +116,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pierre Lasorak_
 
-_Date: Fri Jul 7 16:16:14 2023 +0200_
+_Date: Fri Oct 13 17:11:10 2023 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/nanorc/issues](https://github.com/DUNE-DAQ/nanorc/issues)_
 </font>
