@@ -23,7 +23,10 @@ You'll need a few accounts to work with the DUNE DAQ consortium. These include:
 
 * ...[CERN's lxplus cluster](https://abpcomputing.web.cern.ch/computing_resources/lxplus/), where you'll first need to get an account
 
-* ...and to do that, you'll need to start with a [CERN user account](https://account.cern.ch/account/). You'll want a standard computing account, not the "Lightweight" one. Contact the DUNE collaboration coordinator, Maxine Hronek, at `maxine@fnal.gov` if you have questions. 
+* ...and to do that, you'll need to start with a [CERN user account](https://account.cern.ch/account/). You'll want a standard computing account, not the "Lightweight" one. Contact the DUNE collaboration coordinator, Maxine Hronek, at `maxine@fnal.gov` if you have questions.
+
+* See more about accessing the np04 computing cluster at https://twiki.cern.ch/twiki/bin/view/CENF/AccessRequirements
+
 
 ### For Communication
 
@@ -74,7 +77,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: jcfreeman2_
 
-_Date: Sat Sep 2 10:30:05 2023 -0500_
+_Date: Fri Oct 13 10:55:20 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

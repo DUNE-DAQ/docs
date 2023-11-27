@@ -119,7 +119,9 @@ for package in $package_list ; do
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout v2.4.0
     elif [[ "$package" =~ "daq-release" ]]; then
+        echo "Checking out johnfreeman/daq-deliverables_issue108_onboarding_page"
         git checkout johnfreeman/daq-deliverables_issue108_onboarding_page
+        git log -1
     else
 	git checkout develop
     fi
