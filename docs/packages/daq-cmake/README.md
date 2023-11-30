@@ -370,6 +370,9 @@ Your plugin will look in `include/` for your project's public headers
 and `src/` for its private headers. Additionally, if it's a "TEST"
 plugin, it will look in `test/src/`.
 
+Note that if `cetlib` is a dependency of the package being built, it
+will be automatically linked against the plugin.
+
 ### daq_add_application
 
 Usage:
@@ -406,7 +409,7 @@ token.
 ### daq_oks_codegen
 Usage:
 ```
-daq_oks_codegen(<oks schema filename1> ... [NAMESPACE ns] [DEP_PKGS pkg1 pkg2 ...])
+daq_oks_codegen(<oks schema filename1> ... [NAMESPACE ns] [DALDIR subdir] [DEP_PKGS pkg1 pkg2 ...])
 ```
 
 `daq_oks_codegen` uses the genconfig package's application of the same
@@ -418,6 +421,8 @@ Arguments:
   `<oks schema filename1> ...`: the list of OKS schema files to process from `<package>/schema/<package>`. 
 
  `NAMESPACE`: the namespace in which the generated C++ classes will be in. Defaults to `dunedaq::<package>`
+
+ `DALDIR`: subdirectory relative to the package's primary include directory where headers will appear (`include/<package>/<DALDIR argument>`); default is no subdirectory
 
  `DEP_PKGS`: if a schema file you've provided as an argument itself includes a schema file (or schema files) from one or more other packages, you need to supply the names of the packages as arguments to DEP_PKGS. 
 
@@ -495,7 +500,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Aug 29 09:41:29 2023 -0500_
+_Date: Wed Nov 29 11:16:01 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
