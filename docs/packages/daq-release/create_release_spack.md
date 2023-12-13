@@ -59,7 +59,7 @@ Update the file with the new versions (and, if needed, new packages) in the rele
 It's worth to do several checks before starting any test builds. These checks include:
 
 
-* Check version tags with version numbers used in `CMakeLists.txt`; The script `script/checkout-daq-package.py` in this repo can help here. `python3 script/checkout-daq-package.py -i <path-to-release-config-yaml> -a -c -o /tmp` will checkout all the DAQ packages used in the release into `/tmp` and verify if the version tags match cmake version numbers;
+* Check version tags with version numbers used in `CMakeLists.txt`; The script `scripts/checkout-daq-package.py` in this repo can help here. `python3 scripts/checkout-daq-package.py -i <path-to-release-config-yaml> -a -c -o /tmp` will checkout all the DAQ packages used in the release into `/tmp` and verify if the version tags match cmake version numbers;
 
 * Check if dependencies in `CMakeLists.txt` matches those in `cmake/<pkgname>Config.cmake.in` files;
 
@@ -125,9 +125,9 @@ To do so, login to `cvmfsdunedaq@oasiscfs01.fnal.gov` as `cvmfsdunedaq`, then do
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pengfei Ding_
+_Author: John Freeman_
 
-_Date: Mon Apr 17 13:59:52 2023 -0500_
+_Date: Wed Dec 13 14:21:31 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
