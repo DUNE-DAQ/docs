@@ -215,6 +215,7 @@ nav:
              - packages/flxlibs/Local-driver.md
           - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
+             - packages/lbrulibs/integtest/README.md
              - packages/lbrulibs/socket-implementation.md
           - nddetdataformats:
              - About nddetdataformats: packages/nddetdataformats/README.md
