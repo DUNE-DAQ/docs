@@ -295,13 +295,16 @@ library's implementation should be put in the `src/` directory.
 ### daq_protobuf_codegen:
 Usage:
 ```
-daq_protobuf_codegen( <protobuf filename1> ... [GEN_GRPC] [DEP_PKGS <package 1> ...] )
+daq_protobuf_codegen( <protobuf filename1> ... [TEST] [GEN_GRPC] [DEP_PKGS <package 1> ...] )
 ```
 
 Arguments:
 
 
 * `<protobuf filename1> ...`: these arguments are the list of `*.proto` files for protobuf's "protoc" program to process from `<package>/schema/<package>`. Globs also allowed.
+
+
+* `TEST`: If the code is meant for an entity in the package's `test/` subdirectory, `TEST` should be passed as an argument, and the schema file's path will be assumed to be `test/schema/` rather than merely `schema/`.
 
 
 * `GEN_GRPC`: if you need to cgenerate gRPC prototype for the `*.proto` files.
@@ -409,7 +412,7 @@ token.
 ### daq_oks_codegen
 Usage:
 ```
-daq_oks_codegen(<oks schema filename1> ... [NAMESPACE ns] [DALDIR subdir] [DEP_PKGS pkg1 pkg2 ...])
+daq_oks_codegen(<oks schema filename1> ... [TEST] [NAMESPACE ns] [DALDIR subdir] [DEP_PKGS pkg1 pkg2 ...])
 ```
 
 `daq_oks_codegen` uses the genconfig package's application of the same
@@ -418,13 +421,20 @@ provided to it.
 
 Arguments:
 
-  `<oks schema filename1> ...`: the list of OKS schema files to process from `<package>/schema/<package>`. 
 
- `NAMESPACE`: the namespace in which the generated C++ classes will be in. Defaults to `dunedaq::<package>`
+* `<oks schema filename1> ...`: the list of OKS schema files to process from `<package>/schema/<package>`. 
 
- `DALDIR`: subdirectory relative to the package's primary include directory where headers will appear (`include/<package>/<DALDIR argument>`); default is no subdirectory
 
- `DEP_PKGS`: if a schema file you've provided as an argument itself includes a schema file (or schema files) from one or more other packages, you need to supply the names of the packages as arguments to DEP_PKGS. 
+* `TEST`: If the code is meant for an entity in the package's `test/` subdirectory, `TEST` should be passed as an argument, and the schema file's path will be assumed to be `test/schema/` rather than merely `schema/`.
+
+
+* `NAMESPACE`: the namespace in which the generated C++ classes will be in. Defaults to `dunedaq::<package>`
+
+
+* `DALDIR`: subdirectory relative to the package's primary include directory where headers will appear (`include/<package>/<DALDIR argument>`); default is no subdirectory
+
+
+* `DEP_PKGS`: if a schema file you've provided as an argument itself includes a schema file (or schema files) from one or more other packages, you need to supply the names of the packages as arguments to DEP_PKGS. 
 
 The generated code is automatically built into the package's main
 library (i.e., you don't need to explicitly pass the names of the
@@ -500,7 +510,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed Nov 29 11:16:01 2023 -0600_
+_Date: Thu Dec 14 12:33:59 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
