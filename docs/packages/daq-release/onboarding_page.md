@@ -4,10 +4,6 @@
 
 **Who this page is for:** If you're brand new to the DUNE DAQ consortium, you're in the right place!
 
-## The Big Picture
-
-See Marco Roda's November 27, 2023 [General DAQ Introduction](https://indico.fnal.gov/event/61978/contributions/279480/attachments/173044/234062/DAQ%20Intro.pdf) for an overview of the DAQ project. 
-
 ## Accounts and Memberships 
 
 You'll need a few accounts to work with the DUNE DAQ consortium. These include:
@@ -79,7 +75,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Dec 14 18:42:52 2023 -0600_
+_Date: Fri Dec 15 08:09:56 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
