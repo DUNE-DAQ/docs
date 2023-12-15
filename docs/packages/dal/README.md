@@ -31,7 +31,7 @@ If anything goes wrong during the tests, it will be self-evident.
 
 ## A Look at OKS Databases: XML-Represented Classes and Objects
 
-While ATLAS has various database implementations (Oracle-based, etc.), for the DUNE DAQ we only need their basic database format, which is an XML file on disk. There are generally two types of database file: the kind that defines classes, which by convention have the `*.class.xml` extension, and the kind that define instances of those classes (i.e. objects) and have `*.data.xml` extensions. The class files are known from ATLAS as "schema files" and the object files are known from ATLAS as "data files". A good way to get a feel for these files is to start with the tutorial schema, `$DAL_SHARE/schema/dal/tutorial.schema.xml`. Copy it over into your work area. 
+While ATLAS has various database implementations (Oracle-based, etc.), for the DUNE DAQ we only need their basic database format, which is an XML file on disk. There are generally two types of database file: the kind that defines classes, which by convention have the `*.schema.xml` extension, and the kind that define instances of those classes (i.e. objects) and have `*.data.xml` extensions. The class files are known from ATLAS as "schema files" and the object files are known from ATLAS as "data files". A good way to get a feel for these files is to start with the tutorial schema, `$DAL_SHARE/schema/dal/tutorial.schema.xml`. Copy it over into your work area. 
 
 ### Overview of `tutorial.schema.xml`
 
@@ -173,7 +173,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Aug 29 12:34:54 2023 -0500_
+_Date: Wed Dec 13 10:52:59 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dal/issues](https://github.com/DUNE-DAQ/dal/issues)_
 </font>

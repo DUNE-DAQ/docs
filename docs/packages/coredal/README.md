@@ -55,10 +55,7 @@ that these resources are indeed associated with the VirtualHost by
 comparing with those listed in its `hw_resources` relationship.
 
 ### NetworkConnection
-
-  Contains a `uri` attribute for compatability with existing `moo`
-  schema. Hope that `protocol` and `port` can be used to construct a
-  uri with an address derived from the `Host`'s `NetworkInterface`s.
+  Describes the connection type and points to the **Service** running over this connection.
 
 
 -----
@@ -67,9 +64,9 @@ comparing with those listed in its `hw_resources` relationship.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Gordon Crone_
+_Author: Giovanna Lehmann Miotto_
 
-_Date: Thu Oct 5 11:55:30 2023 +0100_
+_Date: Sun Nov 26 17:13:12 2023 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/coredal/issues](https://github.com/DUNE-DAQ/coredal/issues)_
 </font>
