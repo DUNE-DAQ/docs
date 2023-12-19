@@ -127,7 +127,7 @@ nav:
           - daq-buildtools:
           - daq-cmake:
           - daq-release:
-          - daq-systemtest:
+          - daqsystemtest:
           - integrationtest:
           - styleguide:
        - Core:   
