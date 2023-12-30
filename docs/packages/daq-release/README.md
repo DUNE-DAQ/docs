@@ -1,16 +1,16 @@
 # About daq-release
 
-[![Nightly Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-integtest.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-integtest.yml)
 
-[![Spack Nightly Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack.yml)
+[![Nightly Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-integtest.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-integtest.yml)
 
 [![AL9 Spack Nightly Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack-alma9.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack-alma9.yml)
 
+[![Spack Nightly Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack-sl7.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack-sl7.yml)
 
 
-This is a repo containing DUNE DAQ release making tools, configuarion files, and build scripts of external packages. 
+This is a repo containing DUNE DAQ release making tools, configuration files, and build scripts for both DUNE-DAQ and external packages. 
 
-## Table of content
+## Table of contents
 
 ### For DAQ software developers and users:
 
@@ -23,10 +23,7 @@ This is a repo containing DUNE DAQ release making tools, configuarion files, and
 
 3. [How to build external software with spack in a local workarea](Build-external-packages-with-spack-in-a-work-area.md)
 
-
-4. [To-be-updated: Continous Integraion for DUNE DAQ software](ci_github_action.md)
-
-### For DAQ software coordiantion team:
+### For the Software Coordination team (expert only):
 
 
 
@@ -48,9 +45,9 @@ This is a repo containing DUNE DAQ release making tools, configuarion files, and
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pengfei Ding_
+_Author: John Freeman_
 
-_Date: Wed Oct 25 11:29:29 2023 -0500_
+_Date: Sat Dec 30 09:37:00 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
