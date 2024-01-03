@@ -3,9 +3,9 @@
 
 [![Nightly Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-integtest.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-integtest.yml)
 
-[![AL9 Spack Nightly Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack-alma9.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack-alma9.yml)
+[![AL9 Spack Nightly Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-alma9.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-alma9.yml)
 
-[![Spack Nightly Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack-sl7.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-spack-sl7.yml)
+[![Spack Nightly Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-sl7.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-sl7.yml)
 
 
 This is a repo containing DUNE DAQ release making tools, configuration files, and build scripts for both DUNE-DAQ and external packages. 
@@ -44,7 +44,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed Jan 3 09:55:39 2024 -0600_
+_Date: Wed Jan 3 13:32:42 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
