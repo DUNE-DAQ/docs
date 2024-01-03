@@ -131,7 +131,6 @@ nav:
              - About daq-cmake: packages/daq-cmake/README.md
           - daq-release:
              - About daq-release: packages/daq-release/README.md
-             - packages/daq-release/add_modules_to_pypi_repo.md
              - packages/daq-release/Build-external-packages-with-spack-in-a-work-area.md
              - packages/daq-release/Build-new-external-software-stack.md
              - packages/daq-release/ci_github_action.md

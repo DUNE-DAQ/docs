@@ -33,10 +33,7 @@ This is a repo containing DUNE DAQ release making tools, configuration files, an
 2. [How to publish files to cvmfs](publish_to_cvmfs.md)
 
 
-3. [How to add new modules to `pypi-repo`](add_modules_to_pypi_repo.md)
-
-
-4. [How to build a new stack of external software](Build-new-external-software-stack.md)
+3. [How to build a new stack of external software](Build-new-external-software-stack.md)
 
 
 -----
@@ -47,7 +44,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Sat Dec 30 09:37:00 2023 -0600_
+_Date: Wed Jan 3 09:55:39 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

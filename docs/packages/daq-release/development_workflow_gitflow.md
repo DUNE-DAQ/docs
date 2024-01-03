@@ -18,9 +18,13 @@ A team is defined at the level of [the GitHub DUNE-DAQ organization](https://git
 We have four types of branch in our workflow:
 
 
-* **`develop`** The default branch of each repository. This branch exists permanently and, shared among all developers, is not generally meant to be worked on (i.e., committed to) directly; it can only be updated via Pull Requests (PRs).  
+* **`develop` branch** 
 
-* **`Feature branches`** forked off of the `develop` branch, and where developers are meant to do their work for a specific task. When work on this branch is complete, it is merged into the `develop` branch via a Pull Request.  
+    * The default branch of each repository. This branch exists permanently and, shared among all developers, is not generally meant to be worked on (i.e., committed to) directly; it can only be updated via Pull Requests (PRs).  
+
+* **Feature branches**
+
+    * Forked off of the `develop` branch, and where developers are meant to do their work for a specific task. When work on this branch is complete, it is merged into the `develop` branch via a PR.  
 
 * **Release preparation branches** 
 
@@ -206,7 +210,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Sat Dec 30 09:37:00 2023 -0600_
+_Date: Wed Jan 3 09:55:39 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
