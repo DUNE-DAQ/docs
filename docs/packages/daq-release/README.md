@@ -15,25 +15,28 @@ This is a repo containing DUNE DAQ release making tools, configuration files, an
 ### For DAQ software developers and users:
 
 
-1. [DAQ software development workflow -- Gitflow](development_workflow_gitflow.md)
+1. [DAQ software development workflow](development_workflow_gitflow.md)
 
 
 2. [List of GitHub Teams and Repositories](team_repos.md)
 
 
-3. [How to build external software with spack in a local workarea](Build-external-packages-with-spack-in-a-work-area.md)
+3. [How to build external software with Spack in a local workarea](Build-external-packages-with-spack-in-a-work-area.md)
 
 ### For the Software Coordination team (expert only):
 
 
 
-1. [Creating a new DAQ release](create_release_spack.md)
+1. [Nightly Releases and Continuous Integration](docs/ci_github_action.md)
 
 
-2. [How to publish files to cvmfs](publish_to_cvmfs.md)
+2. [Creating a new DAQ release](create_release_spack.md)
 
 
-3. [How to build a new stack of external software](Build-new-external-software-stack.md)
+3. [How to publish files to cvmfs](publish_to_cvmfs.md)
+
+
+4. [How to build a new stack of external software](Build-new-external-software-stack.md)
 
 
 -----
@@ -44,7 +47,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed Jan 3 13:32:42 2024 -0600_
+_Date: Tue Jan 9 09:27:09 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
