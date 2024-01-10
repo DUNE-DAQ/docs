@@ -70,23 +70,23 @@ It's worth to do several checks before starting any test builds. These checks in
 
 * To publish the candidate release to cvmfs:
 
-  * Log in to `oasiscfs01.fnal.gov` as `cvmfsdunedaqdev`
+    * Log in to `oasiscfs01.fnal.gov` as `cvmfsdunedaqdev`
 
-  * Get the [`publish_release_to_cvmfs.sh` script](https://github.com/DUNE-DAQ/daq-release/blob/develop/scripts/cvmfs/publish_release_to_cvmfs.sh) (`git clone` this repo or use `curl`, e.g.)
+    * Get the [`publish_release_to_cvmfs.sh` script](https://github.com/DUNE-DAQ/daq-release/blob/develop/scripts/cvmfs/publish_release_to_cvmfs.sh) (`git clone` this repo or use `curl`, e.g.)
 
-  * Run the script without arguments for instructions; in a nutshell, it will publish the most recent release of a given specification (e.g., the most recent Alma9 near detector candidate build)
+    * Run the script without arguments for instructions; in a nutshell, it will publish the most recent release of a given specification (e.g., the most recent Alma9 near detector candidate build)
 
-  * Run it with the desired specifications (e.g. `publish_release_to_cvmfs.sh candidate nd alma9`)
+    * Run it with the desired specifications (e.g. `publish_release_to_cvmfs.sh candidate nd alma9`)
 
-  * After running the script, the release will take ~20 minutes before it appears on cvmfs
+    * After running the script, the release will take ~20 minutes before it appears on cvmfs
 
 * After the candidate release is deployed and available on cvmfs, do the following simple tests:
 
-  * Set up a work area based on the candidate release
+    * Set up a work area based on the candidate release
 
-  * If it's a far detector release, clone and build `daqsystemtest` used in this release and run `minimal_system_quick_test.py` in its `integtest` sub-directory
+    * If it's a far detector release, clone and build `daqsystemtest` used in this release and run `minimal_system_quick_test.py` in its `integtest` sub-directory
 
-  * The above tests should be run on at least one NP04 DAQ server, and one Fermilab server
+    * The above tests should be run on at least one NP04 DAQ server, and one Fermilab server
 
 * Repeat all the above steps with "SL7" replacing "Alma9". _This will count as a new candidate build, so make sure the GitHub Action is given a different build number than the Alma9 build_.
 
@@ -100,13 +100,16 @@ It's worth to do several checks before starting any test builds. These checks in
 * Do similar tests as shown in the section above for candidate releases
 
 * If there is a new version of `daq-buildtools` for the release, it will need to be deployed to cvmfs too. Otherwise, creating a symbolic link in cvmfs to the latest tagged version will be sufficient. 
-To do so, login to `cvmfsdunedaq@oasiscfs01.fnal.gov` as `cvmfsdunedaq`, then do:
-    1. `REPO=dunedaq.opensciencegrid.org; cvmfs_server transaction $REPO`;
-    2. change directory to `/cvmfs/dunedaq.opensciencegrid.org/tools/dbt/`;
-    3. (if needed) download the latest tagged version of dbt if it is not deployed yet, and expand it in the directory, rename the directory name using the tag;
-    4. (if needed) move the `latest` link to the latest tag in the directory;
-    5. create a symbolic link using the release tag, and point it to the latest tag in the directory;
-    6. change to $HOME directory, and run `REPO=dunedaq.opensciencegrid.org; cvmfs_server publish $REPO` to publish the changes. (Note: it is important to not have open file descriptors under /cvmfs/ when publishing, thus one would need to change directories to somewhere outside of cvmfs before issuing the publishing command).
+
+
+* Adding a new daq-buildtools version
+
+To do so, login to `cvmfsdunedaq@oasiscfs01.fnal.gov` as `cvmfsdunedaq`, then, [after setting up a cvmfs transaction](publish_to_cvmfs.md) for `dunedaq.opensciencegrid.org`, doing the following:
+    1. change directory to `/cvmfs/dunedaq.opensciencegrid.org/tools/dbt/`;
+    1. (if needed) download the latest tagged version of daq-buildtools if it is not deployed yet, and expand it in the directory, rename the directory name using the tag;
+    1. (if needed) move the `latest` link to the latest tag in the directory;
+    1. create a symbolic link using the release tag, and point it to the latest tag in the directory;
+Then publish the change to cvmfs. 
 
 
 * After the frozen release is rolled out, there will be remaining prep release and patch branches used in the production of the release. The software coordination team and the release coordinator should get in touch to establish if anything should be kept out of the merge to `develop`. The software coordination team will do the merge across all relevant repositories. Developers should handle any partial merge (cherry-pick).
@@ -114,17 +117,17 @@ To do so, login to `cvmfsdunedaq@oasiscfs01.fnal.gov` as `cvmfsdunedaq`, then do
 
 * The last step of making a frozen release is to create release tags for all packages used by the release. To do so, use the script `scripts/create-release-tag.py`:
 
-  * make sure `daq-release` is tagged for the new release, and the version is updated in the release YAML file. It will be tagged by the `create-release-tag.py` script;
+    * make sure `daq-release` is tagged for the new release, and the version is updated in the release YAML file. It will be tagged by the `create-release-tag.py` script;
 
-  * `scripts/create-release-tag.py -h` to show the usage of the script;
+    * `scripts/create-release-tag.py -h` to show the usage of the script;
 
-  * `scripts/create-release-tag.py -a -t <release-tag> -i <release YAML file>` to tag all packages used by the release;
+    * `scripts/create-release-tag.py -a -t <release-tag> -i <release YAML file>` to tag all packages used by the release;
 
-  * `scripts/create-release-tag.py -p <package> -r <ref_tag_or_branch_or_commit>` to tag a single package using specified ref;
+    * `scripts/create-release-tag.py -p <package> -r <ref_tag_or_branch_or_commit>` to tag a single package using specified ref;
 
-  * `scripts/create-release-tag.py -p <package> -i <release YAML file>` to tag a single package using ref found in in release YAML file;
+    * `scripts/create-release-tag.py -p <package> -i <release YAML file>` to tag a single package using ref found in in release YAML file;
 
-  * `-d` to delete release tags if found, `-f` to recreate release tags.
+    * `-d` to delete release tags if found, `-f` to recreate release tags.
 
 
 -----
@@ -135,7 +138,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Jan 9 20:13:35 2024 -0600_
+_Date: Wed Jan 10 09:51:07 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
