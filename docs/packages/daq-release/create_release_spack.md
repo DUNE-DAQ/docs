@@ -68,24 +68,34 @@ It's worth to do several checks before starting any test builds. These checks in
 
 * Once the build is completed successfully, verify if the same version tags shown in the CI log match those in the tag collector spreadsheet
 
-* Contact John Freeman (`jcfree@fnal.gov`), who will log in to `cvmfsdunedaqdev@oasiscfs01.fnal.gov` and publish the candidate release to cvmfs.
+* To publish the candidate release to cvmfs:
+
+  * Log in to `oasiscfs01.fnal.gov` as `cvmfsdunedaqdev`
+
+  * Get the [`publish_release_to_cvmfs.sh` script](https://github.com/DUNE-DAQ/daq-release/blob/develop/scripts/cvmfs/publish_release_to_cvmfs.sh) (`git clone` this repo or use `curl`, e.g.)
+
+  * Run the script without arguments for instructions; in a nutshell, it will publish the most recent release of a given specification (e.g., the most recent Alma9 near detector candidate build)
+
+  * Run it with the desired specifications (e.g. `publish_release_to_cvmfs.sh candidate nd alma9`)
+
+  * After running the script, the release will take ~20 minutes before it appears on cvmfs
 
 * After the candidate release is deployed and available on cvmfs, do the following simple tests:
 
   * Set up a work area based on the candidate release
 
-  * Clone and build `daqsystemtest` used in this release, run `minimal_system_quick_test.py` in its `integtest` sub-directory
+  * If it's a far detector release, clone and build `daqsystemtest` used in this release and run `minimal_system_quick_test.py` in its `integtest` sub-directory
 
   * The above tests should be run on at least one NP04 DAQ server, and one Fermilab server
 
-* Repeat all the above steps with "SL7" replacing "Alma9". _This will count as a new candidate build, so make sure it has a different build number than the Alma9 build_.
+* Repeat all the above steps with "SL7" replacing "Alma9". _This will count as a new candidate build, so make sure the GitHub Action is given a different build number than the Alma9 build_.
 
 ## Building the frozen release
 
 
 * The release will be cut at the end of the testing period. The build of the final frozen release can be done in a similar way as the candidate releases. Choose "Build frozen release" in the workflows list, and trigger the build by specifying release name used in `configs` and the build number (starts from 1, increment it if second deployment to cvmfs is needed).
 
-* To deploy the release, contact John again, who will login to `cvmfsdunedaq@oasiscfs01.fnal.gov` and publish it.  Note that the user is `cvmfsdunedaq` instead of `cvmfsdunedaqdev` (for the `dunedaq-development.opensicencgrid.org` repo).
+* Deploying the frozen release to cvmfs is the same as for a candidate release  _except_ you want to log in to `oasiscfs01.fnal.gov` as `cvmfsdunedaq` instead of `cvmfsdunedaqdev` and of course you'll want to pass `frozen` rather than `candidate` to the publishing script
 
 * Do similar tests as shown in the section above for candidate releases
 
@@ -125,7 +135,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed Jan 3 13:32:42 2024 -0600_
+_Date: Tue Jan 9 20:13:35 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
