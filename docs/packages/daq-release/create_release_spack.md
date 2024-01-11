@@ -99,21 +99,9 @@ It's worth to do several checks before starting any test builds. These checks in
 
 * Do similar tests as shown in the section above for candidate releases
 
-* If there is a new version of `daq-buildtools` for the release, it will need to be deployed to cvmfs too. Otherwise, creating a symbolic link in cvmfs to the latest tagged version will be sufficient. 
-
-
-* Adding a new daq-buildtools version
-
-To do so, login to `cvmfsdunedaq@oasiscfs01.fnal.gov` as `cvmfsdunedaq`, then, [after setting up a cvmfs transaction](publish_to_cvmfs.md) for `dunedaq.opensciencegrid.org`, doing the following:
-    1. change directory to `/cvmfs/dunedaq.opensciencegrid.org/tools/dbt/`;
-    1. (if needed) download the latest tagged version of daq-buildtools if it is not deployed yet, and expand it in the directory, rename the directory name using the tag;
-    1. (if needed) move the `latest` link to the latest tag in the directory;
-    1. create a symbolic link using the release tag, and point it to the latest tag in the directory;
-Then publish the change to cvmfs. 
-
+* If there is a new version of `daq-buildtools` for the release, it will need to be deployed to cvmfs too. Otherwise, creating a symbolic link in cvmfs to the latest tagged version will be sufficient. How to do this is described in the [documentation on cvmfs](publish_to_cvmfs.md).
 
 * After the frozen release is rolled out, there will be remaining prep release and patch branches used in the production of the release. The software coordination team and the release coordinator should get in touch to establish if anything should be kept out of the merge to `develop`. The software coordination team will do the merge across all relevant repositories. Developers should handle any partial merge (cherry-pick).
-
 
 * The last step of making a frozen release is to create release tags for all packages used by the release. To do so, use the script `scripts/create-release-tag.py`:
 
@@ -138,7 +126,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed Jan 10 09:51:07 2024 -0600_
+_Date: Thu Jan 11 11:07:48 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
