@@ -271,6 +271,7 @@ nav:
              - About timinglibs: packages/timinglibs/README.md
           - trigger:
              - About trigger: packages/trigger/README.md
+             - packages/trigger/integtest/README.md
              - packages/trigger/trigger-alg-howto.md
        - Dataflow (physical):
           - iomanager:
