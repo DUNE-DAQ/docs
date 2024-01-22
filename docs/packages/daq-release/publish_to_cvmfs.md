@@ -35,31 +35,31 @@ section. Log in to `oasiscfs01.fnal.gov` as `cvmfsdunedaq` and execute the follo
 
 
 
-1. cvmfs_server transaction dunedaq.opensciencegrid.org
+1. `cvmfs_server transaction dunedaq.opensciencegrid.org`
 
 
-1. cd /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/
+1. `cd /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/`
 
 
-1. git clone https://github.com/DUNE-DAQ/daq-buildtools
+1. `git clone https://github.com/DUNE-DAQ/daq-buildtools`
 
 
-1. rm -rf daq-buildtools/.git   # No need for git info on cvmfs
+1. `rm -rf daq-buildtools/.git   # No need for git info on cvmfs`
 
 
-1. mv daq-buildtools <version>
+1. `mv daq-buildtools <version>`
 
 
-1. rm latest
+1. `rm latest`
 
 
-1. ln -s <version> latest
+1. `ln -s <version> latest`
 
 
-1. cd ~   # you can't run the next command from within /cvmfs
+1. `cd ~   # you can't run the next command from within /cvmfs`
 
 
-1. cvmfs_server publish dunedaq.opensciencegrid.org
+1. `cvmfs_server publish dunedaq.opensciencegrid.org`
 
 ## Updating releases on cvmfs
 
@@ -82,7 +82,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Jan 11 11:07:48 2024 -0600_
+_Date: Mon Jan 22 13:17:15 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
