@@ -204,9 +204,10 @@ nav:
           - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
        - Control:
-          - dal:
-             - About dal: packages/dal/README.md
-             - packages/dal/RELEASE_NOTES.md
+          - appdal:
+             - About appdal: packages/appdal/README.md
+          - coredal:
+             - About coredal: packages/coredal/README.md
           - daqconf:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigDatabase.md
