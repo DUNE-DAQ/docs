@@ -72,13 +72,13 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Control
 
-[coredal](packages/coredal/README.md) _A core schema for DAQ configuration_
+[appdal](packages/appdal/README.md) _Schema for DAQ configuration of readout, dataflow and trigger applications_
 
-[dal](packages/dal/README.md) _Used for configuration design and part of the OKS (Object Kernel Support) suite_
+[coredal](packages/coredal/README.md) _A core schema for DAQ configuration_
 
 [daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_
 
-[dbe](packages/dbe/README.md) _A GUI interface for the OKS-based configuration design offered by dal_
+[dbe](packages/dbe/README.md) _A GUI interface for the OKS-based configuration design_
 
 [nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
 
