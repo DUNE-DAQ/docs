@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited Nov-30-2023_
+_This document was last edited Feb-8-2024_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -16,12 +16,12 @@ Simply do:
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
 setup_dbt latest
 ```
-Here v7.5.0 is the latest daq-buildtools version as of Nov-30-2023.
+Here v7.6.0 is the latest daq-buildtools version as of Feb-8-2024.
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.5.0/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.5.0/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.6.0/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.6.0/scripts -> PATH
 DBT setuptools loaded
 ```
 
@@ -35,9 +35,9 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v4.2.1-a9 the latest frozen release as of Nov-30-2023
+dbt-setup-release <release> # nddaq-v4.3.0-a9 the latest frozen release as of Dec-19-2023
 ```
-As of July 2023, the DUNE DAQ software stack has been split into far detector and near detector-specific parts. Starting with the `v4.1.0` release of the stack, do _not_ use the traditional convention of `dunedaq-vX.Y.Z` as the frozen release label, but instead, `fddaq-vX.Y.Z` and `nddaq-vX.Y.Z`. Note that for `v4.1.0` and `v4.1.1` we only have a far detector-specific stack. 
+As of July 2023, the DUNE DAQ software stack has been split into far detector and near detector-specific parts. Starting with the `v4.1.0` release of the stack, do _not_ use the traditional convention of `dunedaq-vX.Y.Z` as the frozen release label, but instead, `fddaq-vX.Y.Z` and `nddaq-vX.Y.Z`. 
 
 Instead of a frozen release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fd-v4.1.0-c5` you can do:
 ```
@@ -61,9 +61,9 @@ Each work area is based on a DUNE DAQ software release, which defines what exter
 
 The majority of work areas are set up to build against the most recent nightly release. To do so, run:
 ```sh
-dbt-create -n <nightly release> <name of work area subdirectory> # E.g., NFD23-07-15
+dbt-create -n last_fddaq <name of work area subdirectory> 
 ```
-To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l -b nightly`.
+if you're working on an Alma9 host. If you're working on an SL7 or Centos Stream 8 host, replace `last_fddaq` with `last_fddaq-c8`. This assumes you want to do far detector development; for near detector development just replace the `fddaq` with `nddaq` in your command. To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l -b nightly`. 
 
 If you want to build against a candidate release, run:
 ```sh
@@ -97,7 +97,7 @@ Along with telling `dbt-create` what you want your work area to be named and wha
 * `-s/--spack`: Install a local Spack instance in the work area. This will allow you to install and load whatever Spack packages you wish into your work area. 
 
 
-* `-c/--clone-pyvenv`: Use this if you wish to develop a Python package. By default, the Python virtual environment your work area uses is in the release area on cvmfs. However, if you choose this option, `dbt-create` will actually copy this virtual environment over to your work area, thereby giving you write permission.
+* `-q/--quick`: Use this if you don't plan to develop a Python package. This is much quicker than the default behavior of dbt-create, which will actually copy the Python virtual environment over to your work area, thereby giving you write permission to the project's Python packages. With `-q/--quick`, the Python virtual environment your work area uses is in the (read-only) release area on cvmfs.
   
 
 * `-i/--install-pyvenv`: With this option, there will be compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory. This is typically slower than cloning, but not always. You can take further control by combining it with the `-p <requirements file>` argument, though it's unlikely as a typical developer that you'd want a non-standard set of Python packages. 
@@ -132,7 +132,7 @@ dbt-build
 
 ### Working with more repos
 
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/spack/releases/fddaq-v4.1.1/dbt-build-order.cmake`". If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
 
 As a reminder, once you've added your repos and built them, you'll want to run `dbt-workarea-env` so the environment picks up their applications, libraries, etc. 
 
@@ -166,6 +166,11 @@ dbt-build --cpp-verbose
 If you want to change cmake message log level, you can use the `--cmake-msg-lvl` option:
 ```
 dbt-build --cmake-msg-lvl=<ERROR|WARNING|NOTICE|STATUS|VERBOSE|DEBUG|TRACE>
+```
+
+By default the build is performed using gcc's `O2` compilation flag. If you wish to use a different
+```
+dbt-build --optimize-flag O3  # Or Og, etc.
 ```
 
 You can see all the options listed if you run the script with the `--help` command, i.e.
@@ -273,7 +278,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Nov 30 13:51:34 2023 -0600_
+_Date: Thu Feb 8 16:42:03 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
