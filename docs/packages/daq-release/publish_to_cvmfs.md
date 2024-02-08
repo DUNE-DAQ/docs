@@ -41,7 +41,7 @@ section. Log in to `oasiscfs01.fnal.gov` as `cvmfsdunedaq` and execute the follo
 1. `cd /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/`
 
 
-1. `git clone https://github.com/DUNE-DAQ/daq-buildtools`
+1. `git clone https://github.com/DUNE-DAQ/daq-buildtools.git -b <version>`
 
 
 1. `rm -rf daq-buildtools/.git   # No need for git info on cvmfs`
@@ -82,7 +82,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Mon Jan 22 13:17:15 2024 -0600_
+_Date: Thu Feb 8 16:24:13 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
