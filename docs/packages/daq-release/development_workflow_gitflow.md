@@ -36,7 +36,7 @@ We have four types of branch in our workflow:
 
     * After the final tag for the frozen release is made, notify the Software Coordination team to merge it into `<common branch>`, along with any special instructions (like if there shouldn't, in fact, be a merge, or if only a subset of the commits on the branch should be merged)
 
-    * Nomenclature: for a given release `vX.Y.Z`, `prep-release/dunedaq-vX.Y.Z` for changes to packages common to both ND and FD, `prep-release/fddaq-vX.Y.Z` for FD-related changes to any package, and `prep-release/nddaq-vX.Y.Z` for ND-related changes to any package
+    * Nomenclature: for a given release `fddaq-vX.Y.Z` use `prep-release/fddaq-vX.Y.Z` and similarly `prep-release/nddaq-vX.Y.Z` for `nddaq-vX.Y.Z`
 
 * **Patch branches**  `patch/dunedaq-vX.Y.x`**
 
@@ -210,7 +210,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Sun Feb 11 08:51:40 2024 -0600_
+_Date: Tue Feb 13 13:03:48 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
