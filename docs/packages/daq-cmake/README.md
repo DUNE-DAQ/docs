@@ -145,7 +145,7 @@ Among other things daq_setup_environment() will do the following:
 
 * Support the use of CTest for the unit tests
 
-Next you'll see calls to CMake's [find_package](https://cmake.org/cmake/help/v3.17/command/find_package.html) function, which makes toylibrary's dependencies available. Comments in the file explain why the dependencies are selected.
+Next you'll see calls to CMake's [find_package](https://cmake.org/cmake/help/v3.17/command/find_package.html) function, which makes toylibrary's dependencies available. Comments in the file explain why the dependencies are selected. Please note that when developing your own package, if it's part of the nightly build and you add a new dependency, besides adding the needed `find_package` call you should also alert Software Coordination so they can add the dependency to the Spack build of the package. See below in the section called "Installing your project as a local package" for more about dependencies.   
 
 Then, you'll see a call to a function called `daq_add_library`.
 ```
@@ -510,7 +510,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Dec 14 12:33:59 2023 -0600_
+_Date: Fri Feb 2 16:21:08 2024 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
