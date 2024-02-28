@@ -140,12 +140,20 @@ nav:
           - daqdataformats:
           - detchannelmaps:
           - detdataformats:
+          - dpdklibs:
+          - dtpcontrols:
+          - dtpctrllibs:
+          - fddetdataformats:
+          - fdreadoutlibs:
+          - flxlibs:
           - lbrulibs:
           - nddetdataformats:
           - readoutlibs:
           - readoutmodules:
+          - wibmod:
        - Control:
-          - dal:
+          - appdal:
+          - coredal:
           - daqconf:
           - dbe:
           - nanorc:
@@ -162,9 +170,11 @@ nav:
           - ipm:
           - serialization:
        - Monitoring:
+          - dqm:
           - erskafka:
           - kafkaopmon:
           - opmonlib:
+          - rawdatautils:
        - Educational:
           - listrev:
 
