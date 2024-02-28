@@ -1,6 +1,5 @@
 # About daq-release
 
-
 [![AL9 Spack Nightly Workflow (prod, v4) ](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-v4-release-alma9.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-v4-release-alma9.yml)
 
 [![Spack Nightly Workflow (prod, v4)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-v4-release-sl7.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-v4-release-sl7.yml)
