@@ -124,44 +124,17 @@ nav:
           - README.md
        - Toolset:
           - daq-assettools:
-             - About daq-assettools: packages/daq-assettools/README.md
           - daq-buildtools:
-             - About daq-buildtools: packages/daq-buildtools/README.md
           - daq-cmake:
-             - About daq-cmake: packages/daq-cmake/README.md
           - daq-release:
-             - About daq-release: packages/daq-release/README.md
-             - packages/daq-release/add_modules_to_pypi_repo.md
-             - packages/daq-release/Build-external-packages-with-spack-in-a-work-area.md
-             - packages/daq-release/Build-new-external-software-stack.md
-             - packages/daq-release/ci_github_action.md
-             - packages/daq-release/create_release_spack.md
-             - packages/daq-release/development_workflow_gitflow.md
-             - packages/daq-release/feature_branch_ci_build.md
-             - packages/daq-release/nd_development_workflow_gitflow.md
-             - packages/daq-release/publish_to_cvmfs.md
-             - packages/daq-release/slides.md
-             - packages/daq-release/team_repos.md
           - daqsystemtest:
-             - About daqsystemtest: packages/daqsystemtest/README.md
-             - packages/daqsystemtest/config/emulated_systems/README.md
-             - packages/daqsystemtest/config/hd_coldbox_tests/README.md
-             - packages/daqsystemtest/config/long_window_readout/README.md
-             - packages/daqsystemtest/config/timing_systems/README.md
-             - packages/daqsystemtest/integtest/README.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
           - styleguide:
              - About styleguide: packages/styleguide/README.md
        - Core:   
           - appfwk:
-             - About appfwk: packages/appfwk/README.md
-             - packages/appfwk/Daq-Application.md
-             - packages/appfwk/schema/README.md
           - cmdlib:
-             - About cmdlib: packages/cmdlib/README.md
-             - packages/cmdlib/Home.md
-             - packages/cmdlib/User-Guide.md
           - ers:
              - About ers: packages/ers/README.md
           - logging:
@@ -191,6 +164,12 @@ nav:
              - About detchannelmaps: packages/detchannelmaps/README.md
           - detdataformats:
              - About detdataformats: packages/detdataformats/README.md
+          - dpdklibs:
+          - dtpcontrols:
+          - dtpctrllibs:
+          - fddetdataformats:
+          - fdreadoutlibs:
+          - flxlibs:
           - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
              - packages/lbrulibs/integtest/README.md
@@ -203,11 +182,10 @@ nav:
              - packages/readoutlibs/scripts/README.md
           - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
+          - wibmod:
        - Control:
           - appdal:
-             - About appdal: packages/appdal/README.md
           - coredal:
-             - About coredal: packages/coredal/README.md
           - daqconf:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigDatabase.md
@@ -262,6 +240,7 @@ nav:
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:
+          - dqm:
           - erskafka:
              - About erskafka: packages/erskafka/README.md
           - kafkaopmon:
@@ -269,6 +248,7 @@ nav:
           - opmonlib:
              - About opmonlib: packages/opmonlib/README.md
              - packages/opmonlib/Instructions-for-DAQ-module-users.md
+          - rawdatautils:
        - Educational:
           - listrev:
              - About listrev: packages/listrev/README.md
