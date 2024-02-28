@@ -1,5 +1,5 @@
 
-_JCF, Jul-1-2021: The following is currently intended just for members of the Software Coordination group_
+_JCF, Feb-28-2024: The following is currently intended just for members of the Software Coordination group_
 
 # How the official documentation works
 
