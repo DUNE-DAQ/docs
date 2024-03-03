@@ -188,9 +188,25 @@ nav:
         - detdataformats:
              - About detdataformats: packages/detdataformats/README.md
         - dpdklibs:
+             - About dpdklibs: packages/dpdklibs/README.md
+             - packages/dpdklibs/utils/intel/README.md
+             - packages/dpdklibs/utils/mlx/READOUT.md
         - fddetdataformats:
+             - About fddetdataformats: packages/fddetdataformats/README.md
         - fdreadoutlibs:
+             - About fdreadoutlibs: packages/fdreadoutlibs/README.md
+             - packages/fdreadoutlibs/test/apps/README.md
         - flxlibs:
+             - About flxlibs: packages/flxlibs/README.md
+             - packages/flxlibs/Basic-tests.md
+             - packages/flxlibs/Configuring-the-EMU.md
+             - packages/flxlibs/Enabling-links-and-setting-the-superchunk-factor.md
+             - packages/flxlibs/FELIX-assets.md
+             - packages/flxlibs/Initial-setup-of-FELIX.md
+             - packages/flxlibs/Integration-tests.md
+             - packages/flxlibs/Local-driver.md
+        - hermesmodules:
+             - About hermesmodules: packages/hermesmodules/README.md
         - readoutlibs:
              - About readoutlibs: packages/readoutlibs/README.md
              - packages/readoutlibs/Directory-structure.md
@@ -198,6 +214,9 @@ nav:
         - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
         - wibmod:
+             - About wibmod: packages/wibmod/README.md
+             - packages/wibmod/src/WIB1/README.md
+             - packages/wibmod/src/wibmod/WIB1/README.md
      - Control:
         - daqconf:
              - About daqconf: packages/daqconf/README.md
@@ -257,6 +276,7 @@ nav:
              - About opmonlib: packages/opmonlib/README.md
              - packages/opmonlib/Instructions-for-DAQ-module-users.md
         - rawdatautils:
+             - About rawdatautils: packages/rawdatautils/README.md
      - Educational:
         - listrev:
              - About listrev: packages/listrev/README.md
