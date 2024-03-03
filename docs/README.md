@@ -48,21 +48,13 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [dpdklibs](packages/dpdklibs/README.md) _Data Plane Development Kit software and utilities_
 
-[dtpctrllibs](packages/dtpctrllibs/README.md) _DAQ modules for controlling Trigger Primitive generation firmware_
-
-[dtpcontrols](packages/dtpcontrols/README.md) _Python tools for control of the Trigger Primitive firmware_
-
 [fddetdataformats](packages/fddetdataformats/README.md) _Bitfields of far detector raw data and related tools_
 
 [fdreadoutlibs](packages/fdreadoutlibs/README.md) _Classes for working with far detector data (WIB, SSP, etc.)_
 
 [flxlibs](packages/flxlibs/README.md) _DAQModules, utilities, and scripts for Upstream FELIX Readout Software_
 
-[lbrulibs](packages/lbrulibs/README.md) _DAQModules, utilities, and scripts for DUNE-ND Upstream DAQ Low Bandwidth Readout Unit_
-
-[nddetdataformats](packages/nddetdataformats/README.md) _Bitfields of near detector raw data and related tools_
-
-[ndreadoutlibs](packages/ndreadoutlibs/README.md) _Classes for working with near detector data (e.g. PACMAN)_
+[hermesmodules](packages/hermesmodules/README.md) _Modules for the Hermes core_
 
 [readoutlibs](packages/readoutlibs/README.md) _Base classes for construction of readout-related DAQModules_
 
@@ -72,11 +64,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Control
 
-[dal](packages/dal/README.md) _Used for configuration design and part of the OKS (Object Kernel Support) suite_
-
 [daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_
-
-[dbe](packages/dbe/README.md) _A GUI interface for the OKS-based configuration design offered by dal_
 
 [nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
 
@@ -107,8 +95,6 @@ For the other packages, please click on one of the links below. To learn how to 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
 
 ### Monitoring
-
-[dqm](packages/dqm/README.md) _Data Quality Monitor_
 
 [erskafka](packages/erskafka/README.md) _the erskafka plugin_
 
