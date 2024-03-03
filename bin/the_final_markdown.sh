@@ -7,7 +7,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 
 #package_list="wibmod utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif rawdatautils opmonlib ndreadoutlibs nddetdataformats nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest flxlibs fdreadoutlibs fddetdataformats erskafka ers dtpctrllibs dtpcontrols dqm dpdklibs dfmodules dfmessages detdataformats detchannelmaps daqdataformats dbe daqconf dal daq-systemtest daq-release daq-cmake daq-buildtools daq-assettools cmdlib appfwk"
 
-package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib ndreadoutlibs nddetdataformats nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest erskafka ers dfmodules dfmessages detdataformats detchannelmaps daqdataformats dbe daqconf dal daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools cmdlib appfwk"
+package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib ndreadoutlibs nddetdataformats nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest erskafka ers dfmodules dfmessages detdataformats detchannelmaps daqdataformats dbe daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools cmdlib appfwk"
 
 mkdocs_yml="$here/../mkdocs.yml"
 

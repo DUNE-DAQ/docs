@@ -119,62 +119,64 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Table of Contents: 
-     - Overview:
-        - README.md
-     - Toolset:
-        - daq-assettools:
-        - daq-buildtools:
-        - daq-cmake:
-        - daq-release:
-        - daqsystemtest:
-        - integrationtest:
-        - styleguide:
-     - Core:   
-        - appfwk:
-        - cmdlib:
-        - ers:
-        - logging:
-        - utilities:
-     - Readout:
-        - daqdataformats:
-        - detchannelmaps:
-        - detdataformats:
-        - dpdklibs:
-        - dtpcontrols:
-        - dtpctrllibs:
-        - fddetdataformats:
-        - fdreadoutlibs:
-        - flxlibs:
-        - lbrulibs:
-        - nddetdataformats:
-        - readoutlibs:
-        - readoutmodules:
-        - wibmod:
-     - Control:
-        - appdal:
-        - coredal:
-        - daqconf:
-        - dbe:
-        - nanorc:
-        - restcmd:
-     - Dataflow (logical):
-        - dfmessages:
-        - dfmodules:
-        - hdf5libs:
-        - timing:
-        - timinglibs:
-        - trigger:
-     - Dataflow (physical):
-        - iomanager:
-        - ipm:
-        - serialization:
-     - Monitoring:
-        - dqm:
-        - erskafka:
-        - kafkaopmon:
-        - opmonlib:
-        - rawdatautils:
-     - Educational:
-        - listrev:
+    - Table of Contents: 
+       - Overview:
+          - README.md
+       - Toolset:
+          - daq-assettools:
+          - daq-buildtools:
+          - daq-cmake:
+          - daq-release:
+          - daqsystemtest:
+          - integrationtest:
+          - styleguide:
+       - Core:   
+          - appfwk:
+          - cmdlib:
+          - ers:
+          - logging:
+          - utilities:
+       - Readout:
+          - daqdataformats:
+          - detchannelmaps:
+          - detdataformats:
+          - dpdklibs:
+          - dtpcontrols:
+          - dtpctrllibs:
+          - fddetdataformats:
+          - fdreadoutlibs:
+          - flxlibs:
+          - lbrulibs:
+          - nddetdataformats:
+          - readoutlibs:
+          - readoutmodules:
+          - wibmod:
+       - Control:
+          - appdal:
+          - coredal:
+          - daqconf:
+          - dbe:
+          - nanorc:
+          - restcmd:
+       - Dataflow (logical):
+          - dfmessages:
+          - dfmodules:
+          - hdf5libs:
+          - timing:
+          - timinglibs:
+          - trigger:
+       - Dataflow (physical):
+          - iomanager:
+          - ipm:
+          - serialization:
+       - Monitoring:
+          - dqm:
+          - erskafka:
+          - kafkaopmon:
+          - opmonlib:
+          - rawdatautils:
+       - Educational:
+          - listrev:
+
+
 
