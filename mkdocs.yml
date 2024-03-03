@@ -96,8 +96,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -119,17 +119,17 @@ markdown_extensions:
 
 # Page tree
 nav:
-    - Table of Contents: 
-       - Overview:
-          - README.md
-       - Toolset:
-          - daq-assettools:
+  - Table of Contents: 
+     - Overview:
+        - README.md
+     - Toolset:
+        - daq-assettools:
              - About daq-assettools: packages/daq-assettools/README.md
-          - daq-buildtools:
+        - daq-buildtools:
              - About daq-buildtools: packages/daq-buildtools/README.md
-          - daq-cmake:
+        - daq-cmake:
              - About daq-cmake: packages/daq-cmake/README.md
-          - daq-release:
+        - daq-release:
              - About daq-release: packages/daq-release/README.md
              - packages/daq-release/add_modules_to_pypi_repo.md
              - packages/daq-release/Build-external-packages-with-spack-in-a-work-area.md
@@ -142,36 +142,36 @@ nav:
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/slides.md
              - packages/daq-release/team_repos.md
-          - daqsystemtest:
+        - daqsystemtest:
              - About daqsystemtest: packages/daqsystemtest/README.md
              - packages/daqsystemtest/config/emulated_systems/README.md
              - packages/daqsystemtest/config/hd_coldbox_tests/README.md
              - packages/daqsystemtest/config/long_window_readout/README.md
              - packages/daqsystemtest/config/timing_systems/README.md
              - packages/daqsystemtest/integtest/README.md
-          - integrationtest:
+        - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
-          - styleguide:
+        - styleguide:
              - About styleguide: packages/styleguide/README.md
-       - Core:   
-          - appfwk:
+     - Core:   
+        - appfwk:
              - About appfwk: packages/appfwk/README.md
              - packages/appfwk/Daq-Application.md
              - packages/appfwk/schema/README.md
-          - cmdlib:
+        - cmdlib:
              - About cmdlib: packages/cmdlib/README.md
              - packages/cmdlib/Home.md
              - packages/cmdlib/User-Guide.md
-          - ers:
+        - ers:
              - About ers: packages/ers/README.md
-          - logging:
+        - logging:
              - About logging: packages/logging/README.md
              - packages/logging/ers-conventions.md
-          - utilities:
+        - utilities:
              - About utilities: packages/utilities/README.md
              - packages/utilities/WorkerThread-Usage-Notes.md
-       - Readout:
-          - daqdataformats:
+     - Readout:
+        - daqdataformats:
              - About daqdataformats: packages/daqdataformats/README.md
              - packages/daqdataformats/ComponentRequestV0.md
              - packages/daqdataformats/ComponentRequestV1.md
@@ -187,33 +187,33 @@ nav:
              - packages/daqdataformats/TriggerRecordHeaderDataV1.md
              - packages/daqdataformats/TriggerRecordHeaderDataV2.md
              - packages/daqdataformats/TriggerRecordHeaderDataV3.md
-          - detchannelmaps:
+        - detchannelmaps:
              - About detchannelmaps: packages/detchannelmaps/README.md
-          - detdataformats:
+        - detdataformats:
              - About detdataformats: packages/detdataformats/README.md
-          - dpdklibs:
-          - dtpcontrols:
-          - dtpctrllibs:
-          - fddetdataformats:
-          - fdreadoutlibs:
-          - flxlibs:
-          - lbrulibs:
+        - dpdklibs:
+        - dtpcontrols:
+        - dtpctrllibs:
+        - fddetdataformats:
+        - fdreadoutlibs:
+        - flxlibs:
+        - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
              - packages/lbrulibs/integtest/README.md
              - packages/lbrulibs/socket-implementation.md
-          - nddetdataformats:
+        - nddetdataformats:
              - About nddetdataformats: packages/nddetdataformats/README.md
-          - readoutlibs:
+        - readoutlibs:
              - About readoutlibs: packages/readoutlibs/README.md
              - packages/readoutlibs/Directory-structure.md
              - packages/readoutlibs/scripts/README.md
-          - readoutmodules:
+        - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
-          - wibmod:
-       - Control:
-          - appdal:
-          - coredal:
-          - daqconf:
+        - wibmod:
+     - Control:
+        - appdal:
+        - coredal:
+        - daqconf:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigDatabase.md
              - packages/daqconf/ConfigurationsForCasualUsers.md
@@ -222,9 +222,9 @@ nav:
              - packages/daqconf/MigratingTov4_1_0Confgen.md
              - packages/daqconf/pytest/README.md
              - packages/daqconf/UpdatedIOManagerAPI.md
-          - dbe:
+        - dbe:
              - About dbe: packages/dbe/README.md
-          - nanorc:
+        - nanorc:
              - About nanorc: packages/nanorc/README.md
              - packages/nanorc/FAQ-k8s.md
              - packages/nanorc/FAQ.md
@@ -232,53 +232,51 @@ nav:
              - packages/nanorc/src/nanorc/webuidata/static/vendor/jquery-machine/README.md
              - packages/nanorc/src/nanorc/webuidata/static/vendor/jstree/demo/README.md
              - packages/nanorc/src/nanorc/webuidata/static/vendor/jstree/README.md
-          - restcmd:
+        - restcmd:
              - About restcmd: packages/restcmd/README.md
              - packages/restcmd/scripts/README.md
-       - Dataflow (logical):
-          - dfmessages:
+     - Dataflow (logical):
+        - dfmessages:
              - About dfmessages: packages/dfmessages/README.md
-          - dfmodules:
+        - dfmodules:
              - About dfmodules: packages/dfmodules/README.md
              - packages/dfmodules/integtest/README.md
              - packages/dfmodules/python/dfmodules/tpset_demo/README.md
              - packages/dfmodules/TRB_metrics.md
-          - hdf5libs:
+        - hdf5libs:
              - About hdf5libs: packages/hdf5libs/README.md
              - packages/hdf5libs/V3FileFormatInterfaceChanges.md
-          - timing:
+        - timing:
              - About timing: packages/timing/README.md
              - packages/timing/test/Notes.md
-          - timinglibs:
+        - timinglibs:
              - About timinglibs: packages/timinglibs/README.md
-          - trigger:
+        - trigger:
              - About trigger: packages/trigger/README.md
              - packages/trigger/trigger-alg-howto.md
-       - Dataflow (physical):
-          - iomanager:
+     - Dataflow (physical):
+        - iomanager:
              - About iomanager: packages/iomanager/README.md
              - packages/iomanager/NetworkManager.md
              - packages/iomanager/Queue.md
              - packages/iomanager/Test-Applications.md
              - packages/iomanager/Updating.md
              - packages/iomanager/Using-dynamic-connection-names.md
-          - ipm:
+        - ipm:
              - About ipm: packages/ipm/README.md
-          - serialization:
+        - serialization:
              - About serialization: packages/serialization/README.md
-       - Monitoring:
-          - dqm:
-          - erskafka:
+     - Monitoring:
+        - dqm:
+        - erskafka:
              - About erskafka: packages/erskafka/README.md
-          - kafkaopmon:
+        - kafkaopmon:
              - About kafkaopmon: packages/kafkaopmon/README.md
-          - opmonlib:
+        - opmonlib:
              - About opmonlib: packages/opmonlib/README.md
              - packages/opmonlib/Instructions-for-DAQ-module-users.md
-          - rawdatautils:
-       - Educational:
-          - listrev:
+        - rawdatautils:
+     - Educational:
+        - listrev:
              - About listrev: packages/listrev/README.md
-
-
 
