@@ -27,6 +27,14 @@ virtual void flush(timestamp_t until, std::vector<TriggerActivity>& output_ta)
 
 The reason this function exists is to handle the case where there is a large gap between trigger primitives (or, more likely, between trigger activities). During this gap, `operator()` is not called, and so your algorithm cannot send its output, even if such a long time has passed that you know that any trigger activities currently in progress can be completed and sent out. In this case, the data selection framework calls your implementation of `flush(until, output_ta)` to inform you that no more trigger primitives have occurred between the last one for which `operator()` was called and timestamp `until`. If this causes your algorithm to complete any trigger activities, you can add them to the `output_ta` vector.
 
+Finally, you must register the `TriggerActivityMaker` in the Trigger Activity Factory. This allows it to be accessed in this repository and used when running on `nanorc`. In the case of `TriggerActivityMakerPrescale`, the macro call is:
+
+```cpp
+REGISTER_TRIGGER_ACTIVITY_MAKER(TRACE_NAME, TriggerActivityMakerPrescale)
+```
+
+where `TRACE_NAME` is the string `"TriggerActivityMakerPrescalePlugin"`.
+
 ## Configuration
 
 Your algorithm may take configuration parameters at run time (eg, a minimum number of hits or ADC to form a trigger activity, or a verbosity level). Your algorithm receives these configuration parameters via the `configure()` function, whose signature is:
@@ -57,30 +65,7 @@ Inputs from a number of sources may be aggregated to send to a physics algorithm
 
 ## Using your algorithm in the dunedaq framework
 
-To run your algorithm from within the dunedaq framework (ie, inside a `daq_application`), you have to create a plugin for your algorithm in the `trigger` package (note, _not_ the `triggeralgs` package where your algorithm code lives). To create the plugin, make a file in the `plugins/` directory of the `trigger` package named `MyAlgNamePlugin.cpp` (replace `MyAlgName` with the actual name of your algorithm), with the following contents:
-
-```cpp
-#include "trigger/AlgorithmPlugins.hpp"
-#include "triggeralgs/path/to/MyAlgName.hpp" // Your algorithm's header file
-
-DEFINE_DUNE_TA_MAKER(triggeralgs::MyAlgName)
-```
-
-For a `TriggerCandidateMaker`, replace the last line with `DEFINE_DUNE_TC_MAKER(triggeralgs::MyAlgName)`.
-
-The plugin must be compiled in order to be used. To do this, add a line to the `CMakeLists.txt` file in `trigger`. For a `TriggerActivityMaker`:
-
-```cmake
-daq_add_plugin(MyAlgNamePlugin duneTAMaker LINK_LIBRARIES trigger)
-```
-
-For a `TriggerCandidateMaker`:
-
-```cmake
-daq_add_plugin(MyAlgNamePlugin duneTCMaker LINK_LIBRARIES trigger)
-```
-
-Once your code is hooked into the dunedaq framework as a plugin, you can run a DAQ job that reads data from a file and passes it to your algorithm. Instructions on how to do that (including choosing configuration parameters for your algorithm) can be found here:
+Once your code is registered to the appropriate factory (TA/TC), you can run a DAQ job that reads data from a file and passes it to your algorithm. Instructions on how to do that (including choosing configuration parameters for your algorithm) can be found here:
 
 https://github.com/DUNE-DAQ/trigger/blob/develop/python/trigger/faketp_chain/README.md
 
@@ -91,9 +76,9 @@ https://github.com/DUNE-DAQ/trigger/blob/develop/python/trigger/faketp_chain/REA
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Philip Rodrigues_
+_Author: aeoranday_
 
-_Date: Tue Jun 29 10:19:44 2021 +0100_
+_Date: Tue Jan 9 13:37:58 2024 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/trigger/issues](https://github.com/DUNE-DAQ/trigger/issues)_
 </font>

@@ -145,7 +145,7 @@ Among other things daq_setup_environment() will do the following:
 
 * Support the use of CTest for the unit tests
 
-Next you'll see calls to CMake's [find_package](https://cmake.org/cmake/help/v3.17/command/find_package.html) function, which makes toylibrary's dependencies available. Comments in the file explain why the dependencies are selected.
+Next you'll see calls to CMake's [find_package](https://cmake.org/cmake/help/v3.17/command/find_package.html) function, which makes toylibrary's dependencies available. Comments in the file explain why the dependencies are selected. Please note that when developing your own package, if it's part of the nightly build and you add a new dependency, besides adding the needed `find_package` call you should also alert Software Coordination so they can add the dependency to the Spack build of the package. See below in the section called "Installing your project as a local package" for more about dependencies.   
 
 Then, you'll see a call to a function called `daq_add_library`.
 ```
@@ -295,13 +295,16 @@ library's implementation should be put in the `src/` directory.
 ### daq_protobuf_codegen:
 Usage:
 ```
-daq_protobuf_codegen( <protobuf filename1> ... [GEN_GRPC] [DEP_PKGS <package 1> ...] )
+daq_protobuf_codegen( <protobuf filename1> ... [TEST] [GEN_GRPC] [DEP_PKGS <package 1> ...] )
 ```
 
 Arguments:
 
 
 * `<protobuf filename1> ...`: these arguments are the list of `*.proto` files for protobuf's "protoc" program to process from `<package>/schema/<package>`. Globs also allowed.
+
+
+* `TEST`: If the code is meant for an entity in the package's `test/` subdirectory, `TEST` should be passed as an argument, and the schema file's path will be assumed to be `test/schema/` rather than merely `schema/`.
 
 
 * `GEN_GRPC`: if you need to cgenerate gRPC prototype for the `*.proto` files.
@@ -370,6 +373,9 @@ Your plugin will look in `include/` for your project's public headers
 and `src/` for its private headers. Additionally, if it's a "TEST"
 plugin, it will look in `test/src/`.
 
+Note that if `cetlib` is a dependency of the package being built, it
+will be automatically linked against the plugin.
+
 ### daq_add_application
 
 Usage:
@@ -406,7 +412,7 @@ token.
 ### daq_oks_codegen
 Usage:
 ```
-daq_oks_codegen(<oks schema filename1> ... [NAMESPACE ns] [DEP_PKGS pkg1 pkg2 ...])
+daq_oks_codegen(<oks schema filename1> ... [TEST] [NAMESPACE ns] [DALDIR subdir] [DEP_PKGS pkg1 pkg2 ...])
 ```
 
 `daq_oks_codegen` uses the genconfig package's application of the same
@@ -415,11 +421,20 @@ provided to it.
 
 Arguments:
 
-  `<oks schema filename1> ...`: the list of OKS schema files to process from `<package>/schema/<package>`. 
 
- `NAMESPACE`: the namespace in which the generated C++ classes will be in. Defaults to `dunedaq::<package>`
+* `<oks schema filename1> ...`: the list of OKS schema files to process from `<package>/schema/<package>`. 
 
- `DEP_PKGS`: if a schema file you've provided as an argument itself includes a schema file (or schema files) from one or more other packages, you need to supply the names of the packages as arguments to DEP_PKGS. 
+
+* `TEST`: If the code is meant for an entity in the package's `test/` subdirectory, `TEST` should be passed as an argument, and the schema file's path will be assumed to be `test/schema/` rather than merely `schema/`.
+
+
+* `NAMESPACE`: the namespace in which the generated C++ classes will be in. Defaults to `dunedaq::<package>`
+
+
+* `DALDIR`: subdirectory relative to the package's primary include directory where headers will appear (`include/<package>/<DALDIR argument>`); default is no subdirectory
+
+
+* `DEP_PKGS`: if a schema file you've provided as an argument itself includes a schema file (or schema files) from one or more other packages, you need to supply the names of the packages as arguments to DEP_PKGS. 
 
 The generated code is automatically built into the package's main
 library (i.e., you don't need to explicitly pass the names of the
@@ -495,7 +510,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Aug 29 09:41:29 2023 -0500_
+_Date: Fri Feb 2 16:21:08 2024 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>

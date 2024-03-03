@@ -5,9 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-#package_list="wibmod utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif rawdatautils opmonlib ndreadoutlibs nddetdataformats nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest flxlibs fdreadoutlibs fddetdataformats erskafka ers dtpctrllibs dtpcontrols dqm dpdklibs dfmodules dfmessages detdataformats detchannelmaps daqdataformats dbe daqconf dal daq-systemtest daq-release daq-cmake daq-buildtools daq-assettools cmdlib appfwk"
-
-package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib ndreadoutlibs nddetdataformats nanorc kafkaopmon logging listrev lbrulibs hdf5libs ipm iomanager integrationtest erskafka ers dfmodules dfmessages detdataformats detchannelmaps daqdataformats dbe daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools cmdlib appfwk"
+package_list="utilities trigger timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif opmonlib nanorc kafkaopmon logging listrev hdf5libs ipm iomanager integrationtest erskafka ers dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools cmdlib appfwk"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -117,9 +115,9 @@ for package in $package_list ; do
     # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout nddaq-v4.3.0_for_docs
+	git checkout fddaq-v4.3.0_for_docs
     else
-	git checkout dunedaq-v4.3.0 || git checkout nddaq-v4.3.0 
+	git checkout dunedaq-v4.4.0 || git checkout fddaq-v4.3.0 
     fi
     echo $tmpdir/$package
 

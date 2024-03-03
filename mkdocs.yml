@@ -131,16 +131,12 @@ nav:
              - About daq-cmake: packages/daq-cmake/README.md
         - daq-release:
              - About daq-release: packages/daq-release/README.md
-             - packages/daq-release/add_modules_to_pypi_repo.md
              - packages/daq-release/Build-external-packages-with-spack-in-a-work-area.md
              - packages/daq-release/Build-new-external-software-stack.md
              - packages/daq-release/ci_github_action.md
              - packages/daq-release/create_release_spack.md
              - packages/daq-release/development_workflow_gitflow.md
-             - packages/daq-release/feature_branch_ci_build.md
-             - packages/daq-release/nd_development_workflow_gitflow.md
              - packages/daq-release/publish_to_cvmfs.md
-             - packages/daq-release/slides.md
              - packages/daq-release/team_repos.md
         - daqsystemtest:
              - About daqsystemtest: packages/daqsystemtest/README.md
@@ -191,30 +187,24 @@ nav:
              - About detchannelmaps: packages/detchannelmaps/README.md
         - detdataformats:
              - About detdataformats: packages/detdataformats/README.md
-        - lbrulibs:
-             - About lbrulibs: packages/lbrulibs/README.md
-             - packages/lbrulibs/integtest/README.md
-             - packages/lbrulibs/socket-implementation.md
-        - nddetdataformats:
-             - About nddetdataformats: packages/nddetdataformats/README.md
+        - dpdklibs:
+        - fddetdataformats:
+        - fdreadoutlibs:
+        - flxlibs:
         - readoutlibs:
              - About readoutlibs: packages/readoutlibs/README.md
              - packages/readoutlibs/Directory-structure.md
              - packages/readoutlibs/scripts/README.md
         - readoutmodules:
              - About readoutmodules: packages/readoutmodules/README.md
+        - wibmod:
      - Control:
         - daqconf:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigDatabase.md
              - packages/daqconf/ConfigurationsForCasualUsers.md
              - packages/daqconf/InstructionsForCasualUsers.md
-             - packages/daqconf/MigratingTov3_2_0Confgen.md
-             - packages/daqconf/MigratingTov4_1_0Confgen.md
              - packages/daqconf/pytest/README.md
-             - packages/daqconf/UpdatedIOManagerAPI.md
-        - dbe:
-             - About dbe: packages/dbe/README.md
         - nanorc:
              - About nanorc: packages/nanorc/README.md
              - packages/nanorc/FAQ-k8s.md
@@ -244,6 +234,7 @@ nav:
              - About timinglibs: packages/timinglibs/README.md
         - trigger:
              - About trigger: packages/trigger/README.md
+             - packages/trigger/integtest/README.md
              - packages/trigger/trigger-alg-howto.md
      - Dataflow (physical):
         - iomanager:
@@ -265,6 +256,7 @@ nav:
         - opmonlib:
              - About opmonlib: packages/opmonlib/README.md
              - packages/opmonlib/Instructions-for-DAQ-module-users.md
+        - rawdatautils:
      - Educational:
         - listrev:
              - About listrev: packages/listrev/README.md

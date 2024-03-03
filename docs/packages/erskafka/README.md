@@ -19,10 +19,7 @@ export DUNEDAQ_ERS_WARNING="erstrace,throttle(30,100),lstderr,erskafka(dqmbroadc
 export DUNEDAQ_ERS_ERROR="erstrace,throttle(30,100),lstderr,erskafka(dqmbroadcast:9092)"
 export DUNEDAQ_ERS_FATAL="erstrace,lstderr,erskafka(dqmbroadcast:9092)"
 ```
-
-Default platform: https://dunedaqreporting.app.cern.ch/ErrorReports
-
-For any further information, contact Yann Donon (yann.donon@cern.ch).
+The current working configurations are found in [daqconf](https://github.com/DUNE-DAQ/daqconf/blob/develop/python/daqconf/core/conf_utils.py#L581-L586)
 
 
 -----
@@ -31,9 +28,9 @@ For any further information, contact Yann Donon (yann.donon@cern.ch).
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: Marco Roda_
 
-_Date: Fri Mar 25 15:34:41 2022 -0500_
+_Date: Tue Feb 6 14:44:27 2024 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/erskafka/issues](https://github.com/DUNE-DAQ/erskafka/issues)_
 </font>

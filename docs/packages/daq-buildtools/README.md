@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited Dec-19-2023_
+_This document was last edited Feb-27-2024_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -14,14 +14,14 @@ To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.openscience
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt nddaq-v4.3.0
+setup_dbt fddaq-v4.3.0
 ```
-Where `nddaq-v4.3.0` links to daq-buildtools version `v7.5.0`, the latest as of Dec-19-2023.
+Note that `fddaq-v4.3.0` will point to `v7.6.0` of this package, the latest version as of February 2024.
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.5.0/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.5.0/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.6.0/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.6.0/scripts -> PATH
 DBT setuptools loaded
 ```
 
@@ -35,13 +35,15 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
 
 ```sh
-dbt-setup-release <release> # nddaq-v4.3.0-a9 the latest frozen release as of Dec-19-2023
+dbt-setup-release <release> # fddaq-v4.3.0-a9 the latest frozen release as of Feb-27-2024
 ```
+Note that if you set up a frozen release you'll get a message along the lines of `Release "fddaq-v4.3.0-a9" requested; interpreting this as release "fddaq-v4.3.0-a9-1"`; this simply reflects that the latest build iteration of the frozen release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user. 
+
 As of July 2023, the DUNE DAQ software stack has been split into far detector and near detector-specific parts. Starting with the `v4.1.0` release of the stack, do _not_ use the traditional convention of `dunedaq-vX.Y.Z` as the frozen release label, but instead, `fddaq-vX.Y.Z` and `nddaq-vX.Y.Z`. 
 
-Instead of a frozen release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fd-v4.1.0-c5` you can do:
+Instead of a frozen release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fddaq-v4.3.0-rc2-a9` you can do:
 ```
-dbt-setup-release -b candidate fd-v4.1.0-c5
+dbt-setup-release -b candidate fddaq-v4.3.0-rc2-a9
 ```
 
 `dbt-setup-release` will set up both the external packages and DAQ packages, as well as activate the Python virtual environment. Note that the Python virtual environment activated here is read-only. 
@@ -53,21 +55,21 @@ If you wish to develop DUNE DAQ software, you can start by creating a work area.
 
 Each work area is based on a DUNE DAQ software release, which defines what external and DUNE DAQ packages the code you develop in a work area are built against. Releases come in four categories:
 
-* **Nightly Releases**: packages in nightly releases are built each night using the heads of their `develop` branches. Depending on whether it's the far detector stack or the near detector stack, these are generally labeled either as `NFD<YY>-<MM>-<DD>` (far detector) or `NND<YY>-<MM>-<DD>` (near detector). E.g. `NFD23-07-15` is the nightly build for the far detector on July 15, 2023.
+* **Nightly Releases**: packages in nightly releases are built each night using the heads of their `develop` and `production/v4` branches. Depending on whether it's the far detector stack or the near detector stack, and whether it's a develop or production build, these are generally labeled either as `NFD_<branch>_<YY><MM><DD>_<OS>` (far detector) or `NND_<branch>_<YY><MM><DD>_<OS>` (near detector). E.g. `NFD_DEV_240213_A9` is the AL9 nightly develop build for the far detector on February 13th, 2024, while `NFD_PROD4_240213_C8` is the CentOS nightly production build for the far detector on the same date. Note that, prior to February 13th, 2024, the labeling convention was `NFD<YY>-<MM>-<DD>` for the far detector stack and `NND<YY>-<MM>-<DD>` for the near detector stack.
 
 * **Frozen Releases**: a frozen release typically comes out every couple of months, and only after extensive testing supervised by a Release Coordinator. Depending on whether it's the far detector stack or the near detector stack, labeled as `fddaq-vX.Y.X` or `nddaq-vX.Y.Z`. 
 
-* **Candidate Releases**: a type of release meant specifically for frozen release testing. Generally labeled as `fd-vX.Y.Z-<candidate iteration>` or `nd-vX.Y.Z-<candidate iteration>`, e.g. `fd-v4.1.0-c5`
+* **Candidate Releases**: a type of release meant specifically for frozen release testing. Generally labeled as `fddaq-vX.Y.Z-rc<candidate iteration>-<OS>` or `nddaq-vX.Y.Z-rc<candidate iteration>-<OS>`. For example, `fddaq-v4.3.0-rc2-a9` is the second release candidate for the AL9 build of `fddaq-v4.3.0`. Note that, prior to February 13th, 2024, the labeling convention is `fddaq-vX.Y.Z-c<candidate iteration>`
 
 The majority of work areas are set up to build against the most recent nightly release. To do so, run:
 ```sh
-dbt-create -n last_fddaq <name of work area subdirectory> 
+dbt-create -n <nightly release> <name of work area subdirectory> # E.g., NFD_DEV_240213_A9
 ```
-if you're working on an Alma9 host. If you're working on an SL7 or Centos Stream 8 host, replace `last_fddaq` with `last_fddaq-c8`. This assumes you want to do far detector development; for near detector development just replace the `fddaq` with `nddaq` in your command. To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l -b nightly`. 
+To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l -b nightly`.
 
 If you want to build against a candidate release, run:
 ```sh
-dbt-create -b candidate <candidate release> <name of work area subdirectory> # E.g., fd-v4.1.0-c5 
+dbt-create -b candidate <candidate release> <name of work area subdirectory> # E.g., fddaq-v4.3.0-rc2-a9
 ```
 ...where to see all available candidate releases, run `dbt-create -l -b candidate`.
 
@@ -97,7 +99,7 @@ Along with telling `dbt-create` what you want your work area to be named and wha
 * `-s/--spack`: Install a local Spack instance in the work area. This will allow you to install and load whatever Spack packages you wish into your work area. 
 
 
-* `-c/--clone-pyvenv`: Use this if you wish to develop a Python package. By default, the Python virtual environment your work area uses is in the release area on cvmfs. However, if you choose this option, `dbt-create` will actually copy this virtual environment over to your work area, thereby giving you write permission.
+* `-q/--quick`: Use this if you don't plan to develop a Python package. This is much quicker than the default behavior of dbt-create, which will actually copy the Python virtual environment over to your work area, thereby giving you write permission to the project's Python packages. With `-q/--quick`, the Python virtual environment your work area uses is in the (read-only) release area on cvmfs.
   
 
 * `-i/--install-pyvenv`: With this option, there will be compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory. This is typically slower than cloning, but not always. You can take further control by combining it with the `-p <requirements file>` argument, though it's unlikely as a typical developer that you'd want a non-standard set of Python packages. 
@@ -168,6 +170,11 @@ If you want to change cmake message log level, you can use the `--cmake-msg-lvl`
 dbt-build --cmake-msg-lvl=<ERROR|WARNING|NOTICE|STATUS|VERBOSE|DEBUG|TRACE>
 ```
 
+By default the build is performed using gcc's `O2` compilation flag. If you wish to use a different
+```
+dbt-build --optimize-flag O3  # Or Og, etc.
+```
+
 You can see all the options listed if you run the script with the `--help` command, i.e.
 ```
 dbt-build --help
@@ -205,7 +212,7 @@ As such, it's important to know the assumptions a work area makes when you use i
 A useful script to call to get immediate information on your development environment is `dbt-info`. For a full set of options you can simply run `dbt-info --help`, but for a quick summary, we have the following:
 
 
-* `dbt-info release`: tells you if it's a far detector or near detector release, what its name is (e.g. `FD23-11-06`), what the name of the base release is, and where the release is located in cvmfs.
+* `dbt-info release`: tells you if it's a far detector or near detector release, what its name is (e.g. `NFD_DEV_240213_A9`), what the name of the base release is, and where the release is located in cvmfs.
 
 
 * `dbt-info package <package name>`: tells you info about the DUNE DAQ package whose name you provide it (git commit hash of its code, etc.). Passing "all" as the package name gives you info for all the DUNE DAQ packages. 
@@ -233,7 +240,7 @@ export LOCAL_SPACK_DIR="/home/jcfree/daqbuild_fddaq-v4.1.0/.spack"
 ```
 This file is sourced whenever you run `dbt-workarea-env`, and it tells both the build system and the developer where they can find crucial information about the work areas' builds. Specifically, these environment variables mean the following:
 
-* `$SPACK_RELEASE`: this is the release of the DUNE DAQ software stack against which repos will build (e.g. `fddaq-v4.1.0`, `NFD23-07-15`, etc.)
+* `$SPACK_RELEASE`: this is the release of the DUNE DAQ software stack against which repos will build (e.g. `fddaq-v4.3.0-rc2-a9`, `NFD_DEV_240213_A9`, etc.)
 
 * `$SPACK_RELEASES_DIR`: The base of the directory containing the DUNE DAQ software installations. 
 
@@ -273,7 +280,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Dec 19 15:43:36 2023 -0600_
+_Date: Tue Feb 27 17:37:43 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
