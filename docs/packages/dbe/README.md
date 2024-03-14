@@ -2,7 +2,7 @@
 
 ## Intro
 
-The DBE package provides a GUI interface to the OKS suite, allowing you to edit both schema files and data files. Note that these instructions will assume you have a basic familiarity with OKS as [described here](https://dune-daq-sw.readthedocs.io/en/latest/packages/dal/). They also assume that you [know how to download and build repositories](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/) and are able to display windows from your command line (e.g. `xclock &` or `emacs &` pop up windows for you). 
+The DBE package provides a GUI interface to the OKS suite, allowing you to edit both schema files and data files. Note that these instructions will assume you have a basic familiarity with OKS as [described here](https://github.com/DUNE-DAQ/dal/tree/develop?tab=readme-ov-file#an-introduction-to-oks). They also assume that you [know how to download and build repositories](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/) and are able to display windows from your command line (e.g. `xclock &` or `emacs &` pop up windows for you). 
 
 While DBE was [originally written as part of the ATLAS TDAQ effort](https://gitlab.cern.ch/atlas-tdaq-software/dbe.git), it has been modified to build within the DUNE DAQ framework. To get started working with DBE, you'll need to do two things. (1) load in the core OKS packages by setting up a work area, and (2) run `spack load dbe`. This second command is needed since loading in `dbe` will cause emacs to no longer work in the terminal, an undesirable side effect developers don't want to have to experience whenever they set up a work area for reasons unrelated to dbe. 
 
@@ -94,7 +94,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Sat Jul 15 12:45:51 2023 -0500_
+_Date: Thu Mar 14 09:54:09 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dbe/issues](https://github.com/DUNE-DAQ/dbe/issues)_
 </font>
