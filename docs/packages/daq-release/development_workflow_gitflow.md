@@ -65,9 +65,7 @@ We have two types of tags for DAQ repositories:
 
     * Aliased to a version tag;
 
-    * Nomenclature: `fddaq-vX.Y.Z` (FD packages), `nddaq-vX.Y.Z` (ND packages), `dunedaq-vX.Y.Z` (common packages)
- 
-Creating a version tag is generally done as part of the testing period of a release cycle. To create a version tag for a repository, follow the instructions in [Phase 2 - Testing Period](#before-the-testing-period-starts).
+    * Nomenclature: `fddaq-vX.Y.Z` (FD packages), `nddaq-vX.Y.Z` (ND packages), `dunedaq-vX.Y.Z` (common packages) 
 
 ## Release cycle 
 
