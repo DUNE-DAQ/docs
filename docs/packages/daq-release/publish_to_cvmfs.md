@@ -73,6 +73,23 @@ As a member of Software Coordination, if you have access to the `dunedaq` accoun
 ``` 
 You'll be prompted a couple of times if you're sure you want to go ahead, since of course modifying `/cvmfs` is a sensitive expert action. _Be aware_ that this script behaves as a "clobber", so if along with adding files to your staging-area `spack/externals/ext-v2.0` directory you've also removed some files, the corresponding files on cvmfs will also be removed. 
 
+## Removing Old Nightly Builds
+
+Removing old nightly builds is similar to [publishing new files to cvmfs](#the-basics), except that (naturally) you'll be removing existing files rather than copying them over. As `cvmfsdunedaqdev` on `oasiscfs01.fnal.gov`,
+
+1. Open a cvmfs server transaction via `cvmfs_server transaction dunedaq-development.opensciencegrid.org`
+
+1. Use `ls -l` in combination with some clever wildcards in `/cvmfs/dunedaq-development.opensciencegrid.org/nightly/` to determine which nightlies you'd like to remove
+
+
+1. Once you've confirmed the directories you'd like to remove, you can do so using `rm -rf /cvmfs/dunedaq-development.opensciencegrid.org/nightly/<clever wildcards>` 
+
+
+1. Publish what you've done via `cvmfs_server publish dunedaq-development.opensciencegrid.org`. Note that you can't be in the `/cvmfs` directory tree when you execute this. Note also it takes ~20 minutes before your published changes actually show up for others on cvmfs
+
+
+1. Before you execute `cvmfs_server publish ...`, if you wish to cancel your work you can execute `cvmfs_server abort dunedaq-development.opensciencegrid.org`
+
 
 -----
 
