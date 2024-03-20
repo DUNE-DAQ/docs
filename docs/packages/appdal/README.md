@@ -55,6 +55,14 @@ Several OKS classes have far detector specific customisations, as shown in the d
 The Datflow applications, which are also **SmartDaqApplication** which
 generate **DaqModules** on the fly, are also included here.
 
+## Trigger applications
+
+  ![Trigger](trigger.png)
+
+The Trigger applications, which are also **SmartDaqApplication** which
+generate **DaqModules** on the fly, are also included here.
+
+
 ###Testing SmartDaqApplication module generation
 
 This package also provides a program `generate_modules_test` for
@@ -71,7 +79,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Gordon Crone_
 
-_Date: Thu Jan 11 15:40:55 2024 +0000_
+_Date: Tue Mar 19 12:36:22 2024 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appdal/issues](https://github.com/DUNE-DAQ/appdal/issues)_
 </font>
