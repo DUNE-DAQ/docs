@@ -124,9 +124,20 @@ nav:
           - README.md
        - Toolset:
           - daq-assettools:
+             - About daq-assettools: packages/daq-assettools/README.md
           - daq-buildtools:
+             - About daq-buildtools: packages/daq-buildtools/README.md
           - daq-cmake:
+             - About daq-cmake: packages/daq-cmake/README.md
           - daq-release:
+             - About daq-release: packages/daq-release/README.md
+             - packages/daq-release/Build-external-packages-with-spack-in-a-work-area.md
+             - packages/daq-release/Build-new-external-software-stack.md
+             - packages/daq-release/ci_github_action.md
+             - packages/daq-release/create_release_spack.md
+             - packages/daq-release/development_workflow_gitflow.md
+             - packages/daq-release/publish_to_cvmfs.md
+             - packages/daq-release/team_repos.md
           - daqsystemtest:
              - About daqsystemtest: packages/daqsystemtest/README.md
              - packages/daqsystemtest/config/emulated_systems/README.md
@@ -140,7 +151,13 @@ nav:
              - About styleguide: packages/styleguide/README.md
        - Core:   
           - appfwk:
+             - About appfwk: packages/appfwk/README.md
+             - packages/appfwk/Daq-Application.md
+             - packages/appfwk/schema/README.md
           - cmdlib:
+             - About cmdlib: packages/cmdlib/README.md
+             - packages/cmdlib/Home.md
+             - packages/cmdlib/User-Guide.md
           - ers:
              - About ers: packages/ers/README.md
           - logging:
@@ -210,7 +227,9 @@ nav:
              - packages/wibmod/src/wibmod/WIB1/README.md
        - Control:
           - appdal:
+             - About appdal: packages/appdal/README.md
           - coredal:
+             - About coredal: packages/coredal/README.md
           - daqconf:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigDatabase.md
