@@ -53,6 +53,8 @@
 
     * oks
 
+    * oksconfgen
+
     * oksconfig
 
     * oksdbinterfaces
@@ -129,9 +131,27 @@
 
     * snbmodules
 
-    * sspmodules
+    * tpgtools
 
     * utilities
+
+## crt
+
+* **People to contact**: Wes Ketchum, Matt Murphy
+
+* **Repositories with write access**:
+
+    * crtmodules
+
+## daphne
+
+* **People to contact**: Marco Roda, John Freeman
+
+* **Repositories with write access**:
+
+    * daphnemodules
+
+    * sspmodules
 
 ## datafmts
 
@@ -153,7 +173,7 @@
 
 ## dqm
 
-* **People to contact**: Wes Ketchum 
+* **People to contact**: Wes Ketchum
 
 * **Repositories with write access**:
 
@@ -164,6 +184,8 @@
     * dqm-backend
 
     * dqmtools
+
+    * justintime
 
     * rawdatautils
 
@@ -208,6 +230,8 @@
     * daqsystemtest
 
     * datafilter
+
+    * trgtools
 
     * trigger
 
@@ -254,7 +278,7 @@
     * wibmod
 
 
-Page was generated at: 16/10/2023 14:28:53
+Page was generated at: 03/29/2024 13:09:41
 
 
 
@@ -266,7 +290,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Mon Oct 16 14:37:26 2023 -0500_
+_Date: Fri Mar 29 13:11:23 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
