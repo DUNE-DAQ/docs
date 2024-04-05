@@ -54,7 +54,7 @@ It's worth to do several checks before starting any test builds. These checks in
 ## Building candidate releases
 
 
-* Once the release configuration is ready, one can start the CI build for candidate releases. Go to the "Actions" tab of `daq-release` repo on GitHub, and select "Alma9 build candidate release" in the list of workflows in the workflows tab, then click the "run workflow" button. A drop-down menu will show up. Put in the version of the base release in the `vX.Y.Z` format, the version of the detector release, the detector type for the release (`fd` or `nd`) and the candidate release number (start with 1, count up with later candidate releases). Click "Run workflow" to start the build. 
+* Once the release configuration is ready, one can start the CI build for candidate releases. Go to the "Actions" tab of `daq-release` repo on GitHub. From the list of workflows on the left, select either "Alma9 build v5 candidate release" (for a develop release) or "Alma9 build v4 production candidate release" (for a production release), then click the "run workflow" button. A drop-down menu will show up. Put in the version of the base release in the `vX.Y.Z` format, the version of the detector release, the detector type for the release (`fd` or `nd`) and the candidate release number (start with 1, count up with later candidate releases). Click "Run workflow" to start the build. 
 
 * Once the build is completed successfully, verify if the same version tags shown in the GitHub Action log match those in the tag collector spreadsheet
 
@@ -66,7 +66,7 @@ It's worth to do several checks before starting any test builds. These checks in
 
     * Run the script without arguments for instructions; in a nutshell, it will publish the most recent release of a given specification (e.g., the most recent Alma9 near detector candidate build)
 
-    * Run it with the desired specifications (e.g. `publish_release_to_cvmfs.sh candidate nd alma9`)
+    * Run it with the desired specifications (e.g. `publish_release_to_cvmfs.sh candidate nd alma9 develop`)
 
     * After running the script, the release will take ~20 minutes before it appears on cvmfs
 
@@ -114,9 +114,9 @@ It's worth to do several checks before starting any test builds. These checks in
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Andrew Mogan_
 
-_Date: Mon Apr 1 07:56:33 2024 -0500_
+_Date: Fri Apr 5 13:22:38 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
