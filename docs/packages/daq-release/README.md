@@ -55,6 +55,8 @@ coredal: [![coredal](https://github.com/DUNE-DAQ/coredal/actions/workflows/duned
 
 ctbmodules: [![ctbmodules](https://github.com/DUNE-DAQ/ctbmodules/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/ctbmodules/actions/workflows/dunedaq-v4-cpp-ci.yml)
 
+cibmodules: [![cibmodules](https://github.com/DUNE-DAQ/cibmodules/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/cibmodules/actions/workflows/dunedaq-v4-cpp-ci.yml)
+
 daq-cmake: [![daq-cmake](https://github.com/DUNE-DAQ/daq-cmake/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-cmake/actions/workflows/dunedaq-v4-cpp-ci.yml)
 
 daqconf: [![daqconf](https://github.com/DUNE-DAQ/daqconf/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/daqconf/actions/workflows/dunedaq-v4-cpp-ci.yml)
@@ -158,9 +160,9 @@ wibmod: [![wibmod](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Andrew Mogan_
 
-_Date: Sun Mar 3 09:09:49 2024 -0600_
+_Date: Wed Apr 10 10:01:40 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
