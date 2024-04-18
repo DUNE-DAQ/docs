@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited Apr-17-2024_
+_This document was last edited Apr-18-2024_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -276,9 +276,9 @@ produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generall
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Andrew Mogan_
 
-_Date: Wed Apr 17 15:00:48 2024 -0500_
+_Date: Thu Apr 18 11:15:59 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
