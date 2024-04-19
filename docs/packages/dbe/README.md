@@ -8,11 +8,14 @@ While DBE was [originally written as part of the ATLAS TDAQ effort](https://gitl
 
 ## Walkthrough, Part 1: Editing Objects in a Configuration
 
-Let's get started seeing what functionality DBE provides. You can do the following:
+Let's get started seeing what functionality DBE provides. A useful tutorial is provided by the `dal` package; as `dal` isn't part of the nightly build, you'll need to clone it into your `sourcecode/` area and build it. Once you've done this, you can do the following:
 ```
 tutorial.py   # Generates a data file, tutorial.data.xml, which we can use for educational purposes 
-dbe_main -f ./tutorial.data.xml
+dbe_main -f tutorial.data.xml
 ```
+
+First, a word on how the OKS system knows where to find XML database files like `tutorial.data.xml`. As you can see from the example above, it knows to search the current working directory. However, it also searches the colon-separated directories in an environment variable called `DUNEDAQ_DB_PATH`. The `dbt-workarea-env` command provided by `daq-buildtools` which refreshes your development environment will automatically add the schema directories from repos in your work area. Furthermore you can manually specify a different directory in your account (e.g., `export DUNEDAQ_DB_PATH=$HOME/oks_config_files:$DUNEDAQ_DB_PATH`) if you want a common location for your OKS schema and data files.
+
 `tutorial.data.xml` describes a very simple DAQ system which consists of one run control, one TPC readout application and one photon readout application; it's covered more thoroughly [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/dal/#overview-of-tutorialdataxml). When DBE launches, you'll see a subwindow on the left side of the DBE window titled "Class View". As you can see, this lists the classes available to the data file you provided DBE, as well as the number of objects of each class type. Click on `ReadoutApplication`, and you'll see the following:
 
 ![Main Window](main_dbe_window2.png)
@@ -94,7 +97,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Mar 14 09:54:09 2024 -0500_
+_Date: Thu Apr 18 16:04:24 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dbe/issues](https://github.com/DUNE-DAQ/dbe/issues)_
 </font>
