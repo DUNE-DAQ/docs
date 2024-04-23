@@ -1,4 +1,5 @@
 #!/bin/bash
+# Hi there
 
 here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 
