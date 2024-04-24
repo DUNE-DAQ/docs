@@ -204,7 +204,7 @@ include(CMakeFindDependencyMacro)
 # the place of this comment. Make sure they match up with the
 # find_package calls in your package's CMakeLists.txt file
 ```
-The only part of this file you need to worry about is the "Insert find_dependency()..." comment. In place of this comment, you'll want to call CMake's `find_dependency` function (details [here](https://cmake.org/cmake/help/latest/module/CMakeFindDependencyMacro.html)) for each package that mypackage depends on; this ensures that developers who call `find_package(mypackage)` don't need to have explicit `find_package` calls on these dependencies.
+The only part of this file you need to worry about is the "Insert find_dependency()..." comment. In place of this comment, you'll want to call CMake's `find_dependency` function (details [here](https://cmake.org/cmake/help/latest/module/CMakeFindDependencyMacro.html)) for each package that mypackage depends on; this ensures that developers who call `find_package(mypackage)` don't need to have explicit `find_package` calls on these dependencies. Please note that if you want to _drop_ a dependency from your package, not only should you remove the relevant `find_package` call from `CMakeLists.txt`, you should also remove the corresponding `find_dependency` call in your `<package>Config.cmake.in` file. 
 
 You can see a simple example of this kind of file with `toylibrary/cmake/toylibraryConfig.cmake.in`.
 
@@ -510,7 +510,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Feb 2 16:21:08 2024 +0100_
+_Date: Tue Mar 12 12:15:21 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>

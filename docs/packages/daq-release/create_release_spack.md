@@ -20,9 +20,9 @@ A patch release is built in the same way as a non-patch release, except it doesn
 
 ### Create release configurations
 
-The release configuration package versions are defined by `configs/dunedaq-vX.Y.Z/release.yaml` (base release) and either `configs/fddaq-vX.Y.Z/release.yaml` or `configs/nddaq-vX.Y.Z/release.yaml` (detector release). To prepare the release configuration for a new release, it is best to start from (copy) the configuration of the develop release (`configs/dunedaq/dunedaq-develop/release.yaml` and `configs/fddaq/fddaq-develop/release.yaml` or `configs/nddaq/nddaq-develop/release.yaml`).
+The release configuration package versions are defined by `configs/coredaq/coredaq-vX.Y.Z/release.yaml` (core release) and either `configs/fddaq/fddaq-vX.Y.Z/release.yaml` or `configs/nddaq/nddaq-vX.Y.Z/release.yaml` (detector release). To prepare the release configuration for a new release, it is best to start from (copy) the configuration of the develop release (`configs/coredaq/coredaq-develop/release.yaml` and `configs/fddaq/fddaq-develop/release.yaml` or `configs/nddaq/nddaq-develop/release.yaml`).
 
-The release YAML file `dunedaq-<vX.Y.Z>.yaml` contain sections meant to define the versions of packages. In general, the `externals`, `devtools`, `systems` and `pymodules` sections will already have versions defined since you copied the YAML files from the develop release. While the develop release builds DUNE DAQ packages from the head of their `develop` branches, it uses versioned non-DUNE DAQ packages (e.g., Boost). However, you'll want to add the correct versions for the DUNE DAQ packages, e.g. edit
+The release YAML file contains sections meant to define the versions of packages. In general, the `externals`, `devtools`, `systems` and `pymodules` sections will already have versions defined since you copied the YAML files from the develop release. While the develop release builds DUNE DAQ packages from the head of their `develop` branches, it uses versioned non-DUNE DAQ packages (e.g., Boost). However, you'll want to add the correct versions for the DUNE DAQ packages, e.g. edit
 ```
         - name: fddetdataformats
           version: "develop"
@@ -41,12 +41,10 @@ In addition to the `release.yaml` file, there also needs to be a `dbt-build-orde
 
 ### Checks before doing test builds
 
-It's worth to do several checks before starting any test builds. These checks include:
+It's worth doing a couple of checks before starting any test builds. These checks include:
 
 
-* Check version tags match with the version numbers listed in `CMakeLists.txt`; The script `scripts/checkout-daq-package.py` in this repo can help here. `python3 scripts/checkout-daq-package.py -i <path-to-release-config-yaml> -a -c -o /tmp` will checkout all the DAQ packages used in the release into `/tmp` and verify if the version tags match cmake version numbers
-
-* Update Spack recipe files for DAQ packages with newly added dependencies; note that in general this will have happened already given that the nightly forms the basis of the candidate release
+* Check version tags match with the version numbers listed in `CMakeLists.txt`; The script `scripts/checkout-daq-package.py` in this repo can help here. `python3 scripts/checkout-daq-package.py -i <path-to-release-config-yaml> -a -c -o $( mktemp -d )` will checkout all the DAQ packages used in the release into a randomly-named directory and verify if the version tags match waht's in `CMakeLists.txt`
 
 * (Optional) Check if developers got their dependencies in `CMakeLists.txt` to match those in `cmake/<pkgname>Config.cmake.in` files; see [this section](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/#installing-your-project-as-a-local-package) of the daq-cmake instructions for more
 
@@ -54,7 +52,7 @@ It's worth to do several checks before starting any test builds. These checks in
 ## Building candidate releases
 
 
-* Once the release configuration is ready, one can start the CI build for candidate releases. Go to the "Actions" tab of `daq-release` repo on GitHub, and select "Alma9 build candidate release" in the list of workflows in the workflows tab, then click the "run workflow" button. A drop-down menu will show up. Put in the version of the base release in the `vX.Y.Z` format, the version of the detector release, the detector type for the release (`fd` or `nd`) and the candidate release build number (start with 1, count up with later candidate releases). Click "Run workflow" to start the build. 
+* Once the release configuration is ready, one can start the CI build for candidate releases. Go to the "Actions" tab of `daq-release` repo on GitHub. From the list of workflows on the left, select either "Alma9 build v5 candidate release" (for a develop release) or "Alma9 build v4 production candidate release" (for a production release), then click the "run workflow" button. A drop-down menu will show up. Put in the version of the base release in the `vX.Y.Z` format, the version of the detector release, the detector type for the release (`fd` or `nd`) and the candidate release number (start with 1, count up with later candidate releases). Click "Run workflow" to start the build. 
 
 * Once the build is completed successfully, verify if the same version tags shown in the GitHub Action log match those in the tag collector spreadsheet
 
@@ -66,7 +64,7 @@ It's worth to do several checks before starting any test builds. These checks in
 
     * Run the script without arguments for instructions; in a nutshell, it will publish the most recent release of a given specification (e.g., the most recent Alma9 near detector candidate build)
 
-    * Run it with the desired specifications (e.g. `publish_release_to_cvmfs.sh candidate nd alma9`)
+    * Run it with the desired specifications (e.g. `publish_release_to_cvmfs.sh candidate nd alma9 develop`)
 
     * After running the script, the release will take ~20 minutes before it appears on cvmfs
 
@@ -83,7 +81,7 @@ It's worth to do several checks before starting any test builds. These checks in
 ## Building the frozen release
 
 
-* The release will be cut at the end of the testing period. The build of the final frozen release can be done in a similar way as the candidate releases. Choose "Build frozen release" in the workflows list, and trigger the build by specifying release name used in `configs` and the build number (starts from 1, increment it if second deployment to cvmfs is needed).
+* The release will be cut at the end of the testing period. The build of the final frozen release can be done in a similar way as the candidate releases. Choose "Build frozen release" in the workflows list, and trigger the build by specifying release name used in `configs` and the number (starts from 1, increment it if second deployment to cvmfs is needed).
 
 * Deploying the frozen release to cvmfs is the same as for a candidate release  _except_ you want to log in to `oasiscfs01.fnal.gov` as `cvmfsdunedaq` instead of `cvmfsdunedaqdev` and of course you'll want to pass `frozen` rather than `candidate` to the publishing script
 
@@ -116,7 +114,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Feb 16 09:55:10 2024 -0600_
+_Date: Fri Apr 19 08:44:17 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

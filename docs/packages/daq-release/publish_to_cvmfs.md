@@ -67,7 +67,7 @@ Publishing the releases typically does not involve running `cvmfs_server` direct
 
 ## Updating a particular directory on cvmfs
 
-As a member of Software Coordination, if you have an account on `mwts.fnal.gov` with a staging area called `/home/<your username>/docker-scratch/cvmfs_dunedaq`, the `scripts/cvmfs/publish_directory_to_cvmfs.sh` script will synchronize a given subdirectory in your staging area to a given subdirectory on `/cvmfs`. E.g., if you've made changes to the v2.0 externals in your staging area, you can do the following if you've logged in to `oasiscfs01.fnal.gov` as `cvmfsdunedaq` and are in the base of a freshly-updated daq-release repo:
+As a member of Software Coordination, if you have access to the `dunedaq` account on `daq.fnal.gov` you'll notice there's a staging area called `/home/nfs/dunedaq/docker-scratch/cvmfs_dunedaq`, the `scripts/cvmfs/publish_directory_to_cvmfs.sh` script will synchronize a given subdirectory in that staging area to the corresponding subdirectory on `/cvmfs`. E.g., if you've made changes to the v2.0 externals in your staging area, you can do the following if you've logged in to `oasiscfs01.fnal.gov` as `cvmfsdunedaq` and are in the base of a freshly-updated daq-release repo:
 ```
 ./scripts/cvmfs/publish_directory_to_cvmfs.sh spack/externals/ext-v2.0 
 ``` 
@@ -82,7 +82,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Feb 8 16:24:13 2024 -0600_
+_Date: Mon Mar 11 17:00:28 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

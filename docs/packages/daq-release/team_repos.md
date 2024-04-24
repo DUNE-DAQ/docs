@@ -53,6 +53,8 @@
 
     * oks
 
+    * oksconfgen
+
     * oksconfig
 
     * oksdbinterfaces
@@ -129,9 +131,27 @@
 
     * snbmodules
 
-    * sspmodules
+    * tpgtools
 
     * utilities
+
+## crt
+
+* **People to contact**: Wes Ketchum, Matt Murphy
+
+* **Repositories with write access**:
+
+    * crtmodules
+
+## daphne
+
+* **People to contact**: Marco Roda, Manuel Arroyave
+
+* **Repositories with write access**:
+
+    * daphnemodules
+
+    * sspmodules
 
 ## datafmts
 
@@ -153,7 +173,7 @@
 
 ## dqm
 
-* **People to contact**: Wes Ketchum 
+* **People to contact**: Wes Ketchum
 
 * **Repositories with write access**:
 
@@ -164,6 +184,8 @@
     * dqm-backend
 
     * dqmtools
+
+    * justintime
 
     * rawdatautils
 
@@ -189,6 +211,16 @@
 
     * nddaqconf
 
+## readout
+
+* **People to contact**: Roland Sipos, Alessandro Thea
+
+* **Repositories with write access**:
+
+    * flxlibs
+
+    * hermesmodules
+
 ## timing
 
 * **People to contact**: David Cussans, Stoyan Trilov
@@ -209,41 +241,17 @@
 
     * datafilter
 
+    * trgtools
+
     * trigger
 
     * triggeralgs
 
     * triggermodules
 
-## udaq
-
-* **People to contact**: Jim Brooke
-
-* **Repositories with write access**:
-
-    * daqsystemtest
-
-    * dtpcontrols
-
-    * dtpctrllibs
-
-    * dtpemulator
-
-    * dtpfeedbacktools
-
-    * flx-k8s-device-plugin
-
-    * flxlibs
-
-    * timing
-
-    * timinglibs
-
-    * uhallibs
-
 ## wib
 
-* **People to contact**: Alessandro Thea, Paul Keener
+* **People to contact**: Paul Keener, Alessandro Thea
 
 * **Repositories with write access**:
 
@@ -254,7 +262,7 @@
     * wibmod
 
 
-Page was generated at: 16/10/2023 14:28:53
+Page was generated at: 2024/03/30 06:57:59
 
 
 
@@ -266,7 +274,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Mon Oct 16 14:37:26 2023 -0500_
+_Date: Sat Mar 30 07:00:24 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

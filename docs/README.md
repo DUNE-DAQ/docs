@@ -86,6 +86,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [trigger](packages/trigger/README.md) _modules that make up the DUNE FD DAQ trigger system_
 
+[trgtools](packages/trgtools/README.md) _trigger emulation and analysis tools_
+
 ### Dataflow (physical)
 
 [iomanager](packages/iomanager/README.md) _simplified API for passing messages between DAQModules_

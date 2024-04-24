@@ -38,7 +38,7 @@ We have four types of branch in our workflow:
 
     * Nomenclature: for a given release `fddaq-vX.Y.Z` use `prep-release/fddaq-vX.Y.Z` and similarly `prep-release/nddaq-vX.Y.Z` for `nddaq-vX.Y.Z`
 
-* **Patch branches**  `patch/dunedaq-vX.Y.x`**
+* **Patch branches**  `patch/fddaq-vX.Y.x`/`patch/nddaq-vX.Y.x`**
 
     * Used for patch frozen releases; these are forked off of the final tags of the frozen releases we're patching
 
@@ -65,7 +65,7 @@ We have two types of tags for DAQ repositories:
 
     * Aliased to a version tag;
 
-    * Nomenclature: `fddaq-vX.Y.Z` (FD packages), `nddaq-vX.Y.Z` (ND packages), `dunedaq-vX.Y.Z` (common packages) 
+    * Nomenclature: `fddaq-vX.Y.Z` (FD packages), `nddaq-vX.Y.Z` (ND packages), `coredaq-vX.Y.Z` (common packages) 
 
 ## Release cycle 
 
@@ -210,7 +210,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Feb 13 13:03:48 2024 -0600_
+_Date: Wed Apr 10 13:31:38 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
