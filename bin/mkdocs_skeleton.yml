@@ -122,6 +122,8 @@ nav:
     - Table of Contents: 
        - Overview:
           - README.md
+       - Release Notes:
+          - release_notes.md
        - Toolset:
           - daq-assettools:
           - daq-buildtools:
