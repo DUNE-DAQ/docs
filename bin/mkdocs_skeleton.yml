@@ -166,6 +166,7 @@ nav:
           - hdf5libs:
           - timing:
           - timinglibs:
+          - trgtools:
           - trigger:
        - Dataflow (physical):
           - iomanager:
