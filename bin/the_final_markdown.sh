@@ -120,8 +120,6 @@ for package in $package_list ; do
 	git checkout v8.0.0_for_docs2
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout v2.7.0
-    else
-	git checkout develop
     fi
     echo $tmpdir/$package
 
