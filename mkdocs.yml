@@ -255,6 +255,7 @@ nav:
              - About timinglibs: packages/timinglibs/README.md
         - trgtools:
              - About trgtools: packages/trgtools/README.md
+             - packages/trgtools/convert-tplatencies.md
              - packages/trgtools/process-tpstream.md
              - packages/trgtools/py-trgtools.md
              - packages/trgtools/ta-dump.md
