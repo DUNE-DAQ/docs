@@ -1,11 +1,11 @@
 # Processing TP Streams
-`process_tpstream.cxx` (and the application `trgtools_process_tpstream`) processes a timeslice HDF5 that contains TriggerPrimitives and creates a new HDF5 that also includes TriggerActivities and TriggerCandidates. The primary use of this is to test TA algorithms, TC algorithms, and their configurations, with output diagnostics available from `ta_dump.py` and `tc_dump.py`. The application also outputs the time in nanoseconds to create a new TA/TC given a new TP/TA to a CSV file in the format: row as a fragment and new TP/TA as each entry in that row. Many of the entries will have a value 0 because they did not result in creating a new TA/TC and can be ignored.
+`process_tpstream.cxx` (and the application `trgtools_process_tpstream`) processes a timeslice HDF5 that contains TriggerPrimitives and creates a new HDF5 that also includes TriggerActivities and TriggerCandidates. The primary use of this is to test TA algorithms, TC algorithms, and their configurations, with output diagnostics available from `ta_dump.py` and `tc_dump.py`. The application also outputs the latencies per-tp for TA emulation, and per-TA for TC emulation, into a CSV file, if `--latencies` option is added. The CSV is the format: row as a TP (TA) for TA(TC) emulation, with `time_start`, `adc_integral`, `processing time`, and whether it was TP that closed TA (1) or not (0).
 
 ## Example
 ```bash
 trgtools_process_tpstream -i input_file.hdf5 -o output_file.hdf5 -j algo_config.json -p TriggerActivityMakerExamplePlugin -m VDColdboxChannelMap --quiet
 
-trgtools_process_tpstream -i input_file.hdf5 -o output_file.hdf5 -j algo_config.json
+trgtools_process_tpstream --latencies -i input_file.hdf5 -o output_file.hdf5 -j algo_config.json
 ```
 In the second case, the default map will be `VDColdboxChannelMap`.
 
@@ -58,9 +58,9 @@ When developing new algorithms, it is sufficient to change the plugin name and i
 _Last git commit to the markdown source of this page:_
 
 
-_Author: aeoranday_
+_Author: Artur Sztuc_
 
-_Date: Tue Mar 26 11:54:54 2024 +0100_
+_Date: Wed May 8 17:21:47 2024 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/trgtools/issues](https://github.com/DUNE-DAQ/trgtools/issues)_
 </font>
