@@ -41,7 +41,7 @@
 
     * flx-k8s-device-plugin
 
-    * genconfig
+    * oksdalgen
 
     * grafana-dashboards
 
@@ -55,9 +55,9 @@
 
     * oksconfgen
 
-    * oksconfig
+    * oksconflibs
 
-    * oksdbinterfaces
+    * conffwk
 
     * okssystem
 

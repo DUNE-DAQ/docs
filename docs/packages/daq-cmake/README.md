@@ -415,7 +415,7 @@ Usage:
 daq_oks_codegen(<oks schema filename1> ... [TEST] [NAMESPACE ns] [DALDIR subdir] [DEP_PKGS pkg1 pkg2 ...])
 ```
 
-`daq_oks_codegen` uses the genconfig package's application of the same
+`daq_oks_codegen` uses the oksdalgen package's application of the same
 name to generate C++ and Python code from the OKS schema file(s)
 provided to it.
 
