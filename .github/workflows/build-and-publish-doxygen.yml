@@ -1,7 +1,8 @@
 name: Build Doxygen and publish to GitHub pages
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
 
 jobs:
   build-doxygen:
@@ -19,6 +20,8 @@ jobs:
     - name: Checkout daq-release
       uses: actions/checkout@v2
       with:
+        repository: DUNE-DAQ/daq-release
+        ref: 'amogan/doxygen'
         path: daq-release
 
     - name: Create dbt area
