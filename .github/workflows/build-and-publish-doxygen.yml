@@ -21,7 +21,6 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: DUNE-DAQ/daq-release
-        ref: 'amogan/doxygen'
         path: daq-release
 
     - name: Create dbt area
