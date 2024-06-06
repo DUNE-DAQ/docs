@@ -7,7 +7,7 @@
 
 * **Repositories with write access**:
 
-    * appdal
+    * appmodel
 
     * appfwk
 
@@ -15,7 +15,7 @@
 
     * connectivityserver
 
-    * coredal
+    * confmodel
 
     * dal
 

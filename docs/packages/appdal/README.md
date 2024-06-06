@@ -1,6 +1,6 @@
 # Appdal 
 
- This package extends the schema from the coredal package
+ This package extends the schema from the confmodel package
 to describe readout, dataflow and trigger  applications.
 
 ## SmartDaqApplication
@@ -81,5 +81,5 @@ _Author: Gordon Crone_
 
 _Date: Tue Mar 19 12:36:22 2024 +0000_
 
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appdal/issues](https://github.com/DUNE-DAQ/appdal/issues)_
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appmodel/issues](https://github.com/DUNE-DAQ/appmodel/issues)_
 </font>
