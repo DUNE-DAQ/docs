@@ -1,4 +1,4 @@
-# coredal
+# confmodel
 This package contains the 'core' schema for the DUNE daq OKS configuration.
 
   ![schema](schema.png)
@@ -18,7 +18,7 @@ The **Application** class has attibutes defining the application's
  `application_name` (executable name) and `commandline_parameters`. Its
  `applicationEnvironment` relationship lists environment variables needed by the
  application in addition to those defined by the **Session**. An
- [example Python script](https://github.com/DUNE-DAQ/coredal/blob/develop/scripts/app_environment.py)
+ [example Python script](https://github.com/DUNE-DAQ/confmodel/blob/develop/scripts/app_environment.py)
  that prints out the environment for enabled applications in the
 
  **Session** is provided in the `scripts` directory.
@@ -64,9 +64,9 @@ comparing with those listed in its `hw_resources` relationship.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Giovanna Lehmann Miotto_
+_Author: John Freeman_
 
-_Date: Sun Nov 26 17:13:12 2023 +0100_
+_Date: Thu Jun 6 11:09:37 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/coredal/issues](https://github.com/DUNE-DAQ/coredal/issues)_
 </font>

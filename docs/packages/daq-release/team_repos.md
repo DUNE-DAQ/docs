@@ -7,7 +7,7 @@
 
 * **Repositories with write access**:
 
-    * appdal
+    * appmodel
 
     * appfwk
 
@@ -15,7 +15,7 @@
 
     * connectivityserver
 
-    * coredal
+    * confmodel
 
     * dal
 
@@ -274,7 +274,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed May 29 14:56:50 2024 -0500_
+_Date: Thu Jun 6 11:41:53 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
