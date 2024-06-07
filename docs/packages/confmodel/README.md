@@ -68,5 +68,5 @@ _Author: John Freeman_
 
 _Date: Thu Jun 6 11:09:37 2024 -0500_
 
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/coredal/issues](https://github.com/DUNE-DAQ/coredal/issues)_
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/confmodel/issues](https://github.com/DUNE-DAQ/confmodel/issues)_
 </font>

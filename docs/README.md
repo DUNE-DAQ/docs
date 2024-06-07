@@ -74,9 +74,9 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Control
 
-[appdal](packages/appdal/README.md) _Schema for DAQ configuration of readout, dataflow and trigger applications_
+[appmodel](packages/appmodel/README.md) _Schema for DAQ configuration of readout, dataflow and trigger applications_
 
-[coredal](packages/coredal/README.md) _A core schema for DAQ configuration_
+[confmodel](packages/confmodel/README.md) _A core schema for DAQ configuration_
 
 [daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_
 

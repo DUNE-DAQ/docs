@@ -154,8 +154,8 @@ nav:
           - readoutmodules:
           - wibmod:
        - Control:
-          - appdal:
-          - coredal:
+          - appmodel:
+          - confmodel:
           - daqconf:
           - dbe:
           - nanorc:

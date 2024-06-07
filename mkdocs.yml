@@ -228,10 +228,10 @@ nav:
              - packages/wibmod/src/WIB1/README.md
              - packages/wibmod/src/wibmod/WIB1/README.md
        - Control:
-          - appdal:
-             - About appdal: packages/appdal/README.md
-          - coredal:
-             - About coredal: packages/coredal/README.md
+          - appmodel:
+             - About appmodel: packages/appmodel/README.md
+          - confmodel:
+             - About confmodel: packages/confmodel/README.md
           - daqconf:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigDatabase.md

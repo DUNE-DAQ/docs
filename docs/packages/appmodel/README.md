@@ -81,5 +81,5 @@ _Author: John Freeman_
 
 _Date: Thu Jun 6 11:11:02 2024 -0500_
 
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appdal/issues](https://github.com/DUNE-DAQ/appdal/issues)_
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appmodel/issues](https://github.com/DUNE-DAQ/appmodel/issues)_
 </font>
