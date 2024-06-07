@@ -41,7 +41,7 @@
 
     * flx-k8s-device-plugin
 
-    * genconfig
+    * oksdalgen
 
     * grafana-dashboards
 
@@ -55,9 +55,9 @@
 
     * oksconfgen
 
-    * oksconfig
+    * oksconflibs
 
-    * oksdbinterfaces
+    * conffwk
 
     * okssystem
 
@@ -274,7 +274,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Sat Mar 30 07:00:24 2024 -0500_
+_Date: Wed May 29 14:56:50 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

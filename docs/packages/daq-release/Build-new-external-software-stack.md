@@ -1,4 +1,7 @@
 # Build new external software stack
+
+_JCF, May-31-2024: these instructions haven't been maintained. Please contact me if you wish to build externals_
+
 The steps below has been tested `isc01.fnal.gov` (running `Almalinux9` with `docker-ce` installed) as user `dunedaq`.
 
 
@@ -167,9 +170,9 @@ spack uninstall --dependents daq-cmake externals devtools systems
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pengfei Ding_
+_Author: John Freeman_
 
-_Date: Wed Oct 25 11:20:34 2023 -0500_
+_Date: Fri May 31 12:20:35 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

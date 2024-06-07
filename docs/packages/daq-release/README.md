@@ -89,7 +89,7 @@ fdreadoutmodules: [![fdreadoutmodules](https://github.com/DUNE-DAQ/fdreadoutmodu
 
 flxlibs: [![flxlibs](https://github.com/DUNE-DAQ/flxlibs/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/flxlibs/actions/workflows/dunedaq-v4-cpp-ci.yml)
 
-genconfig: [![genconfig](https://github.com/DUNE-DAQ/genconfig/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/genconfig/actions/workflows/dunedaq-develop-cpp-ci.yml)
+oksdalgen: [![oksdalgen](https://github.com/DUNE-DAQ/oksdalgen/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/oksdalgen/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
 hdf5libs: [![hdf5libs](https://github.com/DUNE-DAQ/hdf5libs/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/hdf5libs/actions/workflows/dunedaq-v4-cpp-ci.yml)
 
@@ -160,9 +160,9 @@ wibmod: [![wibmod](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Andrew Mogan_
+_Author: John Freeman_
 
-_Date: Wed Apr 10 10:01:40 2024 -0500_
+_Date: Wed May 29 14:56:50 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
