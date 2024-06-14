@@ -34,9 +34,9 @@ Readout, HSI, Hermes andDataflow and Trigger applications extend from **SmartDaq
 and **ResourceSetAND**. This means it has a contains relationship that
 can contain any class inheriting from **ResourceBase** but should only
 contain **DetectorToDaqConnection**s. The `generate_modules()` method will
-generate a **DataReader** for each **DetectorToDaqConnection** associated with the application, and set of **ReadoutModule** objects, i.e. **DLH** for each
+generate a **DataReceiverModule** for each **DetectorToDaqConnection** associated with the application, and set of **DataHandlerModule** objects, i.e. **DLH** for each
 
-**DetectorStream** plus a single **TPHandlerModule** (FIXME: this shall become a TPHandler per detector plane). Optionally **DataRecorder** modules may be created (not supported yet)). The modules are created
+**DetectorStream** plus a single **TPHandlerModule** (FIXME: this shall become a TPHandler per detector plane). Optionally **DataRecorderModule** modules may be created (not supported yet)). The modules are created
 according to the configuration given by the data_reader, link_handler, data_recorder
 and tp_handler relationships respectively. Connections between pairs
 of modules are configured according to the queue_rules relationship
@@ -66,7 +66,7 @@ generate **DaqModules** on the fly, are also included here.
 
   ![WIEC](wiec_app.png)
 
-The WIEC application is a **SmartDaqApplication** which generates **HermesController** modules , and in future WIB modules, on the fly.
+The WIEC application is a **SmartDaqApplication** which generates **HermesModule** modules , and in future WIB modules, on the fly.
 It extends from **ResourceSetAND** and contains **DetectorToDaqConnection**s, which each contains a **DetDataReceiver** and **DetDataSender**s containing **DetectorSrteam**s.
 
 ## Testing SmartDaqApplication module generation
@@ -84,9 +84,9 @@ and Connections.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: John Freeman_
 
-_Date: Thu Jun 13 16:19:13 2024 +0200_
+_Date: Fri Jun 14 15:01:37 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appmodel/issues](https://github.com/DUNE-DAQ/appmodel/issues)_
 </font>
