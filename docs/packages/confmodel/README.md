@@ -23,19 +23,18 @@ The **Application** class has attibutes defining the application's
 
  **Session** is provided in the `scripts` directory.
 
-## ReadoutMap
+## Readout Map
 
  ![ReadoutMap schema](ReadoutMap.png)
 
- The **ReadoutMap** included here is currently a direct translation
-from the jsonnet schema in the `daqconf` package with the addition of
-a grouping class **ReadoutGroup**.
+The detector to DAQ connections are described using different types of **Resources**. Each **DetectorToDaqConnection** contains one **ResourceSetAND** containing one or more **DetDataSender**s and one **DetDataReceiver**. The **DetectorToDaqConnection** is a **ResourceSetOR**, meaning that if either the receiver or all the senders are disabled, then also the connection is disabled. 
 
- The **DROStreamConf** class inherits from **ResourceBase** allowing
-individual streams to be disabled.  **DROStreamConfs** are grouped
-into **ReadoutGroups** which inherit from **ResourceSetAND** so if all
-streams in a group are disabled the group itself is disabled.
+Each **DetDataSender** contains a set of **DetectorStream**s, which consist of a **Resource** associated to one **GeoId**.
 
+## Finite State Machines
+Each controller (**RCApplication**) uses one **FSMConfiguration** object that describes action, trasnisions and sequences.
+
+ ![FSM schema](fsm.png)
 
 ## Notes
 
@@ -64,9 +63,9 @@ comparing with those listed in its `hw_resources` relationship.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Giovanna Lehmann Miotto_
 
-_Date: Thu Jun 6 11:09:37 2024 -0500_
+_Date: Tue Jun 11 16:35:15 2024 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/confmodel/issues](https://github.com/DUNE-DAQ/confmodel/issues)_
 </font>
