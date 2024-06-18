@@ -34,7 +34,7 @@ Readout, HSI, Hermes andDataflow and Trigger applications extend from **SmartDaq
 and **ResourceSetAND**. This means it has a contains relationship that
 can contain any class inheriting from **ResourceBase** but should only
 contain **DetectorToDaqConnection**s. The `generate_modules()` method will
-generate a **DataReceiverModule** for each **DetectorToDaqConnection** associated with the application, and set of **DataHandlerModule** objects, i.e. **DLH** for each
+generate a **DataReaderModule** for each **DetectorToDaqConnection** associated with the application, and set of **DataHandlerModule** objects, i.e. **DLH** for each
 
 **DetectorStream** plus a single **TPHandlerModule** (FIXME: this shall become a TPHandler per detector plane). Optionally **DataRecorderModule** modules may be created (not supported yet)). The modules are created
 according to the configuration given by the data_reader, link_handler, data_recorder
@@ -86,7 +86,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Jun 14 15:01:37 2024 -0500_
+_Date: Mon Jun 17 10:15:39 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appmodel/issues](https://github.com/DUNE-DAQ/appmodel/issues)_
 </font>
