@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited May-24-2024_
+_This document was last edited June-26-2024_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -21,12 +21,12 @@ setup_dbt latest_v5
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
 setup_dbt latest_v4   # "setup_dbt latest" also works
 ```
-...in order to pick up the latest daq-buildtools intended for the v4 development line. Note that `latest_v4` is aliased to `v8.3.0` and `latest_v5` is aliased to `v8.4.0`. 
+...in order to pick up the latest daq-buildtools intended for the v4 development line. Note that `latest_v4` is aliased to `v8.3.0` and `latest_v5` is aliased to `v8.6.0`. 
 
-After running these two commands, then you'll see something along the lines of:
+After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.3.0/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.3.0/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.6.0/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.6.0/scripts -> PATH
 DBT setuptools loaded
 ```
 
@@ -40,10 +40,10 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v4.4.1-a9 the latest frozen release as of May-17-2024
+dbt-setup-release <release> # fddaq-v4.4.3-a9 the latest frozen release as of June-20-2024
 ```
 
-Note that if you set up a frozen release you'll get a message along the lines of `Release "fddaq-v4.4.1-a9" requested; interpreting this as release "fddaq-v4.4.1-a9-1"`; this simply reflects that the latest build iteration of the frozen release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
+Note that if you set up a frozen release you'll get a message along the lines of `Release "fddaq-v4.4.3-a9" requested; interpreting this as release "fddaq-v4.4.3-a9-1"`; this simply reflects that the latest build iteration of the frozen release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
 
 As of July 2023, the DUNE DAQ software stack has been split into far detector and near detector-specific parts. Starting with the `v4.1.0` release of the stack, do _not_ use the traditional convention of `dunedaq-vX.Y.Z` as the frozen release label, but instead, `fddaq-vX.Y.Z` and `nddaq-vX.Y.Z`. 
 
@@ -71,7 +71,7 @@ The majority of work areas are set up to build against the most recent nightly r
 ```sh
 dbt-create -n <nightly release> <name of work area subdirectory> # E.g., NFD_DEV_240213_A9
 ```
-To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l -b nightly`.
+You can also use `-n last_fddaq` or `-n last_nddaq` to build against the most recent _production_ branch, e.g., `NFD_PROD4_240213_A9`. To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l -b nightly`. Note also that you can leave out defining the name of the work area subdirectory, in which case it defaults to the same name as the release. 
 
 If you want to build against a candidate release, run:
 ```sh
@@ -180,7 +180,6 @@ By default the build is performed using gcc's `O2` compilation flag. If you wish
 ```
 dbt-build --optimize-flag O3  # Or Og, etc.
 ```
-
 If you wish to only generate files but _not_ also perform a compilation (this is a kind of expert action, but there are use cases for it) you can run:
 ```
 dbt-build --codegen-only
@@ -292,7 +291,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri May 24 13:52:42 2024 -0500_
+_Date: Tue Jun 25 15:26:23 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
