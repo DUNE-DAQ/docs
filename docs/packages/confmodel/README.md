@@ -16,7 +16,7 @@ disabling a **Segment** disables all of its nested **Segment**s.
 
 The **Application** class has attibutes defining the application's
  `application_name` (executable name) and `commandline_parameters`. Its
- `applicationEnvironment` relationship lists environment variables needed by the
+ `application_environment` relationship lists environment variables needed by the
  application in addition to those defined by the **Session**. An
  [example Python script](https://github.com/DUNE-DAQ/confmodel/blob/develop/scripts/app_environment.py)
  that prints out the environment for enabled applications in the
@@ -63,9 +63,9 @@ comparing with those listed in its `hw_resources` relationship.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Giovanna Lehmann Miotto_
+_Author: Alessandro Thea_
 
-_Date: Tue Jun 11 16:35:15 2024 +0200_
+_Date: Tue Jul 2 22:30:17 2024 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/confmodel/issues](https://github.com/DUNE-DAQ/confmodel/issues)_
 </font>
