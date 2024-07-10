@@ -62,7 +62,7 @@ will checkout all the DAQ packages used in the release into a randomly-named dir
 
 * To publish the candidate release to cvmfs:
 
-    * Log in to `oasiscfs01.fnal.gov` as `cvmfsdunedaqdev`
+    * Log in to `oasiscfs05.fnal.gov` as `cvmfsdunedaqdev`
 
     * Get the [`publish_release_to_cvmfs.sh` script](https://github.com/DUNE-DAQ/daq-release/blob/develop/scripts/cvmfs/publish_release_to_cvmfs.sh) (`git clone` this repo or use `curl`, e.g.)
 
@@ -87,7 +87,7 @@ will checkout all the DAQ packages used in the release into a randomly-named dir
 
 * The release will be cut at the end of the testing period. The build of the final frozen release can be done in a similar way as the candidate releases. Choose "Build frozen release" in the workflows list, and trigger the build by specifying release name used in `configs` and the number (starts from 1, increment it if second deployment to cvmfs is needed).
 
-* Deploying the frozen release to cvmfs is the same as for a candidate release  _except_ you want to log in to `oasiscfs01.fnal.gov` as `cvmfsdunedaq` instead of `cvmfsdunedaqdev` and of course you'll want to pass `frozen` rather than `candidate` to the publishing script
+* Deploying the frozen release to cvmfs is the same as for a candidate release  _except_ you want to log in to `oasiscfs05.fnal.gov` as `cvmfsdunedaq` instead of `cvmfsdunedaqdev` and of course you'll want to pass `frozen` rather than `candidate` to the publishing script
 
 * Do similar tests as shown in the section above for candidate releases
 
@@ -116,9 +116,9 @@ will checkout all the DAQ packages used in the release into a randomly-named dir
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: CVMFS DUNE DAQ Account_
 
-_Date: Wed Apr 24 19:50:33 2024 -0500_
+_Date: Wed Jul 10 08:08:57 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
