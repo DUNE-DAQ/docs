@@ -115,9 +115,9 @@ for package in $package_list ; do
     # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout fddaq-v4.4.3_for_docs
+	git checkout fddaq-v4.4.4_for_docs
     else
-	git checkout coredaq-v4.5.3 || git checkout fddaq-v4.4.3
+	git checkout coredaq-v4.5.4 || git checkout fddaq-v4.4.4
     fi
     echo $tmpdir/$package
 

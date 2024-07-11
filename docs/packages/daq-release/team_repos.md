@@ -125,6 +125,8 @@
 
     * readoutlibs
 
+    * datahandlinglibs
+
     * readoutmodules
 
     * serialization
@@ -274,7 +276,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Jun 6 11:41:53 2024 -0500_
+_Date: Tue Jun 25 12:08:04 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

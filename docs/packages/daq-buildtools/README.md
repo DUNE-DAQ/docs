@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited June-20-2024_
+_This document was last edited July-11-2024_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -14,11 +14,11 @@ To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.openscience
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt fddaq-v4.4.3
+setup_dbt fddaq-v4.4.4
 ```
 
-Note that `fddaq-v4.4.3` will point to `v8.3.0` of this package, used
-during the `fddaq-v4.4.3` release period.
+Note that `fddaq-v4.4.4` will point to `v8.3.0` of this package, used
+during the `fddaq-v4.4.4` release period.
 
 After running these two commands, then you'll see something like:
 ```
@@ -37,10 +37,10 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v4.4.3-a9 the latest frozen release as of June-20-2024
+dbt-setup-release <release> # fddaq-v4.4.4-a9 the latest frozen release as of July-11-2024
 ```
 
-Note that if you set up a frozen release you'll get a message along the lines of `Release "fddaq-v4.4.3-a9" requested; interpreting this as release "fddaq-v4.4.3-a9-1"`; this simply reflects that the latest build iteration of the frozen release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
+Note that if you set up a frozen release you'll get a message along the lines of `Release "fddaq-v4.4.4-a9" requested; interpreting this as release "fddaq-v4.4.4-a9-1"`; this simply reflects that the latest build iteration of the frozen release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
 
 As of July 2023, the DUNE DAQ software stack has been split into far detector and near detector-specific parts. Starting with the `v4.1.0` release of the stack, do _not_ use the traditional convention of `dunedaq-vX.Y.Z` as the frozen release label, but instead, `fddaq-vX.Y.Z` and `nddaq-vX.Y.Z`. 
 
@@ -62,7 +62,7 @@ Each work area is based on a DUNE DAQ software release, which defines what exter
 
 * **Frozen Releases**: a frozen release typically comes out every couple of months, and only after extensive testing supervised by a Release Coordinator. Depending on whether it's the far detector stack or the near detector stack, labeled as `fddaq-vX.Y.X` or `nddaq-vX.Y.Z`. 
 
-* **Candidate Releases**: a type of release meant specifically for frozen release testing. Generally labeled as `fddaq-vX.Y.Z-rc<candidate iteration>-<OS>` or `nddaq-vX.Y.Z-rc<candidate iteration>-<OS>`. For example, `fddaq-v4.4.0-rc4-a9` is the second release candidate for the AL9 build of `fddaq-v4.3.0`. Note that, prior to February 13th, 2024, the labeling convention is `fddaq-vX.Y.Z-c<candidate iteration>`
+* **Candidate Releases**: a type of release meant specifically for frozen release testing. Generally labeled as `fddaq-vX.Y.Z-rc<candidate iteration>-<OS>` or `nddaq-vX.Y.Z-rc<candidate iteration>-<OS>`. For example, `fddaq-v4.3.0-rc3-a9` is the third release candidate for the AL9 build of `fddaq-v4.3.0`. Note that, prior to February 13th, 2024, the labeling convention is `fddaq-vX.Y.Z-c<candidate iteration>`
 
 The majority of work areas are set up to build against the most recent nightly release. To do so, run:
 ```sh
@@ -283,7 +283,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Jun 20 10:47:40 2024 -0500_
+_Date: Thu Jul 11 14:34:17 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>

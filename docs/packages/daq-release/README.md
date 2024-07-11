@@ -3,13 +3,11 @@
 
 [![AL9 Spack Nightly Workflow (prod, v4) ](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-v4-release-alma9.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-v4-release-alma9.yml)
 
-[![Spack Nightly Workflow (prod, v4)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-v4-release-sl7.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-v4-release-sl7.yml)
-
 [![AL9 Spack Nightly Workflow (dev, v5) ](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-alma9.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-alma9.yml)
 
-[![Spack Nightly Workflow (dev, v5)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-sl7.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-sl7.yml)
+[![Nightly v5 Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-v5-integtest.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-v5-integtest.yml)
 
-[![Nightly Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-integtest.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-integtest.yml)
+[![Nightly v4 Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-v4-integtest.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-v4-integtest.yml)
 
 This is a repo containing DUNE DAQ release making tools, configuration files, and build scripts for both DUNE-DAQ and external packages. 
 
@@ -150,7 +148,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Jun 6 11:41:53 2024 -0500_
+_Date: Mon Jul 8 13:54:16 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
