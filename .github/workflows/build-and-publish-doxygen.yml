@@ -65,13 +65,14 @@ jobs:
 
     - name: Generate Doxyfile
       run: |
+        # Reintroduce triggeralgs so Doxygen will see it
+        cd $DBT_AREA_ROOT
+        git clone https://github.com/DUNE-DAQ/triggeralgs.git -b develop
         cd $GITHUB_WORKSPACE/daq-release/docs
         ./doxygen_gen.py
         # Edit paths in Doxyfile so they can be seen by the Doxygen action container, which uses /github/workspace
-        export DEV_AREA_NAME=${{ env.DEV_AREA_NAME }}
         sed -i "s|${DBT_AREA_ROOT}|/github/workspace/${{ env.DEV_AREA_NAME }}|g" Doxyfile
         echo "Contents of Doxyfile INPUT:"
-        cat $GITHUB_WORKSPACE/daq-release/docs/Doxyfile | grep -A 10 "INPUT   "
 
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.9.8
