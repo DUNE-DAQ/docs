@@ -3,6 +3,7 @@ name: Build Doxygen and publish to GitHub pages
 on:
   schedule:
     - cron: "0 5 * * *"
+  workflow_dispatch:
 
 jobs:
   build-doxygen:
