@@ -37,6 +37,15 @@ jobs:
         . env.sh
         echo "DBT_AREA_ROOT=$(echo $DBT_AREA_ROOT)" >> $GITHUB_ENV
         echo "DBT_AREA_ROOT is $DBT_AREA_ROOT"
+        # Temporary: Modify dbt-build-order manually until this change is propagated to nightlies
+        UTILITIES_LINE_NUMBER=$(grep -n utilities dbt-build-order.cmake | cut -d: -f1)
+        OPMONLIB_LINE_NUMBER=$(grep -n opmonlib dbt-build-order.cmake | cut -d: -f1)
+        NEW_UTILITIES_LINE_NUMBER=$((OPMONLIB_LINE_NUMBER - 1))
+        UTILITIES_LINE_CONTENT=$(sed -n "${UTILITIES_LINE_NUMBER}p" dbt-build-order.cmake)
+        sed -i "${UTILITIES_LINE_NUMBER}d" dbt-build-order.cmake
+        sed -i "${NEW_UTILITIES_LINE_NUMBER}i${UTILITIES_LINE_CONTENT}" dbt-build-order.cmake
+        echo "dbt-build-order.cmake contents:"
+        cat dbt-build-order.cmake
 
     - name: Checkout packages
       run: |
