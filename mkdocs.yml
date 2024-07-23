@@ -222,6 +222,9 @@ nav:
              - About appmodel: packages/appmodel/README.md
         - confmodel:
              - About confmodel: packages/confmodel/README.md
+        - dal:
+             - About dal: packages/dal/README.md
+             - packages/dal/RELEASE_NOTES.md
         - dbe:
              - About dbe: packages/dbe/README.md
         - daqconf:
