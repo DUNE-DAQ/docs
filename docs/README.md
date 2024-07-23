@@ -56,19 +56,21 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [hermesmodules](packages/hermesmodules/README.md) _Modules for the Hermes core_
 
-[readoutlibs](packages/readoutlibs/README.md) _Base classes for construction of readout-related DAQModules_
-
-[readoutmodules](packages/readoutmodules/README.md) _DAQModules for constructing readout-focused processes_
+[datahandlinglibs](packages/datahandlinglibs/README.md) _Tools for constructing readout-focused processes_
 
 [wibmod](packages/wibmod/README.md) _WIB configuration and monitoring interface_
 
 ### Control
 
+[appmodel](packages/appmodel/README.md) _extends the schema from the confmodel package to describe readout, dataflow and trigger applications_
+
+[confmodel](packages/confmodel/README.md) _contains the core schema for the DUNE daq OKS configuration
+
 [daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_
 
-[nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
+[dbe](packages/dbe/README.md) _database editor for OKS_
 
-[* rcif](packages/rcif/README.md) _run control related_
+[nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
 
 [restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
 
