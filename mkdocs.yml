@@ -288,6 +288,8 @@ nav:
         - rawdatautils:
              - About rawdatautils: packages/rawdatautils/README.md
      - Educational:
+        - dal:
+             - About dal: packages/dal/README.md
+             - packages/dal/RELEASE_NOTES.md
         - listrev:
              - About listrev: packages/listrev/README.md
-
