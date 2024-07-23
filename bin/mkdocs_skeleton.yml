@@ -152,6 +152,7 @@ nav:
      - Control:
         - appmodel:
         - confmodel:
+        - dal:
         - dbe:
         - daqconf:
         - nanorc:

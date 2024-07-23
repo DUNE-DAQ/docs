@@ -110,6 +110,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Educational
 
+[dal](packages/dal/README.md) _tutorial describing the basics of the OKS suite_
 [listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
 
 ------
