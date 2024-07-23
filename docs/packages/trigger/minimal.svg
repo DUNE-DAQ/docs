@@ -28,12 +28,12 @@
 <polygon fill="red" stroke="red" points="83.8,-314.32 80.3,-304.32 76.8,-314.32 83.8,-314.32"/>
 <text text-anchor="middle" x="130.85" y="-324.6" font-family="Times,serif" font-size="14.00"> Trigger Primitive</text>
 </g>
-<!-- ModuleLevelTrigger -->
-<g id="node4" class="node" pointer-events="visible" data-name="ModuleLevelTrigger">
+<!-- MLTModule -->
+<g id="node4" class="node" pointer-events="visible" data-name="MLTModule">
 
 <path fill="#b0e2ff" stroke="black" d="M139.53,-124.8C139.53,-124.8 21.08,-124.8 21.08,-124.8 15.08,-124.8 9.08,-118.8 9.08,-112.8 9.08,-112.8 9.08,-100.8 9.08,-100.8 9.08,-94.8 15.08,-88.8 21.08,-88.8 21.08,-88.8 139.53,-88.8 139.53,-88.8 145.53,-88.8 151.53,-94.8 151.53,-100.8 151.53,-100.8 151.53,-112.8 151.53,-112.8 151.53,-118.8 145.53,-124.8 139.53,-124.8"/>
 <text text-anchor="start" x="70.19" y="-109.2" font-family="Times,serif" font-weight="bold" font-size="14.00">mlt</text>
-<text text-anchor="start" x="16.94" y="-95.2" font-family="Times,serif" font-size="14.00">[ModuleLevelTrigger]</text>
+<text text-anchor="start" x="16.94" y="-95.2" font-family="Times,serif" font-size="14.00">[MLTModule]</text>
 </g>
 <!-- DataFlowOrchestrator -->
 <!-- DataFlowOrchestrator -->
@@ -51,14 +51,14 @@
 <!-- mlt -->
 
 <!-- td_to_dfo -->
-<g id="edge3" class="edge" data-name="TriggerCandidateMaker-&gt;ModuleLevelTrigger" data-comment="td_to_dfo">
+<g id="edge3" class="edge" data-name="TriggerCandidateMaker-&gt;MLTModule" data-comment="td_to_dfo">
 
 <path fill="none" stroke="black" d="M80.3,-177.45C80.3,-165.76 80.3,-149.99 80.3,-136.42"/>
 <polygon fill="black" stroke="black" points="83.8,-136.72 80.3,-126.72 76.8,-136.72 83.8,-136.72"/>
 <text text-anchor="middle" x="133.17" y="-147" font-family="Times,serif" font-size="14.00"> Trigger Candidate</text>
 </g>
 
-<g id="edge4" class="edge" data-name="ModuleLevelTrigger-&gt;DataFlowOrchestrator" data-comment="td_to_dfo">
+<g id="edge4" class="edge" data-name="MLTModule-&gt;DataFlowOrchestrator" data-comment="td_to_dfo">
 
 <path fill="none" stroke="rgb(0, 0, 255)" d="M80.3,-88.65C80.3,-76.96 80.3,-61.19 80.3,-47.62"/>
 <polygon fill="blue" stroke="blue" points="83.8,-47.92 80.3,-37.92 76.8,-47.92 83.8,-47.92"/>

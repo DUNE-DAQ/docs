@@ -24,7 +24,7 @@ daq_application known arguments (additional arguments will be stored and passed 
 
 # Usage Notes
 
-As of v2.6.0, `daq_application` will seldom have to be called directly, instead the preferred method of starting _dunedaq_ applications will be to use one of the Run Control products, such as `nanorc`.
+As of v2.6.0, `daq_application` will seldom have to be called directly, instead the preferred method of starting _dunedaq_ applications will be to use one of the Run Control products, such as `nanorc` or `drunc`.
 
 
 -----
@@ -33,9 +33,9 @@ As of v2.6.0, `daq_application` will seldom have to be called directly, instead 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: glehmannmiotto_
+_Author: Marco Roda_
 
-_Date: Fri Jul 15 15:54:07 2022 +0200_
+_Date: Thu Jul 4 10:47:11 2024 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appfwk/issues](https://github.com/DUNE-DAQ/appfwk/issues)_
 </font>

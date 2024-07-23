@@ -1,4 +1,4 @@
-# dpdklibs - DPDK UIO software and utilities 
+# dpdklibs - DPDK UIO software and utilities
 Appfwk DAQModules, utilities, and scripts for I/O cards over DPDK.
 
 # Setting up DPDK on NP04
@@ -93,7 +93,7 @@ There are a set of tests or example applications
 ## `dpdklibs_test_transmit_and_receive`
 If you're on a host which contains two dpdk-enabled interfaces, you can run `dpdklibs_test_transmit_and_receive`. This app will send packets out of one interface on the host and receive them on the other. It will also keep track of the # of packets sent and received per second, the total # of bytes sent and received per second, and the number of packets which are received as corrupted per second (hopefully zero). Each packet is literally an ethernet header + an IPv4 header + a UDP header + a `detdataformats::DAQEthHeader` + a payload of zeros. The default length of the payload is 9000 bytes, but you can adjust this via the `--payload` argument; e.g. `dpdklibs_test_transmit_and_receive --payload 0` would send packets with no payload. 
 
-##  `dpdklibs_test_frame_transmitter` / `dpdklibs_test_frame_receiver`
+## `dpdklibs_test_frame_transmitter` / `dpdklibs_test_frame_receiver`
 
 `dpdklibs_test_frame_transmitter` and `dpdklibs_test_frame_receiver` only individually require a host with a single dpdk-enabled interface. A very common idiom is to run `dpdklibs_test_frame_receiver` receiving packets on the interface of one host and to run `dpdklibs_test_frame_transmitter` sending packets on the interface of another host. 
 
@@ -105,6 +105,24 @@ Stream (1, 2, 3, 4)   : n.pkts 0 (tot. 23786829)
 ```
 ...since `dpdklibs_test_frame_transmitter` intentionally constructs the `detdataformats::DAQEthHeader` in its packets to have a `det_id` of 1, a `crate_id` of 2, a `slot_id` of 3, and a `stream_id` of 4.  
 
+## Configuring stats reporting from the `DPDKReaderModule`
+
+The way packet statistics are reported from the `DPDKReaderModule` is on a per-interface basis. An example JSON snippet which can control this reporting is as follows:
+```
+                "ifaces": [
+                    {
+                        "stats_reporting_cfg": {
+                            "expected_packet_size": 7243,
+                            "expected_timestamp_step": -1,
+                            "expected_seq_id_step": 1,                          
+                            "analyze_nth_packet": 2                        
+                        },
+                        ...
+```
+This tells the interface to check that the packet size is 7243 bytes, to ignore the timestamp (any negative value for a variable beginning with `expected_` means "ignore"), and to check the sequence ID step is 1. It also tells it to only do this for every other packet, as a way of saving computation time. Note that all these variables have defaults and thus `"stats_reporting_cfg"` doesn't need to be defined if the defaults are satisfactory; these defaults are: expect a sequence ID step of 1 for each new packet in a stream, a packet size of 7243 bytes, ignore the timestamp, and analyze all packets. 
+
+
+  
 
 
 -----
@@ -115,7 +133,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Alessandro Thea_
 
-_Date: Wed Mar 27 14:51:58 2024 +0100_
+_Date: Sat Jun 15 22:31:03 2024 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dpdklibs/issues](https://github.com/DUNE-DAQ/dpdklibs/issues)_
 </font>
