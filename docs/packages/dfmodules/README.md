@@ -5,13 +5,13 @@ The _dfmodules_ repository contains the DAQModules that are used in the Dataflow
 
 The DAQModules in this repository are the following:
 
-* TRBModule
+* TriggerRecordBuilder
 
    * This module receives TriggerDecision (TD) messages from the DataSelection subsystem (e.g. an instance of the TriggerDecisionEmulator module) and creates DataRequests that are sent to the Readout subsystem based on the components that are requested in the TD message.
 
    * It also receives the data fragments from the Readout subsystem and builds them together into complete TriggerRecords (TRs).  
 
-* DataWriterModule
+* DataWriter
 
    * This module stores the TriggerRecords in a configurable format.  Initially, the storage format is HDF5 files on disk, and additional storage options may be added later.   
 
@@ -27,7 +27,7 @@ Configuration parameters are used to customize the behavior of these modules, an
 
    * timeouts for reading from queues and for declaring an incomplete TriggerRecord stale
 
-* DataWriterModule
+* DataWriter
 
    * whether or not to actually store the data or just go through the motions and drop the data on the floor (which is useful sometimes during DAQ system testing)
 
@@ -51,9 +51,9 @@ Some of the errors that can be encountered by these modules include the followin
 
 The modules in this package produce operational monitoring metrics to provide visibility into their operation.  Some example quantities that are reported include the following:
 
-* the TRBModule (TRB) module reports a lot of information that can be useful to understand boht the state of the TRB and part of the surrounding systems. The complete description of all the metrics can be found at this [link](https://github.com/DUNE-DAQ/dfmodules/blob/develop/docs/TRB_metrics.md). The metrics are used to report both error conditions and internal status as well as general information about the data stream.
+* the TriggerRecordBuilder (TRB) module reports a lot of information that can be useful to understand boht the state of the TRB and part of the surrounding systems. The complete description of all the metrics can be found at this [link](https://github.com/DUNE-DAQ/dfmodules/blob/develop/docs/TRB_metrics.md). The metrics are used to report both error conditions and internal status as well as general information about the data stream.
 
-* the DataWriterModule module reports the number of TRs received and written.  Typically, these two values match, but they may not if data storage has been disabled, or if a data-storage prescale has been specified in the configuration.
+* the DataWriter module reports the number of TRs received and written.  Typically, these two values match, but they may not if data storage has been disabled, or if a data-storage prescale has been specified in the configuration.
 
 ### Raw Data Files
 
@@ -75,9 +75,9 @@ The raw data files are written in HDF5 format.  Each TriggerRecord is stored ins
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Marco Roda_
 
-_Date: Fri Jun 14 15:02:44 2024 -0500_
+_Date: Thu Jul 8 16:27:55 2021 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dfmodules/issues](https://github.com/DUNE-DAQ/dfmodules/issues)_
 </font>

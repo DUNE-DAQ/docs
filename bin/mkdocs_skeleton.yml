@@ -140,7 +140,6 @@ nav:
         - utilities:
      - Readout:
         - daqdataformats:
-        - datahandlinglibs:
         - detchannelmaps:
         - detdataformats:
         - dpdklibs:
@@ -148,12 +147,10 @@ nav:
         - fdreadoutlibs:
         - flxlibs:
         - hermesmodules:
+        - readoutlibs:
+        - readoutmodules:
         - wibmod:
      - Control:
-        - appmodel:
-        - confmodel:
-        - dal:
-        - dbe:
         - daqconf:
         - nanorc:
         - restcmd:
@@ -175,5 +172,5 @@ nav:
         - opmonlib:
         - rawdatautils:
      - Educational:
-        - dal:
         - listrev:
+

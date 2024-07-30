@@ -49,7 +49,7 @@ configuration information based on the desired detector state.
 
 ## TODOs
 
-The `WIBModule` module includes all the functionality of the `WIB2Reader`
+The `WIBConfigurator` module includes all the functionality of the `WIB2Reader`
 developed for `artDAQ` except the ability to perform data readout using the WIB
 spy buffer. This functionality is a simplest-working-solution to WIB control.
 `ProtoWIBConfigurator` is an similarly an exact duplicate of the artDAQ 
@@ -70,7 +70,7 @@ these utilities for now, and for debugging.
 
 ### Run configuration
 
-Presumably the DAQ will want to change WIB/FEMB settings. `WIBModule` 
+Presumably the DAQ will want to change WIB/FEMB settings. `WIBConfigurator` 
 implements the `settings` command, which exposes 
 [all settings](schema/wibmod/wibconfigurator.jsonnet). 
 Something in the DAQ needs to invoke this command with the desired arguments
@@ -78,19 +78,19 @@ when WIB settings need to be programmed.
 
 ### Calibration
 
-`WIBModule` may need a `calibrate` command to meet the calibration needs 
+`WIBConfigurator` may need a `calibrate` command to meet the calibration needs 
 of the DAQ, whatever they end up being. In principle, DAQ can already turn the 
 pulser on and off by sending `settings` commands with appropriate settings.
 
 ### Monitoring
 
-`WIBModule` should perhaps implement a `get_info` method to provide status
+`WIBConfigurator` should perhaps implement a `get_info` method to provide status
 updates, if this is the route slow controls ends up going.
 
 #### Sanity checking
 
 `wib_server` has several version check commands (hardware and software) as well
-as timing endpoint lock status, etc., which could be checked by `WIBModule`
+as timing endpoint lock status, etc., which could be checked by `WIBConfigurator`
 but is currently ignored. `ProtoWIBConfigurator` includes WIB and FEMB firmware
 checks.
 
@@ -109,7 +109,7 @@ run control can integratoe the WIB configuration and the overall DAQ configurati
 
 ## Stateful vs stateless
 
-Currently, `WIBModule` and `wib_server` are nominally stateless, meaning
+Currently, `WIBConfigurator` and `wib_server` are nominally stateless, meaning
 they will attempt to program the settings they are passed and report success or
 failure. (One exception to this is power state, which is tracked by `wib_server`.)
 
@@ -126,10 +126,10 @@ In the DAQ framework it is possible to register commands with the states in whic
 The DAQ application framework keeps track to the DAQ state (which is not the detector state!) and makes sanity checks at this level.
 This is an extension to the wibmod code that may be considered.
 
-That said, an argument could be made that `WIBModule` should perhaps track
+That said, an argument could be made that `WIBConfigurator` should perhaps track
 the last-programmed state and allow changes to this state, rather than requiring 
 the entire WIB state be fully specified for each configuration. Such arguments
-should be regarded with great caution, because `WIBModule` is the wrong
+should be regarded with great caution, because `WIBConfigurator` is the wrong
 place to track detector state, and will not preserve it across control software
 restarts.
 
@@ -142,7 +142,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Jun 18 12:04:29 2024 -0500_
+_Date: Fri Feb 10 10:36:52 2023 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/wibmod/issues](https://github.com/DUNE-DAQ/wibmod/issues)_
 </font>

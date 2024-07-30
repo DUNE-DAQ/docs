@@ -5,7 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="wibmod utilities trigger trgtools timinglibs timing styleguide serialization restcmd rcif rawdatautils opmonlib nanorc kafkaopmon logging listrev hdf5libs ipm iomanager integrationtest hermesmodules erskafka flxlibs fdreadoutlibs fddetdataformats ers dpdklibs dfmodules dfmessages detdataformats detchannelmaps dbe datahandlinglibs daqdataformats daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools dal confmodel cmdlib appmodel appfwk"
+package_list="wibmod utilities trigger trgtools timinglibs timing styleguide serialization restcmd readoutmodules readoutlibs rcif rawdatautils opmonlib nanorc kafkaopmon logging listrev hdf5libs ipm iomanager integrationtest hermesmodules erskafka flxlibs fdreadoutlibs fddetdataformats ers dpdklibs dfmodules dfmessages detdataformats detchannelmaps daqdataformats daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools cmdlib appfwk"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -115,9 +115,9 @@ for package in $package_list ; do
     # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout fddaq-v5.1.0_for_docs
+	git checkout fddaq-v4.4.6_for_docs
     else
-	git checkout coredaq-v5.1.0 || git checkout fddaq-v5.1.0
+	git checkout coredaq-v4.5.6 || git checkout fddaq-v4.4.6
     fi
     echo $tmpdir/$package
 

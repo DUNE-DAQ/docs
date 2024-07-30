@@ -1,9 +1,9 @@
-# datahandlinglibs - Generic Readout software and utilities 
+# readoutlibs - Generic Readout software and utilities 
 Generic implementation for DUNE Upstream DAQ Readout Software.
 
 ## Building and setting up the workarea
 
-How to clone and build DUNE DAQ packages, including `datahandlinglibs`, is covered in [the daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/). For some sample examples that demonstrate how to use `datahandlinglibs` check out the documentation of `datahandlinglibs`.
+How to clone and build DUNE DAQ packages, including `readoutlibs`, is covered in [the daq-buildtools instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/). For some sample examples that demonstrate how to use `readoutlibs` check out the documentation of `readoutmodules`.
  
 ## A Deeper Look Into Readout: Functional Elements
 
@@ -32,9 +32,15 @@ Individual domains represent a substantially different path of the raw data, inc
 
 1. Latency Buffer: A container that temporarily stores the raw data, and has certain attributes that ensures search-ability based on a lookup criteria. A notable example for this, is the lookup based on the timestamp, where the timestamp can be converted to an exact position in the buffer if the "timestamp continuity" attribute is ensured in the buffer.
 
+### Class diagram
+
+A zoomable visualization of [the readout code](https://github.com/DUNE-DAQ/readout/) for its `dunedaq-v2.8.0` release:
+
+![class-diagram](https://cernbox.cern.ch/index.php/s/Hvyb41Ndj2MfKlw/download)
+
 ## Looking into the directories
 
-At the top level, the datahandlinglibs package uses the same directory structure as other DUNE DAQ packages as described in [the daq-cmake documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/). However, due its large number of files, additional subdirectories have been added to organize them. This approach is covered [here](Directory-structure.md).
+At the top level, the readout package uses the same directory structure as other DUNE DAQ packages as described in [the daq-cmake documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/). However, due its large number of files, additional subdirectories have been added to organize them. This approach is covered [here](Directory-structure.md).
 
 
 
@@ -44,9 +50,9 @@ At the top level, the datahandlinglibs package uses the same directory structure
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: floriangroetschla_
 
-_Date: Tue Jul 16 08:46:43 2024 -0500_
+_Date: Mon Nov 22 15:05:47 2021 +0100_
 
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/datahandlinglibs/issues](https://github.com/DUNE-DAQ/datahandlinglibs/issues)_
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readoutlibs/issues](https://github.com/DUNE-DAQ/readoutlibs/issues)_
 </font>

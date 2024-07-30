@@ -19,7 +19,7 @@ For reference, here are the ideas behind the tests that currently exist in this 
 
 * `3ru_3df_multirun_test.py` - verify that a system with multiple RUs and multiple DF Apps works as expected, including TPG
 
-* `fake_data_producer_test.py` - verify that the FakeDataProdModule DAQModule works as expected
+* `fake_data_producer_test.py` - verify that the FakeDataProd DAQModule works as expected
 
 * `long_window_readout_test.py` - verify that readout windows that require TriggerRecords to be split into multiple sequences works as expected
 
@@ -36,9 +36,9 @@ For reference, here are the ideas behind the tests that currently exist in this 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Kurt Biery_
 
-_Date: Fri Jun 14 15:02:25 2024 -0500_
+_Date: Wed Jul 19 15:16:12 2023 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqsystemtest/issues](https://github.com/DUNE-DAQ/daqsystemtest/issues)_
 </font>
