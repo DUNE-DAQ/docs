@@ -50,7 +50,6 @@ jobs:
         cd $DBT_AREA_ROOT
         . env.sh
         spack load dbe || true
-        spack unload dbe || true
         dbt-build --codegen-only
 
     - name: Generate Doxyfile
