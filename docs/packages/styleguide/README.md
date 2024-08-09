@@ -37,7 +37,9 @@
 
         * [3.4  Names and Order of Includes](#34-names-and-order-of-includes)
 
-        * [3.5 Quotes vs. Angle Brackets for includes](#35-quotes-vs-angle-brackets-for-includes)
+        * [3.5  Quotes vs. Angle Brackets for includes](#35-quotes-vs-angle-brackets-for-includes)
+
+        * [3.6  Modules](#36-modules)
 
     * [4.  Scoping](#4-scoping)
 
@@ -89,6 +91,8 @@
 
         * [6.8  Ownership and Smart Pointers](#68-ownership-and-smart-pointers)
 
+        * [6.9  Coroutines](#69-coroutines)
+
     * [7.  Other C++ Features](#7-other-c-features)
 
         * [7.1  Rvalue References](#71-rvalue-references)
@@ -124,6 +128,10 @@
         * [7.16  sizeof](#716-sizeof)
 
         * [7.17  Type deduction](#717-type-deduction)
+
+        * [7.18  Concepts](#718-concepts)
+
+        * [7.19  Ranges](#719-ranges)
 
     * [8.  Comments](#8-comments)
 
@@ -1339,7 +1347,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Aug 9 16:44:46 2024 -0500_
+_Date: Fri Aug 9 17:13:47 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>
