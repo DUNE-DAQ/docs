@@ -33,13 +33,11 @@
 
         * [3.2  The #define Guard](#32-the-define-guard)
 
-        * [3.3  Forward Declarations [DUNE VERSION]](#33-forward-declarations-dune-version)
+        * [3.3  Inline Functions](#33-inline-functions)
 
-        * [3.4  Inline Functions](#34-inline-functions)
+        * [3.4  Names and Order of Includes](#34-names-and-order-of-includes)
 
-        * [3.5  Names and Order of Includes](#35-names-and-order-of-includes)
-
-        * [3.6 Quotes vs. Angle Brackets for includes](#36-quotes-vs-angle-brackets-for-includes)
+        * [3.5 Quotes vs. Angle Brackets for includes](#35-quotes-vs-angle-brackets-for-includes)
 
     * [4.  Scoping](#4-scoping)
 
@@ -433,14 +431,9 @@ inclusion. The format of the symbol name should be
 #endif // FOOPACKAGE_INCLUDE_FOOPACKAGE_DAQ_PROCESS_HPP_
 ```
 
-<a name="Forward_Declarations"></a>
-
-### 3.3  Forward Declarations [DUNE VERSION]
-[We're not going to forbid forward declarations, since while there are costs as described in the google style manual, the benefits of faster compilation outweigh these costs]
-
 <a name="Inline_Functions"></a>
 
-### 3.4  Inline Functions 
+### 3.3  Inline Functions 
 
 Define functions inline only when they are small, say, 10 lines or
 fewer. Feel free to inline getters and setters, and other short,
@@ -450,7 +443,7 @@ statement is never executed).
 
 <a name="Names_and_Order_of_Includes"></a>
 
-### 3.5  Names and Order of Includes 
+### 3.4  Names and Order of Includes 
 
 In *any* file which performs an include, if the included header is the
 "related header" - meaning, you're editing foo.cpp and the header is
@@ -486,11 +479,11 @@ symbols from `Bar.hpp`, don't count on the fact that you included
 unless `Foo.hpp` explicitly demonstrates its intent to provide you the
 symbols of `Bar.hpp`.
 
-### 3.6 Quotes vs. Angle Brackets for includes
+### 3.5 Quotes vs. Angle Brackets for includes
 
 If a header comes from the C++ Standard Library (e.g., `<vector>`, `<cstdlib>`) it should be enclosed in angle brackets. All other headers should be enclosed in quotes. 
 
-### 3.7 Modules
+### 3.6 Modules
 
 Currently, use of C++20 modules is disallowed. 
 
@@ -1086,7 +1079,7 @@ and to the compiler what it is you're trying to do.
 
 ### 7.18 Concepts
 
-Use a concept if you believe a set of conditions on a type will be applicable in multiple circumstances. This would be as opposed to if a set of conditions on a type will only apply for a single function of class, in which case a concept will only add additional boilerplate by restating the implicit conditions in the function or class. Prefer the `requires(Concept<T>)` syntax over the `template<Concept T>` syntax. Use pre-existing concepts from the STL when available rather than reinventing the wheel. E.g., rather than writing
+Use a concept if you believe a set of conditions on a type will be applicable in multiple circumstances. This would be as opposed to if a set of conditions on a type will only apply for a single function or class, in which case a concept will only add additional boilerplate by restating the implicit conditions in the function or class. Prefer the `requires(Concept<T>)` syntax over the `template<Concept T>` syntax. Use pre-existing concepts from the STL when available rather than reinventing the wheel. E.g., rather than writing
 ```
 template<typename T>
 concept MyEqualityComparable = requires(T a, T b) {
@@ -1095,9 +1088,9 @@ concept MyEqualityComparable = requires(T a, T b) {
 ```
 just use the existing `std::equality_comparable` concept from the STL. 
 
-### Ranges
+### 7.19 Ranges
 
-The use of ranges is encouraged where it will make code safer and more legible. For example, rather than using the traditional [erase-remove idiom](https://en.wikipedia.org/wiki/Erase%E2%80%93remove_idiom) to filter elements out of a container, just pipe the elements through `std::view::filter`. Or rather than passing the first and last iterators of a container to `std::sort`, just pass the container itself to `std::ranges::sort`.
+The use of ranges is encouraged where it will make code safer and more legible. For example, rather than using the traditional [erase-remove idiom](https://en.wikipedia.org/wiki/Erase%E2%80%93remove_idiom) to filter elements out of a container, just pipe the elements through `std::views::filter`. Or rather than passing the first and last iterators of a container to `std::sort`, just pass the container itself to `std::ranges::sort`.
 
 ## 8.  Comments
 
@@ -1346,7 +1339,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Aug 9 16:21:09 2024 -0500_
+_Date: Fri Aug 9 16:44:46 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>
