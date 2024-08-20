@@ -28,14 +28,12 @@ Arguments and options:
 
 `--test-app`: same as `--daq-module`, but for integration test applications
 
-`--config-generation`: whether to generate a script which itself will generate JSON code to create an application based on the package. Requires at least one `--daq-module` as well.
-
 Note that some of these concepts, e.g. a user-oriented app vs. an app designed for integration tests of the package itself, are covered below in the [Overview of a DUNE DAQ package](#package_overview) section.
 
 In the directory `create_dunedaq_package` is run out of, `create_dunedaq_package` will create a subdirectory named after your package if such a subdirectory doesn't exist. If a subdirectory with that name already _does_ exist, it should be empty with the possible exceptions of a `README.md` documentation file and/or a `.git/` version control directory. These exceptions allow you to run the script using as an argument the name of a new repo which you've cloned into your area. An example of using `create_dunedaq_package` would be the following (note you can horizontal-scroll the command below):
 ```
 cd ./sourcecode  # If we were in the base of a development area
-create_dunedaq_package --daq-module AFirstModule --config-generation --user-app an_app_for_users --user-app another_app_for_users --python-bindings --main-library thenewpackage
+create_dunedaq_package --daq-module AFirstModule --user-app an_app_for_users --user-app another_app_for_users --python-bindings --main-library thenewpackage
 ```
 (Of course in real life please use better names for your package and its components than those in the example). If you were to `ls thenewpackage`, you would see that the script had set up several new directories for you, as well as a `CMakeLists.txt` file:
 ```
@@ -51,23 +49,13 @@ schema
 src
 unittest
 ```
-where most of the directories contain boilerplate code for the software components you requested. While you'd be able to build this boilerplate package if it were in the `sourcecode/` directory of a standard DUNE DAQ development environment, the new package's components do almost nothing, although in the case of DAQModules code is generated which provide an example of how to set a member variable via Run Control configuration. Nonetheless this boilerplate code will need to be replaced, filled in and extended by the package's developers. Also if you look at `CMakeLists.txt`, you'll see that many of the function calls you'd need will have been added, though generally missing the arguments you'd need to provide them so they would know what libraries to link against, e.g.:
+where most of the directories contain boilerplate code for the software components you requested. While you'd be able to build this boilerplate package if it were in the `sourcecode/` directory of a standard DUNE DAQ development environment, the new package's components do almost nothing. Nonetheless this boilerplate code will need to be replaced, filled in and extended by the package's developers. Also if you look at `CMakeLists.txt`, you'll see that many of the function calls you'd need will have been added, though generally missing the arguments you'd need to provide them so they would know what libraries to link against, e.g.:
 ```
 daq_add_application(an_app_for_users an_app_for_users.cxx LINK_LIBRARIES ) # Any libraries to link in not yet determined
 ```
 Obviously comments such as `# Any libraries to link in not yet determined` should be deleted when it becomes appropriate.
 
 Note also that a unit test is automatically generated for you _which is designed to fail_. Developers are strongly encouraged to replace it with appropriate unit tests for their package, unless it's one of those rare packages which don't need unit tests, in which case the unit test functionality should be entirely stripped from the package.
-
-If the `--config-generation` option is chosen, the script which gets produced is called `<your package>_gen`. You can pass it the `-h` option to see its arguments, but the main thing to know is that to pass it a set of arguments you'd want to do so via the `-c <JSON file>` argument. An example of such a JSON file can be found in `<your package>/scripts/<your package>_example_config.json` file which is produced after you've run `create_dunedaq_package` with the `--config-generation` option.
-
-Assuming you're in the base of a development area [whose environment has been set up](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools) and have run the example `create_dunedaq_package` command above, you can now build your newly generated code and then try out the configuration generation script:
-```
-dbt-build
-dbt-workarea-env
-thenewpackage_gen -c ./sourcecode/thenewpackage/scripts/thenewpackage_example_config.json anewconfig
-```
-...where you can edit the values `num_afirstmodules` and `some_configured_value` in (a copy of) `thenewpackage_example_config.json` to generate a different configuration. Note that while this _legally_ runs in [`nanorc`](https://dune-daq-sw.readthedocs.io/en/latest/packages/nanorc/), it doesn't actually do anything -- in particular, the DAQ module(s) you've specified only set a member variable when configured, and don't communicate with anything.
 
 Now that you know how to generate the boilerplate for a DUNE DAQ package, please read on for a more in-depth understanding of what a typical DUNE DAQ package looks like.
 
@@ -204,7 +192,7 @@ include(CMakeFindDependencyMacro)
 # the place of this comment. Make sure they match up with the
 # find_package calls in your package's CMakeLists.txt file
 ```
-The only part of this file you need to worry about is the "Insert find_dependency()..." comment. In place of this comment, you'll want to call CMake's `find_dependency` function (details [here](https://cmake.org/cmake/help/latest/module/CMakeFindDependencyMacro.html)) for each package that mypackage depends on; this ensures that developers who call `find_package(mypackage)` don't need to have explicit `find_package` calls on these dependencies.
+The only part of this file you need to worry about is the "Insert find_dependency()..." comment. In place of this comment, you'll want to call CMake's `find_dependency` function (details [here](https://cmake.org/cmake/help/latest/module/CMakeFindDependencyMacro.html)) for each package that mypackage depends on; this ensures that developers who call `find_package(mypackage)` don't need to have explicit `find_package` calls on these dependencies. Please note that if you want to _drop_ a dependency from your package, not only should you remove the relevant `find_package` call from `CMakeLists.txt`, you should also remove the corresponding `find_dependency` call in your `<package>Config.cmake.in` file. 
 
 You can see a simple example of this kind of file with `toylibrary/cmake/toylibraryConfig.cmake.in`.
 
@@ -298,6 +286,11 @@ Usage:
 daq_protobuf_codegen( <protobuf filename1> ... [TEST] [GEN_GRPC] [DEP_PKGS <package 1> ...] )
 ```
 
+Requirements for calling this function:
+1) You need to call `find_package(opmonlib REQUIRED)` in your `CMakeLists.txt` file
+2) You also need to call `daq_add_library`, i.e., have a main package-wide library, and link it against the opmonlib library
+3) You need to call `find_package(gRPC REQUIRED)` before calling this function if you have specified `GEN_GRPC`.
+
 Arguments:
 
 
@@ -325,11 +318,6 @@ The generated python file will be called `*_grpc_pb2.py` and will be installed i
 
 The source file will be built as part of the main package library.
 Its compilation will be done automatically, i.e. there is no need to add `*.pb.cc` in the `daq_add_library` directive of your package: `daq_protobuf_codegen` will suffice.
-
-Two requirements for calling this function:
-1) You need to call `find_package(Protobuf REQUIRED)` to make the protobuf library available
-2) You also need to call `daq_add_library`, i.e., have a main package-wide library
-3) You need to call `find_package(gRPC REQUIRED)` before calling this function if you have specified `GEN_GRPC`.
 
 ### daq_add_python_bindings:
 Usage:
@@ -415,7 +403,7 @@ Usage:
 daq_oks_codegen(<oks schema filename1> ... [TEST] [NAMESPACE ns] [DALDIR subdir] [DEP_PKGS pkg1 pkg2 ...])
 ```
 
-`daq_oks_codegen` uses the genconfig package's application of the same
+`daq_oks_codegen` uses the oksdalgen package's application of the same
 name to generate C++ and Python code from the OKS schema file(s)
 provided to it.
 
@@ -454,7 +442,7 @@ arguments.
 
 ## Schemas and code generation
 
-`daq-cmake` supports for schema distribution and code generation with [moo](https://github.com/brettviren/moo/)
+`daq-cmake` supports for schema distribution and code generation with [moo](https://github.com/brettviren/moo/), [protobuf](https://protobuf.dev/programming-guides/proto3/) and [OKS](https://github.com/DUNE-DAQ/dal).
 
 
 
@@ -482,10 +470,11 @@ appfwk/
 ├── python
 ├── schema
 │   ├── appfwk
-│   │   ├── appinfo.jsonnet
 │   │   ├── app.jsonnet
 │   │   ├── cmd.jsonnet
-│   ├── README.md
+│   │   └── opmon
+│   │       └── appinfo.proto
+│   └── README.md
 ├── src
 ├── test
 └── unittest
@@ -497,7 +486,8 @@ appfwk/
 local s = moo.oschema.schema("dunedaq.appfwk.cmd");
 ```
 
-The same applies to `app.jsonnet` and `appinfo.jsonnet` for `dunedaq.appfwk.app` and `dunedaq.appfwk.appinfo`.
+The same applies to `app.jsonnet` for `dunedaq.appfwk.app`.
+
 
 The matching between the schema file name/path and the jsonnet namespace is essential for code generation with `daq-cmake`. A mismatch between the two will result in empty generated files in most of the cases.
 
@@ -508,9 +498,9 @@ The matching between the schema file name/path and the jsonnet namespace is esse
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Marco Roda_
 
-_Date: Fri Feb 2 16:21:08 2024 +0100_
+_Date: Tue Aug 20 15:37:36 2024 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
