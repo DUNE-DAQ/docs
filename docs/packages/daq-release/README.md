@@ -125,6 +125,8 @@ timing: [![timing](https://github.com/DUNE-DAQ/timing/actions/workflows/dunedaq-
 
 timinglibs: [![timinglibs](https://github.com/DUNE-DAQ/timinglibs/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/timinglibs/actions/workflows/dunedaq-v4-cpp-ci.yml)
 
+tpglibs: [![tpglibs](https://github.com/DUNE-DAQ/tpglibs/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/tpglibs/actions/workflows/dunedaq-v4-cpp-ci.yml)
+
 tpgtools: [![tpgtools](https://github.com/DUNE-DAQ/tpgtools/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/tpgtools/actions/workflows/dunedaq-v4-cpp-ci.yml)
 
 trgdataformats: [![trgdataformats](https://github.com/DUNE-DAQ/trgdataformats/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/trgdataformats/actions/workflows/dunedaq-v4-cpp-ci.yml)
@@ -146,9 +148,9 @@ wibmod: [![wibmod](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Andrew Mogan_
 
-_Date: Mon Jul 8 13:54:16 2024 -0500_
+_Date: Fri Aug 23 15:25:35 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
