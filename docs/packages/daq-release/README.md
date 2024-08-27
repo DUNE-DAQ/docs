@@ -125,7 +125,7 @@ timing: [![timing](https://github.com/DUNE-DAQ/timing/actions/workflows/dunedaq-
 
 timinglibs: [![timinglibs](https://github.com/DUNE-DAQ/timinglibs/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/timinglibs/actions/workflows/dunedaq-v4-cpp-ci.yml)
 
-tpglibs: [![tpglibs](https://github.com/DUNE-DAQ/tpglibs/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/tpglibs/actions/workflows/dunedaq-v4-cpp-ci.yml)
+tpglibs: [![tpglibs](https://github.com/DUNE-DAQ/tpglibs/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/tpglibs/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
 tpgtools: [![tpgtools](https://github.com/DUNE-DAQ/tpgtools/actions/workflows/dunedaq-v4-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/tpgtools/actions/workflows/dunedaq-v4-cpp-ci.yml)
 
@@ -150,7 +150,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Andrew Mogan_
 
-_Date: Fri Aug 23 15:25:35 2024 -0500_
+_Date: Tue Aug 27 10:10:42 2024 -0400_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
