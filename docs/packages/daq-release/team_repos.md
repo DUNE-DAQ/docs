@@ -1,21 +1,31 @@
 # List of teams and repositories 
 
 
+## calci
+
+* **People to contact**: Nuno Barros, Andrew Mogan
+
+* **Repositories with write access**:
+
+    * cibmodules
+
 ## ccm
 
 * **People to contact**: Pierre Lasorak, Alex Tapper
 
 * **Repositories with write access**:
 
-    * appmodel
-
     * appfwk
+
+    * appmodel
 
     * cmdlib
 
-    * connectivityserver
+    * conffwk
 
     * confmodel
+
+    * connectivityserver
 
     * dal
 
@@ -41,8 +51,6 @@
 
     * flx-k8s-device-plugin
 
-    * oksdalgen
-
     * grafana-dashboards
 
     * kafkaopmon
@@ -57,7 +65,7 @@
 
     * oksconflibs
 
-    * conffwk
+    * oksdalgen
 
     * okssystem
 
@@ -86,6 +94,8 @@
     * daqdataformats
 
     * daqsystemtest
+
+    * datahandlinglibs
 
     * dfmessages
 
@@ -125,13 +135,13 @@
 
     * readoutlibs
 
-    * datahandlinglibs
-
     * readoutmodules
 
     * serialization
 
     * snbmodules
+
+    * tpglibs
 
     * tpgtools
 
@@ -223,6 +233,8 @@
 
     * hermesmodules
 
+    * tpglibs
+
 ## timing
 
 * **People to contact**: David Cussans, Stoyan Trilov
@@ -253,7 +265,7 @@
 
 ## wib
 
-* **People to contact**: Paul Keener, Alessandro Thea
+* **People to contact**: Alessandro Thea, Paul Keener
 
 * **Repositories with write access**:
 
@@ -264,7 +276,7 @@
     * wibmod
 
 
-Page was generated at: 2024/03/30 06:57:59
+Page was generated at: 30/08/2024 13:03:54
 
 
 
@@ -276,7 +288,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Jun 25 12:08:04 2024 -0500_
+_Date: Fri Aug 30 13:07:16 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
