@@ -61,8 +61,6 @@
 
     * oks
 
-    * oksconfgen
-
     * oksconflibs
 
     * oksdalgen
@@ -288,7 +286,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Aug 30 13:07:16 2024 -0500_
+_Date: Wed Sep 4 10:26:27 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
