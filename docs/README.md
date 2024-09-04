@@ -102,6 +102,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [timinglibs](packages/timinglibs/README.md) _timing control and monitoring_
 
+[tpglibs](packages/tpglibs/README.md) _Processes raw waveforms and returns the generated trigger primitives_ 
+
 [trgtools](packages/trgtools/README.md) _trigger emulation and analysis tools_
 
 [trigger](packages/trigger/README.md) _modules that make up the DUNE FD DAQ trigger system_

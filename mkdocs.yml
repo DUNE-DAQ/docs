@@ -267,6 +267,8 @@ nav:
              - packages/timing/test/Notes.md
           - timinglibs:
              - About timinglibs: packages/timinglibs/README.md
+          - tpglibs:
+             - About tpglibs: packages/tpglibs/README.md
           - trgtools:
              - About trgtools: packages/trgtools/README.md
              - packages/trgtools/convert-tplatencies.md
