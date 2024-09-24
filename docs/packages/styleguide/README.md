@@ -984,9 +984,9 @@ the user-visible value, not any implementation details.
 Take care that a given print statement not print so often that it
 obscures the output of other equally (or even more) important messages
 
-When constructing a string that contains variables, rather than
+<!--- When constructing a string that contains variables, rather than
 streaming them into a `std::stringstream` object, prefer to use
-C++20's `std::format` function.
+C++20's `std::format` function. --->
 
 ### 7.10  Increment and Decrement 
 
@@ -1347,7 +1347,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Aug 9 17:13:47 2024 -0500_
+_Date: Fri Sep 13 09:48:15 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>

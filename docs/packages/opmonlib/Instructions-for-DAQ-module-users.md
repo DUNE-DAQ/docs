@@ -4,114 +4,165 @@
 
 Before using opmonlib it is important to understand and define what needs to be monitored.
 
-Monotorable objects can then be captured in a `schema` file to create C++ structs using `moo`. Documentation and instructions on generating schema data structures and using moo can be found here:
+Monitorable objects can then be captured in a `schema` file to create C++ structs using `ProtoBuf`. 
+Documentation and instructions on generating schema data structures and using ProtoBuf can be found in the [ProtoBuf website](https://protobuf.dev/programming-guides/proto3/). 
+Relevant pages also include the description of the C++ API.
 
 
-* [Schema](https://brettviren.github.io/moo/dunedaq-appfwk-schema.html)
+In general each `.protobuf` file contains definitions of blocks that are published as single units.
+Each `schema` file will generate a C++ header file containing the structures which hold the monitoring data, as defined in the `.proto` file. 
+Typically each module may only need one struct to hold its monitoring information; however it is possible to create multiple nested structs within a schema, which are filled by the same module.
 
-* [Moo](https://brettviren.github.io/moo/buildsys.html#intro)
+It is preferred to organise the protobuf schemas in the following way:
 
-Examples of how to write schemas can be found [here](https://github.com/DUNE-DAQ/timing/tree/feature/op_mon/schema/timing). In general each `.jsonnet` file contains definitions of types, and the objects to be monitored using these types. Each `schema` file will generate a C++ header file containing the structures which hold the monitoring data, as defined in the `.jsonnet` file. Typically each module may only need one struct to hold its monitoring information; however it is possible to create multiple nested structs within a schema, which are filled by the same module, as demonstrated by the timing module.
+
+ * put the opmon related schemas in `schema/opmon` inside your repository
+
+ * try to group the schemas so that the schema used by the same modules are in the same file; the name of the file should match the name of the module
+
+ * as protobuf generates a lot of code, there might be conflicts with our code - protect the generated code with an additional `opmon` namespace
+
+Here is an example, taken from the `DFOModule.proto`, which contains the schemas used by DFOModule plugin in dfmodules. 
+```
+syntax = "proto3";
+
+package dunedaq.dfmodules.opmon;
+
+// regular metric published byt the DFO
+message DFOInfo {
+  // counters 
+  uint64 tokens_received = 1;
+  uint64 decisions_received = 2;
+  uint64 decisions_sent = 3;
+
+  // time management of the decision thread
+  uint64 waiting_for_decision = 10 ; // Time spent waiting on Trigger Decisions, in microseconds
+  uint64 deciding_destination = 11 ; // Time spent making a decision on the receving DF app, in microseconds
+  uint64 forwarding_decision = 12  ; // Time spent sending the Trigger Decision to TRBs, in microseconds
+
+  // time management of the token thread
+  uint64 waiting_for_token = 15 ; // Time spent waiting in token thread for tokens, in microseconds
+  uint64 processing_token = 16 ; // Time spent in token thread updating data structure, in microseconds
+}
+
+// these counters are published separately for each trigger type
+message TriggerInfo {
+  uint64 received = 1;
+  uint64 completed = 2;
+}
+```
+
+### Valid types
+As a generic schema language, `ProtoBuf` allows you to use simple types, but also lists, maps, etc.
+Be aware that apart from basic types and nested messages, other quantities are ignored by the monitoring system.
+An `OpMonEntry` message is generated whenever a structure with at least one publishable field is passed to the `publish` method, see next section.
 
 ## Filling and collecting structures
-
-Once the information structures have been generated, we need to fill them with data and collect the information for monitoring. 
-
-For `opmonlib` to collect the relevant information from the DAQ module, define the public `get_info()` function in the DAQ module header file as the following:
-```
-void get_info(opmonlib::InfoCollector& ci, int level) override;
-```
-The `InfoCollector` class is used collect the information structures using the `add` function. The `level` defines the level of information the user wants to monitor (e.g. default, detailed, debug, etc.). Default information is defined as `level=0`. An example of how the `get_info` function is implemented in `FakeCardReader.hpp` in the `readout` [module](https://github.com/DUNE-DAQ/readout/blob/develop/plugins/FakeCardReader.cpp):
-```
-void
-FakeCardReader::get_info(opmonlib::InfoCollector& ci, int level=0) {
-  fakecardreaderinfo::Info fcr;
-
-  fcr.packets = m_packet_count_tot.load();
-  fcr.new_packets = m_packet_count.exchange(0);
-  ci.add(fcr);
-}
-```
-here the information structure `fcr` is filled with the relevant data members, and then added to the `InfoCollector` for monitoring. In this case the filling and collecting is implemented in the same instance.
-
-
-**It is important** at this point to consider whether it is necessary to separate filling from collecting. For example, `opmonlib` may call `get_info()` for information to be collected at a faster rate than the hardware can handle. In this case, one may want to separate the filling and collecting of information into two separate threads. 
-
-The timing module provides an example of how one can do this using its `InfoGatherer` shown [here](https://github.com/DUNE-DAQ/timing/blob/feature/op_mon/src/InfoGatherer.hpp). `InfoGatherer` provides a template class which can fill different types of information structures. Examples of this are implemented in `TimingHardwareManagerPDI.hpp`:
-```
-  // monitoring
-  InfoGatherer<pdt::timingmon::TimingPDIMasterTLUMonitorData> m_master_monitor_data_gatherer;
-  virtual void gather_master_monitor_data(InfoGatherer<pdt::timingmon::TimingPDIMasterTLUMonitorData>& gatherer);
-
-  InfoGatherer<pdt::timingmon::TimingEndpointFMCMonitorData> m_endpoint_monitor_data_gatherer;
-  virtual void gather_endpoint_monitor_data(InfoGatherer<pdt::timingmon::TimingEndpointFMCMonitorData>& gatherer);
-```
-
-## Dynamic structures
-
-The structures generated using the `opmonlib` schema cannot contain dynamic structures, i.e. sequences and maps are not allowed. 
-The idea being that dynamic information breaks the logic of the monitoring: it breaks the link between the source of information (`source_id`) and the information itself. 
-
-In order to preserve the structure of the `opmon` information and to publish dynamic information, a module needs to publish sub-component monitoring information and attach it to its parent.
-This is done creating a generic `InfoCollector` object that can be populated with a static schema content and then adding the `InfoCollector` object to the parent.
-Pseudo code is:
+The `ProtoBuf` C++ API guide describes how to fill the structures you created. 
+In order to publish the metric, the object has to be created from within a `MonitorableObject`, see [the header file](https://github.com/DUNE-DAQ/opmonlib/blob/mroda/protobuf/include/opmonlib/MonitorableObject.hpp).
+In particular, a `DAQModule` *is* a `MonitorableObject`. 
+Two main functions are relevant for publishing:
 ```C++
-
-Nested::example::get_info(opmonlib::InfoCollector& ci, int level)
-{
-  parentinfo::Info par_info;
-  par_info.counter = ...
-  ci.add( par_info );
-  
-  opmonlib::InfoCollector tmp_ic;
-  daughterinfo::Info info;
-  info.daughter_counter = ...
-  tmp_ic.add( info );
-  ci.add( "daughter_name", tmp_ic );
-}
-
+void publish( google::protobuf::Message &&,
+     	        CustomOrigin && co = {},
+              OpMonLevel l = to_level(EntryOpMonLevel::kDefault) ) const noexcept ;
+virtual void generate_opmon_data(opmon_level) {return;}
 ```
-This will generate two `opmon` blocks. 
-The first of type `parentinfo::Info` associated to a `source_id` decided by upper level code, let's assume it's going to be `"parent.id"`. 
-The second block will be of type `daughterinfo::Info` and its `source_id` will be `"parent.id.daughter_name"`. 
-Of course, any number of `InfoCollector` can be attached to a parent, effectively turning this procedure into having a dynamic structure. 
 
-Examples of this procedure can be seen in `dfmodule`, in the way the DFO publishes information related to the dfapplications: [DFO side](https://github.com/DUNE-DAQ/dfmodules/blob/0a6e39541fab66768040c19b23925ea62bc1cc94/plugins/DataFlowOrchestrator.cpp#L296-L300) and [Daughter side](https://github.com/DUNE-DAQ/dfmodules/blob/0a6e39541fab66768040c19b23925ea62bc1cc94/src/TriggerRecordBuilderData.cpp#L202). 
-The links point to the code itself, here are the important parts:
+
+* `publish` takes a ProtoBuf schema object, it timestamps it with the time of the function call, it serializes it (synchronously) and publishes it (asynchronously) via one of the configured OpMonFacilities. This function can be called at anytime. 
+
+* `generate_opmon_data` is a function which the monitoring system calls regularly (order of seconds). Its default behaviour is 'null'. Every developer can freely implement this in their MonitorableObject in order to avoid setting up a thread to generate information regularly. Specific implementations are expected to call the `publish` function to actually publish the metric.
+
+### Example
+An example of metric publication is
 ```C++
+void DFOModule::generate_opmon_data()  {
 
-// DFO side: the parent that contains a number of dynamic subcomponents
-// in a map<string, TriggerRecordBuilderData> called m_dataflow_availability
-void DataFlowOrchestrator::get_info(opmonlib::InfoCollector& ci, int level) {
+  opmon::DFOInfo info;
+  info.set_tokens_received( m_received_tokens.exchange(0) );
+  info.set_decisions_sent(m_sent_decisions.exchange(0));
+  info.set_decisions_received(m_received_decisions.exchange(0));
+  info.set_waiting_for_decision(m_waiting_for_decision.exchange(0));
+  info.set_deciding_destination(m_deciding_destination.exchange(0));
+  info.set_forwarding_decision(m_forwarding_decision.exchange(0));
+  info.set_waiting_for_token(m_waiting_for_token.exchange(0));
+  info.set_processing_token(m_processing_token.exchange(0));
+  publish( std::move(info) );
 
-for (auto& [name, app] : m_dataflow_availability) {
-    opmonlib::InfoCollector tmp_ic; 
-    app.get_info(tmp_ic, level);
-    ci.add(name, tmp_ic);
-  }
+  std::lock_guard<std::mutex>	guard(m_trigger_mutex);
+  for ( auto & [type, counts] : m_trigger_counters ) {
+    opmon::TriggerInfo ti;
+    ti.set_received(counts.received.exchange(0));
+    ti.set_completed(counts.completed.exchange(0));
+    auto name = dunedaq::trgdataformats::get_trigger_candidate_type_names()[type];
+    publish( std::move(ti), {{"type", name}} );
+   }
 }
-
-// daughter side
-void TriggerRecordBuilderData::get_info(opmonlib::InfoCollector& ci, int /*level*/) {
-
-  // daughter schema-generated object
-  dfapplicationinfo::Info info;
-
-  info.completed_trigger_records = m_complete_counter.exchange(0);
-  info.waiting_time = m_complete_microsecond.exchange(0);
-  info.min_completion_time = m_min_complete_time.exchange(std::numeric_limits<int64_t>::max());
-  info.max_completion_time = m_max_complete_time.exchange(0);
-
-  // fill metrics for pending TDs
-  info.min_time_since_assignment = std::numeric_limits<decltype(info.min_time_since_assignment)>::max();
-  info.max_time_since_assignment = 0;
-  info.total_time_since_assignment = 0;
-
-  ci.add(info);
-}
-
 ```
 
+### Details and good practices about the optional arguments 
+Optional arguments of the `publish` function, allow you to:
+
+
+* specify a level of priority associated to the metric
+
+* add additional custom information on the source of the metric, in the form of a `map<string, string>`, where the key is the type of the source, e.g. channel, and the second is the value, e.g. 4345
+
+* extend the `opmon_id` of the caller `MonitorableObject` for the specific metric with more detailed information on the source of this metric
+
+The `OpMonLevel` is a priority level designed to control the quantity of metrics generated by a tree. As a default, all messages are published. The lower the level, the higher the priority. 
+They system can decide to entirely disable the metric publication regardless of the OpMonLevel. 
+The system already provides some values to specify the `OpMonLevel` via an enum:
+```C++
+enum class EntryOpMonLevel : OpMonLevel {
+    kTopPriority     = std::numeric_limits<OpMonLevel>::min(),
+    kEventDriven     = std::numeric_limits<OpMonLevel>::max()/4,
+    kDefault         = std::numeric_limits<OpMonLevel>::max()/2,
+    kLowestPrioriry  = std::numeric_limits<OpMonLevel>::max()-1
+  };
+
+```
+but users are welcome to fill the gaps with whatever number they are happy to associate with their metric.
+
+The usage of a custom origin is designed to provide information that is unrelated to software stack.
+While the software stack might change (e.g, the name of an application or of a module can change because of configuration), some information like a crate number or a channel are hardware related and they are independent of the software stack that provides this information. 
+Examples of valid tags to be used in the custom origins are: server name, channel, links, etc. 
+The value of a tag should not grow indefinitely for retrival efficiency in the database. So, things like run number should not become a custom origin. 
+Adding information like application name or session in the custom origin is discouraged because it would be redundant. 
+In the example above, you see an usage example where `TriggerInfo` contains counters grouped by trigger type.
+
+## Registering sub components for your DAQModule
+
+In order to work correctly, each `MonitorableObject` has to be part of a monitoring tree, i.e. every `MonitorablreObject` has to be registered to the chain. 
+This is done via the method
+```C++
+void register_node( std::string name, new_node_ptr ) ;
+```
+If not registered, the metric is not completely lost, an ERS error will be generated reporting the usage of an unconfigured reporting system. 
+
+The metrics generated by the child will have an `opmon_id` in the form `parent_opmon_id.child_name`. 
+The registration does not imply ownership of the child by the parent, as internally only weak pointers are utilised. 
+If the child is destroyed, its pointer will eventually be removed from the chain. 
+
+`DAQModule`s will be automatically registered by the application framework and developers have to write their code assuming that the module is registered in the monitoring tree from the moment of its creation. 
+On the other hand, developers have to take care of the registration of subcomonents living inside their modules.
+
+An example of registration is:
+```C++
+void DFOModule::receive_trigger_complete_token(const dfmessages::TriggerDecisionToken& token) {
+  if (m_dataflow_availability.count(token.decision_destination) == 0) {
+    TLOG_DEBUG(TLVL_CONFIG) << "Creating dataflow availability struct for uid " << token.decision_destination;
+    auto entry = m_dataflow_availability[token.decision_destination] =
+      std::make_shared<TriggerRecordBuilderData>(token.decision_destination, m_busy_threshold, m_free_threshold);
+    register_node(token.decision_destination, entry);
+  } 
+}
+```
+Notice that here the registraion is event driven: something triggers the creation of an object and it's possible to register the object at anytime. 
+Of course a more static approach is possible too.
+
+The registration does not imply ownership, so in order to unregister an object you just need to delete the shared pointer. 
 
 ## Testing
 
@@ -120,9 +171,8 @@ The configuration of `opmonlib` is currently managed through the environment var
   setenv("DUNEDAQ_OPMON_INTERVAL",    "10",0);
   setenv("DUNEDAQ_OPMON_LEVEL",  "1",0);
 ```
-here `DUNEDAQ_OPMON_INTERVAL` sets the interval in seconds between each instance of calling `get_info` (currently set to 10 seconds), and `DUNEDAQ_OPMON_LEVEL` allows the user to define the level for `get_info` (currently set to 1). 
+here, `DUNEDAQ_OPMON_INTERVAL` sets the interval in seconds between each instance of calling `generate_opmon_data` (currently defaulting to 10 seconds), and `DUNEDAQ_OPMON_LEVEL` allows the user to define the level for `generatre_opmon_data` (currently set to 1). 
 
-Note: To disable operational monitoring set the interval to 0 seconds. 
 
 
 -----
@@ -131,9 +181,9 @@ Note: To disable operational monitoring set the interval to 0 seconds.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Marco Roda_
+_Author: Michal Rigan_
 
-_Date: Fri Mar 24 15:44:15 2023 +0000_
+_Date: Tue Aug 20 16:08:35 2024 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/opmonlib/issues](https://github.com/DUNE-DAQ/opmonlib/issues)_
 </font>

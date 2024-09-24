@@ -4,17 +4,26 @@ The listrev package allows to excercise the basic functioning of DAQ application
 
 In order to run it, setup the runtime environment for the DAQ version you are using.
 
-To generate a valid configuration file you can do the following:
-```
-curl -O https://raw.githubusercontent.com/DUNE-DAQ/listrev/develop/config/listrev_config.json
-listrev_gen -c ./listrev_config.json listrev_conf
-```
-The `-h` option will show you the available configuration options; `listrev_config.json` contains some basic settings to control the number of integers generated in each event and the frequency of each event. 
+Then in `drunc-unified-shell` you can boot the example session included in the release with the command `boot config/lrSession.data.xml lr-session`
 
-A directory *listrev_conf* will be created in your working directory. You can then [pass it to nanorc](https://dune-daq-sw.readthedocs.io/en/latest/packages/nanorc/) as you would any other configuration.
+If you want to modify the example session, you can copy it to your work directory and edit with `dbe_main -f lrSession.data.xml` or your favourite text editor.
+   ```
+   cp $DUNE_DAQ_RELEASE_SOURCE/listrev/config/lrSession.data.xml .
+   ```
 
-It will be possible to monitor the output of the application in the log file (created in the working directory) and operational monitoring (either a file in your working directory or grafana, depending on how you configured the system).
 
+## Evaluating the listrev Run
+
+
+  * `grep Exiting log_*lr-session_listrev*` will show the reported statistics.
+
+  * The example is targeted at 100 Hz, so the expected number of messages seen by ReversedListValidator should be at least 100 times the run duration.
+
+  * There should be three lists in each message (from the three generators), so it should report 300 times the run duration for the number of lists.
+
+  * Messages are round-robined to the two reversers, so each should see 50run_duration messages and 150run_duration lists. They should have approximately equal values for the reported counters.
+
+  * Generators should generate 100*run_duration lists and send all (or almost all) of them.
 
 -----
 
@@ -22,9 +31,9 @@ It will be possible to monitor the output of the application in the log file (cr
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pengfei Ding_
+_Author: Gordon Crone_
 
-_Date: Fri Feb 10 13:47:06 2023 -0600_
+_Date: Thu Aug 1 11:54:59 2024 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/listrev/issues](https://github.com/DUNE-DAQ/listrev/issues)_
 </font>

@@ -1,7 +1,7 @@
 # tpset_demo
 
 This is a demo system that runs TriggerPrimitiveMaker` to read TPs
-from a file and send them to a TPStreamWriter running in another process.
+from a file and send them to a TPStreamWriterModule running in another process.
 
 ## Generating the system configuration files
 
@@ -34,9 +34,9 @@ To download them, you can use the following commands:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Kurt Biery_
+_Author: John Freeman_
 
-_Date: Wed Aug 31 15:36:36 2022 -0500_
+_Date: Fri Jun 14 15:02:44 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dfmodules/issues](https://github.com/DUNE-DAQ/dfmodules/issues)_
 </font>

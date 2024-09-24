@@ -105,7 +105,7 @@ allows the WIB2 configuration options to be used.
 
 * `FakeCardReader`: This module emulates a frontend that pushes raw data to a `DataLinkHandler` by reading raw data from a file and repeating it over and over, while updating the timestamps of the data. A slowdown factor can be set to run at a lower speed which makes it possible to run the whole DAQ on less powerful systems.
 
-* `DataRecorder`: Receives data from an input queue and writes it to disk. It supports writing with `O_DIRECT`, making it more performant in some scenarios.
+* `DataRecorderModule`: Receives data from an input queue and writes it to disk. It supports writing with `O_DIRECT`, making it more performant in some scenarios.
 
 * `FragmentConsumer`: Consumes fragments and does some sanity checks of the data (for now just for WIB data) like checking the timestamps of the data against the requested window.
 
@@ -120,9 +120,9 @@ allows the WIB2 configuration options to be used.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: hristovaivana_
+_Author: John Freeman_
 
-_Date: Tue Aug 2 09:41:03 2022 +0100_
+_Date: Fri Jun 14 15:07:13 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/readoutmodules/issues](https://github.com/DUNE-DAQ/readoutmodules/issues)_
 </font>
