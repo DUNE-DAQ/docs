@@ -62,7 +62,7 @@ jobs:
             git diff-index --quiet HEAD && echo "No changes found in generated docs, exit now without commit." >> $GITHUB_WORKSPACE/build_log.txt || (git commit -m "$COMMIT_MSG" && git push)
 
       - name: upload build log
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: docs build log
           path: ${{ github.workspace }}/build_log.txt
