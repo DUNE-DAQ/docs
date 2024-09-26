@@ -8,7 +8,7 @@
 Here is a sample command for invoking a test (feel free to keep or drop the options in brackets, as you prefer):
 
 ```
-pytest -s minimal_system_quick_test.py [--nanorc-option partition-number 2] [--nanorc-option timeout 300]
+pytest -s minimal_system_quick_test.py [--nanorc-option log-level debug]  # still useful even with drunc
 ```
 
 For reference, here are the ideas behind the tests that currently exist in this repository:
@@ -36,9 +36,9 @@ For reference, here are the ideas behind the tests that currently exist in this 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Kurt Biery_
 
-_Date: Fri Jun 14 15:02:25 2024 -0500_
+_Date: Tue Sep 24 07:13:21 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqsystemtest/issues](https://github.com/DUNE-DAQ/daqsystemtest/issues)_
 </font>
