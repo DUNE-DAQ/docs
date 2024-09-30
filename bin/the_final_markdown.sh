@@ -151,9 +151,9 @@ for package in $package_list ; do
     fi
 
     for mdfile in $( find . -mindepth 2 -type f  -not -type l  -not -regex ".*\.git.*" -not -regex "\./docs.*" -name "*.md" ); do
-	reldir=$( echo $mdfile | sed -r 's!(.*)/.*!\1!' )
-        mkdir -p $packages_dir/$package/$reldir
-        cp -p $mdfile $packages_dir/$package/$reldir
+	reldir=$( echo "$mdfile" | sed -r 's!(.*)/.*!\1!' )
+        mkdir -p "$packages_dir/$package/$reldir"
+        cp -p "$mdfile" "$packages_dir/$package/$reldir"
         if [[ "$?" != "0" ]]; then
 	    echo "There was a problem copying $mdfile to $packages_dir/$package/$reldir in $PWD; exiting..." >&2
 	    exit 3
