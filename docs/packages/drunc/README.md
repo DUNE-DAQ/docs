@@ -125,3 +125,17 @@ These examples provide the minimal example of how to operate `drunc`'s FSM, with
 
 
 See [Running-drunc](https://github.com/DUNE-DAQ/drunc/wiki/Running-drunc) for a more detailed description.
+
+
+-----
+
+<font size="1">
+_Last git commit to the markdown source of this page:_
+
+
+_Author: Pawel Plesniak_
+
+_Date: Mon Sep 9 16:12:22 2024 +0200_
+
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
+</font>
