@@ -158,6 +158,7 @@ nav:
           - confmodel:
           - daqconf:
           - dbe:
+          - drunc:
           - nanorc:
           - restcmd:
        - Dataflow (logical):

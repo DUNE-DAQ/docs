@@ -84,6 +84,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [dbe](packages/dbe/README.md) _A GUI interface for the OKS-based configuration design_
 
+[drunc](packages/drunc/README.md) _Run control infrastructure for a distributed DAQ system_
+
 [nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
 
 [* rcif](packages/rcif/README.md) _run control related_

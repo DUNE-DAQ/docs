@@ -234,6 +234,11 @@ nav:
              - About daqconf: packages/daqconf/README.md
           - dbe:
              - About dbe: packages/dbe/README.md
+            - packages/drunc/HACKLIST.md
+            - packages/drunc/'interfacing the process manager.md'
+            - packages/drunc/README.md
+          - drunc:
+             - About drunc: packages/dbe/README.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
              - packages/nanorc/FAQ-k8s.md
