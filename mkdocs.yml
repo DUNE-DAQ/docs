@@ -184,6 +184,7 @@ nav:
              - packages/daqdataformats/TriggerRecordHeaderDataV3.md
           - detchannelmaps:
              - About detchannelmaps: packages/detchannelmaps/README.md
+             - packages/detchannelmaps/channel-maps-table.md
           - detdataformats:
              - About detdataformats: packages/detdataformats/README.md
           - dpdklibs:
