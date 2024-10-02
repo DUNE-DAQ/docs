@@ -237,11 +237,16 @@ nav:
              - About dbe: packages/dbe/README.md
           - drunc:
              - About drunc: packages/drunc/README.md
-             - packages/drunc/HACKLIST.md
-             - manager.md
-             - process
-             - the
-             - packages/drunc/interfacing
+             - packages/drunc/Controller-interface.md
+             - packages/drunc/Controller.md
+             - packages/drunc/FAQ.md
+             - packages/drunc/FSM.md
+             - packages/drunc/Messaging-format.md
+             - packages/drunc/Process-manager-interface.md
+             - packages/drunc/Process-manager.md
+             - packages/drunc/Release-notes.md
+             - packages/drunc/Running-drunc.md
+             - packages/drunc/Unified-shell.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
              - packages/nanorc/FAQ-k8s.md
