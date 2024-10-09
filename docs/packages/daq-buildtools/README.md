@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited July-16-2024_
+_This document was last edited Oct-9-2024_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -21,12 +21,12 @@ setup_dbt latest_v5
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
 setup_dbt latest_v4   # "setup_dbt latest" also works
 ```
-...in order to pick up the latest daq-buildtools intended for the v4 development line. Note that `latest_v4` is aliased to `v8.3.0` and `latest_v5` is aliased to `v8.6.1`. 
+...in order to pick up the latest daq-buildtools intended for the v4 development line. Note that `latest_v4` is aliased to `v8.3.0` and `latest_v5` is aliased to `v8.7.0`. 
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.6.1/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.6.1/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.7.0/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.7.0/scripts -> PATH
 DBT setuptools loaded
 ```
 
@@ -69,7 +69,7 @@ The majority of work areas are set up to build against the most recent nightly r
 ```sh
 dbt-create -n <nightly release> <name of work area subdirectory> # E.g., NFD_DEV_240213_A9
 ```
-You can also use `-n last_fddaq` or `-n last_nddaq` to build against the most recent _production_ branch, e.g., `NFD_PROD4_240213_A9`. To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l -b nightly`. Note also that you can leave out defining the name of the work area subdirectory, in which case it defaults to the same name as the release. 
+You can also use `-n last_fddaq` to build against the most recent _develop_ branch, e.g., `NFD_DEV_241007_A9`. To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l -b nightly`. Note also that you can leave out defining the name of the work area subdirectory, in which case it defaults to the same name as the release. 
 
 If you want to build against a candidate release, run:
 ```sh
@@ -293,9 +293,9 @@ produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generall
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Andrew Mogan_
+_Author: John Freeman_
 
-_Date: Tue Jul 16 11:46:11 2024 -0500_
+_Date: Wed Oct 9 13:27:45 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
