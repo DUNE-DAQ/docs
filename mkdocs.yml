@@ -280,8 +280,11 @@ nav:
              - About tpglibs: packages/tpglibs/README.md
           - trgtools:
              - About trgtools: packages/trgtools/README.md
+             - packages/trgtools/convert-tplatencies.md
              - packages/trgtools/process-tpstream.md
+             - packages/trgtools/py-trgtools.md
              - packages/trgtools/ta-dump.md
+             - packages/trgtools/tc-dump.md
              - packages/trgtools/tp-dump.md
           - trigger:
              - About trigger: packages/trigger/README.md
