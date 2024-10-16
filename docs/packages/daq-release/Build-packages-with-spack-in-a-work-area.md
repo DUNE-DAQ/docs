@@ -1,4 +1,4 @@
-# Build external packages with spack in a work area
+# Build packages with spack in a work area
 Developers occasionally need to utilize a different variant, a new version, or a completely new external package before its inclusion and deployment in the DUNE DAQ external software stack on CVMFS. Here's a step-by-step guide on how to do this:
 
 
@@ -96,9 +96,9 @@ dbt-build
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Dune_
 
-_Date: Thu Apr 4 08:51:18 2024 -0500_
+_Date: Wed Oct 16 14:03:52 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

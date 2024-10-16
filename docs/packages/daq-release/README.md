@@ -17,7 +17,7 @@ This is a repo containing DUNE DAQ release making tools, configuration files, an
 2. [List of GitHub Teams and Repositories](team_repos.md)
 
 
-3. [How to build external software with Spack in a local workarea](Build-external-packages-with-spack-in-a-work-area.md)
+3. [How to build a package with Spack in a local workarea](Build-packages-with-spack-in-a-work-area.md)
 
 ### For the Software Coordination team (expert only):
 
@@ -133,9 +133,9 @@ wibmod: [![wibmod](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Dune_
 
-_Date: Tue Sep 24 13:21:35 2024 -0500_
+_Date: Wed Oct 16 14:03:52 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
