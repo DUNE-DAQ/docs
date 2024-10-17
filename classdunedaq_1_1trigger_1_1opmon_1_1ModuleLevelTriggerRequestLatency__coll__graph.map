@@ -1,0 +1,7 @@
+<map id="dunedaq::trigger::opmon::ModuleLevelTriggerRequestLatency" name="dunedaq::trigger::opmon::ModuleLevelTriggerRequestLatency">
+<area shape="rect" id="Node000001" title=" " alt="" coords="330,31,565,72"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="37,5,209,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,26,329,37,329,42,224,31"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1trigger_1_1opmon_1_1ModuleLevelTriggerRequestLatency_1_1Impl__.html" title=" " alt="" coords="5,56,241,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,68,329,60,330,66,256,73"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="wib::Status" name="wib::Status">
+<area shape="rect" id="Node000001" title=" " alt="" coords="134,94,219,120"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,177,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,40,166,92,163,96,111,44"/>
+<area shape="rect" id="Node000003" href="$structwib_1_1Status_1_1Impl__.html" title=" " alt="" coords="201,5,325,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,44,190,96,186,92,239,40"/>
+</map>

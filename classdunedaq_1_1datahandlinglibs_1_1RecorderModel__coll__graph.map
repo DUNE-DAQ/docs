@@ -1,0 +1,9 @@
+<map id="dunedaq::datahandlinglibs::RecorderModel&lt; ReadoutType &gt;" name="dunedaq::datahandlinglibs::RecorderModel&lt; ReadoutType &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="370,71,582,111"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1datahandlinglibs_1_1RecorderConcept.html" title=" " alt="" coords="26,5,195,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,41,370,69,369,75,210,46"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1datahandlinglibs_1_1BufferedFileWriter.html" title=" " alt="" coords="5,71,216,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,88,370,88,370,94,231,94"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1datahandlinglibs_1_1ReusableThread.html" title=" " alt="" coords="26,136,195,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="210,136,369,107,370,113,211,141"/>
+</map>

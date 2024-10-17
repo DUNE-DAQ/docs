@@ -1,0 +1,16 @@
+<map id="/github/workspace/dev_area/build/sspmodules/codegen/include/sspmodules/dal/SSPCalibModule.hpp" name="/github/workspace/dev_area/build/sspmodules/codegen/include/sspmodules/dal/SSPCalibModule.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="315,5,508,76"/>
+<area shape="rect" id="Node000002" href="$SSPCalibModule_8cpp.html" title=" " alt="" coords="5,132,228,187"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,85,186,133,184,128,308,80"/>
+<area shape="rect" id="Node000003" href="$dump__dunedaq____sspmodules____dal_8cpp.html" title=" " alt="" coords="252,124,440,195"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="387,91,367,125,363,122,382,88"/>
+<area shape="rect" id="Node000004" href="$SSPLEDCalibWrapper_8hpp.html" title=" " alt="" coords="378,243,578,298"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="441,89,455,123,470,187,478,242,473,243,465,188,450,125,436,91"/>
+<area shape="rect" id="Node000006" href="$DeviceInterface_8hpp.html" title=" " alt="" coords="516,132,733,187"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="489,81,576,129,574,133,487,86"/>
+<area shape="rect" id="Node000005" href="$SSPLEDCalibWrapper_8cpp.html" title=" " alt="" coords="378,346,578,402"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="481,314,481,346,475,346,475,314"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="577,199,516,244,513,240,574,195"/>
+<area shape="rect" id="Node000007" href="$DeviceInterface_8cxx.html" title=" " alt="" coords="602,243,818,298"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="657,198,691,241,687,244,653,201"/>
+</map>

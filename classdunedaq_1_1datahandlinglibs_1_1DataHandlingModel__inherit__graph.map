@@ -1,0 +1,7 @@
+<map id="dunedaq::datahandlinglibs::DataHandlingModel&lt; ReadoutType, RequestHandlerType, LatencyBufferType, RawDataProcessorType &gt;" name="dunedaq::datahandlinglibs::DataHandlingModel&lt; ReadoutType, RequestHandlerType, LatencyBufferType, RawDataProcessorType &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,183,270,253"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1datahandlinglibs_1_1DataHandlingConcept.html" title=" " alt="" coords="53,94,222,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,150,140,182,135,182,135,150"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1opmonlib_1_1MonitorableObject.html" title=" " alt="" coords="70,5,205,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="140,62,140,94,135,94,135,62"/>
+</map>

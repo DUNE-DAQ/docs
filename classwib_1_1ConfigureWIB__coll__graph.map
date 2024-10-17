@@ -1,0 +1,17 @@
+<map id="wib::ConfigureWIB" name="wib::ConfigureWIB">
+<area shape="rect" id="Node000001" title=" " alt="" coords="810,5,937,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="13,11,185,36"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,15,217,14,282,13,745,9,786,9,810,10,810,15,786,14,745,14,282,18,217,19,200,20"/>
+<area shape="rect" id="Node000004" href="$classwib_1_1ConfigureWIB__ConfigureCOLDADC.html" title=" " alt="" coords="282,27,469,68"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="201,30,281,37,281,42,200,35"/>
+<area shape="rect" id="Node000006" href="$classwib_1_1ConfigureWIB__ConfigureWIBPulser.html" title=" " alt="" coords="282,93,469,133"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="157,39,311,89,309,94,155,44"/>
+<area shape="rect" id="Node000003" href="$structwib_1_1ConfigureWIB_1_1Impl__.html" title=" " alt="" coords="589,27,721,68"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="737,34,809,24,810,29,737,39"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="485,45,588,45,588,50,485,50"/>
+<area shape="rect" id="Node000005" href="$structwib_1_1ConfigureWIB__ConfigureCOLDADC_1_1Impl__.html" title=" " alt="" coords="5,71,193,112"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="207,72,281,60,282,65,208,77"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="480,86,588,60,589,65,481,91"/>
+<area shape="rect" id="Node000007" href="$structwib_1_1ConfigureWIB__ConfigureWIBPulser_1_1Impl__.html" title=" " alt="" coords="5,137,193,177"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="207,137,281,125,282,130,208,142"/>
+</map>

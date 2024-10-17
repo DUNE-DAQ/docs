@@ -1,0 +1,13 @@
+<map id="/github/workspace/dev_area/sourcecode/datahandlinglibs/include/datahandlinglibs/ReadoutTypes.hpp" name="/github/workspace/dev_area/sourcecode/datahandlinglibs/include/datahandlinglibs/ReadoutTypes.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="127,5,401,61"/>
+<area shape="rect" id="Node000002" href="$RecorderConcept_8hpp.html" title=" " alt="" coords="153,109,375,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="267,76,267,109,261,109,261,76"/>
+<area shape="rect" id="Node000003" href="$RecorderModel_8hpp.html" title=" " alt="" coords="5,228,227,298"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="186,71,163,89,144,110,129,139,121,169,116,227,111,227,116,168,124,137,139,108,159,85,183,67"/>
+<area shape="rect" id="Node000005" href="$RegisterToChannelNumber_8cpp.html" title=" " alt="" coords="398,117,690,172"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="349,64,475,113,473,118,347,69"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,192,162,229,158,225,206,187"/>
+<area shape="rect" id="Node000004" href="$Readoutlibs_8cpp.html" title=" " alt="" coords="79,346,300,402"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="264,196,256,246,241,299,228,325,214,347,209,344,224,322,236,297,251,245,258,195"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="150,310,173,344,169,347,145,313"/>
+</map>

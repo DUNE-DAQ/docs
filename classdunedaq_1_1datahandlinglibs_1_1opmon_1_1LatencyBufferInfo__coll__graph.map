@@ -1,0 +1,7 @@
+<map id="dunedaq::datahandlinglibs::opmon::LatencyBufferInfo" name="dunedaq::datahandlinglibs::opmon::LatencyBufferInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="307,27,481,68"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="26,5,197,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,26,306,36,306,41,212,31"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1datahandlinglibs_1_1opmon_1_1LatencyBufferInfo_1_1Impl__.html" title=" " alt="" coords="5,55,218,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,61,306,53,307,59,234,66"/>
+</map>

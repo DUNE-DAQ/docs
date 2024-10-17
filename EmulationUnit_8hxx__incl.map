@@ -1,0 +1,20 @@
+<map id="/github/workspace/dev_area/sourcecode/trgtools/include/trgtools/detail/EmulationUnit.hxx" name="/github/workspace/dev_area/sourcecode/trgtools/include/trgtools/detail/EmulationUnit.hxx">
+<area shape="rect" id="Node000001" title=" " alt="" coords="226,5,397,76"/>
+<area shape="rect" id="Node000002" href="$trgdataformats_2include_2trgdataformats_2TriggerPrimitive_8hpp.html" title=" " alt="" coords="199,124,424,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="314,76,314,108,309,108,309,76"/>
+<area shape="rect" id="Node000003" href="$trgdataformats_2include_2trgdataformats_2Types_8hpp.html" title=" " alt="" coords="51,198,220,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="283,153,180,194,178,189,281,148"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,271,66,297"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="199,152,103,170,65,183,41,199,34,212,31,226,32,256,26,256,26,225,29,210,38,196,63,179,102,165,198,146"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="244,198,297,223"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="307,151,287,186,282,183,302,149"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="321,198,385,223"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="321,149,341,183,336,186,316,151"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="409,198,481,223"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="335,148,410,188,407,192,333,153"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="504,198,586,223"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="352,148,491,190,490,195,350,153"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="120,226,66,264,63,260,117,222"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="109,271,162,297"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="138,224,138,256,133,256,133,224"/>
+</map>

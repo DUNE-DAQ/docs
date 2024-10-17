@@ -1,0 +1,17 @@
+<map id="/github/workspace/dev_area/build/appmodel/codegen/include/appmodel/DataRecorderModule.hpp" name="/github/workspace/dev_area/build/appmodel/codegen/include/appmodel/DataRecorderModule.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="490,5,670,76"/>
+<area shape="rect" id="Node000002" href="$DataRecorderModule_8cpp.html" title=" " alt="" coords="5,132,251,187"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="476,71,234,133,233,128,475,66"/>
+<area shape="rect" id="Node000003" href="$dump__dunedaq____appmodel_8cpp.html" title=" " alt="" coords="275,124,464,195"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="506,86,433,126,431,121,503,81"/>
+<area shape="rect" id="Node000004" href="$sourcecode_2appmodel_2src_2ReadoutApplication_8cpp.html" title=" " alt="" coords="488,132,672,187"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="583,91,583,131,577,131,577,91"/>
+<area shape="rect" id="Node000005" href="$RecorderConcept_8hpp.html" title=" " alt="" coords="747,124,968,195"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="678,80,776,121,774,126,676,85"/>
+<area shape="rect" id="Node000006" href="$RecorderModel_8hpp.html" title=" " alt="" coords="599,243,820,313"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="653,84,671,102,686,123,700,152,708,184,713,242,708,242,703,185,695,154,682,125,667,106,649,88"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="803,207,755,244,752,240,800,202"/>
+<area shape="rect" id="Node000007" href="$Readoutlibs_8cpp.html" title=" " alt="" coords="672,361,893,417"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="857,211,850,261,834,314,822,340,807,362,802,359,817,337,830,312,844,260,852,210"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="743,325,767,359,762,362,739,328"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="/github/workspace/dev_area/sourcecode/tpglibs/include/tpglibs/NaiveProcessor.hpp" name="/github/workspace/dev_area/sourcecode/tpglibs/include/tpglibs/NaiveProcessor.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="414,5,643,61"/>
+<area shape="rect" id="Node000002" href="$NaiveFactory_8hpp.html" title=" " alt="" coords="422,109,635,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="531,77,531,108,526,108,526,77"/>
+<area shape="rect" id="Node000003" href="$NaiveFrugalPedestalSubtractProcessor_8hpp.html" title=" " alt="" coords="87,213,320,283"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="434,173,308,215,306,210,432,168"/>
+<area shape="rect" id="Node000005" href="$NaiveRunSumProcessor_8hpp.html" title=" " alt="" coords="389,220,668,276"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="531,180,531,220,526,220,526,180"/>
+<area shape="rect" id="Node000009" href="$NaiveThresholdProcessor_8hpp.html" title=" " alt="" coords="715,213,918,283"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="616,168,726,210,724,215,614,173"/>
+<area shape="rect" id="Node000004" href="$NaiveFrugalPedestalSubtractProcessor_8cpp.html" title=" " alt="" coords="5,331,223,402"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="170,297,143,333,138,329,166,294"/>
+<area shape="rect" id="Node000006" href="$NaiveAbsRunSumProcessor_8hpp.html" title=" " alt="" coords="247,331,466,402"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="478,287,409,333,406,329,475,282"/>
+<area shape="rect" id="Node000008" href="$NaiveRunSumProcessor_8cpp.html" title=" " alt="" coords="491,339,705,395"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="555,288,584,337,579,340,550,291"/>
+<area shape="rect" id="Node000007" href="$NaiveAbsRunSumProcessor_8cpp.html" title=" " alt="" coords="238,450,475,506"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="359,418,359,450,354,450,354,418"/>
+<area shape="rect" id="Node000010" href="$NaiveThresholdProcessor_8cpp.html" title=" " alt="" coords="729,339,950,395"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="829,298,837,338,831,339,824,299"/>
+</map>

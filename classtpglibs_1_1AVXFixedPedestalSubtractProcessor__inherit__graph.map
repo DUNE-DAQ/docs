@@ -1,0 +1,9 @@
+<map id="tpglibs::AVXFixedPedestalSubtractProcessor" name="tpglibs::AVXFixedPedestalSubtractProcessor">
+<area shape="rect" id="Node000001" title="AVX signal processor: Fixes the estimated pedestal after a configured amount of time." alt="" coords="8,256,182,297"/>
+<area shape="rect" id="Node000002" href="$classtpglibs_1_1AVXFrugalPedestalSubtractProcessor.html" title="AVX signal processor: Estimates the pedestal and subtracts." alt="" coords="5,168,185,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,224,98,256,92,256,92,224"/>
+<area shape="rect" id="Node000003" href="$classtpglibs_1_1AVXProcessor.html" title="AVX typed abstract signal processor." alt="" coords="19,94,171,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,135,98,167,92,167,92,135"/>
+<area shape="rect" id="Node000004" href="$classtpglibs_1_1AbstractProcessor.html" title=" " alt="" coords="8,5,182,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,62,98,93,92,93,92,62"/>
+</map>

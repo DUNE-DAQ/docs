@@ -1,0 +1,12 @@
+<map id="/github/workspace/dev_area/sourcecode/trgtools/include/trgtools/detail/EmulationUnit.hxx" name="/github/workspace/dev_area/sourcecode/trgtools/include/trgtools/detail/EmulationUnit.hxx">
+<area shape="rect" id="Node000001" title=" " alt="" coords="161,5,332,76"/>
+<area shape="rect" id="Node000002" href="$EmulationUnit_8hpp.html" title=" " alt="" coords="136,124,358,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,92,249,124,244,124,244,92"/>
+<area shape="rect" id="Node000003" href="$EmulateTAUnit_8hpp.html" title=" " alt="" coords="5,228,235,283"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="202,192,156,229,152,225,199,188"/>
+<area shape="rect" id="Node000005" href="$EmulateTCUnit_8hpp.html" title=" " alt="" coords="259,228,488,283"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="294,188,341,225,338,229,291,192"/>
+<area shape="rect" id="Node000004" href="$process__tpstream_8cxx.html" title=" " alt="" coords="155,331,338,387"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="168,291,214,329,211,333,164,296"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="329,296,282,333,279,329,326,291"/>
+</map>

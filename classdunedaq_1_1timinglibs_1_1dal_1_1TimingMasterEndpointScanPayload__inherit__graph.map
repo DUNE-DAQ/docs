@@ -1,0 +1,6 @@
+<map id="dunedaq::timinglibs::dal::TimingMasterEndpointScanPayload" name="dunedaq::timinglibs::dal::TimingMasterEndpointScanPayload">
+<area shape="rect" id="Node000001" title=" " alt="" coords="8,79,187,135"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="5,5,190,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,46,92,78,86,78,86,46"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="109,46,109,78,103,78,103,46"/>
+</map>
