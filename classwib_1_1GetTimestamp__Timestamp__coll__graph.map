@@ -1,0 +1,7 @@
+<map id="wib::GetTimestamp_Timestamp" name="wib::GetTimestamp_Timestamp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="94,109,299,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,47,185,106,181,110,114,51"/>
+<area shape="rect" id="Node000003" href="$structwib_1_1GetTimestamp__Timestamp_1_1Impl__.html" title=" " alt="" coords="200,5,406,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="271,58,211,111,208,107,268,54"/>
+</map>

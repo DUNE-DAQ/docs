@@ -1,0 +1,7 @@
+<map id="dunedaq::trigger::opmon::RandomTCMakerInfo" name="dunedaq::trigger::opmon::RandomTCMakerInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="114,109,271,150"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,48,175,107,171,110,112,51"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1trigger_1_1opmon_1_1RandomTCMakerInfo_1_1Impl__.html" title=" " alt="" coords="201,5,389,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="267,59,214,110,210,107,263,55"/>
+</map>

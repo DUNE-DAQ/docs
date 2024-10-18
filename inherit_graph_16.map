@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="31,5,77,31"/>
+<area shape="rect" id="Node000001" href="$classfile__io_1_1SaveWithMessageScreen.html" title=" " alt="" coords="151,5,358,31"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="92,16,150,16,150,21,92,21"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,95,103,120"/>
+<area shape="poly" id="edge16_Node000002_Node000001" title=" " alt="" coords="82,83,113,61,150,41,184,29,186,34,152,46,116,65,85,87"/>
+<area shape="rect" id="Node000003" href="$classdirectory__tree_1_1DirectoryTreeScreen.html" title=" " alt="" coords="178,55,331,96"/>
+<area shape="poly" id="edge13_Node000002_Node000003" title=" " alt="" coords="118,95,177,85,177,90,119,100"/>
+<area shape="rect" id="Node000004" href="$classdropdown__selector_1_1SelectSessionScreen.html" title=" " alt="" coords="169,121,340,161"/>
+<area shape="poly" id="edge14_Node000002_Node000004" title=" " alt="" coords="118,115,169,124,168,129,118,121"/>
+<area shape="rect" id="Node000005" href="$classedit__cell__screen_1_1EditCellScreen.html" title=" " alt="" coords="173,186,336,227"/>
+<area shape="poly" id="edge15_Node000002_Node000005" title=" " alt="" coords="85,128,116,150,152,170,181,183,179,188,149,175,113,154,82,132"/>
+</map>

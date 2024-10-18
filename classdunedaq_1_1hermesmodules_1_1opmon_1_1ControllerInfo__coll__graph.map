@@ -1,0 +1,7 @@
+<map id="dunedaq::hermesmodules::opmon::ControllerInfo" name="dunedaq::hermesmodules::opmon::ControllerInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="103,124,271,165"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,20,177,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,56,172,122,168,125,109,59"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1hermesmodules_1_1opmon_1_1ControllerInfo_1_1Impl__.html" title=" " alt="" coords="200,5,369,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="252,74,206,125,202,122,248,70"/>
+</map>

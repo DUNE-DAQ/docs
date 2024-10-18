@@ -1,0 +1,12 @@
+<map id="dunedaq::appmodel::TCMakerChannelAdjacencyAlgorithm" name="dunedaq::appmodel::TCMakerChannelAdjacencyAlgorithm">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,256,242,297"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1appmodel_1_1TCAlgorithm.html" title=" " alt="" coords="54,168,193,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,224,118,256,113,256,112,224"/>
+<area shape="poly" id="edge6_Node000001_Node000002" title=" " alt="" coords="135,224,134,256,129,256,130,224"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1confmodel_1_1Jsonable.html" title=" " alt="" coords="55,79,192,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="117,135,118,167,113,167,112,135"/>
+<area shape="poly" id="edge5_Node000002_Node000003" title=" " alt="" coords="135,135,134,167,129,167,130,135"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="31,5,216,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="118,46,118,79,113,79,112,47"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="135,47,134,79,129,79,129,46"/>
+</map>

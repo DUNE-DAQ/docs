@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['a_20trigger_20algorithm_0',['How to write a trigger algorithm',['../md__2github_2workspace_2dev__area_2sourcecode_2trigger_2docs_2trigger-alg-howto.html',1,'']]],
+  ['about_20daq_20release_1',['About daq-release',['../md_README.html',1,'']]],
+  ['about_20trigger_2',['About trigger',['../md__2github_2workspace_2dev__area_2sourcecode_2trigger_2docs_2README.html',1,'']]],
+  ['about_20utilities_3a_3aworkerthread_3',['About utilities::WorkerThread',['../md__2github_2workspace_2dev__area_2sourcecode_2utilities_2docs_2WorkerThread-Usage-Notes.html',1,'']]],
+  ['action_20plans_4',['Action Plans',['../md__2github_2workspace_2dev__area_2sourcecode_2appfwk_2docs_2ActionPlans.html',1,'']]],
+  ['activity_20dump_20info_5',['Trigger Activity Dump Info',['../md__2github_2workspace_2dev__area_2sourcecode_2trgtools_2docs_2ta-dump.html',1,'']]],
+  ['adcsimplewindow_6',['ADCSimpleWindow',['../md__2github_2workspace_2dev__area_2sourcecode_2triggeralgs_2include_2triggeralgs_2ADCSimpleWindow_2README.html',1,'']]],
+  ['algorithm_7',['How to write a trigger algorithm',['../md__2github_2workspace_2dev__area_2sourcecode_2trigger_2docs_2trigger-alg-howto.html',1,'']]],
+  ['analysis_20tools_8',['Trigger Emulation &amp; Analysis Tools',['../md__2github_2workspace_2dev__area_2sourcecode_2trgtools_2docs_2README.html',1,'']]],
+  ['and_20availability_9',['FELIX apparatus and availability',['../md__2github_2workspace_2dev__area_2sourcecode_2flxlibs_2docs_2FELIX-assets.html',1,'']]],
+  ['and_20fragment_20overlay_10',['Data selection object definitions and fragment overlay',['../md__2github_2workspace_2dev__area_2sourcecode_2trgdataformats_2include_2trgdataformats_2README.html',1,'']]],
+  ['and_20manipulation_11',['Configuration creation, visualization and manipulation',['../md__2github_2workspace_2dev__area_2sourcecode_2daqconf_2docs_2README.html',1,'']]],
+  ['and_20prerequisites_12',['Intro and prerequisites',['../md__2github_2workspace_2dev__area_2sourcecode_2flxlibs_2docs_2Initial-setup-of-FELIX.html',1,'']]],
+  ['and_20setting_20up_20the_20card_13',['Enabling links and setting up the card',['../md__2github_2workspace_2dev__area_2sourcecode_2flxlibs_2docs_2Enabling-links-and-setting-the-superchunk-factor.html',1,'']]],
+  ['and_20utilities_14',['and utilities',['../md__2github_2workspace_2dev__area_2sourcecode_2datahandlinglibs_2docs_2README.html',1,'datahandlinglibs - Generic data handling software and utilities'],['../md__2github_2workspace_2dev__area_2sourcecode_2dpdklibs_2docs_2README.html',1,'dpdklibs - DPDK UIO software and utilities'],['../md__2github_2workspace_2dev__area_2sourcecode_2flxlibs_2docs_2README.html',1,'flxlibs - FELIX card software and utilities']]],
+  ['apparatus_20and_20availability_15',['FELIX apparatus and availability',['../md__2github_2workspace_2dev__area_2sourcecode_2flxlibs_2docs_2FELIX-assets.html',1,'']]],
+  ['appfwk_3a_20the_20dune_20daq_20application_20framework_16',['appfwk: The DUNE DAQ Application Framework',['../md__2github_2workspace_2dev__area_2sourcecode_2appfwk_2docs_2README.html',1,'']]],
+  ['application_17',['application',['../md__2github_2workspace_2dev__area_2sourcecode_2appfwk_2docs_2Daq-Application.html',1,'DAQ Application'],['../md__2github_2workspace_2dev__area_2sourcecode_2restcmd_2scripts_2README.html',1,'Running the DAQ application']]],
+  ['application_20framework_18',['appfwk: The DUNE DAQ Application Framework',['../md__2github_2workspace_2dev__area_2sourcecode_2appfwk_2docs_2README.html',1,'']]],
+  ['applications_19',['IOManager Test Applications',['../md__2github_2workspace_2dev__area_2sourcecode_2iomanager_2docs_2Test-Applications.html',1,'']]],
+  ['appmodel_20',['Appmodel',['../md__2github_2workspace_2dev__area_2sourcecode_2appmodel_2docs_2README.html',1,'']]],
+  ['apr_2020_2011_3a18_3a42_20cdt_202023_21',['No Official User Documentation Has Been Written Yet (Thu Apr 20 11:18:42 CDT 2023)',['../md__2github_2workspace_2dev__area_2sourcecode_2trgdataformats_2docs_2README.html',1,'']]],
+  ['availability_22',['FELIX apparatus and availability',['../md__2github_2workspace_2dev__area_2sourcecode_2flxlibs_2docs_2FELIX-assets.html',1,'']]]
+];

@@ -1,0 +1,12 @@
+<map id="dunedaq::appmodel::TCMakerPlaneCoincidenceAlgorithm" name="dunedaq::appmodel::TCMakerPlaneCoincidenceAlgorithm">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,256,239,297"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1appmodel_1_1TCAlgorithm.html" title=" " alt="" coords="53,168,191,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,224,117,256,112,256,110,224"/>
+<area shape="poly" id="edge6_Node000001_Node000002" title=" " alt="" coords="134,224,132,256,127,256,128,224"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1confmodel_1_1Jsonable.html" title=" " alt="" coords="54,79,190,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="116,135,117,167,112,167,110,135"/>
+<area shape="poly" id="edge5_Node000002_Node000003" title=" " alt="" coords="134,135,132,167,127,167,128,135"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="30,5,214,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="116,46,117,79,111,79,111,47"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="133,47,133,79,127,79,128,46"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="dunedaq::datahandlinglibs::DataHandlingConcept" name="dunedaq::datahandlinglibs::DataHandlingConcept">
+<area shape="rect" id="Node000001" title=" " alt="" coords="188,20,357,61"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1datahandlinglibs_1_1DataHandlingModel.html" title=" " alt="" coords="405,5,669,76"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="373,38,405,38,405,43,373,43"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1opmonlib_1_1MonitorableObject.html" title=" " alt="" coords="5,20,140,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,38,187,38,187,43,155,43"/>
+</map>

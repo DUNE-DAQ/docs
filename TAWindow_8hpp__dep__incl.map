@@ -1,0 +1,17 @@
+<map id="/github/workspace/dev_area/sourcecode/triggeralgs/include/triggeralgs/TAWindow.hpp" name="/github/workspace/dev_area/sourcecode/triggeralgs/include/triggeralgs/TAWindow.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="478,5,699,61"/>
+<area shape="rect" id="Node000002" href="$sourcecode_2triggeralgs_2include_2triggeralgs_2ChannelAdjacency_2TCMakerChannelAdjacencyAlgorithm_8hpp.html" title=" " alt="" coords="27,109,291,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="467,68,293,112,291,107,466,63"/>
+<area shape="rect" id="Node000004" href="$sourcecode_2triggeralgs_2include_2triggeralgs_2HorizontalMuon_2TCMakerHorizontalMuonAlgorithm_8hpp.html" title=" " alt="" coords="326,109,574,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="544,73,496,111,492,106,540,69"/>
+<area shape="rect" id="Node000006" href="$sourcecode_2triggeralgs_2include_2triggeralgs_2PlaneCoincidence_2TCMakerPlaneCoincidenceAlgorithm_8hpp.html" title=" " alt="" coords="598,109,859,180"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="637,69,686,106,682,111,634,73"/>
+<area shape="rect" id="Node000008" href="$TAWindow_8cpp.html" title=" " alt="" coords="884,117,1072,172"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="712,63,872,106,895,113,893,118,870,112,710,68"/>
+<area shape="rect" id="Node000003" href="$sourcecode_2triggeralgs_2src_2TCMakerChannelAdjacencyAlgorithm_8cpp.html" title=" " alt="" coords="5,228,292,283"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="157,195,154,228,148,227,152,195"/>
+<area shape="rect" id="Node000005" href="$sourcecode_2triggeralgs_2src_2TCMakerHorizontalMuonAlgorithm_8cpp.html" title=" " alt="" coords="315,228,585,283"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="453,195,453,227,447,227,447,195"/>
+<area shape="rect" id="Node000007" href="$sourcecode_2triggeralgs_2src_2TCMakerPlaneCoincidenceAlgorithm_8cpp.html" title=" " alt="" coords="608,228,892,283"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="741,194,747,227,742,228,736,195"/>
+</map>

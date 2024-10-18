@@ -1,0 +1,6 @@
+<map id="dunedaq::appmodel::FakeHSIEventGeneratorConf" name="dunedaq::appmodel::FakeHSIEventGeneratorConf">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,196,120"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="8,5,193,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,46,95,79,90,79,89,47"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="112,47,111,79,106,79,106,46"/>
+</map>

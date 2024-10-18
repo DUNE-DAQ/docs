@@ -1,0 +1,7 @@
+<map id="triggeralgs::TAMakerPlaneCoincidenceAlgorithm" name="triggeralgs::TAMakerPlaneCoincidenceAlgorithm">
+<area shape="rect" id="Node000001" title=" " alt="" coords="96,154,269,195"/>
+<area shape="rect" id="Node000002" href="$classtriggeralgs_1_1TriggerActivityMaker.html" title=" " alt="" coords="5,5,176,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,57,172,152,168,155,108,60"/>
+<area shape="rect" id="Node000003" href="$classtriggeralgs_1_1TPWindow.html" title=" " alt="" coords="199,13,350,39"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="261,53,197,155,192,152,257,50"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="dunedaq::timinglibs::dal::TimingHardwareInterface" name="dunedaq::timinglibs::dal::TimingHardwareInterface">
+<area shape="rect" id="Node000001" title=" " alt="" coords="18,79,214,120"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingHardwareManager.html" title=" " alt="" coords="18,168,214,208"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="110,135,111,167,106,167,104,135"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="128,135,126,167,121,167,122,135"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="24,5,208,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,46,111,79,105,79,105,47"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="127,47,127,79,121,79,122,46"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingHardwareManagerPDII.html" title=" " alt="" coords="5,256,227,297"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="110,224,111,256,106,256,104,224"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="128,224,126,256,121,256,122,224"/>
+</map>

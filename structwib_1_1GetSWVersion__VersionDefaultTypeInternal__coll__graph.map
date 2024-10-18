@@ -1,0 +1,9 @@
+<map id="wib::GetSWVersion_VersionDefaultTypeInternal" name="wib::GetSWVersion_VersionDefaultTypeInternal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="99,198,283,238"/>
+<area shape="rect" id="Node000002" href="$classwib_1_1GetSWVersion__Version.html" title=" " alt="" coords="99,109,283,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,150,194,197,188,197,188,150"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="117,47,180,107,176,110,113,51"/>
+<area shape="rect" id="Node000004" href="$structwib_1_1GetSWVersion__Version_1_1Impl__.html" title=" " alt="" coords="200,5,385,46"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="262,59,205,111,202,107,258,55"/>
+</map>

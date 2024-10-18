@@ -1,0 +1,7 @@
+<map id="dunedaq::trigger::opmon::TriggerLatency" name="dunedaq::trigger::opmon::TriggerLatency">
+<area shape="rect" id="Node000001" title=" " alt="" coords="106,109,263,150"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,48,168,107,164,110,110,52"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1trigger_1_1opmon_1_1TriggerLatency_1_1Impl__.html" title=" " alt="" coords="200,5,358,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="253,59,204,110,201,107,249,55"/>
+</map>
