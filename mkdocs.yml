@@ -237,6 +237,7 @@ nav:
              - packages/daqconf/TextualDBE.md
           - dbe:
              - About dbe: packages/dbe/README.md
+             - packages/dbe/schemaeditor.md
           - drunc:
              - About drunc: packages/drunc/README.md
              - packages/drunc/Controller-interface.md
