@@ -233,6 +233,7 @@ nav:
              - About confmodel: packages/confmodel/README.md
           - daqconf:
              - About daqconf: packages/daqconf/README.md
+             - packages/daqconf/ConfigPlotting.md
              - packages/daqconf/Inspector.md
              - packages/daqconf/TextualDBE.md
           - dbe:
