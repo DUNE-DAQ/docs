@@ -1,0 +1,7 @@
+<map id="dunedaq::dfmodules::opmon::TRBInfo" name="dunedaq::dfmodules::opmon::TRBInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="118,109,254,150"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,48,169,107,165,110,111,52"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1dfmodules_1_1opmon_1_1TRBInfo_1_1Impl__.html" title=" " alt="" coords="201,5,360,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="254,59,206,110,202,107,250,55"/>
+</map>

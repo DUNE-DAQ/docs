@@ -1,0 +1,7 @@
+<map id="tpglibs::NaiveFrugalPedestalSubtractProcessor" name="tpglibs::NaiveFrugalPedestalSubtractProcessor">
+<area shape="rect" id="Node000001" title="Naive signal processor: Estimates the pedestal and subtracts." alt="" coords="5,168,192,208"/>
+<area shape="rect" id="Node000002" href="$classtpglibs_1_1NaiveProcessor.html" title="Naive typed abstract signal processor." alt="" coords="19,94,178,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,135,101,167,96,167,96,135"/>
+<area shape="rect" id="Node000003" href="$classtpglibs_1_1AbstractProcessor.html" title=" " alt="" coords="10,5,187,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,62,101,93,96,93,96,62"/>
+</map>

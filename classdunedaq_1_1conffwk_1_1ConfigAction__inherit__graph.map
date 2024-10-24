@@ -1,0 +1,5 @@
+<map id="dunedaq::conffwk::ConfigAction" name="dunedaq::conffwk::ConfigAction">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,169,46"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1confmodel_1_1DisabledComponents.html" title=" " alt="" coords="12,94,162,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,62,90,94,84,94,84,62"/>
+</map>

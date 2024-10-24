@@ -1,0 +1,23 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classtriggeralgs_1_1TriggerActivityMaker.html" title=" " alt="" coords="5,288,176,329"/>
+<area shape="rect" id="Node000001" href="$classtriggeralgs_1_1TAMakerADCSimpleWindowAlgorithm.html" title=" " alt="" coords="245,5,453,46"/>
+<area shape="poly" id="edge796_Node000000_Node000001" title=" " alt="" coords="98,272,114,224,139,165,175,107,197,80,222,57,243,44,246,48,225,61,201,84,179,110,144,168,119,226,103,274"/>
+<area shape="rect" id="Node000002" href="$classtriggeralgs_1_1TAMakerBundleNAlgorithm.html" title=" " alt="" coords="259,71,439,111"/>
+<area shape="poly" id="edge797_Node000000_Node000002" title=" " alt="" coords="105,273,124,237,150,196,183,156,222,122,257,105,259,109,225,127,187,160,155,200,129,240,110,275"/>
+<area shape="rect" id="Node000003" href="$classtriggeralgs_1_1TAMakerChannelAdjacencyAlgorithm.html" title=" " alt="" coords="255,136,443,177"/>
+<area shape="poly" id="edge798_Node000000_Node000003" title=" " alt="" coords="117,274,164,229,192,207,222,187,254,174,256,178,225,192,195,211,167,233,121,278"/>
+<area shape="rect" id="Node000004" href="$classtriggeralgs_1_1TAMakerChannelDistanceAlgorithm.html" title=" " alt="" coords="255,201,443,242"/>
+<area shape="poly" id="edge799_Node000000_Node000004" title=" " alt="" coords="150,279,223,251,260,240,261,245,225,256,152,284"/>
+<area shape="rect" id="Node000005" href="$classtriggeralgs_1_1TAMakerDBSCANAlgorithm.html" title=" " alt="" coords="224,266,474,292"/>
+<area shape="poly" id="edge800_Node000000_Node000005" title=" " alt="" coords="191,294,230,290,230,295,192,300"/>
+<area shape="rect" id="Node000006" href="$classtriggeralgs_1_1TAMakerHorizontalMuonAlgorithm.html" title=" " alt="" coords="250,316,448,357"/>
+<area shape="poly" id="edge801_Node000000_Node000006" title=" " alt="" coords="192,317,250,323,249,328,191,322"/>
+<area shape="rect" id="Node000007" href="$classtriggeralgs_1_1TAMakerMichelElectronAlgorithm.html" title=" " alt="" coords="260,381,438,422"/>
+<area shape="poly" id="edge802_Node000000_Node000007" title=" " alt="" coords="148,333,225,366,263,378,262,383,223,371,145,338"/>
+<area shape="rect" id="Node000008" href="$classtriggeralgs_1_1TAMakerPlaneCoincidenceAlgorithm.html" title=" " alt="" coords="262,447,436,487"/>
+<area shape="poly" id="edge803_Node000000_Node000008" title=" " alt="" coords="120,339,166,387,194,411,225,431,263,448,261,452,222,436,191,415,162,391,116,343"/>
+<area shape="rect" id="Node000009" href="$classtriggeralgs_1_1TAMakerPrescaleAlgorithm.html" title=" " alt="" coords="253,512,445,553"/>
+<area shape="poly" id="edge804_Node000000_Node000009" title=" " alt="" coords="109,342,128,379,154,421,186,462,225,497,254,512,252,517,222,501,182,466,149,424,123,381,104,344"/>
+<area shape="rect" id="Node000010" href="$classtriggeralgs_1_1TAMakerSupernovaAlgorithm.html" title=" " alt="" coords="248,577,450,618"/>
+<area shape="poly" id="edge805_Node000000_Node000010" title=" " alt="" coords="103,343,118,393,143,452,178,512,200,539,225,562,249,576,246,581,222,566,196,542,174,515,138,454,113,394,98,345"/>
+</map>

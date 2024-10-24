@@ -1,0 +1,23 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,241,61,267"/>
+<area shape="rect" id="Node000001" href="$classdropdown__selector_1_1SelectSession.html" title=" " alt="" coords="158,5,328,46"/>
+<area shape="poly" id="edge688_Node000000_Node000001" title=" " alt="" coords="34,225,41,187,54,141,75,95,89,74,107,56,130,40,156,31,158,36,133,45,110,60,94,77,79,98,59,143,46,188,39,226"/>
+<area shape="rect" id="Node000002" href="$classedit__config__object__screen_1_1ConfigObjectSelectionPanel.html" title=" " alt="" coords="144,70,342,126"/>
+<area shape="poly" id="edge689_Node000000_Node000002" title=" " alt="" coords="43,225,68,179,86,156,107,136,142,116,145,121,110,140,90,159,72,182,47,228"/>
+<area shape="rect" id="Node000003" href="$classfile__io_1_1____MenuWithButtons.html" title=" " alt="" coords="156,150,330,176"/>
+<area shape="poly" id="edge690_Node000000_Node000003" title=" " alt="" coords="54,227,78,205,107,186,154,170,156,175,110,191,81,209,57,231"/>
+<area shape="rect" id="Node000006" href="$classselection__panel_1_1SelectionPanel.html" title=" " alt="" coords="159,200,327,241"/>
+<area shape="poly" id="edge693_Node000000_Node000006" title=" " alt="" coords="76,244,158,231,159,236,77,250"/>
+<area shape="rect" id="Node000007" href="$classtextual__dbe_1_1widgets_1_1config__table_1_1ConfigTable.html" title=" " alt="" coords="157,265,329,306"/>
+<area shape="poly" id="edge694_Node000000_Node000007" title=" " alt="" coords="77,257,157,270,156,275,76,263"/>
+<area shape="rect" id="Node000008" href="$classtextual__dbe_1_1widgets_1_1configuration__controller_1_1ConfigurationController.html" title=" " alt="" coords="136,331,350,371"/>
+<area shape="poly" id="edge695_Node000000_Node000008" title=" " alt="" coords="58,276,82,297,110,315,139,328,137,333,107,320,79,301,55,280"/>
+<area shape="rect" id="Node000009" href="$classtextual__dbe_1_1widgets_1_1edit__config__object_1_1ConfigObjectSelectionPanel.html" title=" " alt="" coords="109,396,377,437"/>
+<area shape="poly" id="edge696_Node000000_Node000009" title=" " alt="" coords="45,280,69,332,88,359,110,381,131,393,128,398,107,385,84,362,65,335,41,283"/>
+<area shape="rect" id="Node000010" href="$classtextual__dbe_1_1widgets_1_1selection__menu_1_1SelectionMenu.html" title=" " alt="" coords="148,461,338,502"/>
+<area shape="poly" id="edge697_Node000000_Node000010" title=" " alt="" coords="40,281,46,319,59,363,80,408,94,429,110,446,128,459,148,468,146,473,126,463,107,450,90,432,75,411,54,365,41,320,34,282"/>
+<area shape="rect" id="Node000004" href="$classfile__io_1_1OpenFile.html" title=" " alt="" coords="454,126,563,152"/>
+<area shape="poly" id="edge691_Node000003_Node000004" title=" " alt="" coords="345,151,453,141,453,147,346,156"/>
+<area shape="rect" id="Node000005" href="$classfile__io_1_1SaveWithMessage.html" title=" " alt="" coords="425,176,591,201"/>
+<area shape="poly" id="edge692_Node000003_Node000005" title=" " alt="" coords="346,170,425,178,424,183,345,175"/>
+</map>

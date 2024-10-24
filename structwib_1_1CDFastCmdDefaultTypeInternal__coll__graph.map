@@ -1,0 +1,9 @@
+<map id="wib::CDFastCmdDefaultTypeInternal" name="wib::CDFastCmdDefaultTypeInternal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="91,183,278,223"/>
+<area shape="rect" id="Node000002" href="$classwib_1_1CDFastCmd.html" title=" " alt="" coords="125,94,244,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,135,187,182,182,182,182,135"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,177,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="117,39,173,92,170,96,113,43"/>
+<area shape="rect" id="Node000004" href="$structwib_1_1CDFastCmd_1_1Impl__.html" title=" " alt="" coords="201,5,357,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="257,43,199,96,196,92,253,39"/>
+</map>

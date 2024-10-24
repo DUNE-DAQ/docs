@@ -1,0 +1,9 @@
+<map id="file_io.__MenuWithButtons" name="file_io.__MenuWithButtons">
+<area shape="rect" id="Node000001" title=" " alt="" coords="53,79,227,105"/>
+<area shape="rect" id="Node000003" href="$classfile__io_1_1OpenFile.html" title=" " alt="" coords="5,153,115,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="117,117,75,154,72,150,113,113"/>
+<area shape="rect" id="Node000004" href="$classfile__io_1_1SaveWithMessage.html" title=" " alt="" coords="138,153,305,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,113,209,150,206,154,163,117"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="112,5,168,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,46,143,79,137,79,137,46"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,221,166,261"/>
+<area shape="rect" id="Node000001" href="$classwib_1_1Calibrate.html" title=" " alt="" coords="237,5,336,31"/>
+<area shape="poly" id="edge464_Node000000_Node000001" title=" " alt="" coords="98,205,116,167,141,123,173,78,212,40,235,27,238,32,215,44,177,82,145,126,120,170,103,208"/>
+<area shape="rect" id="Node000002" href="$classwib_1_1Empty.html" title=" " alt="" coords="245,55,328,80"/>
+<area shape="poly" id="edge465_Node000000_Node000002" title=" " alt="" coords="105,205,150,146,179,116,212,89,243,75,245,79,215,94,183,120,154,150,110,209"/>
+<area shape="rect" id="Node000003" href="$classwib_1_1GetSWVersion.html" title=" " alt="" coords="220,104,353,130"/>
+<area shape="poly" id="edge466_Node000000_Node000003" title=" " alt="" coords="118,208,161,172,212,138,237,128,239,133,215,143,164,176,121,212"/>
+<area shape="rect" id="Node000004" href="$classwib_1_1GetSensors.html" title=" " alt="" coords="228,153,345,179"/>
+<area shape="poly" id="edge467_Node000000_Node000004" title=" " alt="" coords="150,212,213,188,243,177,245,182,215,193,152,217"/>
+<area shape="rect" id="Node000005" href="$classwib_1_1GetTimestamp.html" title=" " alt="" coords="220,203,353,228"/>
+<area shape="poly" id="edge468_Node000000_Node000005" title=" " alt="" coords="181,226,219,221,220,227,182,231"/>
+<area shape="rect" id="Node000006" href="$classwib_1_1GetTimingStatus.html" title=" " alt="" coords="214,252,359,278"/>
+<area shape="poly" id="edge469_Node000000_Node000006" title=" " alt="" coords="182,250,214,253,213,259,181,255"/>
+<area shape="rect" id="Node000007" href="$classwib_1_1Reboot.html" title=" " alt="" coords="242,301,331,327"/>
+<area shape="poly" id="edge470_Node000000_Node000007" title=" " alt="" coords="154,265,215,288,245,298,243,303,213,293,152,270"/>
+<area shape="rect" id="Node000008" href="$classwib_1_1Recompile.html" title=" " alt="" coords="232,351,341,376"/>
+<area shape="poly" id="edge471_Node000000_Node000008" title=" " alt="" coords="122,270,165,305,215,337,239,348,237,353,212,342,161,309,118,274"/>
+<area shape="rect" id="Node000009" href="$classwib_1_1ResetTiming.html" title=" " alt="" coords="226,400,347,426"/>
+<area shape="poly" id="edge472_Node000000_Node000009" title=" " alt="" coords="110,273,154,331,183,361,215,387,235,397,233,402,212,391,179,365,150,334,106,276"/>
+<area shape="rect" id="Node000010" href="$classwib_1_1StartFakeTime.html" title=" " alt="" coords="220,449,353,475"/>
+<area shape="poly" id="edge473_Node000000_Node000010" title=" " alt="" coords="103,274,121,312,146,356,177,399,215,436,233,446,230,451,212,440,173,402,141,358,116,315,98,277"/>
+</map>

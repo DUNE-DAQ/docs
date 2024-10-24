@@ -1,0 +1,7 @@
+<map id="tpglibs::NaiveThresholdProcessor" name="tpglibs::NaiveThresholdProcessor">
+<area shape="rect" id="Node000001" title="Naive signal processor: Passes signals above a threshold." alt="" coords="5,168,221,193"/>
+<area shape="rect" id="Node000002" href="$classtpglibs_1_1NaiveProcessor.html" title="Naive typed abstract signal processor." alt="" coords="34,94,192,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,135,116,167,110,167,110,135"/>
+<area shape="rect" id="Node000003" href="$classtpglibs_1_1AbstractProcessor.html" title=" " alt="" coords="24,5,202,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="116,62,116,93,110,93,110,62"/>
+</map>

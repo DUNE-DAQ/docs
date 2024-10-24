@@ -1,0 +1,20 @@
+<map id="dunedaq::hsilibs::dal::HSIController" name="dunedaq::hsilibs::dal::HSIController">
+<area shape="rect" id="Node000001" title=" " alt="" coords="939,40,1075,81"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingEndpointControllerBase.html" title=" " alt="" coords="666,5,891,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="875,46,939,56,938,61,874,52"/>
+<area shape="poly" id="edge11_Node000001_Node000002" title=" " alt="" coords="906,33,939,39,938,44,905,39"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingController.html" title=" " alt="" coords="448,5,592,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="608,32,666,32,666,37,608,37"/>
+<area shape="poly" id="edge7_Node000002_Node000003" title=" " alt="" coords="608,14,666,14,666,19,608,20"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1confmodel_1_1DaqModule.html" title=" " alt="" coords="238,5,374,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="389,32,448,32,448,37,389,37"/>
+<area shape="poly" id="edge6_Node000003_Node000004" title=" " alt="" coords="389,14,448,14,448,20,389,20"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="5,48,190,73"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="205,49,237,43,238,48,206,54"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="150,41,237,26,238,31,151,46"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingHardwareInterface.html" title=" " alt="" coords="422,75,618,115"/>
+<area shape="poly" id="edge9_Node000006_Node000005" title=" " alt="" coords="191,73,422,92,421,97,190,78"/>
+<area shape="poly" id="edge10_Node000006_Node000005" title=" " alt="" coords="205,59,422,77,421,82,205,64"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="633,92,938,69,938,74,634,97"/>
+<area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="633,77,938,56,938,61,634,82"/>
+</map>

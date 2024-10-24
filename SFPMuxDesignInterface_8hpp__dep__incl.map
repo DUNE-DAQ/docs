@@ -1,0 +1,15 @@
+<map id="/github/workspace/dev_area/sourcecode/timing/include/timing/SFPMuxDesignInterface.hpp" name="/github/workspace/dev_area/sourcecode/timing/include/timing/SFPMuxDesignInterface.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="303,5,577,61"/>
+<area shape="rect" id="Node000002" href="$MasterMuxDesign_8hpp.html" title=" " alt="" coords="321,109,559,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="443,77,443,108,437,108,437,77"/>
+<area shape="rect" id="Node000003" href="$OuroborosMuxDesign_8hpp.html" title=" " alt="" coords="71,213,329,268"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,174,265,214,263,210,360,169"/>
+<area shape="rect" id="Node000006" href="$MasterMuxDesign_8cpp.html" title=" " alt="" coords="352,213,528,268"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="443,180,443,212,437,212,437,180"/>
+<area shape="rect" id="Node000007" href="$sourcecode_2timinglibs_2src_2TimingHardwareManagerBase_8cpp.html" title=" " alt="" coords="551,213,798,268"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="518,169,612,210,610,214,515,174"/>
+<area shape="rect" id="Node000004" href="$top__designs_8cpp.html" title=" " alt="" coords="5,316,184,372"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="163,281,125,318,121,314,159,277"/>
+<area shape="rect" id="Node000005" href="$OuroborosMuxDesign_8cpp.html" title=" " alt="" coords="208,316,403,372"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="241,277,279,314,275,318,237,281"/>
+</map>

@@ -1,0 +1,26 @@
+<map id="dunedaq::appmodel::WIECApplication" name="dunedaq::appmodel::WIECApplication">
+<area shape="rect" id="Node000001" title=" " alt="" coords="89,434,228,474"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1appmodel_1_1SmartDaqApplication.html" title=" " alt="" coords="5,256,149,297"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,310,116,374,146,432,141,434,111,376,83,313"/>
+<area shape="poly" id="edge15_Node000001_Node000002" title=" " alt="" coords="102,309,133,373,158,432,153,434,128,375,97,312"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1confmodel_1_1Application.html" title=" " alt="" coords="12,79,148,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="74,135,72,198,74,256,69,256,67,198,69,135"/>
+<area shape="poly" id="edge5_Node000002_Node000003" title=" " alt="" coords="89,135,90,198,86,256,81,256,84,198,84,135"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="68,5,252,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="131,43,93,81,90,77,127,39"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="146,45,109,81,105,77,142,41"/>
+<area shape="rect" id="Node000008" href="$classdunedaq_1_1confmodel_1_1Component.html" title=" " alt="" coords="172,79,308,120"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="177,41,214,77,210,81,173,45"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="192,39,230,77,226,81,188,43"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1confmodel_1_1ResourceSetAND.html" title=" " alt="" coords="161,345,297,386"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="197,399,169,435,165,432,193,396"/>
+<area shape="poly" id="edge16_Node000001_Node000005" title=" " alt="" coords="214,400,184,435,180,432,210,397"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1confmodel_1_1ResourceSet.html" title=" " alt="" coords="173,256,309,297"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="230,312,227,345,221,344,225,312"/>
+<area shape="poly" id="edge14_Node000005_Node000006" title=" " alt="" coords="248,313,242,345,237,344,242,312"/>
+<area shape="rect" id="Node000007" href="$classdunedaq_1_1confmodel_1_1ResourceBase.html" title=" " alt="" coords="172,168,308,208"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="234,224,236,256,230,256,229,224"/>
+<area shape="poly" id="edge13_Node000006_Node000007" title=" " alt="" coords="252,224,251,256,246,256,246,224"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="233,135,235,167,229,167,228,135"/>
+<area shape="poly" id="edge12_Node000007_Node000008" title=" " alt="" coords="251,135,250,167,245,167,246,135"/>
+</map>

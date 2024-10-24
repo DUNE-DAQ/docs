@@ -1,0 +1,51 @@
+<map id="/github/workspace/dev_area/build/confmodel/codegen/include/confmodel/DetDataSender.hpp" name="/github/workspace/dev_area/build/confmodel/codegen/include/confmodel/DetDataSender.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1395,5,1578,76"/>
+<area shape="rect" id="Node000002" href="$include_2appmodel_2FakeDataSender_8hpp.html" title=" " alt="" coords="170,124,350,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1379,44,1187,46,934,58,793,68,649,83,504,102,363,127,350,129,349,124,362,121,503,97,648,78,793,63,933,53,1187,41,1379,38"/>
+<area shape="rect" id="Node000005" href="$include_2appmodel_2FelixDataSender_8hpp.html" title=" " alt="" coords="374,124,554,195"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1380,57,555,150,554,145,1380,51"/>
+<area shape="rect" id="Node000007" href="$include_2appmodel_2NWDetDataSender_8hpp.html" title=" " alt="" coords="878,124,1058,195"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="1381,63,1236,90,1077,127,1059,131,1057,126,1075,121,1235,85,1380,57"/>
+<area shape="rect" id="Node000014" href="$sourcecode_2appmodel_2src_2ReadoutApplication_8cpp.html" title=" " alt="" coords="1569,250,1754,306"/>
+<area shape="poly" id="edge24_Node000001_Node000014" title=" " alt="" coords="1380,53,1271,69,1217,81,1170,97,1132,115,1109,137,1105,149,1105,163,1110,177,1122,193,1136,205,1155,214,1203,227,1262,234,1327,236,1458,234,1514,235,1558,240,1585,247,1584,252,1557,245,1514,240,1458,239,1327,241,1262,239,1202,233,1153,219,1133,209,1118,196,1106,180,1100,164,1100,148,1105,134,1129,111,1168,92,1216,76,1270,64,1380,48"/>
+<area shape="rect" id="Node000017" href="$src_2FakeDataSender_8hpp.html" title=" " alt="" coords="1132,132,1353,187"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="1402,85,1301,133,1298,129,1399,81"/>
+<area shape="rect" id="Node000018" href="$src_2FelixDataSender_8hpp.html" title=" " alt="" coords="1377,132,1596,187"/>
+<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="1489,91,1489,131,1484,131,1484,91"/>
+<area shape="rect" id="Node000019" href="$src_2NWDetDataSender_8hpp.html" title=" " alt="" coords="1620,132,1855,187"/>
+<area shape="poly" id="edge21_Node000001_Node000019" title=" " alt="" coords="1577,81,1680,128,1678,133,1574,86"/>
+<area shape="rect" id="Node000020" href="$DetDataSender_8cpp.html" title=" " alt="" coords="1879,132,2092,187"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="1594,61,1867,121,1894,128,1892,133,1866,127,1593,66"/>
+<area shape="rect" id="Node000021" href="$dump__dunedaq____confmodel_8cpp.html" title=" " alt="" coords="2115,124,2304,195"/>
+<area shape="poly" id="edge23_Node000001_Node000021" title=" " alt="" coords="1594,48,1829,74,1968,95,2105,121,2115,124,2114,129,2103,127,1967,100,1829,79,1593,53"/>
+<area shape="rect" id="Node000022" href="$dalMethods_8cpp.html" title=" " alt="" coords="2327,132,2516,187"/>
+<area shape="poly" id="edge25_Node000001_Node000022" title=" " alt="" coords="1593,43,1738,50,1919,64,2118,87,2317,121,2344,128,2343,133,2315,127,2117,93,1918,70,1737,55,1593,48"/>
+<area shape="rect" id="Node000023" href="$FakeCardReaderBase_8hpp.html" title=" " alt="" coords="2540,124,2804,195"/>
+<area shape="poly" id="edge26_Node000001_Node000023" title=" " alt="" coords="1594,42,1772,50,2005,64,2266,88,2528,121,2540,123,2539,129,2528,127,2266,93,2005,70,1772,55,1594,48"/>
+<area shape="rect" id="Node000003" href="$FakeDataSender_8cpp.html" title=" " alt="" coords="5,250,227,306"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,207,151,252,148,248,204,202"/>
+<area shape="rect" id="Node000004" href="$dump__dunedaq____appmodel_8cpp.html" title=" " alt="" coords="221,361,409,432"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="274,209,309,360,304,362,269,210"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="380,206,359,224,342,244,328,272,320,303,315,361,310,361,315,302,323,271,338,241,355,220,376,202"/>
+<area shape="rect" id="Node000006" href="$FelixDataSender_8cpp.html" title=" " alt="" coords="352,250,571,306"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="466,210,465,250,459,250,460,210"/>
+<area shape="poly" id="edge15_Node000007_Node000004" title=" " alt="" coords="863,170,808,179,748,194,689,215,635,245,619,261,610,279,602,297,584,315,543,339,506,348,469,353,422,364,410,368,409,362,421,359,468,348,505,343,541,334,581,311,597,294,605,277,614,258,632,241,687,210,747,189,807,174,863,165"/>
+<area shape="rect" id="Node000008" href="$include_2appmodel_2HermesDataSender_8hpp.html" title=" " alt="" coords="645,243,824,313"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="886,204,805,244,803,240,884,200"/>
+<area shape="rect" id="Node000012" href="$src_2HermesDataSender_8hpp.html" title=" " alt="" coords="849,250,1087,306"/>
+<area shape="poly" id="edge13_Node000007_Node000012" title=" " alt="" coords="971,210,971,250,965,250,965,210"/>
+<area shape="rect" id="Node000013" href="$NWDetDataSender_8cpp.html" title=" " alt="" coords="1111,250,1345,306"/>
+<area shape="poly" id="edge14_Node000007_Node000013" title=" " alt="" coords="1061,199,1168,247,1166,252,1059,204"/>
+<area shape="poly" id="edge16_Node000007_Node000014" title=" " alt="" coords="1073,191,1077,192,1149,205,1211,211,1317,216,1423,220,1485,227,1558,240,1585,247,1584,252,1557,245,1485,232,1423,225,1317,221,1210,217,1148,210,1075,197,1072,197"/>
+<area shape="rect" id="Node000015" href="$IfaceWrapper_8hpp.html" title=" " alt="" coords="1369,250,1546,306"/>
+<area shape="poly" id="edge17_Node000007_Node000015" title=" " alt="" coords="1073,191,1077,192,1155,208,1217,215,1279,224,1358,240,1383,247,1381,252,1357,245,1278,229,1216,221,1154,213,1075,197,1072,196"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="631,315,627,316,525,340,422,364,410,367,409,362,421,359,523,335,626,311,629,310"/>
+<area shape="rect" id="Node000009" href="$HermesDataSender_8cpp.html" title=" " alt="" coords="433,369,671,425"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="669,324,596,371,593,366,666,320"/>
+<area shape="rect" id="Node000010" href="$HermesModule_8cpp.html" title=" " alt="" coords="695,369,908,425"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="764,325,788,367,784,370,760,328"/>
+<area shape="rect" id="Node000011" href="$sourcecode_2appmodel_2src_2WIECApplication_8cpp.html" title=" " alt="" coords="932,369,1116,425"/>
+<area shape="poly" id="edge12_Node000008_Node000011" title=" " alt="" coords="836,317,957,366,955,371,834,322"/>
+<area shape="rect" id="Node000016" href="$IfaceWrapper_8cpp.html" title=" " alt="" coords="1369,369,1546,425"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="1460,321,1460,368,1455,368,1455,321"/>
+</map>

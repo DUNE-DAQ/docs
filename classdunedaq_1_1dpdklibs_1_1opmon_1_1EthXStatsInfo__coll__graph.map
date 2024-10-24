@@ -1,0 +1,7 @@
+<map id="dunedaq::dpdklibs::opmon::EthXStatsInfo" name="dunedaq::dpdklibs::opmon::EthXStatsInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="109,124,257,165"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,20,177,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,56,169,122,165,125,109,60"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1dpdklibs_1_1opmon_1_1EthXStatsInfo_1_1Impl__.html" title=" " alt="" coords="201,5,349,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="245,74,201,125,197,122,241,71"/>
+</map>

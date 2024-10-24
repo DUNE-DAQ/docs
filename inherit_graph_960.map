@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classtpglibs_1_1AbstractProcessor.html" title=" " alt="" coords="5,63,179,103"/>
+<area shape="rect" id="Node000001" href="$classtpglibs_1_1AVXProcessor.html" title="AVX typed abstract signal processor." alt="" coords="227,70,378,96"/>
+<area shape="poly" id="edge782_Node000000_Node000001" title=" " alt="" coords="194,80,226,80,226,86,194,86"/>
+<area shape="rect" id="Node000002" href="$classtpglibs_1_1AVXFrugalPedestalSubtractProcessor.html" title="AVX signal processor: Estimates the pedestal and subtracts." alt="" coords="441,5,620,46"/>
+<area shape="poly" id="edge783_Node000001_Node000002" title=" " alt="" coords="370,63,446,44,447,49,372,68"/>
+<area shape="rect" id="Node000004" href="$classtpglibs_1_1AVXRunSumProcessor.html" title="AVX signal processor: Calculates the running sum of the signal." alt="" coords="430,70,631,96"/>
+<area shape="poly" id="edge785_Node000001_Node000004" title=" " alt="" coords="394,80,429,80,429,86,394,86"/>
+<area shape="rect" id="Node000006" href="$classtpglibs_1_1AVXThresholdProcessor.html" title="AVX signal processor: Passes signals above a threshold." alt="" coords="426,120,634,145"/>
+<area shape="poly" id="edge787_Node000001_Node000006" title=" " alt="" coords="381,97,468,116,467,121,380,102"/>
+<area shape="rect" id="Node000003" href="$classtpglibs_1_1AVXFixedPedestalSubtractProcessor.html" title="AVX signal processor: Fixes the estimated pedestal after a configured amount of time." alt="" coords="707,5,882,46"/>
+<area shape="poly" id="edge784_Node000002_Node000003" title=" " alt="" coords="636,23,707,23,707,28,636,28"/>
+<area shape="rect" id="Node000005" href="$classtpglibs_1_1AVXAbsRunSumProcessor.html" title="AVX signal processor: Calculates the running sum of the signal&#39;s absolute value." alt="" coords="682,70,907,96"/>
+<area shape="poly" id="edge786_Node000004_Node000005" title=" " alt="" coords="647,80,682,80,682,86,647,86"/>
+</map>

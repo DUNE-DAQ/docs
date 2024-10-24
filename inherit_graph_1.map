@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,46,54,72"/>
+<area shape="rect" id="Node000001" href="$classtextual__dbe_1_1data__structures_1_1selection__interface_1_1SelectionInterface.html" title=" " alt="" coords="102,39,337,79"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="69,56,101,56,101,62,69,62"/>
+<area shape="rect" id="Node000002" href="$classtextual__dbe_1_1data__structures_1_1selection__interface_1_1ClassSelectionMenu.html" title=" " alt="" coords="385,5,620,46"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="352,41,384,37,385,42,353,46"/>
+<area shape="rect" id="Node000003" href="$classtextual__dbe_1_1data__structures_1_1selection__interface_1_1RelationalSelectionMenu.html" title=" " alt="" coords="385,71,620,111"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="353,71,385,75,384,80,352,77"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="triggeralgs::TCMakerBundleNAlgorithm" name="triggeralgs::TCMakerBundleNAlgorithm">
+<area shape="rect" id="Node000001" title=" " alt="" coords="71,199,251,240"/>
+<area shape="rect" id="Node000002" href="$classtriggeralgs_1_1TriggerCandidateMaker.html" title=" " alt="" coords="5,95,191,136"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,148,151,197,146,200,116,151"/>
+<area shape="rect" id="Node000003" href="$structtriggeralgs_1_1TriggerCandidate.html" title=" " alt="" coords="215,103,400,129"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="279,140,191,201,188,196,276,135"/>
+<area shape="rect" id="Node000004" href="$structdunedaq_1_1trgdataformats_1_1TriggerCandidateData.html" title=" " alt="" coords="227,5,388,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="310,62,310,102,305,102,305,62"/>
+</map>

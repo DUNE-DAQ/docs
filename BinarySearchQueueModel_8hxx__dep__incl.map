@@ -1,0 +1,10 @@
+<map id="/github/workspace/dev_area/sourcecode/datahandlinglibs/include/datahandlinglibs/models/detail/BinarySearchQueueModel.hxx" name="/github/workspace/dev_area/sourcecode/datahandlinglibs/include/datahandlinglibs/models/detail/BinarySearchQueueModel.hxx">
+<area shape="rect" id="Node000001" title=" " alt="" coords="73,5,306,76"/>
+<area shape="rect" id="Node000002" href="$BinarySearchQueueModel_8hpp.html" title=" " alt="" coords="79,124,300,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,91,192,124,187,124,187,91"/>
+<area shape="rect" id="Node000003" href="$FixedRateQueueModel_8hpp.html" title=" " alt="" coords="5,243,227,313"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="162,209,140,244,135,241,157,206"/>
+<area shape="rect" id="Node000004" href="$Readoutlibs_8cpp.html" title=" " alt="" coords="79,361,300,417"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="226,207,241,242,248,278,241,314,230,340,215,362,211,359,225,337,236,313,243,278,236,243,221,209"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="150,325,173,359,169,362,145,328"/>
+</map>

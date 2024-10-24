@@ -1,0 +1,7 @@
+<map id="wib::Command" name="wib::Command">
+<area shape="rect" id="Node000001" title=" " alt="" coords="129,94,235,120"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,177,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,40,171,92,167,96,113,44"/>
+<area shape="rect" id="Node000003" href="$structwib_1_1Command_1_1Impl__.html" title=" " alt="" coords="200,5,345,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,44,196,96,192,92,247,40"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="dunedaq::timinglibs::dal::TimingEndpointControllerBase" name="dunedaq::timinglibs::dal::TimingEndpointControllerBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="614,71,839,111"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1hsilibs_1_1dal_1_1HSIController.html" title=" " alt="" coords="916,5,1052,46"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="853,65,929,44,931,49,855,70"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="794,63,915,32,916,37,796,68"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingEndpointController.html" title=" " alt="" coords="887,71,1081,111"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="854,97,886,97,886,102,854,103"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="854,79,886,80,886,85,854,85"/>
+<area shape="rect" id="Node000007" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingFanoutController.html" title=" " alt="" coords="892,136,1076,177"/>
+<area shape="poly" id="edge11_Node000001_Node000007" title=" " alt="" coords="796,114,892,139,890,144,794,119"/>
+<area shape="poly" id="edge12_Node000001_Node000007" title=" " alt="" coords="855,112,931,133,929,138,853,117"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingController.html" title=" " alt="" coords="422,71,566,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="582,97,614,97,614,103,582,102"/>
+<area shape="poly" id="edge6_Node000001_Node000002" title=" " alt="" coords="582,80,614,79,614,85,582,85"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1confmodel_1_1DaqModule.html" title=" " alt="" coords="238,71,374,111"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="389,97,422,97,422,102,389,103"/>
+<area shape="poly" id="edge5_Node000002_Node000003" title=" " alt="" coords="389,79,422,80,422,85,389,85"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="5,78,190,104"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="206,97,237,97,237,102,206,103"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="206,79,237,80,237,85,206,85"/>
+</map>

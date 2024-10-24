@@ -1,0 +1,16 @@
+<map id="/github/workspace/dev_area/sourcecode/wibmod/src/wibmod/WIB1/ASIC_reg_mapping.hh" name="/github/workspace/dev_area/sourcecode/wibmod/src/wibmod/WIB1/ASIC_reg_mapping.hh">
+<area shape="rect" id="Node000001" title=" " alt="" coords="110,5,299,76"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="78,213,142,238"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,62,83,72,57,86,34,103,15,125,8,144,15,163,37,188,65,206,63,210,33,192,10,166,3,144,10,123,30,100,54,81,81,67,109,57"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="404,132,461,157"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="285,74,392,122,394,122,391,127,390,126,283,79"/>
+<area shape="rect" id="Node000004" href="$ADC__ASIC__reg__mapping_8hh.html" title=" " alt="" coords="24,124,196,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,78,141,114,137,111,171,74"/>
+<area shape="rect" id="Node000006" href="$FE__ASIC__reg__mapping_8hh.html" title=" " alt="" coords="219,124,379,165"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="239,74,272,111,269,114,235,78"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="113,165,113,197,107,197,107,165"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="219,213,273,238"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="145,163,214,202,211,207,142,168"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="253,168,154,209,152,204,251,163"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="288,167,265,201,260,198,284,164"/>
+</map>

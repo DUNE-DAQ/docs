@@ -1,0 +1,23 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classtriggeralgs_1_1TriggerCandidateMaker.html" title=" " alt="" coords="5,288,191,329"/>
+<area shape="rect" id="Node000001" href="$classtriggeralgs_1_1TCMakerADCSimpleWindowAlgorithm.html" title=" " alt="" coords="260,5,468,46"/>
+<area shape="poly" id="edge806_Node000000_Node000001" title=" " alt="" coords="107,272,124,224,151,165,188,107,211,80,237,57,259,44,261,48,240,61,215,84,193,110,156,168,129,226,112,274"/>
+<area shape="rect" id="Node000002" href="$classtriggeralgs_1_1TCMakerBundleNAlgorithm.html" title=" " alt="" coords="274,71,454,111"/>
+<area shape="poly" id="edge807_Node000000_Node000002" title=" " alt="" coords="114,273,134,237,162,196,197,156,237,122,272,105,275,110,240,127,200,160,166,200,139,240,118,275"/>
+<area shape="rect" id="Node000003" href="$classtriggeralgs_1_1TCMakerChannelAdjacencyAlgorithm.html" title=" " alt="" coords="270,136,458,177"/>
+<area shape="poly" id="edge808_Node000000_Node000003" title=" " alt="" coords="127,275,176,230,206,207,237,187,269,174,271,179,240,192,209,211,179,234,130,279"/>
+<area shape="rect" id="Node000004" href="$classtriggeralgs_1_1TCMakerChannelDistanceAlgorithm.html" title=" " alt="" coords="270,201,458,242"/>
+<area shape="poly" id="edge809_Node000000_Node000004" title=" " alt="" coords="162,279,238,251,275,240,277,245,240,256,164,284"/>
+<area shape="rect" id="Node000005" href="$classtriggeralgs_1_1TCMakerDBSCANAlgorithm.html" title=" " alt="" coords="239,266,489,292"/>
+<area shape="poly" id="edge810_Node000000_Node000005" title=" " alt="" coords="206,294,241,290,242,295,206,299"/>
+<area shape="rect" id="Node000006" href="$classtriggeralgs_1_1TCMakerHorizontalMuonAlgorithm.html" title=" " alt="" coords="265,316,463,357"/>
+<area shape="poly" id="edge811_Node000000_Node000006" title=" " alt="" coords="207,317,265,323,264,329,206,322"/>
+<area shape="rect" id="Node000007" href="$classtriggeralgs_1_1TCMakerMichelElectronAlgorithm.html" title=" " alt="" coords="275,381,453,422"/>
+<area shape="poly" id="edge812_Node000000_Node000007" title=" " alt="" coords="158,333,240,366,279,378,277,383,238,371,156,338"/>
+<area shape="rect" id="Node000008" href="$classtriggeralgs_1_1TCMakerPlaneCoincidenceAlgorithm.html" title=" " alt="" coords="277,447,451,487"/>
+<area shape="poly" id="edge813_Node000000_Node000008" title=" " alt="" coords="129,338,178,387,208,411,240,431,278,447,275,452,237,436,205,415,174,391,125,342"/>
+<area shape="rect" id="Node000009" href="$classtriggeralgs_1_1TCMakerPrescaleAlgorithm.html" title=" " alt="" coords="268,512,460,553"/>
+<area shape="poly" id="edge814_Node000000_Node000009" title=" " alt="" coords="118,341,138,378,165,420,200,462,240,497,269,512,266,516,237,501,196,466,161,423,133,381,113,344"/>
+<area shape="rect" id="Node000010" href="$classtriggeralgs_1_1TCMakerSupernovaAlgorithm.html" title=" " alt="" coords="263,577,465,618"/>
+<area shape="poly" id="edge815_Node000000_Node000010" title=" " alt="" coords="111,343,128,393,155,452,192,512,215,539,240,562,264,576,261,581,237,566,211,542,188,515,150,455,123,395,106,345"/>
+</map>

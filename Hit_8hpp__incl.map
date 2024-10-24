@@ -1,0 +1,36 @@
+<map id="/github/workspace/dev_area/sourcecode/triggeralgs/include/triggeralgs/dbscan/Hit.hpp" name="/github/workspace/dev_area/sourcecode/triggeralgs/include/triggeralgs/dbscan/Hit.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="469,5,691,61"/>
+<area shape="rect" id="Node000002" href="$TriggerActivity_8hpp.html" title=" " alt="" coords="351,109,543,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="540,64,479,103,477,98,537,59"/>
+<area shape="rect" id="Node000007" href="$triggeralgs_2include_2triggeralgs_2TriggerPrimitive_8hpp.html" title=" " alt="" coords="213,183,414,208"/>
+<area shape="poly" id="edge16_Node000001_Node000007" title=" " alt="" coords="470,48,435,57,401,70,369,88,341,111,324,138,317,168,312,167,319,136,337,107,366,84,398,66,433,52,468,43"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="534,183,591,208"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="580,62,568,168,563,167,574,61"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="618,109,675,135"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="603,60,630,95,626,98,599,63"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="699,109,738,135"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="625,59,688,98,685,103,622,64"/>
+<area shape="rect" id="Node000003" href="$TriggerActivityData_8hpp.html" title=" " alt="" coords="411,256,603,297"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="454,134,496,241,491,243,449,136"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="425,138,351,177,348,173,423,133"/>
+<area shape="poly" id="edge15_Node000002_Node000013" title=" " alt="" coords="468,133,532,172,529,177,465,137"/>
+<area shape="rect" id="Node000004" href="$trgdataformats_2include_2trgdataformats_2Types_8hpp.html" title=" " alt="" coords="423,345,591,371"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="509,297,509,329,504,329,504,297"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="517,419,577,444"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="553,295,582,316,605,344,609,362,603,380,592,397,578,411,574,407,588,393,598,378,604,362,600,346,579,319,550,300"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="516,370,535,404,530,406,511,372"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="441,419,493,444"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="502,372,483,406,478,404,498,370"/>
+<area shape="rect" id="Node000008" href="$trgdataformats_2include_2trgdataformats_2TriggerPrimitive_8hpp.html" title=" " alt="" coords="145,264,370,290"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="307,210,277,253,272,249,303,207"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="297,288,454,337,453,342,295,293"/>
+<area shape="poly" id="edge12_Node000008_Node000005" title=" " alt="" coords="244,292,228,309,212,329,205,350,206,360,211,369,231,384,261,394,340,405,426,410,501,416,501,421,426,415,339,411,260,399,229,388,207,372,201,362,200,350,208,327,224,305,241,288"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,345,59,371"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="223,293,74,345,73,340,222,288"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="83,345,147,371"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="237,292,151,340,148,335,234,288"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="222,345,293,371"/>
+<area shape="poly" id="edge13_Node000008_Node000011" title=" " alt="" coords="260,290,260,329,255,329,255,290"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="317,345,398,371"/>
+<area shape="poly" id="edge14_Node000008_Node000012" title=" " alt="" coords="274,288,332,333,329,337,271,292"/>
+</map>

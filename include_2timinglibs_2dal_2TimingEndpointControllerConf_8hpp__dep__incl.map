@@ -1,0 +1,17 @@
+<map id="/github/workspace/dev_area/build/timinglibs/codegen/include/timinglibs/dal/TimingEndpointControllerConf.hpp" name="/github/workspace/dev_area/build/timinglibs/codegen/include/timinglibs/dal/TimingEndpointControllerConf.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="531,5,773,76"/>
+<area shape="rect" id="Node000002" href="$include_2hsilibs_2dal_2HSIControllerConf_8hpp.html" title=" " alt="" coords="92,124,302,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="517,76,315,127,303,130,302,125,314,121,515,71"/>
+<area shape="rect" id="Node000005" href="$src_2HSIControllerConf_8hpp.html" title=" " alt="" coords="327,132,505,187"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="569,86,472,133,470,129,567,81"/>
+<area shape="rect" id="Node000006" href="$TimingEndpointControllerConf_8cpp.html" title=" " alt="" coords="530,124,774,195"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="655,91,655,124,649,124,649,91"/>
+<area shape="rect" id="Node000007" href="$dump__dunedaq____timinglibs____dal_8cpp.html" title=" " alt="" coords="798,124,986,195"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="738,81,821,121,819,126,736,85"/>
+<area shape="rect" id="Node000008" href="$sourcecode_2timinglibs_2src_2TimingEndpointControllerBase_8cpp.html" title=" " alt="" coords="1011,132,1256,187"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="788,71,999,121,1027,128,1026,133,998,127,787,76"/>
+<area shape="rect" id="Node000003" href="$HSIControllerConf_8cpp.html" title=" " alt="" coords="5,250,184,306"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="159,208,120,251,116,248,155,205"/>
+<area shape="rect" id="Node000004" href="$dump__dunedaq____hsilibs____dal_8cpp.html" title=" " alt="" coords="208,243,394,313"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="240,204,272,241,268,244,236,208"/>
+</map>

@@ -1,0 +1,43 @@
+<map id="dunedaq::datahandlinglibs::RawDataProcessorConcept&lt; ReadoutType &gt;" name="dunedaq::datahandlinglibs::RawDataProcessorConcept&lt; ReadoutType &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="188,379,375,434"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="423,5,702,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="286,363,300,298,325,219,342,178,364,139,390,102,421,70,435,59,438,64,425,74,394,106,369,142,347,181,330,221,305,300,291,364"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="430,85,695,155"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="295,363,314,317,341,263,377,210,421,164,437,153,440,158,425,169,381,214,346,266,318,319,299,365"/>
+<area shape="rect" id="Node000007" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="461,179,664,234"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="306,364,355,302,386,271,422,244,459,226,462,231,424,249,390,275,359,306,311,367"/>
+<area shape="rect" id="Node000009" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="455,259,670,314"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="338,368,422,324,454,312,456,317,424,329,340,373"/>
+<area shape="rect" id="Node000011" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="446,339,680,394"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="390,388,445,381,446,386,391,394"/>
+<area shape="rect" id="Node000013" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="452,419,673,474"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="391,419,452,428,451,433,390,425"/>
+<area shape="rect" id="Node000015" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="461,499,664,554"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="340,440,424,484,462,498,460,503,422,489,338,445"/>
+<area shape="rect" id="Node000017" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="461,579,664,634"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="311,446,359,507,390,538,424,564,462,582,459,587,422,569,386,542,355,511,306,449"/>
+<area shape="rect" id="Node000019" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="459,659,666,714"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="299,448,318,495,345,548,380,600,425,644,460,664,457,669,421,649,376,603,340,550,313,497,294,450"/>
+<area shape="rect" id="Node000021" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="461,739,664,794"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="292,449,307,511,332,585,350,623,371,660,396,694,425,724,462,747,459,751,421,729,392,698,366,663,345,626,327,587,302,512,287,450"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1opmonlib_1_1MonitorableObject.html" title=" " alt="" coords="5,386,140,427"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,404,187,404,187,409,155,409"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1fdreadoutlibs_1_1DAPHNEFrameProcessor.html" title=" " alt="" coords="771,13,950,54"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="718,31,771,31,771,36,718,36"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1fdreadoutlibs_1_1DAPHNEStreamFrameProcessor.html" title=" " alt="" coords="750,100,971,140"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="711,117,750,117,750,123,711,123"/>
+<area shape="rect" id="Node000008" href="$classdunedaq_1_1fdreadoutlibs_1_1TDEEthFrameProcessor.html" title=" " alt="" coords="777,186,944,227"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="680,204,776,204,776,209,680,209"/>
+<area shape="rect" id="Node000010" href="$classdunedaq_1_1fdreadoutlibs_1_1TDEFrameProcessor.html" title=" " alt="" coords="785,266,936,307"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="686,284,785,284,785,289,686,289"/>
+<area shape="rect" id="Node000012" href="$classdunedaq_1_1fdreadoutlibs_1_1WIBEthFrameProcessor.html" title=" " alt="" coords="777,346,944,387"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="695,364,776,364,776,369,695,369"/>
+<area shape="rect" id="Node000014" href="$classdunedaq_1_1hsilibs_1_1HSIFrameProcessor.html" title=" " alt="" coords="771,426,950,467"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="689,444,770,444,770,449,689,449"/>
+<area shape="rect" id="Node000016" href="$classdunedaq_1_1trigger_1_1TAProcessor.html" title=" " alt="" coords="763,514,958,539"/>
+<area shape="poly" id="edge15_Node000015_Node000016" title=" " alt="" coords="680,524,763,524,763,529,680,529"/>
+<area shape="rect" id="Node000018" href="$classdunedaq_1_1trigger_1_1TCProcessor.html" title=" " alt="" coords="763,594,958,619"/>
+<area shape="poly" id="edge17_Node000017_Node000018" title=" " alt="" coords="680,604,763,604,763,609,680,609"/>
+<area shape="rect" id="Node000020" href="$classdunedaq_1_1trigger_1_1TPProcessor.html" title=" " alt="" coords="763,674,958,699"/>
+<area shape="poly" id="edge19_Node000019_Node000020" title=" " alt="" coords="682,684,763,684,763,689,682,689"/>
+</map>

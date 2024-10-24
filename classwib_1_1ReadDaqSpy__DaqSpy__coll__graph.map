@@ -1,0 +1,7 @@
+<map id="wib::ReadDaqSpy_DaqSpy" name="wib::ReadDaqSpy_DaqSpy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="103,109,277,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,47,179,107,175,110,113,51"/>
+<area shape="rect" id="Node000003" href="$structwib_1_1ReadDaqSpy__DaqSpy_1_1Impl__.html" title=" " alt="" coords="201,5,376,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="259,59,204,111,200,107,255,55"/>
+</map>

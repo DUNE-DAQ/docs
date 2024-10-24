@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,203,200,228"/>
+<area shape="rect" id="Node000001" href="$classdunedaq_1_1trigger_1_1TriggerGenericMaker.html" title=" " alt="" coords="265,5,433,76"/>
+<area shape="poly" id="edge120_Node000000_Node000001" title=" " alt="" coords="125,189,178,138,246,85,264,74,267,79,249,90,182,142,129,193"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1trigger_1_1TriggerGenericMaker.html" title=" " alt="" coords="257,100,441,171"/>
+<area shape="poly" id="edge121_Node000000_Node000002" title=" " alt="" coords="158,195,256,163,257,168,160,200"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1hsilibs_1_1HSIEventSender.html" title="HSIEventSender provides an interface to process and and send HSIEvents." alt="" coords="261,195,437,236"/>
+<area shape="poly" id="edge122_Node000000_Node000003" title=" " alt="" coords="215,213,261,213,261,218,215,218"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1timinglibs_1_1TimingHardwareManagerBase.html" title="TimingHardwareManagerBase creates vectors of ints and writes them to the configured output queues." alt="" coords="248,339,450,380"/>
+<area shape="poly" id="edge123_Node000000_Node000004" title=" " alt="" coords="130,237,183,281,249,325,273,336,271,341,246,330,179,286,127,241"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1trigger_1_1TriggerGenericMaker.html" title=" " alt="" coords="266,260,432,315"/>
+<area shape="poly" id="edge124_Node000000_Node000006" title=" " alt="" coords="164,230,266,260,264,266,163,236"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1timinglibs_1_1TimingHardwareInterface.html" title="TimingHardwareInterface sets up IPBus UHAL interface." alt="" coords="16,339,189,380"/>
+<area shape="poly" id="edge125_Node000005_Node000004" title=" " alt="" coords="205,357,247,357,247,362,205,362"/>
+</map>

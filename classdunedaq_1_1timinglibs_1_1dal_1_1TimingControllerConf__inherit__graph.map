@@ -1,0 +1,18 @@
+<map id="dunedaq::timinglibs::dal::TimingControllerConf" name="dunedaq::timinglibs::dal::TimingControllerConf">
+<area shape="rect" id="Node000001" title=" " alt="" coords="238,71,409,111"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingEndpointControllerConf.html" title=" " alt="" coords="457,5,678,46"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="423,70,516,44,517,49,425,76"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="389,63,456,44,457,49,390,68"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingFanoutControllerConf.html" title=" " alt="" coords="462,71,673,111"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="425,97,462,97,462,103,425,103"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="425,79,462,79,462,85,425,85"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1timinglibs_1_1dal_1_1TimingMasterControllerConf.html" title=" " alt="" coords="462,136,673,177"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="390,114,462,134,461,139,388,119"/>
+<area shape="poly" id="edge10_Node000001_Node000006" title=" " alt="" coords="425,106,517,133,516,138,423,112"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="5,78,190,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,97,237,97,237,102,205,103"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="205,79,237,80,237,85,205,85"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1hsilibs_1_1dal_1_1HSIControllerConf.html" title=" " alt="" coords="726,5,863,46"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="694,32,726,31,726,37,694,37"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="694,14,726,15,726,20,694,19"/>
+</map>

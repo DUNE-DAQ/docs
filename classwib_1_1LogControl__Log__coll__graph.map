@@ -1,0 +1,7 @@
+<map id="wib::LogControl_Log" name="wib::LogControl_Log">
+<area shape="rect" id="Node000001" title=" " alt="" coords="111,109,250,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,48,171,107,167,110,111,52"/>
+<area shape="rect" id="Node000003" href="$structwib_1_1LogControl__Log_1_1Impl__.html" title=" " alt="" coords="201,5,341,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,59,194,111,190,107,240,55"/>
+</map>

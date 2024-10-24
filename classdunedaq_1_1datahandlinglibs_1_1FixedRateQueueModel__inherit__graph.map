@@ -1,0 +1,11 @@
+<map id="dunedaq::datahandlinglibs::FixedRateQueueModel&lt; T &gt;" name="dunedaq::datahandlinglibs::FixedRateQueueModel&lt; T &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="15,360,203,401"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1datahandlinglibs_1_1BinarySearchQueueModel.html" title=" " alt="" coords="5,271,213,312"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,328,112,360,106,360,106,328"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1datahandlinglibs_1_1IterableQueueModel.html" title=" " alt="" coords="22,183,196,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,239,112,271,106,271,106,239"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1datahandlinglibs_1_1LatencyBufferConcept.html" title=" " alt="" coords="16,94,202,135"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="112,150,112,182,106,182,106,150"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1opmonlib_1_1MonitorableObject.html" title=" " alt="" coords="42,5,176,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="112,62,112,94,106,94,106,62"/>
+</map>

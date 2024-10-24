@@ -1,0 +1,17 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,209,127,235"/>
+<area shape="rect" id="Node000001" href="$classdunedaq_1_1sspmodules_1_1EBadDeviceList.html" title=" " alt="" coords="176,5,323,46"/>
+<area shape="poly" id="edge762_Node000000_Node000001" title=" " alt="" coords="77,193,114,127,141,90,173,57,191,44,194,49,176,61,145,93,119,129,82,196"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1sspmodules_1_1EDAQConfigError.html" title=" " alt="" coords="176,71,323,111"/>
+<area shape="poly" id="edge763_Node000000_Node000002" title=" " alt="" coords="88,196,126,159,173,122,195,110,198,114,176,127,130,163,91,200"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1sspmodules_1_1EDeviceAlreadyOpen.html" title=" " alt="" coords="175,136,324,177"/>
+<area shape="poly" id="edge764_Node000000_Node000003" title=" " alt="" coords="117,201,189,175,191,180,119,206"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1sspmodules_1_1EEventReadError.html" title=" " alt="" coords="176,201,323,242"/>
+<area shape="poly" id="edge765_Node000000_Node000004" title=" " alt="" coords="142,219,176,219,176,224,142,224"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1sspmodules_1_1EFTDIError.html" title=" " alt="" coords="176,267,323,307"/>
+<area shape="poly" id="edge766_Node000000_Node000005" title=" " alt="" coords="119,238,191,264,189,269,117,243"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1sspmodules_1_1ENoSuchDevice.html" title=" " alt="" coords="176,332,323,373"/>
+<area shape="poly" id="edge767_Node000000_Node000006" title=" " alt="" coords="91,244,130,280,176,317,198,329,195,334,173,321,126,284,88,248"/>
+<area shape="rect" id="Node000007" href="$classdunedaq_1_1sspmodules_1_1ETCPError.html" title=" " alt="" coords="176,397,323,438"/>
+<area shape="poly" id="edge768_Node000000_Node000007" title=" " alt="" coords="82,247,119,314,145,350,176,382,194,394,191,399,173,386,141,354,114,317,77,250"/>
+</map>

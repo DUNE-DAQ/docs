@@ -1,0 +1,9 @@
+<map id="dunedaq::ipm::opmon::ReceiverInfoDefaultTypeInternal" name="dunedaq::ipm::opmon::ReceiverInfoDefaultTypeInternal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="76,213,288,253"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1ipm_1_1opmon_1_1ReceiverInfo.html" title=" " alt="" coords="111,109,253,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,165,184,212,179,212,179,165"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,48,166,107,162,110,110,52"/>
+<area shape="rect" id="Node000004" href="$structdunedaq_1_1ipm_1_1opmon_1_1ReceiverInfo_1_1Impl__.html" title=" " alt="" coords="201,5,344,46"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="247,60,201,110,197,107,243,56"/>
+</map>

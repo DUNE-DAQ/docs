@@ -1,0 +1,50 @@
+<map id="/github/workspace/dev_area/sourcecode/dpdklibs/src" name="/github/workspace/dev_area/sourcecode/dpdklibs/src">
+<area shape="rect" id="node1" href="dir_0c14d3c21552daff8762af3e6485ee53.html" title="include" alt="" coords="229,137,291,162"/>
+<area shape="poly" id="edge1" href="dir_000450_000264.html" alt="" coords="142,85,224,127,222,132,139,89"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000450_000264.html" title="22" alt="" coords="217,113,231,128"/>
+<area shape="rect" id="node4" href="dir_3502d285fb69868ceafeacbd6085e0c1.html" title="detail" alt="" coords="95,137,148,162"/>
+<area shape="poly" id="edge2" href="dir_000450_000114.html" alt="" coords="124,88,124,121,119,121,119,88"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000450_000114.html" title="1" alt="" coords="126,111,133,126"/>
+<area shape="rect" id="node6" href="dir_934fd243b40ff671fa1d708949b38ec2.html" title="utilities" alt="" coords="797,137,859,162"/>
+<area shape="poly" id="edge3" href="dir_000450_000533.html" alt="" coords="141,83,154,86,247,103,327,111,465,115,605,115,686,121,782,134,781,139,686,126,605,121,465,120,327,117,246,108,153,91,140,88"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000450_000533.html" title="1" alt="" coords="776,120,783,135"/>
+<area shape="rect" id="node7" href="dir_a64e56b30f5ca31a10654cea03375984.html" title="ers" alt="" coords="883,137,922,162"/>
+<area shape="poly" id="edge4" href="dir_000450_000191.html" alt="" coords="141,83,154,86,260,104,351,112,432,113,509,111,586,108,668,109,760,117,868,134,868,140,760,122,668,114,586,114,509,116,432,118,351,117,259,109,153,91,140,88"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000450_000191.html" title="1" alt="" coords="863,121,870,136"/>
+<area shape="rect" id="node8" href="dir_ab1b54331b4bb0c44e7fcd5a7d20111e.html" title="iomanager" alt="" coords="434,137,515,162"/>
+<area shape="poly" id="edge5" href="dir_000450_000300.html" alt="" coords="142,82,154,86,226,103,285,113,419,133,419,139,284,118,225,108,153,91,140,87"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000450_000300.html" title="2" alt="" coords="414,120,421,135"/>
+<area shape="rect" id="node9" href="dir_bbc7c2c1f127b379ce39be24c4bd3dbe.html" title="build" alt="" coords="540,137,588,162"/>
+<area shape="poly" id="edge6" href="dir_000450_000034.html" alt="" coords="142,82,154,86,256,105,337,111,420,117,525,134,524,139,420,122,337,117,255,110,153,91,140,87"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000450_000034.html" title="11" alt="" coords="516,120,530,135"/>
+<area shape="rect" id="node10" href="dir_eaab8e706d9785a8277b333b3fa3c104.html" title="appfwk" alt="" coords="612,137,676,162"/>
+<area shape="poly" id="edge7" href="dir_000450_000008.html" alt="" coords="141,82,154,86,275,107,373,113,472,118,597,134,597,139,471,123,373,119,275,112,153,91,140,88"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000450_000008.html" title="2" alt="" coords="592,120,599,135"/>
+<area shape="rect" id="node11" href="dir_f6ebe3d21dc6eefb077bc4c75cd16e31.html" title="opmonlib" alt="" coords="699,137,773,162"/>
+<area shape="poly" id="edge8" href="dir_000450_000350.html" alt="" coords="141,82,154,86,232,101,300,110,416,115,534,118,604,123,684,134,684,139,603,129,534,123,416,120,299,115,232,106,153,91,140,88"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000450_000350.html" title="2" alt="" coords="679,120,686,135"/>
+<area shape="rect" id="node12" href="dir_f74a706a7efda297e6d8fb2c03527fc2.html" title="logging" alt="" coords="946,137,1009,162"/>
+<area shape="poly" id="edge9" href="dir_000450_000316.html" alt="" coords="141,83,154,86,270,106,369,115,457,117,540,116,712,113,813,119,931,134,931,139,813,124,712,119,540,121,457,123,368,120,269,111,153,91,140,88"/>
+<area shape="rect" id="edge9-headlabel" href="dir_000450_000316.html" title="5" alt="" coords="926,120,933,135"/>
+<area shape="rect" id="node13" href="dir_fa6656cf05a87bf9d66ed3de0114a478.html" title="datahandlinglibs" alt="" coords="1032,137,1147,162"/>
+<area shape="poly" id="edge10" href="dir_000450_000100.html" alt="" coords="141,83,154,86,282,108,392,120,490,124,581,123,773,120,885,123,1017,134,1016,139,885,129,773,125,581,129,490,129,392,125,282,113,153,91,140,88"/>
+<area shape="rect" id="edge10-headlabel" href="dir_000450_000100.html" title="4" alt="" coords="1011,120,1018,135"/>
+<area shape="rect" id="node14" href="dir_fe853eb0796da44195fb8219d49359ed.html" title="fdreadoutlibs" alt="" coords="315,137,410,162"/>
+<area shape="poly" id="edge11" href="dir_000450_000201.html" alt="" coords="142,82,154,86,303,130,301,135,153,91,140,87"/>
+<area shape="rect" id="edge11-headlabel" href="dir_000450_000201.html" title="2" alt="" coords="298,116,305,131"/>
+<area shape="rect" id="node3" href="dir_bad7caf03902765054b01220064c218d.html" title="arp" alt="" coords="38,63,77,89"/>
+<area shape="poly" id="edge12" href="dir_000031_000264.html" alt="" coords="79,82,90,86,215,130,213,135,88,91,77,87"/>
+<area shape="rect" id="edge12-headlabel" href="dir_000031_000264.html" title="1" alt="" coords="211,116,218,131"/>
+<area shape="rect" id="node5" href="dir_91fe2284d6fa677d7d47a38c8d6f47fc.html" title="udp" alt="" coords="166,63,208,89"/>
+<area shape="poly" id="edge13" href="dir_000528_000264.html" alt="" coords="201,87,239,124,235,128,197,91"/>
+<area shape="rect" id="edge13-headlabel" href="dir_000528_000264.html" title="4" alt="" coords="237,110,244,125"/>
+<area shape="poly" id="edge15" href="dir_000528_000316.html" alt="" coords="208,75,317,78,493,86,707,104,931,134,931,139,707,109,493,92,317,83,208,80"/>
+<area shape="rect" id="edge15-headlabel" href="dir_000528_000316.html" title="1" alt="" coords="926,120,933,135"/>
+<area shape="poly" id="edge16" href="dir_000528_000100.html" alt="" coords="208,75,524,91,764,109,1017,134,1016,139,764,114,523,97,208,81"/>
+<area shape="rect" id="edge16-headlabel" href="dir_000528_000100.html" title="1" alt="" coords="1011,120,1018,135"/>
+<area shape="rect" id="node15" href="dir_49997343c4c8eab520bf1e45b9cad06f.html" title="detdataformats" alt="" coords="1171,137,1280,162"/>
+<area shape="poly" id="edge14" href="dir_000528_000128.html" alt="" coords="208,75,576,89,859,106,1156,134,1156,139,858,112,575,94,208,80"/>
+<area shape="rect" id="edge14-headlabel" href="dir_000528_000128.html" title="2" alt="" coords="1150,120,1157,135"/>
+<area shape="rect" id="clust2" href="dir_c9fe6a355ebd70584763590830f11603.html" alt="" coords="27,52,219,173"/>
+<area shape="rect" id="clust1" href="dir_26ef73e054f6c5145ef58c9fa8ef12d7.html" title="dpdklibs" alt="" coords="16,16,301,184"/>
+</map>

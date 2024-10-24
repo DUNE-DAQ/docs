@@ -1,0 +1,25 @@
+<map id="dunedaq::datahandlinglibs::RequestHandlerConcept&lt; ReadoutType, LatencyBufferType &gt;" name="dunedaq::datahandlinglibs::RequestHandlerConcept&lt; ReadoutType, LatencyBufferType &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="188,170,422,226"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1datahandlinglibs_1_1DefaultRequestHandlerModel.html" title=" " alt="" coords="495,5,735,76"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="353,159,407,121,469,86,496,74,498,79,471,91,410,126,356,163"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1datahandlinglibs_1_1DefaultRequestHandlerModel.html" title=" " alt="" coords="470,101,760,186"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="437,172,469,166,470,172,438,177"/>
+<area shape="rect" id="Node000007" href="$classdunedaq_1_1datahandlinglibs_1_1DefaultRequestHandlerModel.html" title=" " alt="" coords="489,210,742,296"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="438,219,489,228,488,233,437,224"/>
+<area shape="rect" id="Node000008" href="$classdunedaq_1_1datahandlinglibs_1_1DefaultRequestHandlerModel.html" title=" " alt="" coords="498,320,732,375"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="355,233,409,271,471,305,500,316,498,321,469,310,406,275,352,237"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1opmonlib_1_1MonitorableObject.html" title=" " alt="" coords="5,178,140,218"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,195,187,195,187,201,155,201"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1datahandlinglibs_1_1DefaultSkipListRequestHandler.html" title=" " alt="" coords="823,20,1063,61"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="751,38,823,38,823,43,751,43"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1fdreadoutlibs_1_1DAPHNEListRequestHandler.html" title=" " alt="" coords="844,123,1042,164"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="776,141,844,141,844,146,776,146"/>
+<area shape="rect" id="Node000009" href="$classdunedaq_1_1datahandlinglibs_1_1DefaultSkipListRequestHandler.html" title=" " alt="" coords="838,240,1048,295"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="746,313,837,290,838,295,747,318"/>
+<area shape="rect" id="Node000011" href="$classdunedaq_1_1datahandlinglibs_1_1EmptyFragmentRequestHandlerModel.html" title=" " alt="" coords="820,320,1066,375"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="748,345,819,345,819,350,748,350"/>
+<area shape="rect" id="Node000012" href="$classdunedaq_1_1datahandlinglibs_1_1ZeroCopyRecordingRequestHandlerModel.html" title=" " alt="" coords="808,400,1078,455"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="748,377,827,396,825,401,746,382"/>
+<area shape="rect" id="Node000010" href="$classdunedaq_1_1trigger_1_1TPRequestHandler.html" title=" " alt="" coords="1126,247,1309,288"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1063,265,1125,265,1125,270,1063,270"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="dunedaq::trigger::opmon::TriggerDecisionInfo" name="dunedaq::trigger::opmon::TriggerDecisionInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="106,124,263,165"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,20,177,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,56,170,122,166,125,109,60"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1trigger_1_1opmon_1_1TriggerDecisionInfo_1_1Impl__.html" title=" " alt="" coords="200,5,358,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="248,75,203,125,199,122,244,71"/>
+</map>

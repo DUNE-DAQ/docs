@@ -1,0 +1,9 @@
+<map id="dunedaq::fdreadoutlibs::opmon::DummyConsumerInfoDefaultTypeInternal" name="dunedaq::fdreadoutlibs::opmon::DummyConsumerInfoDefaultTypeInternal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="76,228,314,283"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1fdreadoutlibs_1_1opmon_1_1DummyConsumerInfo.html" title=" " alt="" coords="96,124,294,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,180,198,227,192,227,192,180"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,20,177,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,56,178,122,174,125,111,59"/>
+<area shape="rect" id="Node000004" href="$structdunedaq_1_1fdreadoutlibs_1_1opmon_1_1DummyConsumerInfo_1_1Impl__.html" title=" " alt="" coords="200,5,398,61"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="265,74,215,125,212,122,261,70"/>
+</map>

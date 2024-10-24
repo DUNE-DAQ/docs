@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,85,166,126"/>
+<area shape="rect" id="Node000001" href="$classdunedaq_1_1ersschema_1_1SimpleIssue__ParametersEntry__DoNotUse.html" title=" " alt="" coords="215,5,417,61"/>
+<area shape="poly" id="edge461_Node000000_Node000001" title=" " alt="" coords="166,77,224,59,225,64,168,82"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1opmon_1_1OpMonEntry__CustomOriginEntry__DoNotUse.html" title=" " alt="" coords="214,85,418,126"/>
+<area shape="poly" id="edge462_Node000000_Node000002" title=" " alt="" coords="181,103,213,103,213,108,181,108"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1opmon_1_1OpMonEntry__DataEntry__DoNotUse.html" title=" " alt="" coords="220,150,412,191"/>
+<area shape="poly" id="edge463_Node000000_Node000003" title=" " alt="" coords="175,128,242,147,241,152,173,133"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="dunedaq::trigger::opmon::ModuleLevelTriggerInfoDefaultTypeInternal" name="dunedaq::trigger::opmon::ModuleLevelTriggerInfoDefaultTypeInternal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="85,228,289,283"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1trigger_1_1opmon_1_1ModuleLevelTriggerInfo.html" title=" " alt="" coords="105,124,269,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,180,190,227,184,227,184,180"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,20,177,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,56,172,122,168,125,109,59"/>
+<area shape="rect" id="Node000004" href="$structdunedaq_1_1trigger_1_1opmon_1_1ModuleLevelTriggerInfo_1_1Impl__.html" title=" " alt="" coords="201,5,365,61"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="251,75,206,125,202,122,247,71"/>
+</map>

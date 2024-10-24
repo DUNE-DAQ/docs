@@ -1,0 +1,24 @@
+<map id="/github/workspace/dev_area/sourcecode/trigger/include/trigger/TriggerPrimitiveTypeAdapter.hpp" name="/github/workspace/dev_area/sourcecode/trigger/include/trigger/TriggerPrimitiveTypeAdapter.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="583,5,784,76"/>
+<area shape="rect" id="Node000002" href="$TDEEthFrameProcessor_8hpp.html" title=" " alt="" coords="121,124,323,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="568,74,324,135,323,130,567,69"/>
+<area shape="rect" id="Node000003" href="$TDEEthFrameProcessor_8cpp.html" title=" " alt="" coords="5,243,239,298"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="569,83,462,126,399,162,373,179,336,197,273,223,211,245,210,240,272,218,334,192,370,174,397,157,460,122,567,78"/>
+<area shape="rect" id="Node000004" href="$WIBEthFrameProcessor_8hpp.html" title=" " alt="" coords="473,124,675,195"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="643,89,608,125,604,122,639,85"/>
+<area shape="rect" id="Node000007" href="$TPProcessor_8hpp.html" title=" " alt="" coords="699,132,886,187"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="728,85,769,129,765,133,724,89"/>
+<area shape="rect" id="Node000009" href="$TPRequestHandler_8hpp.html" title=" " alt="" coords="910,132,1131,187"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="799,79,943,128,941,133,798,84"/>
+<area shape="rect" id="Node000011" href="$TPSetSourceModel_8hpp.html" title=" " alt="" coords="1155,132,1380,187"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="799,57,963,85,1144,121,1172,128,1171,133,1143,127,962,90,799,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="182,208,149,244,145,240,178,204"/>
+<area shape="rect" id="Node000005" href="$FDReadoutlibs_8cpp.html" title=" " alt="" coords="262,243,465,298"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="495,205,417,244,415,240,492,200"/>
+<area shape="rect" id="Node000006" href="$WIBEthFrameProcessor_8cpp.html" title=" " alt="" coords="489,243,742,298"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="595,208,608,241,603,243,590,210"/>
+<area shape="rect" id="Node000008" href="$TPProcessor_8cpp.html" title=" " alt="" coords="767,243,931,298"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="816,200,837,241,832,244,811,202"/>
+<area shape="rect" id="Node000010" href="$TPRequestHandler_8cpp.html" title=" " alt="" coords="955,243,1137,298"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="1033,201,1042,242,1037,243,1028,203"/>
+</map>

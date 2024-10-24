@@ -1,0 +1,16 @@
+<map id="/github/workspace/dev_area/build/appmodel/codegen/include/appmodel/HSIEventSender.hpp" name="/github/workspace/dev_area/build/appmodel/codegen/include/appmodel/HSIEventSender.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="489,5,669,76"/>
+<area shape="rect" id="Node000002" href="$include_2appmodel_2HSIReadout_8hpp.html" title=" " alt="" coords="268,124,447,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="501,86,425,126,422,121,498,81"/>
+<area shape="rect" id="Node000004" href="$dump__dunedaq____appmodel_8cpp.html" title=" " alt="" coords="433,243,621,313"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="548,91,534,125,527,155,525,186,526,243,520,243,519,186,522,154,528,123,543,89"/>
+<area shape="rect" id="Node000006" href="$build_2appmodel_2codegen_2src_2HSIEventSender_8cpp.html" title=" " alt="" coords="543,132,764,187"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="611,88,639,130,634,132,607,90"/>
+<area shape="rect" id="Node000007" href="$src_2HSIReadout_8hpp.html" title=" " alt="" coords="788,132,983,187"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="684,79,815,128,813,133,682,84"/>
+<area shape="rect" id="Node000003" href="$HSIReadout_8cpp.html" title=" " alt="" coords="5,250,201,306"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="269,204,164,252,161,247,267,199"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="422,202,478,240,475,244,419,206"/>
+<area shape="rect" id="Node000005" href="$sourcecode_2appmodel_2src_2DTSHSIApplication_8cpp.html" title=" " alt="" coords="224,250,409,306"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="343,210,328,251,323,249,338,208"/>
+</map>

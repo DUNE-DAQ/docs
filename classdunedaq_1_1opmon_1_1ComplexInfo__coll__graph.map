@@ -1,0 +1,12 @@
+<map id="dunedaq::opmon::ComplexInfo" name="dunedaq::opmon::ComplexInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="16,301,209,327"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,54,114,301,109,301,90,54"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1opmon_1_1TestInfo.html" title=" " alt="" coords="141,109,310,135"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="122,45,210,106,207,111,119,50"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1opmon_1_1ComplexInfo_1_1Impl__.html" title=" " alt="" coords="129,198,322,238"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,250,128,303,125,299,189,246"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="228,150,228,197,223,197,223,150"/>
+<area shape="rect" id="Node000005" href="$structdunedaq_1_1opmon_1_1TestInfo_1_1Impl__.html" title=" " alt="" coords="201,5,370,46"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="268,60,235,110,231,107,263,57"/>
+</map>

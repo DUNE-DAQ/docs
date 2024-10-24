@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,100,83,125"/>
+<area shape="rect" id="Node000001" href="$classERSKafkaLogHandler_1_1ERSKafkaLogHandlerOnRootLogger.html" title=" " alt="" coords="131,5,342,46"/>
+<area shape="poly" id="edge456_Node000000_Node000001" title=" " alt="" coords="74,88,129,55,157,44,159,49,132,60,76,93"/>
+<area shape="rect" id="Node000002" href="$classERSPublisher_1_1ERSException.html" title=" " alt="" coords="143,70,330,96"/>
+<area shape="poly" id="edge457_Node000000_Node000002" title=" " alt="" coords="98,102,147,94,148,99,98,107"/>
+<area shape="rect" id="Node000003" href="$classafc_1_1click__texttable_1_1ArraySizeError.html" title=" " alt="" coords="157,120,316,161"/>
+<area shape="poly" id="edge458_Node000000_Node000003" title=" " alt="" coords="99,118,157,126,156,131,98,123"/>
+<area shape="rect" id="Node000004" href="$classappmodel_1_1UnknownGeneratorException.html" title=" " alt="" coords="140,185,333,226"/>
+<area shape="poly" id="edge459_Node000000_Node000004" title=" " alt="" coords="74,132,132,170,161,182,159,187,129,175,71,137"/>
+</map>
