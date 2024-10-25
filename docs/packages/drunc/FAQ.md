@@ -1,6 +1,7 @@
 # drunc FAQ
 
-## ServerUnreachable / failed to connect to all address
+## `ServerUnreachable` / `failed to connect to all address`
+Note: This has been patched since `v0.11.0`, it is hence recommended that you update the version that you are using if possible.
 
 The connectivity service has statically defined ports, hence you need to check if there are any other `drunc` users on the physical host you are running on. If there are, when you `boot` you will likely get an error of
 ```
@@ -8,11 +9,19 @@ drunc.utils.grpc_utils.ServerUnreachable: ('failed to connect to all addresses; 
 ```
 To resolve this issue, the current recommendation is to use a different physical host on which there are no other `drunc` users.
 
+## I am receiving some strange `ssh` errors...
+Chances are that you cannot actually ssh onto the named servers. It is recommended that you check whether you can `ssh` onto the servers required by your configuration using `drunc-ssh-validator` as
+```
+drunc-ssh-validator <configuration_file_with_directory> <session_name>
+```
+This will tell you which server you cannot `ssh` to.
+
 ## What SSH commands are actually run?
 The simplest to know how the processes are started is to add the option `--log-level debug` for the process manager shell or the unified shell.
 
 ## So empty...
 If you have a question, please reach out to developers or fill an issue [here](https://github.com/DUNE-DAQ/drunc/issues).
+
 
 -----
 
@@ -20,9 +29,9 @@ If you have a question, please reach out to developers or fill an issue [here](h
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: Pawel Plesniak_
 
-_Date: Wed Oct 2 17:18:10 2024 +0200_
+_Date: Fri Oct 25 12:57:15 2024 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
