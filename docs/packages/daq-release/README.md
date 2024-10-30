@@ -4,6 +4,8 @@
 
 [![Nightly v5 Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-v5-integtest.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-v5-integtest.yml)
 
+[![Nightly daq-buildtools Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-dbt-tests.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-dbt-tests.yml)
+
 This is a repo containing DUNE DAQ release making tools, configuration files, and build scripts for both DUNE-DAQ and external packages. 
 
 ## Table of contents
@@ -133,9 +135,9 @@ wibmod: [![wibmod](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Dune_
+_Author: Andrew Mogan_
 
-_Date: Wed Oct 16 14:03:52 2024 -0500_
+_Date: Wed Oct 30 09:13:57 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
