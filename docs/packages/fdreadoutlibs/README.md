@@ -12,10 +12,6 @@ The following frontends and features are provided by this package:
 
 * *SSP*: Only frame processor
 
-* *WIB*: Frame processor for `WIB`, software and hardware `WIB` TPs. Implementation of avx based software hit finding (software tpg) for `WIB`
-
-* *WIB2*: Frame processor for `WIB2`, implementation of avx based software hit finding (software tpg) for `WIB2`
-
 * *WIBETH*: Frame processor for `WIBETH`, implementation of avx based software hit finding (software tpg) for `WIBETH`
 
 
@@ -25,9 +21,9 @@ The following frontends and features are provided by this package:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Alejandro Oranday_
 
-_Date: Tue Jul 16 09:10:50 2024 -0500_
+_Date: Mon Oct 28 14:37:44 2024 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/fdreadoutlibs/issues](https://github.com/DUNE-DAQ/fdreadoutlibs/issues)_
 </font>
