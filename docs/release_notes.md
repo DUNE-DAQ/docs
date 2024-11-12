@@ -2,7 +2,7 @@
 
 ## fddaq-v5.2.0
 
-Release on: November 12, 2024
+Released on: November 12, 2024
 
 Includes core release: coredaq-v5.2.0
 
