@@ -6,11 +6,13 @@ This repository contains the implementations of hardware-offline channel mapping
 
 * `get_plane_from_offline_channel`: this translates from offline channel number into plane number
 
-There are two plugin implementations of `TPCChannelMap`:
+A table of available channel map plugins is listed [here](channel-maps-table.md). One can use
+```bash
+cat CMakeLists.txt | sed -n "s/.*( \([^ ]*ChannelMap\).*/\1/p"
+```
+to see the channel maps that are being built (this may be a useful cross-check).
 
-* `VDColdboxChannelMap`, for the Vertical Drift Coldbox setup. As of Nov-24-2021 its mapping is initialized via a file called `$DETCHANNELMAPS_SHARE/config/vdcoldbox/vdcbce_chanmap_v2_dcchan3200.txt` (`DETCHANNELMAPS_SHARE` an environment variable)
-
-* `PdspChannelMap`, for ProtoDUNE Single Phase. As of Nov-24-2021 its mapping is initialized by `$DETCHANNELMAPS_SHARE/config/protodunesp1/protoDUNETPCChannelMap_RCE_v4.txt`
+An example of using the channel maps plugin can be seen in [dummy_map_test.cxx](/test/apps/dummy_map_test.cxx).
 
 
 -----
@@ -19,9 +21,9 @@ There are two plugin implementations of `TPCChannelMap`:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jcfreeman2_
+_Author: Alejandro Oranday_
 
-_Date: Wed Nov 24 17:38:53 2021 -0600_
+_Date: Tue Oct 1 10:42:25 2024 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/detchannelmaps/issues](https://github.com/DUNE-DAQ/detchannelmaps/issues)_
 </font>

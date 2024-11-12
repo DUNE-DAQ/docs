@@ -27,13 +27,13 @@ virtual void flush(timestamp_t until, std::vector<TriggerActivity>& output_ta)
 
 The reason this function exists is to handle the case where there is a large gap between trigger primitives (or, more likely, between trigger activities). During this gap, `operator()` is not called, and so your algorithm cannot send its output, even if such a long time has passed that you know that any trigger activities currently in progress can be completed and sent out. In this case, the data selection framework calls your implementation of `flush(until, output_ta)` to inform you that no more trigger primitives have occurred between the last one for which `operator()` was called and timestamp `until`. If this causes your algorithm to complete any trigger activities, you can add them to the `output_ta` vector.
 
-Finally, you must register the `TriggerActivityMaker` in the Trigger Activity Factory. This allows it to be accessed in this repository and used when running on `nanorc`. In the case of `TriggerActivityMakerPrescale`, the macro call is:
+Finally, you must register the `TriggerActivityMaker` in the Trigger Activity Factory. This allows it to be accessed in this repository and used when running on `nanorc`. In the case of `TAMakerPrescaleAlgorithm`, the macro call is:
 
 ```cpp
-REGISTER_TRIGGER_ACTIVITY_MAKER(TRACE_NAME, TriggerActivityMakerPrescale)
+REGISTER_TRIGGER_ACTIVITY_MAKER(TRACE_NAME, TAMakerPrescaleAlgorithm)
 ```
 
-where `TRACE_NAME` is the string `"TriggerActivityMakerPrescalePlugin"`.
+where `TRACE_NAME` is the string `"TAMakerPrescaleAlgorithm"`.
 
 ## Configuration
 
@@ -43,11 +43,11 @@ Your algorithm may take configuration parameters at run time (eg, a minimum numb
 void configure(const nlohmann::json &config);
 ```
 
-The `config` argument is in `nlohmann::json` format, documentation for which can be found at https://json.nlohmann.me/ . Here is a simple example implementation, from the `TriggerActivityMakerPrescale` algorithm:
+The `config` argument is in `nlohmann::json` format, documentation for which can be found at https://json.nlohmann.me/ . Here is a simple example implementation, from the `TAMakerPrescaleAlgorithm` algorithm:
 
 ```cpp
 void
-TriggerActivityMakerPrescale::configure(const nlohmann::json &config)
+TAMakerPrescaleAlgorithm::configure(const nlohmann::json &config)
 {
   if (config.is_object() && config.contains("prescale"))
   {
@@ -76,9 +76,9 @@ https://github.com/DUNE-DAQ/trigger/blob/develop/python/trigger/faketp_chain/REA
 _Last git commit to the markdown source of this page:_
 
 
-_Author: aeoranday_
+_Author: John Freeman_
 
-_Date: Tue Jan 9 13:37:58 2024 +0100_
+_Date: Fri Jun 14 15:08:21 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/trigger/issues](https://github.com/DUNE-DAQ/trigger/issues)_
 </font>

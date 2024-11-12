@@ -8,7 +8,7 @@
 Here is a sample command for invoking a test (feel free to keep or drop the options in brackets, as you prefer):
 
 ```
-pytest -s minimal_system_quick_test.py [--nanorc-option partition-number 2] [--nanorc-option timeout 300]
+pytest -s minimal_system_quick_test.py [--nanorc-option log-level debug]  # still useful even with drunc
 ```
 
 For reference, here are the ideas behind the tests that currently exist in this repository:
@@ -19,7 +19,7 @@ For reference, here are the ideas behind the tests that currently exist in this 
 
 * `3ru_3df_multirun_test.py` - verify that a system with multiple RUs and multiple DF Apps works as expected, including TPG
 
-* `fake_data_producer_test.py` - verify that the FakeDataProd DAQModule works as expected
+* `fake_data_producer_test.py` - verify that the FakeDataProdModule DAQModule works as expected
 
 * `long_window_readout_test.py` - verify that readout windows that require TriggerRecords to be split into multiple sequences works as expected
 
@@ -38,7 +38,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Kurt Biery_
 
-_Date: Wed Jul 19 15:16:12 2023 -0500_
+_Date: Tue Sep 24 07:13:21 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqsystemtest/issues](https://github.com/DUNE-DAQ/daqsystemtest/issues)_
 </font>

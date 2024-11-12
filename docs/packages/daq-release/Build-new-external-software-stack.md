@@ -18,7 +18,7 @@ once you're logged into `daq.fnal.gov` as `dunedaq`:
 
 
 
-1. Check whether there are already externals installed in `/home/nfs/dunedaq/docker-scratch/spack/externals/ext-v${EXT_VERSION}/spack-${SPACK_VERSION}` (*), and if so, that you know why they're already there.
+1. Check whether there are already externals installed in `/home/nfs/dunedaq/docker-scratch/cvmfs_dunedaq/spack/externals/ext-v${EXT_VERSION}/spack-${SPACK_VERSION}` (*), and if so, that you know why they're already there.
 
 
 1. Create a directory which will be the base of operations for your work, if you don't already have one
@@ -65,9 +65,9 @@ Once complete, the externals you've built will be located in `/home/nfs/dunedaq/
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Dune_
 
-_Date: Fri Jul 26 09:28:21 2024 -0500_
+_Date: Wed Oct 16 14:03:52 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

@@ -33,13 +33,13 @@
 
         * [3.2  The #define Guard](#32-the-define-guard)
 
-        * [3.3  Forward Declarations [DUNE VERSION]](#33-forward-declarations-dune-version)
+        * [3.3  Inline Functions](#33-inline-functions)
 
-        * [3.4  Inline Functions](#34-inline-functions)
+        * [3.4  Names and Order of Includes](#34-names-and-order-of-includes)
 
-        * [3.5  Names and Order of Includes](#35-names-and-order-of-includes)
+        * [3.5  Quotes vs. Angle Brackets for includes](#35-quotes-vs-angle-brackets-for-includes)
 
-        * [3.6 Quotes vs. Angle Brackets for includes](#36-quotes-vs-angle-brackets-for-includes)
+        * [3.6  Modules](#36-modules)
 
     * [4.  Scoping](#4-scoping)
 
@@ -91,6 +91,8 @@
 
         * [6.8  Ownership and Smart Pointers](#68-ownership-and-smart-pointers)
 
+        * [6.9  Coroutines](#69-coroutines)
+
     * [7.  Other C++ Features](#7-other-c-features)
 
         * [7.1  Rvalue References](#71-rvalue-references)
@@ -126,6 +128,10 @@
         * [7.16  sizeof](#716-sizeof)
 
         * [7.17  Type deduction](#717-type-deduction)
+
+        * [7.18  Concepts](#718-concepts)
+
+        * [7.19  Ranges](#719-ranges)
 
     * [8.  Comments](#8-comments)
 
@@ -191,8 +197,7 @@ familiar with the language.
 
 ## 1.  C++ Version 
 
-Currently, code should target C++17, i.e., should not use C++2x
-features.
+Currently, code should target C++20, i.e., should take advantage of C++20 features (unless otherwise indicated as described in this document) and not use C++23 features.
 
 ## 2. Naming Conventions
 
@@ -434,14 +439,9 @@ inclusion. The format of the symbol name should be
 #endif // FOOPACKAGE_INCLUDE_FOOPACKAGE_DAQ_PROCESS_HPP_
 ```
 
-<a name="Forward_Declarations"></a>
-
-### 3.3  Forward Declarations [DUNE VERSION]
-[We're not going to forbid forward declarations, since while there are costs as described in the google style manual, the benefits of faster compilation outweigh these costs]
-
 <a name="Inline_Functions"></a>
 
-### 3.4  Inline Functions 
+### 3.3  Inline Functions 
 
 Define functions inline only when they are small, say, 10 lines or
 fewer. Feel free to inline getters and setters, and other short,
@@ -451,7 +451,7 @@ statement is never executed).
 
 <a name="Names_and_Order_of_Includes"></a>
 
-### 3.5  Names and Order of Includes 
+### 3.4  Names and Order of Includes 
 
 In *any* file which performs an include, if the included header is the
 "related header" - meaning, you're editing foo.cpp and the header is
@@ -487,9 +487,13 @@ symbols from `Bar.hpp`, don't count on the fact that you included
 unless `Foo.hpp` explicitly demonstrates its intent to provide you the
 symbols of `Bar.hpp`.
 
-### 3.6 Quotes vs. Angle Brackets for includes
+### 3.5 Quotes vs. Angle Brackets for includes
 
 If a header comes from the C++ Standard Library (e.g., `<vector>`, `<cstdlib>`) it should be enclosed in angle brackets. All other headers should be enclosed in quotes. 
+
+### 3.6 Modules
+
+Currently, use of C++20 modules is disallowed. 
 
 ## 4.  Scoping
 
@@ -832,7 +836,7 @@ interface.
 
 ### 6.7  Trailing Return Type Syntax
 
-The only time it's OK to use a trailing return type (when the return type is listed after the function name and the argument list in the declaration; C++11) is when specifying
+The only time it's OK to use a trailing return type is when specifying
 the return type of a lambda expression. In some
 cases the compiler is able to deduce a lambda's return type, but not
 in all cases.
@@ -852,6 +856,9 @@ that is pointed to.
 
  - When using raw pointers, prefer `void*` to point to generic memory over a pointer to a specific type (such as char); this is because you can use a `static_cast` instead of a `reinterpret_cast` on `void*` to cast it to a pointer to the desired type. Of course, use of generic memory should be rare and only in low-level code where knowledge of the type really is absent. 
 
+### 6.9 Coroutines
+
+Writing coroutines is not _formally_ disallowed. However, be aware that unlike in C++23, in C++20 coroutines require either the writing of a generator (which will require a good deal of expertise and effort) or the use of a generator from a third-party library (which will require consultation with Software Coordination). Ask yourself whether using a coroutine to solve the problem at hand is worth the difficulty. 
 
 ## 7.  Other C++ Features
 
@@ -905,8 +912,7 @@ release resources correctly?
 
 Never throw exceptions out of a destructor
 
-Only use `catch(...)` directly inside of `main()`, and then only to clean up
-resources before terminating the program
+The swallow-all-exceptions construct `catch(...)` should only rarely be used since in general it's better to have the failure behind an unexpected exception become blatantly obvious than hidden due to the exception being swallowed. However, there _are_ scenarios where `catch(...)` is appropriate. One example of this would be to use it directly inside of `main()`, to clean up resources before terminating the program. Another would be in a thread. An uncaught exception escaping an `std::thread` or an `std::jthread` would cause a crash, and if the crash would have such negative consequences that it outweighs the argument against the prohibition, then it's OK to swallow all exceptions. 
 
 Catch by const reference, unless you plan to add info to the exception
 before rethrowing it, in which case you should a non-const reference.
@@ -978,6 +984,9 @@ the user-visible value, not any implementation details.
 Take care that a given print statement not print so often that it
 obscures the output of other equally (or even more) important messages
 
+<!--- When constructing a string that contains variables, rather than
+streaming them into a `std::stringstream` object, prefer to use
+C++20's `std::format` function. --->
 
 ### 7.10  Increment and Decrement 
 
@@ -997,16 +1006,19 @@ in its function signatures. While it's more common for developers to underuse ra
 If a class method alters the class instance's physical state but not its logical
 state, declare it const and use "mutable" so the compiler allows the physical changes.
 
-`constexpr` is even better than `const`; use it when you can. constexpr is described [below](#Constexpr) .
+Compile-time constant initialization tools are even better than `const`; use them when you can as described in the next section.
 
 
 <a name="Constexpr"></a>
 
-### 7.12  Use of constexpr 
+### 7.12  Compile-time initialization: constexpr, constinit, and consteval
 
 If a variable or function's return value is fixed at compile time and
-you don't see this ever changing, declare it constexpr.  I say "don't
-see this ever changing" since similar to "const" or "noexcept", changing this later will likely break other people's code.
+you don't see this ever changing, use
+`constexpr`/`consteval`/`constinit` when possible. The phrase "don't see
+this ever changing" is used since similar to "const" or "noexcept",
+downgrading (e.g., changing a function from `consteval` to
+`constexpr`, or dropping one of these qualifiers entirely) can break other people's code.
 
 
 ### 7.13  Integer Types 
@@ -1073,6 +1085,20 @@ While a function template can deduce the type of the argument, making
 this explicit will typically make it clearer to both the code's reader
 and to the compiler what it is you're trying to do.
 
+### 7.18 Concepts
+
+Use a concept if you believe a set of conditions on a type will be applicable in multiple circumstances. This would be as opposed to if a set of conditions on a type will only apply for a single function or class, in which case a concept will only add additional boilerplate by restating the implicit conditions in the function or class. Prefer the `requires(Concept<T>)` syntax over the `template<Concept T>` syntax. Use pre-existing concepts from the STL when available rather than reinventing the wheel. E.g., rather than writing
+```
+template<typename T>
+concept MyEqualityComparable = requires(T a, T b) {
+    { a == b }
+};
+```
+just use the existing `std::equality_comparable` concept from the STL. 
+
+### 7.19 Ranges
+
+The use of ranges is encouraged where it will make code safer and more legible. For example, rather than using the traditional [erase-remove idiom](https://en.wikipedia.org/wiki/Erase%E2%80%93remove_idiom) to filter elements out of a container, just pipe the elements through `std::views::filter`. Or rather than passing the first and last iterators of a container to `std::sort`, just pass the container itself to `std::ranges::sort`.
 
 ## 8.  Comments
 
@@ -1321,7 +1347,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Aug 31 11:09:45 2023 -0500_
+_Date: Fri Sep 13 09:48:15 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>

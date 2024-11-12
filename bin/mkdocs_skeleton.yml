@@ -140,6 +140,7 @@ nav:
         - utilities:
      - Readout:
         - daqdataformats:
+        - datahandlinglibs:
         - detchannelmaps:
         - detdataformats:
         - dpdklibs:
@@ -147,10 +148,11 @@ nav:
         - fdreadoutlibs:
         - flxlibs:
         - hermesmodules:
-        - readoutlibs:
-        - readoutmodules:
         - wibmod:
      - Control:
+        - appmodel:
+        - confmodel:
+        - dbe:
         - daqconf:
         - nanorc:
         - restcmd:
@@ -160,6 +162,7 @@ nav:
         - hdf5libs:
         - timing:
         - timinglibs:
+        - tpglibs:
         - trgtools:
         - trigger:
      - Dataflow (physical):
@@ -173,4 +176,3 @@ nav:
         - rawdatautils:
      - Educational:
         - listrev:
-

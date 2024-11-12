@@ -8,22 +8,22 @@ There are two plotting options `--linear` and `--log` that set the y-scale for t
 
 While running, this can print information about the file reading using `-v` (warnings) and `-vv` (all). Errors and useful output information (save names and location) are always outputted.
 
-One can specify which fragments to load from with the `--start-frag` option. This is -10 by default in order to get the last 10 fragments for the given file. One can also specify which fragment to end on (not inclusive) with `--end-frag` option. This is N by default (for the previously mentioned reason).
+One can specify which fragments to load from with the `--start-frag` option. This is -10 by default in order to get the last 10 fragments for the given file. One can also specify which fragment to end on (not inclusive) with `--end-frag` option. Otherwise, this will load from the specified start fragment until the end of the file.
 
 A text file is generated that gives reference statistics for each TP data member and gives a count of data members that are at least 2 sigma and 3 sigma from the mean. One can use `--no-anomaly` to stop this file generation.
 
 ## Example
 ```bash
 python tp_dump.py file.hdf5 # Loads last 10 fragments by default.
-python tp_dump.py file.hdf5 --help
+python tp_dump.py file.hdf5 --overwrite
+python tp_dump.py file.hdf5 --linear
+python tp_dump.py file.hdf5 --log
+python tp_dump.py file.hdf5 --seconds
 python tp_dump.py file.hdf5 -v
 python tp_dump.py file.hdf5 -vv
 python tp_dump.py file.hdf5 --start-frag 50 --end-frag 100 # Loads 50 fragments.
 python tp_dump.py file.hdf5 --no-anomaly
-python ta_dump.py file.hdf5 --log
-python ta_dump.py file.hdf5 --linear
-python ta_dump.py file.hdf5 --seconds
-python ta_dump.py file.hdf5 --overwrite
+python tp_dump.py file.hdf5 --help
 ```
 
 
@@ -33,9 +33,9 @@ python ta_dump.py file.hdf5 --overwrite
 _Last git commit to the markdown source of this page:_
 
 
-_Author: aeoranday_
+_Author: Alejandro Oranday_
 
-_Date: Tue Feb 27 18:18:18 2024 +0100_
+_Date: Wed Oct 2 15:12:36 2024 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/trgtools/issues](https://github.com/DUNE-DAQ/trgtools/issues)_
 </font>
