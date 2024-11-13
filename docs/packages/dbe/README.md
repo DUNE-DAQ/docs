@@ -77,16 +77,7 @@ You can now see the changes you've made, whether by opening up `tutorial.schema.
 
 ## Creating A Diagram of Your Configuration
 
-A discussion of DBE wouldn't be complete without mention of its diagram-creation tool, `dbe_gtool`. E.g., to create a diagram of the configuration we've edited in this tutorial, you can do the following:
-```
-tmpfile=$( mktemp )
-dbe_gtool --file ./tutorial.data.xml --result $tmpfile
-dot -Tsvg $tmpfile > tutorial_diagram.svg
-```
-...where you can then display `tutorial_diagram.svg` using, e.g., `gimp` or your web browser. Please note that depending on the display tool you choose you may need to display the diagram from a different terminal than the one in which you have your work area set up due to compatibility issues with the `cairo` package which Qt depends on. The diagram will look something like the following:
-
-![Configuration Diagram](configuration_diagram.png)
-
+While this package comes with a diagram-creation tool originally created by ATLAS, `dbe_gtool`, a much better choice if you wish to plot your configuration is described [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/daqconf/ConfigPlotting/).
 
 
 -----
@@ -97,7 +88,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Apr 18 16:04:24 2024 -0500_
+_Date: Wed Nov 13 14:06:49 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dbe/issues](https://github.com/DUNE-DAQ/dbe/issues)_
 </font>
