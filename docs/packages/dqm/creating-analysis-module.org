@@ -1,0 +1,12 @@
+The code for analysis modules goes in the $src$ folder. Analysis modules will
+  be a subclass of the class AnalysisModule found in [[../src/AnalysisModule.hpp]]
+  
+They implement two methods:
+- $bool is_running()$. This method will tell if the instance of the analysis
+  module is running or not, so that requests for data can be delayed until it
+  stops running and avoid filling a queue and not being able to pop from that
+  queue.
+- $void run()$. This method will be the one that is being called when we want
+  the instance to do decoding, processing and exporting of the data. Takes as
+  input the data that it will receive, so it can be overloaded to do different
+  things depending on what data it is receiving
