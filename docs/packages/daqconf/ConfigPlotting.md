@@ -25,7 +25,18 @@ Note that while `dot` is available on the np04 cluster's system, it's not necess
 
 ## Examples
 
+### A Module Level Trigger application
+
+This MLT application plot is taken from the `local-1x1-config` in the daqsystemtest repo (as of Nov-6-2024). Notice that the `DataSubscriberModule` instance would receive, among other `tcs_.*` messages received over the network, `tcs_random-tc-generator` messages sent by the `RandomTCMakerModule` instance in the same application:
+
 ![image](create_config_plot/mlt_plot.png)
+
+### A full Session
+
+This is the full session associated with the `local-1x1-config` in the daqsystemtest repo. Notice here you can see the loopback effect for the MLT application described above:
+
+![image](create_config_plot/session_plot.png)
+
 
 
 -----
@@ -36,7 +47,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Oct 24 09:20:54 2024 -0500_
+_Date: Wed Nov 6 13:20:01 2024 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
