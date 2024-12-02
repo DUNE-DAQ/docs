@@ -176,7 +176,6 @@ nav:
           - ipm:
           - serialization:
        - Monitoring:
-          - dqm:
           - erskafka:
           - kafkaopmon:
           - opmonlib:

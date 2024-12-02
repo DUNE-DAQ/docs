@@ -307,7 +307,6 @@ nav:
           - serialization:
              - About serialization: packages/serialization/README.md
        - Monitoring:
-          - dqm:
           - erskafka:
              - About erskafka: packages/erskafka/README.md
           - kafkaopmon:
