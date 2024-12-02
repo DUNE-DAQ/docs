@@ -182,6 +182,10 @@ nav:
              - packages/daqdataformats/TriggerRecordHeaderDataV1.md
              - packages/daqdataformats/TriggerRecordHeaderDataV2.md
              - packages/daqdataformats/TriggerRecordHeaderDataV3.md
+          - datahandlinglibs:
+             - About datahandlinglibs: packages/datahandlinglibs/README.md
+             - packages/datahandlinglibs/Directory-structure.md
+             - packages/datahandlinglibs/scripts/README.md
           - detchannelmaps:
              - About detchannelmaps: packages/detchannelmaps/README.md
              - packages/detchannelmaps/channel-maps-table.md
@@ -200,6 +204,8 @@ nav:
           - fdreadoutlibs:
              - About fdreadoutlibs: packages/fdreadoutlibs/README.md
              - packages/fdreadoutlibs/test/apps/README.md
+          - fdreadoutmodules:
+             - About fdreadoutmodules: packages/fdreadoutmodules/README.md
           - flxlibs:
              - About flxlibs: packages/flxlibs/README.md
              - packages/flxlibs/Basic-tests.md
@@ -209,18 +215,14 @@ nav:
              - packages/flxlibs/Initial-setup-of-FELIX.md
              - packages/flxlibs/Integration-tests.md
              - packages/flxlibs/Local-driver.md
+          - hermesmodules:
+             - About hermesmodules: packages/hermesmodules/README.md
           - lbrulibs:
              - About lbrulibs: packages/lbrulibs/README.md
              - packages/lbrulibs/integtest/README.md
              - packages/lbrulibs/socket-implementation.md
           - nddetdataformats:
              - About nddetdataformats: packages/nddetdataformats/README.md
-          - readoutlibs:
-             - About readoutlibs: packages/readoutlibs/README.md
-             - packages/readoutlibs/Directory-structure.md
-             - packages/readoutlibs/scripts/README.md
-          - readoutmodules:
-             - About readoutmodules: packages/readoutmodules/README.md
           - wibmod:
              - About wibmod: packages/wibmod/README.md
              - packages/wibmod/src/WIB1/README.md
@@ -306,7 +308,6 @@ nav:
              - About serialization: packages/serialization/README.md
        - Monitoring:
           - dqm:
-             - About dqm: packages/dqm/README.md
           - erskafka:
              - About erskafka: packages/erskafka/README.md
           - kafkaopmon:

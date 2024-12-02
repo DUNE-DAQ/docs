@@ -140,6 +140,7 @@ nav:
           - utilities:
        - Readout:
           - daqdataformats:
+          - datahandlinglibs:
           - detchannelmaps:
           - detdataformats:
           - dpdklibs:
@@ -147,11 +148,11 @@ nav:
           - dtpctrllibs:
           - fddetdataformats:
           - fdreadoutlibs:
+          - fdreadoutmodules:
           - flxlibs:
+          - hermesmodules:
           - lbrulibs:
           - nddetdataformats:
-          - readoutlibs:
-          - readoutmodules:
           - wibmod:
        - Control:
           - appmodel:

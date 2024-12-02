@@ -1,5 +1,13 @@
 # Release Notes
 
+## fddaq-v5.2.0
+
+Released on: November 12, 2024
+
+Includes core release: coredaq-v5.2.0
+
+[Release Notes](https://github.com/DUNE-DAQ/daq-deliverables/blob/develop/docs/fddaq-v5.2.0.ReleaseNotes.md)
+
 ## fddaq-v4.4.8
 
 Released on: September 12, 2024

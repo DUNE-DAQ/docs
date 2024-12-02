@@ -46,31 +46,29 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [daqdataformats](packages/daqdataformats/README.md) _DAQ data formats_
 
+[datahandlinglibs](packages/datahandlinglibs/README.md) _Tools for constructing readout-focused processes_
+
 [detchannelmaps](packages/detchannelmaps/README.md) _Channel maps for the detectors_
 
 [detdataformats](packages/detdataformats/README.md) _General-purpose data formats and related tools_
 
 [dpdklibs](packages/dpdklibs/README.md) _Data Plane Development Kit software and utilities_
 
-[dtpctrllibs](packages/dtpctrllibs/README.md) _DAQ modules for controlling Trigger Primitive generation firmware_
-
-[dtpcontrols](packages/dtpcontrols/README.md) _Python tools for control of the Trigger Primitive firmware_
-
 [fddetdataformats](packages/fddetdataformats/README.md) _Bitfields of far detector raw data and related tools_
 
 [fdreadoutlibs](packages/fdreadoutlibs/README.md) _Classes for working with far detector data (WIB, SSP, etc.)_
 
+[fdreadoutmodules](packages/fdreadoutmodules/README.md) _Readout plugin collection for the far detector_
+
 [flxlibs](packages/flxlibs/README.md) _DAQModules, utilities, and scripts for Upstream FELIX Readout Software_
+
+[hermesmodules](packages/hermesmodules/README.md) _Modules for the Hermes core_
 
 [lbrulibs](packages/lbrulibs/README.md) _DAQModules, utilities, and scripts for DUNE-ND Upstream DAQ Low Bandwidth Readout Unit_
 
 [nddetdataformats](packages/nddetdataformats/README.md) _Bitfields of near detector raw data and related tools_
 
 [ndreadoutlibs](packages/ndreadoutlibs/README.md) _Classes for working with near detector data (e.g. PACMAN)_
-
-[readoutlibs](packages/readoutlibs/README.md) _Base classes for construction of readout-related DAQModules_
-
-[readoutmodules](packages/readoutmodules/README.md) _DAQModules for constructing readout-focused processes_
 
 [wibmod](packages/wibmod/README.md) _WIB configuration and monitoring interface_
 
@@ -119,8 +117,6 @@ For the other packages, please click on one of the links below. To learn how to 
 [serialization](packages/serialization/README.md) _utilities for C++ object serialization/deserialization_
 
 ### Monitoring
-
-[dqm](packages/dqm/README.md) _Data Quality Monitor_
 
 [erskafka](packages/erskafka/README.md) _the erskafka plugin_
 
