@@ -144,8 +144,6 @@ nav:
           - detchannelmaps:
           - detdataformats:
           - dpdklibs:
-          - dtpcontrols:
-          - dtpctrllibs:
           - fddetdataformats:
           - fdreadoutlibs:
           - fdreadoutmodules:
