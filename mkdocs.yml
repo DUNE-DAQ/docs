@@ -145,6 +145,7 @@ nav:
              - packages/daqsystemtest/integtest/README.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
+             - packages/integrationtest/DataFileCheckParameters.md
           - styleguide:
              - About styleguide: packages/styleguide/README.md
        - Core:   
