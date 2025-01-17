@@ -76,7 +76,7 @@ will checkout all the DAQ packages used in the release into a randomly-named dir
 
     * Set up a work area based on the candidate release
 
-    * If it's a far detector release, clone and build `daqsystemtest` used in this release and run `minimal_system_quick_test.py` in its `integtest` sub-directory
+    * If it's a far detector release, take the "Nightly v5 integration tests" Workflow and run it with the optional candidate release tag field filled in with the name of the candidate release
 
     * The above tests should be run on at least one NP04 DAQ server, and one Fermilab server
 
@@ -89,7 +89,7 @@ will checkout all the DAQ packages used in the release into a randomly-named dir
 
 * Deploying the frozen release to cvmfs is the same as for a candidate release  _except_ you want to log in to `oasiscfs05.fnal.gov` as `cvmfsdunedaq` instead of `cvmfsdunedaqdev` and of course you'll want to pass `frozen` rather than `candidate` to the publishing script
 
-* Do similar tests as shown in the section above for candidate releases
+* Do similar tests as shown in the section above for candidate releases, though fill in the "frozen release tag" field of the integration test workflow rather than the "candidate release tag" field
 
 * If there is a new version of `daq-buildtools` for the release, it will need to be deployed to cvmfs too. Otherwise, creating a symbolic link in cvmfs to the latest tagged version will be sufficient, e.g. that `setup_dbt fddaq-vX.Y.Z` would give you the daq-buildtools used during the release period of `fddaq-vX.Y.Z`. How to do this is described in the [documentation on cvmfs](publish_to_cvmfs.md).
 
@@ -116,9 +116,9 @@ will checkout all the DAQ packages used in the release into a randomly-named dir
 _Last git commit to the markdown source of this page:_
 
 
-_Author: CVMFS DUNE DAQ Account_
+_Author: John Freeman_
 
-_Date: Wed Jul 10 08:08:57 2024 -0500_
+_Date: Fri Jan 17 10:25:38 2025 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
