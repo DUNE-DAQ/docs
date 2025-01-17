@@ -76,7 +76,7 @@ will checkout all the DAQ packages used in the release into a randomly-named dir
 
     * Set up a work area based on the candidate release
 
-    * If it's a far detector release, take the "Nightly v5 integration tests" Workflow and run it with the optional candidate release tag field filled in with the name of the candidate release
+    * If it's a far detector release, take the "Nightly v5 integration tests" Workflow and run it with the optional candidate release tag field filled in with the name of the candidate release. Performance should be what's expected and at the very least the `minimal_system_quick_test` should pass. 
 
     * The above tests should be run on at least one NP04 DAQ server, and one Fermilab server
 
@@ -118,7 +118,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Jan 17 10:25:38 2025 -0600_
+_Date: Fri Jan 17 10:43:41 2025 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
