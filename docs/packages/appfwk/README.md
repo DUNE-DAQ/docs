@@ -34,7 +34,7 @@ When implenting a DAQ module, you'll want to `#include` the [`DAQModule.hpp` hea
 
 * `register_command`: takes as arguments the name of a command and a function which should execute when the command is received. The function is user defined, and takes an instance of `DAQModule::data_t` as argument. `DAQModule::data_t` is aliased to the `nlohmann::json` type and can thus be thought of as a blob of JSON-structured data. While in principle any arbitary name could be associated with any function of arbitrary behavior to create a command, in practice implementors of DAQ modules define commands associated with the DAQ's state machine: "_conf_", "_start_", "_stop_", "_scrap_". Not all DAQ modules necessarily need to perform an action for each of those transitions; e.g., a module may only be designed to do something during configuration, and not change as the DAQ enters the running state ("_start_") or exits it ("_stop_"). It also supports an optional third argument which lists the states that the application must be in for the command to be valid. [!!!Control People here should make comments and see if this is correct, if it's sitll the plan, etc]
 
-* `init`: this pure virtual function's implementation is meant to create objects which are persistent for the lifetime of the DAQ module. It also has the unique role of connecting the DAQModel with its own configuration object, see later the init section for more details. It takes as an argument the type `std::shared_ptr<ConfigurationManager>`. Typically, `init` will query the `ConfigurationManager`, extract the configuration object specifically defined for this `DAQModule` and will store the pointer internally to the class for later usage, when the dedicated commands comes, usually `conf`. Connection, as they are persistent objects, are commonly allocated in `init`; they'll be described in more detail later in this document. 
+* `init`: this pure virtual function's implementation is meant to create objects which are persistent for the lifetime of the DAQ module. It also has the unique role of connecting the DAQModel with its own configuration object, see later the init section for more details. It takes as an argument the type `std::shared_ptr<ModuleConfiguration>`. Typically, `init` will take the generic configuration object (`ModuleConfiguration`), extract the configuration object specifically defined for this `DAQModule` and will store the pointer internally to the class for later usage, when the dedicated commands comes, usually `conf`. Connection, as they are persistent objects, are commonly allocated in `init`; they'll be described in more detail later in this document. 
 
 An conceptual example of what this looks like is the following simplified version of a DAQ module implementation. 
 ```C++
@@ -52,7 +52,7 @@ class MyDaqModule : public dunedaq::appfwk::DAQModule {
           register_command("scrap", &MyDAQModule::do_scrap);
      }
      
-     void init(std::shared_ptr<ConfigurationManager>) override;
+     void init(std::shared_ptr<ModuleConfiguration>) override;
   
   private:
   
@@ -83,12 +83,12 @@ A word needs to be said about the concept of a "unique name" here. Looking in [`
 
 ### The `init` function
 
-Already touched upon above, this function takes a `std::shared_ptr<ConfigurationManager>` instance to tell it what objects to make persistent over the DAQ module's lifetime. A very common example of this is the construction of the `iomanager` connections which will pipe data into and out of an instance of the DAQ module. A description of this common use case will illustrate a couple of very important aspects of DAQ module programming. 
+Already touched upon above, this function takes a `std::shared_ptr<ModuleConfiguration>` instance to tell it what objects to make persistent over the DAQ module's lifetime. A very common example of this is the construction of the `iomanager` connections which will pipe data into and out of an instance of the DAQ module. A description of this common use case will illustrate a couple of very important aspects of DAQ module programming. 
 
 When a DAQ module writer wants to communicate with other DAQ modules, they use the [`iomanager`](https://dune-daq-sw.readthedocs.io/en/latest/packages/iomanager/#connectionid-connectionref). The `iomanager` Sender and Receiver objects needed by a DAQ Module get built in the call to `init` based on the JSON configuration `init` receives . A definition of `init`, then, can look like the following:
 ```C++
-void MyDaqModule::init(std::shared_ptr<ConfigurationManager> p) {
-    m_cfg = p->get_dal<MyDAQModuleConf>(get_name());
+void MyDaqModule::init(std::shared_ptr<ModuleConfiguration> p) {
+    m_cfg = p->module<MyDAQModuleConf>(get_name());
     if ( !m_cfg ) {
       throw appfwk::CommandFailed(ERS_HERE, "init", get_name(), "Unable to retrieve configuration object");
     }
@@ -183,7 +183,7 @@ class MyDaqModule : public dunedaq::appfwk::DAQModule {
           register_command("scrap", &MyDAQModule::do_scrap);
         }
      
-        void init(std::shared_ptr<ConfigurationManager>) override;
+        void init(std::shared_ptr<ModuleConfiguration>) override;
   
   private:
   
@@ -204,9 +204,9 @@ class MyDaqModule : public dunedaq::appfwk::DAQModule {
 * `MyDaqModule.cpp`:
 ```C++
 
-void MyDaqModule::init(std::shared_ptr<ConfigurationManager>) {
+void MyDaqModule::init(std::shared_ptr<ModuleConfiguration>) {
 
-    m_cfg = p->get_dal<MyDAQModuleConf>(get_name());
+    m_cfg = p->module<MyDAQModuleConf>(get_name());
     if ( !m_cfg ) {
       throw appfwk::CommandFailed(ERS_HERE, "init", get_name(), "Unable to retrieve configuration object");
     }
@@ -271,7 +271,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Wed Dec 18 14:46:21 2024 -0600_
+_Date: Wed Aug 21 08:47:46 2024 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appfwk/issues](https://github.com/DUNE-DAQ/appfwk/issues)_
 </font>

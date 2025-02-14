@@ -118,6 +118,8 @@ for package in $package_list ; do
 	git checkout fddaq-v5.2.1_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout v3.0.2
+    else
+	git checkout coredaq-v5.2.1 || git checkout fddaq-v5.2.1
     fi
     echo $tmpdir/$package
 

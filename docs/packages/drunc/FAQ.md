@@ -19,14 +19,6 @@ This will tell you which server you cannot `ssh` to.
 ## What SSH commands are actually run?
 The simplest to know how the processes are started is to add the option `--log-level debug` for the process manager shell or the unified shell.
 
-## Do you have unit tests?
-Sure,
-```bash
-cd drunc/
-pytest
-```
-All of the tests are in `tests` and follow the same hierarchy as the code (so for example, the unit tests of the module `drunc.utils.utils` is in `tests/utils/test_utils.py`).
-
 ## So empty...
 If you have a question, please reach out to developers or fill an issue [here](https://github.com/DUNE-DAQ/drunc/issues).
 
@@ -37,9 +29,9 @@ If you have a question, please reach out to developers or fill an issue [here](h
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: Pawel Plesniak_
 
-_Date: Thu Oct 31 14:47:53 2024 +0100_
+_Date: Fri Oct 25 12:57:15 2024 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>

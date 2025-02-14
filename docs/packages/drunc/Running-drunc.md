@@ -89,7 +89,7 @@ The set of commands that you can send to the `root-controller` are
 Let's take the DAQ for a spin:
 ```bash
 drunc-unified-shell > conf
-drunc-unified-shell > start --run-number 12345 # start the run 12345
+drunc-unified-shell > start 12345 # start the run 12345
 drunc-unified-shell > enable-triggers
 [...we wait for a bit of time, to get a file...]
 drunc-unified-shell > disable-triggers
@@ -124,7 +124,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pierre Lasorak_
 
-_Date: Fri Nov 8 18:20:33 2024 +0100_
+_Date: Wed Oct 2 17:18:10 2024 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>

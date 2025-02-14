@@ -15,19 +15,17 @@ These commands are generated automatically from the controller, which in turns c
 ```bash
 conf
 start --help
-Usage: PROCESS_MANAGER BOOT_CONFIGURATION SESSION_NAME start
-           [OPTIONS]
+Usage: drunc-unified-shell PROCESS_MANAGER_CONFIGURATION BOOT_CONFIGURATION SESSION_NAME start
+           [OPTIONS] RUN_NUMBER
 
   Execute the transition start on the controller root-controller
 
 Options:
   --file-logbook-post TEXT
-  --run-type TEXT
   --trigger-rate FLOAT
   --disable-data-storage BOOLEAN
-  --run-number INTEGER            [required]
   --help                          Show this message and exit.
-start --run-number 1234
+start 123456
 enable-triggers
 [etc...]
 ```
@@ -72,7 +70,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pierre Lasorak_
 
-_Date: Fri Nov 8 18:20:33 2024 +0100_
+_Date: Wed Oct 2 17:18:10 2024 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
