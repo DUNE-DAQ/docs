@@ -42,6 +42,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [daqdataformats](packages/daqdataformats/README.md) _DAQ data formats_
 
+[datahandlinglibs](packages/datahandlinglibs/README.md) _Tools for constructing readout-focused processes_
+
 [detchannelmaps](packages/detchannelmaps/README.md) _Channel maps for the detectors_
 
 [detdataformats](packages/detdataformats/README.md) _General-purpose data formats and related tools_
@@ -52,25 +54,25 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [fdreadoutlibs](packages/fdreadoutlibs/README.md) _Classes for working with far detector data (WIB, SSP, etc.)_
 
+[fdreadoutmodules](packages/fdreadoutmodules/README.md) _Readout plugin collection for the far detector_
+
 [flxlibs](packages/flxlibs/README.md) _DAQModules, utilities, and scripts for Upstream FELIX Readout Software_
 
 [hermesmodules](packages/hermesmodules/README.md) _Modules for the Hermes core_
-
-[datahandlinglibs](packages/datahandlinglibs/README.md) _Tools for constructing readout-focused processes_
 
 [wibmod](packages/wibmod/README.md) _WIB configuration and monitoring interface_
 
 ### Control
 
-[appmodel](packages/appmodel/README.md) _extends the schema from the confmodel package to describe readout, dataflow and trigger applications_
+[appmodel](packages/appmodel/README.md) _Schema for DAQ configuration of readout, dataflow and trigger applications_
 
-[confmodel](packages/confmodel/README.md) _contains the core schema for the DUNE daq OKS configuration
+[confmodel](packages/confmodel/README.md) _A core schema for DAQ configuration_
 
 [daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_
 
-[dbe](packages/dbe/README.md) _database editor for OKS_
+[dbe](packages/dbe/README.md) _A GUI interface for the OKS-based configuration design_
 
-[nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
+[drunc](packages/drunc/README.md) _Run control infrastructure for a distributed DAQ system_
 
 [restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
 
@@ -86,7 +88,7 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [timinglibs](packages/timinglibs/README.md) _timing control and monitoring_
 
-[tpglibs](packages/tpglibs/README.md) _Processes raw waveforms and returns the generated trigger primitives_
+[tpglibs](packages/tpglibs/README.md) _Processes raw waveforms and returns the generated trigger primitives_ 
 
 [trgtools](packages/trgtools/README.md) _trigger emulation and analysis tools_
 
@@ -113,4 +115,3 @@ For the other packages, please click on one of the links below. To learn how to 
 ### Educational
 
 [listrev](packages/listrev/README.md) _educational example of DAQModules for new developers_
-

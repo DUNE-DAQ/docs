@@ -96,8 +96,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -119,60 +119,64 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Table of Contents: 
-     - Overview:
-        - README.md
-     - Release Notes:
-        - release_notes.md
-     - Toolset:
-        - daq-assettools:
-        - daq-buildtools:
-        - daq-cmake:
-        - daq-release:
-        - daqsystemtest:
-        - integrationtest:
-        - styleguide:
-     - Core:   
-        - appfwk:
-        - cmdlib:
-        - ers:
-        - logging:
-        - utilities:
-     - Readout:
-        - daqdataformats:
-        - datahandlinglibs:
-        - detchannelmaps:
-        - detdataformats:
-        - dpdklibs:
-        - fddetdataformats:
-        - fdreadoutlibs:
-        - flxlibs:
-        - hermesmodules:
-        - wibmod:
-     - Control:
-        - appmodel:
-        - confmodel:
-        - dbe:
-        - daqconf:
-        - nanorc:
-        - restcmd:
-     - Dataflow (logical):
-        - dfmessages:
-        - dfmodules:
-        - hdf5libs:
-        - timing:
-        - timinglibs:
-        - tpglibs:
-        - trgtools:
-        - trigger:
-     - Dataflow (physical):
-        - iomanager:
-        - ipm:
-        - serialization:
-     - Monitoring:
-        - erskafka:
-        - kafkaopmon:
-        - opmonlib:
-        - rawdatautils:
-     - Educational:
-        - listrev:
+    - Table of Contents: 
+       - Overview:
+          - README.md
+       - Release Notes:
+          - release_notes.md
+       - Toolset:
+          - daq-assettools:
+          - daq-buildtools:
+          - daq-cmake:
+          - daq-release:
+          - daqsystemtest:
+          - integrationtest:
+          - styleguide:
+       - Core:   
+          - appfwk:
+          - cmdlib:
+          - ers:
+          - logging:
+          - utilities:
+       - Readout:
+          - daqdataformats:
+          - datahandlinglibs:
+          - detchannelmaps:
+          - detdataformats:
+          - dpdklibs:
+          - fddetdataformats:
+          - fdreadoutlibs:
+          - fdreadoutmodules:
+          - flxlibs:
+          - hermesmodules:
+          - wibmod:
+       - Control:
+          - appmodel:
+          - confmodel:
+          - daqconf:
+          - dbe:
+          - drunc:
+          - restcmd:
+       - Dataflow (logical):
+          - dfmessages:
+          - dfmodules:
+          - hdf5libs:
+          - timing:
+          - timinglibs:
+          - tpglibs:
+          - trgtools:
+          - trigger:
+       - Dataflow (physical):
+          - iomanager:
+          - ipm:
+          - serialization:
+       - Monitoring:
+          - erskafka:
+          - kafkaopmon:
+          - opmonlib:
+          - rawdatautils:
+       - Educational:
+          - listrev:
+
+
+

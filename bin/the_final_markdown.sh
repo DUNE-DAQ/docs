@@ -5,7 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="wibmod utilities trigger trgtools tpglibs timinglibs timing styleguide serialization restcmd rcif rawdatautils opmonlib nanorc kafkaopmon logging listrev hdf5libs ipm iomanager integrationtest hermesmodules erskafka flxlibs fdreadoutlibs fddetdataformats ers dpdklibs dfmodules dfmessages detdataformats detchannelmaps dbe datahandlinglibs daqdataformats daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools confmodel cmdlib appmodel appfwk"
+package_list="wibmod utilities trigger trgtools tpglibs timinglibs timing styleguide serialization restcmd rawdatautils opmonlib kafkaopmon logging listrev hermesmodules hdf5libs ipm iomanager integrationtest flxlibs fdreadoutmodules fdreadoutlibs fddetdataformats erskafka ers drunc dpdklibs dfmodules dfmessages detdataformats detchannelmaps dbe datahandlinglibs daqdataformats daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools confmodel cmdlib appfwk appmodel"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -115,9 +115,9 @@ for package in $package_list ; do
     # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout fddaq-v5.2.0_for_docs
-    else
-	git checkout coredaq-v5.2.0 || git checkout fddaq-v5.2.0
+	git checkout fddaq-v5.2.1_for_docs
+    elif [[ "$package" =~ "daq-cmake" ]]; then
+	git checkout v3.0.2
     fi
     echo $tmpdir/$package
 
@@ -149,9 +149,9 @@ for package in $package_list ; do
     fi
 
     for mdfile in $( find . -mindepth 2 -type f  -not -type l  -not -regex ".*\.git.*" -not -regex "\./docs.*" -name "*.md" ); do
-	reldir=$( echo $mdfile | sed -r 's!(.*)/.*!\1!' )
-        mkdir -p $packages_dir/$package/$reldir
-        cp -p $mdfile $packages_dir/$package/$reldir
+	reldir=$( echo "$mdfile" | sed -r 's!(.*)/.*!\1!' )
+        mkdir -p "$packages_dir/$package/$reldir"
+        cp -p "$mdfile" "$packages_dir/$package/$reldir"
         if [[ "$?" != "0" ]]; then
 	    echo "There was a problem copying $mdfile to $packages_dir/$package/$reldir in $PWD; exiting..." >&2
 	    exit 3

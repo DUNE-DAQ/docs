@@ -176,6 +176,16 @@ Note: specifiying the object name is required .
 |![show-smartapp-mods example](./img/inspector_show-smartapp-mods.png)|
 
 
+### `show-d2d-connections`
+
+Shows the DetectorToDAQ connections in the database
+
+The receiver id and summary sender informations for each connection are shown in a compact table.
+
+|**Example**|
+|---|
+|`daqconf_inspector ehn1-daqconfigs/sessions/np02-session.data.xml show-d2d-connections`|
+| TODO |
 
 ## Verification
 ### `verify-detstreams`
@@ -229,7 +239,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Alessandro Thea_
 
-_Date: Thu Oct 10 23:17:38 2024 +0200_
+_Date: Thu Nov 21 17:10:49 2024 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
