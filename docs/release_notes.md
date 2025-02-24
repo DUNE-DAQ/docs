@@ -1,5 +1,11 @@
 # Release Notes
 
+Released on: Feb 24, 2025
+
+Includes core release: coredaq-v5.2.2
+
+Only package different from fddaq-v5.2.1 is `drunc`
+
 ## fddaq-v5.2.1
 
 Released on: Feb 14, 2025
