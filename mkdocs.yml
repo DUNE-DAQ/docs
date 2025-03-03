@@ -138,6 +138,7 @@ nav:
              - packages/daq-release/ci_github_action.md
              - packages/daq-release/create_release_spack.md
              - packages/daq-release/development_workflow_gitflow.md
+             - packages/daq-release/doxygen_mainpage.md
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/team_repos.md
           - daqsystemtest:
