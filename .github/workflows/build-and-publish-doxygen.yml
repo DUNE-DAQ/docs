@@ -23,6 +23,7 @@ jobs:
       with:
         repository: DUNE-DAQ/daq-release
         path: daq-release
+        ref: amogan/doxygen_macro_expansion
 
     - name: Create dbt area
       run: |
