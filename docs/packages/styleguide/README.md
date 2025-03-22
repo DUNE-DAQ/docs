@@ -1331,7 +1331,7 @@ code is never going to be touched again, then this won't be a big
 issue. If we plan on altering it in the future, it may be worth at
 least getting it to be *somewhat* more conformant to the rules,
 especially if the changes are relatively non-invasive (e.g., running
-it through clang-format, as opposed to breaking up a long but
+it through `dbt-clang-format.sh`, as opposed to breaking up a long but
 well-tested function). If anything about the style in existing code
 may be confusing to future developers, it may be worth adding comments on
 how the style deviates from the standard. 
@@ -1347,7 +1347,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Sep 13 09:48:15 2024 -0500_
+_Date: Sat Mar 22 07:44:45 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>
