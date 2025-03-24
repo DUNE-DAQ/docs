@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited Feb-07-2025_
+_This document was last edited Mar-24-2025_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -18,14 +18,14 @@ To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.openscience
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt latest_v5
+setup_dbt latest
 ```
-Note that `latest_v5` is aliased to `v8.8.0`. 
+Note that `latest` is aliased to `v8.9.1`. 
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.8.0/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.8.0/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.9.1/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.9.1/scripts -> PATH
 DBT setuptools loaded
 ```
 
@@ -39,10 +39,10 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v5.2.0-a9 the latest frozen release as of Nov-12-2024
+dbt-setup-release <release> # fddaq-v5.2.2-a9 the latest frozen release as of Feb-24-2025
 ```
 
-Note that if you set up a frozen release you'll get a message along the lines of `Release "fddaq-v5.2.0-a9" requested; interpreting this as release "fddaq-v5.2.0-a9-1"`; this simply reflects that the latest build iteration of the frozen release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
+Note that if you set up a frozen release you'll get a message along the lines of `Release "fddaq-v5.2.2-a9" requested; interpreting this as release "fddaq-v5.2.2-a9-1"`; this simply reflects that the latest build iteration of the frozen release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
 
 Instead of a frozen release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fddaq-v5.2.0-rc3-a9` you can do:
 ```
@@ -156,6 +156,8 @@ And if, after the build, you want to run the unit tests, just add the `--unittes
 dbt-build --clean --unittest  # Blow away the contents of ./build, run config+generate+build, and then run the unit tests
 ```
 ..where in the above case, you blow away the contents of `./build`,  run config+generate+build, install the result in `$DBT_INSTALL_DIR` and then run the unit tests. Be aware that for many packages, unit tests will only (fully) work if you've also rerun `dbt-workarea-env`. 
+
+To run any integration tests your repos may contain (e.g., `dfmodules`) , you can pass the `--integtest` option to `dbt-build`.  
 
 To check for deviations from the coding rules described in the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/), run with the `--lint` option:
 ```
@@ -291,7 +293,9 @@ produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generall
 
 ## Release Notes
 
+[`v8.9.1` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.1)
 [`v8.8.0` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.8.0)
+
 
 ## Next Step
 
@@ -308,7 +312,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Feb 7 15:48:10 2025 -0600_
+_Date: Mon Mar 24 12:12:39 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
