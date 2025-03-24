@@ -1,6 +1,4 @@
 #!/bin/bash
-# Hi there
-# Hi again
 
 here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 
@@ -117,9 +115,9 @@ for package in $package_list ; do
     # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout v8.8.0_for_docs
+	git checkout v8.9.1_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
-	git checkout v3.0.3
+	git checkout v3.0.5
     fi
     echo $tmpdir/$package
 
