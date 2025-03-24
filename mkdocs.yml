@@ -283,6 +283,8 @@ nav:
           - trgtools:
              - About trgtools: packages/trgtools/README.md
              - packages/trgtools/convert-tplatencies.md
+             - packages/trgtools/emulate-from-tpstream.md
+             - packages/trgtools/plot-emulated-triggers.md
              - packages/trgtools/process-tpstream.md
              - packages/trgtools/py-trgtools.md
              - packages/trgtools/ta-dump.md
