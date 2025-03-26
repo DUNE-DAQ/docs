@@ -40,9 +40,8 @@ jobs:
     - name: Checkout packages
       run: |
         cd $GITHUB_WORKSPACE/daq-release/scripts
-        #./checkout-daq-package.py -i ../configs/coredaq/coredaq-develop/release.yaml -a -o $DBT_AREA_ROOT/sourcecode
-        #./checkout-daq-package.py -i ../configs/fddaq/fddaq-develop/release.yaml -a -o $DBT_AREA_ROOT/sourcecode
-        ./checkout-daq-package.py -i ../configs/coredaq/coredaq-develop/release.yaml -p hdf5libs -b develop -o $DBT_AREA_ROOT/sourcecode
+        ./checkout-daq-package.py -i ../configs/coredaq/coredaq-develop/release.yaml -a -o $DBT_AREA_ROOT/sourcecode
+        ./checkout-daq-package.py -i ../configs/fddaq/fddaq-develop/release.yaml -a -o $DBT_AREA_ROOT/sourcecode
         # triggeralgs doesn't currently work with --codegen-only build; remove for now
         rm -rf $DBT_AREA_ROOT/sourcecode/triggeralgs
 
