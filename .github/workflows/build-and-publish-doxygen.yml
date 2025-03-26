@@ -12,14 +12,14 @@ jobs:
     container:
       image: "ghcr.io/dune-daq/nightly-release-alma9:development_v5"
     env: 
-      DEV_AREA_NAME: 'dev_area'
+      DEV_AREA_NAME: 'dunedaq'
     defaults:
       run:
         shell: bash
 
     steps:
     - name: Checkout daq-release
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: DUNE-DAQ/daq-release
         path: daq-release
@@ -69,13 +69,26 @@ jobs:
         working-directory: /github/workspace/daq-release/docs
         doxyfile-path: './Doxyfile'
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Upload artifacts
+      uses: actions/upload-pages-artifact@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./daq-release/docs/docs/html
-        enable_jekyll: false
-        allow_empty_commit: false
-        force_orphan: true
-        publish_branch: gh-pages
+        path: ./daq-release/docs/docs/html
+
+  deploy_to_github_pages:
+    name: Deploy to GitHub Pages
+    runs-on: daq
+    needs: build-doxygen
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
