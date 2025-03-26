@@ -76,7 +76,7 @@ jobs:
 
   deploy_to_github_pages:
     name: Deploy to GitHub Pages
-    runs-on: daq
+    runs-on: ubuntu-latest
     needs: build-doxygen
     permissions:
       contents: read
