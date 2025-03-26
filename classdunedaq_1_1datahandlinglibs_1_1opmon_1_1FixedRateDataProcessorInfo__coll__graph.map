@@ -1,0 +1,7 @@
+<map id="dunedaq::datahandlinglibs::opmon::FixedRateDataProcessorInfo" name="dunedaq::datahandlinglibs::opmon::FixedRateDataProcessorInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="311,31,549,72"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="28,5,199,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,26,311,36,310,42,215,31"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1datahandlinglibs_1_1opmon_1_1FixedRateDataProcessorInfo_1_1Impl__.html" title=" " alt="" coords="5,56,222,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,68,310,61,310,66,237,74"/>
+</map>

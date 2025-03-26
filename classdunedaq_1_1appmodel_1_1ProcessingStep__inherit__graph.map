@@ -1,0 +1,24 @@
+<map id="dunedaq::appmodel::ProcessingStep" name="dunedaq::appmodel::ProcessingStep">
+<area shape="rect" id="Node000001" title=" " alt="" coords="422,71,560,111"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1appmodel_1_1AVXFrugalPedestalSubtractProcessor.html" title=" " alt="" coords="608,5,852,46"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="575,74,679,44,681,49,576,79"/>
+<area shape="poly" id="edge8_Node000001_Node000004" title=" " alt="" coords="555,63,620,44,621,49,557,68"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1appmodel_1_1AVXRunSumProcessor.html" title=" " alt="" coords="651,71,809,111"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="576,97,651,97,651,102,576,102"/>
+<area shape="poly" id="edge12_Node000001_Node000006" title=" " alt="" coords="576,80,651,80,651,85,576,85"/>
+<area shape="rect" id="Node000008" href="$classdunedaq_1_1appmodel_1_1AVXThresholdProcessor.html" title=" " alt="" coords="648,136,812,177"/>
+<area shape="poly" id="edge13_Node000001_Node000008" title=" " alt="" coords="557,114,648,140,647,145,555,119"/>
+<area shape="poly" id="edge14_Node000001_Node000008" title=" " alt="" coords="576,103,681,133,679,138,575,108"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1confmodel_1_1Jsonable.html" title=" " alt="" coords="238,71,374,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="390,97,421,97,421,102,390,103"/>
+<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="390,79,421,80,421,85,390,85"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="5,78,190,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="206,97,237,97,237,102,206,103"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="206,79,237,80,237,85,206,85"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1appmodel_1_1AVXFixedPedestalSubtractProcessor.html" title=" " alt="" coords="900,5,1138,46"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="867,32,899,32,899,37,867,37"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="867,14,899,14,899,19,867,19"/>
+<area shape="rect" id="Node000007" href="$classdunedaq_1_1appmodel_1_1AVXAbsRunSumProcessor.html" title=" " alt="" coords="929,71,1109,111"/>
+<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="824,97,928,97,928,102,824,102"/>
+<area shape="poly" id="edge11_Node000006_Node000007" title=" " alt="" coords="824,80,928,80,928,85,824,85"/>
+</map>

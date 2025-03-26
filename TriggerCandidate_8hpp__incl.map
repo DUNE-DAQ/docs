@@ -1,0 +1,22 @@
+<map id="/github/workspace/dev_area/sourcecode/triggeralgs/include/triggeralgs/TriggerCandidate.hpp" name="/github/workspace/dev_area/sourcecode/triggeralgs/include/triggeralgs/TriggerCandidate.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="197,5,454,61"/>
+<area shape="rect" id="Node000002" href="$TriggerActivityData_8hpp.html" title=" " alt="" coords="5,109,198,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,64,163,105,161,100,260,59"/>
+<area shape="rect" id="Node000006" href="$TriggerCandidateData_8hpp.html" title=" " alt="" coords="222,109,429,150"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="328,62,328,94,323,94,323,62"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="453,117,510,142"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="372,59,450,106,447,111,369,64"/>
+<area shape="rect" id="Node000003" href="$trgdataformats_2include_2trgdataformats_2Types_8hpp.html" title=" " alt="" coords="88,198,256,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,148,153,184,149,188,117,152"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="182,271,242,297"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="90,151,74,186,73,205,78,222,91,233,114,245,168,267,166,272,111,250,88,238,74,225,67,206,69,185,85,149"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="181,222,200,257,196,259,176,225"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="106,271,158,297"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="168,225,149,259,144,257,163,222"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="288,153,210,193,207,188,286,148"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="317,152,270,225,237,262,234,258,266,222,313,149"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="408,198,454,223"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="353,148,404,186,401,190,350,152"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="331,198,384,223"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="336,149,349,182,344,184,331,151"/>
+</map>

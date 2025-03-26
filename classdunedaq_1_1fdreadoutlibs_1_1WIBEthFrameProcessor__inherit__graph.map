@@ -1,0 +1,9 @@
+<map id="dunedaq::fdreadoutlibs::WIBEthFrameProcessor" name="dunedaq::fdreadoutlibs::WIBEthFrameProcessor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="705,13,873,54"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1datahandlinglibs_1_1TaskRawDataProcessorModel.html" title=" " alt="" coords="423,5,657,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="673,31,705,31,705,36,673,36"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1datahandlinglibs_1_1RawDataProcessorConcept.html" title=" " alt="" coords="188,5,375,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="391,31,423,31,423,36,391,36"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1opmonlib_1_1MonitorableObject.html" title=" " alt="" coords="5,13,140,54"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="155,31,187,31,187,36,155,36"/>
+</map>

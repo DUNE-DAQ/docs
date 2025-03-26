@@ -1,0 +1,33 @@
+<map id="/github/workspace/dev_area/sourcecode/tpglibs/include/tpglibs/AVXFrugalPedestalSubtractProcessor.hpp" name="/github/workspace/dev_area/sourcecode/tpglibs/include/tpglibs/AVXFrugalPedestalSubtractProcessor.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="438,5,665,76"/>
+<area shape="rect" id="Node000002" href="$AVXFactory_8hpp.html" title=" " alt="" coords="473,124,630,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="554,76,554,108,549,108,549,76"/>
+<area shape="rect" id="Node000003" href="$tpglibs_2include_2tpglibs_2AbstractFactory_8hpp.html" title=" " alt="" coords="346,271,525,297"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="544,152,457,261,453,257,540,148"/>
+<area shape="rect" id="Node000012" href="$AVXProcessor_8hpp.html" title=" " alt="" coords="544,198,717,223"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="567,148,607,185,604,189,563,152"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="716,345,776,371"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="495,295,702,342,700,347,494,300"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,345,82,371"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="360,300,97,347,96,342,359,295"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="106,345,184,371"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="387,300,199,346,198,341,386,295"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="208,345,279,371"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="404,300,291,342,289,337,402,295"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="801,345,868,371"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="520,295,642,315,786,342,785,347,641,320,519,300"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="304,345,357,371"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="419,300,362,338,359,334,416,295"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="380,345,491,371"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="438,297,438,329,433,329,433,297"/>
+<area shape="rect" id="Node000011" href="$tpglibs_2include_2tpglibs_2AbstractFactory_8hxx.html" title=" " alt="" coords="515,345,692,371"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="465,295,562,336,560,341,463,300"/>
+<area shape="rect" id="Node000013" href="$AbstractProcessor_8hpp.html" title=" " alt="" coords="717,271,912,297"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="662,221,770,263,768,268,660,226"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="588,271,672,297"/>
+<area shape="poly" id="edge16_Node000012_Node000015" title=" " alt="" coords="633,224,633,256,628,256,628,224"/>
+<area shape="poly" id="edge13_Node000013_Node000004" title=" " alt="" coords="805,299,770,336,766,332,801,295"/>
+<area shape="poly" id="edge15_Node000013_Node000008" title=" " alt="" coords="820,297,829,329,824,331,815,298"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="892,345,1022,371"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="840,295,920,335,918,340,837,300"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="dunedaq::trigger::TriggerDataHandlingModel&lt; ReadoutType, RequestHandlerType, LatencyBufferType, RawDataProcessorType, InputDataType &gt;" name="dunedaq::trigger::TriggerDataHandlingModel&lt; ReadoutType, RequestHandlerType, LatencyBufferType, RawDataProcessorType, InputDataType &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="337,13,603,84"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,289,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="304,46,336,46,336,51,304,51"/>
+</map>

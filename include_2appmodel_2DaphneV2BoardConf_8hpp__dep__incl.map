@@ -1,0 +1,13 @@
+<map id="/github/workspace/dev_area/build/appmodel/codegen/include/appmodel/DaphneV2BoardConf.hpp" name="/github/workspace/dev_area/build/appmodel/codegen/include/appmodel/DaphneV2BoardConf.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="512,5,691,76"/>
+<area shape="rect" id="Node000002" href="$DaphneConf_8cpp.html" title=" " alt="" coords="5,132,201,187"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="497,64,361,92,213,127,188,133,187,128,212,121,360,86,496,59"/>
+<area shape="rect" id="Node000003" href="$DaphneV2BoardConf_8cpp.html" title=" " alt="" coords="224,132,470,187"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="513,85,408,133,405,128,511,80"/>
+<area shape="rect" id="Node000004" href="$DaphneV2ControllerModule_8cpp.html" title=" " alt="" coords="494,124,709,195"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="604,91,604,124,599,124,599,91"/>
+<area shape="rect" id="Node000005" href="$dump__dunedaq____appmodel_8cpp.html" title=" " alt="" coords="733,124,921,195"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="683,81,761,121,759,126,681,86"/>
+<area shape="rect" id="Node000006" href="$sourcecode_2appmodel_2src_2DaphneApplication_8cpp.html" title=" " alt="" coords="946,132,1130,187"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="708,63,934,121,957,128,956,133,933,127,706,68"/>
+</map>

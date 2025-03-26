@@ -1,0 +1,84 @@
+<map id="dunedaq::confmodel::Jsonable" name="dunedaq::confmodel::Jsonable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="238,463,374,503"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1appmodel_1_1ProcessingStep.html" title=" " alt="" coords="422,104,560,145"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="325,448,479,144,484,146,330,450"/>
+<area shape="poly" id="edge14_Node000001_Node000003" title=" " alt="" coords="320,447,474,144,479,146,325,449"/>
+<area shape="rect" id="Node000009" href="$classdunedaq_1_1appmodel_1_1TAAlgorithm.html" title=" " alt="" coords="422,463,560,503"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="390,489,421,489,421,494,390,495"/>
+<area shape="poly" id="edge34_Node000001_Node000009" title=" " alt="" coords="390,471,421,472,421,477,390,477"/>
+<area shape="rect" id="Node000019" href="$classdunedaq_1_1appmodel_1_1TCAlgorithm.html" title=" " alt="" coords="422,1017,560,1058"/>
+<area shape="poly" id="edge35_Node000001_Node000019" title=" " alt="" coords="320,518,484,1016,479,1018,315,519"/>
+<area shape="poly" id="edge54_Node000001_Node000019" title=" " alt="" coords="323,517,487,1016,482,1018,318,519"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="5,470,190,496"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,489,237,489,237,494,206,495"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="206,471,237,472,237,477,206,477"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1appmodel_1_1AVXFrugalPedestalSubtractProcessor.html" title=" " alt="" coords="608,5,852,46"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="555,94,607,69,681,44,683,49,609,73,558,99"/>
+<area shape="poly" id="edge7_Node000003_Node000004" title=" " alt="" coords="522,92,562,67,607,45,609,44,611,49,609,49,564,72,525,97"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1appmodel_1_1AVXRunSumProcessor.html" title=" " alt="" coords="651,71,809,111"/>
+<area shape="poly" id="edge8_Node000003_Node000006" title=" " alt="" coords="575,119,651,108,651,113,576,124"/>
+<area shape="poly" id="edge11_Node000003_Node000006" title=" " alt="" coords="575,101,651,91,651,96,576,107"/>
+<area shape="rect" id="Node000008" href="$classdunedaq_1_1appmodel_1_1AVXThresholdProcessor.html" title=" " alt="" coords="648,136,812,177"/>
+<area shape="poly" id="edge12_Node000003_Node000008" title=" " alt="" coords="576,142,648,151,647,157,575,147"/>
+<area shape="poly" id="edge13_Node000003_Node000008" title=" " alt="" coords="576,124,648,134,647,139,575,130"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1appmodel_1_1AVXFixedPedestalSubtractProcessor.html" title=" " alt="" coords="900,5,1138,46"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="867,32,899,32,899,37,867,37"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="867,14,899,14,899,19,867,19"/>
+<area shape="rect" id="Node000007" href="$classdunedaq_1_1appmodel_1_1AVXAbsRunSumProcessor.html" title=" " alt="" coords="929,71,1109,111"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="824,97,928,97,928,102,824,102"/>
+<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="824,80,928,80,928,85,824,85"/>
+<area shape="rect" id="Node000010" href="$classdunedaq_1_1appmodel_1_1TAMakerADCSimpleWindowAlgorithm.html" title=" " alt="" coords="609,201,851,242"/>
+<area shape="poly" id="edge16_Node000009_Node000010" title=" " alt="" coords="501,447,515,405,537,356,567,307,607,265,631,250,657,240,659,245,633,255,610,269,571,310,542,359,520,407,506,449"/>
+<area shape="poly" id="edge17_Node000009_Node000010" title=" " alt="" coords="496,447,510,399,532,344,564,288,584,263,607,241,607,241,611,245,610,245,588,267,568,291,537,346,515,401,502,448"/>
+<area shape="rect" id="Node000011" href="$classdunedaq_1_1appmodel_1_1TAMakerBundleNAlgorithm.html" title=" " alt="" coords="640,267,820,307"/>
+<area shape="poly" id="edge18_Node000009_Node000011" title=" " alt="" coords="510,448,549,388,576,357,607,330,634,315,663,305,665,310,636,320,610,335,580,360,554,391,515,451"/>
+<area shape="poly" id="edge19_Node000009_Node000011" title=" " alt="" coords="502,447,519,413,542,375,571,338,607,306,639,290,641,294,610,311,575,341,546,378,523,416,507,450"/>
+<area shape="rect" id="Node000012" href="$classdunedaq_1_1appmodel_1_1TAMakerChannelAdjacencyAlgorithm.html" title=" " alt="" coords="612,332,848,373"/>
+<area shape="poly" id="edge20_Node000009_Node000012" title=" " alt="" coords="531,450,566,422,607,395,640,381,674,371,675,376,642,386,610,400,570,426,534,455"/>
+<area shape="poly" id="edge21_Node000009_Node000012" title=" " alt="" coords="512,449,554,408,607,371,610,370,612,375,610,376,557,412,516,452"/>
+<area shape="rect" id="Node000013" href="$classdunedaq_1_1appmodel_1_1TAMakerChannelDistanceAlgorithm.html" title=" " alt="" coords="616,397,844,438"/>
+<area shape="poly" id="edge22_Node000009_Node000013" title=" " alt="" coords="575,466,679,436,681,441,576,471"/>
+<area shape="poly" id="edge23_Node000009_Node000013" title=" " alt="" coords="555,455,620,436,621,441,557,460"/>
+<area shape="rect" id="Node000014" href="$classdunedaq_1_1appmodel_1_1TAMakerDBSCANAlgorithm.html" title=" " alt="" coords="638,463,822,503"/>
+<area shape="poly" id="edge24_Node000009_Node000014" title=" " alt="" coords="576,489,637,489,637,494,576,494"/>
+<area shape="poly" id="edge25_Node000009_Node000014" title=" " alt="" coords="576,472,637,472,637,477,576,477"/>
+<area shape="rect" id="Node000015" href="$classdunedaq_1_1appmodel_1_1TAMakerHorizontalMuonAlgorithm.html" title=" " alt="" coords="620,528,840,569"/>
+<area shape="poly" id="edge26_Node000009_Node000015" title=" " alt="" coords="557,506,621,525,620,530,555,511"/>
+<area shape="poly" id="edge27_Node000009_Node000015" title=" " alt="" coords="576,495,681,525,679,530,575,500"/>
+<area shape="rect" id="Node000016" href="$classdunedaq_1_1appmodel_1_1TAMakerMichelElectronAlgorithm.html" title=" " alt="" coords="623,593,837,634"/>
+<area shape="poly" id="edge28_Node000009_Node000016" title=" " alt="" coords="516,514,557,554,610,590,624,597,622,602,607,595,554,558,512,517"/>
+<area shape="poly" id="edge29_Node000009_Node000016" title=" " alt="" coords="534,511,570,540,610,566,642,580,675,590,674,595,640,585,607,571,566,544,531,516"/>
+<area shape="rect" id="Node000017" href="$classdunedaq_1_1appmodel_1_1TAMakerPlaneCoincidenceAlgorithm.html" title=" " alt="" coords="613,659,847,699"/>
+<area shape="poly" id="edge30_Node000009_Node000017" title=" " alt="" coords="507,516,523,550,546,588,575,625,610,656,614,658,611,663,607,660,571,628,542,591,519,553,502,519"/>
+<area shape="poly" id="edge31_Node000009_Node000017" title=" " alt="" coords="515,515,554,575,580,606,610,631,636,646,665,656,663,661,634,651,607,636,576,609,549,578,510,518"/>
+<area shape="rect" id="Node000018" href="$classdunedaq_1_1appmodel_1_1TAMakerPrescaleAlgorithm.html" title=" " alt="" coords="640,724,820,765"/>
+<area shape="poly" id="edge32_Node000009_Node000018" title=" " alt="" coords="502,518,515,565,537,620,568,675,588,699,610,721,641,738,638,743,607,725,584,703,564,678,532,622,510,567,496,519"/>
+<area shape="poly" id="edge33_Node000009_Node000018" title=" " alt="" coords="506,517,520,559,542,607,571,656,610,697,633,711,659,721,657,726,631,716,607,701,567,659,537,610,515,561,501,519"/>
+<area shape="rect" id="Node000020" href="$classdunedaq_1_1appmodel_1_1TCMakerADCSimpleWindowAlgorithm.html" title=" " alt="" coords="609,789,851,830"/>
+<area shape="poly" id="edge36_Node000019_Node000020" title=" " alt="" coords="505,1002,521,967,543,926,572,887,607,853,632,838,659,828,661,833,634,843,610,857,576,890,548,929,526,969,510,1004"/>
+<area shape="poly" id="edge37_Node000019_Node000020" title=" " alt="" coords="499,1002,514,961,537,914,568,868,607,829,607,828,610,833,610,833,572,871,541,917,519,963,504,1003"/>
+<area shape="rect" id="Node000021" href="$classdunedaq_1_1appmodel_1_1TCMakerBundleNAlgorithm.html" title=" " alt="" coords="640,855,820,895"/>
+<area shape="poly" id="edge38_Node000019_Node000021" title=" " alt="" coords="519,1003,557,959,581,937,607,918,637,904,668,893,669,898,639,909,610,923,584,941,561,963,523,1007"/>
+<area shape="poly" id="edge39_Node000019_Node000021" title=" " alt="" coords="506,1002,548,946,576,918,607,894,639,879,641,884,610,899,579,922,552,950,511,1005"/>
+<area shape="rect" id="Node000022" href="$classdunedaq_1_1appmodel_1_1TCMakerChannelAdjacencyAlgorithm.html" title=" " alt="" coords="612,920,848,961"/>
+<area shape="poly" id="edge40_Node000019_Node000022" title=" " alt="" coords="556,1007,607,983,682,959,684,964,609,988,559,1012"/>
+<area shape="poly" id="edge41_Node000019_Node000022" title=" " alt="" coords="522,1005,562,981,607,959,610,958,612,963,609,964,565,986,525,1010"/>
+<area shape="rect" id="Node000023" href="$classdunedaq_1_1appmodel_1_1TCMakerChannelDistanceAlgorithm.html" title=" " alt="" coords="616,985,844,1026"/>
+<area shape="poly" id="edge42_Node000019_Node000023" title=" " alt="" coords="576,1032,638,1024,639,1029,576,1038"/>
+<area shape="poly" id="edge43_Node000019_Node000023" title=" " alt="" coords="575,1015,616,1009,616,1015,576,1020"/>
+<area shape="rect" id="Node000024" href="$classdunedaq_1_1appmodel_1_1TCMakerDBSCANAlgorithm.html" title=" " alt="" coords="638,1051,822,1091"/>
+<area shape="poly" id="edge44_Node000019_Node000024" title=" " alt="" coords="576,1055,638,1064,637,1070,575,1061"/>
+<area shape="poly" id="edge45_Node000019_Node000024" title=" " alt="" coords="576,1038,642,1047,642,1053,576,1043"/>
+<area shape="rect" id="Node000025" href="$classdunedaq_1_1appmodel_1_1TCMakerHorizontalMuonAlgorithm.html" title=" " alt="" coords="620,1116,840,1157"/>
+<area shape="poly" id="edge46_Node000019_Node000025" title=" " alt="" coords="525,1065,564,1090,609,1113,621,1117,619,1122,607,1117,562,1095,522,1070"/>
+<area shape="poly" id="edge47_Node000019_Node000025" title=" " alt="" coords="558,1063,609,1089,683,1113,681,1118,607,1093,555,1068"/>
+<area shape="rect" id="Node000026" href="$classdunedaq_1_1appmodel_1_1TCMakerMichelElectronAlgorithm.html" title=" " alt="" coords="623,1181,837,1222"/>
+<area shape="poly" id="edge48_Node000019_Node000026" title=" " alt="" coords="510,1070,551,1126,579,1154,610,1178,623,1186,621,1190,607,1183,575,1158,547,1130,506,1073"/>
+<area shape="poly" id="edge49_Node000019_Node000026" title=" " alt="" coords="523,1069,561,1113,584,1135,610,1154,639,1168,669,1178,667,1183,637,1173,607,1159,581,1139,557,1117,519,1072"/>
+<area shape="rect" id="Node000027" href="$classdunedaq_1_1appmodel_1_1TCMakerPlaneCoincidenceAlgorithm.html" title=" " alt="" coords="613,1247,847,1287"/>
+<area shape="poly" id="edge50_Node000019_Node000027" title=" " alt="" coords="504,1072,519,1113,541,1159,572,1205,610,1244,615,1247,612,1251,607,1248,567,1208,537,1162,514,1115,499,1074"/>
+<area shape="poly" id="edge51_Node000019_Node000027" title=" " alt="" coords="509,1071,525,1106,547,1146,575,1186,610,1220,634,1234,661,1244,659,1249,632,1239,607,1224,571,1189,543,1149,521,1109,505,1073"/>
+<area shape="rect" id="Node000028" href="$classdunedaq_1_1appmodel_1_1TCMakerPrescaleAlgorithm.html" title=" " alt="" coords="640,1312,820,1353"/>
+<area shape="poly" id="edge52_Node000019_Node000028" title=" " alt="" coords="500,1073,511,1126,532,1190,564,1254,585,1284,610,1309,641,1327,638,1332,607,1313,581,1287,560,1257,527,1192,506,1127,494,1074"/>
+<area shape="poly" id="edge53_Node000019_Node000028" title=" " alt="" coords="503,1073,515,1121,536,1178,567,1236,587,1262,610,1285,632,1299,656,1309,655,1314,629,1304,607,1289,583,1265,563,1239,531,1180,510,1122,497,1074"/>
+</map>

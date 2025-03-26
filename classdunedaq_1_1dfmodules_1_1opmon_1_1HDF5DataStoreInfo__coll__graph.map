@@ -1,0 +1,7 @@
+<map id="dunedaq::dfmodules::opmon::HDF5DataStoreInfo" name="dunedaq::dfmodules::opmon::HDF5DataStoreInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="99,124,286,165"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,20,177,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,56,176,122,172,125,111,59"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1dfmodules_1_1opmon_1_1HDF5DataStoreInfo_1_1Impl__.html" title=" " alt="" coords="201,5,387,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,74,212,125,208,122,256,70"/>
+</map>

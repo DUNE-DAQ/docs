@@ -1,0 +1,19 @@
+<map id="/github/workspace/dev_area/sourcecode/trgtools/include/trgtools/detail/EmulationUnit.hxx" name="/github/workspace/dev_area/sourcecode/trgtools/include/trgtools/detail/EmulationUnit.hxx">
+<area shape="rect" id="Node000001" title=" " alt="" coords="211,5,382,76"/>
+<area shape="rect" id="Node000002" href="$EmulationUnit_8hpp.html" title=" " alt="" coords="185,124,407,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,92,299,124,294,124,294,92"/>
+<area shape="rect" id="Node000003" href="$EmulateTAUnit_8hpp.html" title=" " alt="" coords="55,228,284,283"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="252,192,205,229,202,225,249,188"/>
+<area shape="rect" id="Node000008" href="$EmulateTCUnit_8hpp.html" title=" " alt="" coords="308,228,538,283"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="344,188,390,225,387,229,340,192"/>
+<area shape="rect" id="Node000004" href="$process__tpstream_8cxx.html" title=" " alt="" coords="254,331,437,387"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="231,289,300,328,297,333,228,294"/>
+<area shape="rect" id="Node000005" href="$TAFileHandler_8hpp.html" title=" " alt="" coords="5,331,230,387"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="151,299,134,332,129,329,146,296"/>
+<area shape="rect" id="Node000006" href="$emulate__from__tpstream_8cxx.html" title=" " alt="" coords="296,435,512,491"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="210,390,328,432,326,437,208,395"/>
+<area shape="rect" id="Node000007" href="$TAFileHandler_8cpp.html" title=" " alt="" coords="32,435,203,491"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="120,403,120,434,115,434,115,403"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="395,298,368,332,364,329,391,294"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="444,297,454,341,456,364,452,388,442,413,428,436,423,433,437,411,447,386,450,364,449,341,439,298"/>
+</map>

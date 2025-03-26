@@ -1,0 +1,13 @@
+<map id="dunedaq::ipm::Subscriber" name="dunedaq::ipm::Subscriber">
+<area shape="rect" id="Node000001" title=" " alt="" coords="107,363,272,388"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1ipm_1_1Receiver.html" title=" " alt="" coords="113,288,267,313"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,329,192,362,187,362,187,329"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1opmonlib_1_1MonitorableObject.html" title=" " alt="" coords="123,198,257,238"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="192,254,192,287,187,287,187,254"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1opmon_1_1OpMonId.html" title=" " alt="" coords="103,109,277,135"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="192,150,192,197,187,197,187,150"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="116,47,179,107,175,110,113,51"/>
+<area shape="rect" id="Node000006" href="$structdunedaq_1_1opmon_1_1OpMonId_1_1Impl__.html" title=" " alt="" coords="201,5,376,46"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="259,59,204,111,200,107,255,55"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="dunedaq::appmodel::SubdetectorReadoutWindowMap" name="dunedaq::appmodel::SubdetectorReadoutWindowMap">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,216,120"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="18,5,203,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,46,105,79,100,79,99,47"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="122,47,121,79,116,79,116,46"/>
+</map>

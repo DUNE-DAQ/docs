@@ -1,0 +1,17 @@
+<map id="/github/workspace/dev_area/sourcecode/dbe/include/dbe/SchemaIncludeFileWidget.hpp" name="/github/workspace/dev_area/sourcecode/dbe/include/dbe/SchemaIncludeFileWidget.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="151,5,357,76"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,124,73,150"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,79,82,120,79,115,173,74"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="96,124,185,150"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,78,169,116,165,112,210,74"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="209,124,298,150"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="256,76,256,108,251,108,251,76"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="322,124,393,150"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="294,74,335,111,331,115,290,78"/>
+<area shape="rect" id="Node000006" href="$StyleUtility_8hpp.html" title=" " alt="" coords="417,124,549,150"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="339,74,440,115,438,120,337,79"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="407,198,468,223"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="478,151,456,186,451,183,473,148"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="492,198,565,223"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="493,148,515,183,510,186,488,151"/>
+</map>

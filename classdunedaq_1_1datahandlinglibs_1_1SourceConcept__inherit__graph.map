@@ -1,0 +1,9 @@
+<map id="dunedaq::datahandlinglibs::SourceConcept" name="dunedaq::datahandlinglibs::SourceConcept">
+<area shape="rect" id="Node000001" title=" " alt="" coords="188,49,357,90"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1datahandlinglibs_1_1DataSubscriberModel.html" title=" " alt="" coords="412,5,581,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="372,50,411,44,412,49,373,56"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1trigger_1_1HSISourceModel.html" title=" " alt="" coords="405,85,587,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="373,83,405,88,404,93,372,88"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1opmonlib_1_1MonitorableObject.html" title=" " alt="" coords="5,49,140,90"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,67,187,67,187,72,155,72"/>
+</map>

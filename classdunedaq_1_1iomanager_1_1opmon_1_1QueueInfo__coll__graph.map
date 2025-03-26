@@ -1,0 +1,7 @@
+<map id="dunedaq::iomanager::opmon::QueueInfo" name="dunedaq::iomanager::opmon::QueueInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="120,109,257,150"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,48,171,107,168,110,111,52"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1iomanager_1_1opmon_1_1QueueInfo_1_1Impl__.html" title=" " alt="" coords="201,5,371,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="258,59,209,110,205,107,255,55"/>
+</map>

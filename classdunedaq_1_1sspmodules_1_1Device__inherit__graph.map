@@ -1,0 +1,5 @@
+<map id="dunedaq::sspmodules::Device" name="dunedaq::sspmodules::Device">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,152,46"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1sspmodules_1_1EthernetDevice.html" title=" " alt="" coords="5,94,152,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,62,81,94,76,94,76,62"/>
+</map>

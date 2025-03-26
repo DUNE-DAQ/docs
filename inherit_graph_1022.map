@@ -1,0 +1,126 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="229,590,311,616"/>
+<area shape="rect" id="Node000001" href="$classdunedaq_1_1timing_1_1I2CMasterNode.html" title=" " alt="" coords="403,766,611,792"/>
+<area shape="poly" id="edge845_Node000000_Node000001" title=" " alt="" coords="302,623,490,763,486,768,299,627"/>
+<area shape="rect" id="Node000009" href="$classdunedaq_1_1timing_1_1TimingNode.html" title="Base class for timing nodes." alt="" coords="414,414,601,440"/>
+<area shape="poly" id="edge848_Node000000_Node000009" title=" " alt="" coords="299,579,486,438,490,443,302,583"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1timing_1_1DACNode.html" title="uhal::Node implementing single I2C Master Slave connection to control SFP expander chips." alt="" coords="696,816,872,841"/>
+<area shape="poly" id="edge846_Node000001_Node000002" title=" " alt="" coords="599,793,708,812,707,817,598,798"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1timing_1_1I2CSFPNode.html" title=" " alt="" coords="687,889,881,915"/>
+<area shape="poly" id="edge847_Node000001_Node000006" title=" " alt="" coords="603,796,613,801,628,813,638,826,647,839,661,851,697,871,735,886,733,891,695,876,658,856,643,842,634,829,625,817,610,805,601,800"/>
+<area shape="rect" id="Node000010" href="$classdunedaq_1_1timing_1_1ClockGeneratorInterface.html" title="uhal::Node implementing clock gen. interface" alt="" coords="680,120,888,161"/>
+<area shape="poly" id="edge849_Node000009_Node000010" title=" " alt="" coords="514,399,533,349,563,287,604,224,629,195,658,170,679,158,681,162,661,174,633,199,608,227,567,290,538,351,519,401"/>
+<area shape="rect" id="Node000012" href="$classdunedaq_1_1timing_1_1EchoMonitorNode.html" title="Class for master global node." alt="" coords="674,185,894,211"/>
+<area shape="poly" id="edge851_Node000009_Node000012" title=" " alt="" coords="518,399,539,359,570,310,609,261,658,221,683,209,685,213,661,225,613,265,574,313,544,361,523,401"/>
+<area shape="rect" id="Node000013" href="$classdunedaq_1_1timing_1_1EndpointNodeInterface.html" title="Base class for timing IO nodes." alt="" coords="700,235,868,275"/>
+<area shape="poly" id="edge852_Node000009_Node000013" title=" " alt="" coords="527,400,582,342,618,311,658,285,699,268,701,273,661,289,621,315,585,346,531,404"/>
+<area shape="rect" id="Node000015" href="$classdunedaq_1_1timing_1_1FLCmdGeneratorNode.html" title="Class for master global node." alt="" coords="660,300,908,325"/>
+<area shape="poly" id="edge854_Node000009_Node000015" title=" " alt="" coords="537,403,592,368,658,335,697,323,699,328,660,340,595,372,540,407"/>
+<area shape="rect" id="Node000016" href="$classdunedaq_1_1timing_1_1FrequencyCounterNode.html" title="Base class for timing IO nodes." alt="" coords="695,349,873,390"/>
+<area shape="poly" id="edge855_Node000009_Node000016" title=" " alt="" coords="587,408,694,385,695,391,588,413"/>
+<area shape="rect" id="Node000017" href="$classdunedaq_1_1timing_1_1HSINode.html" title="Class for HSI nodes." alt="" coords="698,414,870,440"/>
+<area shape="poly" id="edge856_Node000009_Node000017" title=" " alt="" coords="617,424,698,424,698,430,617,430"/>
+<area shape="rect" id="Node000018" href="$classdunedaq_1_1timing_1_1IONode.html" title="Base class for timing IO nodes." alt="" coords="703,464,865,489"/>
+<area shape="poly" id="edge857_Node000009_Node000018" title=" " alt="" coords="599,441,708,460,707,465,598,446"/>
+<area shape="rect" id="Node000029" href="$classdunedaq_1_1timing_1_1IRIGTimestampNode.html" title="Class for timestamp generator node." alt="" coords="664,513,904,539"/>
+<area shape="poly" id="edge868_Node000009_Node000029" title=" " alt="" coords="545,445,598,473,660,499,698,510,697,515,658,504,596,478,542,450"/>
+<area shape="rect" id="Node000030" href="$classdunedaq_1_1timing_1_1MasterGlobalNode.html" title="Class for master global node." alt="" coords="671,562,897,588"/>
+<area shape="poly" id="edge869_Node000009_Node000030" title=" " alt="" coords="532,449,587,501,623,527,660,549,689,559,687,564,658,553,620,531,584,505,529,453"/>
+<area shape="rect" id="Node000031" href="$classdunedaq_1_1timing_1_1MasterNodeInterface.html" title="Base class for timing IO nodes." alt="" coords="690,612,878,653"/>
+<area shape="poly" id="edge870_Node000009_Node000031" title=" " alt="" coords="526,452,549,485,580,525,617,565,661,598,690,612,688,617,658,603,614,569,576,529,544,489,522,455"/>
+<area shape="rect" id="Node000033" href="$classdunedaq_1_1timing_1_1SwitchyardNode.html" title="Class for master global node." alt="" coords="678,677,890,703"/>
+<area shape="poly" id="edge872_Node000009_Node000033" title=" " alt="" coords="520,454,539,500,569,557,609,615,634,640,661,662,683,674,681,679,658,667,630,644,605,618,564,560,534,502,515,456"/>
+<area shape="rect" id="Node000034" href="$classdunedaq_1_1timing_1_1TopDesignInterface.html" title="Base class for timing top design nodes." alt="" coords="694,751,874,791"/>
+<area shape="poly" id="edge873_Node000009_Node000034" title=" " alt="" coords="519,454,537,508,567,576,608,649,633,683,661,713,687,733,717,748,714,752,685,737,658,717,629,686,603,652,562,579,532,509,514,456"/>
+<area shape="rect" id="Node000053" href="$classdunedaq_1_1timing_1_1UpstreamCDRNode.html" title="Class for master global node." alt="" coords="697,5,871,46"/>
+<area shape="poly" id="edge906_Node000009_Node000053" title=" " alt="" coords="509,398,521,329,546,236,566,187,590,139,621,94,658,56,676,43,696,34,698,39,678,48,661,60,625,98,595,142,571,189,551,238,526,330,514,399"/>
+<area shape="rect" id="Node000054" href="$classdunedaq_1_1timing_1_1VLCmdGeneratorNode.html" title="Class for master global node." alt="" coords="659,70,909,96"/>
+<area shape="poly" id="edge907_Node000009_Node000054" title=" " alt="" coords="511,398,525,337,552,257,572,216,595,175,624,138,658,106,678,94,680,99,661,110,628,142,600,178,576,218,557,259,530,338,516,400"/>
+<area shape="rect" id="Node000011" href="$classdunedaq_1_1timing_1_1CDCLVD110Node.html" title="uhal::Node implementing CDCLVD110 interface" alt="" coords="957,128,1179,153"/>
+<area shape="poly" id="edge850_Node000010_Node000011" title=" " alt="" coords="903,138,956,138,956,143,903,143"/>
+<area shape="rect" id="Node000014" href="$classdunedaq_1_1timing_1_1EndpointNode.html" title="Base class for timing IO nodes." alt="" coords="969,197,1167,223"/>
+<area shape="poly" id="edge853_Node000013_Node000014" title=" " alt="" coords="883,237,982,221,983,226,884,242"/>
+<area shape="rect" id="Node000019" href="$classdunedaq_1_1timing_1_1FIBV2IONode.html" title="Class for the FIB board." alt="" coords="968,246,1168,272"/>
+<area shape="poly" id="edge858_Node000018_Node000019" title=" " alt="" coords="879,467,907,450,923,431,930,411,930,368,931,324,938,302,955,281,970,270,973,275,959,285,943,305,936,325,936,368,935,412,927,433,910,454,882,472"/>
+<area shape="rect" id="Node000020" href="$classdunedaq_1_1timing_1_1FMCIONode.html" title="Class for the timing FMC board." alt="" coords="973,296,1163,321"/>
+<area shape="poly" id="edge859_Node000018_Node000020" title=" " alt="" coords="879,466,907,450,919,437,926,423,930,392,934,361,942,345,955,330,971,320,974,324,958,334,946,348,939,362,935,393,931,424,924,440,910,454,881,471"/>
+<area shape="rect" id="Node000021" href="$classdunedaq_1_1timing_1_1GIBIONode.html" title="Class for the timing FMC board." alt="" coords="975,345,1161,371"/>
+<area shape="poly" id="edge860_Node000018_Node000021" title=" " alt="" coords="879,464,907,450,923,434,930,416,938,397,955,380,976,369,978,373,958,384,943,400,935,418,927,437,910,455,881,468"/>
+<area shape="rect" id="Node000022" href="$classdunedaq_1_1timing_1_1MIBIONode.html" title="Class for the timing FMC board." alt="" coords="975,394,1161,420"/>
+<area shape="poly" id="edge861_Node000018_Node000022" title=" " alt="" coords="880,458,908,450,956,428,994,418,996,423,958,434,910,455,881,463"/>
+<area shape="rect" id="Node000023" href="$classdunedaq_1_1timing_1_1MIBV2IONode.html" title="Class for the timing FMC board." alt="" coords="967,444,1169,469"/>
+<area shape="poly" id="edge862_Node000018_Node000023" title=" " alt="" coords="880,467,966,461,966,466,881,472"/>
+<area shape="rect" id="Node000024" href="$classdunedaq_1_1timing_1_1SFPMuxIONode.html" title="Base class for boards which have a physical SFP mux." alt="" coords="962,493,1174,519"/>
+<area shape="poly" id="edge863_Node000018_Node000024" title=" " alt="" coords="881,484,962,492,961,497,880,489"/>
+<area shape="rect" id="Node000027" href="$classdunedaq_1_1timing_1_1SIMIONode.html" title="Class for the timing simulation IO." alt="" coords="975,542,1161,568"/>
+<area shape="poly" id="edge866_Node000018_Node000027" title=" " alt="" coords="881,488,910,498,934,513,958,529,989,539,988,544,956,533,931,518,908,503,879,494"/>
+<area shape="rect" id="Node000028" href="$classdunedaq_1_1timing_1_1TLUIONode.html" title="Class for the TLU board." alt="" coords="974,592,1162,617"/>
+<area shape="poly" id="edge867_Node000018_Node000028" title=" " alt="" coords="881,484,910,498,928,518,935,539,942,560,958,578,977,589,974,593,955,582,937,562,930,541,923,521,907,502,879,489"/>
+<area shape="rect" id="Node000025" href="$classdunedaq_1_1timing_1_1FIBIONode.html" title="Class for the FIB board." alt="" coords="1240,444,1423,469"/>
+<area shape="poly" id="edge864_Node000024_Node000025" title=" " alt="" coords="1155,487,1258,467,1259,472,1156,492"/>
+<area shape="rect" id="Node000026" href="$classdunedaq_1_1timing_1_1PC059IONode.html" title="Class for the PC059 board." alt="" coords="1231,493,1432,519"/>
+<area shape="poly" id="edge865_Node000024_Node000026" title=" " alt="" coords="1190,503,1230,503,1230,508,1190,508"/>
+<area shape="rect" id="Node000032" href="$classdunedaq_1_1timing_1_1MasterNode.html" title="Class for PD&#45;II/DUNE master timing nodes." alt="" coords="974,641,1162,667"/>
+<area shape="poly" id="edge871_Node000031_Node000032" title=" " alt="" coords="894,638,973,644,973,649,894,643"/>
+<area shape="rect" id="Node000035" href="$classdunedaq_1_1timing_1_1EndpointDesignInterface.html" title="Base class for timing endpoint design nodes." alt="" coords="1248,751,1415,791"/>
+<area shape="poly" id="edge874_Node000034_Node000035" title=" " alt="" coords="889,768,1247,768,1247,774,889,774"/>
+<area shape="rect" id="Node000052" href="$classdunedaq_1_1timing_1_1MasterDesignInterface.html" title="Base class for timing master designs." alt="" coords="969,873,1167,914"/>
+<area shape="poly" id="edge884_Node000034_Node000052" title=" " alt="" coords="889,790,910,801,926,815,935,830,944,844,958,858,982,871,979,875,955,863,939,848,931,833,922,819,907,805,887,795"/>
+<area shape="rect" id="Node000047" href="$classdunedaq_1_1timing_1_1MuxDesignInterface.html" title="Base class for timing endpoint design nodes." alt="" coords="977,808,1159,849"/>
+<area shape="poly" id="edge892_Node000034_Node000047" title=" " alt="" coords="890,790,977,807,976,813,889,795"/>
+<area shape="rect" id="Node000046" href="$classdunedaq_1_1timing_1_1TimingSourceMuxDesignInterface.html" title="Base class for timing endpoint design nodes." alt="" coords="1233,996,1430,1037"/>
+<area shape="poly" id="edge899_Node000034_Node000046" title=" " alt="" coords="889,787,910,801,924,816,931,832,935,864,939,895,946,909,958,924,988,946,1021,965,1093,992,1165,1007,1232,1014,1232,1019,1164,1012,1091,997,1019,970,985,951,955,928,942,912,934,896,930,865,926,834,919,819,907,805,886,791"/>
+<area shape="rect" id="Node000037" href="$classdunedaq_1_1timing_1_1TopDesign.html" title="Base class for timing top design nodes with IO class." alt="" coords="978,690,1158,716"/>
+<area shape="poly" id="edge901_Node000034_Node000037" title=" " alt="" coords="886,744,1010,714,1011,719,887,749"/>
+<area shape="rect" id="Node000036" href="$classdunedaq_1_1timing_1_1EndpointDesign.html" title="Base class for timing endpoint design nodes." alt="" coords="1498,593,1666,634"/>
+<area shape="poly" id="edge875_Node000035_Node000036" title=" " alt="" coords="1361,738,1415,690,1482,643,1506,632,1508,637,1485,648,1418,694,1365,742"/>
+<area shape="rect" id="Node000044" href="$classdunedaq_1_1timing_1_1FanoutDesign.html" title="Class for timing fanout designs." alt="" coords="1483,658,1681,684"/>
+<area shape="poly" id="edge876_Node000035_Node000044" title=" " alt="" coords="1382,740,1430,716,1482,694,1520,682,1522,687,1484,699,1432,721,1384,745"/>
+<area shape="rect" id="Node000042" href="$classdunedaq_1_1timing_1_1GaiaDesign.html" title="Class for timing fanout designs." alt="" coords="1490,824,1674,849"/>
+<area shape="poly" id="edge877_Node000035_Node000042" title=" " alt="" coords="1427,793,1530,820,1529,825,1426,798"/>
+<area shape="rect" id="Node000039" href="$classdunedaq_1_1timing_1_1HSIDesignInterface.html" title="Base class for timing hsi design nodes." alt="" coords="1492,708,1672,749"/>
+<area shape="poly" id="edge878_Node000035_Node000039" title=" " alt="" coords="1430,752,1491,741,1492,746,1431,757"/>
+<area shape="rect" id="Node000045" href="$classdunedaq_1_1timing_1_1KerberosDesign.html" title="Class for timing fanout designs." alt="" coords="1497,939,1667,979"/>
+<area shape="poly" id="edge881_Node000035_Node000045" title=" " alt="" coords="1430,796,1437,802,1450,818,1457,834,1462,864,1467,895,1473,909,1485,924,1502,936,1499,940,1481,928,1469,912,1462,896,1457,865,1452,835,1446,821,1433,806,1427,801"/>
+<area shape="rect" id="Node000051" href="$classdunedaq_1_1timing_1_1OuroborosDesign.html" title="Class for PDI timing master design (known as overlord)." alt="" coords="1493,873,1671,914"/>
+<area shape="poly" id="edge882_Node000035_Node000051" title=" " alt="" coords="1428,796,1437,802,1453,817,1462,832,1470,846,1485,860,1505,870,1502,875,1482,864,1466,849,1457,834,1449,820,1434,806,1425,801"/>
+<area shape="rect" id="Node000050" href="$classdunedaq_1_1timing_1_1OuroborosMuxDesign.html" title="Class for PDI ouroboros timing master design." alt="" coords="1739,937,1917,978"/>
+<area shape="poly" id="edge883_Node000035_Node000050" title=" " alt="" coords="1430,763,1489,764,1554,771,1619,785,1682,809,1725,836,1763,870,1793,906,1815,935,1811,938,1789,909,1759,874,1722,840,1679,813,1618,790,1553,776,1489,770,1430,768"/>
+<area shape="rect" id="Node000040" href="$classdunedaq_1_1timing_1_1BoreasDesign.html" title="Class for timing master with integrated HSI designs." alt="" coords="1729,773,1927,799"/>
+<area shape="poly" id="edge879_Node000039_Node000040" title=" " alt="" coords="1687,750,1770,770,1769,775,1686,755"/>
+<area shape="rect" id="Node000038" href="$classdunedaq_1_1timing_1_1ChronosDesign.html" title="Class for timing master with integrated HSI designs." alt="" coords="1745,651,1911,691"/>
+<area shape="poly" id="edge880_Node000039_Node000038" title=" " alt="" coords="1686,701,1744,688,1745,693,1687,707"/>
+<area shape="rect" id="Node000041" href="$classdunedaq_1_1timing_1_1MasterDesign.html" title="Base class for timing master designs." alt="" coords="1233,881,1430,907"/>
+<area shape="poly" id="edge885_Node000052_Node000041" title=" " alt="" coords="1182,891,1232,891,1232,896,1182,896"/>
+<area shape="poly" id="edge887_Node000041_Node000042" title=" " alt="" coords="1405,874,1522,847,1523,852,1406,879"/>
+<area shape="poly" id="edge886_Node000041_Node000040" title=" " alt="" coords="1428,911,1437,917,1454,936,1461,956,1468,974,1485,989,1537,1012,1582,1019,1627,1011,1679,989,1815,797,1819,801,1682,993,1629,1016,1582,1024,1535,1017,1482,993,1464,977,1456,957,1449,938,1434,921,1425,916"/>
+<area shape="poly" id="edge888_Node000041_Node000045" title=" " alt="" coords="1403,908,1436,916,1507,935,1505,941,1435,922,1402,913"/>
+<area shape="poly" id="edge891_Node000041_Node000051" title=" " alt="" coords="1445,891,1493,891,1493,896,1445,896"/>
+<area shape="rect" id="Node000049" href="$classdunedaq_1_1timing_1_1MasterMuxDesign.html" title="Class for PDI timing master design on mux board." alt="" coords="1491,1053,1673,1094"/>
+<area shape="poly" id="edge889_Node000041_Node000049" title=" " alt="" coords="1432,913,1437,917,1450,931,1458,946,1463,976,1468,1005,1474,1019,1485,1033,1510,1051,1507,1055,1482,1037,1469,1022,1462,1006,1458,976,1453,948,1446,934,1434,921,1428,917"/>
+<area shape="poly" id="edge890_Node000049_Node000050" title=" " alt="" coords="1652,1045,1680,1033,1789,976,1791,981,1682,1037,1654,1050"/>
+<area shape="rect" id="Node000043" href="$classdunedaq_1_1timing_1_1CDRMuxDesignInterface.html" title="Base class for timing endpoint design nodes." alt="" coords="1227,816,1435,857"/>
+<area shape="poly" id="edge893_Node000047_Node000043" title=" " alt="" coords="1174,829,1227,830,1226,836,1174,834"/>
+<area shape="rect" id="Node000048" href="$classdunedaq_1_1timing_1_1SFPMuxDesignInterface.html" title="Class for timing fanout designs." alt="" coords="1228,931,1435,971"/>
+<area shape="poly" id="edge897_Node000047_Node000048" title=" " alt="" coords="1170,853,1181,860,1196,874,1205,889,1214,903,1229,917,1249,928,1246,933,1225,921,1210,907,1201,892,1192,877,1177,864,1168,858"/>
+<area shape="poly" id="edge894_Node000043_Node000044" title=" " alt="" coords="1428,805,1433,801,1445,788,1451,776,1456,749,1462,721,1469,708,1482,694,1501,682,1504,687,1485,698,1474,711,1467,723,1462,750,1456,777,1449,791,1437,805,1432,809"/>
+<area shape="poly" id="edge895_Node000043_Node000042" title=" " alt="" coords="1451,834,1489,834,1489,839,1451,839"/>
+<area shape="poly" id="edge896_Node000043_Node000045" title=" " alt="" coords="1429,862,1437,866,1453,881,1462,895,1470,910,1485,924,1507,936,1505,940,1482,928,1466,913,1457,898,1449,884,1434,870,1427,866"/>
+<area shape="poly" id="edge898_Node000048_Node000049" title=" " alt="" coords="1426,976,1437,982,1452,995,1462,1008,1471,1020,1485,1033,1518,1050,1515,1055,1482,1037,1467,1024,1457,1011,1448,999,1434,987,1424,981"/>
+<area shape="poly" id="edge900_Node000046_Node000045" title=" " alt="" coords="1437,989,1496,976,1497,981,1439,995"/>
+<area shape="poly" id="edge903_Node000037_Node000036" title=" " alt="" coords="1145,684,1178,676,1226,666,1497,622,1498,628,1228,671,1180,682,1146,689"/>
+<area shape="poly" id="edge904_Node000037_Node000044" title=" " alt="" coords="1173,694,1483,674,1483,680,1173,699"/>
+<area shape="poly" id="edge902_Node000037_Node000038" title=" " alt="" coords="1167,682,1178,677,1192,666,1201,655,1210,643,1226,631,1289,600,1345,576,1398,559,1448,549,1499,547,1553,551,1613,562,1681,579,1717,592,1750,610,1804,648,1801,652,1747,615,1715,597,1680,584,1612,567,1552,556,1499,552,1448,555,1399,564,1347,581,1291,605,1228,636,1214,646,1205,658,1196,670,1180,681,1169,687"/>
+<area shape="poly" id="edge905_Node000037_Node000041" title=" " alt="" coords="1102,723,1141,755,1181,795,1195,815,1203,834,1212,850,1229,866,1251,878,1248,883,1225,870,1208,853,1198,836,1191,818,1177,798,1137,759,1098,727"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="5,865,137,891"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1timing_1_1I2CSlave.html" title=" " alt="" coords="185,865,355,891"/>
+<area shape="poly" id="edge908_Node000008_Node000004" title=" " alt="" coords="152,875,184,875,184,880,152,880"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1timing_1_1DACSlave.html" title="Class for dac node." alt="" coords="419,816,596,841"/>
+<area shape="poly" id="edge909_Node000004_Node000003" title=" " alt="" coords="350,858,441,839,442,844,351,864"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1timing_1_1I2CSFPSlave.html" title="I2C slave class to control SFP transceivers." alt="" coords="409,914,605,940"/>
+<area shape="poly" id="edge911_Node000004_Node000005" title=" " alt="" coords="351,892,442,911,441,916,350,897"/>
+<area shape="rect" id="Node000007" href="$classdunedaq_1_1timing_1_1SIChipSlave.html" title="Utility class to interface to SI chips." alt="" coords="413,865,602,891"/>
+<area shape="poly" id="edge913_Node000004_Node000007" title=" " alt="" coords="371,875,412,875,412,880,371,880"/>
+<area shape="poly" id="edge910_Node000003_Node000002" title=" " alt="" coords="612,826,696,826,696,831,612,831"/>
+<area shape="poly" id="edge912_Node000005_Node000006" title=" " alt="" coords="621,914,686,908,687,913,621,919"/>
+</map>

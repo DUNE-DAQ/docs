@@ -1,0 +1,13 @@
+<map id="tpglibs::NaiveProcessor" name="tpglibs::NaiveProcessor">
+<area shape="rect" id="Node000001" title="Naive typed abstract signal processor." alt="" coords="231,70,389,96"/>
+<area shape="rect" id="Node000003" href="$classtpglibs_1_1NaiveFrugalPedestalSubtractProcessor.html" title="Naive signal processor: Estimates the pedestal and subtracts." alt="" coords="452,5,638,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="380,63,458,44,459,49,381,68"/>
+<area shape="rect" id="Node000004" href="$classtpglibs_1_1NaiveRunSumProcessor.html" title="Naive signal processor: Calculates the running sum of the signal." alt="" coords="441,70,649,96"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="404,80,440,80,440,86,404,86"/>
+<area shape="rect" id="Node000006" href="$classtpglibs_1_1NaiveThresholdProcessor.html" title="Naive signal processor: Passes signals above a threshold." alt="" coords="437,120,652,145"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="390,97,481,116,479,121,389,102"/>
+<area shape="rect" id="Node000002" href="$classtpglibs_1_1AbstractProcessor.html" title=" " alt="" coords="5,63,183,103"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,80,230,80,230,86,198,86"/>
+<area shape="rect" id="Node000005" href="$classtpglibs_1_1NaiveAbsRunSumProcessor.html" title="Naive signal processor: Calculates the running sum of the signal&#39;s absolute value." alt="" coords="700,70,932,96"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="665,80,700,80,700,86,665,86"/>
+</map>

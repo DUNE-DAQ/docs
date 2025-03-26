@@ -1,0 +1,21 @@
+<map id="dunedaq::appmodel::FelixDataSender" name="dunedaq::appmodel::FelixDataSender">
+<area shape="rect" id="Node000001" title=" " alt="" coords="28,522,167,563"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1confmodel_1_1DetDataSender.html" title=" " alt="" coords="29,434,166,474"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,490,92,522,87,522,86,490"/>
+<area shape="poly" id="edge12_Node000001_Node000002" title=" " alt="" coords="109,490,108,522,103,522,104,490"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1confmodel_1_1ResourceSetAND.html" title=" " alt="" coords="29,345,166,386"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,401,92,433,87,433,86,401"/>
+<area shape="poly" id="edge11_Node000002_Node000003" title=" " alt="" coords="109,401,108,433,103,433,104,401"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1confmodel_1_1ResourceSet.html" title=" " alt="" coords="29,256,166,297"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="91,312,92,344,87,345,86,313"/>
+<area shape="poly" id="edge10_Node000003_Node000004" title=" " alt="" coords="109,313,108,345,103,344,104,312"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1confmodel_1_1ResourceBase.html" title=" " alt="" coords="29,168,166,208"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="91,224,92,256,87,256,86,224"/>
+<area shape="poly" id="edge9_Node000004_Node000005" title=" " alt="" coords="109,224,108,256,103,256,104,224"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1confmodel_1_1Component.html" title=" " alt="" coords="29,79,166,120"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="91,135,92,167,87,167,86,135"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="109,135,108,167,103,167,104,135"/>
+<area shape="rect" id="Node000007" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="5,5,190,31"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="92,46,92,79,87,79,86,47"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="109,47,108,79,103,79,103,46"/>
+</map>

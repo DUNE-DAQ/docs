@@ -1,0 +1,9 @@
+<map id="dunedaq::dfmodules::opmon::FakeDataProdInfoDefaultTypeInternal" name="dunedaq::dfmodules::opmon::FakeDataProdInfoDefaultTypeInternal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="81,228,299,283"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1dfmodules_1_1opmon_1_1FakeDataProdInfo.html" title=" " alt="" coords="101,124,278,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,180,192,227,187,227,187,180"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,20,177,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,56,174,122,170,125,110,59"/>
+<area shape="rect" id="Node000004" href="$structdunedaq_1_1dfmodules_1_1opmon_1_1FakeDataProdInfo_1_1Impl__.html" title=" " alt="" coords="201,5,378,61"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="257,74,209,125,206,122,253,70"/>
+</map>

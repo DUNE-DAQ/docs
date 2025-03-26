@@ -1,0 +1,16 @@
+<map id="/github/workspace/dev_area/sourcecode/sspmodules/src/anlBoard/RegMap.cxx" name="/github/workspace/dev_area/sourcecode/sspmodules/src/anlBoard/RegMap.cxx">
+<area shape="rect" id="Node000001" title=" " alt="" coords="105,5,303,61"/>
+<area shape="rect" id="Node000002" href="$RegMap_8hpp.html" title=" " alt="" coords="157,109,251,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,61,207,93,201,93,201,61"/>
+<area shape="rect" id="Node000003" href="$anlExceptions_8hpp.html" title=" " alt="" coords="5,183,131,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="182,138,106,177,103,173,180,133"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="136,256,189,282"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="203,136,173,242,168,241,198,134"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="206,183,277,208"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="213,134,230,168,226,170,208,136"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="301,183,347,208"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="226,133,292,172,289,177,223,138"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="29,256,107,282"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="71,209,71,241,65,241,65,209"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="86,207,136,245,133,249,82,211"/>
+</map>

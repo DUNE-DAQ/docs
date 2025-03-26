@@ -1,0 +1,27 @@
+<map id="dunedaq::timing::IONode" name="dunedaq::timing::IONode">
+<area shape="rect" id="Node000001" title="Base class for timing IO nodes." alt="" coords="371,179,533,204"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1timing_1_1FIBV2IONode.html" title="Class for the FIB board." alt="" coords="588,5,787,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="466,164,511,101,543,68,580,40,603,29,605,34,583,44,547,72,516,104,471,167"/>
+<area shape="rect" id="Node000005" href="$classdunedaq_1_1timing_1_1FMCIONode.html" title="Class for the timing FMC board." alt="" coords="592,55,783,80"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="475,166,521,126,580,89,608,78,610,83,583,94,524,131,479,170"/>
+<area shape="rect" id="Node000006" href="$classdunedaq_1_1timing_1_1GIBIONode.html" title="Class for the timing FMC board." alt="" coords="595,104,780,130"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="496,170,581,138,620,128,621,133,582,143,498,175"/>
+<area shape="rect" id="Node000007" href="$classdunedaq_1_1timing_1_1MIBIONode.html" title="Class for the timing FMC board." alt="" coords="594,153,781,179"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="548,179,594,174,594,179,549,184"/>
+<area shape="rect" id="Node000008" href="$classdunedaq_1_1timing_1_1MIBV2IONode.html" title="Class for the timing FMC board." alt="" coords="586,203,789,228"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="549,199,586,202,586,208,549,204"/>
+<area shape="rect" id="Node000009" href="$classdunedaq_1_1timing_1_1SFPMuxIONode.html" title="Base class for boards which have a physical SFP mux." alt="" coords="581,252,794,278"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="500,208,582,238,622,249,620,254,581,243,498,213"/>
+<area shape="rect" id="Node000012" href="$classdunedaq_1_1timing_1_1SIMIONode.html" title="Class for the timing simulation IO." alt="" coords="594,301,781,327"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="479,213,525,252,583,288,611,298,609,303,580,293,522,256,476,217"/>
+<area shape="rect" id="Node000013" href="$classdunedaq_1_1timing_1_1TLUIONode.html" title="Class for the TLU board." alt="" coords="593,351,782,376"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="471,216,516,278,547,310,583,337,605,348,603,353,580,342,543,314,512,281,466,219"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1timing_1_1TimingNode.html" title="Base class for timing nodes." alt="" coords="136,179,323,204"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="339,189,370,189,370,194,339,194"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,179,88,204"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,189,135,189,135,194,103,194"/>
+<area shape="rect" id="Node000010" href="$classdunedaq_1_1timing_1_1FIBIONode.html" title="Class for the FIB board." alt="" coords="851,228,1034,254"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="809,251,850,247,851,252,810,256"/>
+<area shape="rect" id="Node000011" href="$classdunedaq_1_1timing_1_1PC059IONode.html" title="Class for the PC059 board." alt="" coords="842,277,1043,303"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="810,274,841,277,841,283,809,280"/>
+</map>

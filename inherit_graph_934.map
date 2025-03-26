@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,128,68,153"/>
+<area shape="rect" id="Node000001" href="$classdelete__object__screen_1_1DeleteConfigObjectScreen.html" title=" " alt="" coords="116,5,300,46"/>
+<area shape="poly" id="edge702_Node000000_Node000001" title=" " alt="" coords="54,114,81,84,114,55,135,44,138,49,117,60,84,87,58,117"/>
+<area shape="rect" id="Node000002" href="$classfile__io_1_1OpenFileScreen.html" title=" " alt="" coords="133,70,283,96"/>
+<area shape="poly" id="edge703_Node000000_Node000002" title=" " alt="" coords="81,118,115,106,154,94,155,99,117,111,83,123"/>
+<area shape="rect" id="Node000003" href="$classfile__io_1_1RenameConfigObjectScreen.html" title=" " alt="" coords="118,120,298,161"/>
+<area shape="poly" id="edge704_Node000000_Node000003" title=" " alt="" coords="83,138,118,138,118,143,83,143"/>
+<area shape="rect" id="Node000004" href="$classmain__screen_1_1MainScreen.html" title=" " alt="" coords="124,185,292,211"/>
+<area shape="poly" id="edge705_Node000000_Node000004" title=" " alt="" coords="83,157,117,170,155,182,154,187,115,175,81,162"/>
+<area shape="rect" id="Node000005" href="$classquit__screen_1_1QuitScreen.html" title=" " alt="" coords="130,234,286,260"/>
+<area shape="poly" id="edge706_Node000000_Node000005" title=" " alt="" coords="58,164,84,194,117,221,140,231,138,236,114,225,80,198,54,168"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="/github/workspace/dev_area/build/appmodel/codegen/include/appmodel/NWDetDataReceiver.hpp" name="/github/workspace/dev_area/build/appmodel/codegen/include/appmodel/NWDetDataReceiver.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="539,5,719,76"/>
+<area shape="rect" id="Node000002" href="$include_2appmodel_2DPDKReceiver_8hpp.html" title=" " alt="" coords="342,124,521,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="559,86,492,126,489,121,556,82"/>
+<area shape="rect" id="Node000004" href="$dump__dunedaq____appmodel_8cpp.html" title=" " alt="" coords="5,243,194,313"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="524,65,429,90,331,126,279,153,228,184,144,244,141,240,225,180,276,149,329,122,427,85,523,60"/>
+<area shape="rect" id="Node000005" href="$sourcecode_2appmodel_2src_2ReadoutApplication_8cpp.html" title=" " alt="" coords="653,250,837,306"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="598,90,586,115,578,142,577,169,586,193,599,206,620,220,676,247,674,252,617,225,595,210,581,196,572,169,573,141,581,113,593,88"/>
+<area shape="rect" id="Node000008" href="$src_2DPDKReceiver_8hpp.html" title=" " alt="" coords="595,132,807,187"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="660,88,686,130,682,132,656,90"/>
+<area shape="rect" id="Node000009" href="$NWDetDataReceiver_8cpp.html" title=" " alt="" coords="831,132,1075,187"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="734,77,878,128,876,133,732,82"/>
+<area shape="rect" id="Node000010" href="$sourcecode_2appmodel_2src_2WIECApplication_8cpp.html" title=" " alt="" coords="1099,132,1284,187"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="734,54,901,82,1088,121,1113,128,1112,133,1087,127,900,87,734,59"/>
+<area shape="rect" id="Node000003" href="$DPDKReceiver_8cpp.html" title=" " alt="" coords="218,250,429,306"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="391,208,351,252,347,248,387,204"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="328,200,195,246,193,241,326,195"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="537,197,673,247,671,252,535,202"/>
+<area shape="rect" id="Node000006" href="$IfaceWrapper_8hpp.html" title=" " alt="" coords="453,250,629,306"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="476,204,517,248,513,252,472,208"/>
+<area shape="rect" id="Node000007" href="$IfaceWrapper_8cpp.html" title=" " alt="" coords="453,361,629,417"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="544,321,544,361,538,361,538,321"/>
+</map>

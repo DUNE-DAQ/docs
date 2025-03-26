@@ -1,0 +1,37 @@
+<map id="/github/workspace/dev_area/build/timinglibs/codegen/include/timinglibs/timingcmd/Structs.hpp" name="/github/workspace/dev_area/build/timinglibs/codegen/include/timinglibs/timingcmd/Structs.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="400,5,579,76"/>
+<area shape="rect" id="Node000002" href="$timinglibs_2codegen_2include_2timinglibs_2timingcmd_2Nljs_8hpp.html" title=" " alt="" coords="559,124,737,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="551,83,603,121,599,126,547,88"/>
+<area shape="rect" id="Node000003" href="$msgp_8hpp.html" title=" " alt="" coords="812,243,991,313"/>
+<area shape="poly" id="edge14_Node000001_Node000003" title=" " alt="" coords="594,60,673,85,713,102,751,122,789,149,823,180,878,240,874,244,820,184,785,153,748,126,711,106,671,90,593,65"/>
+<area shape="rect" id="Node000004" href="$sourcecode_2timinglibs_2src_2TimingController_8cpp.html" title=" " alt="" coords="357,361,540,417"/>
+<area shape="poly" id="edge20_Node000001_Node000004" title=" " alt="" coords="386,53,292,71,243,86,194,106,148,131,107,162,73,199,48,244,36,280,38,295,47,311,357,369,356,374,44,316,33,297,31,280,43,242,69,196,103,158,145,126,191,101,241,81,291,66,385,48"/>
+<area shape="rect" id="Node000005" href="$sourcecode_2timinglibs_2src_2TimingHardwareManagerBase_8hpp.html" title=" " alt="" coords="845,361,1091,417"/>
+<area shape="poly" id="edge22_Node000001_Node000005" title=" " alt="" coords="595,49,690,60,792,76,883,97,919,108,946,122,979,147,1001,172,1016,202,1030,242,1037,278,1030,314,1016,340,999,363,995,359,1012,337,1024,312,1032,278,1024,243,1011,204,997,175,976,151,943,126,917,113,881,102,791,81,690,66,594,54"/>
+<area shape="rect" id="Node000007" href="$sourcecode_2timinglibs_2include_2timinglibs_2TimingEndpointControllerBase_8hpp.html" title=" " alt="" coords="58,243,276,313"/>
+<area shape="poly" id="edge19_Node000001_Node000007" title=" " alt="" coords="386,61,271,88,224,106,194,126,178,152,169,183,165,214,166,242,160,243,160,214,163,182,173,150,190,122,222,101,270,83,385,56"/>
+<area shape="rect" id="Node000008" href="$sourcecode_2timinglibs_2src_2TimingEndpointControllerBase_8cpp.html" title=" " alt="" coords="44,361,290,417"/>
+<area shape="poly" id="edge21_Node000001_Node000008" title=" " alt="" coords="385,54,298,64,207,80,128,100,97,113,75,126,35,168,21,190,12,212,8,236,10,260,17,285,31,312,54,339,84,359,81,363,50,343,26,315,12,287,5,261,3,235,7,211,16,188,30,165,72,122,95,108,126,95,206,75,297,59,385,48"/>
+<area shape="rect" id="Node000009" href="$sourcecode_2timinglibs_2src_2TimingMasterControllerBase_8cpp.html" title=" " alt="" coords="585,361,821,417"/>
+<area shape="poly" id="edge23_Node000001_Node000009" title=" " alt="" coords="595,44,701,59,759,73,817,93,873,118,925,151,970,192,1005,241,1015,261,1019,279,1016,297,1005,315,984,324,941,336,822,365,821,359,940,331,983,319,1001,311,1011,295,1013,279,1010,263,1001,244,966,195,921,155,870,123,815,98,757,78,700,65,594,49"/>
+<area shape="rect" id="Node000010" href="$sourcecode_2timinglibs_2src_2TimingMasterControllerBase_8hpp.html" title=" " alt="" coords="351,250,586,306"/>
+<area shape="poly" id="edge24_Node000001_Node000010" title=" " alt="" coords="488,92,473,250,468,249,483,91"/>
+<area shape="rect" id="Node000011" href="$sourcecode_2timinglibs_2include_2timinglibs_2TimingController_8hpp.html" title=" " alt="" coords="205,132,452,187"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="431,88,367,133,364,129,428,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="739,199,827,240,825,245,737,204"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="662,210,663,263,656,290,644,315,628,329,603,342,541,365,539,360,601,337,625,325,640,312,651,288,657,263,656,210"/>
+<area shape="poly" id="edge10_Node000002_Node000005" title=" " alt="" coords="688,205,739,259,802,311,846,337,893,358,890,363,844,342,799,316,736,263,684,209"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="545,188,277,253,276,248,543,183"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="648,210,633,266,619,293,599,316,489,338,290,371,289,365,488,332,596,311,615,290,628,264,642,209"/>
+<area shape="poly" id="edge11_Node000002_Node000009" title=" " alt="" coords="681,207,695,242,706,306,707,361,702,361,700,306,690,243,676,209"/>
+<area shape="poly" id="edge12_Node000002_Node000010" title=" " alt="" coords="584,205,511,252,508,248,581,201"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="798,307,541,368,540,363,797,302"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="933,325,954,360,950,362,928,328"/>
+<area shape="rect" id="Node000006" href="$sourcecode_2timinglibs_2src_2TimingHardwareManagerBase_8cpp.html" title=" " alt="" coords="845,465,1091,521"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="971,433,971,464,966,464,966,433"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="170,329,170,361,164,361,164,329"/>
+<area shape="poly" id="edge13_Node000010_Node000009" title=" " alt="" coords="542,310,645,358,643,363,540,315"/>
+<area shape="poly" id="edge17_Node000011_Node000004" title=" " alt="" coords="324,203,325,257,330,286,341,312,363,338,390,359,387,363,359,342,337,315,325,287,319,258,319,203"/>
+<area shape="poly" id="edge16_Node000011_Node000007" title=" " alt="" coords="280,199,216,245,213,240,277,194"/>
+<area shape="poly" id="edge18_Node000011_Node000010" title=" " alt="" coords="374,195,437,247,434,252,371,199"/>
+</map>

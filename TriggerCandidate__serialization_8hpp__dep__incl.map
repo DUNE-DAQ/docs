@@ -1,0 +1,27 @@
+<map id="/github/workspace/dev_area/sourcecode/trigger/include/trigger/TriggerCandidate_serialization.hpp" name="/github/workspace/dev_area/sourcecode/trigger/include/trigger/TriggerCandidate_serialization.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="315,5,524,76"/>
+<area shape="rect" id="Node000002" href="$TCSet_8hpp.html" title=" " alt="" coords="234,124,405,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="380,89,346,125,342,122,376,86"/>
+<area shape="rect" id="Node000003" href="$serialize_8hpp.html" title=" " alt="" coords="429,124,610,180"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="463,86,497,122,493,125,459,89"/>
+<area shape="rect" id="Node000004" href="$trigger_2include_2trigger_2Issues_8hpp.html" title=" " alt="" coords="433,228,606,283"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="522,195,522,227,517,227,517,195"/>
+<area shape="rect" id="Node000005" href="$AlgorithmPlugins_8hpp.html" title=" " alt="" coords="47,331,280,387"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="419,288,260,333,258,328,417,283"/>
+<area shape="rect" id="Node000007" href="$TPProcessor_8cpp.html" title=" " alt="" coords="5,435,170,491"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="418,260,311,265,197,277,145,287,99,299,62,314,37,333,31,344,28,356,32,383,46,409,64,433,60,436,42,412,27,384,23,356,26,342,34,330,59,310,97,294,143,282,197,272,311,260,417,255"/>
+<area shape="rect" id="Node000008" href="$HSISourceModel_8hpp.html" title=" " alt="" coords="304,331,514,387"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="480,296,440,333,437,329,477,292"/>
+<area shape="rect" id="Node000009" href="$TAProcessor_8hpp.html" title=" " alt="" coords="538,331,725,387"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="562,292,603,329,600,333,559,296"/>
+<area shape="rect" id="Node000010" href="$TCProcessor_8hpp.html" title=" " alt="" coords="750,331,937,387"/>
+<area shape="poly" id="edge11_Node000004_Node000010" title=" " alt="" coords="622,286,757,328,756,333,620,291"/>
+<area shape="rect" id="Node000012" href="$TriggerGenericMaker_8hpp.html" title=" " alt="" coords="961,331,1193,387"/>
+<area shape="poly" id="edge13_Node000004_Node000012" title=" " alt="" coords="622,271,949,329,961,331,960,336,948,334,621,276"/>
+<area shape="rect" id="Node000006" href="$TAProcessor_8cpp.html" title=" " alt="" coords="372,435,536,491"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="256,390,377,432,375,437,255,395"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="136,401,110,436,106,433,132,398"/>
+<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="572,397,503,437,501,432,570,393"/>
+<area shape="rect" id="Node000011" href="$TCProcessor_8cpp.html" title=" " alt="" coords="761,435,926,491"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="846,403,846,434,841,434,841,403"/>
+</map>

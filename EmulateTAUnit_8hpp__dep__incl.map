@@ -1,0 +1,11 @@
+<map id="/github/workspace/dev_area/sourcecode/trgtools/include/trgtools/EmulateTAUnit.hpp" name="/github/workspace/dev_area/sourcecode/trgtools/include/trgtools/EmulateTAUnit.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="96,5,325,61"/>
+<area shape="rect" id="Node000002" href="$process__tpstream_8cxx.html" title=" " alt="" coords="5,109,189,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,73,129,110,126,106,167,69"/>
+<area shape="rect" id="Node000003" href="$TAFileHandler_8hpp.html" title=" " alt="" coords="213,109,437,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="254,69,296,106,292,110,251,73"/>
+<area shape="rect" id="Node000004" href="$emulate__from__tpstream_8cxx.html" title=" " alt="" coords="108,213,324,268"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="286,177,247,214,243,210,283,174"/>
+<area shape="rect" id="Node000005" href="$TAFileHandler_8cpp.html" title=" " alt="" coords="347,213,519,268"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="367,174,406,210,402,214,363,177"/>
+</map>

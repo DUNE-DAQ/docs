@@ -1,0 +1,37 @@
+<map id="/github/workspace/dev_area/build/confmodel/codegen/include/confmodel/ResourceSetOR.hpp" name="/github/workspace/dev_area/build/confmodel/codegen/include/confmodel/ResourceSetOR.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1549,5,1733,76"/>
+<area shape="rect" id="Node000002" href="$include_2confmodel_2DetectorToDaqConnection_8hpp.html" title=" " alt="" coords="1314,124,1515,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1561,86,1483,126,1480,121,1559,81"/>
+<area shape="rect" id="Node000006" href="$dump__dunedaq____confmodel_8cpp.html" title=" " alt="" coords="5,243,194,313"/>
+<area shape="poly" id="edge16_Node000001_Node000006" title=" " alt="" coords="1534,53,1294,77,964,115,587,171,394,206,207,245,195,248,193,243,206,240,393,201,586,166,963,110,1294,71,1534,48"/>
+<area shape="rect" id="Node000012" href="$dalMethods_8cpp.html" title=" " alt="" coords="2567,250,2755,306"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="1600,89,1583,116,1571,143,1568,170,1572,182,1580,193,1601,206,1638,216,1748,230,1892,237,2055,238,2368,235,2486,236,2556,240,2586,247,2584,252,2555,245,2486,241,2368,241,2055,244,1892,242,1747,235,1637,221,1599,210,1576,197,1568,184,1563,170,1565,142,1578,113,1596,86"/>
+<area shape="rect" id="Node000015" href="$src_2DetectorToDaqConnection_8hpp.html" title=" " alt="" coords="1591,132,1867,187"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="1678,86,1711,129,1706,133,1674,90"/>
+<area shape="rect" id="Node000016" href="$ResourceSetOR_8cpp.html" title=" " alt="" coords="1892,132,2110,187"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="1748,74,1918,128,1916,133,1747,79"/>
+<area shape="rect" id="Node000017" href="$disabled-components_8cpp.html" title=" " alt="" coords="2134,132,2329,187"/>
+<area shape="poly" id="edge18_Node000001_Node000017" title=" " alt="" coords="1748,53,1924,81,2123,121,2149,128,2148,133,2122,127,1923,86,1747,59"/>
+<area shape="rect" id="Node000003" href="$DataReaderModule_8cpp.html" title=" " alt="" coords="218,250,453,306"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1298,167,1134,175,925,189,695,212,464,245,431,252,430,247,463,240,694,207,925,184,1133,169,1298,162"/>
+<area shape="rect" id="Node000004" href="$FelixCardControllerModule_8cpp.html" title=" " alt="" coords="476,243,686,313"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="1298,170,1023,196,859,217,697,245,686,248,685,242,696,240,859,212,1022,191,1298,165"/>
+<area shape="rect" id="Node000005" href="$DetectorToDaqConnection_8cpp.html" title=" " alt="" coords="709,250,986,306"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="1299,185,999,245,967,252,966,247,998,240,1298,180"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="1298,170,686,206,382,227,207,245,195,248,193,243,206,240,381,222,686,200,1298,164"/>
+<area shape="rect" id="Node000007" href="$sourcecode_2appmodel_2src_2DFApplication_8cpp.html" title=" " alt="" coords="1010,250,1194,306"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="1308,203,1176,252,1174,247,1306,198"/>
+<area shape="rect" id="Node000008" href="$sourcecode_2appmodel_2src_2DaphneApplication_8cpp.html" title=" " alt="" coords="1218,250,1402,306"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="1376,208,1336,251,1332,248,1372,204"/>
+<area shape="rect" id="Node000009" href="$sourcecode_2appmodel_2src_2MLTApplication_8cpp.html" title=" " alt="" coords="1426,250,1610,306"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="1457,204,1496,248,1492,251,1453,208"/>
+<area shape="rect" id="Node000010" href="$sourcecode_2appmodel_2src_2ReadoutApplication_8cpp.html" title=" " alt="" coords="1634,250,1818,306"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="1522,198,1654,247,1652,252,1520,203"/>
+<area shape="rect" id="Node000011" href="$sourcecode_2appmodel_2src_2WIECApplication_8cpp.html" title=" " alt="" coords="1842,250,2026,306"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="1531,191,1535,192,1617,207,1683,215,1748,223,1831,240,1856,247,1855,252,1830,245,1747,229,1682,220,1617,213,1534,197,1530,196"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="1531,191,1535,192,1689,212,1820,219,1936,218,2045,213,2154,208,2270,209,2402,218,2556,240,2586,247,2584,252,2555,245,2401,223,2270,214,2154,214,2045,218,1937,223,1820,224,1688,217,1534,197,1530,197"/>
+<area shape="rect" id="Node000013" href="$FakeCardReaderBase_8hpp.html" title=" " alt="" coords="2050,243,2314,313"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="1531,191,1535,192,1675,212,1786,218,1897,223,2039,240,2050,242,2049,247,2038,245,1897,228,1786,223,1675,217,1534,197,1530,197"/>
+<area shape="rect" id="Node000014" href="$HDF5SourceIDHandler_8cpp.html" title=" " alt="" coords="2339,250,2543,306"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="1531,191,1535,192,1654,209,1756,216,1846,217,1930,215,2015,213,2105,215,2207,223,2327,240,2358,247,2357,252,2326,245,2206,228,2105,220,2015,219,1930,221,1846,222,1756,221,1653,214,1534,197,1530,197"/>
+</map>

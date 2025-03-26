@@ -1,0 +1,31 @@
+<map id="/github/workspace/dev_area/build/timinglibs/codegen/include/timinglibs/dal/TimingEndpointControllerBase.hpp" name="/github/workspace/dev_area/build/timinglibs/codegen/include/timinglibs/dal/TimingEndpointControllerBase.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="868,5,1113,76"/>
+<area shape="rect" id="Node000002" href="$include_2hsilibs_2dal_2HSIController_8hpp.html" title=" " alt="" coords="139,132,373,187"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="853,58,633,86,386,127,355,133,353,128,385,121,632,80,853,53"/>
+<area shape="rect" id="Node000005" href="$src_2HSIController_8hpp.html" title=" " alt="" coords="397,132,576,187"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="854,68,724,94,589,127,565,133,563,128,587,121,723,89,853,63"/>
+<area shape="rect" id="Node000006" href="$include_2timinglibs_2dal_2TimingEndpointController_8hpp.html" title=" " alt="" coords="599,124,814,195"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="893,85,792,126,790,121,891,80"/>
+<area shape="rect" id="Node000008" href="$dump__dunedaq____timinglibs____dal_8cpp.html" title=" " alt="" coords="756,243,945,313"/>
+<area shape="poly" id="edge14_Node000001_Node000008" title=" " alt="" coords="914,87,894,105,878,125,865,154,857,185,852,243,846,242,851,184,860,152,874,123,890,101,911,83"/>
+<area shape="rect" id="Node000009" href="$include_2timinglibs_2dal_2TimingFanoutController_8hpp.html" title=" " alt="" coords="888,124,1093,195"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="993,91,993,124,988,124,988,91"/>
+<area shape="rect" id="Node000011" href="$src_2TimingEndpointController_8hpp.html" title=" " alt="" coords="1116,132,1385,187"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="1083,80,1191,128,1189,133,1081,85"/>
+<area shape="rect" id="Node000012" href="$build_2timinglibs_2codegen_2src_2TimingEndpointControllerBase_8cpp.html" title=" " alt="" coords="1408,124,1653,195"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1129,65,1398,121,1408,124,1407,129,1397,127,1128,71"/>
+<area shape="rect" id="Node000013" href="$src_2TimingFanoutController_8hpp.html" title=" " alt="" coords="1677,132,1936,187"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="1128,51,1379,79,1523,98,1666,121,1700,128,1699,134,1665,127,1522,103,1378,84,1128,57"/>
+<area shape="rect" id="Node000014" href="$sourcecode_2timinglibs_2src_2TimingEndpointControllerBase_8cpp.html" title=" " alt="" coords="1960,132,2205,187"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="1128,44,1295,53,1500,68,1724,90,1948,121,1983,128,1982,133,1947,127,1724,95,1499,73,1294,58,1128,49"/>
+<area shape="rect" id="Node000003" href="$HSIController_8cpp.html" title=" " alt="" coords="5,250,184,306"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="208,198,134,252,131,247,205,194"/>
+<area shape="rect" id="Node000004" href="$dump__dunedaq____hsilibs____dal_8cpp.html" title=" " alt="" coords="208,243,394,313"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="274,201,290,241,285,243,269,203"/>
+<area shape="rect" id="Node000007" href="$TimingEndpointController_8cpp.html" title=" " alt="" coords="464,250,733,306"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="666,208,626,252,622,248,662,204"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="763,202,809,240,806,244,759,207"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="939,207,894,244,891,240,936,203"/>
+<area shape="rect" id="Node000010" href="$TimingFanoutController_8cpp.html" title=" " alt="" coords="969,250,1228,306"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1035,204,1075,248,1071,252,1031,208"/>
+</map>

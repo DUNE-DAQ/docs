@@ -1,0 +1,12 @@
+<map id="dunedaq::appmodel::TAMakerADCSimpleWindowAlgorithm" name="dunedaq::appmodel::TAMakerADCSimpleWindowAlgorithm">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,256,248,297"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1appmodel_1_1TAAlgorithm.html" title=" " alt="" coords="57,168,196,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,224,121,256,116,256,115,224"/>
+<area shape="poly" id="edge6_Node000001_Node000002" title=" " alt="" coords="138,224,137,256,132,256,133,224"/>
+<area shape="rect" id="Node000003" href="$classdunedaq_1_1confmodel_1_1Jsonable.html" title=" " alt="" coords="58,79,195,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="120,135,121,167,116,167,115,135"/>
+<area shape="poly" id="edge5_Node000002_Node000003" title=" " alt="" coords="138,135,137,167,132,167,133,135"/>
+<area shape="rect" id="Node000004" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="34,5,219,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="121,46,121,79,116,79,115,47"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="138,47,137,79,132,79,132,46"/>
+</map>

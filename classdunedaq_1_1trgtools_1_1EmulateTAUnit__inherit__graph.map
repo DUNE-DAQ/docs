@@ -1,0 +1,5 @@
+<map id="dunedaq::trgtools::EmulateTAUnit" name="dunedaq::trgtools::EmulateTAUnit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="251,28,376,69"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1trgtools_1_1EmulationUnit.html" title=" " alt="" coords="5,5,203,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,46,250,46,250,51,218,51"/>
+</map>

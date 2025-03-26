@@ -1,0 +1,7 @@
+<map id="dunedaq::opmonlib::opmon::MonitoringTreeInfo" name="dunedaq::opmonlib::opmon::MonitoringTreeInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="103,124,277,165"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,20,177,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,56,174,122,170,125,110,59"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1opmonlib_1_1opmon_1_1MonitoringTreeInfo_1_1Impl__.html" title=" " alt="" coords="201,5,376,61"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,74,209,125,205,122,252,70"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="add_objects.AddNewObjectScreen" name="add_objects.AddNewObjectScreen">
+<area shape="rect" id="Node000001" title=" " alt="" coords="11,79,193,120"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,103,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,43,92,77,88,80,67,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="127,5,173,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,46,116,80,112,77,133,43"/>
+</map>

@@ -1,0 +1,55 @@
+<map id="/github/workspace/dev_area/sourcecode/dfmessages/include/dfmessages/ComponentRequest_serialization.hpp" name="/github/workspace/dev_area/sourcecode/dfmessages/include/dfmessages/ComponentRequest_serialization.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="650,5,910,76"/>
+<area shape="rect" id="Node000002" href="$DataRequest_8hpp.html" title=" " alt="" coords="311,124,555,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="656,84,521,126,519,121,654,79"/>
+<area shape="rect" id="Node000017" href="$dfmessages_2include_2dfmessages_2TriggerDecision_8hpp.html" title=" " alt="" coords="650,124,910,180"/>
+<area shape="poly" id="edge22_Node000001_Node000017" title=" " alt="" coords="783,92,783,124,777,124,777,92"/>
+<area shape="rect" id="Node000024" href="$Serialization_8cpp.html" title=" " alt="" coords="934,124,1133,180"/>
+<area shape="poly" id="edge29_Node000001_Node000024" title=" " alt="" coords="876,80,971,121,969,126,874,85"/>
+<area shape="rect" id="Node000003" href="$RequestHandlerConcept_8hpp.html" title=" " alt="" coords="205,228,427,298"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="395,192,355,229,351,225,391,188"/>
+<area shape="rect" id="Node000004" href="$DataHandlingModel_8hpp.html" title=" " alt="" coords="37,346,259,417"/>
+<area shape="poly" id="edge20_Node000002_Node000004" title=" " alt="" coords="297,174,242,195,217,211,195,229,176,256,163,287,152,346,147,345,158,285,171,253,191,226,214,206,240,191,295,169"/>
+<area shape="rect" id="Node000007" href="$DefaultRequestHandlerModel_8hpp.html" title=" " alt="" coords="409,346,631,417"/>
+<area shape="poly" id="edge21_Node000002_Node000007" title=" " alt="" coords="452,193,509,345,504,347,447,195"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="255,310,200,348,197,344,252,305"/>
+<area shape="rect" id="Node000005" href="$Readoutlibs_8cpp.html" title=" " alt="" coords="237,584,459,639"/>
+<area shape="poly" id="edge19_Node000003_Node000005" title=" " alt="" coords="323,314,348,583,343,583,318,314"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="391,304,461,343,458,348,388,309"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="56,428,36,446,21,466,12,485,8,502,11,517,21,534,34,546,53,556,107,574,171,587,237,597,237,602,170,593,106,579,51,561,31,550,17,537,6,519,3,501,7,483,16,464,32,442,52,424"/>
+<area shape="rect" id="Node000006" href="$TriggerDataHandlingModel_8hpp.html" title=" " alt="" coords="31,465,259,536"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="150,432,149,465,143,465,144,432"/>
+<area shape="poly" id="edge15_Node000007_Node000005" title=" " alt="" coords="418,427,395,445,376,467,361,495,353,526,349,584,343,583,347,525,356,493,371,463,391,441,415,423"/>
+<area shape="rect" id="Node000008" href="$DefaultSkipListRequestHandler_8hpp.html" title=" " alt="" coords="994,465,1225,536"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="646,415,741,431,815,439,889,447,982,462,994,465,993,470,981,468,888,452,815,444,740,436,645,420"/>
+<area shape="rect" id="Node000011" href="$EmptyFragmentRequestHandlerModel_8hpp.html" title=" " alt="" coords="386,465,654,536"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="523,432,523,465,517,465,517,432"/>
+<area shape="rect" id="Node000012" href="$ZeroCopyRecordingRequestHandlerModel_8hpp.html" title=" " alt="" coords="679,465,969,536"/>
+<area shape="poly" id="edge12_Node000007_Node000012" title=" " alt="" coords="626,420,735,462,733,467,624,425"/>
+<area shape="rect" id="Node000013" href="$TestUtilities_8hpp.html" title=" " alt="" coords="1249,465,1471,536"/>
+<area shape="poly" id="edge14_Node000007_Node000013" title=" " alt="" coords="646,415,736,428,812,434,943,438,1074,442,1149,449,1238,462,1250,465,1249,470,1237,468,1149,454,1073,447,943,443,812,440,735,433,645,420"/>
+<area shape="rect" id="Node000014" href="$DAPHNEListRequestHandler_8hpp.html" title=" " alt="" coords="1494,465,1714,536"/>
+<area shape="poly" id="edge16_Node000007_Node000014" title=" " alt="" coords="646,415,773,431,881,438,977,440,1066,438,1155,436,1250,438,1358,445,1483,462,1494,464,1493,470,1482,468,1357,451,1250,443,1155,441,1066,443,977,445,881,444,772,436,646,420"/>
+<area shape="rect" id="Node000009" href="$TPRequestHandler_8hpp.html" title=" " alt="" coords="999,584,1220,639"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1112,551,1112,583,1107,583,1107,551"/>
+<area shape="rect" id="Node000010" href="$TPRequestHandler_8cpp.html" title=" " alt="" coords="1019,687,1200,743"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1112,655,1112,687,1107,687,1107,655"/>
+<area shape="poly" id="edge11_Node000011_Node000005" title=" " alt="" coords="454,547,392,585,390,581,451,542"/>
+<area shape="poly" id="edge13_Node000012_Node000005" title=" " alt="" coords="665,541,460,587,459,582,663,536"/>
+<area shape="rect" id="Node000015" href="$FDReadoutlibs_8cpp.html" title=" " alt="" coords="1373,584,1576,639"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="1553,548,1509,585,1505,581,1549,544"/>
+<area shape="rect" id="Node000016" href="$DAPHNEListRequestHandler_8cpp.html" title=" " alt="" coords="1600,584,1888,639"/>
+<area shape="poly" id="edge18_Node000014_Node000016" title=" " alt="" coords="1662,543,1711,581,1707,585,1659,547"/>
+<area shape="rect" id="Node000018" href="$TriggerInhibitAgent_8hpp.html" title=" " alt="" coords="610,235,854,291"/>
+<area shape="poly" id="edge23_Node000017_Node000018" title=" " alt="" coords="764,195,746,236,741,234,760,193"/>
+<area shape="rect" id="Node000020" href="$TriggerRecordBuilderData_8hpp.html" title=" " alt="" coords="878,228,1111,298"/>
+<area shape="poly" id="edge25_Node000017_Node000020" title=" " alt="" coords="848,185,928,225,925,230,846,190"/>
+<area shape="rect" id="Node000022" href="$TCProcessor_8hpp.html" title=" " alt="" coords="1134,235,1322,291"/>
+<area shape="poly" id="edge27_Node000017_Node000022" title=" " alt="" coords="926,179,1123,225,1147,232,1146,237,1122,230,924,184"/>
+<area shape="rect" id="Node000019" href="$TriggerInhibitAgent_8cpp.html" title=" " alt="" coords="655,354,843,410"/>
+<area shape="poly" id="edge24_Node000018_Node000019" title=" " alt="" coords="741,306,748,353,743,354,736,307"/>
+<area shape="rect" id="Node000021" href="$TriggerRecordBuilderData_8cpp.html" title=" " alt="" coords="885,354,1104,410"/>
+<area shape="poly" id="edge26_Node000020_Node000021" title=" " alt="" coords="997,313,997,353,992,353,992,313"/>
+<area shape="rect" id="Node000023" href="$TCProcessor_8cpp.html" title=" " alt="" coords="1146,354,1310,410"/>
+<area shape="poly" id="edge28_Node000022_Node000023" title=" " alt="" coords="1231,306,1231,353,1225,353,1225,306"/>
+</map>

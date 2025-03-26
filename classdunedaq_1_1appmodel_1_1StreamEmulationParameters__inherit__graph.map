@@ -1,0 +1,6 @@
+<map id="dunedaq::appmodel::StreamEmulationParameters" name="dunedaq::appmodel::StreamEmulationParameters">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,193,120"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="7,5,191,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,46,94,79,88,79,88,47"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="110,47,110,79,104,79,105,46"/>
+</map>

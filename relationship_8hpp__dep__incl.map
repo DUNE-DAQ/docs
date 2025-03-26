@@ -1,0 +1,94 @@
+<map id="/github/workspace/dev_area/sourcecode/oks/include/oks/relationship.hpp" name="/github/workspace/dev_area/sourcecode/oks/include/oks/relationship.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="4851,5,5036,61"/>
+<area shape="rect" id="Node000002" href="$SchemaCommand_8hpp.html" title=" " alt="" coords="1985,117,2211,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="4836,41,2212,141,2212,136,4835,36"/>
+<area shape="rect" id="Node000020" href="$SchemaCustomRelationshipModel_8hpp.html" title=" " alt="" coords="3396,109,3656,180"/>
+<area shape="poly" id="edge20_Node000001_Node000020" title=" " alt="" coords="4835,37,4620,40,4330,51,4001,74,3833,90,3669,112,3656,114,3656,108,3668,106,3833,85,4001,68,4330,46,4620,35,4835,32"/>
+<area shape="rect" id="Node000023" href="$SchemaCustomSubClassModel_8hpp.html" title=" " alt="" coords="3680,109,3892,180"/>
+<area shape="poly" id="edge27_Node000001_Node000023" title=" " alt="" coords="4835,38,4657,42,4425,53,4165,75,4034,91,3905,112,3892,114,3891,109,3904,106,4033,86,4165,70,4424,48,4657,36,4835,32"/>
+<area shape="rect" id="Node000025" href="$SchemaCustomSuperClassModel_8hpp.html" title=" " alt="" coords="3916,109,4139,180"/>
+<area shape="poly" id="edge30_Node000001_Node000025" title=" " alt="" coords="4835,41,4698,49,4527,63,4339,83,4152,112,4140,114,4138,109,4151,106,4338,78,4526,57,4698,44,4835,36"/>
+<area shape="rect" id="Node000027" href="$SchemaRelationshipEditor_8hpp.html" title=" " alt="" coords="3171,228,3385,298"/>
+<area shape="poly" id="edge33_Node000001_Node000027" title=" " alt="" coords="4835,37,4486,39,4033,48,3811,57,3618,71,3470,88,3419,99,3386,111,3354,135,3329,166,3308,198,3294,228,3289,226,3304,196,3324,163,3351,131,3383,107,3417,94,3469,83,3617,65,3811,52,4032,43,4486,33,4835,32"/>
+<area shape="rect" id="Node000028" href="$class_8cpp.html" title=" " alt="" coords="4163,117,4316,172"/>
+<area shape="poly" id="edge38_Node000001_Node000028" title=" " alt="" coords="4835,42,4728,50,4600,63,4463,83,4328,112,4305,118,4303,113,4327,106,4462,78,4600,58,4728,45,4835,37"/>
+<area shape="rect" id="Node000029" href="$data_8cpp.html" title=" " alt="" coords="4339,117,4492,172"/>
+<area shape="poly" id="edge39_Node000001_Node000029" title=" " alt="" coords="4836,49,4678,73,4590,91,4504,112,4482,118,4480,113,4503,106,4589,85,4677,68,4835,44"/>
+<area shape="rect" id="Node000030" href="$kernel_8cpp.html" title=" " alt="" coords="4515,117,4668,172"/>
+<area shape="poly" id="edge40_Node000001_Node000030" title=" " alt="" coords="4837,65,4680,112,4660,119,4658,113,4679,106,4835,60"/>
+<area shape="rect" id="Node000031" href="$object_8cpp.html" title=" " alt="" coords="4691,117,4844,172"/>
+<area shape="poly" id="edge41_Node000001_Node000031" title=" " alt="" coords="4888,72,4813,118,4810,114,4885,67"/>
+<area shape="rect" id="Node000032" href="$query_8cpp.html" title=" " alt="" coords="4867,117,5020,172"/>
+<area shape="poly" id="edge42_Node000001_Node000032" title=" " alt="" coords="4946,76,4946,116,4941,116,4941,76"/>
+<area shape="rect" id="Node000033" href="$relationship_8cpp.html" title=" " alt="" coords="5043,117,5196,172"/>
+<area shape="poly" id="edge43_Node000001_Node000033" title=" " alt="" coords="5001,67,5077,114,5074,118,4999,72"/>
+<area shape="rect" id="Node000034" href="$OksConfigObject_8cpp.html" title=" " alt="" coords="5220,117,5413,172"/>
+<area shape="poly" id="edge44_Node000001_Node000034" title=" " alt="" coords="5052,62,5208,106,5231,113,5229,118,5207,112,5050,67"/>
+<area shape="rect" id="Node000035" href="$OksConfiguration_8cpp.html" title=" " alt="" coords="5437,117,5631,172"/>
+<area shape="poly" id="edge45_Node000001_Node000035" title=" " alt="" coords="5052,44,5228,68,5427,106,5453,113,5452,118,5425,112,5227,74,5051,49"/>
+<area shape="rect" id="Node000036" href="$oksdalgen_8cxx.html" title=" " alt="" coords="5655,117,5842,172"/>
+<area shape="poly" id="edge46_Node000001_Node000036" title=" " alt="" coords="5052,36,5174,44,5322,58,5484,78,5644,106,5672,113,5670,119,5643,112,5483,83,5322,63,5173,50,5052,42"/>
+<area shape="rect" id="Node000037" href="$oks__diff__data_8cxx.html" title=" " alt="" coords="5866,117,6039,172"/>
+<area shape="poly" id="edge47_Node000001_Node000037" title=" " alt="" coords="5051,32,5209,36,5410,48,5633,70,5745,86,5855,106,5881,113,5880,118,5853,112,5744,91,5632,75,5410,53,5209,41,5051,37"/>
+<area shape="rect" id="Node000038" href="$oks__diff__schema_8cxx.html" title=" " alt="" coords="6064,117,6241,172"/>
+<area shape="poly" id="edge48_Node000001_Node000038" title=" " alt="" coords="5052,36,5571,60,5849,81,5964,93,6052,106,6080,113,6078,118,6051,112,5964,98,5849,86,5570,66,5052,41"/>
+<area shape="rect" id="Node000039" href="$oks__report__equal__objects_8cxx.html" title=" " alt="" coords="6266,117,6493,172"/>
+<area shape="poly" id="edge49_Node000001_Node000039" title=" " alt="" coords="5052,35,5668,60,6007,81,6148,93,6254,106,6289,113,6288,119,6254,112,6147,98,6007,86,5668,65,5052,40"/>
+<area shape="rect" id="Node000040" href="$oks__report__no__descriptions_8cxx.html" title=" " alt="" coords="6518,117,6756,172"/>
+<area shape="poly" id="edge50_Node000001_Node000040" title=" " alt="" coords="5052,34,5368,42,5787,57,6202,78,6374,91,6505,106,6541,113,6540,119,6504,112,6374,97,6202,83,5787,62,5368,48,5051,39"/>
+<area shape="rect" id="Node000041" href="$oks__tutorial_8cxx.html" title=" " alt="" coords="6779,117,6953,172"/>
+<area shape="poly" id="edge51_Node000001_Node000041" title=" " alt="" coords="5051,32,5416,36,5912,46,6168,56,6407,69,6612,85,6768,106,6796,113,6795,119,6767,112,6612,91,6407,74,6168,61,5912,52,5416,41,5051,37"/>
+<area shape="rect" id="Node000003" href="$SchemaCommand_8cpp.html" title=" " alt="" coords="5,354,279,410"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1969,158,1670,182,1253,222,776,278,531,311,292,349,256,356,255,351,291,344,530,306,775,272,1253,217,1669,177,1969,152"/>
+<area shape="rect" id="Node000004" href="$SchemaKernelWrapper_8hpp.html" title=" " alt="" coords="1972,235,2224,291"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="2101,187,2101,235,2095,235,2095,187"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="1956,272,1036,308,564,330,292,349,251,356,250,351,291,344,564,324,1036,302,1956,267"/>
+<area shape="rect" id="Node000005" href="$SchemaAttributeEditor_8cpp.html" title=" " alt="" coords="2624,346,2863,417"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="2240,281,2418,308,2612,344,2624,346,2623,352,2611,349,2417,313,2239,286"/>
+<area shape="rect" id="Node000006" href="$SchemaClassEditor_8cpp.html" title=" " alt="" coords="3674,346,3898,417"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="2239,265,2563,275,2973,291,3372,314,3537,328,3662,344,3674,346,3673,351,3662,349,3536,333,3372,319,2973,297,2563,280,2239,271"/>
+<area shape="rect" id="Node000007" href="$SchemaCustomFileModel_8cpp.html" title=" " alt="" coords="303,346,538,417"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="1956,271,1636,281,1231,298,838,321,675,334,552,349,539,351,538,346,551,344,675,329,838,315,1231,293,1635,276,1956,266"/>
+<area shape="rect" id="Node000008" href="$SchemaCustomModelInterface_8cpp.html" title=" " alt="" coords="563,346,798,417"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="1956,267,1735,272,1449,284,1131,309,969,327,812,349,799,351,798,346,811,344,969,321,1130,303,1449,279,1735,266,1956,262"/>
+<area shape="rect" id="Node000009" href="$SchemaCustomTableModel_8cpp.html" title=" " alt="" coords="823,346,1058,417"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="1956,270,1778,278,1557,292,1314,315,1072,349,1059,351,1058,346,1071,344,1313,310,1556,287,1778,273,1956,265"/>
+<area shape="rect" id="Node000010" href="$SchemaGraphicArrow_8cpp.html" title=" " alt="" coords="1083,346,1318,417"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="1956,276,1667,302,1499,322,1332,349,1319,351,1318,346,1331,344,1498,317,1667,296,1956,271"/>
+<area shape="rect" id="Node000011" href="$SchemaGraphicObject_8cpp.html" title=" " alt="" coords="3415,346,3650,417"/>
+<area shape="poly" id="edge11_Node000004_Node000011" title=" " alt="" coords="2240,262,2464,266,2755,278,3079,303,3243,321,3404,344,3415,346,3414,351,3403,349,3242,326,3078,308,2754,283,2464,271,2240,267"/>
+<area shape="rect" id="Node000012" href="$SchemaGraphicSegmentedArrow_8cpp.html" title=" " alt="" coords="1343,346,1578,417"/>
+<area shape="poly" id="edge12_Node000004_Node000012" title=" " alt="" coords="1957,286,1782,313,1591,349,1580,351,1578,346,1589,344,1781,308,1956,281"/>
+<area shape="rect" id="Node000013" href="$SchemaGraphicsScene_8cpp.html" title=" " alt="" coords="3922,346,4165,417"/>
+<area shape="poly" id="edge13_Node000004_Node000013" title=" " alt="" coords="2240,266,3163,301,3636,323,3808,334,3910,344,3922,346,3921,351,3910,349,3807,339,3636,329,3163,306,2239,272"/>
+<area shape="rect" id="Node000014" href="$SchemaIncludeFileWidget_8cpp.html" title=" " alt="" coords="1602,346,1834,417"/>
+<area shape="poly" id="edge14_Node000004_Node000014" title=" " alt="" coords="1996,298,1832,348,1831,343,1994,293"/>
+<area shape="rect" id="Node000015" href="$SchemaKernelWrapper_8cpp.html" title=" " alt="" coords="1858,346,2085,417"/>
+<area shape="poly" id="edge15_Node000004_Node000015" title=" " alt="" coords="2059,303,2011,348,2007,344,2056,299"/>
+<area shape="rect" id="Node000016" href="$SchemaMainWindow_8cpp.html" title=" " alt="" coords="3173,346,3391,417"/>
+<area shape="poly" id="edge16_Node000004_Node000016" title=" " alt="" coords="2240,264,2424,270,2655,284,2908,308,3036,324,3161,344,3173,346,3172,351,3160,349,3035,329,2908,313,2654,289,2424,276,2239,269"/>
+<area shape="rect" id="Node000017" href="$SchemaMethodEditor_8cpp.html" title=" " alt="" coords="2109,346,2343,417"/>
+<area shape="poly" id="edge17_Node000004_Node000017" title=" " alt="" coords="2141,299,2190,344,2186,348,2137,303"/>
+<area shape="rect" id="Node000018" href="$SchemaMethodImplementationEditor_8cpp.html" title=" " alt="" coords="2367,346,2600,417"/>
+<area shape="poly" id="edge18_Node000004_Node000018" title=" " alt="" coords="2203,293,2369,343,2368,348,2201,298"/>
+<area shape="rect" id="Node000019" href="$SchemaRelationshipEditor_8cpp.html" title=" " alt="" coords="2887,346,3149,417"/>
+<area shape="poly" id="edge19_Node000004_Node000019" title=" " alt="" coords="2240,271,2534,298,2705,318,2876,344,2887,346,2886,351,2875,349,2705,323,2533,303,2240,276"/>
+<area shape="rect" id="Node000021" href="$SchemaCustomRelationshipModel_8cpp.html" title=" " alt="" coords="3410,228,3645,298"/>
+<area shape="poly" id="edge21_Node000020_Node000021" title=" " alt="" coords="3529,195,3530,227,3524,227,3524,195"/>
+<area shape="rect" id="Node000022" href="$SchemaClassEditor_8hpp.html" title=" " alt="" coords="3669,235,3903,291"/>
+<area shape="poly" id="edge22_Node000020_Node000022" title=" " alt="" coords="3619,184,3726,232,3724,237,3617,189"/>
+<area shape="poly" id="edge23_Node000022_Node000006" title=" " alt="" coords="3789,306,3789,346,3783,346,3783,306"/>
+<area shape="poly" id="edge24_Node000022_Node000011" title=" " alt="" coords="3715,300,3609,348,3607,343,3712,295"/>
+<area shape="poly" id="edge25_Node000022_Node000013" title=" " alt="" coords="3861,295,3968,343,3966,348,3859,300"/>
+<area shape="poly" id="edge26_Node000022_Node000016" title=" " alt="" coords="3672,298,3657,301,3530,325,3404,349,3392,352,3391,347,3403,344,3529,319,3656,296,3670,292"/>
+<area shape="poly" id="edge29_Node000023_Node000022" title=" " alt="" coords="3789,195,3789,235,3783,235,3783,195"/>
+<area shape="rect" id="Node000024" href="$SchemaCustomSubClassModel_8cpp.html" title=" " alt="" coords="3927,228,4162,298"/>
+<area shape="poly" id="edge28_Node000023_Node000024" title=" " alt="" coords="3878,184,3969,225,3967,230,3876,189"/>
+<area shape="poly" id="edge32_Node000025_Node000022" title=" " alt="" coords="3943,189,3843,237,3841,232,3941,184"/>
+<area shape="rect" id="Node000026" href="$SchemaCustomSuperClassModel_8cpp.html" title=" " alt="" coords="4187,228,4422,298"/>
+<area shape="poly" id="edge31_Node000025_Node000026" title=" " alt="" coords="4125,184,4223,225,4221,230,4123,189"/>
+<area shape="poly" id="edge34_Node000027_Node000006" title=" " alt="" coords="3401,296,3534,320,3663,344,3675,347,3673,352,3661,349,3533,325,3400,301"/>
+<area shape="poly" id="edge35_Node000027_Node000013" title=" " alt="" coords="3401,296,3544,315,3657,321,3769,326,3910,344,3922,346,3921,351,3910,349,3769,331,3657,326,3544,320,3400,301"/>
+<area shape="poly" id="edge36_Node000027_Node000016" title=" " alt="" coords="3282,313,3283,346,3278,346,3277,314"/>
+<area shape="poly" id="edge37_Node000027_Node000019" title=" " alt="" coords="3188,308,3096,348,3094,343,3185,303"/>
+</map>

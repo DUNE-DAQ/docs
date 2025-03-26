@@ -1,0 +1,49 @@
+<map id="/github/workspace/dev_area/sourcecode/triggeralgs/include/triggeralgs/TriggerObjectOverlay.hpp" name="/github/workspace/dev_area/sourcecode/triggeralgs/include/triggeralgs/TriggerObjectOverlay.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="278,5,490,76"/>
+<area shape="rect" id="Node000002" href="$TriggerActivityData_8hpp.html" title=" " alt="" coords="288,213,480,253"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="317,79,292,97,273,118,265,140,265,152,270,163,289,186,313,203,310,207,285,190,265,166,260,153,259,140,269,115,288,93,314,74"/>
+<area shape="rect" id="Node000006" href="$trgdataformats_2include_2trgdataformats_2TriggerObjectOverlay_8hpp.html" title=" " alt="" coords="18,124,205,165"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="291,79,179,121,177,116,290,74"/>
+<area shape="rect" id="Node000015" href="$triggeralgs_2include_2triggeralgs_2TriggerPrimitive_8hpp.html" title=" " alt="" coords="586,220,787,246"/>
+<area shape="poly" id="edge20_Node000001_Node000015" title=" " alt="" coords="491,51,558,63,626,78,682,97,703,109,718,122,727,144,725,166,717,189,706,209,702,206,712,187,720,165,721,144,713,126,700,113,680,102,624,83,557,68,490,57"/>
+<area shape="rect" id="Node000016" href="$TriggerActivity_8hpp.html" title=" " alt="" coords="512,132,704,157"/>
+<area shape="poly" id="edge22_Node000001_Node000016" title=" " alt="" coords="461,74,568,122,566,127,459,79"/>
+<area shape="rect" id="Node000018" href="$TriggerCandidate_8hpp.html" title=" " alt="" coords="280,132,487,157"/>
+<area shape="poly" id="edge26_Node000001_Node000018" title=" " alt="" coords="386,76,386,116,381,116,381,76"/>
+<area shape="rect" id="Node000003" href="$trgdataformats_2include_2trgdataformats_2Types_8hpp.html" title=" " alt="" coords="53,375,221,401"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="360,256,253,329,177,370,174,366,250,325,357,252"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="352,449,413,474"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="476,251,553,275,590,290,623,308,648,327,664,350,666,375,652,402,637,415,615,425,555,442,488,453,428,459,428,454,488,448,554,437,613,420,634,410,648,399,661,374,659,352,644,331,620,312,588,295,551,280,474,257"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="179,399,338,445,337,450,178,404"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="111,449,163,474"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="140,401,140,433,134,433,134,401"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="175,163,308,205,307,210,173,168"/>
+<area shape="rect" id="Node000007" href="$TriggerCandidateData_8hpp.html" title=" " alt="" coords="5,213,213,253"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="114,165,113,197,107,197,108,165"/>
+<area shape="rect" id="Node000010" href="$trgdataformats_2include_2trgdataformats_2TriggerPrimitive_8hpp.html" title=" " alt="" coords="329,301,553,327"/>
+<area shape="poly" id="edge13_Node000006_Node000010" title=" " alt="" coords="149,163,227,211,251,232,277,251,329,276,382,294,380,299,327,281,274,256,248,236,223,215,146,168"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="108,254,104,288,108,326,122,361,118,363,102,328,99,288,102,254"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="91,256,65,286,41,324,34,344,31,363,33,382,43,399,62,413,92,426,172,443,261,452,337,457,337,462,260,458,171,448,90,431,60,418,39,402,28,384,26,363,29,343,37,322,61,283,87,252"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="117,301,163,327"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="119,253,132,286,127,287,114,255"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="186,301,240,327"/>
+<area shape="poly" id="edge12_Node000007_Node000009" title=" " alt="" coords="136,252,186,289,183,294,133,256"/>
+<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="390,330,204,374,203,368,388,325"/>
+<area shape="poly" id="edge17_Node000010_Node000004" title=" " alt="" coords="469,325,493,339,516,357,529,378,529,390,525,402,505,423,481,439,429,457,427,451,478,434,502,419,520,399,524,389,524,380,512,361,490,344,466,330"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="585,375,638,401"/>
+<area shape="poly" id="edge15_Node000010_Node000011" title=" " alt="" coords="471,325,572,367,570,372,469,330"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="245,375,309,401"/>
+<area shape="poly" id="edge16_Node000010_Node000012" title=" " alt="" coords="414,330,320,371,318,366,412,325"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="333,375,405,401"/>
+<area shape="poly" id="edge18_Node000010_Node000013" title=" " alt="" coords="431,329,394,366,390,362,427,325"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="428,375,510,401"/>
+<area shape="poly" id="edge19_Node000010_Node000014" title=" " alt="" coords="448,326,461,359,456,361,443,328"/>
+<area shape="poly" id="edge21_Node000015_Node000010" title=" " alt="" coords="649,249,494,299,492,294,648,244"/>
+<area shape="poly" id="edge23_Node000016_Node000002" title=" " alt="" coords="577,160,450,209,448,204,575,155"/>
+<area shape="poly" id="edge24_Node000016_Node000015" title=" " alt="" coords="621,156,667,207,664,211,617,159"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="504,220,562,246"/>
+<area shape="poly" id="edge25_Node000016_Node000017" title=" " alt="" coords="599,159,555,210,551,207,595,156"/>
+<area shape="poly" id="edge27_Node000018_Node000002" title=" " alt="" coords="386,158,386,198,381,198,381,158"/>
+<area shape="poly" id="edge28_Node000018_Node000007" title=" " alt="" coords="346,160,186,210,185,205,344,155"/>
+<area shape="poly" id="edge29_Node000018_Node000017" title=" " alt="" coords="406,155,500,210,497,214,403,160"/>
+</map>

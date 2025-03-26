@@ -1,0 +1,19 @@
+<map id="/github/workspace/dev_area/build/trigger/codegen/include/trigger/opmon/latency_info.pb.h" name="/github/workspace/dev_area/build/trigger/codegen/include/trigger/opmon/latency_info.pb.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="455,5,649,76"/>
+<area shape="rect" id="Node000002" href="$latency__info_8pb_8cc.html" title=" " alt="" coords="5,124,200,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="440,70,213,127,201,130,199,125,211,121,439,65"/>
+<area shape="rect" id="Node000003" href="$HSISourceModel_8hpp.html" title=" " alt="" coords="224,132,434,187"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="474,86,382,133,380,129,471,81"/>
+<area shape="rect" id="Node000004" href="$TAProcessor_8hpp.html" title=" " alt="" coords="458,132,646,187"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="555,91,555,131,549,131,549,91"/>
+<area shape="rect" id="Node000006" href="$TCProcessor_8hpp.html" title=" " alt="" coords="670,132,858,187"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="630,81,716,129,713,133,627,86"/>
+<area shape="rect" id="Node000008" href="$TPProcessor_8hpp.html" title=" " alt="" coords="882,132,1070,187"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="665,67,870,121,893,128,892,134,868,127,663,72"/>
+<area shape="rect" id="Node000005" href="$TAProcessor_8cpp.html" title=" " alt="" coords="470,243,634,298"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="555,202,555,242,549,242,549,202"/>
+<area shape="rect" id="Node000007" href="$TCProcessor_8cpp.html" title=" " alt="" coords="682,243,846,298"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="767,202,767,242,761,242,761,202"/>
+<area shape="rect" id="Node000009" href="$TPProcessor_8cpp.html" title=" " alt="" coords="894,243,1058,298"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="979,202,979,242,973,242,973,202"/>
+</map>

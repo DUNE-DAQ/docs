@@ -1,0 +1,7 @@
+<map id="dunedaq::daphnemodules::opmon::ChannelInfo" name="dunedaq::daphnemodules::opmon::ChannelInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="107,109,275,150"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,48,174,107,170,110,111,51"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1daphnemodules_1_1opmon_1_1ChannelInfo_1_1Impl__.html" title=" " alt="" coords="201,5,381,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="263,59,212,110,208,107,259,55"/>
+</map>

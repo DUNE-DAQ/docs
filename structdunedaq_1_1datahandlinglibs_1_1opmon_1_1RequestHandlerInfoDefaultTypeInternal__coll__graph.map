@@ -1,0 +1,9 @@
+<map id="dunedaq::datahandlinglibs::opmon::RequestHandlerInfoDefaultTypeInternal" name="dunedaq::datahandlinglibs::opmon::RequestHandlerInfoDefaultTypeInternal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="614,20,842,75"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1datahandlinglibs_1_1opmon_1_1RequestHandlerInfo.html" title=" " alt="" coords="320,27,507,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="523,45,613,45,613,50,523,50"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="32,5,204,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,26,320,36,319,41,219,31"/>
+<area shape="rect" id="Node000004" href="$structdunedaq_1_1datahandlinglibs_1_1opmon_1_1RequestHandlerInfo_1_1Impl__.html" title=" " alt="" coords="5,55,231,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="246,61,319,54,319,59,247,66"/>
+</map>

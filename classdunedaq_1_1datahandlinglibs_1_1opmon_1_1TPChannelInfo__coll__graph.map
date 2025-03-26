@@ -1,0 +1,7 @@
+<map id="dunedaq::datahandlinglibs::opmon::TPChannelInfo" name="dunedaq::datahandlinglibs::opmon::TPChannelInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="110,109,280,150"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,177,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,48,177,107,173,110,112,51"/>
+<area shape="rect" id="Node000003" href="$structdunedaq_1_1datahandlinglibs_1_1opmon_1_1TPChannelInfo_1_1Impl__.html" title=" " alt="" coords="201,5,397,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,59,217,110,213,107,266,55"/>
+</map>

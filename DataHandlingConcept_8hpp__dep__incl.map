@@ -1,0 +1,12 @@
+<map id="/github/workspace/dev_area/sourcecode/datahandlinglibs/include/datahandlinglibs/concepts/DataHandlingConcept.hpp" name="/github/workspace/dev_area/sourcecode/datahandlinglibs/include/datahandlinglibs/concepts/DataHandlingConcept.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="198,5,419,76"/>
+<area shape="rect" id="Node000002" href="$RawDataHandlerBase_8hpp.html" title=" " alt="" coords="5,124,271,195"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="247,87,190,126,187,121,244,83"/>
+<area shape="rect" id="Node000003" href="$DataHandlingModel_8hpp.html" title=" " alt="" coords="346,124,567,195"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="366,84,414,121,411,126,363,88"/>
+<area shape="rect" id="Node000004" href="$Readoutlibs_8cpp.html" title=" " alt="" coords="198,250,419,306"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="311,91,311,250,306,250,306,91"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="402,207,345,252,341,248,399,202"/>
+<area shape="rect" id="Node000005" href="$TriggerDataHandlingModel_8hpp.html" title=" " alt="" coords="444,243,672,313"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="498,204,530,241,526,244,494,208"/>
+</map>

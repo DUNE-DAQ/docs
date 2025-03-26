@@ -1,0 +1,6 @@
+<map id="dunedaq::appmodel::SourceIDToNetworkConnection" name="dunedaq::appmodel::SourceIDToNetworkConnection">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,210,120"/>
+<area shape="rect" id="Node000002" href="$classdunedaq_1_1conffwk_1_1DalObject.html" title="The base class for any generated DAL object." alt="" coords="15,5,200,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,46,102,79,97,79,96,47"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="119,47,118,79,113,79,113,46"/>
+</map>

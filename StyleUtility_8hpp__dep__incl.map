@@ -1,0 +1,32 @@
+<map id="/github/workspace/dev_area/sourcecode/dbe/include/dbe/StyleUtility.hpp" name="/github/workspace/dev_area/sourcecode/dbe/include/dbe/StyleUtility.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1267,5,1448,61"/>
+<area shape="rect" id="Node000002" href="$SchemaIncludeFileWidget_8cpp.html" title=" " alt="" coords="5,228,238,298"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1252,36,972,37,625,46,458,55,315,69,207,87,171,99,149,111,130,136,121,167,118,198,119,227,114,228,112,198,115,165,125,134,145,107,168,94,205,82,314,64,458,50,624,41,972,32,1252,31"/>
+<area shape="rect" id="Node000003" href="$SchemaIncludeFileWidget_8hpp.html" title=" " alt="" coords="158,109,365,180"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1251,38,1082,42,864,54,620,76,497,92,377,112,366,114,364,109,376,106,496,87,620,71,863,49,1082,37,1251,33"/>
+<area shape="rect" id="Node000005" href="$MainWindow_8cpp.html" title=" " alt="" coords="389,117,580,172"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="1251,41,1118,48,953,61,773,81,593,112,565,118,563,113,592,106,772,76,953,55,1118,42,1251,35"/>
+<area shape="rect" id="Node000006" href="$StyleUtility_8cpp.html" title=" " alt="" coords="604,117,783,172"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="1251,45,1039,68,917,87,795,112,770,119,768,113,794,106,916,82,1039,63,1251,40"/>
+<area shape="rect" id="Node000007" href="$CustomLineEdit_8cpp.html" title=" " alt="" coords="807,117,1009,172"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="1252,58,1022,112,997,119,995,113,1021,106,1251,53"/>
+<area shape="rect" id="Node000008" href="$ValidatorComboBox_8cpp.html" title=" " alt="" coords="1033,117,1258,172"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1292,71,1200,118,1197,113,1290,66"/>
+<area shape="rect" id="Node000009" href="$string__attr__text__edit_8cpp.html" title=" " alt="" coords="1281,109,1434,180"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="1360,76,1360,109,1355,109,1355,76"/>
+<area shape="rect" id="Node000010" href="$table_8cpp.html" title=" " alt="" coords="1458,117,1612,172"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1416,67,1492,114,1489,118,1413,72"/>
+<area shape="rect" id="Node000011" href="$BuildingBlockEditors_8cpp.html" title=" " alt="" coords="1637,117,1876,172"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="1464,61,1657,113,1656,118,1462,66"/>
+<area shape="rect" id="Node000012" href="$CreateDatabaseWidget_8cpp.html" title=" " alt="" coords="1900,117,2154,172"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="1464,44,1662,69,1889,106,1922,113,1921,119,1888,112,1661,74,1463,49"/>
+<area shape="rect" id="Node000013" href="$IncludeFileWidget_8cpp.html" title=" " alt="" coords="2178,117,2401,172"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="1464,36,1604,43,1780,57,1973,77,2166,106,2198,113,2197,118,2165,112,1972,82,1779,62,1603,49,1463,41"/>
+<area shape="rect" id="Node000014" href="$ObjectCreator_8cpp.html" title=" " alt="" coords="2425,117,2626,172"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="1464,31,1645,35,1882,46,2148,68,2282,85,2414,106,2445,113,2443,119,2413,112,2282,90,2147,73,1882,51,1645,40,1464,37"/>
+<area shape="rect" id="Node000015" href="$ObjectEditor_8cpp.html" title=" " alt="" coords="2650,117,2841,172"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="1464,35,1727,43,2066,58,2397,79,2534,92,2638,106,2668,113,2667,119,2637,112,2533,97,2397,84,2066,63,1727,49,1464,40"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="210,192,165,229,162,225,207,188"/>
+<area shape="rect" id="Node000004" href="$SchemaMainWindow_8cpp.html" title=" " alt="" coords="262,228,480,298"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="306,189,340,226,337,229,302,193"/>
+</map>
