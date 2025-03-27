@@ -1,3 +1,10 @@
+# JCF, Mar-27-2025: I'M SABOTAGING THIS FILE AND HENCE THE BUILD OF
+# THE DOCUMENTATION BASED ON COMMENTS AT TODAY'S CSAID MEETING THAT
+# `READ THE DOCS` MAY NOT BE ACCEPTABLE AS A HOST FOR FERMILAB
+# DOCUMENTATION
+
+======> This line you're reading is designed to break the build of the documentation <========
+
 # REMINDER: USE SPACES INSTEAD OF TABS IN THIS FILE
 
 # Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
