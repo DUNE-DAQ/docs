@@ -3,9 +3,7 @@
 # `READ THE DOCS` MAY NOT BE ACCEPTABLE AS A HOST FOR FERMILAB
 # DOCUMENTATION
 
-intentional:
-     abuse of
-   yaml whitespace rules
+======> This line you're reading is designed to break the build of the documentation <========
 
 # REMINDER: USE SPACES INSTEAD OF TABS IN THIS FILE
 
