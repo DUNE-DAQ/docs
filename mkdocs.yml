@@ -58,11 +58,6 @@ theme:
         icon: material/eye-outline
         name: Switch to light mode
 
-extra_javascript:
-  - javascripts/base.js
-  - javascripts/bootstrap.min.js
-  - javascripts/jquery-1.10.2.min.js
-
 # Plugins
 plugins:
   - search
