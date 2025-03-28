@@ -28,4 +28,5 @@ site_description: Former Site of the Official Documentation for DUNE DAQ Softwar
 copyright: Copyright &copy; 2016 - 2021 Martin Donath
 
 theme:
+  name: readthedocs
   language: en
