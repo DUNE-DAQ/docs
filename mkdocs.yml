@@ -29,21 +29,12 @@ copyright: Copyright &copy; 2016 - 2021 Martin Donath
 
 theme:
   name: material
-  custom_dir: overrides
   font: false
 
   language: en
 
   features:
-    - content.tabs.link
-    # - navigation.instant
     - navigation.sections
-    - navigation.tabs
-    - navigation.tracking
-    - navigation.top
-    - search.highlight
-    - search.share
-    - search.suggest
 
   palette:
     - media: "(prefers-color-scheme: light)"
