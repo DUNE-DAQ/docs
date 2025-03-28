@@ -33,22 +33,6 @@ theme:
 
   language: en
 
-  features:
-    - navigation.sections
-
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      toggle:
-        icon: material/eye
-        name: Switch to dark mode
-    - scheme: slate
-      primary: teal
-      toggle:
-        icon: material/eye-outline
-        name: Switch to light mode
-
 # Page tree
 nav:
     - Table of Contents: 
