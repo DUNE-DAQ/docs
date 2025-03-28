@@ -1,5 +1,5 @@
 
-# DUNE DAQ C++ Style Guide (based on Google's C++ Style Guide)
+# C++ Style Guide (based on Google's C++ Style Guide)
 
 -------
 
@@ -1347,7 +1347,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Mar 28 08:38:04 2025 -0500_
+_Date: Fri Mar 28 09:51:17 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>
