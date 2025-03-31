@@ -5,14 +5,16 @@
 Here is a sample command for invoking a test (feel free to keep or drop the options in brackets, as you prefer):
 
 ```
-pytest -s td_leakage_between_runs_test.py [--nanorc-option partition-number 2] [--nanorc-option timeout 300]
+pytest -s change_rate_test.py [--nanorc-option log-level debug]  # this nanorc option is still useful even when using drunc
 ```
 
 For reference, here are the ideas behind the existing tests:
 
-* `td_leakage_between_runs_test.py` - tests whether TriggerDecision messages received by the DFO have the correct run number in certain special conditions
-
 * `change_rate_test.py` - Tests whether the change-rate command properly changes the rate of the RTCM and not the FakeHSI
+
+* `td_leakage_between_runs_test.py` - [Currently Broken] tests whether TriggerDecision messages received by the DFO have the correct run number in certain special conditions
+
+* `tc_time_outside_window_test.py` - [Currently Broken] tests whether TriggerCandidate fragments with a start time outside the configured readout window get correctly included in the TriggerRecord
 
 
 -----
@@ -21,9 +23,9 @@ For reference, here are the ideas behind the existing tests:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: Kurt Biery_
 
-_Date: Tue Nov 5 12:26:43 2024 -0600_
+_Date: Thu Feb 27 13:15:03 2025 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/trigger/issues](https://github.com/DUNE-DAQ/trigger/issues)_
 </font>

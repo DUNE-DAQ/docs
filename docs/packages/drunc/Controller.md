@@ -5,27 +5,32 @@ This app is responsible for propagating commands to its children, and ensuring t
 This is the interface through which the user interacts with the `root_controller`. This output is the same for the `controller-shell` as it is for the `unified-shell`. Each available `controller-shell` command will be described here.
 
 ## `connect`
-Currently broken, return to me.
+Reconnects to a controller
+
+## `disconnect`
+Disconnects from the current controller.
 
 ## `exclude` (`include`)
-`exclude`s (`include`s) the current `controller` and all of its children from executing `fsm` commands.
+`exclude`s (`include`s) the current `controller` and all of its children from executing `fsm` commands. You can specify one or more children to the controller, and it will exclude these.
 
 ## `conf`, `start`, `enable-triggers`, etc
 These commands are generated automatically from the controller, which in turns comes from its configuration. If a transition has an argument or an option needed, you can access it via the command help:
 ```bash
 conf
 start --help
-Usage: drunc-unified-shell PROCESS_MANAGER_CONFIGURATION BOOT_CONFIGURATION SESSION_NAME start
-           [OPTIONS] RUN_NUMBER
+Usage: PROCESS_MANAGER BOOT_CONFIGURATION SESSION_NAME start
+           [OPTIONS]
 
   Execute the transition start on the controller root-controller
 
 Options:
   --file-logbook-post TEXT
+  --run-type TEXT
   --trigger-rate FLOAT
   --disable-data-storage BOOLEAN
+  --run-number INTEGER            [required]
   --help                          Show this message and exit.
-start 123456
+start --run-number 1234
 enable-triggers
 [etc...]
 ```
@@ -56,7 +61,10 @@ Gives you help with commands that have been documented. This can be used as just
 List all the processes under the control of the current controller. For `drunc-unified-shell` this lists the segment controllers, and for `drunc-controller-shell` this includes all the applications. [Sample output](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/#ls---from-drunc-unified-shell).
 
 ## `status`
-Defines the status of the directly controlled applications. [Sample output](hhttps://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/#status---from-drunc-unified-shell).
+Diplays the status of the controlled applications. [Sample output](hhttps://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/#status---from-drunc-unified-shell).
+
+## `recompute-status`
+Calculates the status of the controller from it's _included_ children.
 
 ## `whoami`
 Prints `${USERNAME}` (i.e. the person logged in).
@@ -70,7 +78,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Pierre Lasorak_
 
-_Date: Wed Oct 2 17:18:10 2024 +0200_
+_Date: Mon Mar 3 09:45:01 2025 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>

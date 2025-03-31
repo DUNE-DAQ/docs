@@ -138,6 +138,7 @@ nav:
              - packages/daq-release/ci_github_action.md
              - packages/daq-release/create_release_spack.md
              - packages/daq-release/development_workflow_gitflow.md
+             - packages/daq-release/doxygen_mainpage.md
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/team_repos.md
           - daqsystemtest:
@@ -145,6 +146,7 @@ nav:
              - packages/daqsystemtest/integtest/README.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
+             - packages/integrationtest/DataFileCheckParameters.md
           - styleguide:
              - About styleguide: packages/styleguide/README.md
        - Core:   
@@ -252,7 +254,6 @@ nav:
           - dfmodules:
              - About dfmodules: packages/dfmodules/README.md
              - packages/dfmodules/integtest/README.md
-             - packages/dfmodules/python/dfmodules/tpset_demo/README.md
              - packages/dfmodules/TRB_metrics.md
           - hdf5libs:
              - About hdf5libs: packages/hdf5libs/README.md
@@ -267,6 +268,8 @@ nav:
           - trgtools:
              - About trgtools: packages/trgtools/README.md
              - packages/trgtools/convert-tplatencies.md
+             - packages/trgtools/emulate-from-tpstream.md
+             - packages/trgtools/plot-emulated-triggers.md
              - packages/trgtools/process-tpstream.md
              - packages/trgtools/py-trgtools.md
              - packages/trgtools/ta-dump.md

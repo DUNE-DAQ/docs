@@ -1,8 +1,12 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited Feb-24-2025_
+_This document was last edited Mar-31-2025_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
+
+If you've read these instructions before, release notes for specific
+versions of daq-buildtools can be found at the bottom of this
+document.
 
 ## System requirements
 
@@ -14,14 +18,14 @@ To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.openscience
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt fddaq-v5.2.2
+setup_dbt fddaq-v5.3.0
 ```
-Note that `fddaq-v5.2.2` is aliased to `v8.7.1`. 
+Note that `fddaq-v5.3.0` is aliased to `v8.9.1`. 
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.7.1/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.7.1/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.9.1/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.9.1/scripts -> PATH
 DBT setuptools loaded
 ```
 
@@ -35,10 +39,10 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v5.2.2-a9 the latest frozen release as of Feb-24-2025
+dbt-setup-release <release> # fddaq-v5.3.0-a9 the latest frozen release as of Mar-31-2025
 ```
 
-Note that if you set up a frozen release you'll get a message along the lines of `Release "fddaq-v5.2.2-a9" requested; interpreting this as release "fddaq-v5.2.2-a9-1"`; this simply reflects that the latest build iteration of the frozen release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
+Note that if you set up a frozen release you'll get a message along the lines of `Release "fddaq-v5.3.0-a9" requested; interpreting this as release "fddaq-v5.3.0-a9-1"`; this simply reflects that the latest build iteration of the frozen release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
 
 Instead of a frozen release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fddaq-v5.2.0-rc3-a9` you can do:
 ```
@@ -54,7 +58,7 @@ If you wish to develop DUNE DAQ software, you can start by creating a work area.
 
 Each work area is based on a DUNE DAQ software release, which defines what external and DUNE DAQ packages the code you develop in a work area are built against. Releases come in four categories:
 
-* **Nightly Releases**: packages in nightly releases are built each night using the heads of their `develop` and `production/v4` branches. Depending on whether it's the far detector stack or the near detector stack, and whether it's a develop or production build, these are generally labeled either as `NFD_<branch>_<YY><MM><DD>_<OS>` (far detector) or `NND_<branch>_<YY><MM><DD>_<OS>` (near detector). E.g. `NFD_DEV_240716_A9` is the AL9 nightly develop build for the far detector on July 16th, 2024.  
+* **Nightly Releases**: packages in nightly releases are built each night using the heads of their `develop` and `production/v4` branches. Depending on whether it's the far detector stack or the near detector stack, and whether it's a develop or production build, these are generally labeled either as `NFD_<branch>_<YY><MM><DD>_<OS>` (far detector) or `NND_<branch>_<YY><MM><DD>_<OS>` (near detector). E.g. `NFD_DEV_240716_A9` is the AL9 nightly develop build for the far detector on July 16th, 2024, and `NFD_PROD4_250202_A9` is the v4 production nightly build on February 2, 2025. 
 
 * **Frozen Releases**: a frozen release typically comes out every couple of months, and only after extensive testing supervised by a Release Coordinator. Depending on whether it's the far detector stack or the near detector stack, this is labeled as `fddaq-vX.Y.X-<OS>` or `nddaq-vX.Y.Z-<OS>`, e.g., `fddaq-v4.4.4-a9`.  
 
@@ -77,7 +81,7 @@ And to build against a frozen release (_not recommended_, as the codebase change
 dbt-create <frozen release> <name of work area subdirectory> 
 ```
 
-The structure of your work area will look like the following:
+The structure of your work area will include the following files and directories:
 ```txt
 MyTopDir
 ├── build
@@ -152,6 +156,8 @@ And if, after the build, you want to run the unit tests, just add the `--unittes
 dbt-build --clean --unittest  # Blow away the contents of ./build, run config+generate+build, and then run the unit tests
 ```
 ..where in the above case, you blow away the contents of `./build`,  run config+generate+build, install the result in `$DBT_INSTALL_DIR` and then run the unit tests. Be aware that for many packages, unit tests will only (fully) work if you've also rerun `dbt-workarea-env`. 
+
+To run any integration tests your repos may contain (e.g., `dfmodules`) , you can pass the `--integtest` option to `dbt-build`.  
 
 To check for deviations from the coding rules described in the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/), run with the `--lint` option:
 ```
@@ -258,6 +264,15 @@ export DUNE_DAQ_RELEASE_SOURCE="/cvmfs/dunedaq-development.opensciencegrid.org/c
 ```
 `DUNE_DAQ_RELEASE_SOURCE` points to a cvmfs area containing the source code used to build this release. This can be useful for inspecting packages not checked out locally under `$DBT_AREA_ROOT/sourcecode`. 
 
+### `dbt-lcov.sh`
+
+Strictly speaking, this script is more about finding info about your code than about your work area. It determines what fraction of your lines of code and functions the unit tests in your work area's repos cover. This script wraps calls to our installed external [`lcov` package](https://github.com/linux-test-project/lcov). Assuming you've set up your work area's enviroment and are in its base, if you run
+```
+dbt-lcov.sh
+```
+what will happen is that, if it hasn't already been run, the script will insert a few lines of CMake code into the `sourcecode/CMakeLists.txt` file which will ensure that when the repos are built the output will be instrumented in a manner `lcov` can use. It will then perform a clean build now that `sourcecode/CMakeLists.txt` has been modified, followed by a run of the unit tests. It will then output the results in a subdirectory called `./code_coverage_results`; in particular, `./code_coverage_results/html/index.html` is a webpage which will display the fractions mentioned above. 
+
+Please note that due to the modification of `sourcecode/CMakeLists.txt`, you wouldn't want to use the code you build for normal running (e.g., for performance testing or data readout). Likely it's best to use a work area dedicated to code coverage study as opposed to other functions.  
 
 ### Useful Spack commands
 
@@ -276,6 +291,14 @@ There are also useful Spack commands which can be executed to learn about the ve
 Finally, when `dbt-build` is run, a file called `daq_app_rte.sh` is
 produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generally don't need to think about `daq_app_rte.sh` unless you're curious; it's a sourceable file which contains environment variables that [drunc](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/) uses to launch processes when performing runs. 
 
+## Release Notes
+
+[`v8.9.1` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.1)
+
+[`v8.9.0` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.0)
+
+[`v8.8.0` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.8.0)
+
 
 ## Next Step
 
@@ -292,7 +315,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Mon Feb 24 09:14:53 2025 -0600_
+_Date: Mon Mar 31 12:17:35 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
