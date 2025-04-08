@@ -91,6 +91,9 @@ The constructor for creating a new HDF5RawDataFile for writing looks like this:
                   size_t file_index,
                   std::string application_name,
                   const hdf5filelayout::FileLayoutParams& fl_params,
+                  HDF5SourceIDHandler::source_id_geo_id_map_t srcid_geoid_map,
+                  unsigned compression_level = 0,
+                  std::string inprogress_filename_suffix = ".writing",
                   unsigned open_flags = HighFive::File::Create);
 ```
 Upon opening the file -- at object construction -- the following attributes are written:
@@ -98,11 +101,14 @@ Upon opening the file -- at object construction -- the following attributes are 
 - "file_index" (`size_t`)
 - "creation_timestamp" (`std::string`, string translation of the number of milliseconds since epoch)
 - "application_name" (`std::string)
+- "compression_level" (`unsigned`, zlib compression level 0&ndash-9, default: 0)
 
 alongside the file layout paramters as described [above](#hdf5filelayout).
 
 Upon closing the file -- at object destruction -- the following attributes are written:
 - "recorded_size" (`size_t`, number of bytes written in datasets)
+- "uncompressed_raw_data_size" (`size_t`, uncompressed number of bytes contained in all TriggerRecord or TimeSlice objects)
+- "total_file_size" (`size_t`, total number of bytes in the file, including datasets, metadata, and unallocated space)
 - "closing_timestamp" (`std::string`, string translation of the number of milliseconds since epoch).
 
 The key interface for writing is the `HDF5RawDataFile::write(const daqdataformats::TriggerRecord& tr)` member, which takes a TriggerRecord, creates a group in the HDF5 file for it, and then writes all of the underlying data (`TriggerRecordHeader` and `Fragment`s) to appropriate datasets and subgroups. All data are written as dimension 1 `char` arrays, with no change to the input `TriggerRecord` object.
@@ -123,13 +129,31 @@ However, there are a number of useful accessors included in `HDF5RawDataFile` to
 -  `get_trh_ptr(...)` members return a unique ptr to a `TriggerRecordHeader`, with inputs either being a full path as you may get from `get_trigger_record_header_dataset_paths()`, or with an input specifying the desired trigger number;
 -  `get_frag_ptr(...)` members return a unique ptr to a `Fragment`, with inputs either being a full path as you would get from `get_all_fragment_dataset_paths()`, or by specifying the trigger number and `GeoID` of the desired data (or also the elements of the `GeoID`). 
 
-### Version 2 (Latest) Notes
+# Version Notes
 
-This version is the initial version of `hdf5libs` after significant restructuring of many of the existing utilities, including the introduction of the `HDF5FileLayout` class, and separation of the `HDF5RawDataFile` class from `dfmodules`. 
+## Version 7 Notes
 
-Please see the notes in [Version 0](#version0notes)
+- Support for gzip compression was added with the `compression_level` parameter.
+- Added the file attributes `uncompressed_raw_data_size` and `total_file_size`.
+- Added getter methods `get_compression_level`, `get_uncompressed_raw_data_size`, and `get_total_file_size`.
 
-#### Version 0 Notes
+## Version 6 Notes
+- The data types of the `creation_timestamp` and `closing_timestamp` HDF5 File Attributes were changed from string to integer.
+
+## Version 5 Notes
+- The contents of the `TriggerRecordHeaderData` structure changed (support for additional trigger types was added), and it seemed prudent to update the `file_layout_version` to reflect this data format change.
+
+## Version 4 Notes
+- Updated the file format version from 3 to 4 in response to the SW_TriggerPrimitive-to-TriggerPrimitive data structure name change.
+
+## Version 3 Notes
+Extensive notes on the version 3 updates can be found [here](V3FileFormatInterfaceChanges.md).
+
+## Version 2 Notes
+
+This version is the initial version of `hdf5libs` after significant restructuring of many of the existing utilities, including the introduction of the `HDF5FileLayout` class, and separation of the `HDF5RawDataFile` class from `dfmodules`.
+
+## Version 0 Notes
 This version refers to files that were written before the introduction of the `HDF5FileLayout` class. Currently, on reading a file, if there is no file layout attributes found in the file, it assumes a file layout parameter set as such:
 ```
 hdf5filelayout::FileLayoutParams flp;
@@ -190,9 +214,9 @@ Note that for all previously written files, `get_dataset_paths()` will work to r
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Kurt Biery_
+_Author: Andrew Mogan_
 
-_Date: Mon Aug 29 10:35:52 2022 -0500_
+_Date: Mon Apr 7 13:29:59 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/hdf5libs/issues](https://github.com/DUNE-DAQ/hdf5libs/issues)_
 </font>
