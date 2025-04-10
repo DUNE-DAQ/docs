@@ -46,6 +46,8 @@ appmodel: [![appmodel](https://github.com/DUNE-DAQ/appmodel/actions/workflows/du
 
 appfwk: [![appfwk](https://github.com/DUNE-DAQ/appfwk/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/appfwk/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
+asiolibs: [![asiolibs](https://github.com/DUNE-DAQ/asiolibs/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/asiolibs/actions/workflows/dunedaq-develop-cpp-ci.yml)
+
 cmdlib: [![cmdlib](https://github.com/DUNE-DAQ/cmdlib/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/cmdlib/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
 confmodel: [![confmodel](https://github.com/DUNE-DAQ/confmodel/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/confmodel/actions/workflows/dunedaq-develop-cpp-ci.yml)
@@ -139,9 +141,9 @@ wibmod: [![wibmod](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Andrew Mogan_
+_Author: John Freeman_
 
-_Date: Wed Nov 27 14:43:49 2024 -0600_
+_Date: Thu Apr 10 09:00:06 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
