@@ -8,7 +8,7 @@ This software defines a flexible run control infrastructure for a distributed DA
 
 The project is still under development, and as such will still have bugs or features that users may not want. If you encounter any of these please raise an issue and describe it clearly so that we can resolve it easily.
 
-![drunc_overview](https://github.com/DUNE-DAQ/drunc/blob/develop/docs/drunc_overview.png)
+![drunc_overview](drunc_overview.png)
 
 # Setting up
 If you are trying to run `drunc` you **must** have a DUNE-DAQ environment, with `cvmfs` available. See setup instructions [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/) to setup an nightly or a static release.
