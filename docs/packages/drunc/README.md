@@ -1,8 +1,7 @@
-# drunc README
+# DUNE Run Control (drunc)
+
 [![Lint](https://github.com/DUNE-DAQ/drunc/actions/workflows/lint.yml/badge.svg)](https://github.com/DUNE-DAQ/drunc/actions/workflows/lint.yml)
 [![pytest](https://github.com/DUNE-DAQ/drunc/actions/workflows/run_pytest.yml/badge.svg)](https://github.com/DUNE-DAQ/drunc/actions/workflows/run_pytest.yml)
-
-# DUNE Run Control (drunc)
 
 This software defines a flexible run control infrastructure for a distributed DAQ system defined in a set of configuration files used at run time for DUNE. Operation of the experiment is defined through a finite state machine (FSM) which describes the operational state of the DAQ.
 
@@ -18,41 +17,28 @@ Once you have drunc, you can look at the [quick start instructions](https://dune
 
 If you need more details:
 
- * [Process manager](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-manager)
+* [Process manager](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-manager)
 
- * [Controller](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller)
+* [Controller](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller)
 
- * [Unified shell](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Unified-shell) (merges the controller and process manager shells)
+* [Unified shell](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Unified-shell) (merges the controller and process manager shells)
 
 There are more in depth descriptions of part of the system here:
 
- * [FSM](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/FSM)
+* [FSM](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/FSM)
 
 Finally, we have a [FAQ](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/FAQ), have a look there if you have a problem!
 
 # Developing
 If are developing a user interface for `drunc`, you can get help here:
 
- * [Messaging format](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Messaging-format) (valid for all the `drunc` endpoints)
+* [Messaging format](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Messaging-format) (valid for all the `drunc` endpoints)
 
- * [Process manager endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-Manager-interface)
+* [Process manager endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-Manager-interface)
 
- * [Controller endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller-interface)
+* [Controller endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller-interface)
 
 There is more developer information in the [drunc wiki](https://github.com/DUNE-DAQ/drunc/wiki).
 
 # Release notes
 ... are [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Release-notes)
-
------
-
-<font size="1">
-_Last git commit to the markdown source of this page:_
-
-
-_Author: Pierre Lasorak_
-
-_Date: Thu Apr 10 13:12:50 2025 +0200_
-
-_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
-</font>
