@@ -15,6 +15,18 @@ If you are trying to run `drunc` you **must** have a DUNE-DAQ environment, with 
 # Running drunc
 Once you have drunc, you can look at the [quick start instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Running-drunc).
 
+Here's a copy of something from ers:
+
+
+* For N > 1 the following information is added to the issue:
+
+    * host name
+
+    * user name
+
+    * process id
+
+
 If you need more details:
 
 * [Process manager](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-manager)
