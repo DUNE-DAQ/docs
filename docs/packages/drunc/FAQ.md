@@ -125,3 +125,17 @@ You can now issue `status`, or `recompute_status` and continue working. Of cours
 ## So empty...
 If you have a question, please reach out to developers or fill an issue [here](https://github.com/DUNE-DAQ/drunc/issues).
 
+
+
+-----
+
+<font size="1">
+_Last git commit to the markdown source of this page:_
+
+
+_Author: Pierre Lasorak_
+
+_Date: Mon Mar 3 10:38:35 2025 -0600_
+
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
+</font>
