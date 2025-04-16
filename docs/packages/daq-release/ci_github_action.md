@@ -56,10 +56,10 @@ _A snapshot of the [Actions page](https://github.com/DUNE-DAQ/daq-release/action
 - This is a build of the repository which runs inside `ghcr.io/dune-daq/nightly-release-alma9:latest`; i.e. the build is done against the latest nightly build
 
 - CI build is triggered by:
-    - Push to develop;
-    - Pull request to develop;
-    - Every night after the full nightly build is performed;
-    - Manual trigger.
+  - Push to develop;
+  - Pull request to develop;
+  - Every night after the full nightly build is performed;
+  - Manual trigger.
 
 - Defined in the [.github repository](https://github.com/DUNE-DAQ/.github/blob/develop/workflow-templates/dunedaq-develop-cpp-ci.yml)
 

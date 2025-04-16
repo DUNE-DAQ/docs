@@ -24,13 +24,13 @@ The release configuration package versions are defined by `configs/coredaq/cored
 
 The release YAML file contains sections meant to define the versions of packages. In general, the `externals`, `devtools`, `systems` and `pymodules` sections will already have versions defined since you copied the YAML files from the develop release. While the develop release builds DUNE DAQ packages from the head of their `develop` branches, it uses versioned non-DUNE DAQ packages (e.g., Boost). However, you'll want to add the correct versions for the DUNE DAQ packages, e.g. edit
 ```
-        - name: fddetdataformats
+  - name: fddetdataformats
           version: "develop"
           commit: null
 ```
 to
 ```
-        - name: fddetdataformats
+  - name: fddetdataformats
           version: v1.0.2
           commit: null
 ```

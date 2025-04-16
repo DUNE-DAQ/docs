@@ -73,6 +73,16 @@ function massage() {
     
     sed -r -i 's/\[\[(.+)\|([^#]+).*\]\]/[\1](\2.md)/' $markdown_file 
 
+
+    # JCF, Apr-16-2025
+
+    # Based on the manner in which the drunc documentation's Markdown
+    # has been handled, turn list-defining dashes (which only work in
+    # GitHub) into asterices
+
+    sed -r -i 's/^ - /- /' $markdown_file
+    sed -r -i 's/^  +- /  - /' $markdown_file
+    
 }
 
 function add_trailer() {

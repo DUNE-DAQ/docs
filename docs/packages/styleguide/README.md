@@ -459,11 +459,11 @@ foo.hpp - put it before all the other headers.
 
 Then, in order:
 
- - private headers
- - public headers from current package
- - public headers from other packages in project
- - public headers from external dependencies
- - standard library headers
+- private headers
+- public headers from current package
+- public headers from other packages in project
+- public headers from external dependencies
+- standard library headers
 
 All of a project's header files should be listed without use of UNIX directory aliases `.`
 (the current directory) or `..` (the parent directory). For example, a private header
@@ -613,13 +613,13 @@ Use unnamed namespaces/static variables for when it makes sense to maintain file
 
 ### 4.3  Nonmember, Static Member, and Global Functions 
 
- - Use completely global functions rarely, and only if there's a compelling reason
+- Use completely global functions rarely, and only if there's a compelling reason
 
- - If a nonmember function can accomplish what a member function can, prefer a nonmember function. This is because the less code a class's data is exposed to, the less opportunity there is for bugs.
+- If a nonmember function can accomplish what a member function can, prefer a nonmember function. This is because the less code a class's data is exposed to, the less opportunity there is for bugs.
 
- - Nonmember functions should always be in a namespace, and unless there's a compelling reason to violate this rule, to go in the same namespace as the class it works with
+- Nonmember functions should always be in a namespace, and unless there's a compelling reason to violate this rule, to go in the same namespace as the class it works with
 
- - Static methods of a class should generally be closely related to
+- Static methods of a class should generally be closely related to
 instances of the class or the class's static data.
 
 
@@ -671,11 +671,11 @@ Global variables are discouraged. When used, they should be `const` or, if possi
 
 ### 5.1  Doing Work in Constructors 
 
- - Don't call any of a class's virtual functions in its constructor. This will not result in the correct invocation of subclass implementations of those virtual functions.
+- Don't call any of a class's virtual functions in its constructor. This will not result in the correct invocation of subclass implementations of those virtual functions.
 
- - If an error occurs that will prevent the class from being constructed, have it throw an exception. As its destructor won't execute in this scenario, make sure you clean up any resources the constructor allocated before throwing.
+- If an error occurs that will prevent the class from being constructed, have it throw an exception. As its destructor won't execute in this scenario, make sure you clean up any resources the constructor allocated before throwing.
 
- - Initialize a class's member in the constructor's member initialization list rather than assign to it in the constructor's body. An exception to this might be if the member class's default constructor is much faster than its other constructors/assignment operator, but it's not guaranteed that it'll even need to be assigned to. 
+- Initialize a class's member in the constructor's member initialization list rather than assign to it in the constructor's body. An exception to this might be if the member class's default constructor is much faster than its other constructors/assignment operator, but it's not guaranteed that it'll even need to be assigned to. 
 
 
 <a name="Implicit_Conversions"></a>
@@ -710,8 +710,8 @@ If a class contains member data, each of its copy constructor, copy
 
 Always use a `class` rather than `struct` unless you're creating:
 
- - A passive object only meant to carry data
- - A small callable with an `operator()` defined
+- A passive object only meant to carry data
+- A small callable with an `operator()` defined
 
 If using a struct to carry data, all fields must be public, and accessed directly rather than
 through getter/setter methods. Any functions must not provide behavior
@@ -750,10 +750,10 @@ by one of those two specifiers.
 
 There's a limited set of circumstances in which it's OK to overload operators:
 
- - For copying, `operator=`. 
- - For type conversions, `operator()`. More in [implicit conversions](#Implicit_Conversions).
- - When defining comparison operators for a user-defined type
- - Outputting a type's value where it makes sense, by streaming with `operator<<`. Note this should be a nonmember function, not a member function of the type.
+- For copying, `operator=`. 
+- For type conversions, `operator()`. More in [implicit conversions](#Implicit_Conversions).
+- When defining comparison operators for a user-defined type
+- Outputting a type's value where it makes sense, by streaming with `operator<<`. Note this should be a nonmember function, not a member function of the type.
 
 
 <a name="Access_Control"></a>
@@ -778,16 +778,16 @@ empty.
 Within each section, generally prefer grouping similar kinds of
 declarations together, and generally prefer the following order: 
 
- - types (including alias declarations/`typedef`s, `using`, and nested structs and classes)
- - constants 
- - basic constructors (non-copy, non-move)
- - normal functions
- - copy constructor
- - copy assignment 
- - move constructor
- - move assignment
- - destructor
- - data members.
+- types (including alias declarations/`typedef`s, `using`, and nested structs and classes)
+- constants 
+- basic constructors (non-copy, non-move)
+- normal functions
+- copy constructor
+- copy assignment 
+- move constructor
+- move assignment
+- destructor
+- data members.
 
 Do not put large method definitions inline in the class definition. See [Inline Functions](#Inline_Functions) for
 more details.
@@ -796,9 +796,9 @@ more details.
 
 ### 6.1  General guidelines for writing a function 
 
- - Have it do one thing, rather than many things (the "Swiss army knife" trap)
- - If it starts getting long (say, beyond 40 lines) think about ways it could be broken up into other functions
- - Prefer names that describe, to an appropriate level of precision, what the function does
+- Have it do one thing, rather than many things (the "Swiss army knife" trap)
+- If it starts getting long (say, beyond 40 lines) think about ways it could be broken up into other functions
+- Prefer names that describe, to an appropriate level of precision, what the function does
 
 ### 6.2  Output Parameters 
 
@@ -844,17 +844,17 @@ in all cases.
 
 ### 6.8  Ownership and Smart Pointers
 
- - You should find yourself using `std::unique_ptr` more often than `std::shared_ptr`
+- You should find yourself using `std::unique_ptr` more often than `std::shared_ptr`
 
- - Use of raw pointers should be very rare. One of the few times it's OK is when you want to point to an object where you don't want to change anything about its ownership.  
+- Use of raw pointers should be very rare. One of the few times it's OK is when you want to point to an object where you don't want to change anything about its ownership.  
 
- - A corollary is that you should (almost) never use delete on a raw
+- A corollary is that you should (almost) never use delete on a raw
 pointer because we expect that the use of raw pointers which own memory in DUNE DAQ
 will be limited to low-overhead access to pre-existing memory
 buffers, in which the user does not have ownership of the memory
 that is pointed to.
 
- - When using raw pointers, prefer `void*` to point to generic memory over a pointer to a specific type (such as char); this is because you can use a `static_cast` instead of a `reinterpret_cast` on `void*` to cast it to a pointer to the desired type. Of course, use of generic memory should be rare and only in low-level code where knowledge of the type really is absent. 
+- When using raw pointers, prefer `void*` to point to generic memory over a pointer to a specific type (such as char); this is because you can use a `static_cast` instead of a `reinterpret_cast` on `void*` to cast it to a pointer to the desired type. Of course, use of generic memory should be rare and only in low-level code where knowledge of the type really is absent. 
 
 ### 6.9 Coroutines
 
@@ -1318,8 +1318,8 @@ doubt, send an e-mail.
 
 For proper formatting, process your code using the `dbt-clang-format.sh` script from the daq-buildtools package; see more on this in [the daq-buildtools documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/) . Among other things, running the script will satisfy the following two rules:
 
- - Indentation should involve two spaces. Tabs should NOT be used.
- - Lines should (almost) always be less than 120 characters
+- Indentation should involve two spaces. Tabs should NOT be used.
+- Lines should (almost) always be less than 120 characters
  
 
 ## 10.  Exceptions to the Rules 

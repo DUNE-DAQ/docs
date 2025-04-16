@@ -1,13 +1,14 @@
-# DUNE Run Control (drunc)
-
+# drunc README
 [![Lint](https://github.com/DUNE-DAQ/drunc/actions/workflows/lint.yml/badge.svg)](https://github.com/DUNE-DAQ/drunc/actions/workflows/lint.yml)
 [![pytest](https://github.com/DUNE-DAQ/drunc/actions/workflows/run_pytest.yml/badge.svg)](https://github.com/DUNE-DAQ/drunc/actions/workflows/run_pytest.yml)
+
+# DUNE Run Control (drunc)
 
 This software defines a flexible run control infrastructure for a distributed DAQ system defined in a set of configuration files used at run time for DUNE. Operation of the experiment is defined through a finite state machine (FSM) which describes the operational state of the DAQ.
 
 The project is still under development, and as such will still have bugs or features that users may not want. If you encounter any of these please raise an issue and describe it clearly so that we can resolve it easily.
 
-![drunc_overview](drunc_overview.png)
+![drunc_overview](https://github.com/DUNE-DAQ/drunc/blob/develop/docs/drunc_overview.png)
 
 # Setting up
 If you are trying to run `drunc` you **must** have a DUNE-DAQ environment, with `cvmfs` available. See setup instructions [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/) to setup an nightly or a static release.
@@ -15,42 +16,36 @@ If you are trying to run `drunc` you **must** have a DUNE-DAQ environment, with 
 # Running drunc
 Once you have drunc, you can look at the [quick start instructions](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Running-drunc).
 
-Here's a copy of something from ers:
-
-
-* For N > 1 the following information is added to the issue:
-
-    * host name
-
-    * user name
-
-    * process id
-
-
 If you need more details:
-
-* [Process manager](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-manager)
-
-* [Controller](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller)
-
-* [Unified shell](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Unified-shell) (merges the controller and process manager shells)
+- [Process manager](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-manager)
+- [Controller](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller)
+- [Unified shell](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Unified-shell) (merges the controller and process manager shells)
 
 There are more in depth descriptions of part of the system here:
-
-* [FSM](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/FSM)
+- [FSM](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/FSM)
 
 Finally, we have a [FAQ](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/FAQ), have a look there if you have a problem!
 
 # Developing
 If are developing a user interface for `drunc`, you can get help here:
-
-* [Messaging format](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Messaging-format) (valid for all the `drunc` endpoints)
-
-* [Process manager endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-Manager-interface)
-
-* [Controller endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller-interface)
+- [Messaging format](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Messaging-format) (valid for all the `drunc` endpoints)
+- [Process manager endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-Manager-interface)
+- [Controller endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller-interface)
 
 There is more developer information in the [drunc wiki](https://github.com/DUNE-DAQ/drunc/wiki).
 
 # Release notes
 ... are [here](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Release-notes)
+
+-----
+
+<font size="1">
+_Last git commit to the markdown source of this page:_
+
+
+_Author: Pierre Lasorak_
+
+_Date: Thu Apr 10 13:12:50 2025 +0200_
+
+_If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
+</font>

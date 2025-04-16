@@ -17,9 +17,9 @@ See the same entry in the FAQ.
 
 ## NanoRC won't boot my apps?
 There are many reasons why this could happen, here are the 2 most common:
- - Somebody else is running on the same server, in which case you need to pass `--partition-number 1` (or any number between 1 and 10) to the `nanorc` command.
- - Somebody else is running with the same k8s namespace, in which case you should change the session name
- - The machine you are trying to run on don't have enough resources (or at least k8s thinks so). You can check the exact reason by heading to the np04-srv-015:31001 page, then selecting your session name, and going to the list of pod and selecting the one that hasn't started.
+- Somebody else is running on the same server, in which case you need to pass `--partition-number 1` (or any number between 1 and 10) to the `nanorc` command.
+- Somebody else is running with the same k8s namespace, in which case you should change the session name
+- The machine you are trying to run on don't have enough resources (or at least k8s thinks so). You can check the exact reason by heading to the np04-srv-015:31001 page, then selecting your session name, and going to the list of pod and selecting the one that hasn't started.
 
 ## Where are my app logs?
 To see logs, do:
