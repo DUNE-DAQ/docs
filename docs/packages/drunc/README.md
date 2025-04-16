@@ -17,26 +17,26 @@ Once you have drunc, you can look at the [quick start instructions](https://dune
 
 If you need more details:
 
-* [Process manager](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-manager)
+ * [Process manager](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-manager)
 
-* [Controller](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller)
+ * [Controller](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller)
 
-* [Unified shell](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Unified-shell) (merges the controller and process manager shells)
+ * [Unified shell](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Unified-shell) (merges the controller and process manager shells)
 
 There are more in depth descriptions of part of the system here:
 
-* [FSM](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/FSM)
+ * [FSM](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/FSM)
 
 Finally, we have a [FAQ](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/FAQ), have a look there if you have a problem!
 
 # Developing
 If are developing a user interface for `drunc`, you can get help here:
 
-* [Messaging format](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Messaging-format) (valid for all the `drunc` endpoints)
+ * [Messaging format](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Messaging-format) (valid for all the `drunc` endpoints)
 
-* [Process manager endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-Manager-interface)
+ * [Process manager endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-Manager-interface)
 
-* [Controller endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller-interface)
+ * [Controller endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller-interface)
 
 There is more developer information in the [drunc wiki](https://github.com/DUNE-DAQ/drunc/wiki).
 
