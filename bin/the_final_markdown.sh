@@ -109,7 +109,8 @@ for package in $package_list ; do
     fi
 
     cd $tmpdir/$package
-
+    git checkout johnfreeman/issue423_fix_markdown_for_readthedocs
+    
     # JCF, Oct-5-2022: we want documentation on the tools used to
     # develop packages to be stable even while DAQ packages are
     # themselves being updated
