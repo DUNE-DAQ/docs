@@ -73,15 +73,6 @@ function massage() {
     
     sed -r -i 's/\[\[(.+)\|([^#]+).*\]\]/[\1](\2.md)/' $markdown_file 
 
-
-    # JCF, Apr-17-2025
-
-    # Based on the manner in which the drunc documentation's Markdown
-    # has been handled, apply similar spacing logic to tables which begin with "-" rather than "*"
-
-    if [[ "$package" == "drunc" ]]; then 
-	sed -r -i 's/^(\s*\-.*)$/\n\1/;s/^ {2,4}(\-.*)/    \1/;s/^ {5,}(\-.*)/        \1/' $markdown_file
-    fi
 }
 
 function add_trailer() {
