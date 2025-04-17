@@ -30,7 +30,7 @@ _Aside from this readme you can find a lot more info on [jstree.com](http://www.
   - [Include all neccessary files](#include-all-neccessary-files)
   - [Populating a tree using HTML](#populating-a-tree-using-html)
   - [Populating a tree using an array \(or JSON\)](#populating-a-tree-using-an-array-or-json)
-  - [The required JSON format](#the-required-json-format)
+    - [The required JSON format](#the-required-json-format)
   - [Populating the tree using AJAX](#populating-the-tree-using-ajax)
   - [Populating the tree using AJAX and lazy loading nodes](#populating-the-tree-using-ajax-and-lazy-loading-nodes)
   - [Populating the tree using a callback function](#populating-the-tree-using-a-callback-function)
@@ -156,11 +156,11 @@ There are other available options for each node, only set them if you need them 
  * `data` - this can be anything you want - it is metadata you want attached to the node - you will be able to access and modify it any time later - it has no effect on the visuals of the node.
 
  * `state` - an object specifyng a few options about the node:
-  - `selected` - if the node should be initially selected
-  - `opened` - if the node should be initially opened
-  - `disabled` - if the node should be disabled
-  - `checked` - __checkbox plugin specific__ - if the node should be checked (only used when `tie_selection` is `false`, which you should only do if you really know what you are doing)
-  - `undetermined` - __checkbox plugin specific__ - if the node should be rendered in undetermined state (only used with lazy loading and when the node is not yet loaded, otherwise this state is automatically calculated).
+   - `selected` - if the node should be initially selected
+   - `opened` - if the node should be initially opened
+   - `disabled` - if the node should be disabled
+   - `checked` - __checkbox plugin specific__ - if the node should be checked (only used when `tie_selection` is `false`, which you should only do if you really know what you are doing)
+   - `undetermined` - __checkbox plugin specific__ - if the node should be rendered in undetermined state (only used with lazy loading and when the node is not yet loaded, otherwise this state is automatically calculated).
 
  * `type` - __types plugin specific__ - the type of the nodes (should be defined in the types config), if not set `"default"` is assumed.
 

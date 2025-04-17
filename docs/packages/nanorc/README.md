@@ -40,9 +40,9 @@ Now you're ready to run.
 ### Running NanoRC
 
 There are 3 nanorc commands:
-- `nanorc`: for normal development,
-- `nano04rc`: for production environment at NP04,
-- `nanotimingrc`: to run the timing global session.
+ - `nanorc`: for normal development,
+ - `nano04rc`: for production environment at NP04,
+ - `nanotimingrc`: to run the timing global session.
 
 To see a list of options you can pass `nanorc` in order to control things such as the amount of information it prints and the timeouts for transitions, run `nanorc -h`. We'll skip those for now in the following demo:
 ```bash
@@ -466,8 +466,8 @@ If by any "chance" something terrible happened with your pod and it core dumped 
 Go to [Grafana](http://np04-srv-017:31023/) and select your session on the left.
 
 ### "Feature" list:
-- `daq_applications` live in pods (not deployments), with k8s pod restart policy of "Never".
-- mounts `cvmfs` in the pod (`dunedaq` and `dunedaq-development`).
+ - `daq_applications` live in pods (not deployments), with k8s pod restart policy of "Never".
+ - mounts `cvmfs` in the pod (`dunedaq` and `dunedaq-development`).
 
 
 

@@ -30,8 +30,8 @@ where the second column will give you the PID of the process. Kill it, and when 
 
 ## NanoRC won't boot my apps?
 There are many reasons why this could happen, here are the 2 most common:
-- You don't have password-less ssh keys (see how to create password-less ssh keys)
-- Somebody else is running on the same server, in which case you need to pass `--partition-number 1` (or any number between 1 and 10) to the `nanorc` command.
+ - You don't have password-less ssh keys (see how to create password-less ssh keys)
+ - Somebody else is running on the same server, in which case you need to pass `--partition-number 1` (or any number between 1 and 10) to the `nanorc` command.
 
 ## How do I create password-less ssh keys?
 Here is the broad idea (but you are welcome to look on Google too):
@@ -60,8 +60,8 @@ NanoRC tells you where the apps logs are:
 ![boot-logs](boot-logs.png)
 
 If you are using with an older version of nanorc, this message won't be here, in this case 2 choices:
-- you are running with `nanorc`: the logs are in PWD
-- you are running with `nano04rc` or `nanotimingrc`: the logs are in `/log`, and *note that these folders are not shared across the NP04 cluster, so you will need to ssh where the app was running first.*
+ - you are running with `nanorc`: the logs are in PWD
+ - you are running with `nano04rc` or `nanotimingrc`: the logs are in `/log`, and *note that these folders are not shared across the NP04 cluster, so you will need to ssh where the app was running first.*
 
 ## I want more logs
 Run nanorc like this:
