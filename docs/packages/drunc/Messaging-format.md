@@ -82,11 +82,16 @@ message Description {
   optional google.protobuf.Any broadcast = 5;
 }
 ```
- - `type` can be `process_manager` or `controller` right now it is a string.
- - `name` is the name of the server.
- - `session` is the (optional) session name.
- - `commands` is a vector of acceptable commands to send to the endpoint.
- - `broadcast` is a description of the broadcast service.
+
+* `type` can be `process_manager` or `controller` right now it is a string.
+
+* `name` is the name of the server.
+
+* `session` is the (optional) session name.
+
+* `commands` is a vector of acceptable commands to send to the endpoint.
+
+* `broadcast` is a description of the broadcast service.
 
 `CommandDescription` is used to describe all the commands, it has the following format:
 ```
@@ -97,10 +102,14 @@ message CommandDescription {
   string return_type = 4;
 }
 ```
- - `name` is the name of the RPC
- - `data_type` is the format of the `data` field that is expected inside the `Request`. This data is encoded in an `Any` format and decoded prior to command execution
- - `help` is a string providing help
- - `return_type` is the format of the `data` field that should be expected inside the `Response` if the command execution was successful.
+
+* `name` is the name of the RPC
+
+* `data_type` is the format of the `data` field that is expected inside the `Request`. This data is encoded in an `Any` format and decoded prior to command execution
+
+* `help` is a string providing help
+
+* `return_type` is the format of the `data` field that should be expected inside the `Response` if the command execution was successful.
 
 For broadcasting, there is right now only one format that the `describe` command can fill, with a description of the Kafka service that is used to broadcast the log messages:
 ```
@@ -109,8 +118,10 @@ message KafkaBroadcastHandlerConfiguration{
   string topic = 2;
 }
 ```
- - `kafka_address` is a bootstrap server
- - `topic` is the Kafka topic on which this service is logging.
+
+* `kafka_address` is a bootstrap server
+
+* `topic` is the Kafka topic on which this service is logging.
 
 More formats of broadcasting may be added in the future (potentially using [ERS's python binding](https://github.com/DUNE-DAQ/erskafka/tree/develop/python/erskafka)).
 
@@ -165,9 +176,9 @@ In the future, this may change.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: John Freeman_
 
-_Date: Wed Oct 2 17:18:10 2024 +0200_
+_Date: Wed Apr 16 15:58:44 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
