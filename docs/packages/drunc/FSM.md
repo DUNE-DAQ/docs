@@ -2,7 +2,7 @@
 ## Schematic
 The FSM operates the DAQ infrastructure. The FSM is configurable, so technically this schema is a special case of a configuration... But if you are here, you probably want to use the DAQ.
 
-![FSM](https://github.com/DUNE-DAQ/drunc/blob/develop/docs/FSM.png)
+![FSM](FSM.png)
 
 Each transition (black arrow) is translated to a `drunc-controller-shell` or `drunc-unified-shell` command defined, what they do is describe later. States are in the green boxes, each `drunc-controller` should be in one of these states. Batch of transitions can be run as sequences (yellow dotted lines) which execute a series of transitions (although they are not working anymore...)
 
@@ -146,7 +146,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed Apr 16 15:58:44 2025 -0500_
+_Date: Thu Apr 17 10:32:14 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
