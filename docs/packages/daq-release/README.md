@@ -2,7 +2,7 @@
 
 [![AL9 Spack Nightly Workflow (dev, v5) ](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-alma9.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-alma9.yml)
 
-[![Nightly v5 Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-v5-integtest.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-v5-integtest.yml)
+[![Nightly v5 Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/integration_tests.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/integration_tests.yml)
 
 [![Nightly daq-buildtools Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-dbt-tests.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-dbt-tests.yml)
 
@@ -141,9 +141,9 @@ wibmod: [![wibmod](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Andrew Mogan_
 
-_Date: Thu Apr 10 09:00:06 2025 -0500_
+_Date: Fri Apr 18 10:00:16 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
