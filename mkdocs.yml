@@ -253,6 +253,7 @@ nav:
              - packages/drunc/Release-notes.md
              - packages/drunc/Running-drunc.md
              - packages/drunc/Unified-shell-reference.md
+          - druncschema:
           - nanorc:
              - About nanorc: packages/nanorc/README.md
              - packages/nanorc/FAQ-k8s.md
