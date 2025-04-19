@@ -253,6 +253,7 @@ nav:
              - packages/drunc/Release-notes.md
              - packages/drunc/Running-drunc.md
              - packages/drunc/Unified-shell-reference.md
+          - druncschema:
           - nanorc:
              - About nanorc: packages/nanorc/README.md
              - packages/nanorc/FAQ-k8s.md
@@ -264,6 +265,14 @@ nav:
           - restcmd:
              - About restcmd: packages/restcmd/README.md
              - packages/restcmd/scripts/README.md
+          - runconftools:
+             - About runconftools: packages/runconftools/README.md
+             - packages/runconftools/generator_creation.md
+             - packages/runconftools/workflow.md
+          - runconf-ui:
+             - About runconf-ui: packages/runconf-ui/README.md
+             - packages/runconf-ui/dev_instructions.md
+             - packages/runconf-ui/runconf_ui_config.md
        - Dataflow (logical):
           - dfmessages:
              - About dfmessages: packages/dfmessages/README.md
