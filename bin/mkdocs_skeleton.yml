@@ -159,8 +159,11 @@ nav:
           - daqconf:
           - dbe:
           - drunc:
+          - druncschema:
           - nanorc:
           - restcmd:
+          - runconftools:
+          - runconf-ui:
        - Dataflow (logical):
           - dfmessages:
           - dfmodules:

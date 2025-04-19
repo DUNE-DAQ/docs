@@ -86,11 +86,17 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [drunc](packages/drunc/README.md) _Run control infrastructure for a distributed DAQ system_
 
+[druncschema](packages/druncschema/README.md) _Definitions of protobuf messages used by `drunc`_
+
 [nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
 
 [* rcif](packages/rcif/README.md) _run control related_
 
 [restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
+
+[runconftools](packages/runconftools/README.md) _Constructs configurations from a base of ehn1 configurations_
+
+[runconf-ui](packages/runconf-ui/README.md) _An interface which lets shifters enable/disable elements of the detector_
 
 ### Dataflow (logical)
 
