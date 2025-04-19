@@ -159,7 +159,6 @@ nav:
           - daqconf:
           - dbe:
           - drunc:
-          - druncschema:
           - nanorc:
           - restcmd:
           - runconftools:
