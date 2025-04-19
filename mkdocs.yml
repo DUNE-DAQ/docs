@@ -168,6 +168,8 @@ nav:
              - About utilities: packages/utilities/README.md
              - packages/utilities/WorkerThread-Usage-Notes.md
        - Readout:
+          - asiolibs:
+             - About asiolibs: packages/asiolibs/README.md
           - daqdataformats:
              - About daqdataformats: packages/daqdataformats/README.md
              - packages/daqdataformats/ComponentRequestV0.md

@@ -44,6 +44,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 ### Readout
 
+[asiolibs](packages/asiolibs/README.md) _Boost.Asio-based socket reader plugin for low-bandwidth devices_
+
 [daqdataformats](packages/daqdataformats/README.md) _DAQ data formats_
 
 [datahandlinglibs](packages/datahandlinglibs/README.md) _Tools for constructing readout-focused processes_

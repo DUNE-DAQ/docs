@@ -139,6 +139,7 @@ nav:
           - logging:
           - utilities:
        - Readout:
+          - asiolibs:
           - daqdataformats:
           - datahandlinglibs:
           - detchannelmaps:
