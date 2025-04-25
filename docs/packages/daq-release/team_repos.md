@@ -19,6 +19,8 @@
 
     * appmodel
 
+    * cider
+
     * cmdlib
 
     * conffwk
@@ -27,15 +29,11 @@
 
     * connectivityserver
 
-    * dal
-
     * daqconf
 
     * daqsystemtest
 
     * dbe
-
-    * dqm
 
     * drunc
 
@@ -77,6 +75,10 @@
 
     * restcmd
 
+    * runconf-ui
+
+    * runconftools
+
 ## core-sw
 
 * **People to contact**: Kurt Biery, Roland Sipos
@@ -84,6 +86,8 @@
 * **Repositories with write access**:
 
     * appfwk
+
+    * asiolibs
 
     * ctbmodules
 
@@ -159,6 +163,10 @@
 
 * **Repositories with write access**:
 
+    * daphe-firmware
+
+    * daphne-os
+
     * daphnemodules
 
     * sspmodules
@@ -188,10 +196,6 @@
 * **Repositories with write access**:
 
     * daqsystemtest
-
-    * dqm
-
-    * dqm-backend
 
     * dqmtools
 
@@ -259,8 +263,6 @@
 
     * triggeralgs
 
-    * triggermodules
-
 ## wib
 
 * **People to contact**: Alessandro Thea, Paul Keener
@@ -274,7 +276,7 @@
     * wibmod
 
 
-Page was generated at: 30/08/2024 13:03:54
+Page was generated at: 25/04/2025 08:44:43
 
 
 
@@ -286,7 +288,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed Sep 4 10:26:27 2024 -0500_
+_Date: Fri Apr 25 08:47:00 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
