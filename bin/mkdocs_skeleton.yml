@@ -139,6 +139,7 @@ nav:
           - logging:
           - utilities:
        - Readout:
+          - asiolibs:
           - daqdataformats:
           - datahandlinglibs:
           - detchannelmaps:
@@ -157,6 +158,8 @@ nav:
           - dbe:
           - drunc:
           - restcmd:
+          - runconftools:
+          - runconf-ui:
        - Dataflow (logical):
           - dfmessages:
           - dfmodules:

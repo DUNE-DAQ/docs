@@ -74,7 +74,7 @@ In addition to the fields from SmartDaqApplication, the DFOApplication class has
       }
     
     else if (descriptor->get_data_type() == "TriggerInhibit") {
-	busyOutObj = connObj;
+        busyOutObj = connObj;
         output_conns.push_back(&busyOutObj);
     }
   }
@@ -107,9 +107,9 @@ These basic steps are repeated in all SmartDaqApplication instances, with differ
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: Alessandro Thea_
 
-_Date: Wed Jul 10 08:53:27 2024 -0500_
+_Date: Fri Apr 25 09:07:37 2025 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appmodel/issues](https://github.com/DUNE-DAQ/appmodel/issues)_
 </font>

@@ -10,7 +10,7 @@ An appropriately-defined C++ type (see below) can be serialized/deserialized as 
  MyClass m;
  m.some_member=3;
  // ... set other parts of m...
- dunedaq::serialization::SerializationType stype=dunedaq::serialization::kMsgPack; // or kJSON, which is human-readable but slower
+ dunedaq::serialization::SerializationType stype=dunedaq::serialization::kMsgPack; // MsgPack is only supported option for now
  std::vector<uint8_t> bytes=dunedaq::serialization::serialize(m, stype);
  
  // ...elsewhere, after receiving the serialized object:
@@ -19,18 +19,13 @@ An appropriately-defined C++ type (see below) can be serialized/deserialized as 
 
 ## Making types serializable
 
-### With [`moo`](https://github.com/brettviren/moo)
+Classes can be made serializable by adding convertor functions for `msgpack`.
 
-If your type is specified via a `moo` schema, you just need to `moo render` your schema with the `onljs.hpp.j2` template (for json serialization) and with `omsgp.hpp.j2` (for MsgPack serialization; requires `moo` > 0.5.0). Then you will need to `#include` both of the generated headers wherever you serialize/deserialize objects of your type.
-
-### Without [`moo`](https://github.com/brettviren/moo)
-
-If your class is not specified via a `moo` schema, it can be made serializable by adding convertor functions for `msgpack` and, optionally, `nlohmann::json`. If convertor functions are only provided for `msgpack` and not for `nlohmann::json`, json serialization is done by the serialization library: the object is converted to msgpack format and from there to json (and similarly to deserialize).
-
-The easiest way to make your class (de)serializable is with the `DUNE_DAQ_SERIALIZE()` convenience macro provided in [`Serialization.hpp`](./include/serialization/Serialization.hpp):
+The easiest way to make your class (de)serializable is with the `DUNE_DAQ_SERIALIZE()` and `DUNE_DAQ_SERIALIZABLE()` convenience macros provided in [`Serialization.hpp`](./include/serialization/Serialization.hpp):
 
 ```cpp
 // A type that's made serializable "intrusively", ie, by changing the type itself
+namespace dunedaq {
 namespace ns {
 struct MyTypeIntrusive
 {
@@ -41,6 +36,9 @@ struct MyTypeIntrusive
   DUNE_DAQ_SERIALIZE(MyTypeIntrusive, some_int, some_string, some_vector);
 };
 } // namespace ns
+
+DUNE_DAQ_SERIALIZABLE(ns::MyTypeIntrusive, "MyTypeIntrusive"); // should be in the dunedaq namespace
+} // namespace dunedaq
 ```
 
 You may not be able to change the type itself, either because you
@@ -65,13 +63,13 @@ struct MyType
 DUNE_DAQ_SERIALIZE_NON_INTRUSIVE(ns, MyType, some_int, some_string, some_vector);
 ```
 
-A complete example, showing both intrusive and non-intrusive strategies, can be found in [`non_moo_type.cxx`](./test/apps/non_moo_type.cxx).
+A complete example, showing both intrusive and non-intrusive strategies, can be found in [`serialization_simple_test.cxx`](./test/apps/serialization_simple_test.cxx).
 
-Full instructions for serializing arbitrary types with `nlohmann::json` are available [here](https://nlohmann.github.io/json/features/arbitrary_types/) and for `msgpack`, [here](https://github.com/msgpack/msgpack-c/wiki/v2_0_cpp_packer). These include instructions for (de)serializing classes that are not default-constructible.
+Full instructions for serializing arbitrary types with `msgpack` are available [here](https://github.com/msgpack/msgpack-c/wiki/v2_0_cpp_packer). These include instructions for (de)serializing classes that are not default-constructible. Several custom serializers have been implemented, such as [Fragment_serialization.hpp](https://github.com/DUNE-DAQ/dfmessages/blob/develop/include/dfmessages/Fragment_serialization.hpp) in `dfmessages`.
 
 ## Design notes
 
-Choice of serialization methods: there are many, many libraries and formats for serialization/deserialization, with a range of tradeoffs. I chose `nlohmann::json` and `msgpack` to get one human-readable format, and one faster binary format. `nlohmann::json` is chosen as the library for the human-readable format since it was already being used in DUNE DAQ code. For the binary format, I wanted a library that allows serialization of arbitrary types, rather than requiring types to be specified in, eg the library's DSL (this rules out, eg, `protobuf`). We may have to revisit that requirement if we find that `msgpack` does not meet performance requirements.
+Choice of serialization methods: there are many, many libraries and formats for serialization/deserialization, with a range of tradeoffs. For the binary format, we wanted a library that allows serialization of arbitrary types, rather than requiring types to be specified in, eg the library's DSL (this rules out, eg, `protobuf`). We may have to revisit that requirement if we find that `msgpack` does not meet performance requirements.
 
 
 -----
@@ -80,9 +78,9 @@ Choice of serialization methods: there are many, many libraries and formats for 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Philip Rodrigues_
+_Author: Eric Flumerfelt_
 
-_Date: Mon Apr 19 11:04:14 2021 +0100_
+_Date: Thu Mar 27 08:20:37 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/serialization/issues](https://github.com/DUNE-DAQ/serialization/issues)_
 </font>

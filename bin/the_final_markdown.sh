@@ -5,7 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="wibmod utilities trigger trgtools tpglibs timinglibs timing styleguide serialization restcmd rawdatautils opmonlib kafkaopmon logging listrev hermesmodules hdf5libs ipm iomanager integrationtest flxlibs fdreadoutmodules fdreadoutlibs fddetdataformats erskafka ers drunc dpdklibs dfmodules dfmessages detdataformats detchannelmaps dbe datahandlinglibs daqdataformats daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools confmodel cmdlib appfwk appmodel"
+package_list="wibmod utilities trigger trgtools tpglibs timinglibs timing styleguide serialization runconf-ui runconftools restcmd rawdatautils opmonlib kafkaopmon logging listrev hermesmodules hdf5libs ipm iomanager integrationtest flxlibs fdreadoutmodules fdreadoutlibs fddetdataformats erskafka ers drunc dpdklibs dfmodules dfmessages detdataformats detchannelmaps dbe datahandlinglibs daqdataformats daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools confmodel cmdlib asiolibs appfwk appmodel"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -115,11 +115,11 @@ for package in $package_list ; do
     # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout fddaq-v5.3.0_for_docs
+	git checkout fddaq-v5.3.1_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout v3.0.5
     else
-	git checkout coredaq-v5.3.0 || git checkout fddaq-v5.3.0
+	git checkout coredaq-v5.3.1 || git checkout fddaq-v5.3.1
     fi
     echo $tmpdir/$package
 

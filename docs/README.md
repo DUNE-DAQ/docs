@@ -18,7 +18,7 @@ To learn about the C++ coding guidelines which DUNE DAQ package developers shoul
 
 To learn how to run integration tests within our framework, go [here](packages/integrationtest/README.md)
 
-To learn about how to run even more comprehensive tests (particularly relevant during a DUNE DAQ release period), read about the [daq-systemtest package](packages/daq-systemtest/README.md)
+To learn about how to run even more comprehensive tests (particularly relevant during a DUNE DAQ release period), read about the [daqsystemtest package](packages/daqsystemtest/README.md)
 
 To learn how to keep track of assets (files, etc. which affect the behavior of the DAQ but aren't part of a standard software package), go [here](packages/daq-assettools/README.md)
 
@@ -39,6 +39,8 @@ For the other packages, please click on one of the links below. To learn how to 
 [utilities](packages/utilities/README.md) _a toolbox of classes and functions_
 
 ### Readout
+
+[asiolibs](packages/asiolibs/README.md) _Boost.Asio-based socket reader plugin for low-bandwidth devices_
 
 [daqdataformats](packages/daqdataformats/README.md) _DAQ data formats_
 
@@ -75,6 +77,10 @@ For the other packages, please click on one of the links below. To learn how to 
 [drunc](packages/drunc/README.md) _Run control infrastructure for a distributed DAQ system_
 
 [restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
+
+[runconftools](packages/runconftools/README.md) _Constructs configurations from a base of ehn1 configurations_
+
+[runconf-ui](packages/runconf-ui/README.md) _An interface which lets shifters enable/disable elements of the detector_
 
 ### Dataflow (logical)
 

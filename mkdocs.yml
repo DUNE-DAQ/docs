@@ -168,6 +168,8 @@ nav:
              - About utilities: packages/utilities/README.md
              - packages/utilities/WorkerThread-Usage-Notes.md
        - Readout:
+          - asiolibs:
+             - About asiolibs: packages/asiolibs/README.md
           - daqdataformats:
              - About daqdataformats: packages/daqdataformats/README.md
              - packages/daqdataformats/ComponentRequestV0.md
@@ -244,10 +246,18 @@ nav:
              - packages/drunc/Process-manager.md
              - packages/drunc/Release-notes.md
              - packages/drunc/Running-drunc.md
-             - packages/drunc/Unified-shell.md
+             - packages/drunc/Unified-shell-reference.md
           - restcmd:
              - About restcmd: packages/restcmd/README.md
              - packages/restcmd/scripts/README.md
+          - runconftools:
+             - About runconftools: packages/runconftools/README.md
+             - packages/runconftools/generator_creation.md
+             - packages/runconftools/workflow.md
+          - runconf-ui:
+             - About runconf-ui: packages/runconf-ui/README.md
+             - packages/runconf-ui/dev_instructions.md
+             - packages/runconf-ui/runconf_ui_config.md
        - Dataflow (logical):
           - dfmessages:
              - About dfmessages: packages/dfmessages/README.md

@@ -1,3 +1,5 @@
+# Release Notes 
+
 # v0.10.1
 Adds a hierarchy to the processes when they're spawned, so the trees with `ps` get correctly constructed
 
@@ -82,9 +84,12 @@ Most of the server side exceptions should now be propagated back to the shell
 
 ## Thread pinning
 If you are using `fsm.data.xml` from `appdal`, [here](https://github.com/DUNE-DAQ/appdal/blob/develop/config/appdal/fsm.data.xml), you will now get an example of thread pinning. These happen:
- - just before `conf`
- - just after `conf`
- - just after `start`
+
+* just before `conf`
+
+* just after `conf`
+
+* just after `start`
 
 Right now the file is the same for all the three transition, but hopefully it's not too complicated for you to understand what you'd need to modify to get different ones.
 
@@ -118,9 +123,9 @@ Didn't really work, now should work.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: John Freeman_
 
-_Date: Wed Oct 2 17:18:10 2024 +0200_
+_Date: Thu Apr 17 11:25:17 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
