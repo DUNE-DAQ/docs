@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited Mar-24-2025_
+_This document was last edited May-1-2025_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -20,7 +20,7 @@ Simply do:
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
 setup_dbt latest
 ```
-Note that `latest` is aliased to `v8.9.1`. 
+Note that `latest` is aliased to `v8.9.2`. 
 
 After running these two commands, then you'll see something like:
 ```
@@ -36,15 +36,15 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 <a name="Running_a_release_from_cvmfs"></a>
 ## Running a release from cvmfs
 
-If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, frozen releases (especially patch frozen releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a frozen release:
+If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, stable releases (especially patch stable releases) are intended for this scenario, and _not_ for development. Also note that "stable" is a term which is replacing the now-obsolete "frozen" to refer to a versioned release. After setting up daq-buildtools, you can simply run the following command if you wish to use a stable release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v5.2.2-a9 the latest frozen release as of Feb-24-2025
+dbt-setup-release <release> # fddaq-v5.3.1-a9 the latest stable release as of Apr-30-2025
 ```
 
-Note that if you set up a frozen release you'll get a message along the lines of `Release "fddaq-v5.2.2-a9" requested; interpreting this as release "fddaq-v5.2.2-a9-1"`; this simply reflects that the latest build iteration of the frozen release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
+Note that if you set up a stable release you'll get a message along the lines of `Release "fddaq-v5.3.1-a9" requested; interpreting this as release "fddaq-v5.3.1-a9-1"`; this simply reflects that the latest build iteration of the stable release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
 
-Instead of a frozen release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fddaq-v5.2.0-rc3-a9` you can do:
+Instead of a stable release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fddaq-v5.2.0-rc3-a9` you can do:
 ```
 dbt-setup-release -b candidate fddaq-v5.2.0-rc3-a9
 ```
@@ -60,9 +60,9 @@ Each work area is based on a DUNE DAQ software release, which defines what exter
 
 * **Nightly Releases**: packages in nightly releases are built each night using the heads of their `develop` and `production/v4` branches. Depending on whether it's the far detector stack or the near detector stack, and whether it's a develop or production build, these are generally labeled either as `NFD_<branch>_<YY><MM><DD>_<OS>` (far detector) or `NND_<branch>_<YY><MM><DD>_<OS>` (near detector). E.g. `NFD_DEV_240716_A9` is the AL9 nightly develop build for the far detector on July 16th, 2024, and `NFD_PROD4_250202_A9` is the v4 production nightly build on February 2, 2025. 
 
-* **Frozen Releases**: a frozen release typically comes out every couple of months, and only after extensive testing supervised by a Release Coordinator. Depending on whether it's the far detector stack or the near detector stack, this is labeled as `fddaq-vX.Y.X-<OS>` or `nddaq-vX.Y.Z-<OS>`, e.g., `fddaq-v4.4.4-a9`.  
+* **Stable Releases**: a stable release typically comes out every couple of months, and only after extensive testing supervised by a Release Coordinator. Depending on whether it's the far detector stack or the near detector stack, this is labeled as `fddaq-vX.Y.X-<OS>` or `nddaq-vX.Y.Z-<OS>`, e.g., `fddaq-v4.4.4-a9`.  
 
-* **Candidate Releases**: a type of release meant specifically for frozen release testing. Generally labeled as `fddaq-vX.Y.Z-rc<candidate iteration>-<OS>` or `nddaq-vX.Y.Z-rc<candidate iteration>-<OS>`. For example, `fddaq-v4.4.0-rc4-a9` is the fourth release candidate for the AL9 build of `fddaq-v4.4.0`.
+* **Candidate Releases**: a type of release meant specifically for stable release testing. Generally labeled as `fddaq-vX.Y.Z-rc<candidate iteration>-<OS>` or `nddaq-vX.Y.Z-rc<candidate iteration>-<OS>`. For example, `fddaq-v4.4.0-rc4-a9` is the fourth release candidate for the AL9 build of `fddaq-v4.4.0`.
 
 The majority of work areas are set up to build against the most recent nightly release. To do so, run:
 ```sh
@@ -76,9 +76,9 @@ dbt-create -b candidate <candidate release> <name of work area subdirectory> # E
 ```
 ...where to see all available candidate releases, run `dbt-create -l -b candidate`.
 
-And to build against a frozen release (_not recommended_, as the codebase changes fairly rapidly), you don't need the `-b <release type>` argument at all. You can just do:
+And to build against a stable release (_not recommended_, as the codebase changes fairly rapidly), you don't need the `-b <release type>` argument at all. You can just do:
 ```
-dbt-create <frozen release> <name of work area subdirectory> 
+dbt-create <stable release> <name of work area subdirectory> 
 ```
 
 The structure of your work area will include the following files and directories:
@@ -276,7 +276,7 @@ Please note that due to the modification of `sourcecode/CMakeLists.txt`, you wou
 
 ### Useful Spack commands
 
-There are also useful Spack commands which can be executed to learn about the versions of the individual packages you're working with, once you've run `dbt-workarea-env` or `dbt-setup-release`. An [excellent Spack tutorial](https://spack-tutorial.readthedocs.io/en/latest/tutorial_basics.html) inside the official Spack documentation is worth a look, but a few Spack commands can be used right away to learn more about your environment. They're presented both for the case of you having set up a nightly release and a frozen release:
+There are also useful Spack commands which can be executed to learn about the versions of the individual packages you're working with, once you've run `dbt-workarea-env` or `dbt-setup-release`. An [excellent Spack tutorial](https://spack-tutorial.readthedocs.io/en/latest/tutorial_basics.html) inside the official Spack documentation is worth a look, but a few Spack commands can be used right away to learn more about your environment. They're presented both for the case of you having set up a nightly release and a stable release:
 
 * `spack find -N -d --loaded | grep NB` will tell you all the DUNE DAQ packages shared by both far- and near detector software which have been loaded by `dbt-workarea-env` or `dbt-setup-release`
 
@@ -293,7 +293,12 @@ produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generall
 
 ## Release Notes
 
+[`v8.9.2` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.2)
+
 [`v8.9.1` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.1)
+
+[`v8.9.0` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.0)
+
 [`v8.8.0` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.8.0)
 
 
@@ -312,7 +317,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Mon Mar 24 12:12:39 2025 -0500_
+_Date: Thu May 1 15:09:56 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
