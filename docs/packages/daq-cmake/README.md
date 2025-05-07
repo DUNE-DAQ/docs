@@ -397,37 +397,45 @@ etc.). Like daq_add_library, daq_add_unit_test can be provided a
 list of libraries to link against, following the `LINK_LIBRARIES`
 token.
 
-### daq_oks_codegen
+### daq_add_dal_library
 Usage:
 ```
-daq_oks_codegen(<oks schema filename1> ... [TEST] [NAMESPACE ns] [DALDIR subdir] [DEP_PKGS pkg1 pkg2 ...])
+daq_add_dal_library(<oks schema filename1> ... [TEST] [NAMESPACE ns] [DALDIR subdir] [DEP_PKGS pkg1 pkg2 ...])
 ```
 
-`daq_oks_codegen` uses the oksdalgen package's application of the same
-name to generate C++ and Python code from the OKS schema file(s)
-provided to it.
+Note that calling `find_package(conffwk REQUIRED)` is required to use this function
+ 
+`daq_add_dal_library` uses the `oksdalgen` package's application of the
+same name to generate C++ and Python code from the OKS schema
+file(s) provided to it and build it into a shared object library
+with the name `lib<package>_dal`; it optionally can take source files
+which implement some of the functions as well as libraries needed by
+those source files
 
 Arguments:
+`<schema filename1> ...`: the list of OKS schema files to process from `<package>/schema/<package>`. 
 
+`TEST`: If the code is meant for an entity in the package's `test/` subdirectory, `TEST`
+should be passed as an argument, and the schema file's path will be assumed to be
+`test/schema/` rather than merely `schema/`.
 
-* `<oks schema filename1> ...`: the list of OKS schema files to process from `<package>/schema/<package>`. 
+`SOURCES`: the names of any user-written source files needed to
+implement functions whose declarations are generated from a schema,
+taken relative to the `src/` subdirectory
 
+`NAMESPACE`: the namespace in which the generated C++ classes will be in. Defaults to `dunedaq::<package>`
 
-* `TEST`: If the code is meant for an entity in the package's `test/` subdirectory, `TEST` should be passed as an argument, and the schema file's path will be assumed to be `test/schema/` rather than merely `schema/`.
+`DALDIR`: subdirectory relative to the package's primary include directory where headers will appear (`include/<package>/<DALDIR argument>`); default is no subdirectory
 
+`DEP_PKGS`: if a schema file you've provided as an argument itself
+includes a schema file (or schema files) from one or more other
+packages, you need to supply the names of the packages as arguments
+to `DEP_PKGS`. Note the dal libraries produced from those packages
+will automatically get linked in as dependencies and won't need to
+be provided in the `LINK_LIBRARIES` argument described below
 
-* `NAMESPACE`: the namespace in which the generated C++ classes will be in. Defaults to `dunedaq::<package>`
-
-
-* `DALDIR`: subdirectory relative to the package's primary include directory where headers will appear (`include/<package>/<DALDIR argument>`); default is no subdirectory
-
-
-* `DEP_PKGS`: if a schema file you've provided as an argument itself includes a schema file (or schema files) from one or more other packages, you need to supply the names of the packages as arguments to DEP_PKGS. 
-
-The generated code is automatically built into the package's main
-library (i.e., you don't need to explicitly pass the names of the
-generated files to `daq_add_library`). Note that you get an error if
-you call `daq_oks_codegen` and don't also call `daq_add_library`. 
+`LINK_LIBRARIES`: the name of any libraries needed by the source files
+provided by `SOURCES` (`conffwk` automatically provided)
 
 
 ### daq_install
@@ -498,9 +506,9 @@ The matching between the schema file name/path and the jsonnet namespace is esse
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Marco Roda_
+_Author: John Freeman_
 
-_Date: Tue Aug 20 15:37:36 2024 +0200_
+_Date: Tue Apr 29 17:15:00 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
