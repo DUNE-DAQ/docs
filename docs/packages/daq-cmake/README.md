@@ -3,6 +3,7 @@
 This package provides CMake support for DUNE-DAQ packages.
 
 The documentation for this package is divided into four parts:
+
 1) Instructions for `create_dunedaq_package`, a script which will generate a good deal of CMake/C++ code which is standard across all DUNE DAQ packages
 2) A description of the standard structure and CMake build code in a DUNE DAQ package
 3) A complete reference manual for the DUNE-DAQ-specific CMake functions developers can call in order to specify their package's build
@@ -508,7 +509,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Apr 29 17:15:00 2025 -0500_
+_Date: Wed May 7 15:58:29 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
