@@ -8,6 +8,11 @@ SmartDaqApplications implement the `std::vector<const confmodel::DaqModule*> gen
 
 This section will use the "[DFOApplication](https://github.com/DUNE-DAQ/appmodel/blob/develop/src/DFOApplication.cpp)" SmartDaqApplication as an example.
 
+
+## ConfigObjectFactory
+`ConfigObjectFactory` is an helper class to simplify the creation of `appfwk` configuration objects in `SmartApplication`.
+Once instantiated at the start of `generate_modules`, it offers a set of methods to facilitate the creation of configurarion objects, queues and network connections.
+
 ### Boilerplate
 
 The following code must be in your source file to allow the system to instantiate your SmartDaqApplication correctly. The first parameter should be changed to match your SmartDaqApplication class name.
@@ -26,10 +31,11 @@ static ModuleFactory::Registrator __reg__("DFOApplication",
 ### Creating a module
 
 ```C++
-  std::string dfoUid("DFO-" + UID());
-  conffwk::ConfigObject dfoObj;
+
+  ConfigObjectFactory obj_fac(this):
+
   TLOG_DEBUG(7) << "creating OKS configuration object for DFOModule class ";
-  confdb->create(dbfile, "DFOModule", dfoUid, dfoObj);
+  conffwk::ConfigObject dfoObj = obj_fac.create("DFOModule", "DFO-"+UID());
 
   auto dfoConf = get_dfo();
   dfoObj.set_obj("configuration", &dfoConf->config_object());
@@ -55,15 +61,8 @@ In addition to the fields from SmartDaqApplication, the DFOApplication class has
     auto endpoint_class = rule->get_endpoint_class();
     auto descriptor = rule->get_descriptor();
 
-    conffwk::ConfigObject connObj;
-    auto serviceObj = descriptor->get_associated_service()->config_object();
-    std::string connUid(descriptor->get_uid_base());
-    confdb->create(dbfile, "NetworkConnection", connUid, connObj);
-    connObj.set_by_val<std::string>("data_type", descriptor->get_data_type());
-    connObj.set_by_val<std::string>("connection_type", descriptor->get_connection_type());
-    connObj.set_obj("associated_service", &serviceObj);
+    conffwk::ConfigObject connObj = obj_fac.create_net_obj(descriptor);
 
-    //if (endpoint_class == "DFOModule") {
     if (descriptor->get_data_type() == "TriggerDecision") {
         tdInObj = connObj;
         input_conns.push_back(&tdInObj);
@@ -109,7 +108,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Alessandro Thea_
 
-_Date: Fri Apr 25 09:07:37 2025 +0200_
+_Date: Tue May 6 18:27:58 2025 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appmodel/issues](https://github.com/DUNE-DAQ/appmodel/issues)_
 </font>

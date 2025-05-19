@@ -25,6 +25,7 @@ know how to connect the modules internally and to network endpoints.
  specific subclass using a 'magic' map of class names to generate functions.
 
 Readout, HSI, Hermes andDataflow and Trigger applications extend from **SmartDaqApplication**
+
 ## ReadoutApplication
 
  ![ReadoutApplication schema class diagram not including classes whose
@@ -84,9 +85,9 @@ and Connections.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Christian Freeman_
+_Author: Alessandro Thea_
 
-_Date: Thu Oct 17 17:46:05 2024 +0200_
+_Date: Tue May 6 18:27:58 2025 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appmodel/issues](https://github.com/DUNE-DAQ/appmodel/issues)_
 </font>
