@@ -31,8 +31,9 @@ To start with an existing schema file, use the `-f` option.
 
  All new classes are created in the active schema file. This will
 initially be the file you loaded or created above unless the loaded
-file is read-only. To make another file the active schema file, use
-the context menu in the files tab (right-click).
+file is read-only or locked by another process. To make another file
+the active schema file, use the context menu in the files tab
+(right-click).
 
 _NB:_ You cannot add new classes unless you have made a schema file
 'Active'.
@@ -56,10 +57,6 @@ file.
 current schema file and remove any that are not needed.
  -->
 
-__Warning:__ To get the main widow to update with the updated include
-file list it is sometimes necessary to click around in the main window
-until it updates!!
-
 ## Saving files
 
  To save all modified schema files, `File->Save Schema` (Ctrl+S). To
@@ -75,6 +72,10 @@ schemaeditor.
 dialogue box. From here you can define the attributes and
 relationships of your new class and set its superclass inheritance
 from the list of existing classes.
+
+New classes can also be added from the context menu in the schema view
+tabs. This will place the new class on the schema diagram at the
+current cursor position.
 
 ## Schema diagrams
 
@@ -92,12 +93,42 @@ the view.
 
 Multiple views of the schema can be created by selecting the "+"
 button next to the view tabs. A tab can be renamed by selecting the
-'Name View' button on the toolbar.
+'Name View' button on the toolbar. Tbas can be closed by selecting the
+cross ont the top corner of the tab or with the shortcut Ctl-W.
 
-The current schema diagram can be saved from the 'Save View' button on the
-toolbar or printed via the 'Print View' button. 
+### Highlighting classes from the active schema file
 
-The View menu allows you to name, load, save and print the view tabs.
+The classes contained in the current schema fie can be highlighted by
+selecting this option from the conrext menu. This can be useful to see
+at a glance which classes are in which file. Changing the active file
+from the File info tab will change which classes are highlighted
+accordingly.
+
+### Tool-tips
+
+Hovering the mouse over a class in the schema view will bring up a
+tool-tip with the description fields of the class and all its direct
+attributes, relationships and methods.
+
+### View files
+
+The current schema diagram can be saved from the 'Save View' or 'Save
+View as' buttons on the toolbar or printed via the 'Print View'
+button. These options also exist in the View menu along with an option
+to export to an SVG file.
+
+Views can be loaded from files by using the Ctl-V shortcut or
+selecting 'Load View' from the View menu. Views load into new tabs
+unless the current tab is empty.
+
+### Notes
+
+Notes can be added to the view by selecting 'Add note to view' from
+the context menu. Notes are currently written in very simple boxes
+with plain text. Line breaks should be added by hand.
+
+![Note editor](schema-view-note-editor.png)
+
 
 
 ## Keyboard shortcuts
@@ -110,6 +141,7 @@ The View menu allows you to name, load, save and print the view tabs.
 | Ctl-I | Open include dialog  | Only available when there is an 'Active' schema file|
 | Ctl-S | Save modifed schema files  ||
 | Ctl-V | Load View ||
+| Ctl-W | Close tab ||
 | Ctl-Q |  Quit  ||
 
 
@@ -121,7 +153,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Gordon Crone_
 
-_Date: Wed Oct 16 09:12:47 2024 +0100_
+_Date: Thu Feb 13 17:13:13 2025 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dbe/issues](https://github.com/DUNE-DAQ/dbe/issues)_
 </font>
