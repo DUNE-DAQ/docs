@@ -5,16 +5,16 @@
 ## Example
 
 ```bash
-trgtools_process_tpstream -i input_file.hdf5 -o output_file.hdf5 -j algo_config.json -m VDColdboxChannelMap --quiet
+trgtools_process_tpstream -i input_file.hdf5 -o output_file.hdf5 -j algo_config.json -m VDColdboxTPCChannelMap --quiet
 
 trgtools_process_tpstream --latencies -i input_file.hdf5 -o output_file.hdf5 -j algo_config.json
 ```
 
-In the second case, the default map will be `VDColdboxChannelMap`. The `DUNE-DAQ/detchannelmaps` repository has a [table of available channel maps](https://github.com/DUNE-DAQ/detchannelmaps/blob/develop/docs/channel-maps-table.md).
+In the second case, the default map will be `VDColdboxTPCChannelMap`. The `DUNE-DAQ/detchannelmaps` repository has a [table of available channel maps](https://github.com/DUNE-DAQ/detchannelmaps/blob/develop/docs/channel-maps-table.md).
 
 ## Algorithm Configuration
 
-An example `algo_config.json` file with an explenanation are provided [HERE](README.md#configuration).
+An example `algo_config.json` file with an explanation is provided [HERE](README.md#configuration).
 
 
 -----
@@ -23,9 +23,9 @@ An example `algo_config.json` file with an explenanation are provided [HERE](REA
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Artur Sztuc_
+_Author: MRiganSUSX_
 
-_Date: Mon Mar 17 11:37:56 2025 +0100_
+_Date: Thu May 29 20:29:53 2025 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/trgtools/issues](https://github.com/DUNE-DAQ/trgtools/issues)_
 </font>
