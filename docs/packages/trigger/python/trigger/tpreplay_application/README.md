@@ -57,7 +57,7 @@ One can use this script that will modify the OKS data with parameters obtained f
 |----------------------|--------------|----------------|--------------|
 | `--files`            | `str`        | **Required**   | Text file with full paths to HDF5 TPStream file locations. |
 | `--filter-planes`    | `list[int]`  | `[]` (empty)   | List of planes to filter out. Accepts combinations of: <br> `0` (U), `1` (V), `2` (X). Example: `0 1` to filter out both induction planes. |
-| `--channel-map`      | `str`        | `PD2HDChannelMap` | Specify channel map. For example: `PD2HDChannelMap`, `PD2VDBottomTPCChannelMap`, etc. For the full list, see: [Channel Maps Documentation](https://github.com/DUNE-DAQ/detchannelmaps/blob/develop/docs/channel-maps-table.md). |
+| `--channel-map`      | `str`        | `PD2HDTPCChannelMap` | Specify channel map. For example: `PD2HDTPCChannelMap`, `PD2VDBottomTPCChannelMap`, etc. For the full list, see: [Channel Maps Documentation](https://github.com/DUNE-DAQ/detchannelmaps/blob/develop/docs/channel-maps-table.md). |
 | `--n-loops`          | `int`        | -1             | Number of times to loop over the provided data. The default is `-1` and this results in "infinite" replay. For multiple loops, the time of TPs is modified (shifted). |
 | `--config`           | `str`        | `config/daqsystemtest/example-configs.data.xml` | Path to the base OKS configuration file with `tpreplay` session. |
 | `--path`             | `str`        | `tpreplay-run` | Path for local output for configuration files. This directory will be created by this script and modified configurations stored there. |
@@ -80,7 +80,7 @@ An example input text file:
 ```
 --filter-planes 0 1
 ```
-- *channel-map*: valid channel map is needed to extract readout units and planes from TP data. Defaults to `PD2HDChannelMap`. Make sure you are using the correct channel map for your data!
+- *channel-map*: valid channel map is needed to extract readout units and planes from TP data. Defaults to `PD2HDTPCChannelMap`. Make sure you are using the correct channel map for your data!
 - *n-loops*: the application allows to replay the data multiple times by shifting the TP times. If `-1` is used, the replay will continue indefinitely (until the user stops the run).
 - *config*: this is a path to OKS (.data.xml) file that containts default `tpreplay` session. Can be left to use the default.
 - *path*: this is a path that will be created locally to store the modified configurations. By default set to `tpreplay-run`.
@@ -186,7 +186,7 @@ Few notes on what happens in this script:
   <attribute name="template_for" type="class" init-value="TPReplayModule"/>
   <attribute name="number_of_loops" type="u32" init-value="1" is-not-null="yes"/>
   <attribute name="maximum_wait_time_us" type="u32" init-value="1000" is-not-null="yes"/>
-  <attribute name="channel_map" type="string" init-value="PD2HDChannelMap" is-not-null="yes"/>
+  <attribute name="channel_map" type="string" init-value="PD2HDTPCChannelMap" is-not-null="yes"/>
   <attribute name="total_planes" type="u32" init-value="0" is-not-null="yes"/>
   <attribute name="filter_out_plane" type="u32" range="0..2" init-value="0" is-multi-value="yes"/>
   <relationship name="tp_streams" class-type="TPStreamConf" low-cc="one" high-cc="many" is-composite="no" is-exclusive="no" is-dependent="no"/>
@@ -276,7 +276,7 @@ Verbose logging is available in the `TPReplayModule`:
 - Configuration:
 ```
 ### REPLAY CONFIGURATION ###
-Will use channel map: PD2HDChannelMap
+Will use channel map: PD2HDTPCChannelMap
 Plane filtering: 1
 Planes to filter:
 0
@@ -393,9 +393,9 @@ For more details please see [this report](https://docs.dunescience.org/cgi-bin/p
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Michal Rigan_
+_Author: MRiganSUSX_
 
-_Date: Thu May 22 14:25:53 2025 +0200_
+_Date: Thu Jun 5 20:46:10 2025 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/trigger/issues](https://github.com/DUNE-DAQ/trigger/issues)_
 </font>
