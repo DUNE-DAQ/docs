@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited May-1-2025_
+_This document was last edited May-28-2025_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -10,7 +10,7 @@ document.
 
 ## System requirements
 
-To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.opensciencegrid.org` and `/cvmfs/dunedaq-development.opensciencegrid.org`. This is the case, e.g., on the np04 cluster at CERN.
+To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.opensciencegrid.org` and `/cvmfs/dunedaq-development.opensciencegrid.org`. This is the case, e.g., on the np04 cluster at CERN. 
 
 <a name="Setup_of_daq-buildtools"></a>
 ## Setup of `daq-buildtools`
@@ -107,6 +107,17 @@ Along with telling `dbt-create` what you want your work area to be named and wha
 
 * `-i/--install-pyvenv`: With this option, there will be compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory. This is typically slower than cloning, but not always. You can take further control by combining it with the `-p <requirements file>` argument, though it's unlikely as a typical developer that you'd want a non-standard set of Python packages. 
 
+### Cloning an entire work area
+
+A new (June 2025) pair of experimental scripts in daq-buildtools enables users to create a work area by cloning another work area, using a YAML recipe file as an intermediary. The basic approach is simple. To create a recipe file from an existing area, assuming its environment is set up, just do the following:
+```
+dbtx-save-workarea-recipe.py <recipe label>
+```
+and the script will generate a file called `<recipe label>.yaml`. This human-readable file will contain details about the original area, and can then be used later to generate a work area based on the same nightly/candidate/stable release as well as the same repos and their commits as the original area. To do so one can simply pass the file to `dbtx-create-workarea-from-recipe.py` as well as the desired name of the new work area:
+```
+dbtx-create-workarea-from-recipe.py --workarea-name <name of new work area> <recipe label>.yaml
+```
+Both scripts have further options; pass `--help` as an argument to either one in order to get more details. 
 
 <a name="Cloning_and_building"></a>
 ## Cloning and building a package repo
@@ -317,7 +328,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri May 2 12:43:13 2025 -0500_
+_Date: Sat Jun 7 08:40:43 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
