@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited May-1-2025_
+_This document was last edited May-28-2025_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -10,7 +10,7 @@ document.
 
 ## System requirements
 
-To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.opensciencegrid.org` and `/cvmfs/dunedaq-development.opensciencegrid.org`. This is the case, e.g., on the np04 cluster at CERN.
+To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.opensciencegrid.org` and `/cvmfs/dunedaq-development.opensciencegrid.org`. This is the case, e.g., on the np04 cluster at CERN. 
 
 <a name="Setup_of_daq-buildtools"></a>
 ## Setup of `daq-buildtools`
@@ -20,12 +20,12 @@ Simply do:
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
 setup_dbt latest
 ```
-Note that `latest` is aliased to `v8.9.2`. 
+Note that `latest` is aliased to `v8.9.4`. 
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.9.2/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.9.2/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.9.4/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.9.4/scripts -> PATH
 DBT setuptools loaded
 ```
 
@@ -107,6 +107,17 @@ Along with telling `dbt-create` what you want your work area to be named and wha
 
 * `-i/--install-pyvenv`: With this option, there will be compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory. This is typically slower than cloning, but not always. You can take further control by combining it with the `-p <requirements file>` argument, though it's unlikely as a typical developer that you'd want a non-standard set of Python packages. 
 
+### Cloning an entire work area
+
+A new (June 2025) pair of experimental scripts in daq-buildtools enables users to create a work area by cloning another work area, using a YAML recipe file as an intermediary. The basic approach is simple. To create a recipe file from an existing area, assuming its environment is set up, just do the following:
+```
+dbtx-save-workarea-recipe.py <recipe label>
+```
+and the script will generate a file called `<recipe label>.yaml`. This human-readable file will contain details about the original area, and can then be used later to generate a work area based on the same nightly/candidate/stable release as well as the same repos and their commits as the original area. To do so one can simply pass the file to `dbtx-create-workarea-from-recipe.py` as well as the desired name of the new work area:
+```
+dbtx-create-workarea-from-recipe.py --workarea-name <name of new work area> <recipe label>.yaml
+```
+Both scripts have further options; pass `--help` as an argument to either one in order to get more details. 
 
 <a name="Cloning_and_building"></a>
 ## Cloning and building a package repo
@@ -122,8 +133,7 @@ git clone https://github.com/DUNE-DAQ/listrev.git
 cd ..
 ```
 
-Note that in a "real world" situation [you'd be doing your development on a feature branch](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-release/development_workflow_gitflow/) in which case you'd add `-b <branch you want to work on>` to the `git clone` command above. Note also that if you set up your work area using `setup_dbt latest_v5`, you'll want to add a `-b develop` when cloning `listrev`, as `latest_v5` is intended to work only with the `develop` line. 
-
+Note that in a "real world" situation [you'd be doing your development on a feature branch](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-release/development_workflow_gitflow/) in which case you'd add `-b <branch you want to work on>` to the `git clone` command above. 
 
 We're about to build and install the `listrev` package. (&#x1F534; Note: if you are working with other packages, have a look at the [Working with more repos](#working-with-more-repos) subsection before running the following build command.) By default, the scripts will create a subdirectory of MyTopDir called `./install ` and install any packages you build off your repos there. If you wish to install them in another location, you'll want to set the environment variable `DBT_INSTALL_DIR` to the desired installation path before source-ing the `env.sh` script described below. You'll also want to remember to set the variable during subsequent logins to the work area if you don't go with the default. 
 
@@ -185,7 +195,6 @@ If you wish to only generate files but _not_ also perform a compilation (this is
 ```
 dbt-build --codegen-only
 ```
-Note that the above requires you to have set up the `latest_v5` version of daq-buildtools, as it's focused on OKS code generation studies. 
 
 You can see all the options listed if you run the script with the `--help` command, i.e.
 ```
@@ -293,6 +302,8 @@ produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generall
 
 ## Release Notes
 
+[`v8.9.4` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.4)
+
 [`v8.9.2` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.2)
 
 [`v8.9.1` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.1)
@@ -317,7 +328,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri May 2 12:43:13 2025 -0500_
+_Date: Mon Jun 9 16:21:18 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
