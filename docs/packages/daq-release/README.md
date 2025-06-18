@@ -50,6 +50,8 @@ asiolibs: [![asiolibs](https://github.com/DUNE-DAQ/asiolibs/actions/workflows/du
 
 cmdlib: [![cmdlib](https://github.com/DUNE-DAQ/cmdlib/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/cmdlib/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
+crtmodules: [![crtmodules](https://github.com/DUNE-DAQ/crtmodules/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/crtmodules/actions/workflows/dunedaq-develop-cpp-ci.yml)
+
 ctbmodules: [![ctbmodules](https://github.com/DUNE-DAQ/ctbmodules/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/ctbmodules/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
 confmodel: [![confmodel](https://github.com/DUNE-DAQ/confmodel/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/confmodel/actions/workflows/dunedaq-develop-cpp-ci.yml)
@@ -139,6 +141,8 @@ utilities: [![utilities](https://github.com/DUNE-DAQ/utilities/actions/workflows
 wibmod: [![wibmod](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
 
+
+
 -----
 
 <font size="1">
@@ -147,7 +151,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Mon Jun 9 15:24:44 2025 -0500_
+_Date: Wed Jun 18 14:29:34 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
