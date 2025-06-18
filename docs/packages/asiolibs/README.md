@@ -2,11 +2,27 @@
 
 Boost.Asio-based socket reader plugin for low-bandwidth devices
 
-# How to run
+# Example usage
 
-local-socket-1x1-config (from daqsystemtest/config/daqsystemtest/example-configs.data.xml) is a session configuration with a socket reader application accompanied by a fake socket writer application.
+`local-crt-bern1x1-config` and `local-crt-grenoble-1x1-config` (defined in `daqsystemtest/config/daqsystemtest/example-configs.data.xml`) are session configurations with a CRT reader application accompanied by a socket reader application.
 
-![local-socket-1x1-config](local-socket-1x1-config.svg)
+CRT reader application includes a data reader (either `CRTBernReaderModule` or `CRTGrenobleReaderModule`) which reads data from the hardware then puts it into a queue and data writers (`SocketWriterModule`) which read data from the queue then send it over a socket.
+
+Socket reader application includes a data reader (`SocketReaderModule`) which reads data from the socket (`CRTBernFrame`/`CRTGrenobleFrame`) then puts it into another queue to be processed by `DataHandlingModel`.
+
+![crt-reader-and-readout-apps](crt-reader-and-readout-apps.png)
+
+![local-crt-bern-1x1-config](local-crt-bern-1x1-config.svg)
+
+![local-crt-grenoble-1x1-config](local-crt-grenoble-1x1-config.svg)
+
+## How to run
+
+```
+drunc-unified-shell ssh-standalone config/daqsystemtest/example-configs.data.xml local-crt-bern-1x1-config uname-local-test
+
+drunc-unified-shell ssh-standalone config/daqsystemtest/example-configs.data.xml local-crt-grenoble-1x1-config uname-local-test
+```
 
 The following table includes relevant configuration details that can be set by the user. Users can either configure TCP or UDP as the socket type.
 
@@ -17,8 +33,6 @@ The following table includes relevant configuration details that can be set by t
 | Port    | config/daqsystemtest/ru-segment.data.xml    | socket_wib_101_link0/port |
 | Socket type    | config/daqsystemtest/moduleconfs.data.xml    | def-socket-reader-conf/socket_type <br> def-socket-writer-conf/socket_type |
 
-The currently-used sender application creates a fake packet and sends it through the opened port, it has no relation to the latency buffer. When the reader application receives the packet, it puts the packet onto the buffer.
-
 
 -----
 
@@ -28,7 +42,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Deniz Tuana Ergonul Uzun_
 
-_Date: Wed Apr 9 15:32:42 2025 +0200_
+_Date: Wed Jun 11 11:51:26 2025 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/asiolibs/issues](https://github.com/DUNE-DAQ/asiolibs/issues)_
 </font>
