@@ -42,6 +42,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [asiolibs](packages/asiolibs/README.md) _Boost.Asio-based socket reader plugin for low-bandwidth devices_
 
+[ctbmodules](packages/ctbmodules/README.md) _Modules for the Central Trigger Board hardware_
+
 [daqdataformats](packages/daqdataformats/README.md) _DAQ data formats_
 
 [datahandlinglibs](packages/datahandlinglibs/README.md) _Tools for constructing readout-focused processes_
@@ -61,6 +63,8 @@ For the other packages, please click on one of the links below. To learn how to 
 [flxlibs](packages/flxlibs/README.md) _DAQModules, utilities, and scripts for Upstream FELIX Readout Software_
 
 [hermesmodules](packages/hermesmodules/README.md) _Modules for the Hermes core_
+
+[tdemodules](packages/tdemodules/README.md) _Modules for controlling the Top Drift Electronics' Advanced Mezzanine Cards (AMC)_
 
 [wibmod](packages/wibmod/README.md) _WIB configuration and monitoring interface_
 

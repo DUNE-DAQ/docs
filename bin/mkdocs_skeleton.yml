@@ -140,6 +140,7 @@ nav:
           - utilities:
        - Readout:
           - asiolibs:
+          - ctbmodules:
           - daqdataformats:
           - datahandlinglibs:
           - detchannelmaps:
@@ -150,6 +151,7 @@ nav:
           - fdreadoutmodules:
           - flxlibs:
           - hermesmodules:
+          - tdemodules:
           - wibmod:
        - Control:
           - appmodel:

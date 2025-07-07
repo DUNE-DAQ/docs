@@ -37,6 +37,10 @@
 
     * drunc
 
+    * druncactions
+
+    * drunccore
+
     * druncschema
 
     * elisa_client_api
@@ -235,6 +239,8 @@
 
     * hermesmodules
 
+    * tdemodules
+
     * tpglibs
 
 ## timing
@@ -276,7 +282,7 @@
     * wibmod
 
 
-Page was generated at: 25/04/2025 08:44:43
+Page was generated at: 13/06/2025 14:44:42
 
 
 
@@ -288,7 +294,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Apr 25 08:47:00 2025 -0500_
+_Date: Fri Jun 13 14:47:36 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

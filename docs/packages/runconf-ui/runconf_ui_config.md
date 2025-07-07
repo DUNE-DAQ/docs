@@ -45,37 +45,119 @@ General:
 ## Detector Setup
 The DUNE-DAQ configuration framework does not currently have a natural way of grouping detector components. In order to tell the interface which elements we want to display we need to set these manually. In the language of `runconf_ui` these grouped into Panels, so called because they generate "panels" in the TUI.
 
+### Full Panel description
+Full panel description with defaults if provided
+
+```yml
+---
+# Everything is stored in PanelOptions
+PanelOptions:
+  # Panel ID
+  Panel: 
+
+    # Label given to panel
+    label [str]:  
+     # Display name for attribute map
+    view_panel [str]: 
+
+    systems: # List of systems
+      - SystemA: # A specific system
+
+          # If we turn off all the subsystems do it also turn of the entire system
+          subsytem_dependent [bool]: false 
+          # Include a button for enabling/disabling the entire system
+          display_full_system [bool]: true 
+          
+          # List Components are elements that can be enabled/disabled at the session level
+          components: 
+
+              # Component ID. If each_component_seperate is true 
+              # then id needs to be a substring common to all components you want to show
+            - id [str] : 
+              # Component class
+              class [str]: 
+
+              ~~[[Optional Values]]~~
+
+              # do these components also live in a seperate subsystem?
+              separate_system [bool]: false 
+              # Subsytem they live in [useful for things like TPC where you want to toggle individual CRPs] 
+              system_label: None  
+              
+              # What if we want lots of components and separate buttons for each one?
+              # Generate a button for each component of class [class] with id containing a substring of ID
+              each_component_separate [bool]: false 
+
+              # We then filter based on the attributes of these objects
+              filters [List[Dict]]: 
+               # name of the attribute to filter by
+                - attribute [str]: ""
+                  # list of values to exclude
+                  values List[Any]: []
+              
+              # We can display a tooltip
+               # If the tooltip is an attribute in the object it will display that attribute as the tooltip
+              # For example if an object has a "description" attribute it will display the value of "description
+              tooltip [str]: ""
+          
+          # We can also toggle the attributes of groups of objects 
+          attributes:
+            # Name of the attribute
+            - id [str]:
+              # Segments to search for objects in
+              segment [List[str]]: ["root-segment"]
+              # Class of objects with attribute
+              class [str]: 
+
+              ~~[[Optional Values]]~~
+              # Attributes may not have simple true/false enabled/disabled states
+              # This lets us over-ride this behaviour and define custom enabled disabled states
+              enabled_state [Any]:
+              disabled_state [Any]:
+              
+              # Subsystem settings (same as component)
+              system_label [str]: 
+              separate_system [bool]: False
+
+              # Tool tip here will just directly print the string (but only if it's a separate system)
+              tooltip [str]: ""
+
+          # The final thing we can toggle is the relationship between objects
+          # As these are essentially attributes most of the interface is the same
+          relationships:
+            # Same as attribute:
+            - id [str]:
+              class [str]:
+              segments List[str]: ['root-segment']
+
+              # Relationship-specific options
+              # We need to know the expected class of object the relationship needs
+              relationship_class [str]:
+
+              # Name of single/list of config objects that 
+              # object has relationship to when toggled on/off
+              # To remove the relationship entirely just needs to be left as []
+              enabled_state [str | List[str]]: 
+              disabled_state [str | List[str]]: 
+
+```
+
 ### General Panel Attributes
 The first things that need to be setup in panels are the general settings
 ```yml
 Panel: 
     label: "Internal label given to this panel. This must be unique"
-    panel_type: We split panels into multisystem and singlesystem. These are detailed below.
+    view_panel: "Panel we give view"
+
 ```
 
-### Single System Panels
-Let's look at an example. First let's consider the simplest panel, a single-system panel. These are panels consisting of ALL objects of a single class in the configuration. 
-
-```yml
-  # Dataflow
-  Dataflow:
-    label: "dataflow"
-    panel_type: "singlesystem"
-    classes:
-      - "DFApplication"
-```
-
-Here is the detector setup for NP02 dataflow applications. This will just list all objects of the class `DFApplication`. `classes` is simply a list of all classes we want here and can be extended arbitrarily. This kind of panel view does not generate a schematic map.
-
-### Multi-system panels
-Multi-system panels are used when you have some part of the detector which is not simply defined by a single object in the configuration. For example, the tpg in NP02 is defined several complicated sub-components. In order to handle this we use multi-system panels. An example of thsi can be seen in the trigger for NP02
+Enable/disable buttons are generateed using panels. For example, the tpg in NP02 is defined several complicated sub-components. In order to handle this we use multi-system panels. An example of thsi can be seen in the trigger for NP02
 
 
 ```yml
   Trigger:
     label: "trigger"
     view_panel: "Trigger View"
-    panel_type: "multisystem"
 
     Systems:
       - TPC TPG:
@@ -104,11 +186,23 @@ Multi-system panels are used when you have some part of the detector which is no
                 segments: ["pds-segment"]
                 class: ReadoutApplication
 
+  # Dataflow
+  Dataflow:
+    label: "dataflow"
+    panel_type: "multisystem"
+    systems:
+      - Dataflow:
+        subsystem_dependent: False
+        disaplay_full_system: False
+        components:
+          - id: ""
+            class: "DFApplication"
+            each_component_separate: True
+
 ```
 Firstly we have the name of the **panel** in the TUI, in this case `Detector`. Firstly we need to specify `view_panel`, this is the label given to the schematic view generated by this system. All multi-system panels generate schematic views in order to visualise what we mean when we say "this system is switched off". Next we list each system in this panel, these are seen in the TUI as individual on/off buttons, in this case the TPCs for TPG and PDS. Finally we split our systems into attributes and components. 
 
 Components correspond to large-scale elements of the DAQ, for example ReadoutApplications and Segments. In OKS these have a specific definition of disabled/enabled. Attributes, meanwhile, are values of elements within the configuration. For example every `ReadoutApplication` has a `tp_generation_enabled` attribute which can be enabled/disabled.
-
 
 #### Components
 Firstly let's look more closely at the settings for components
@@ -151,6 +245,32 @@ This will generate the following buttons:
 
 Since we've set the `subsystem_dependent` flag to true, the entire system (`tpc-segment`) is set to be disabled if the two sub-systems in it (`CRP5`, `CRP4`) are disabled.
 
+Let's now consider a subsystem where you want to display ALL objects in the configuration satisfying some conditions.
+```yml
+Trigger:
+  label: "trigger"
+  systems:
+    - Trigger: 
+      display_full_system: False
+      components:
+        - id: ""
+          class: CTBHLT
+          each_component_separate: True
+          filters:
+            - attribute: "description"
+              values: ["Spare", "spare"]
+```
+Here we have the following logic; When `each_component_separate` is set to true it will attempt to find EVERY element in the configuration which
+
+
+1. Is of class `class` (note: this include subclasses of `class`)
+
+
+2. Has an `id` (name) that contains a substring of `id`. Here we want to get all `CTBHLT`s so we set `id` to be an empty string
+
+
+3. Does not have a `description` of `Spare` or `spare`.
+
 #### Attributes
 Settings for attributes slightly more complex than components. Let's consider the attributes of the `TPC TPG`
 ```yml
@@ -177,6 +297,8 @@ You can see that these correspond to the following
 
 As with components one can also specify `system_label` and `separate_system` to make additional buttons in the configuration.
 
+
+
 -----
 
 <font size="1">
@@ -185,7 +307,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Henry Wallace_
 
-_Date: Fri Apr 11 12:13:03 2025 +0100_
+_Date: Thu May 29 14:48:28 2025 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconf-ui/issues](https://github.com/DUNE-DAQ/runconf-ui/issues)_
 </font>

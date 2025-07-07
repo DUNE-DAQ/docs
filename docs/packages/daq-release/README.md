@@ -50,6 +50,10 @@ asiolibs: [![asiolibs](https://github.com/DUNE-DAQ/asiolibs/actions/workflows/du
 
 cmdlib: [![cmdlib](https://github.com/DUNE-DAQ/cmdlib/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/cmdlib/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
+crtmodules: [![crtmodules](https://github.com/DUNE-DAQ/crtmodules/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/crtmodules/actions/workflows/dunedaq-develop-cpp-ci.yml)
+
+ctbmodules: [![ctbmodules](https://github.com/DUNE-DAQ/ctbmodules/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/ctbmodules/actions/workflows/dunedaq-develop-cpp-ci.yml)
+
 confmodel: [![confmodel](https://github.com/DUNE-DAQ/confmodel/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/confmodel/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
 daq-cmake: [![daq-cmake](https://github.com/DUNE-DAQ/daq-cmake/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-cmake/actions/workflows/dunedaq-develop-cpp-ci.yml)
@@ -116,6 +120,8 @@ serialization: [![serialization](https://github.com/DUNE-DAQ/serialization/actio
 
 sspmodules: [![sspmodules](https://github.com/DUNE-DAQ/sspmodules/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/sspmodules/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
+tdemodules: [![tdemodules](https://github.com/DUNE-DAQ/tdemodules/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/tdemodules/actions/workflows/dunedaq-develop-cpp-ci.yml)
+
 timing: [![timing](https://github.com/DUNE-DAQ/timing/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/timing/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
 timinglibs: [![timinglibs](https://github.com/DUNE-DAQ/timinglibs/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/timinglibs/actions/workflows/dunedaq-develop-cpp-ci.yml)
@@ -135,15 +141,17 @@ utilities: [![utilities](https://github.com/DUNE-DAQ/utilities/actions/workflows
 wibmod: [![wibmod](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-develop-cpp-ci.yml/badge.svg)](https://github.com/DUNE-DAQ/wibmod/actions/workflows/dunedaq-develop-cpp-ci.yml)
 
 
+
+
 -----
 
 <font size="1">
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Andrew Mogan_
+_Author: John Freeman_
 
-_Date: Fri Apr 18 10:00:16 2025 -0500_
+_Date: Wed Jun 18 14:29:34 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

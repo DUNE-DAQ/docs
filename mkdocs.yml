@@ -170,6 +170,8 @@ nav:
        - Readout:
           - asiolibs:
              - About asiolibs: packages/asiolibs/README.md
+          - ctbmodules:
+             - About ctbmodules: packages/ctbmodules/README.md
           - daqdataformats:
              - About daqdataformats: packages/daqdataformats/README.md
              - packages/daqdataformats/ComponentRequestV0.md
@@ -217,6 +219,10 @@ nav:
              - packages/flxlibs/Local-driver.md
           - hermesmodules:
              - About hermesmodules: packages/hermesmodules/README.md
+          - tdemodules:
+             - About tdemodules: packages/tdemodules/README.md
+             - packages/tdemodules/first_time_setup_amc.md
+             - packages/tdemodules/generating_configurations.md
           - wibmod:
              - About wibmod: packages/wibmod/README.md
              - packages/wibmod/src/WIB1/README.md
