@@ -1,8 +1,12 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited May-28-2025_
+_This document was last edited Jul-7-2025_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
+
+If you've read these instructions before, release notes for specific
+versions of daq-buildtools can be found at the bottom of this
+document.
 
 ## System requirements
 
@@ -14,17 +18,17 @@ To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.openscience
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt latest
+setup_dbt fddaq-v5.3.2
 ```
-
-Here v7.6.0 is the latest daq-buildtools version as of Feb-8-2024.
+Note that `fddaq-v5.3.2` is aliased to `v8.9.4`. 
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.6.0/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v7.6.0/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.9.4/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.9.4/scripts -> PATH
 DBT setuptools loaded
 ```
+
 If you type `dbt-` followed by the `<tab>` key you'll see a listing of available commands, which include `dbt-create`, `dbt-build`, `dbt-setup-release` and `dbt-workarea-env`. These are all described in the following sections. 
 
 Each time that you log into a fresh Linux shell and want to either (1) set up an existing cvmfs-based DUNE DAQ software release or (2) develop code within a pre-existing DUNE DAQ work area, you'll need to set up daq-buildtools. These two cases are described in detail momentarily. For (1) you'd want to repeat the method above to set up daq-buildtools. For (2) it's easier instead to `cd` into the work area and source the file named `env.sh`. 
@@ -35,13 +39,14 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, stable releases (especially patch stable releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a stable release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v4.2.1-a9 the latest FD stable release as of Nov-30-2023
+dbt-setup-release <release> # fddaq-v5.3.2-a9 the latest stable release as of Jul-2-2025
 ```
-As of July 2023, the DUNE DAQ software stack has been split into far detector and near detector-specific parts. Starting with the `v4.1.0` release of the stack, do _not_ use the traditional convention of `dunedaq-vX.Y.Z` as the stable release label, but instead, `fddaq-vX.Y.Z` and `nddaq-vX.Y.Z`. Note that for `v4.1.0` and `v4.1.1` we only have a far detector-specific stack. 
 
-Instead of a stable release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fddaq-v4.3.0-rc2-a9` you can do:
+Note that if you set up a stable release you'll get a message along the lines of `Release "fddaq-v5.3.2-a9" requested; interpreting this as release "fddaq-v5.3.2-a9-1"`; this simply reflects that the latest build iteration of the stable release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
+
+Instead of a stable release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fddaq-v5.2.0-rc3-a9` you can do:
 ```
-dbt-setup-release -b candidate fddaq-v4.3.0-rc2-a9
+dbt-setup-release -b candidate fddaq-v5.2.0-rc3-a9
 ```
 
 `dbt-setup-release` will set up both the external packages and DAQ packages, as well as activate the Python virtual environment. Note that the Python virtual environment activated here is read-only. 
@@ -53,21 +58,21 @@ If you wish to develop DUNE DAQ software, you can start by creating a work area.
 
 Each work area is based on a DUNE DAQ software release, which defines what external and DUNE DAQ packages the code you develop in a work area are built against. Releases come in four categories:
 
-* **Nightly Releases**: packages in nightly releases are built each night using the heads of their `develop` and `production/v4` branches. Depending on whether it's the far detector stack or the near detector stack, and whether it's a develop or production build, these are generally labeled either as `NFD_<branch>_<YY><MM><DD>_<OS>` (far detector) or `NND_<branch>_<YY><MM><DD>_<OS>` (near detector). E.g. `NFD_DEV_240213_A9` is the AL9 nightly develop build for the far detector on February 13th, 2024, while `NFD_PROD4_240213_C8` is the CentOS nightly production build for the far detector on the same date. Note that, prior to February 13th, 2024, the labeling convention is `NFD<YY>-<MM>-<DD>` for the far detector stack and `NND<YY>-<MM>-<DD>` for the near detector stack. 
+* **Nightly Releases**: packages in nightly releases are built each night using the heads of their `develop` and `production/v4` branches. Depending on whether it's the far detector stack or the near detector stack, and whether it's a develop or production build, these are generally labeled either as `NFD_<branch>_<YY><MM><DD>_<OS>` (far detector) or `NND_<branch>_<YY><MM><DD>_<OS>` (near detector). E.g. `NFD_DEV_240716_A9` is the AL9 nightly develop build for the far detector on July 16th, 2024, and `NFD_PROD4_250202_A9` is the v4 production nightly build on February 2, 2025. 
 
-* **Stable Releases**: a stable release typically comes out every couple of months, and only after extensive testing supervised by a Release Coordinator. Depending on whether it's the far detector stack or the near detector stack, labeled as `fddaq-vX.Y.X` or `nddaq-vX.Y.Z`. 
+* **Stable Releases**: a stable release typically comes out every couple of months, and only after extensive testing supervised by a Release Coordinator. Depending on whether it's the far detector stack or the near detector stack, this is labeled as `fddaq-vX.Y.X-<OS>` or `nddaq-vX.Y.Z-<OS>`, e.g., `fddaq-v4.4.4-a9`.  
 
-* **Candidate Releases**: a type of release meant specifically for stable release testing. Generally labeled as `fddaq-vX.Y.Z-rc<candidate iteration>-<OS>` or `nddaq-vX.Y.Z-rc<candidate iteration>-<OS>`. For example, `fddaq-v4.3.0-rc2-a9` is the second release candidate for the AL9 build of `fddaq-v4.3.0`. Note that, prior to February 13th, 2024, the labeling convention is `fddaq-vX.Y.Z-c<candidate iteration>`
+* **Candidate Releases**: a type of release meant specifically for stable release testing. Generally labeled as `fddaq-vX.Y.Z-rc<candidate iteration>-<OS>` or `nddaq-vX.Y.Z-rc<candidate iteration>-<OS>`. For example, `fddaq-v4.4.0-rc4-a9` is the fourth release candidate for the AL9 build of `fddaq-v4.4.0`.
 
 The majority of work areas are set up to build against the most recent nightly release. To do so, run:
 ```sh
 dbt-create -n <nightly release> <name of work area subdirectory> # E.g., NFD_DEV_240213_A9
 ```
-You can also use `-n last_fddaq` or `-n last_nddaq` to build against the most recent _production_ branch, e.g., `NFD_PROD4_240213_A9`. To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l -b nightly`. Note also that you can leave out defining the name of the work area subdirectory, in which case it defaults to the same name as the release. 
+You can also use `-n last_fddaq` to build against the most recent _develop_ branch, e.g., `NFD_DEV_241007_A9`. To see all available nightly releases, run `dbt-create -l -n` or `dbt-create -l -b nightly`. Note also that you can leave out defining the name of the work area subdirectory, in which case it defaults to the same name as the release. 
 
 If you want to build against a candidate release, run:
 ```sh
-dbt-create -b candidate <candidate release> <name of work area subdirectory> # E.g., fddaq-v4.3.0-rc2-a9
+dbt-create -b candidate <candidate release> <name of work area subdirectory> # E.g., fddaq-v4.4.0-rc4-a9
 ```
 ...where to see all available candidate releases, run `dbt-create -l -b candidate`.
 
@@ -76,7 +81,7 @@ And to build against a stable release (_not recommended_, as the codebase change
 dbt-create <stable release> <name of work area subdirectory> 
 ```
 
-The structure of your work area will look like the following:
+The structure of your work area will include the following files and directories:
 ```txt
 MyTopDir
 ├── build
@@ -97,7 +102,7 @@ Along with telling `dbt-create` what you want your work area to be named and wha
 * `-s/--spack`: Install a local Spack instance in the work area. This will allow you to install and load whatever Spack packages you wish into your work area. 
 
 
-* `-q/--quick`: Use this if you don't plan to develop a Python package. This is much quicker than the default behavior of dbt-create, which will actually copy the Python virtual environment over to your work area, thereby giving you write permission to the project's Python packages. With `-q/--quick`, the Python virtual environment your work area uses is in the (read-only) release area on cvmfs. 
+* `-q/--quick`: Use this if you don't plan to develop a Python package. This is much quicker than the default behavior of dbt-create, which will actually copy the Python virtual environment over to your work area, thereby giving you write permission to the project's Python packages. With `-q/--quick`, the Python virtual environment your work area uses is in the (read-only) release area on cvmfs.
   
 
 * `-i/--install-pyvenv`: With this option, there will be compilation/installation of python modules using the `pyvenv_requirements.txt` in the release directory. This is typically slower than cloning, but not always. You can take further control by combining it with the `-p <requirements file>` argument, though it's unlikely as a typical developer that you'd want a non-standard set of Python packages. 
@@ -130,7 +135,6 @@ cd ..
 
 Note that in a "real world" situation [you'd be doing your development on a feature branch](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-release/development_workflow_gitflow/) in which case you'd add `-b <branch you want to work on>` to the `git clone` command above. 
 
-
 We're about to build and install the `listrev` package. (&#x1F534; Note: if you are working with other packages, have a look at the [Working with more repos](#working-with-more-repos) subsection before running the following build command.) By default, the scripts will create a subdirectory of MyTopDir called `./install ` and install any packages you build off your repos there. If you wish to install them in another location, you'll want to set the environment variable `DBT_INSTALL_DIR` to the desired installation path before source-ing the `env.sh` script described below. You'll also want to remember to set the variable during subsequent logins to the work area if you don't go with the default. 
 
 Now, do the following:
@@ -143,7 +147,9 @@ dbt-build
 
 ### Working with more repos
 
-To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. "New" in this context means "not listed in `/cvmfs/dunedaq.opensciencegrid.org/spack/releases/fddaq-v4.1.1/dbt-build-order.cmake`". If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built. 
+To work with more repos, add them to the `./sourcecode` subdirectory as we did with listrev. Be aware, though: if you're developing a new repo which itself depends on another new repo, daq-buildtools may not already know about this dependency. If this is the case, add the names of your new package(s) to the `build_order` list found in `./sourcecode/dbt-build-order.cmake`, placing them in the list in the relative order in which you want them to be built.
+
+Note that as of daq-buildtools `v8.7.1`, you can replace the actual `./sourcecode` directory in your work area with a soft link called `sourcecode` which points to an actual `./sourcecode` directory elsewhere on your file system. 
 
 As a reminder, once you've added your repos and built them, you'll want to run `dbt-workarea-env` so the environment picks up their applications, libraries, etc. 
 
@@ -160,6 +166,8 @@ And if, after the build, you want to run the unit tests, just add the `--unittes
 dbt-build --clean --unittest  # Blow away the contents of ./build, run config+generate+build, and then run the unit tests
 ```
 ..where in the above case, you blow away the contents of `./build`,  run config+generate+build, install the result in `$DBT_INSTALL_DIR` and then run the unit tests. Be aware that for many packages, unit tests will only (fully) work if you've also rerun `dbt-workarea-env`. 
+
+To run any integration tests your repos may contain (e.g., `dfmodules`) , you can pass the `--integtest` option to `dbt-build`.  
 
 To check for deviations from the coding rules described in the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/), run with the `--lint` option:
 ```
@@ -179,11 +187,10 @@ If you want to change cmake message log level, you can use the `--cmake-msg-lvl`
 dbt-build --cmake-msg-lvl=<ERROR|WARNING|NOTICE|STATUS|VERBOSE|DEBUG|TRACE>
 ```
 
-By default the build is performed using gcc's `O2` compilation flag. If you wish to use a different flag, you can use the `--optimize-flag` argument, e.g.:
+By default the build is performed using gcc's `O2` compilation flag. If you wish to use a different
 ```
 dbt-build --optimize-flag O3  # Or Og, etc.
 ```
-
 If you wish to only generate files but _not_ also perform a compilation (this is a kind of expert action, but there are use cases for it) you can run:
 ```
 dbt-build --codegen-only
@@ -210,8 +217,6 @@ Once the runtime environment is set, just run the application you need. listrev,
 
 
 Now that you know how to set up a work area, a classic option for learning about how to run DAQ modules in a work area is [the listrev documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/listrev/).
-
-In the listrev instructions you'll be running a program called `nanorc` to run the DAQ. To learn more about `nanorc` itself, take a look at [the nanorc documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/nanorc/).
 
 
 <a name="Finding_Info"></a>
@@ -254,13 +259,19 @@ export LOCAL_SPACK_DIR="/home/jcfree/daqbuild_fddaq-v4.1.0/.spack"
 ```
 This file is sourced whenever you run `dbt-workarea-env`, and it tells both the build system and the developer where they can find crucial information about the work areas' builds. Specifically, these environment variables mean the following:
 
-* `$SPACK_RELEASE`: this is the release of the DUNE DAQ software stack against which repos will build (e.g. `fddaq-v4.3.0-rc2-a9`, `NFD_DEV_240213_A9`, etc.)
+* `$SPACK_RELEASE`: this is the release of the DUNE DAQ software stack against which repos will build (e.g. `fddaq-v4.4.0-rc4-a9`, `NFD_DEV_240213_A9`, etc.)
 
 * `$SPACK_RELEASES_DIR`: The base of the directory containing the DUNE DAQ software installations. 
 
 * `DBT_ROOT_WHEN_CREATED`: The directory containing the `env.sh` file which was sourced before this work area was first created
 
 * `LOCAL_SPACK_DIR`: If the `-s/--spack` was passed to `dbt-create` when the work area was built, this points to where the local Spack area is located
+
+If you set up your work area using `daq-buildtools v8.6.1` or later (i.e., using the `develop` line instead of `production/v4`), you'll also see something like
+```
+export DUNE_DAQ_RELEASE_SOURCE="/cvmfs/dunedaq-development.opensciencegrid.org/candidates/fddaq-v5.1.0-rc1-a9/sourcecode"
+```
+`DUNE_DAQ_RELEASE_SOURCE` points to a cvmfs area containing the source code used to build this release. This can be useful for inspecting packages not checked out locally under `$DBT_AREA_ROOT/sourcecode`. 
 
 ### `dbt-lcov.sh`
 
@@ -272,23 +283,35 @@ what will happen is that, if it hasn't already been run, the script will insert 
 
 Please note that due to the modification of `sourcecode/CMakeLists.txt`, you wouldn't want to use the code you build for normal running (e.g., for performance testing or data readout). Likely it's best to use a work area dedicated to code coverage study as opposed to other functions.  
 
-
 ### Useful Spack commands
 
 There are also useful Spack commands which can be executed to learn about the versions of the individual packages you're working with, once you've run `dbt-workarea-env` or `dbt-setup-release`. An [excellent Spack tutorial](https://spack-tutorial.readthedocs.io/en/latest/tutorial_basics.html) inside the official Spack documentation is worth a look, but a few Spack commands can be used right away to learn more about your environment. They're presented both for the case of you having set up a nightly release and a stable release:
 
-* `spack find --loaded -N | grep coredaq-vX.Y.Z` or `spack find --loaded -N | grep NB` will tell you all the DUNE DAQ packages shared by both far- and near detector software which have been loaded by `dbt-workarea-env` or `dbt-setup-release`
+* `spack find -N -d --loaded | grep NB` will tell you all the DUNE DAQ packages shared by both far- and near detector software which have been loaded by `dbt-workarea-env` or `dbt-setup-release`
 
-* `spack find --loaded -N | grep fddaq-vX.Y.Z` or `spack find --loaded -N | grep FD` for far detector DUNE DAQ packages
+* `spack find -N -d --loaded | grep NFD` for far detector-specific DUNE DAQ packages
 
-* `spack find --loaded -N | grep nddaq-vX.Y.Z` or `spack find --loaded -N | grep ND` for near detector DUNE DAQ packages
+* `spack find -N -d --loaded | grep NND` for near detector-specific DUNE DAQ packages
 
-* `spack find --loaded -N | grep dunedaq-externals` for external packages not developed by DUNE collaborators
+* `spack find -N -d --loaded | grep dunedaq-externals` for external packages not developed by DUNE collaborators
 
-* `spack find --loaded -p <package name>` will tell you the path to the actual contents of a Spack-installed package
+* `spack find -p <package name>` will tell you the path to the actual contents of a Spack-installed package
 
 Finally, when `dbt-build` is run, a file called `daq_app_rte.sh` is
-produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generally don't need to think about `daq_app_rte.sh` unless you're curious; it's a sourceable file which contains environment variables that [nanorc](https://dune-daq-sw.readthedocs.io/en/latest/packages/nanorc/) uses to launch processes when performing runs. 
+produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generally don't need to think about `daq_app_rte.sh` unless you're curious; it's a sourceable file which contains environment variables that [drunc](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/) uses to launch processes when performing runs. 
+
+## Release Notes
+
+[`v8.9.4` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.4)
+
+[`v8.9.2` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.2)
+
+[`v8.9.1` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.1)
+
+[`v8.9.0` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.9.0)
+
+[`v8.8.0` release notes](https://github.com/DUNE-DAQ/daq-buildtools/releases/tag/v8.8.0)
+
 
 ## Next Step
 
@@ -305,7 +328,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Sat Jun 7 08:40:43 2025 -0500_
+_Date: Mon Jul 7 11:15:17 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
