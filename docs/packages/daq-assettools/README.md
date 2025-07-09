@@ -15,7 +15,9 @@ This repository contains a set of tools to manage these DAQ asset files, availab
 
 Each command has a `-h` option which will tell you how to use it in detail; some of the highlights are covered in this document. 
 
-Files which are part of our assets are catalogued in this [spreadsheet](https://docs.google.com/spreadsheets/d/1oDYe1eEqJhkY0DTd6mfpLw9ou7TqBCaDEgTo0qqVmqY/edit#gid=0), where they provide info to users about each asset. When developers and testers want a new asset, they should add a corresponding line to the spreadsheet and ask the Software Coordination team to publish the file to `cvmfs`. Use Kurt's example (row 38) to see what fields to fill in. 
+Files which are part of our assets are catalogued in this [spreadsheet](https://docs.google.com/spreadsheets/d/1oDYe1eEqJhkY0DTd6mfpLw9ou7TqBCaDEgTo0qqVmqY/edit#gid=0), where they provide info to users about each asset. When developers and testers want a new asset, they should add a corresponding line to the spreadsheet and ask the Software Coordination team to publish the file to `cvmfs`. Use Kurt's example (row 38) to see what fields to fill in.
+
+Note that asset files shouldn't exceed more than a couple hundred MB in size; cvmfs responds badly to files larger than that.
 
 ## How to see which asset files are available
 
@@ -116,7 +118,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Apr 15 15:27:21 2025 -0500_
+_Date: Wed Jul 9 09:54:36 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-assettools/issues](https://github.com/DUNE-DAQ/daq-assettools/issues)_
 </font>
