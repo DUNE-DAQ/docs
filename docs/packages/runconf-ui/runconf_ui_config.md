@@ -20,7 +20,7 @@ General:
   # Environment variables
 
   # Default .data.xml configuration file
-  default_config: "SESSION_FILE"
+  session_config: "SESSION_FILE"
   # Default download directory for DAQ configuration files OR local directory containing configurations
   download_directory: "CONFIG_DIR"
   # Name of TMUX session
@@ -42,6 +42,17 @@ General:
 
 ```
 
+### Changing Base URL
+
+YOU CANNOT CHANGE THE `base_url` OF A REPO THAT EXISTS. TO DO THIS PLEASE SET `download_directory` TO POINT TO A NEW DIRECTORY! 
+
+This can either be done from the command line like
+```bash
+runconf-shifter-ui -d path/to/new/repo --base_url new/base/url
+```
+or by setting the variables in the YAML (either by changing the environment variables themselves or the YAML config).
+
+
 ## Detector Setup
 The DUNE-DAQ configuration framework does not currently have a natural way of grouping detector components. In order to tell the interface which elements we want to display we need to set these manually. In the language of `runconf_ui` these grouped into Panels, so called because they generate "panels" in the TUI.
 
@@ -50,7 +61,12 @@ Full panel description with defaults if provided
 
 ```yml
 ---
-# Everything is stored in PanelOptions
+Settings:
+  # List of classses to show on map panels
+  classes_to_show [list str]:
+    
+
+# PanelOptions are the list of "panels" that display both trees (if view_panel has a name) and lists of what to show
 PanelOptions:
   # Panel ID
   Panel: 
@@ -297,7 +313,35 @@ You can see that these correspond to the following
 
 As with components one can also specify `system_label` and `separate_system` to make additional buttons in the configuration.
 
+## Adjustable Triggers
+In addition to being able to turn on and off things the shifter-ui lets the user adjust the values of various trigger rates. This can be added using an `AdjustableAttributes` entry to the detector config file i.e.
+```yaml
+Settings:
+  ...
+PanelOptions:
+  ...
+AdjustableAttributes:
+  AttributeGroup: # Group of attributes to put in a tab
+    - label [str]: # internal label to keep textual sane
+    Systems:
+      - object_id [str, Optional]: # ID of object containing a given attribute. If left blank it will search for all objects of a given class
+        object_class [str]: # Class of objects with given attribute
+        attribute_name [str]: #Name of attribute to modify 
+        is_hex [bool, optional]: False # Is the attribute stored in hex
+        tooltip [str, optional]: # Attribute to use as the tool tip i.e. "description" when higlighting box
 
+        # values to filter by
+        filters [List]:
+          - attribute [str]: # attribute to filter by
+            values [List[Any]]: # List of values of that attribute you want to exclude
+
+
+```
+
+The result is a view like
+![alt text](image.png)
+
+As you can see this is an additional tab in the same place as the map view. The left hand text gives the object name + attribute whilst the text on the far right tells you its current value. The apply button changes the value of the attribute and reset sets it to its original value in the configuration file.
 
 -----
 
@@ -307,7 +351,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Henry Wallace_
 
-_Date: Thu May 29 14:48:28 2025 +0100_
+_Date: Tue Jul 15 11:31:56 2025 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconf-ui/issues](https://github.com/DUNE-DAQ/runconf-ui/issues)_
 </font>
