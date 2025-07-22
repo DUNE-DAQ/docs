@@ -20,7 +20,7 @@ General:
   # Environment variables
 
   # Default .data.xml configuration file
-  default_config: "SESSION_FILE"
+  session_config: "SESSION_FILE"
   # Default download directory for DAQ configuration files OR local directory containing configurations
   download_directory: "CONFIG_DIR"
   # Name of TMUX session
@@ -41,6 +41,17 @@ General:
   operation_url: "https://gitlab.cern.ch/dune-daq/online/np02-configs-operation.git"
 
 ```
+
+### Changing Base URL
+
+YOU CANNOT CHANGE THE `base_url` OF A REPO THAT EXISTS. TO DO THIS PLEASE SET `download_directory` TO POINT TO A NEW DIRECTORY! 
+
+This can either be done from the command line like
+```bash
+runconf-shifter-ui -d path/to/new/repo --base_url new/base/url
+```
+or by setting the variables in the YAML (either by changing the environment variables themselves or the YAML config).
+
 
 ## Detector Setup
 The DUNE-DAQ configuration framework does not currently have a natural way of grouping detector components. In order to tell the interface which elements we want to display we need to set these manually. In the language of `runconf_ui` these grouped into Panels, so called because they generate "panels" in the TUI.
@@ -340,7 +351,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Henry Wallace_
 
-_Date: Tue Jun 24 16:47:35 2025 +0100_
+_Date: Tue Jul 15 11:31:56 2025 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconf-ui/issues](https://github.com/DUNE-DAQ/runconf-ui/issues)_
 </font>
