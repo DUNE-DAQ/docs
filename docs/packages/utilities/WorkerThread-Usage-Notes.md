@@ -1,6 +1,6 @@
 # About utilities::WorkerThread
 
-WorkerThread defines a std::thread which runs the do_work() function as well as methods to start and stop that thread.
+WorkerThread defines a std::jthread which runs the do_work() function as well as methods to start and stop that thread.
 It is intended to help reduce code duplication for the common task of starting and stopping threads.
 
 ## Instantiation
@@ -19,6 +19,7 @@ WorkerThread defines a `stop_working_thread` method which will set the atomic bo
 
 Users of WorkerThread may call the `thread_running()` method to determine if `start_working_thread` has been called. Since the method run by WorkerThread is in the caller's scope, the working method has access to all state variables in that scope. Beware that most STL container types are not intrinsically thread-safe, and care should be used when accessing shared data.
 
+
 -----
 
 <font size="1">
@@ -27,7 +28,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Tue Jan 18 11:08:02 2022 -0600_
+_Date: Mon Jul 21 10:33:45 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/utilities/issues](https://github.com/DUNE-DAQ/utilities/issues)_
 </font>
