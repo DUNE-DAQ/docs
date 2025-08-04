@@ -11,7 +11,7 @@
 
 ## ccm
 
-* **People to contact**: Pierre Lasorak, Alex Tapper
+* **People to contact**: Alex Tapper
 
 * **Repositories with write access**:
 
@@ -282,7 +282,7 @@
     * wibmod
 
 
-Page was generated at: 13/06/2025 14:44:42
+Page was generated at: 04/08/2025 11:26:11
 
 
 
@@ -294,7 +294,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Jun 13 14:47:36 2025 -0500_
+_Date: Mon Aug 4 11:28:05 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
