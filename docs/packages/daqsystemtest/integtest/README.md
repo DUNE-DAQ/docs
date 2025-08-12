@@ -21,7 +21,7 @@ For reference, here are the ideas behind the tests that currently exist in this 
 
 * `minimal_system_quick_test.py` - verify that a small emulator system works and successfully writes data in a short run
 
-* `readout_type_scan.py` - verify that we can write different types of data (WIBEth, DAPHNE, TDE, etc.)
+* `readout_type_scan_test.py` - verify that we can write different types of data (WIBEth, DAPHNE, TDE, etc.)
 
 * `3ru_3df_multirun_test.py` - verify that a system with multiple RUs and multiple DF Apps works as expected, including TPG
 
@@ -46,9 +46,9 @@ For reference, here are the ideas behind the tests that currently exist in this 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Kurt Biery_
+_Author: John Freeman_
 
-_Date: Wed Apr 30 14:32:07 2025 -0500_
+_Date: Tue Aug 5 15:17:14 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqsystemtest/issues](https://github.com/DUNE-DAQ/daqsystemtest/issues)_
 </font>
