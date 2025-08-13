@@ -42,7 +42,7 @@ ActionPlans are defined in configuration using these objects:
 
 1. ActionPlan has a "execution_policy" attribute which sets whether the modules referenced by each step should execute the command in parallel or in series. (Steps are always executed in series, but within each step, modules can receive the command in parallel or again in series.)
 
-ActionPlans are validated by the application to ensure that every module type has registered methods corresponding to the command linked to the ActionPlan, and that only one ActionPlan is linked to the application for a given command. Most DUNE-DAQ applications are SmartDaqApplications, which may generate module instances using predefined rules. This can complicate the usage of DaqModulesGroupById and this mode is currently not allowed for SmartDaqApplications. Note that FSMCommand objects are usually defined by the CCM and included in a fsm.data.xml OKS database.
+ActionPlans are validated by the application to ensure that every module type has registered methods corresponding to the command linked to the ActionPlan, and that only one ActionPlan is linked to the application for a given command. Most DUNE-DAQ applications are SmartDaqApplications, which may generate module instances using predefined rules. This can complicate the usage of DaqModulesGroupById and this mode should be used with caution. Note that FSMCommand objects are usually defined by the CCM and included in a fsm.data.xml OKS database.
 
 ### Example test/config/appfwk.data.xml
 
@@ -163,7 +163,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Mon Jul 21 15:25:46 2025 -0500_
+_Date: Mon Jul 21 15:31:54 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appfwk/issues](https://github.com/DUNE-DAQ/appfwk/issues)_
 </font>
