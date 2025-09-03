@@ -1,5 +1,11 @@
 # Release Notes
 
+## fddaq-v5.4.0
+
+Released on: Sep 2, 2025
+
+Includes core release: coredaq-v5.4.0
+
 ## fddaq-v5.3.3
 
 Released on: July 21, 2025

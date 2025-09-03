@@ -34,6 +34,8 @@ When implenting a DAQ module, you'll want to `#include` the [`DAQModule.hpp` hea
 
 * `register_command`: takes as arguments the name of a command and a function which should execute when the command is received. The function is user defined, and takes an instance of `DAQModule::data_t` as argument. `DAQModule::data_t` is aliased to the `nlohmann::json` type and can thus be thought of as a blob of JSON-structured data. While in principle any arbitary name could be associated with any function of arbitrary behavior to create a command, in practice implementors of DAQ modules define commands associated with the DAQ's state machine: "_conf_", "_start_", "_stop_", "_scrap_". Not all DAQ modules necessarily need to perform an action for each of those transitions; e.g., a module may only be designed to do something during configuration, and not change as the DAQ enters the running state ("_start_") or exits it ("_stop_"). It also supports an optional third argument which lists the states that the application must be in for the command to be valid. [!!!Control People here should make comments and see if this is correct, if it's sitll the plan, etc]
 
+  * **register_command must be called in the DAQModule Constructor!**
+
 * `init`: this pure virtual function's implementation is meant to create objects which are persistent for the lifetime of the DAQ module. It also has the unique role of connecting the DAQModel with its own configuration object, see later the init section for more details. It takes as an argument the type `std::shared_ptr<ConfigurationManager>`. Typically, `init` will query the `ConfigurationManager`, extract the configuration object specifically defined for this `DAQModule` and will store the pointer internally to the class for later usage, when the dedicated commands comes, usually `conf`. Connection, as they are persistent objects, are commonly allocated in `init`; they'll be described in more detail later in this document. 
 
 An conceptual example of what this looks like is the following simplified version of a DAQ module implementation. 
@@ -271,7 +273,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Wed Dec 18 14:46:21 2024 -0600_
+_Date: Wed Jul 23 13:39:53 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appfwk/issues](https://github.com/DUNE-DAQ/appfwk/issues)_
 </font>

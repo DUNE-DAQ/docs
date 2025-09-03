@@ -3,9 +3,13 @@
 This package provides CMake support for DUNE-DAQ packages.
 
 The documentation for this package is divided into four parts:
+
 1) Instructions for `create_dunedaq_package`, a script which will generate a good deal of CMake/C++ code which is standard across all DUNE DAQ packages
+
 2) A description of the standard structure and CMake build code in a DUNE DAQ package
+
 3) A complete reference manual for the DUNE-DAQ-specific CMake functions developers can call in order to specify their package's build
+
 4) A description of how we use schema in order to consistently define data structures
 
 Note that this documentation assumes you have some familiarity with the [daq-buildtools package](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools) and know how to set up a development area and run commands to build code in it.
@@ -27,6 +31,8 @@ Arguments and options:
 `--user-app`: same as `--daq-module`, but for user applications
 
 `--test-app`: same as `--daq-module`, but for integration test applications
+
+`--pytest`: will create a Python program readable by the [pytest integration test framework](https://docs.pytest.org/en/stable/). It takes the name of the test as an argument; note the name needs to be of the form `*_test` or `test_*` so that pytest can work with it. 
 
 Note that some of these concepts, e.g. a user-oriented app vs. an app designed for integration tests of the package itself, are covered below in the [Overview of a DUNE DAQ package](#package_overview) section.
 
@@ -508,7 +514,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Apr 29 17:15:00 2025 -0500_
+_Date: Sun Jul 13 11:14:41 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>

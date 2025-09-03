@@ -20,9 +20,7 @@ A simplified API for passing messages between DAQModules
 
 * `IOManager::get_sender<DataType>(std::string uid)` and `IOManager::get_receiver<DataType>(std::string uid)` should be used to get Sender and Receiver objects connected to the appropriate connections. Note that `ConnectionId` objects are not required, as they will be constructed from the provided DataType and uid arguments.
 
-* Subscribers interested in multiple connections for a single DataType should use a Regular Expression to match the desired connections; this can be anywhere from a full wildcard (`".*"`) to a specific connection UID, depending on the desired scope of the subscription. Topics are now automatically assigned by IOManager as the string representation of DataType.
-
-* The `topic` argument has been removed from `SenderConcept<T>::send`
+* Subscribers interested in multiple connections for a single DataType should use a Regular Expression to match the desired connections; this can be anywhere from a full wildcard (`".*"`) to a specific connection UID, depending on the desired scope of the subscription. Topics are automatically assigned by IOManager as the string representation of DataType.
 
 * `appfwk` will give DAQModules a list of `appfwk::app::ConnectionReference` objects, which associate a "name" to connection UIDs. Methods in `DAQModuleHelper.hpp` take DAQModule configuration objects and extract specific UIDs for given names.
 ```C++
@@ -165,10 +163,6 @@ A simplified API for passing messages between DAQModules
 
 The standard `send()` and `receive()` methods will throw an ERS exception if they time out. This is ideal for cases where timeouts are an exceptional condition (this applies to most, if not all send calls, for example). In cases where the timeout condition can be safely ignored (such as the callback-driving methods which are retrying the receive in a tight loop), the `try_send` and `try_receive` methods may be used. Note that these methods are **not** `noexcept`, any non-timeout issues will result in an ERS exception.
 
-## Updating existing code to use IOManager
-
-Please see [this page](Updating.md) for information about updating your code to use IOManager. Also, if you are interested in using dynamic connection names, look at [this page](Using-dynamic-connection-names.md)
-
 ## APIs used by IOManager
 
 The API used for queues is documented [here](Queue.md). Network connections use [IPM](https://dune-daq-sw.readthedocs.io/en/latest/packages/ipm/) and [NetworkManager](NetworkManager.md)
@@ -182,7 +176,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Thu Jan 19 08:48:13 2023 -0600_
+_Date: Thu Jul 3 13:45:36 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/iomanager/issues](https://github.com/DUNE-DAQ/iomanager/issues)_
 </font>

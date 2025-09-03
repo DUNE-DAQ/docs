@@ -221,6 +221,7 @@ nav:
              - About hermesmodules: packages/hermesmodules/README.md
           - tdemodules:
              - About tdemodules: packages/tdemodules/README.md
+             - packages/tdemodules/amc_butler.md
              - packages/tdemodules/first_time_setup_amc.md
              - packages/tdemodules/generating_configurations.md
           - wibmod:
@@ -294,6 +295,7 @@ nav:
           - trigger:
              - About trigger: packages/trigger/README.md
              - packages/trigger/integtest/README.md
+             - packages/trigger/python/trigger/tpreplay_application/README.md
              - packages/trigger/trigger-alg-howto.md
        - Dataflow (physical):
           - iomanager:
@@ -301,7 +303,6 @@ nav:
              - packages/iomanager/NetworkManager.md
              - packages/iomanager/Queue.md
              - packages/iomanager/Test-Applications.md
-             - packages/iomanager/Updating.md
              - packages/iomanager/Using-dynamic-connection-names.md
           - ipm:
              - About ipm: packages/ipm/README.md

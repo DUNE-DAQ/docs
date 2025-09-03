@@ -115,11 +115,11 @@ for package in $package_list ; do
     # themselves being updated
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout fddaq-v5.3.3_for_docs
+	git checkout fddaq-v5.4.0_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
-	git checkout v3.1.0
+	git checkout v3.1.1
     else
-	git checkout coredaq-v5.3.3 || git checkout fddaq-v5.3.3
+	git checkout coredaq-v5.4.0 || git checkout fddaq-v5.4.0
     fi
     echo $tmpdir/$package
 

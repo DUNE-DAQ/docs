@@ -23,6 +23,8 @@ Users should interact with IPM via the interfaces `dunedaq::ipm::Sender`, `duned
 
 * `ZmqSubscriber` implementing `dunedaq::ipm::Subscriber`
 
+Additioanlly, the `CallbackAdapter` class implements callback functionality for the `ZmqReceiver` and `ZmqSubscriber` class, since ZeroMQ does not have a native callback functionality. It does this by managing a thread which calls `receive` in a loop, calling the given function when data is returned.
+
 Basic example of the sender/receiver pattern:
 
 ```c++
@@ -62,10 +64,21 @@ Receiver::Response response=subscriber->receive(std::chrono::milliseconds(10));
 
 More complete examples can be found in the `test/plugins` directory.
 
+There is an asymmetry between `send` and `receive`, where `send` takes a `void*` and `receive` returns a `std::vector<char>`. This is a result of the fact that IPM does *not* own the memory being passed to `send`, but it does have to *transfer* the memory returned from `receive`.
 
 ### API Diagram
 
 ![Class Diagrams](https://github.com/DUNE-DAQ/ipm/raw/develop/docs/ipm.png)
+
+### ZeroMQ Configuration Variables
+
+Currently, `ZmqContext.hpp` has two environment variables used to configure ZeroMQ within each application:
+
+
+* `IPM_ZMQ_IO_THREADS`: Sets the number of threads in the [ZeroMQ context](https://libzmq.readthedocs.io/en/zeromq3-x/zmq_ctx_set.html). _ipm_ does not specify a default, the ZeroMQ default is 1.
+
+* `IPM_ZMQ_MAX_SOCKETS`: Set the maximum number of sockets allowed on the context. _ipm_ uses a minimum value of **16636**.
+
 
 -----
 
@@ -75,7 +88,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Eric Flumerfelt_
 
-_Date: Thu Dec 8 13:48:36 2022 -0600_
+_Date: Tue Jul 15 14:40:19 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/ipm/issues](https://github.com/DUNE-DAQ/ipm/issues)_
 </font>

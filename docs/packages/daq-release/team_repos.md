@@ -11,15 +11,13 @@
 
 ## ccm
 
-* **People to contact**: Pierre Lasorak, Alex Tapper
+* **People to contact**: Alex Tapper, Marco Roda
 
 * **Repositories with write access**:
 
     * appfwk
 
     * appmodel
-
-    * cider
 
     * cmdlib
 
@@ -49,8 +47,6 @@
 
     * erskafka
 
-    * fddaqconf
-
     * flx-k8s-device-plugin
 
     * grafana-dashboards
@@ -58,8 +54,6 @@
     * kafkaopmon
 
     * logging
-
-    * nanorc
 
     * oks
 
@@ -109,8 +103,6 @@
 
     * dpdklibs
 
-    * fddaqconf
-
     * fdreadoutlibs
 
     * fdreadoutmodules
@@ -139,10 +131,6 @@
 
     * rawdatautils
 
-    * readoutlibs
-
-    * readoutmodules
-
     * serialization
 
     * snbmodules
@@ -167,7 +155,7 @@
 
 * **Repositories with write access**:
 
-    * daphe-firmware
+    * daphne-firmware
 
     * daphne-os
 
@@ -282,7 +270,7 @@
     * wibmod
 
 
-Page was generated at: 13/06/2025 14:44:42
+Page was generated at: 22/08/2025 12:10:10
 
 
 
@@ -294,7 +282,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri Jun 13 14:47:36 2025 -0500_
+_Date: Fri Aug 22 12:13:56 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
