@@ -70,7 +70,7 @@ jobs:
         doxyfile-path: './Doxyfile'
 
     - name: Upload artifacts
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v4
       with:
         path: ./daq-release/docs/docs/html
 
