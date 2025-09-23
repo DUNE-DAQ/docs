@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited Sep-17-2025_
+_This document was last edited Sep-23-2025_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -18,9 +18,9 @@ To get set up, you'll need access to the cvmfs areas `/cvmfs/dunedaq.openscience
 Simply do:
 ```
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
-setup_dbt fddaq-v5.4.2
+setup_dbt fddaq-v5.4.3
 ```
-Note that `fddaq-v5.4.2` is aliased to `v8.9.8`. 
+Note that `fddaq-v5.4.3` is aliased to `v8.9.8`. 
 
 After running these two commands, then you'll see something like:
 ```
@@ -39,10 +39,10 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, stable releases (especially patch stable releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a stable release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v5.4.2-a9 the latest stable release as of Sep-17-2025
+dbt-setup-release <release> # fddaq-v5.4.3-a9 the latest stable release as of Sep-23-2025
 ```
 
-Note that if you set up a stable release you'll get a message along the lines of `Release "fddaq-v5.4.2-a9" requested; interpreting this as release "fddaq-v5.4.2-a9-1"`; this simply reflects that the latest build iteration of the stable release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
+Note that if you set up a stable release you'll get a message along the lines of `Release "fddaq-v5.4.3-a9" requested; interpreting this as release "fddaq-v5.4.3-a9-1"`; this simply reflects that the latest build iteration of the stable release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
 
 Instead of a stable release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fddaq-v5.2.0-rc3-a9` you can do:
 ```
@@ -334,7 +334,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Wed Sep 17 19:03:16 2025 -0500_
+_Date: Tue Sep 23 11:05:58 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
