@@ -123,7 +123,7 @@ GitHub Projects are described [here](https://docs.github.com/en/issues/planning-
 
 7. **Parent Issue (for PRs)**
 
-    * This field is used to link a child Pull Request to a parent Issue.  This is needed because GitHub currently does not provide this functionality.  The format that should be used is “DUNE-DAQ/<repo_name>#<Issue_number>”, for example, DUNE-DAQ/daq-deliverables#188.  This format helps GitHub display the text as a link, in certain cases.
+    * This field is used to link a child Pull Request to a parent Issue.  This is needed because GitHub currently does not provide this functionality.  The format that should be used is 'DUNE-DAQ/<repo_name>#<Issue_number>', for example, DUNE-DAQ/daq-deliverables#188.  This format helps GitHub display the text as a link, in certain cases.
 
 ## Status Field Values for fddaq-v5.5.0
 
@@ -238,7 +238,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Mon Oct 6 15:14:10 2025 -0500_
+_Date: Mon Oct 6 15:25:19 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
