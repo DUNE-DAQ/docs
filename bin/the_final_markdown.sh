@@ -118,6 +118,8 @@ for package in $package_list ; do
 	git checkout v8.9.8_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
 	git checkout v3.2.0
+    else
+	git checkout johnfreeman/add_tracking_info || true
     fi
     echo $tmpdir/$package
 

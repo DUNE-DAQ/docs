@@ -86,7 +86,7 @@ In this period, developers make frequent updates to the `develop` branch via pul
 
 
 
-1. Create a GitHub Issue in the repo describing the code change. This is optional for small changes.
+1. Create a GitHub Issue in the repo describing the code change. This is optional for small changes. How to fill the form associated with the Issue is described [here](change_tracking_process.md).
 
 
 2. Create a feature branch, preferably containing the GitHub user name of the creator and the Issue (if applicable). E.g. `git checkout develop; git checkout -b dingpf/issue_12_feature_dev_demo`
@@ -95,7 +95,7 @@ In this period, developers make frequent updates to the `develop` branch via pul
 3. Locally make commits to the feature branch and push it to GitHub; (`git push -u origin dingpf/issue_12_feature_dev_demo`)
 
 
-4. Create a pull request to the `develop` branch and link the issue to the pull request if applicable
+4. Create a pull request to the `develop` branch and link the issue to the pull request if applicable.  How to fill the form associated with the pull request is described [here](change_tracking_process.md).
 
 
 5. Technically, the pull request can be merged without reviews. But it's highly recommended the author request reviews from other developers if the code change is significant.
@@ -210,7 +210,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Fri May 2 10:33:55 2025 -0500_
+_Date: Mon Oct 6 15:14:10 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
