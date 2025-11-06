@@ -16,7 +16,6 @@ outputs one block for every schema in a json format.
 
 [Instructions for DAQ module users](Instructions-for-DAQ-module-users.md)
 
-%% ### Building and running examples (_under construction_)
 
 
 
@@ -29,7 +28,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Marco Roda_
 
-_Date: Fri Jun 14 12:14:44 2024 +0200_
+_Date: Thu Nov 6 11:24:18 2025 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/opmonlib/issues](https://github.com/DUNE-DAQ/opmonlib/issues)_
 </font>
