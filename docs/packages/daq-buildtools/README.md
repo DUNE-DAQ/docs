@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited Sep-11-2025_
+_This document was last edited Nov-6-2025_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -20,7 +20,7 @@ Simply do:
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
 setup_dbt latest
 ```
-Note that `latest` is aliased to `v8.9.8`. 
+Note that `latest` is aliased to `v8.9.10`. 
 
 After running these two commands, then you'll see something like:
 ```
@@ -39,10 +39,10 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, stable releases (especially patch stable releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a stable release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v5.4.1-a9 the latest stable release as of Sep-8-2025
+dbt-setup-release <release> # fddaq-v5.4.3-a9 the latest stable release as of Sep-23-2025
 ```
 
-Note that if you set up a stable release you'll get a message along the lines of `Release "fddaq-v5.4.1-a9" requested; interpreting this as release "fddaq-v5.4.1-a9-1"`; this simply reflects that the latest build iteration of the stable release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
+Note that if you set up a stable release you'll get a message along the lines of `Release "fddaq-v5.4.3-a9" requested; interpreting this as release "fddaq-v5.4.3-a9-1"`; this simply reflects that the latest build iteration of the stable release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
 
 Instead of a stable release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fddaq-v5.2.0-rc3-a9` you can do:
 ```
@@ -196,12 +196,11 @@ If you wish to only generate files but _not_ also perform a compilation (this is
 dbt-build --codegen-only
 ```
 
-If you want to troubleshoot your code by taking advantage of `gcc`'s `-fsanitize` option, you can forward an argument to it via `dbt-build`'s `--sanitize` option. Note that in order to keep things consistent a clean build is required for this. One example:
+If you want to troubleshoot your code by taking advantage of `gcc`'s `-fsanitize` option, you can forward an argument to it via `dbt-build`'s `--sanitize` option. Note that a clean build is required for this if you already have performed a build without sanitization; the opposite is also true. One example:
 ```
 dbt-build --clean --sanitize address  # Will ensure -fsanitize=address is passed to gcc
 ```
 Depending on the argument provided, there may be some helpful tips at the bottom of the `dbt-build` output on how to run the code you've built with sanitization applied. 
-
 
 You can see all the options listed if you run the script with the `--help` command, i.e.
 ```
@@ -335,7 +334,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Thu Sep 11 13:26:46 2025 -0500_
+_Date: Thu Nov 6 16:01:47 2025 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
