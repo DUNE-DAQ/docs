@@ -88,8 +88,6 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [nanorc](packages/nanorc/README.md) _Not ANOther Run Control_
 
-[* rcif](packages/rcif/README.md) _run control related_
-
 [restcmd](packages/restcmd/README.md) _HTTP REST backend based CommandFacility_
 
 [runconftools](packages/runconftools/README.md) _Constructs configurations from a base of ehn1 configurations_
