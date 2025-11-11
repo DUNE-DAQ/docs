@@ -291,6 +291,7 @@ nav:
              - About timinglibs: packages/timinglibs/README.md
           - tpglibs:
              - About tpglibs: packages/tpglibs/README.md
+             - packages/tpglibs/testapp/BinaryFormatSpecification.md
           - trgtools:
              - About trgtools: packages/trgtools/README.md
              - packages/trgtools/convert-tplatencies.md
