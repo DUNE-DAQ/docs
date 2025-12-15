@@ -19,7 +19,7 @@ jobs:
 
     steps:
     - name: Checkout daq-release
-      uses: actions/checkout@v5
+      uses: actions/checkout@v6
       with:
         repository: DUNE-DAQ/daq-release
         path: daq-release
