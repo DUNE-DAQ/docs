@@ -25,7 +25,7 @@ message ChildrenStatus {
 ```
 
 ### `Argument`
-This message is for describing a generic FSM argument. It has the [form](https://github.com/DUNE-DAQ/druncschema/blob/develop/schema/druncschema/controller.proto#L46):
+This message is for describing a generic FSM argument. It has the [form](https://github.com/DUNE-DAQ/druncschema/blob/develop/schema/druncschema/controller.proto#L54):
 ```
 message Argument {
   enum Presence{
@@ -61,7 +61,7 @@ Where:
 * `help` is some string for help.
 
 ### `FSMCommandDescription`
-have the [form](https://github.com/DUNE-DAQ/druncschema/blob/develop/schema/druncschema/controller.proto#L66):
+have the [form](https://github.com/DUNE-DAQ/druncschema/blob/develop/schema/druncschema/controller.proto#L74):
 ```
 message FSMCommandDescription {
   string name = 1;
@@ -96,7 +96,7 @@ message FSMCommandsDescription {
 Everything can be ignored except `commands` which is a list of the command accessible now. TODO: Needs cleanup
 
 ### `FSMCommand`
-Have the [format](https://github.com/DUNE-DAQ/druncschema/blob/develop/schema/druncschema/controller.proto#L24):
+Have the [format](https://github.com/DUNE-DAQ/druncschema/blob/develop/schema/druncschema/controller.proto#L34):
 ```
 message FSMCommand{
   string command_name = 1;
@@ -275,9 +275,9 @@ Says who is controlling the controller
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: miruuna_
 
-_Date: Thu Apr 17 11:25:17 2025 -0500_
+_Date: Wed Oct 15 10:52:04 2025 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>

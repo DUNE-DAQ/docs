@@ -135,12 +135,15 @@ nav:
              - About daq-release: packages/daq-release/README.md
              - packages/daq-release/Build-new-external-software-stack.md
              - packages/daq-release/Build-packages-with-spack-in-a-work-area.md
+             - packages/daq-release/change_tracking_process.md
              - packages/daq-release/ci_github_action.md
              - packages/daq-release/create_release_spack.md
              - packages/daq-release/development_workflow_gitflow.md
              - packages/daq-release/doxygen_mainpage.md
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/team_repos.md
+          - daqpytools:
+             - About daqpytools: packages/daqpytools/README.md
           - daqsystemtest:
              - About daqsystemtest: packages/daqsystemtest/README.md
              - packages/daqsystemtest/integtest/README.md
@@ -219,11 +222,20 @@ nav:
              - packages/flxlibs/Local-driver.md
           - hermesmodules:
              - About hermesmodules: packages/hermesmodules/README.md
+          - snbmodules:
+             - About snbmodules: packages/snbmodules/README.md
+             - packages/snbmodules/Configuration.md
+             - packages/snbmodules/Installation.md
+             - packages/snbmodules/integtest/README.md
+             - packages/snbmodules/TechnicalDocumentation.md
+             - packages/snbmodules/Transfer.md
+             - packages/snbmodules/Transform.md
           - tdemodules:
              - About tdemodules: packages/tdemodules/README.md
              - packages/tdemodules/amc_butler.md
              - packages/tdemodules/first_time_setup_amc.md
              - packages/tdemodules/generating_configurations.md
+             - packages/tdemodules/reboot_AMCs.md
           - wibmod:
              - About wibmod: packages/wibmod/README.md
              - packages/wibmod/src/WIB1/README.md
@@ -234,6 +246,9 @@ nav:
              - packages/appmodel/SmartDaqApplication.md
           - confmodel:
              - About confmodel: packages/confmodel/README.md
+          - connectivityserver:
+             - About connectivityserver: packages/connectivityserver/README.md
+             - packages/connectivityserver/deploy/README.md
           - daqconf:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigPlotting.md
@@ -241,6 +256,7 @@ nav:
              - packages/daqconf/TextualDBE.md
           - dbe:
              - About dbe: packages/dbe/README.md
+             - packages/dbe/dbe.md
              - packages/dbe/schemaeditor.md
           - drunc:
              - About drunc: packages/drunc/README.md
@@ -282,6 +298,7 @@ nav:
              - About timinglibs: packages/timinglibs/README.md
           - tpglibs:
              - About tpglibs: packages/tpglibs/README.md
+             - packages/tpglibs/testapp/BinaryFormatSpecification.md
           - trgtools:
              - About trgtools: packages/trgtools/README.md
              - packages/trgtools/convert-tplatencies.md

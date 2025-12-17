@@ -1,71 +1,37 @@
 # DAQ Asset Tools
 
+## Overview
+
 DAQ asset files are stored under a 3-level hashed directory in `/cvmfs/dunedaq.opensciencegrid.org/assets/files`. Each asset file has an associated json file with its metadata under the same directory.
 
 There is a SQLite database file (`dunedaq-asset-db.sqlite`) under `/cvmfs/dunedaq.opensciencegrid.org/assets`. Metadata of the files are also stored in this database file.
 
-This repository contains a set of tools to manage these DAQ asset files. 
+This repository contains a set of tools to manage these DAQ asset files, available [once the standard DUNE DAQ environment has been set up](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/).
 
-- `assets-list`: list asset files;
-- `assets-add`: adding new asset files to the catalog;
-- `assets-update`: update asset files' metadata;
-- `assets-retire`: retire asset files.
+- `assets-list`: list asset files
+- `assets-add`: adding new asset files to the catalog
+- `assets-update`: update asset files' metadata
+- `assets-retire`: retire asset files
 
-Files listed in this [spreadsheet](https://docs.google.com/spreadsheets/d/1oDYe1eEqJhkY0DTd6mfpLw9ou7TqBCaDEgTo0qqVmqY/edit#gid=0) are being cataloged. When adding new files, please add new entries to the spreadsheet and let Software Coordination team to catalog and publish the files.
+Each command has a `-h` option which will tell you how to use it in detail; some of the highlights are covered in this document. 
 
-### Installation
+Files which are part of our assets are catalogued in this [spreadsheet](https://docs.google.com/spreadsheets/d/1oDYe1eEqJhkY0DTd6mfpLw9ou7TqBCaDEgTo0qqVmqY/edit#gid=0), where they provide info to users about each asset. When developers and testers want a new asset, they should open an issue in this repository and select the "Request to add a DAQ asset file" form. The Software Coordination team will then publish the file to `cvmfs`. 
 
-`pip install git+https://github.com/DUNE-DAQ/daq-assettools@v1.10.0#egg=daq-assettools # Change the version to the desired version.`
+Note that asset files shouldn't exceed more than a couple hundred MB in size; cvmfs responds badly to files larger than that.
 
-## How to get path to asset files
+## How to see which asset files are available
 
-`assets-list` is the tool for getting the path to asset files. 
-
-Examples:
+`assets-list` is the tool for this. It's a flexible tool; see `assets-list -h` for all available options. Here are some examples:
 
 - `assets-list --subsystem readout`
-- `assets-list --subsystem readout --copy-to ./`: list files of `readout` subsystem, and copy them to the current directory. The copied file will be renamed as `file-<short_checksum>.ext`, assuming its original file name is `file.ext`; 
-- `assets-list -c dc74fe934cfb603d74ab6e54a0af7980`: list single file matching the MD5 file checksum;
-- `assets-list -c dc74fe934cfb603d74ab6e54a0af7980 --copy-to ./`: list single file matching the MD5 file checksum and copy the file to the current directory;
-- `assets-list -c dc74fe934cfb603d74ab6e54a0af7980 | tail -n +2| awk '{print $NF}'`: get the file path only;
+- `assets-list --subsystem readout --copy-to ./`: list files of `readout` subsystem, and copy them to the current directory. The copied file will be renamed as `file-<short_checksum>.ext`, assuming its original file name is `file.ext` 
+- `assets-list -c dc74fe934cfb603d74ab6e54a0af7980`: list single file matching the MD5 file checksum
+- `assets-list -c dc74fe934cfb603d74ab6e54a0af7980 --copy-to ./`: list single file matching the MD5 file checksum and copy the file to the current directory
 - `assets-list --subsystem readout --format binary --status valid --print-metadata`
-
-```
-usage: assets-list [-h] [--db-file DB_FILE] [-n NAME]
-                   [--subsystem {readout,trigger}] [-l LABEL]
-                   [-f {binary,text}]
-                   [--status {valid,expired,new_version_available}]
-                   [--description DESCRIPTION] [--replica-uri REPLICA_URI]
-                   [-p] [--copy-to COPY_TO]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --db-file DB_FILE     path to database file (default:
-                        /cvmfs/dunedaq.opensciencegrid.org/assets/dunedaq-
-                        asset-db.sqlite)
-  -n NAME, --name NAME  asset name (default: None)
-  --subsystem {readout,trigger}
-                        asset subsystem (default: None)
-  -l LABEL, --label LABEL
-                        asset label (default: None)
-  -f {binary,text}, --format {binary,text}
-                        asset file format (default: None)
-  --status {valid,expired,new_version_available}
-                        asset file status (default: None)
-  -c CHECKSUM, --checksum CHECKSUM
-                        MD5 checksum of asset file (default: None)
-  --description DESCRIPTION
-                        description of asset file (default: None)
-  --replica-uri REPLICA_URI
-                        replica URI (default: None)
-  -p, --print-metadata  print full metadata (default: False)
-  --copy-to COPY_TO     path to the directory where asset files will be copied to. (default: None)
-
-```
 
 ## How to add, update, and retire asset files
 
-Note: these operations require write permissions to the database file, and file storage directories. Only Software Coordination team members need to perform these operations.
+_Note: these operations require write permissions to the database file, and file storage directories. Only Software Coordination team members need to perform these operations._
 
 ### `assets-add`
 
@@ -75,42 +41,7 @@ The tool can take metadata fields from command line as well as from a JSON file.
 
 Examples:
 
-- `assets-add -s ./frames.bin --db-file ./dunedaq-asset-db.sqlite -n frames.bin -f binary --status valid --subsystem readout --label ProtoWIB --description "Used for FE emulation in FakeCardReader"`
-
-```
-usage: assets-add [-h] [--db-file DB_FILE] [-n NAME]
-                  [--subsystem {readout,trigger}] [-l LABEL]
-                  [-f {binary,text}]
-                  [--status {valid,expired,new_version_available}]
-                  [--description DESCRIPTION] [--replica-uri REPLICA_URI]
-                  [-s SOURCE] [--json-file JSON_FILE]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --db-file DB_FILE     path to database file (default:
-                        /cvmfs/dunedaq.opensciencegrid.org/assets/dunedaq-
-                        asset-db.sqlite)
-  -n NAME, --name NAME  asset name (default: None)
-  --subsystem {readout,trigger}
-                        asset subsystem (default: None)
-  -l LABEL, --label LABEL
-                        asset label (default: None)
-  -f {binary,text}, --format {binary,text}
-                        asset file format (default: None)
-  --status {valid,expired,new_version_available}
-                        asset file status (default: None)
-  -c CHECKSUM, --checksum CHECKSUM
-                        MD5 checksum of asset file (default: None)
-  --description DESCRIPTION
-                        description of asset file (default: None)
-  --replica-uri REPLICA_URI
-                        replica URI (default: None)
-  -s SOURCE, --source SOURCE
-                        path to asset file (default: None)
-  --json-file JSON_FILE
-                        json file containing file metadata (default: None)
-
-```
+- `assets-add -s ./frames1234.bin --db-file ./dunedaq-asset-db.sqlite -n frames1234.bin -f binary --status valid --subsystem readout --label WIBEth --description "Used for FE emulation in FakeCardReader"`
 
 ### `assets-update`
 
@@ -118,40 +49,8 @@ Use `assets-update` to update certain metadata fields of a file. Similar as othe
 
 Examples:
 
-- `assets-update --subsystem readout --label ProtoWIB --json-string '{"description": "Used for FE emulation in FakeCardReader during Integration Week."}'`
+- `assets-update --subsystem readout --label WIBEth --json-string '{"description": "Used for FE emulation in FakeCardReader during Integration Week."}'`
 - `assets-update -c dc74fe934cfb603d74ab6e54a0af7980 --json-string '{"status": "valid"}'`
-
-```
-usage: assets-update [-h] [--db-file DB_FILE] [-n NAME]
-                     [--subsystem {readout,trigger}] [-l LABEL]
-                     [-f {binary,text}]
-                     [--status {valid,expired,new_version_available}]
-                     [--description DESCRIPTION] [--replica-uri REPLICA_URI]
-                     [--json-string JSON_STRING]
-
-optional arguments:
-  -h, --help            show this help message and exit
-  --db-file DB_FILE     path to database file (default:
-                        /cvmfs/dunedaq.opensciencegrid.org/assets/dunedaq-
-                        asset-db.sqlite)
-  -n NAME, --name NAME  asset name (default: None)
-  --subsystem {readout,trigger}
-                        asset subsystem (default: None)
-  -l LABEL, --label LABEL
-                        asset label (default: None)
-  -f {binary,text}, --format {binary,text}
-                        asset file format (default: None)
-  --status {valid,expired,new_version_available}
-                        asset file status (default: None)
-  -c CHECKSUM, --checksum CHECKSUM
-                        MD5 checksum of asset file (default: None)
-  --description DESCRIPTION
-                        description of asset file (default: None)
-  --replica-uri REPLICA_URI
-                        replica URI (default: None)
-  --json-string JSON_STRING
-                        json string to be updated in metadata (default: None)
-```
 
 ### `assets-retire`
 
@@ -161,34 +60,53 @@ Examples:
 
 - `assets-retire -c dc74fe934cfb603d74ab6e54a0af7980`
 
-```
-usage: assets-retire [-h] [--db-file DB_FILE] [-n NAME]
-                     [--subsystem {readout,trigger}] [-l LABEL]
-                     [-f {binary,text}]
-                     [--status {valid,expired,new_version_available}]
-                     [-c CHECKSUM] [--description DESCRIPTION]
-                     [--replica-uri REPLICA_URI]
+### Publishing changes to cvmfs
 
-optional arguments:
-  -h, --help            show this help message and exit
-  --db-file DB_FILE     path to database file (default:
-                        /cvmfs/dunedaq.opensciencegrid.org/assets/dunedaq-
-                        asset-db.sqlite)
-  -n NAME, --name NAME  asset name (default: None)
-  --subsystem {readout,trigger}
-                        asset subsystem (default: None)
-  -l LABEL, --label LABEL
-                        asset label (default: None)
-  -f {binary,text}, --format {binary,text}
-                        asset file format (default: None)
-  --status {valid,expired,new_version_available}
-                        asset file status (default: None)
-  -c CHECKSUM, --checksum CHECKSUM
-                        MD5 checksum of asset file (default: None)
-  --description DESCRIPTION
-                        description of asset file (default: None)
-  --replica-uri REPLICA_URI
-                        replica URI (default: None)
+Publishing changes to cvmfs can be done via the following steps:
+
+
+
+1. Prepare changes in a local copy of the cvmfs repository's `assets` directory
+
+
+2. On a cvmfs publisher node, open a cvmfs transaction, sync the `assets` directory in the repo to the local mirror with new changes, and publish the changes.
+
+The following code snippet shows a real-case example of adding a new file to the database, and "retire" a previous file. For space/logistical reasons it doesn't show that (1) the file also gets logged in the spreadsheet and (2) a DUNE DAQ environment has already been set up. 
+
+#### Prepare changes in a local "assets" mirror
+
+```bash
+
+# Create a local mirror of "assets"
+
+rsync -vlprt /cvmfs/dunedaq.opensciencegrid.org/assets .
+
+# Make changes to the local assets mirror
+# Specify the db file path with `--db-file` option so that the changes goes to the local mirror;
+
+## Adding a new file
+
+cd ./assets
+
+# Note that the name, label and description here are just given as examples
+assets-add -s <name of file to add as asset> --db-file ./dunedaq-asset-db.sqlite -n wib_link_67.bin -f binary --status valid --subsystem readout --label WIBEth --description "Other WIBEth files have outdated detector_id fields in DAQEthHeader"
+
+## Retiring a file, referring to it by its hash
+
+assets-retire --db-file ./dunedaq-asset-db.sqlite -c a0ddae8343e82ba1a3668c5aea20f3d2
+
+## More low-level: accomplishing the same as above, but via the assets-update command
+
+assets-update --db-file ./dunedaq-asset-db.sqlite -c a0ddae8343e82ba1a3668c5aea20f3d2 --json-string '{"status": "expired"}'
+
+```
+
+#### Publish changes to cvmfs
+
+Technical details of how to publish to cvmfs [is covered in the daq-release documentation](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-release/publish_to_cvmfs/#the-basics). Here, after modifying your local mirror of `assets`, you'd sync it to /cvmfs/dunedaq.opensciencegrid.org/assets:
+
+```bash
+rsync -vlprt <user@node_with_local_assets_mirror>:<path_to_local_assets_mirror> /cvmfs/dunedaq.opensciencegrid.org
 ```
 
 
@@ -198,9 +116,9 @@ optional arguments:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pengfei Ding_
+_Author: Kurt Biery_
 
-_Date: Tue Feb 14 11:35:00 2023 -0600_
+_Date: Mon Oct 13 21:21:07 2025 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-assettools/issues](https://github.com/DUNE-DAQ/daq-assettools/issues)_
 </font>

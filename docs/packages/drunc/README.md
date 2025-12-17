@@ -21,7 +21,7 @@ If you need more details:
 
 * [Controller](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller)
 
-* [Unified shell](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Unified-shell) (merges the controller and process manager shells)
+* [Unified shell](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Unified-shell-reference) (merges the controller and process manager shells)
 
 There are more in depth descriptions of part of the system here:
 
@@ -34,7 +34,7 @@ If are developing a user interface for `drunc`, you can get help here:
 
 * [Messaging format](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Messaging-format) (valid for all the `drunc` endpoints)
 
-* [Process manager endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-Manager-interface)
+* [Process manager endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Process-manager-interface)
 
 * [Controller endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller-interface)
 
@@ -49,9 +49,9 @@ There is more developer information in the [drunc wiki](https://github.com/DUNE-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: miruuna_
 
-_Date: Thu Apr 17 11:25:17 2025 -0500_
+_Date: Wed Oct 15 10:52:04 2025 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
