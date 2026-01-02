@@ -129,6 +129,7 @@ nav:
           - daq-buildtools:
           - daq-cmake:
           - daq-release:
+          - daqpytools:
           - daqsystemtest:
           - integrationtest:
           - styleguide:
@@ -140,6 +141,7 @@ nav:
           - utilities:
        - Readout:
           - asiolibs:
+          - ctbmodules:
           - daqdataformats:
           - datahandlinglibs:
           - detchannelmaps:
@@ -152,10 +154,13 @@ nav:
           - hermesmodules:
           - lbrulibs:
           - nddetdataformats:
+          - snbmodules:
+          - tdemodules:
           - wibmod:
        - Control:
           - appmodel:
           - confmodel:
+          - connectivityserver:
           - daqconf:
           - dbe:
           - drunc:

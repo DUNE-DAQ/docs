@@ -26,6 +26,8 @@ To learn about how to run even more comprehensive tests (particularly relevant d
 
 To learn how to keep track of assets (files, etc. which affect the behavior of the DAQ but aren't part of a standard software package), go [here](packages/daq-assettools/README.md)
 
+Tools to simplify DAQ development in Python can be found in [daqpytools](packages/daqpytools/README.md)
+
 --------------
 
 For the other packages, please click on one of the links below. To learn how to edit a package's documentation, click [here](editing_package_documentation.md). Packages marked with an asterix don't yet have any official documentation; please see their Issues page to remedy this. 
@@ -45,6 +47,8 @@ For the other packages, please click on one of the links below. To learn how to 
 ### Readout
 
 [asiolibs](packages/asiolibs/README.md) _Boost.Asio-based socket reader plugin for low-bandwidth devices_
+
+[ctbmodules](packages/ctbmodules/README.md) _Modules for the Central Trigger Board hardware_
 
 [daqdataformats](packages/daqdataformats/README.md) _DAQ data formats_
 
@@ -66,11 +70,15 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [hermesmodules](packages/hermesmodules/README.md) _Modules for the Hermes core_
 
+[snbmodules](packages/snbmodules/README.md) _Modules for supernova detection_
+
 [lbrulibs](packages/lbrulibs/README.md) _DAQModules, utilities, and scripts for DUNE-ND Upstream DAQ Low Bandwidth Readout Unit_
 
 [nddetdataformats](packages/nddetdataformats/README.md) _Bitfields of near detector raw data and related tools_
 
 [ndreadoutlibs](packages/ndreadoutlibs/README.md) _Classes for working with near detector data (e.g. PACMAN)_
+
+[tdemodules](packages/tdemodules/README.md) _Modules for controlling the Top Drift Electronics' Advanced Mezzanine Cards (AMC)_
 
 [wibmod](packages/wibmod/README.md) _WIB configuration and monitoring interface_
 
@@ -79,6 +87,8 @@ For the other packages, please click on one of the links below. To learn how to 
 [appmodel](packages/appmodel/README.md) _Schema for DAQ configuration of readout, dataflow and trigger applications_
 
 [confmodel](packages/confmodel/README.md) _A core schema for DAQ configuration_
+
+[connectivityserver](packages/connectivityserver/README.md) _Serves connection information to DAQ applications_
 
 [daqconf](packages/daqconf/README.md) _application to read out Felix data and store it in HDF5 files on disk_
 

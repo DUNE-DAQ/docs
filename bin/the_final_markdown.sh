@@ -5,7 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="wibmod utilities trigger trgtools tpglibs timinglibs timing styleguide serialization runconf-ui runconftools restcmd rawdatautils opmonlib ndreadoutlibs nddetdataformats nanorc kafkaopmon logging listrev lbrulibs hermesmodules hdf5libs ipm iomanager integrationtest flxlibs fdreadoutmodules fdreadoutlibs fddetdataformats erskafka ers drunc dpdklibs dfmodules dfmessages detdataformats detchannelmaps dbe datahandlinglibs daqdataformats daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools confmodel cmdlib asiolibs appfwk appmodel"
+package_list="wibmod utilities trigger trgtools tpglibs timinglibs timing tdemodules styleguide snbmodules serialization runconf-ui runconftools restcmd rawdatautils opmonlib ndreadoutlibs nddetdataformats nanorc kafkaopmon logging listrev lbrulibs hermesmodules hdf5libs ipm iomanager integrationtest flxlibs fdreadoutmodules fdreadoutlibs fddetdataformats erskafka ers drunc dpdklibs dfmodules dfmessages detdataformats detchannelmaps dbe datahandlinglibs daqpytools daqdataformats daqconf daqsystemtest daq-release daq-cmake daq-buildtools daq-assettools ctbmodules connectivityserver confmodel cmdlib asiolibs appfwk appmodel"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
