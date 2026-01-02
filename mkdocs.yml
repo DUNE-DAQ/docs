@@ -142,6 +142,8 @@ nav:
              - packages/daq-release/doxygen_mainpage.md
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/team_repos.md
+          - daqpytools:
+             - About daqpytools: packages/daqpytools/README.md
           - daqsystemtest:
              - About daqsystemtest: packages/daqsystemtest/README.md
              - packages/daqsystemtest/integtest/README.md
@@ -171,6 +173,8 @@ nav:
        - Readout:
           - asiolibs:
              - About asiolibs: packages/asiolibs/README.md
+          - ctbmodules:
+             - About ctbmodules: packages/ctbmodules/README.md
           - daqdataformats:
              - About daqdataformats: packages/daqdataformats/README.md
              - packages/daqdataformats/ComponentRequestV0.md
@@ -224,6 +228,20 @@ nav:
              - packages/lbrulibs/socket-implementation.md
           - nddetdataformats:
              - About nddetdataformats: packages/nddetdataformats/README.md
+          - snbmodules:
+             - About snbmodules: packages/snbmodules/README.md
+             - packages/snbmodules/Configuration.md
+             - packages/snbmodules/Installation.md
+             - packages/snbmodules/integtest/README.md
+             - packages/snbmodules/TechnicalDocumentation.md
+             - packages/snbmodules/Transfer.md
+             - packages/snbmodules/Transform.md
+          - tdemodules:
+             - About tdemodules: packages/tdemodules/README.md
+             - packages/tdemodules/amc_butler.md
+             - packages/tdemodules/first_time_setup_amc.md
+             - packages/tdemodules/generating_configurations.md
+             - packages/tdemodules/reboot_AMCs.md
           - wibmod:
              - About wibmod: packages/wibmod/README.md
              - packages/wibmod/src/WIB1/README.md
@@ -234,6 +252,9 @@ nav:
              - packages/appmodel/SmartDaqApplication.md
           - confmodel:
              - About confmodel: packages/confmodel/README.md
+          - connectivityserver:
+             - About connectivityserver: packages/connectivityserver/README.md
+             - packages/connectivityserver/deploy/README.md
           - daqconf:
              - About daqconf: packages/daqconf/README.md
              - packages/daqconf/ConfigPlotting.md
