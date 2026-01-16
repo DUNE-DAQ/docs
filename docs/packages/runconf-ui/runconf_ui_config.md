@@ -13,6 +13,9 @@ The runconf_ui YAML files [stored in src/runconf_ui/configuration] are used for 
 ## Environment setup
 For now shifter view looks for a configuration YAML called `/path/to/runconf_ui/src/configuration/${APPARATUS}_configuration.yml`, for example, `np02_configuration.yml`. This can also be set using the `--shifter-interface-config` flag at start up.
 
+
+**NOTE** If you're not in a shifter TMUX session you need to call `source runconf_X_env_setup.sh` [currently, we have `runconf_np02_env_setup.sh` and `runconf_np04_env_setup.sh`]. This script can be called from anywhere and will initialise the TMUX environment variables required by `runconf-ui`.
+
 The environment settings are stored in `General`. These are settable either as direct paths/variables OR if the interface finds a corresponding environment variable, that variable. In the below config you can see examples of both of these settings. One can also over-ride any of these settings using the CLI at startup.
 
 ```yml
@@ -351,7 +354,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Henry Wallace_
 
-_Date: Tue Jul 15 11:31:56 2025 +0100_
+_Date: Fri Jan 16 13:33:16 2026 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconf-ui/issues](https://github.com/DUNE-DAQ/runconf-ui/issues)_
 </font>
