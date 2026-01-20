@@ -16,6 +16,7 @@ cp test.data.xml snbmodules/config/snbmodules/simple-transform-test.data.xml
 pytest -s snbmodules/integtest/simple_transform_test.py
 ```
 
+N.B. rawdatautils/scripts/hdf5_wibeth_to_binary.py may be useful for obtaining a binary file for use with the simple_transform_test.
 
 
 -----
@@ -24,9 +25,9 @@ pytest -s snbmodules/integtest/simple_transform_test.py
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: eflumerf_
 
-_Date: Tue Nov 11 16:54:54 2025 -0600_
+_Date: Tue Jan 20 08:35:03 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/snbmodules/issues](https://github.com/DUNE-DAQ/snbmodules/issues)_
 </font>
