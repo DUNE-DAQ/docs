@@ -146,6 +146,7 @@ nav:
              - About daqpytools: packages/daqpytools/README.md
           - daqsystemtest:
              - About daqsystemtest: packages/daqsystemtest/README.md
+             - packages/daqsystemtest/bundle_script_overview.md
              - packages/daqsystemtest/integtest/README.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
