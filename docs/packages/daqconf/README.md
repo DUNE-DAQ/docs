@@ -38,6 +38,8 @@ Commandline utility to generate a graphical flow diagram of a full configuration
 ### `validate`
   Attempt to determine if a given Session configuration is valid and does not contain common errors
 
+### `uniqueness_enforcer`
+  Attempt to enforce all object names to be unique in a configuration/folder of configurations. 
 
 ### textual_dbe
  Attempt to replicate OKS' Data Base editor within Python. Full details are [here](TextualDBE.md). Current implementation is very incomplete so use with caution.
@@ -79,9 +81,9 @@ you specify on the commad line.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pierre Lasorak_
+_Author: Henry Wallace_
 
-_Date: Wed Dec 11 12:43:11 2024 +0100_
+_Date: Wed Feb 4 09:59:28 2026 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>
