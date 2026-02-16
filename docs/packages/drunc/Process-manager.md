@@ -8,7 +8,7 @@ To boot a `process_manager`, you will need to choose the most appropriate config
 
 * `ssh-standalone.json`: `ssh` based implementation without a `kafka` feed. Uses remote shell client processes to manage ssh connections.
 
-* `ssh-standalone-paramiko-client.json`: `ssh` based implementation without a `kafka` feed. Uses paramiko library to manage ssh connections from the python process.
+* `ssh-standalone-paramiko-client.json`: `ssh` based implementation without a `kafka` feed. Uses paramiko library to manage ssh connections from the python process. Currently NOT maintained but may be revisited in future - use `ssh-standalone` only for now.
 
 * `ssh-pocket-kafka.json`: `ssh` based implementation with `pocket`'s `kafka` for message broadcasting.
 
@@ -127,7 +127,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Aurash Karimi_
 
-_Date: Tue Nov 4 19:28:18 2025 +0000_
+_Date: Fri Feb 6 17:11:29 2026 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
