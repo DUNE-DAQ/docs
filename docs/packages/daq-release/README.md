@@ -40,6 +40,9 @@ This is a repo containing DUNE DAQ release making tools, configuration files, an
 
 4. [How to build a new stack of external software](Build-new-external-software-stack.md)
 
+
+5. [How to create a new type of software environment](creating_a_new_environment.md)
+
 # CI Workflow Status
 
 [DUNE DAQ CI Summary Dashboard](https://dune-daq.github.io/daq-release/)
@@ -53,9 +56,9 @@ This is a repo containing DUNE DAQ release making tools, configuration files, an
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Andrew Mogan_
+_Author: John Freeman_
 
-_Date: Wed Dec 10 10:07:22 2025 -0600_
+_Date: Fri Feb 13 15:02:55 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
