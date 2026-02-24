@@ -187,12 +187,16 @@ nav:
              - packages/daqdataformats/FragmentHeaderV2.md
              - packages/daqdataformats/FragmentHeaderV3.md
              - packages/daqdataformats/FragmentHeaderV4.md
+             - packages/daqdataformats/FragmentHeaderV5.md
+             - packages/daqdataformats/FragmentHeaderV6.md
              - packages/daqdataformats/GeoIDV0.md
              - packages/daqdataformats/GeoIDV1.md
              - packages/daqdataformats/SourceIDV2.md
              - packages/daqdataformats/TriggerRecordHeaderDataV1.md
              - packages/daqdataformats/TriggerRecordHeaderDataV2.md
              - packages/daqdataformats/TriggerRecordHeaderDataV3.md
+             - packages/daqdataformats/TriggerRecordHeaderDataV4.md
+             - packages/daqdataformats/TriggerRecordHeaderDataV5.md
           - datahandlinglibs:
              - About datahandlinglibs: packages/datahandlinglibs/README.md
              - packages/datahandlinglibs/Directory-structure.md
