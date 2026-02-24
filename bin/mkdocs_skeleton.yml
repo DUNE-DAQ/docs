@@ -141,6 +141,7 @@ nav:
           - utilities:
        - Readout:
           - asiolibs:
+          - cibmodules:
           - ctbmodules:
           - daqdataformats:
           - datahandlinglibs:

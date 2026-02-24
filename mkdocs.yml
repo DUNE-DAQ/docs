@@ -175,6 +175,8 @@ nav:
        - Readout:
           - asiolibs:
              - About asiolibs: packages/asiolibs/README.md
+          - cibmodules:
+             - About cibmodules: packages/cibmodules/README.md
           - ctbmodules:
              - About ctbmodules: packages/ctbmodules/README.md
           - daqdataformats:

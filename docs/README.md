@@ -48,6 +48,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [asiolibs](packages/asiolibs/README.md) _Boost.Asio-based socket reader plugin for low-bandwidth devices_
 
+[cibmodules](packages/cibmodules/README.md) _Command and readout interface for the Calibration Interface Board_
+
 [ctbmodules](packages/ctbmodules/README.md) _Modules for the Central Trigger Board hardware_
 
 [daqdataformats](packages/daqdataformats/README.md) _DAQ data formats_
