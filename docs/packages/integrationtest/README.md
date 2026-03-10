@@ -60,7 +60,7 @@ pytest -s test_integration.py
 
 The test framework handles running python with the confgen specified in the test file, then runs drunc with the generated OKS database (a copy of the database is always made to prevent accidental changes). Finally, the actual test functions are run.
 
-(The framework searches for the `drunc-unified-shell` script in `$PATH`. If you want to use a different run control implementation from elsewhere, you can use the `--nanorc-path` argument to point the test to the script).
+(The framework searches for the `drunc-unified-shell` script in `$PATH`. If you want to use a different run control implementation from elsewhere, you can use the `--dunerc-path` argument to point the test to the script).
 
 ## Writing test functions
 
@@ -144,9 +144,9 @@ The generated configuration will be in the `/tmp/pytest-of-$USER/pytest-current/
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Eric Flumerfelt_
+_Author: Kurt Biery_
 
-_Date: Wed Jun 25 08:30:37 2025 -0500_
+_Date: Fri Feb 27 15:14:33 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/integrationtest/issues](https://github.com/DUNE-DAQ/integrationtest/issues)_
 </font>
