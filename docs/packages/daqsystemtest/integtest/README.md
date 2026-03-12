@@ -7,7 +7,7 @@
 Here is a sample command for invoking a test (feel free to keep or drop the options in brackets, as you prefer):
 
 ```
-pytest -s minimal_system_quick_test.py [--nanorc-option log-level debug]  # this nanorc option is still useful even when using drunc
+pytest -s minimal_system_quick_test.py [--dunerc-option log-level debug]  # this dunerc option is still useful even when using drunc
 ```
 
 The "-k" pytest option can be used ro selectively run a subset of the configurations in one of our integtest files.  For example:
@@ -49,9 +49,9 @@ For reference, here are the ideas behind the tests that currently exist in this 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: bieryAtFnal_
+_Author: Kurt Biery_
 
-_Date: Mon Feb 9 20:54:19 2026 -0600_
+_Date: Sun Mar 1 07:16:38 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqsystemtest/issues](https://github.com/DUNE-DAQ/daqsystemtest/issues)_
 </font>
