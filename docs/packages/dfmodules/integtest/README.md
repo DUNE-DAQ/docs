@@ -8,7 +8,7 @@
 Here is a sample command for invoking a test (feel free to keep or drop the options in brackets, as you prefer):
 
 ```
-pytest -s max_file_size_test.py [--nanorc-option log-level debug]  # this nanorc option is still useful even when using drunc
+pytest -s max_file_size_test.py [--dunerc-option log-level debug]  # this dunerc option is still useful even when using drunc
 ```
 
 For reference, here are the ideas behind the existing tests:
@@ -38,7 +38,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Kurt Biery_
 
-_Date: Mon Nov 17 13:56:16 2025 -0600_
+_Date: Sun Mar 1 07:17:23 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dfmodules/issues](https://github.com/DUNE-DAQ/dfmodules/issues)_
 </font>
