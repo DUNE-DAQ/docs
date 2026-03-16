@@ -86,6 +86,9 @@ the class names. The matching can be done on class name or object name
 and case sensitive or not according to the settings of the check box
 and combo box just above the text input.
 
+For example to find all objects including 'ers' in their name, enter
+'ers' in the search box and select `Search by Object` from the combo
+box above it.  ![Object search](dbe-object-search.png)
 
 ## Using the `Table view` (2)
 
@@ -109,7 +112,7 @@ that instance.
 * Double clicking on an attribute will allow editing of
 the attribute directly in the cell
 
-* Double clicking on a relationship it will pop
+* Double clicking on a relationship will pop
 up a dialogue box allowing selection of objects of the correct type.
 
 ### Filtering the view
@@ -136,7 +139,32 @@ The `Info Tabs` section consists of 3 tabs, the `File View`, the
   The `File View` lists all the loaded data files along with their
 read/write access and modified status. The list of files included by
 the currently selected file can be updated by pulling up the include
-file editor from the context menu. 
+file editor by selecting `Add/Remove Files` from the context menu. A
+window showing information about the file, including a list of objects
+defined in it, can be activated by selecting `File information` from
+the context menu or by double-clicking on the appropriate row.
+
+![File information window](dbe-file-information.png)
+
+#### File Information window
+
+  The File Information window has 3 panels showing a list of all the
+objects in the file and lists of all the schema and data files that
+this file includes. The schema and data file panels have buttons
+allowing you to add further includes and this functionality is also
+available via the context menu. This is a simpler interface to
+updating the list of includes than using the `Include file editor`.
+
+  If the file contains any objects with relationships to objects in
+files that are not included or the schema file in which the class is
+defined is not loaded, a 4th panel with warning messages will be
+shown.
+
+  Both the schema file and data file panels have an 'Add' button
+allowing more includes to be added. These will bring up a standard
+file selection dialogue with the left-hand column populated by the
+paths from `DUNEDAQ_DB_PATH`.
+![Add file dialogue](dbe-add-schema.png)
 
 ### The `Undo` tab
 
@@ -153,7 +181,7 @@ keyboard, there are also buttons on the tool-bar to undo/redo changes.
 New objects can be created by from the `Class View` panel by using the
 context menu or the short cut `Ctrl-N` (also from the context menu in
 an active `Table View` tab). This brings up the `Object Editor` for
-the selected class. Before you can set the values of the attributes an
+the selected class. Before you can set the values of the attributes and
 relationships, you have to set the UID and select the file to store
 the object in.  ![Object editor](dbe-object-editor.png)
 
@@ -211,7 +239,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Gordon Crone_
 
-_Date: Tue Mar 11 11:53:28 2025 +0000_
+_Date: Tue Jan 13 09:48:54 2026 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dbe/issues](https://github.com/DUNE-DAQ/dbe/issues)_
 </font>
