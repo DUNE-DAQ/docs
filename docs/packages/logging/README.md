@@ -106,9 +106,9 @@ As stated above, the TRACE TLOG_DEBUG(lvl) macro can be used for slow and fast p
 
 ## Slow-path debug messages
 
-Since "debug" messages (via `TLOG_DEBUG(dbglvl) << <Issue_or_message>`) are controlled by TRACE, they ultimately have to be enabled by TRACE. TRACE will only give these messages to ERS if the trace debug message is enabled. THEN, ERS will only send the debug messages to the standard out stream if the debug level (normally set via the environment variable DUNEDAQ_ERS_DEBUG_LEVEL) is less than or equal to the configured "debug level" (the default is zero).  Because this double enabling can be confusing, all applications should call the `dunedaq::logging::Logging::setup()` function, which will make sure the DUNEDAQ_ERS_DEBUG_LEVEL value is set appropriately.
+Since "debug" messages (via `TLOG_DEBUG(dbglvl) << <Issue_or_message>`) are controlled by TRACE, they ultimately have to be enabled by TRACE. TRACE will only give these messages to ERS if the trace debug message is enabled. THEN, ERS will only send the debug messages to the standard out stream if the debug level (normally set via the environment variable DUNEDAQ_ERS_DEBUG_LEVEL) is less than or equal to the configured "debug level" (the default is zero).  Because this double enabling can be confusing, all applications should call the `dunedaq::logging::Logging::setup()` function, which will make sure the DUNEDAQ_ERS_DEBUG_LEVEL value is set appropriately. Note that DUNEDAQ_ERS_DEBUG_LEVEL will only _set_ TRACE levels, to disable them later, either use the `toffS` alias or remove the TRACE buffer entirely.
 
-The environment variable TRACE_LVLS can be used to enable/disable all DEBUG statements to the slow-path at particular levels. One common use is to enable all message to the slow path with the value of -1 (i.e. `export TRACE_LVLS=-1`).
+The environment variable TRACE_LVLS can be used to enable/disable all DEBUG statements to the slow-path at particular levels. One common use is to enable all message to the slow path with the value of -1 (i.e. `export TRACE_LVLS=-1`). If a comma is present in TRACE_LVLS, e.g. `TRACE_LVLS=0xFFFF,0xFFFF0000`, the mask after the comma will be unset. See [here](https://github.com/art-daq/trace/blob/38164de32aa979f27a1d88b5ce64caed84d06b59/include/TRACE/trace.h#L3597-L3610) for the code executed by TRACE when parsing TRACE_LVLS.
 
 NOTE: TRACE allows individual levels to be enabled/disabled via the setting or clearing of bits in a 64-bit mask. TRACE has the concept of "system levels" and "debug levels." "debug levels" are a subset of "system levels." "System levels" 8-63 correspond to "debug levels" 0 through 55. So ultimately, TLOG_DEBUG(<dbg_lvl>) supports dbg_lvl from 0 to 55. This should not be overly restrictive because there are 56 controllable levels per TRACE NAME (which normally corresponds to a file).
 
@@ -192,9 +192,9 @@ The NFO lines below should/will be green with an actual show...
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Ron Rechenmacher_
+_Author: eflumerf_
 
-_Date: Wed Apr 3 13:02:03 2024 -0500_
+_Date: Tue Mar 17 11:54:35 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/logging/issues](https://github.com/DUNE-DAQ/logging/issues)_
 </font>
