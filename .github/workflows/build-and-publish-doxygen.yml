@@ -64,7 +64,7 @@ jobs:
         echo "Contents of Doxyfile INPUT:"
 
     - name: Doxygen Action
-      uses: mattnotmitt/doxygen-action@v1.12.0
+      uses: mattnotmitt/doxygen-action@ded75d963c260fd8489801611a5079d149ebcc07
       with:
         working-directory: /github/workspace/daq-release/docs
         doxyfile-path: './Doxyfile'
