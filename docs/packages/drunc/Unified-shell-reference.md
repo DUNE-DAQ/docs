@@ -520,6 +520,8 @@ The `ps` command must take at least one the following options:
 
 * `--long-format/-l`, to get a long listing format.
 
+* `-w/--width`, to fix the table width to a supplied length.
+
 By default, `ps` list all the processes.
 
 ### Examples
@@ -1015,9 +1017,9 @@ whoami
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Emir Muhammad_
 
-_Date: Thu Apr 17 11:25:17 2025 -0500_
+_Date: Wed Mar 25 17:15:31 2026 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
