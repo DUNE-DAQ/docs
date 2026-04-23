@@ -53,7 +53,8 @@ To enhance the usability of the python bound C++ code, a command line interface 
 The `CLI` is invoked through the executable python script, `pdtbutler`, located in the `scripts` directory.
 
 ## Operational monitoring
-A portion of the firmware interface classes implement a `get_info` method. The method takes as an arugment, a reference to a data structure, which it fills with its particular operational monitoring information. Several of these operational monitoring structures are combined together into one super-structure, which holds all the relevant information, e.g. hardware *and* firmware, about a particular timing device. The data structures are defined by schema, written in the language of `jsonnet`. These schema are turned into C++ `struct`s using the [`daq_codegen` `cmake` function](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-cmake/#daq_codegen).
+A portion of the firmware interface classes implement a `get_info` method. The method takes as an arugment, a reference to a data structure, which it fills with its particular operational monitoring information. Several of these operational monitoring structures are combined together into one super-structure, which holds all the relevant information, e.g. hardware *and* firmware, about a particular timing device.
+
 
 -----
 
@@ -61,9 +62,9 @@ A portion of the firmware interface classes implement a `get_info` method. The m
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Stoyan Trilov_
+_Author: Your Name_
 
-_Date: Thu May 27 08:08:02 2021 +0100_
+_Date: Tue Apr 21 12:23:07 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/timing/issues](https://github.com/DUNE-DAQ/timing/issues)_
 </font>

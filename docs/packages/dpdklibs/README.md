@@ -1,3 +1,5 @@
+_JCF, Apr-21-2026: the documentation below is obsolete; `dpdklibs_gen.py` works with an earlier version of daqconf and relies on a now-removed dependency on the `moo` package_
+
 # dpdklibs - DPDK UIO software and utilities
 Appfwk DAQModules, utilities, and scripts for I/O cards over DPDK.
 
@@ -131,9 +133,9 @@ This tells the interface to check that the packet size is 7243 bytes, to ignore 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Alessandro Thea_
+_Author: Your Name_
 
-_Date: Sat Jun 15 22:31:03 2024 +0200_
+_Date: Tue Apr 21 12:22:18 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dpdklibs/issues](https://github.com/DUNE-DAQ/dpdklibs/issues)_
 </font>

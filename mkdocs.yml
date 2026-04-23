@@ -159,7 +159,6 @@ nav:
              - About appfwk: packages/appfwk/README.md
              - packages/appfwk/ActionPlans.md
              - packages/appfwk/Daq-Application.md
-             - packages/appfwk/schema/README.md
           - cmdlib:
              - About cmdlib: packages/cmdlib/README.md
              - packages/cmdlib/Home.md
