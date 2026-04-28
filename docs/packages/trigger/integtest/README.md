@@ -5,7 +5,7 @@
 Here is a sample command for invoking a test (feel free to keep or drop the options in brackets, as you prefer):
 
 ```
-pytest -s change_rate_test.py [--nanorc-option log-level debug]  # this nanorc option is still useful even when using drunc
+pytest -s change_rate_test.py [--dunerc-option log-level debug]
 ```
 
 For reference, here are the ideas behind the existing tests:
@@ -25,7 +25,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Kurt Biery_
 
-_Date: Thu Feb 27 13:15:03 2025 -0600_
+_Date: Thu Apr 16 16:09:02 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/trigger/issues](https://github.com/DUNE-DAQ/trigger/issues)_
 </font>
