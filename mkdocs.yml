@@ -144,7 +144,16 @@ nav:
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/team_repos.md
           - daqpytools:
-             - About daqpytools: packages/daqpytools/README.md
+             - packages/daqpytools/explanation.md
+             - packages/daqpytools/how-to/add-handlers-at-runtime.md
+             - packages/daqpytools/how-to/best-practices.md
+             - packages/daqpytools/how-to/configure-ers.md
+             - packages/daqpytools/how-to/route-messages.md
+             - packages/daqpytools/how-to/upgrade-package.md
+             - packages/daqpytools/how-to/use-handlers.md
+             - packages/daqpytools/index.md
+             - packages/daqpytools/reference/troubleshooting.md
+             - packages/daqpytools/tutorial.md
           - daqsystemtest:
              - About daqsystemtest: packages/daqsystemtest/README.md
              - packages/daqsystemtest/bundle_script_overview.md
