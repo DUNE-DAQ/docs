@@ -224,46 +224,6 @@ included in your DUNE DAQ project's CMakeLists.txt file; it ensures
 that DUNE DAQ projects all have a common build environment. It takes
 no arguments.
 
-<a name="daq_codegen_documentation"></a>
-### daq_codegen:
-Usage:
-```
-daq_codegen( <schema filename1> ... [TEST] [DEP_PKGS <package 1> ...] [MODEL <model filename>]
-             [TEMPLATES <template filename1> ...] )
-```
-
-`daq_codegen` uses `moo` to generate C++ headers from schema files from `schema/<package>` applying
-them to one or more templates.
-
-Arguments:
-
-
-* `<schema filename1> ...`:
-
-  The list of schema files to process from `<package>/schema/<package>`. Each schema file will applied to each template (specified by the TEMPLATES argument). Each schema/template pair will generate a code file named `build/<package>/codegen/include/<package>/<schema minus *.jsonnet extension>/<template minus *.j2 extension>`
-e.g. `my_schema.jsonnet` (from `my_pkg`) + `your_pkg/YourStruct.hpp.j2` will result in `build/my_pkg/codegen/include/my_pkg/my_schema/YourStruct.hpp`
-
-
-* `TEST`:
-
-   If the code is meant for an entity in the package's test/ subdirectory, `TEST` should be passed as an argument, and the schema file's path will be assumed to be
-`test/schema/` rather than merely `schema/`.
-
-
-* `DEP_PKGS`:
-
-   If schema, template or model files depend on files provided by other DAQ packages, the `DEP_PKGS` argument must contain the list of packages.
-
-
-* `MODEL`:
-
-   The `MODEL` argument is optional; if no model file name is explicitly provided, `omodel.jsonnet` from the moo package itself is used.
-
-
-* `TEMPLATES`:
-
-   The list of templates to use. This is a mandatory argument. The template file format is `<template package>/<template name including *.j2 extension>`. If `<template package>` is omitted, the template is expected to be made available by moo.
-
 ### daq_add_library:
 Usage:
 ```
@@ -460,57 +420,6 @@ This function should be called at the bottom of a project's
 `CMakeLists.txt` file in order to install the project's targets. It takes no
 arguments.
 
-## Schemas and code generation
-
-`daq-cmake` supports for schema distribution and code generation with [moo](https://github.com/brettviren/moo/), [protobuf](https://protobuf.dev/programming-guides/proto3/) and [OKS](https://github.com/DUNE-DAQ/dal).
-
-
-
-1. Schemas (jsonnet), models (jsonnet) and templates (Jinja) in the `schema/<package name>` folder are automatically copied to the installation directory and into Spack products eventually.
-
-
-
-
-1. The `daq_codegen` cmake function provides a simpliefied interface to `moo render` to generate C++ files from Jinja templates. It provides a mechanism to easily import schemas, templates or models from other packages and implements a time-related dependency check. Details are [above](#daq_codegen_documentation).
-
-<a name="daq_cmake_schema"></a>
-### Schema files
-
-`daq-cmake` handles schemas in a similar fashion to C++ headers. Where header files are located according to the namespace of the class they declare (e.g. `mypkg::MyClass` in `include/mypkg/MyClass.hpp`, schemas location in the package is determined by the schema path (e.g. `mypkg.myschema` in `schema/mypkg/myschema.jsonnet`). In both cases the package name is integral part of the namespace/path to ensure uniqueness of the declared entities.
-
-As an example, below is shown the organization of the `appfwk/schema` folder:
-
-```txt
-appfwk/
-├── apps
-├── cmake
-├── CMakeLists.txt
-├── docs
-├── include
-├── python
-├── schema
-│   ├── appfwk
-│   │   ├── app.jsonnet
-│   │   ├── cmd.jsonnet
-│   │   └── opmon
-│   │       └── appinfo.proto
-│   └── README.md
-├── src
-├── test
-└── unittest
-```
-
-`cmd.jsonnet` declares `dunedaq.appfwk.cmd` schema structures with the following statement
-
-```jsonnet
-local s = moo.oschema.schema("dunedaq.appfwk.cmd");
-```
-
-The same applies to `app.jsonnet` for `dunedaq.appfwk.app`.
-
-
-The matching between the schema file name/path and the jsonnet namespace is essential for code generation with `daq-cmake`. A mismatch between the two will result in empty generated files in most of the cases.
-
 
 -----
 
@@ -518,9 +427,9 @@ The matching between the schema file name/path and the jsonnet namespace is esse
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Your Name_
 
-_Date: Mon Jul 28 10:32:53 2025 -0500_
+_Date: Mon Apr 20 10:44:03 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-cmake/issues](https://github.com/DUNE-DAQ/daq-cmake/issues)_
 </font>
