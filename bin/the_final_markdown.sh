@@ -117,7 +117,7 @@ for package in $package_list ; do
     if [[ "$package" =~ "daq-buildtools" ]]; then
 	git checkout v8.13.1_for_docs
     elif [[ "$package" =~ "daq-cmake" ]]; then
-	git checkout v3.2.1
+	git checkout v3.3.0
     fi
     echo $tmpdir/$package
 
