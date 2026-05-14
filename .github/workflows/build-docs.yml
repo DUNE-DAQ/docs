@@ -78,6 +78,7 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           fail: false
+          output: ${{ github.workspace }}/lychee_output.md
           workingDirectory: ${{ steps.get_tmpdir.outputs.tmpdir }}
 
       - name: Find output file from lychee
@@ -86,8 +87,8 @@ jobs:
           echo "pwd: $(pwd)"
           echo "ls -lrt: $(ls -lrt)"
           echo "ls lychee: $(ls -lrt lychee)"
-          find . -name "out.md"
-          lychee_output=$(find . -name "output.md" -type f | tail -n 1)
+          find . -name "lychee_output.md"
+          lychee_output=$(find . -name "lychee_output" -type f | tail -n 1)
           echo "lychee_output=$lychee_output" >> "$GITHUB_OUTPUT"
 
       - name: upload link checker log
