@@ -80,6 +80,20 @@ jobs:
           fail: false
           workingDirectory: ${{ steps.get_tmpdir.outputs.tmpdir }}
 
+      - name: Find output file from lychee
+        id: get_lychee_output
+        run: |
+          find . -name "output.md"
+          lychee_output=$(find . -name "output.md" -type f | tail -n 1)
+          echo "lychee_output=$lychee_output" >> "$GITHUB_OUTPUT"
+
+      - name: upload link checker log
+        if: ${{ steps.get_lychee_output.outputs.lychee_output != ''}}
+        uses: actions/upload-artifact@v7
+        with:
+          name: link checker log
+          path: ${{ steps.get_lychee_output.outputs.lychee_output != ''}}
+
       - name: upload build log
         uses: actions/upload-artifact@v7
         with:
