@@ -86,9 +86,11 @@ jobs:
         run: |
           echo "pwd: $(pwd)"
           echo "ls -lrt: $(ls -lrt)"
-          echo "ls lychee: $(ls -lrt lychee)"
           find . -name "lychee_output.md"
           lychee_output=$(find . -name "lychee_output.md" -type f | tail -n 1)
+          echo "lychee_output=$lychee_output"
+          readlink -f lychee_output.md
+          echo $GITHUB_WORKSPACE
           echo "lychee_output=$lychee_output" >> "$GITHUB_OUTPUT"
 
       - name: upload link checker log
