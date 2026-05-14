@@ -189,7 +189,13 @@ for package in $package_list ; do
     done
 done
 
-#if [[ -d $tmpdir && "$tmpdir" =~ ^/tmp/.*$ ]]; then
-#    rm -rf $tmpdir
-#fi
+# If this script is part of the Build Docs workflow, store the output 
+# directory name in a way that can be parsed by downstream 
+# link-checking step
+if [[ -n "$GITHUB_WORKSPACE" ]]; then
+    cd "$GITHUB_WORKSPACE"
+    if [[ -d $tmpdir && "$tmpdir" =~ ^/tmp/.*$ ]]; then
+        echo "$tmpdir" > tmpdir.txt
+    fi
+fi
 
