@@ -83,7 +83,10 @@ jobs:
       - name: Find output file from lychee
         id: get_lychee_output
         run: |
-          find . -name "output.md"
+          echo "pwd: $(pwd)"
+          echo "ls -lrt: $(ls -lrt)"
+          echo "ls lychee: $(ls -lrt lychee)"
+          find . -name "out.md"
           lychee_output=$(find . -name "output.md" -type f | tail -n 1)
           echo "lychee_output=$lychee_output" >> "$GITHUB_OUTPUT"
 
