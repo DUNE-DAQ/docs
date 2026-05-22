@@ -70,7 +70,12 @@ jobs:
         path: docs
     - name: Commit and push
       run: |
+        $pwd
+        ls -lrt 
         cd docs
+        $pwd
+        ls -lrt 
+        git status
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add .
