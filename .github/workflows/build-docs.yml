@@ -46,8 +46,6 @@ jobs:
             pip install -r docs/requirements.txt
             bin/the_final_markdown.sh | tee $GITHUB_WORKSPACE/build_log.txt
             date >> $GITHUB_WORKSPACE/build_log.txt
-            echo "Work area:"
-            ls -alrt
 
       - name: upload work area
         uses: actions/upload-artifact@v7
@@ -76,14 +74,8 @@ jobs:
       with:
         fetch-depth: 0
         path: docs-output
-    - name: Sync changes
+    - name: Sync changes and push
       run: |
-        pwd
-        ls -lrt
-        echo "Docs tmp:"
-        ls -alrt docs-tmp/
-        echo "Docs output:"
-        ls -alrt docs-output/
         rsync -a docs-tmp/ docs-output/
         cd docs-output
         git status
