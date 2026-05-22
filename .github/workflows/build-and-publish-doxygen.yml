@@ -1,5 +1,8 @@
 name: Build Doxygen and publish to GitHub pages
 
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: "0 5 * * *"
