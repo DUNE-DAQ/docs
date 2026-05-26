@@ -30,21 +30,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - name: checkout docs
         uses: actions/checkout@v6
-        with:
-            path: docs
 
       # Blow away docs/pacakges and mkdocs.yml, run build script and commit.
       - name: prepare for running "bin/the_final_markdown.sh"
         run: |
-            cd $GITHUB_WORKSPACE/docs
+            #cd $GITHUB_WORKSPACE/docs
+            echo "pwd"
+            pwd
+            echo "ls -lrt"
+            ls -lrt
             rm -rf docs/packages mkdocs.yml
             pip install -r docs/requirements.txt
-            bin/the_final_markdown.sh | tee $GITHUB_WORKSPACE/build_log.txt
+            ./bin/the_final_markdown.sh | tee $GITHUB_WORKSPACE/build_log.txt || exit 123
             date >> $GITHUB_WORKSPACE/build_log.txt
 
       - name: upload work area
