@@ -23,6 +23,7 @@ This documentation is split into two sections depending on your role:
 | [Best practices](./how-to/best-practices.md) | Recommended patterns for structuring logging in your application |
 | [Troubleshooting](./reference/troubleshooting.md) | Common symptoms, causes, and fixes |
 | [API reference](../APIref/) | Auto-generated kwargs, types, and defaults for all public APIs (redirects to MKDocs website) |
+| [Environment configs](./environment-configs.md) | Extra information on how to configure your local copy of the logging. |
 
 
 
@@ -34,7 +35,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Emir Muhammad_
 
-_Date: Wed Apr 15 15:41:46 2026 +0200_
+_Date: Fri Jun 5 16:59:02 2026 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqpytools/issues](https://github.com/DUNE-DAQ/daqpytools/issues)_
 </font>

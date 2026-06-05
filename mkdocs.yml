@@ -144,6 +144,7 @@ nav:
              - packages/daq-release/publish_to_cvmfs.md
              - packages/daq-release/team_repos.md
           - daqpytools:
+             - packages/daqpytools/environment-configs.md
              - packages/daqpytools/explanation.md
              - packages/daqpytools/how-to/add-handlers-at-runtime.md
              - packages/daqpytools/how-to/best-practices.md
