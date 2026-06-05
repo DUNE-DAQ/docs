@@ -50,10 +50,10 @@ section. Log in to `oasiscfs05.fnal.gov` as `cvmfsdunedaq` and execute the follo
 1. `mv daq-buildtools <version>`
 
 
-1. `rm latest`
+1. `rm latest_v5`
 
 
-1. `ln -s <version> latest`
+1. `ln -s <version> latest_v5`
 
 
 1. `cd ~   # you can't run the next command from within /cvmfs`
@@ -82,7 +82,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: John Freeman_
 
-_Date: Tue Apr 1 11:31:20 2025 -0500_
+_Date: Tue Feb 24 15:18:54 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>

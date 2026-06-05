@@ -1,28 +1,20 @@
 # daqsystemtest
 
-This repository contains configurations for system-level DAQ tests. Currently, there are two subdirectories:
+This repository contains configurations and `pytest` _test modules_ for system-level DAQ tests. Currently, there are a few relevant subdirectories:
 
-* `integtest/`: `pytest`-based integration tests
+* `integtest/`: `pytest`-based integration tests, often used for regression testing
 
-* `config/`: JSON configurations for the `fddaqconf` package's `fddaqconf_gen` (and the `timinglibs` package's `daqconf_timing_gen`)
+* `scripts/`: scripts that help that help run tests and validate configurations
 
-These tests are meant to be run as part of the release testing procedure to ensure that all of the functionality needed by DUNE-DAQ is present. An example of this would be the [`dunedaq-v3.2.0` release test spreadsheet](https://docs.google.com/spreadsheets/d/1VCIrNpCJmxFIntKK-6MynWt0kQ-v7wrTS46KjMe0_EY) from October 2022. 
+* `config/`: OKS-based configuration files that demonstrate various features of our configuration system
 
-For more on the `pytest` integration tests, click [here](integtest/README.md)
+The `pytest` _test modules_ in the `integtests` subdirectory are meant to be run as part of the release testing procedure to ensure that all of the functionality needed by DUNE-DAQ is present.  
 
-For more on horizontal drift coldbox tests (`config/hd_coldbox_tests`), click [here](config/hd_coldbox_tests/README.md)
+For a short summary of the `pytest` integration tests that are currently available, click [here](../integtest/README.md).
 
-For more on long window readout tests (`config/long_window_readout`), click [here](config/long_window_readout/README.md)
+For a description of a script that can be used to run multiple integtests from multiple repositories, please see [this page](bundle_script_overview.md).
 
-For more on emulated systems tests (`config/emulated_systems`), click [here](config/emulated_systems/README.md)
-
-# Test-specific notes
-
-
-* The tests in [`config/timing_systems`](https://github.com/DUNE-DAQ/daqsystemtest/tree/develop/config/timing_systems) consist of a `*_daq.json` file which should be run through `fddaqconf_gen` and a `*_timing.json` file which should be run through `daqconf_timing_gen`
-
-* [`detector_configurations/wib_hd_coldbox.json`](https://raw.githubusercontent.com/DUNE-DAQ/daqsystemtest/develop/config/detector_configurations/wib_hd_coldbox.json) is a configuration for `wibconf_gen`
-
+To see some of the "OKS Session" objects that are at the top level of our example configurations, please see [this file](https://github.com/DUNE-DAQ/daqsystemtest/blob/develop/config/daqsystemtest/example-configs.data.xml).
 
 
 -----
@@ -31,9 +23,9 @@ For more on emulated systems tests (`config/emulated_systems`), click [here](con
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pengfei Ding_
+_Author: bieryAtFnal_
 
-_Date: Wed Oct 11 13:34:51 2023 -0500_
+_Date: Tue Feb 10 13:27:58 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqsystemtest/issues](https://github.com/DUNE-DAQ/daqsystemtest/issues)_
 </font>

@@ -1,6 +1,5 @@
 # daqsystemtest README
-
-* 04-Nov-2024, ELF, KAB, and others: notes on existing integtests
+### 09-Feb-2026, ELF, KAB, and others: notes on existing integtests
 
 "integtests" are intended to be automated integration and/or system tests that make use of the
 "pytest" framework to validate the operation of the DAQ system in various scenarios.
@@ -8,7 +7,7 @@
 Here is a sample command for invoking a test (feel free to keep or drop the options in brackets, as you prefer):
 
 ```
-pytest -s minimal_system_quick_test.py [--nanorc-option log-level debug]  # this nanorc option is still useful even when using drunc
+pytest -s minimal_system_quick_test.py [--dunerc-option log-level debug]  # this dunerc option is still useful even when using drunc
 ```
 
 The "-k" pytest option can be used ro selectively run a subset of the configurations in one of our integtest files.  For example:
@@ -16,6 +15,8 @@ The "-k" pytest option can be used ro selectively run a subset of the configurat
 ```
 pytest -s -k TPG 3ru_3df_multirun_test.py
 ```
+
+The `dunedaq_integtest_bundle.sh` script can be used to run sets of tests from various repositories.  Please see [here](../docs/bundle_script_overview.md) for more information.
 
 For reference, here are the ideas behind the tests that currently exist in this repository:
 
@@ -39,6 +40,8 @@ For reference, here are the ideas behind the tests that currently exist in this 
 
 * `example_system_test.py` - verify that the example configurations in example-configs.data.xml work as expected
 
+* `sample_ehn1_multihost_test.py` - demonstrate the running of DAQ processes on multiple computers at EHN1
+
 
 -----
 
@@ -46,9 +49,9 @@ For reference, here are the ideas behind the tests that currently exist in this 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Kurt Biery_
 
-_Date: Tue Aug 5 15:17:14 2025 -0500_
+_Date: Sun Mar 1 07:16:38 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqsystemtest/issues](https://github.com/DUNE-DAQ/daqsystemtest/issues)_
 </font>

@@ -138,6 +138,7 @@ nav:
              - packages/daq-release/change_tracking_process.md
              - packages/daq-release/ci_github_action.md
              - packages/daq-release/create_release_spack.md
+             - packages/daq-release/creating_a_new_environment.md
              - packages/daq-release/development_workflow_gitflow.md
              - packages/daq-release/doxygen_mainpage.md
              - packages/daq-release/publish_to_cvmfs.md
@@ -146,6 +147,7 @@ nav:
              - About daqpytools: packages/daqpytools/README.md
           - daqsystemtest:
              - About daqsystemtest: packages/daqsystemtest/README.md
+             - packages/daqsystemtest/bundle_script_overview.md
              - packages/daqsystemtest/integtest/README.md
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
@@ -175,6 +177,8 @@ nav:
              - About asiolibs: packages/asiolibs/README.md
           - ctbmodules:
              - About ctbmodules: packages/ctbmodules/README.md
+          - cibmodules:
+             - About cibmodules: packages/cibmodules/README.md
           - daqdataformats:
              - About daqdataformats: packages/daqdataformats/README.md
              - packages/daqdataformats/ComponentRequestV0.md
@@ -185,12 +189,16 @@ nav:
              - packages/daqdataformats/FragmentHeaderV2.md
              - packages/daqdataformats/FragmentHeaderV3.md
              - packages/daqdataformats/FragmentHeaderV4.md
+             - packages/daqdataformats/FragmentHeaderV5.md
+             - packages/daqdataformats/FragmentHeaderV6.md
              - packages/daqdataformats/GeoIDV0.md
              - packages/daqdataformats/GeoIDV1.md
              - packages/daqdataformats/SourceIDV2.md
              - packages/daqdataformats/TriggerRecordHeaderDataV1.md
              - packages/daqdataformats/TriggerRecordHeaderDataV2.md
              - packages/daqdataformats/TriggerRecordHeaderDataV3.md
+             - packages/daqdataformats/TriggerRecordHeaderDataV4.md
+             - packages/daqdataformats/TriggerRecordHeaderDataV5.md
           - datahandlinglibs:
              - About datahandlinglibs: packages/datahandlinglibs/README.md
              - packages/datahandlinglibs/Directory-structure.md

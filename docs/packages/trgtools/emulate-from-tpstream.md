@@ -7,7 +7,7 @@ new HDF5 that includes TriggerActivities and TriggerCandidates.
 The primary use of this is to test TA algorithms, TC algorithms, and their
 configurations, with output diagnostics available from `ta_dump.py` and
 `tc_dump.py`. The full TC displays that include all TAs & TPs within those TAs
-can be made with the `plot_emulated_triggers.pd` script.
+can be made with the `plot_emulated_triggers.py` script.
 
 The application understands that there might be multiple sources of trigger
 primitives, that different files might contain TPs from different sources
@@ -15,9 +15,8 @@ primitives, that different files might contain TPs from different sources
 but across different time-periods (e.g. two consecutive files from the same
 APAs).
 
-The application will first check if we have TPs from all the available sources
-for the specified slices -- and crop the requested timeslice ranges as
-appropriate.
+The application will first check if we have TPs from all the available sources,
+find the overlapping timeslice range across input files, and process that range.
 
 
 **WARNING:** This script is different from `process_tpstream`, and does not
@@ -26,9 +25,9 @@ contain all the functionality yet. Look at TODOs below for more info.
 ## Example
 
 ```bash
-trgtools_emulate_from_tpstream -i input_file.hdf5 -o output_file.hdf5 -j algo_config.json --quiet 
+trgtools_emulate_from_tpstream -i input_file.hdf5 -o output_file -j algo_config.json --quiet
 
-trgtools_emulate_from_tpstream -i input_file_APA*.hdf5 -o output_file.hdf5 -j algo_config.json
+trgtools_emulate_from_tpstream -i input_file_APA*.hdf5 -o output_file -j algo_config.json
 ```
 
 ### Algorithm Configuration
@@ -64,9 +63,9 @@ You can run the emulator with `--parallel`, which will not only process each TPW
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Artur Sztuc_
+_Author: Alessandro Thea_
 
-_Date: Tue Mar 18 15:32:39 2025 +0100_
+_Date: Thu Mar 5 15:19:30 2026 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/trgtools/issues](https://github.com/DUNE-DAQ/trgtools/issues)_
 </font>

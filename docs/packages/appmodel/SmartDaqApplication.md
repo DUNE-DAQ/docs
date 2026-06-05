@@ -14,6 +14,10 @@ This section will use the "[DFOApplication](https://github.com/DUNE-DAQ/appmodel
 Once instantiated at the start of `generate_modules`, it offers a set of methods to facilitate the creation of configurarion objects, queues and network connections.
 
 
+### The generate_modules method
+
+The boilerplate code above references a  method called generate_modules() which you have to supply. The `confdb` and `dbfile` arguments are used to create configuration objects in the database (see below). The helper argument is a pointer to a helper object with methods for extracting configuration data not belonging to the current application.
+
 ### Creating a module
 
 ```C++
@@ -86,15 +90,16 @@ Once the fixed connections are retrieved using the network rules, the module's i
 
 These basic steps are repeated in all SmartDaqApplication instances, with differences depending on the specific applciation being implemented. The DFOApplication is one of the simplest applications in the system, but it demonstrates the basic logic followed by all SmartDaqApplications.
 
+
 -----
 
 <font size="1">
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Alessandro Thea_
+_Author: Gordon Crone_
 
-_Date: Tue May 20 23:32:21 2025 +0200_
+_Date: Mon Jan 26 11:47:05 2026 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/appmodel/issues](https://github.com/DUNE-DAQ/appmodel/issues)_
 </font>

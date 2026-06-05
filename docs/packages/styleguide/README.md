@@ -29,7 +29,7 @@
 
     * [3.  Header Files](#3-header-files)
 
-        * [3.1  Self-contained Headers](#31-self-contained-headers)
+        * [3.1  Self-Contained Headers](#31-self-contained-headers)
 
         * [3.2  The #define Guard](#32-the-define-guard)
 
@@ -1336,6 +1336,14 @@ well-tested function). If anything about the style in existing code
 may be confusing to future developers, it may be worth adding comments on
 how the style deviates from the standard. 
 
+Note also that
+[daq-buildtools](https://dune-daq-sw.readthedocs.io/en/latest/packages/daq-buildtools/)
+provides command line tools to automatically lint code for compliance
+with these coding standards. However, it should be pointed out that not all standards can be automatically lintable (e.g., the
+prohibition against functions which do many unrelated things). It
+should also be pointed out that in order to suppress linter complaints
+the comment `// NOLINT(<name of complaint>)` at the end of a line can be used - e.g., `uint16_t adc_value {0}; // NOLINT(build/unsigned)`. In files where violations will unavoidably be in multiple locations over many lines, prefacing the relevant code with `// NOLINTBEGIN(<name of complaint>)` and bookending it with `// NOLINTEND(<name of complaint>)` will cause the linter to ignore the violation in question for that particule code block. Needless to say, `NOLINT` shouldn't be abused, and should only be used in places where violations of our coding standards are well-motivated!
+
 -----
 
 
@@ -1345,9 +1353,9 @@ how the style deviates from the standard.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Your Name_
 
-_Date: Fri Mar 28 09:51:17 2025 -0500_
+_Date: Tue May 26 12:11:02 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>
