@@ -142,6 +142,7 @@ nav:
        - Readout:
           - asiolibs:
           - ctbmodules:
+          - cibmodules:
           - daqdataformats:
           - datahandlinglibs:
           - detchannelmaps:

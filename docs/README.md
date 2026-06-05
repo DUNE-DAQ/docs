@@ -46,6 +46,8 @@ For the other packages, please click on one of the links below. To learn how to 
 
 [ctbmodules](packages/ctbmodules/README.md) _Modules for the Central Trigger Board hardware_
 
+[cibmodules](packages/cibmodules/README.md) _Command and readout interface for the Calibration Interface Board_
+
 [daqdataformats](packages/daqdataformats/README.md) _DAQ data formats_
 
 [datahandlinglibs](packages/datahandlinglibs/README.md) _Tools for constructing readout-focused processes_

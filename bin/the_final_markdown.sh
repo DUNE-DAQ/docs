@@ -5,7 +5,7 @@ here=$(cd $(dirname $(readlink -f ${BASH_SOURCE})) && pwd)
 # Reverse alphabetical order
 # for package development themselves
 
-package_list="wibmod utilities trigger trgtools tpglibs timinglibs timing tdemodules styleguide snbmodules serialization runconf-ui runconftools restcmd rawdatautils opmonlib kafkaopmon logging listrev hermesmodules hdf5libs ipm iomanager integrationtest flxlibs fdreadoutmodules fdreadoutlibs fddetdataformats erskafka ers drunc dpdklibs dfmodules dfmessages detdataformats detchannelmaps dbe datahandlinglibs daqdataformats daqconf daqsystemtest daq-release daqpytools daq-cmake daq-buildtools daq-assettools ctbmodules connectivityserver confmodel cmdlib asiolibs appfwk appmodel"
+package_list="wibmod utilities trigger trgtools tpglibs timinglibs timing tdemodules styleguide snbmodules serialization runconf-ui runconftools restcmd rawdatautils opmonlib kafkaopmon logging listrev hermesmodules hdf5libs ipm iomanager integrationtest flxlibs fdreadoutmodules fdreadoutlibs fddetdataformats erskafka ers drunc dpdklibs dfmodules dfmessages detdataformats detchannelmaps dbe datahandlinglibs daqdataformats daqconf daqsystemtest daq-release daqpytools daq-cmake daq-buildtools daq-assettools ctbmodules connectivityserver confmodel cmdlib cibmodules asiolibs appfwk appmodel"
 
 mkdocs_yml="$here/../mkdocs.yml"
 
@@ -110,16 +110,10 @@ for package in $package_list ; do
 
     cd $tmpdir/$package
 
-    # JCF, Oct-5-2022: we want documentation on the tools used to
-    # develop packages to be stable even while DAQ packages are
-    # themselves being updated
-
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout fddaq-v5.5.0_for_docs
-    elif [[ "$package" =~ "daq-cmake" ]]; then
-	git checkout v3.2.1
+	git checkout fddaq-v5.6.0_for_docs
     else
-	git checkout coredaq-v5.5.0 || git checkout fddaq-v5.5.0
+	git checkout coredaq-v5.6.0 || git checkout fddaq-v5.6.0
     fi
     echo $tmpdir/$package
 
