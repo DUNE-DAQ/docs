@@ -4,6 +4,8 @@
 
 ### `file_quality_checker.py`
 
+_Jun-18-2026: this script is deprecated as it works with the now-removed WIB2 frames_
+
 Usage:
 ```
 file_quality_checker.py <FILENAME1> [FILENAME2 ...]
@@ -34,29 +36,6 @@ Concerning the progression of record ids and sequence ids: the script will look 
 
 Concerning the table: each row corresponds to a fragment type found in at least one record in the file. The first and second columns tell you the fewest instances of such a fragment found in a single record, and the most. Of course, these are typically the same value. The third and fourth columns tell you what the smallest and largest examples of this fragment were in the entire file. The fifth and sixth columns tell you the fewest instances of a fragment with a nonzero set of error bits, and the most, in a single record. Of course for these last two columns you'd ideally see all 0's. 
 
-## WIB2	Utilities
-
-### `wib2decoder.py`
-
-```
-Usage: wib2decoder.py [OPTIONS] FILENAME
-
-Options:
-  -n, --nrecords INTEGER  How many Trigger Records to process (default: all)
-  --nskip INTEGER         How many Trigger Records to skip (default: 0)
-  --channel-map TEXT      Channel map to load (default: None)
-  --print-headers         Print WIB2Frame headers
-  --print-adc-stats       Print ADC Pedestals/RMS
-  --check-timestamps      Check WIB2 Frame Timestamps
-  --help                  Show this message and exit.
-```
-
-For example, for HD coldbox data from v2.11 onward, you can do:
-```
-wib2decoder.py -n 1 --print-headers --print-adc-stats --check-timestamps --channel-map HDColdboxChannelMap <file_name>
-```
-to dump content of the headers, do some timestamp checks for the frames coming from the same WIB and across different WIBs, and to do some basic processing of the data.
-
 ## Unpack utilities for Python
 
 There are fast unpackers of data for working in python. These unpackers will
@@ -69,23 +48,23 @@ To use it import the functions first:
 ```
 from rawdatautils.unpack.<format> import *
 ```
-where `<format>` is one of the supported formats: `wib`, `wib2` or `daphne` for
-the corresponding `WIBFrame`, `WIB2Frame` and `DAPHNEFrame` frame formats. Then
+where `<format>` is one of the supported formats: `wibeth`, `tde`, `daphneeth`, or `daphne` for
+the corresponding `WIBEthFrame`, `TDEEthFrame`, `DAPHNEEthFrame` and `DAPHNEFrame` frame formats. Then
 there are several functions available:
 ```
 # assumming frag is a fragment
 adc = np_array_adc(frag)
 timestamp = np.array_timestamp(frag)
-print(adc.shape)       # (number of frames in frag, 256 if using wib2)
-print(timestamp.shape) # (number of frames in frag, 256 if using wib2)
+print(adc.shape)       # (number of frames in frag)
+print(timestamp.shape) # (number of frames in frag)
 ```
 `np_array_adc` and `np_array_timestamp` will unpack the whole fragment. It is also possible to unpack only a part of it:
 ```
 # assumming frag is a fragment
 adc = np_array_adc_data(frag.get_data(), 100)             # first 100 frames
 timestamp = np_array_timestamp_data(frag.get_data(), 100) # first 100 frames
-print(adc.shape)       # (100, 256 if using wib2)
-print(timestamp.shape) # (100, 256 if using wib2)
+print(adc.shape)       # (100)
+print(timestamp.shape) # (100)
 ```
 Warning: `np_array_adc_data` and `np_array_timestamp_data` do not make any
 checks on the number of frames so if passed a value larger than the actual
@@ -93,29 +72,6 @@ number of frames in the fragment it will try to read out of bounds.
 `np_array_adc` and `np_array_timestamp` call `np_array_adc_data` and
 `np_array_timestamp_data` under the hood with the correct checks on the number
 of frames.
-
-## File conversion
-It's possible to transform binary files using the old `WIBFrame` format to the
-newer `WIB2Frame` or `WIBEthFrame` format. That means that the ADC values will
-be preserved, as well as other values found in the header such as the crate,
-slot, fiber number. The timestamps will be overwritten to differ by 32 (by 32 *
-64 for `WIBEthFrame`) to avoid warnings and other issues when these files are
-being read by readout. In python:
-
-For WIB -> WIB2
-```
-from rawdatautils import file_conversion
-file_conversion.wib_binary_to_wib2_binary('/path/to/input/file', '/path/to/output/file')
-```
-and for WIB -> WIBEth
-```
-from rawdatautils import file_conversion
-file_conversion.wib_binary_to_wibeth_binary('/path/to/input/file', '/path/to/output/file')
-```
-
-When transforming WIB -> WIBEth it will create 4 files lblecause `WIBFrames`
-have 256 channels and `WIBEthFrames` have 64, so the first file has the first 64
-channels, the second file has the next 64 channels and so on.
 
 
 
@@ -125,9 +81,9 @@ channels, the second file has the next 64 channels and so on.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: jmcarcell_
+_Author: Your Name_
 
-_Date: Wed Jan 18 13:42:13 2023 +0100_
+_Date: Thu Jun 18 10:06:43 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/rawdatautils/issues](https://github.com/DUNE-DAQ/rawdatautils/issues)_
 </font>
