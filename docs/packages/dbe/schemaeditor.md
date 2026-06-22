@@ -14,10 +14,8 @@ function schemaeditor ()
 { 
     bash -c "spack load dbe; command schemaeditor $@"
 }
-
 ```
 
-![schemaeditor main window](schemaeditor_main.png)
 
 ## Starting the editor
 
@@ -26,7 +24,30 @@ schemaeditor with no schema files loaded. You can then either open an
 existing schema file `File -> Open Schema` (or Ctrl+O) or create a
 new empty schema file with `File->Create new schema` (or Ctrl+N).
 
-To start with an existing schema file, use the `-f` option.
+To start with an existing schema file, use the `-f` option e.g. `schemaeditor -f schema/appmodel/application.schema.xml`
+
+
+## Structure of the editor
+
+![schemaeditor main window](schemaeditor_main.png)
+
+ The main window is initially split into 3 main parts, the `Class
+View` (1), the `SchemaView Tab area` (2) and the `Info Tabs` (3) with
+a menu bar and tool-bar at the top and a staus bar at the bottom. The
+`Class View` and the `Info Tabs` can be undocked and moved out of the
+main window. Each of the views can also be enabled or disabled from
+the `View` menu.
+
+After adjusting the layout, the current layout can be saved at any
+point by selecting the `Save layout` option from the `Settings`
+menu. You can also use this menu to restore the default layout or the
+last layout you saved.
+
+![schemaeditor preferences window](schema-preferences.png)
+
+The Settings menu also has a `Preferences` option which will open a
+window where you can set fonts colours and default options for schema
+view diagram tabs.
 
 ## Setting the 'Active' schema file
 
@@ -113,11 +134,11 @@ file info windows is not (yet) available.
 classes you are interested in from the 'Class Name' list onto a schema 
 view tab. Relationships and inheritance connections will be
 automatically drawn. By default, only the direct properties of the
-classes are shown, to display all properties including those inherited
+classes are shown. To display all properties, including those inherited from super-classes,
 the context menu in the schema view panel includes an option to toggle
-inherited properties. The context menu on an individual class within
+viewing inherited properties. The context menu on an individual class within
 the view allows the addition of all its parent/child/related classes to
-the view.
+the view. They will all appear in the top left corner and will need to be moved to appropriate places one by one.
 
 ![view object context menu](schema-view-object-menu.png)
 
@@ -126,10 +147,14 @@ button next to the view tabs. A tab can be renamed by selecting the
 'Name View' button on the toolbar. Tabs can be closed by selecting the
 cross on the top corner of the tab or with the short cut Ctl-W.
 
+### Moving the diagram
+
+To move the whole digram, move the mouse pointer to the point you want the current origin to move to and select `Move scene` from the context menu.
+
 ### Highlighting classes
 
 Classes may be highlighted in different colors/fonts. The colors and
-fonts can be set from the `Color/font Settings` item on the `Edit`
+fonts can be set from the `Preferences` item on the `Settings`
 menu.
 
 #### Highlighting classes from the active schema file
@@ -143,7 +168,7 @@ accordingly.
 #### Highlighting selected class
 
 The class under the cursor can be highlighted by selecting the
-appropriate item from the context menu. 
+appropriate item from the context menu.
 
 ### Tool-tips
 
@@ -155,11 +180,11 @@ attributes, relationships and methods.
 
 The current schema diagram can be saved from the 'Save View' or 'Save
 View as' buttons on the toolbar or printed via the 'Print View'
-button. These options also exist in the View menu along with an option
+button. These options also exist in the SchemaViews menu along with an option
 to export to an SVG file.
 
 Views can be loaded from files by using the Ctl-V short cut or
-selecting 'Load View' from the View menu. Views load into new tabs
+selecting 'Load View' from the SchemaViews menu. Views load into new tabs
 unless the current tab is empty.
 
 ### Notes
@@ -179,10 +204,13 @@ with plain text. Line breaks should be added by hand.
 | Ctl-A | Add new schema class | Only available when there is an 'Active' schema file|
 | Ctl-N | Create New schema file |
 | Ctl-O | Open new schema file  | 
-| Ctl-I | Open file info dialog  | Only available when there is an 'Active' schema file|
+| Ctl-I | Open file info dialog for active file | Only available when there is an 'Active' schema file|
 | Ctl-S | Save modified schema files  ||
 | Ctl-V | Load View ||
-| Ctl-W | Close tab ||
+| Ctl-K | Save View ||
+| Ctl-E | Export View as SVG ||
+| Ctl-P | Print View ||
+| Ctl-W | Close View tab ||
 | Ctl-Q |  Quit  ||
 
 
@@ -194,7 +222,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Gordon Crone_
 
-_Date: Thu Oct 30 15:29:19 2025 +0000_
+_Date: Fri Apr 10 16:21:56 2026 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/dbe/issues](https://github.com/DUNE-DAQ/dbe/issues)_
 </font>
