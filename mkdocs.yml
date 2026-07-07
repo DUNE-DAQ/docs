@@ -154,6 +154,7 @@ nav:
              - packages/daqpytools/how-to/use-handlers.md
              - packages/daqpytools/index.md
              - packages/daqpytools/reference/troubleshooting.md
+             - packages/daqpytools/severitylevels.md
              - packages/daqpytools/tutorial.md
           - daqsystemtest:
              - About daqsystemtest: packages/daqsystemtest/README.md
