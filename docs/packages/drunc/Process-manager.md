@@ -10,7 +10,7 @@ To boot a `process_manager`, you will need to choose the most appropriate config
 
 * `ssh-standalone-paramiko-client.json`: `ssh` based implementation without a `kafka` feed. Uses paramiko library to manage ssh connections from the python process. Currently NOT maintained but may be revisited in future - use `ssh-standalone` only for now.
 
-* `ssh-pocket-kafka.json`: `ssh` based implementation with `pocket`'s `kafka` for message broadcasting.
+* `ssh-pocket-kafka.json`: `ssh` based implementation with `pocket`'s `kafka`.
 
 * `ssh-CERN-kafka.json`: `ssh` based implementation with `kafka` service running at ENH1.
 
@@ -32,8 +32,6 @@ To start the ssh version without kafka:
 drunc-process-manager ssh-standalone
 Using 'file://src/drunc/data/process_manager/ssh-standalone.json' as the ProcessManager configuration
 Starting 'SSHProcessManager'
-[12:43:26] INFO     "BroadcastSenderConfHandler": None                                                                                                                                                  configuration.py:25
-           INFO     "Controller": DummyAuthoriser ready                                                                                                                                              dummy_authoriser.py:13
 ProcessManager was started on np04-srv-019:10054
 ```
 Once this is done, you will not be able to send commands to the process from the current shell with the `process_manager` acting in the foreground. To interact with a standalone instance of `process_manager` you will need to connect to it (see below).
@@ -125,9 +123,9 @@ See `terminate`'s documentation [here](https://dune-daq-sw.readthedocs.io/en/lat
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Aurash Karimi_
+_Author: PawelPlesniak_
 
-_Date: Fri Feb 6 17:11:29 2026 +0000_
+_Date: Tue Jul 7 15:32:51 2026 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>

@@ -213,7 +213,7 @@ message ExceptionNotification {
 Each RPC call is described here.
 
 ### `describe`
-Returns metadata about the process manager, including available commands, session info, and broadcast description.
+Returns metadata about the process manager, including available commands, and session info.
 
 * input: `Request`
 
@@ -294,9 +294,9 @@ Stream the logs from a specific process
 _Last git commit to the markdown source of this page:_
 
 
-_Author: miruuna_
+_Author: PawelPlesniak_
 
-_Date: Wed Oct 15 10:52:04 2025 +0100_
+_Date: Tue Jul 7 15:32:51 2026 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>

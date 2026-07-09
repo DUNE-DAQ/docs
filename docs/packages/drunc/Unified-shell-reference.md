@@ -490,7 +490,6 @@ logs -n root-controller --how-far 5
            INFO     "Controller": 'df-controller@localhost:5600' (type ChildNodeType.gRPC)                                           controller.py:123
            INFO     "Controller": 'trg-controller@localhost:5700' (type ChildNodeType.gRPC)                                          controller.py:123
            INFO     "Controller": 'hsi-controller@localhost:5800' (type ChildNodeType.gRPC)                                          controller.py:123
-           INFO     "Broadcast": ready                                                                                          broadcast_sender.py:65
 root-controller was started on localhost:3333
 ───────────────────────────────────────────────────────────────────────────────────────────── End ──────────────────────────────────────────────────────────────────────────────────────────────
 ```
@@ -1017,9 +1016,9 @@ whoami
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Emir Muhammad_
+_Author: PawelPlesniak_
 
-_Date: Wed Mar 25 17:15:31 2026 +0100_
+_Date: Tue Jul 7 15:32:51 2026 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
