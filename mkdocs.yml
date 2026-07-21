@@ -163,6 +163,7 @@ nav:
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
              - packages/integrationtest/DataFileCheckParameters.md
+             - packages/integrationtest/SurveyOfTriggersUsedInIntegtestsSummer2026.md
           - styleguide:
              - About styleguide: packages/styleguide/README.md
        - Core:   
