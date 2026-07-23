@@ -13,11 +13,11 @@ pip install [-e] .
 
 ## User Guides
 
-* [Getting Started](docs/quick_start.md)
+* [Getting Started](quick_start.md)
 
-* [Advanced users](docs/developer_guide.md)
+* [Advanced users](developer_guide.md)
 
-* [System Configuration](docs/configuration.md)
+* [System Configuration](configuration.md)
 
 
 
@@ -29,7 +29,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Henry Wallace_
 
-_Date: Thu Apr 9 15:05:07 2026 +0100_
+_Date: Thu Jul 23 14:45:15 2026 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconf-ui/issues](https://github.com/DUNE-DAQ/runconf-ui/issues)_
 </font>
