@@ -1,0 +1,239 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="LogHandlerConf Resolution" id="loghandlerconf-resolution">
+    <mxGraphModel dx="1783" dy="1105" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1550" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane-user" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=25;" value="" vertex="1">
+          <mxGeometry height="1480" width="200" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-conf" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;opacity=25;" value="" vertex="1">
+          <mxGeometry height="1480" width="300" x="240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-env" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=25;" value="" vertex="1">
+          <mxGeometry height="1480" width="280" x="540" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-out" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;opacity=25;" value="" vertex="1">
+          <mxGeometry height="1480" width="280" x="820" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr-user" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="&lt;b&gt;Caller&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr-conf" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="&lt;b&gt;LogHandlerConf&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="300" x="240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr-env" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" value="&lt;b&gt;Environment / OKS&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="280" x="540" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr-out" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="&lt;b&gt;Result (extra metadata)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="280" x="820" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="125" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="act-select" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="User emits log with&lt;br&gt;&lt;b&gt;extra=conf.&lt;i&gt;Stream&lt;/i&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="60" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="dec-stream" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Which&lt;br&gt;stream?" vertex="1">
+          <mxGeometry height="80" width="100" x="340" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="act-base-resolve" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#fff2cc;strokeColor=#d6b656;" value="Return &lt;b&gt;Base&lt;/b&gt; class variable:&lt;br&gt;&lt;code&gt;{Stream, Rich, File}&lt;/code&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="270" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="out-base" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="&lt;b&gt;extra =&lt;/b&gt;&lt;br&gt;&lt;code&gt;{&quot;handlers&quot;: {Stream, Rich, File},&lt;br&gt;&amp;nbsp;&quot;stream&quot;: StreamType.BASE}&lt;/code&gt;" vertex="1">
+          <mxGeometry height="55" width="240" x="840" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="act-opmon-resolve" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#fff2cc;strokeColor=#d6b656;" value="Return &lt;b&gt;Opmon&lt;/b&gt; class variable:&lt;br&gt;&lt;code&gt;{Rich, Stream, File}&lt;/code&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="270" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="out-opmon" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" value="&lt;b&gt;extra =&lt;/b&gt;&lt;br&gt;&lt;code&gt;{&quot;handlers&quot;: {Rich, Stream, File},&lt;br&gt;&amp;nbsp;&quot;stream&quot;: StreamType.OPMON}&lt;/code&gt;" vertex="1">
+          <mxGeometry height="55" width="240" x="840" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="act-ers-init" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#fff2cc;strokeColor=#d6b656;" value="Call &lt;b&gt;init_ers_stream()&lt;/b&gt;&lt;br&gt;(or &lt;code&gt;init_ers=True&lt;/code&gt;)" vertex="1">
+          <mxGeometry height="50" width="220" x="270" y="588" as="geometry" />
+        </mxCell>
+        <mxCell id="act-get-oks" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#fff2cc;strokeColor=#d6b656;" value="Call &lt;b&gt;_get_oks_conf()&lt;/b&gt;&lt;br&gt;iterates over &lt;code&gt;level_to_ers_var&lt;/code&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="270" y="678" as="geometry" />
+        </mxCell>
+        <mxCell id="note-mapping" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fffce6;strokeColor=#d6b656;size=14;fontSize=9;align=left;spacingLeft=6;" value="&lt;b&gt;level_to_ers_var&lt;/b&gt; map:&lt;br&gt;&lt;code&gt;INFO &amp;nbsp; → DUNEDAQ_ERS_INFO&lt;br&gt;WARNING → DUNEDAQ_ERS_WARNING&lt;br&gt;ERROR &amp;nbsp; → DUNEDAQ_ERS_ERROR&lt;br&gt;CRITICAL→ DUNEDAQ_ERS_FATAL&lt;/code&gt;" vertex="1">
+          <mxGeometry height="80" width="155" x="100" y="668" as="geometry" />
+        </mxCell>
+        <mxCell id="fork-ers" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="5" width="160" x="300" y="763" as="geometry" />
+        </mxCell>
+        <mxCell id="fork-label" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" value="&lt;i&gt;For each ERS severity level&lt;/i&gt;" vertex="1">
+          <mxGeometry height="15" width="180" x="287" y="768.5" as="geometry" />
+        </mxCell>
+        <mxCell id="act-make-conf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#fff2cc;strokeColor=#d6b656;" value="Call &lt;b&gt;_make_ers_handler_conf&lt;/b&gt;&lt;br&gt;(env var name for this level)" vertex="1">
+          <mxGeometry height="50" width="220" x="270" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="act-readenv" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Read env var, e.g.&lt;br&gt;&lt;code&gt;os.getenv(&quot;DUNEDAQ_ERS_ERROR&quot;)&lt;/code&gt;" vertex="1">
+          <mxGeometry height="50" width="230" x="570" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="note-env" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#f3e6ff;strokeColor=#9673a6;size=14;fontSize=9;align=left;spacingLeft=6;" value="&lt;b&gt;Example value from OKS:&lt;/b&gt;&lt;br&gt;&lt;code&gt;erstrace,throttle,lstdout,&lt;br&gt;protobufstream(monkafka.cern.ch:30092)&lt;/code&gt;" vertex="1">
+          <mxGeometry height="60" width="230" x="570" y="868" as="geometry" />
+        </mxCell>
+        <mxCell id="act-split" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#fff2cc;strokeColor=#d6b656;" value="Split value by comma,&lt;br&gt;iterate each token" vertex="1">
+          <mxGeometry height="45" width="220" x="270" y="895" as="geometry" />
+        </mxCell>
+        <mxCell id="act-convert" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#fff2cc;strokeColor=#d6b656;" value="Call &lt;b&gt;_convert_str_to_handlertype&lt;/b&gt;&lt;br&gt;on each token" vertex="1">
+          <mxGeometry height="50" width="220" x="270" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="dec-token" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Token&lt;br&gt;type?" vertex="1">
+          <mxGeometry height="70" width="85" x="337" y="1050" as="geometry" />
+        </mxCell>
+        <mxCell id="act-skip" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" value="Skip&lt;br&gt;(&lt;code&gt;erstrace&lt;/code&gt; is C++ only)" vertex="1">
+          <mxGeometry height="40" width="140" x="100" y="1065" as="geometry" />
+        </mxCell>
+        <mxCell id="act-normal" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="Parse to &lt;b&gt;HandlerType&lt;/b&gt;&lt;br&gt;e.g. &lt;code&gt;&quot;lstdout&quot; → HandlerType.Lstdout&lt;/code&gt;" vertex="1">
+          <mxGeometry height="50" width="220" x="270" y="1155" as="geometry" />
+        </mxCell>
+        <mxCell id="act-protobuf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="Regex-parse URL:port&lt;br&gt;→ &lt;b&gt;HandlerType.Protobufstream&lt;/b&gt;&lt;br&gt;+ &lt;b&gt;ProtobufConf&lt;/b&gt;(url, port)" vertex="1">
+          <mxGeometry height="65" width="215" x="560" y="1135" as="geometry" />
+        </mxCell>
+        <mxCell id="merge-token" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="5" width="260" x="300" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="act-build-ers" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#fff2cc;strokeColor=#d6b656;" value="Build &lt;b&gt;ERSPyLogHandlerConf&lt;/b&gt;&lt;br&gt;(handlers=list, protobufconf=...)" vertex="1">
+          <mxGeometry height="50" width="220" x="270" y="1275" as="geometry" />
+        </mxCell>
+        <mxCell id="join-ers" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="5" width="160" x="300" y="1397.5" as="geometry" />
+        </mxCell>
+        <mxCell id="join-label" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontColor=#666666;" value="&lt;i&gt;All levels done&lt;/i&gt;" vertex="1">
+          <mxGeometry height="15" width="180" x="287" y="1410" as="geometry" />
+        </mxCell>
+        <mxCell id="out-ers" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;align=left;spacingLeft=8;" value="&lt;b&gt;extra =&lt;/b&gt;&lt;br&gt;&lt;code&gt;{&quot;ers_handlers&quot;:&lt;br&gt;&amp;nbsp; {&quot;DUNEDAQ_ERS_INFO&quot;: ERSPyLogHandlerConf(...),&lt;br&gt;&amp;nbsp;&amp;nbsp; &quot;DUNEDAQ_ERS_WARNING&quot;: ERSPyLogHandlerConf(...),&lt;br&gt;&amp;nbsp;&amp;nbsp; &quot;DUNEDAQ_ERS_ERROR&quot;: ERSPyLogHandlerConf(...),&lt;br&gt;&amp;nbsp;&amp;nbsp; &quot;DUNEDAQ_ERS_FATAL&quot;: ERSPyLogHandlerConf(...)},&lt;br&gt;&amp;nbsp;&quot;stream&quot;: StreamType.ERS}&lt;/code&gt;" vertex="1">
+          <mxGeometry height="120" width="250" x="835" y="1340" as="geometry" />
+        </mxCell>
+        <mxCell id="end-base" parent="1" style="ellipse;html=1;shape=doubleCircle;whiteSpace=wrap;aspect=fixed;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="950" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="end-opmon" parent="1" style="ellipse;html=1;shape=doubleCircle;whiteSpace=wrap;aspect=fixed;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="950" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="end-ers" parent="1" style="ellipse;html=1;shape=doubleCircle;whiteSpace=wrap;aspect=fixed;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="950" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="endArrow=classic;html=1;rounded=0;" target="act-select" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="act-select" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="dec-stream" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="dec-stream" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.545;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="act-base-resolve" value="conf.Base">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="act-base-resolve" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="out-base" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="out-base" style="endArrow=classic;html=1;rounded=0;" target="end-base" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="dec-stream" style="endArrow=classic;html=1;rounded=0;entryX=0.541;entryY=0.027;entryDx=0;entryDy=0;entryPerimeter=0;" target="act-opmon-resolve" value="conf.Opmon">
+          <mxGeometry relative="1" x="-0.6017" y="3" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="260" y="340" />
+              <mxPoint x="260" y="450" />
+              <mxPoint x="389" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="act-opmon-resolve" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="out-opmon" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="out-opmon" style="endArrow=classic;html=1;rounded=0;" target="end-opmon" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="dec-stream" style="endArrow=classic;html=1;rounded=0;" value="conf.ERS">
+          <mxGeometry relative="1" x="-0.7971" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="250" y="300" />
+              <mxPoint x="250" y="560" />
+              <mxPoint x="390" y="560" />
+            </Array>
+            <mxPoint x="390" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="act-ers-init" style="endArrow=classic;html=1;rounded=0;" target="act-get-oks" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="act-get-oks" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fork-ers" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="fork-ers" style="endArrow=classic;html=1;rounded=0;" target="act-make-conf" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="act-make-conf" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="act-readenv" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="act-readenv" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="act-split" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="870" />
+              <mxPoint x="530" y="895" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="act-split" style="endArrow=classic;html=1;rounded=0;" target="act-convert" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="act-convert" style="endArrow=classic;html=1;rounded=0;" target="dec-token" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="dec-token" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="act-skip" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;erstrace&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="dec-token" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="act-normal" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;known handler&lt;br&gt;(throttle, lstdout, etc.)&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="dec-token" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="act-protobuf" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;protobufstream(url:port)&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="1085" />
+              <mxPoint x="520" y="1168" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="act-normal" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="merge-token" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="act-protobuf" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="merge-token" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="668" y="1225" />
+              <mxPoint x="495" y="1225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="act-skip" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="merge-token" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="1243" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" edge="1" parent="1" source="merge-token" style="endArrow=classic;html=1;rounded=0;" target="act-build-ers" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="act-build-ers" style="endArrow=classic;html=1;rounded=0;" target="join-ers" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e25" edge="1" parent="1" source="join-ers" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="out-ers" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e26" edge="1" parent="1" source="out-ers" style="endArrow=classic;html=1;rounded=0;" target="end-ers" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-note1" edge="1" parent="1" source="note-mapping" style="endArrow=none;html=1;rounded=0;dashed=1;strokeColor=#999999;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="act-get-oks" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-note2" edge="1" parent="1" source="note-env" style="endArrow=none;html=1;rounded=0;dashed=1;strokeColor=#999999;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="act-readenv" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
