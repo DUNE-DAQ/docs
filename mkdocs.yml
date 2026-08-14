@@ -293,8 +293,8 @@ nav:
              - packages/drunc/Process-manager-interface.md
              - packages/drunc/Process-manager.md
              - packages/drunc/Release-notes.md
+             - packages/drunc/rich_error_handling_overview.md
              - packages/drunc/Running-drunc.md
-             - packages/drunc/src/rich_error_handling_overview.md
              - packages/drunc/Unified-shell-reference.md
           - nanorc:
              - About nanorc: packages/nanorc/README.md
