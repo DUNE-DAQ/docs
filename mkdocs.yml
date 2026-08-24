@@ -169,6 +169,9 @@ nav:
              - About styleguide: packages/styleguide/README.md
        - Core:   
           - appfwk:
+             - About appfwk: packages/appfwk/README.md
+             - packages/appfwk/ActionPlans.md
+             - packages/appfwk/Daq-Application.md
           - cmdlib:
              - About cmdlib: packages/cmdlib/README.md
              - packages/cmdlib/Home.md
@@ -265,6 +268,8 @@ nav:
              - packages/wibmod/src/wibmod/WIB1/README.md
        - Control:
           - appmodel:
+             - About appmodel: packages/appmodel/README.md
+             - packages/appmodel/SmartDaqApplication.md
           - confmodel:
              - About confmodel: packages/confmodel/README.md
           - connectivityserver:
