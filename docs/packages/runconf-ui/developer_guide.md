@@ -32,10 +32,10 @@ The codebase is also functionally split in half:
 class RunconfContext:
     apparatus: str           # e.g. "np02"
     conf_directory: Path     # path to the config repo
-    use_local: bool          # local filesystem vs remote git
-    config_file_name: str | None   # remote only
-    base_url: str | None           # remote only
-    ops_url: str | None            # remote only
+    repo_type: RepoManagerType     # local filesystem, remote git 
+    config_file_name: str | None   # remote 
+    base_url: str | None           # remote 
+    ops_url: str | None            # remote 
     output_directory: Path         # where saved configs are written
     log_level: LogLevels           # "INFO" | "DEBUG" | "WARNING"
 ```
@@ -54,7 +54,7 @@ Two repo managers are available, both inheriting from `RepoManagerInterface`:
 
 **`RemoteRepoManager`** manages repositories stored in remote git repositories via `runconftools.ConfPool`. It requires the apparatus name, a local cache directory, the config filename to look for, and the ops and base repository URLs.
 
-Both managers expose the same interface: `get_available_daq_versions()`, `get_daq_sessions()`, `set_daq_version()`, `select_config()`, and `get_runconf_ui_config_path()`. The last method locates the YAML system configuration file at `[conf_directory]/runconf-ui-settings/[apparatus].yml`.
+All managers expose the same interface: `get_available_daq_versions()`, `get_daq_sessions()`, `set_daq_version()`, `select_config()`, and `get_runconf_ui_config_path()`. The last method locates the YAML system configuration file at `[conf_directory]/runconf-ui-settings/[apparatus].yml`.
 
 ---
 
@@ -230,9 +230,9 @@ The `utils` module contains:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Henry Wallace_
+_Author: Marco Roda_
 
-_Date: Thu Apr 9 12:32:21 2026 +0100_
+_Date: Mon Aug 24 17:20:07 2026 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconf-ui/issues](https://github.com/DUNE-DAQ/runconf-ui/issues)_
 </font>

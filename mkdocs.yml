@@ -335,6 +335,7 @@ nav:
           - tpglibs:
              - About tpglibs: packages/tpglibs/README.md
              - packages/tpglibs/testapp/BinaryFormatSpecification.md
+             - packages/tpglibs/TPGStateHarvester/build.md
           - trgtools:
              - About trgtools: packages/trgtools/README.md
              - packages/trgtools/convert-tplatencies.md
