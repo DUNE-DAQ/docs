@@ -24,7 +24,7 @@ _Note that names are given in order of whom to contact first_
 **confmodel**: Marco Roda, Alex Tapper
 
 
-**connectivityserver**: Emir Muhammad
+**connectivityserver**: Pawel Plesniak, Emir Muhammad
 
 
 **crtmodules**: Deniz Tuana Ergonul Uzun, Wes Ketchum
@@ -248,7 +248,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Your Name_
 
-_Date: Tue Sep 1 09:17:32 2026 -0500_
+_Date: Tue Sep 1 10:14:39 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
