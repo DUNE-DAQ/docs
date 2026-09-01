@@ -142,6 +142,7 @@ nav:
              - packages/daq-release/development_workflow_gitflow.md
              - packages/daq-release/doxygen_mainpage.md
              - packages/daq-release/publish_to_cvmfs.md
+             - packages/daq-release/repo_managers.md
              - packages/daq-release/team_repos.md
           - daqpytools:
              - packages/daqpytools/environment-configs.md
