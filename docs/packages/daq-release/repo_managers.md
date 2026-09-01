@@ -2,163 +2,242 @@
 
 _Note that names are given in order of whom to contact first_
 
-appfwk: Marco Roda, Alex Tapper, Eric Flumerfelt
 
-appmodel: Eric Flumerfelt
+**appfwk**: Marco Roda, Alex Tapper, Eric Flumerfelt
 
-asiolibs: Deniz Tuana Ergonul Uzun, Roland Sipos
 
-cibmodules: Nuno Barros, Marco Roda
+**appmodel**: Eric Flumerfelt
 
-cmdlib: Marco Roda, Alex Tapper
 
-conffwk: Marco Roda, Alex Tapper
+**asiolibs**: Deniz Tuana Ergonul Uzun, Roland Sipos
 
-confmodel: Marco Roda, Alex Tapper
 
-connectivityserver: Emir Muhammad
+**cibmodules**: Nuno Barros, Marco Roda
 
-crtmodules: Deniz Tuana Ergonul Uzun, Wes Ketchum
 
-ctbmodules: James Shen, Marco Roda
+**cmdlib**: Marco Roda, Alex Tapper
 
-daphnemodules: Manuel Arroyave, Marco Roda
 
-daq-assettools: John Freeman, Andrew Mogan
+**conffwk**: Marco Roda, Alex Tapper
 
-daq-buildtools: John Freeman, Andrew Mogan
 
-daq-cmake: John Freeman, Andrew Mogan
+**confmodel**: Marco Roda, Alex Tapper
 
-daqconf: Marco Roda, Alex Tapper, Kurt Biery
 
-daqdataformats: Eric Flumerfelt, John Freeman
+**connectivityserver**: Emir Muhammad
 
-daq-deliverables: John Freeman, Andrew Mogan
 
-daq-docker: John Freeman, Andrew Mogan
+**crtmodules**: Deniz Tuana Ergonul Uzun, Wes Ketchum
 
-daqpytools: Emir Muhammad, Pawel Plesniak
 
-daqpyutils: John Freeman, Pawel Plesniak
+**ctbmodules**: James Shen, Marco Roda
 
-daq-release: John Freeman, Andrew Mogan
 
-daqsystemtest: Kurt Biery, John Freeman, Eric Flumerfelt
+**daphnemodules**: Manuel Arroyave, Marco Roda
 
-datahandlinglibs: Deniz Tuana Ergonul Uzun, Shyam Bhuller, Roland Sipos
 
-dbe: John Freeman, Marco Roda
+**daq-assettools**: John Freeman, Andrew Mogan
 
-detchannelmaps: Wes Ketchum, Alessandro Thea
 
-detdataformats: Eric Flumerfelt, John Freeman, Wes Ketchum
+**daq-buildtools**: John Freeman, Andrew Mogan
 
-dfmessages: Eric Flumerfelt, Kurt Biery, Roland Sipos
 
-dfmodules: Eric Flumerfelt, Kurt Biery, Roland Sipos
+**daq-cmake**: John Freeman, Andrew Mogan
 
-docs: John Freeman
 
-dpdklibs: Roland Sipos, Shyam Bhuller
+**daqconf**: Marco Roda, Alex Tapper, Kurt Biery
 
-drunc: Pawel Plesniak, Marco Roda, Alex Tapper
 
-druncschema: Pawel Plesniak, Marco Roda, Alex Tapper
+**daqdataformats**: Eric Flumerfelt, John Freeman
 
-elisa_client_api: Marco Roda, Alex Tapper
 
-erskafka: Marco Roda, Alex Tapper
+**daq-deliverables**: John Freeman, Andrew Mogan
 
-ers: Ron Rechenmacher, John Freeman
 
-fddetdataformats: Eric Flumerfelt, Wes Ketchum, John Freeman
+**daq-docker**: John Freeman, Andrew Mogan
 
-fdreadoutlibs: Deniz Tuana Ergonul Uzun, Shyam Bhuller, Roland Sipos
 
-fdreadoutmodules: Deniz Tuana Ergonul Uzun, Shyam Bhuller, Roland Sipos
+**daqpytools**: Emir Muhammad, Pawel Plesniak
 
-flxlibs: Shyam Bhuller, Roland Sipos
 
-.github: John Freeman, Andrew Mogan
+**daqpyutils**: John Freeman, Pawel Plesniak
 
-hdf5libs: Kurt Biery, Andrew Mogan
 
-hermesmodules: Alessandro Thea
+**daq-release**: John Freeman, Andrew Mogan
 
-hsilibs: Stoyan Trilov
 
-integrationtest: Kurt Biery, John Freeman
+**daqsystemtest**: Kurt Biery, John Freeman, Eric Flumerfelt
 
-iomanager: Eric Flumerfelt, Kurt Biery, Marco Roda
 
-ipm: Kurt Biery, Eric Flumerfelt, Marco Roda
+**datahandlinglibs**: Deniz Tuana Ergonul Uzun, Shyam Bhuller, Roland Sipos
 
-kafkaopmon: Pawel Plesniak, Marco Roda
 
-listrev: Kurt Biery, Eric Flumerfelt
+**dbe**: John Freeman, Marco Roda
 
-logging: Ron Rechenmacher, John Freeman
 
-microservices: Marco Roda
+**detchannelmaps**: Wes Ketchum, Alessandro Thea
 
-oksconflibs: John Freeman, Marco Roda
 
-oksdalgen: John Freeman
+**detdataformats**: Eric Flumerfelt, John Freeman, Wes Ketchum
 
-oks: John Freeman, Marco Roda
 
-okssystem: John Freeman
+**dfmessages**: Eric Flumerfelt, Kurt Biery, Roland Sipos
 
-oksutils: John Freeman
 
-opmonlib: Marco Roda, Alex Tapper
+**dfmodules**: Eric Flumerfelt, Kurt Biery, Roland Sipos
 
-org-admin: John Freeman, Andrew Mogan
 
-pocket: Pat Riehecky
+**docs**: John Freeman
 
-rawdatautils: Wes Ketchum
 
-rcif: John Freeman
+**dpdklibs**: Roland Sipos, Shyam Bhuller
 
-restcmd: Eric Flumerfelt
 
-runconftools: Marco Roda
+**drunc**: Pawel Plesniak, Marco Roda, Alex Tapper
 
-runconf-ui: Henry Wallace, Marco Roda
 
-serialization: Eric Flumerfelt
+**druncschema**: Pawel Plesniak, Marco Roda, Alex Tapper
 
-snbmodules: Eric Flumerfelt, Deniz Tuana Ergonul Uzun
 
-sspmodules: Marco Roda
+**elisa_client_api**: Marco Roda, Alex Tapper
 
-styleguide: John Freeman, Andrew Mogan
 
-tdemodules: Shyam Bhuller, Alessandro Thea
+**erskafka**: Marco Roda, Alex Tapper
 
-template-repo: John Freeman, Andrew Mogan
 
-timinglibs: Stoyan Trilov
+**ers**: Ron Rechenmacher, John Freeman
 
-timing: Stoyan Trilov
 
-tpglibs: Shyam Bhuller, Alessandro Thea
+**fddetdataformats**: Eric Flumerfelt, Wes Ketchum, John Freeman
 
-trgdataformats: Alessandro Thea, Kurt Biery
 
-trgtools: Alessandro Thea, Michal Rigan
+**fdreadoutlibs**: Deniz Tuana Ergonul Uzun, Shyam Bhuller, Roland Sipos
 
-trigger: Alessandro Thea
 
-triggeralgs: Alessandro Thea
+**fdreadoutmodules**: Deniz Tuana Ergonul Uzun, Shyam Bhuller, Roland Sipos
 
-uhallibs: Stoyan Trilov, John Freeman
 
-utilities: Eric Flumerfelt, Kurt Biery
+**flxlibs**: Shyam Bhuller, Roland Sipos
 
-wibmod: Roger Huang, Marco Roda
+
+**.github**: John Freeman, Andrew Mogan
+
+
+**hdf5libs**: Kurt Biery, Andrew Mogan
+
+
+**hermesmodules**: Alessandro Thea
+
+
+**hsilibs**: Stoyan Trilov
+
+
+**integrationtest**: Kurt Biery, John Freeman
+
+
+**iomanager**: Eric Flumerfelt, Kurt Biery, Marco Roda
+
+
+**ipm**: Kurt Biery, Eric Flumerfelt, Marco Roda
+
+
+**kafkaopmon**: Pawel Plesniak, Marco Roda
+
+
+**listrev**: Kurt Biery, Eric Flumerfelt
+
+
+**logging**: Ron Rechenmacher, John Freeman
+
+
+**microservices**: Marco Roda
+
+
+**oksconflibs**: John Freeman, Marco Roda
+
+
+**oksdalgen**: John Freeman
+
+
+**oks**: John Freeman, Marco Roda
+
+
+**okssystem**: John Freeman
+
+
+**oksutils**: John Freeman
+
+
+**opmonlib**: Marco Roda, Alex Tapper
+
+
+**org-admin**: John Freeman, Andrew Mogan
+
+
+**pocket**: Pat Riehecky
+
+
+**rawdatautils**: Wes Ketchum
+
+
+**rcif**: John Freeman
+
+
+**restcmd**: Eric Flumerfelt
+
+
+**runconftools**: Marco Roda
+
+
+**runconf-ui**: Henry Wallace, Marco Roda
+
+
+**serialization**: Eric Flumerfelt
+
+
+**snbmodules**: Eric Flumerfelt, Deniz Tuana Ergonul Uzun
+
+
+**sspmodules**: Marco Roda
+
+
+**styleguide**: John Freeman, Andrew Mogan
+
+
+**tdemodules**: Shyam Bhuller, Alessandro Thea
+
+
+**template-repo**: John Freeman, Andrew Mogan
+
+
+**timinglibs**: Stoyan Trilov
+
+
+**timing**: Stoyan Trilov
+
+
+**tpglibs**: Shyam Bhuller, Alessandro Thea
+
+
+**trgdataformats**: Alessandro Thea, Kurt Biery
+
+
+**trgtools**: Alessandro Thea, Michal Rigan
+
+
+**trigger**: Alessandro Thea
+
+
+**triggeralgs**: Alessandro Thea
+
+
+**uhallibs**: Stoyan Trilov, John Freeman
+
+
+**utilities**: Eric Flumerfelt, Kurt Biery
+
+
+**wibmod**: Roger Huang, Marco Roda
 
 
 -----
@@ -169,7 +248,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Your Name_
 
-_Date: Tue Sep 1 08:48:14 2026 -0500_
+_Date: Tue Sep 1 09:17:32 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
