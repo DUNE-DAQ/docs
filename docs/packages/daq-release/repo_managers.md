@@ -239,7 +239,7 @@ A manager for a repo serves to:
 **triggeralgs**: Alessandro Thea
 
 
-**uhallibs**: Stoyan Trilov, John Freeman
+**uhallibs**: John Freeman
 
 
 **utilities**: Eric Flumerfelt, Kurt Biery
@@ -256,7 +256,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Your Name_
 
-_Date: Tue Sep 1 10:29:25 2026 -0500_
+_Date: Thu Sep 3 16:38:05 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
