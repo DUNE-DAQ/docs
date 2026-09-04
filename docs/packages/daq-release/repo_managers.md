@@ -59,7 +59,7 @@ A manager for a repo serves to:
 **daqdataformats**: Eric Flumerfelt, John Freeman
 
 
-**daq-deliverables**: John Freeman, Andrew Mogan
+**daq-deliverables**: Wes Ketchum
 
 
 **daq-docker**: John Freeman, Andrew Mogan
@@ -256,7 +256,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Your Name_
 
-_Date: Thu Sep 3 16:38:05 2026 -0500_
+_Date: Fri Sep 4 10:28:47 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
