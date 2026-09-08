@@ -26,7 +26,7 @@ source runconf_<YOUR DETECTOR NAME>_env_setup.sh
 
 Currently provided detectors are `np02` and `np04`.
 
-The app can be booted in two modes (`-t`): `local` or `remote`. Remote and emulation mode require the ops and base repositories to be provided as well as the name of the configuration file (containing a `Session`) you wish to use.
+The app can be booted in two modes (`-t`): `local` or `remote`. Remote mode requires the ops and base repositories to be provided as well as the name of the configuration file (containing a `Session`) you wish to use. Emulation is not a separate mode: select it by passing the emulation apparatus (e.g. `-a np02_emu`) with either mode.
 
 ### Options
 
@@ -34,7 +34,7 @@ The app can be booted in two modes (`-t`): `local` or `remote`. Remote and emula
 |---|---|---|---|---|
 | `--apparatus` | `-a` | `APPARATUS` | *(required)* | DAQ apparatus name, e.g. `NP02` or `NP04`. Used by `runconf-ui` to find the detectory YAML as well as by the remote repository manager to find the correct base configuration repo.|
 | `--config-directory` | `-c` | `CONFIG_DIR` | | Path to your local config directory. i.e. "where will the repository manager look for configs" |
-| `--repo-type` | `-t` | | `remote` | Choice from `local`, `remote` or `emulation`.  |
+| `--repo-type` | `-t` | | `remote` | Choice from `local` or `remote`.  |
 | `--config-file-name` | `-f` | `SESSION_FILE` | | Config file to find in the ops repository, e.g. `run.data.xml`. Remote mode only. |
 | `--base-url` | `-b` | `BASE_URL` | `ssh://git@gitlab.cern.ch:7999/dune-daq/online/ehn1-daqconfigs.git` | URL for the base DAQ config repository. The `BASE` branch of the git repo from which all others will be merged in. Remote mode only. |
 | `--ops-url` | `-r` | `OPERATION_URL` | | URL for the operations repository. Remote mode only. The specific operational repository, for example the configuration specifically relating to the CRT |
@@ -121,9 +121,9 @@ Adjustable elements (trigger rates, etc.) are accessed via the **Adjustable** ta
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Marco Roda_
+_Author: Michal Rigan_
 
-_Date: Mon Aug 24 17:44:20 2026 +0200_
+_Date: Tue Sep 8 14:35:20 2026 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconf-ui/issues](https://github.com/DUNE-DAQ/runconf-ui/issues)_
 </font>
