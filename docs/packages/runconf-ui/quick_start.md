@@ -76,7 +76,7 @@ The steps to modifying a config are straightforward:
 
 
 
-1. In the enable/disable panels, turn on or off what you want enabled or disabled.
+1. In the include/exclude panels, turn on or off what you want included or excluded.
 
 
 2. In the adjustable element panels, adjust the values of things you want to adjust.
@@ -92,18 +92,18 @@ Once done, press **Create Run Configuration** and then **Save and Quit**. This w
 The above image shows the primary methods for interfacing with the application:
 
 - The **file select** can be used to open another config.
-- The **enable/disable buttons** can be pressed to enable or disable items in the configuration. The tabs group together different parts of the detector.
+- The **include/exclude buttons** can be pressed to include or exclude items in the configuration. The tabs group together different parts of the detector.
 - The **options panel** contains Create/Quit (both give the option to save and quit), Reset (resets the configuration to its initial state), and Help (brings up a small help box).
 
 ### Configuration Tab
 
-The large central panel contains a few useful features. The configuration map/tree view, shown below, displays the full configuration and all enabled/disabled elements. It is accessible by pressing the **Configuration** tab.
+The large central panel contains a few useful features. The configuration map/tree view, shown below, displays the full configuration and all included/excluded elements. It is accessible by pressing the **Configuration** tab.
 
 ![Highlighted config tree](_static/config_tree.png)
 
 ### System Maps Tab
 
-The **System Maps** tab displays the enable/disable states for each panel as well as how each button relates to others. For example, you can see that a `TPC` button is controlled by `CRP4`, `CRP5`, and `TDE`.
+The **System Maps** tab displays the include/exclude states for each panel as well as how each button relates to others. For example, you can see that a `TPC` button is controlled by `CRP4`, `CRP5`, and `TDE`.
 
 ![System map view](_static/system_map_view.png)
 
@@ -113,7 +113,7 @@ Adjustable elements (trigger rates, etc.) are accessed via the **Adjustable** ta
 
 ![Highlighted adjustable tab](_static/adjustable_elements.png)
 
-> **Note:** If the object containing an adjustable element is disabled, you will not be able to modify it in this menu.
+> **Note:** If the object containing an adjustable element is excluded, you will not be able to modify it in this menu.
 
 -----
 
@@ -121,9 +121,9 @@ Adjustable elements (trigger rates, etc.) are accessed via the **Adjustable** ta
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Michal Rigan_
+_Author: Your Name_
 
-_Date: Tue Sep 8 14:35:20 2026 +0200_
+_Date: Wed Sep 9 10:09:34 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconf-ui/issues](https://github.com/DUNE-DAQ/runconf-ui/issues)_
 </font>

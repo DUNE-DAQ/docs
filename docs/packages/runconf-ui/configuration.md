@@ -17,7 +17,7 @@ The configuration file has three top-level sections:
 1. **Settings** — points to the classes you want made visible in the main system tree.
 
 
-2. **PanelOptions** — lists the enable/disable panels.
+2. **PanelOptions** — lists the include/exclude panels.
 
 
 3. **AdjustableAttributes** — lists things you want made adjustable, such as trigger rates.
@@ -28,7 +28,7 @@ The configuration file has three top-level sections:
 
 Each panel in `PanelOptions` generates a tab in the TUI. There are three kinds of objects you can list under each panel's systems:
 
-- **`components`** — objects that can be enabled/disabled by OKS directly.
+- **`components`** — objects that can be included/excluded by OKS directly.
 - **`attributes`** — attributes of objects in OKS (e.g. the `TPG` attribute of a `ReadoutApplication`).
 - **`relationships`** — relationships between objects in OKS that may need to be swapped.
 
@@ -69,8 +69,8 @@ PanelOptions:
                   segments:                # Segments to search for objects in [List[str]], default ["root-segment"]
 
                   # Optional
-                  enabled_state:           # Value representing enabled (default: true)
-                  disabled_state:          # Value representing disabled (default: false)
+                  included_state:           # Value representing included (default: true)
+                  excluded_state:          # Value representing excluded (default: false)
                   system_label:            # Subsystem label [str]
                   separate_system: false   # [bool]
                   tooltip:                 # Tooltip string (printed directly when separate_system is true) [str]
@@ -80,8 +80,8 @@ PanelOptions:
                   class:                   # Class of objects holding the relationship [str]
                   segments:                # [List[str]], default ["root-segment"]
                   relationship_class:      # Expected class of the related object [str]
-                  enabled_state:           # DAL id(s) to relate when enabled [str | List[str]]
-                  disabled_state:          # DAL id(s) to relate when disabled [str | List[str]]
+                  included_state:           # DAL id(s) to relate when included [str | List[str]]
+                  excluded_state:          # DAL id(s) to relate when excluded [str | List[str]]
 
 AdjustableAttributes:
     AttributeGroup:              # Group name (becomes a tab)
@@ -150,7 +150,7 @@ Use these together to build hierarchical buttons. In the example below, TPC is t
         separate_system: true
 ```
 
-This generates three buttons: **TPC**, **CRP4**, and **CRP5**. Because `subsystem_dependent` is `true`, the TPC button becomes disabled only when both CRP4 and CRP5 are disabled.
+This generates three buttons: **TPC**, **CRP4**, and **CRP5**. Because `subsystem_dependent` is `true`, the TPC button becomes disabled only when both CRP4 and CRP5 are excluded.
 
 ---
 
@@ -204,7 +204,7 @@ AdjustableAttributes:
 
 The adjustable panel shows the object name and attribute on the left and the current value on the right. **Apply** commits the new value; **Reset** reverts to the value loaded from the configuration file.
 
-> **Note:** If the object containing an adjustable element is disabled, the controls will be greyed out and non-interactive.
+> **Note:** If the object containing an adjustable element is excluded, the controls will be greyed out and non-interactive.
 
 -----
 
@@ -214,7 +214,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Henry Wallace_
 
-_Date: Thu Apr 9 12:26:14 2026 +0100_
+_Date: Wed Sep 2 10:53:49 2026 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconf-ui/issues](https://github.com/DUNE-DAQ/runconf-ui/issues)_
 </font>

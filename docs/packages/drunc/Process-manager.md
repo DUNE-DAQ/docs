@@ -82,7 +82,7 @@ Caveats:
 boot config/daqsystemtest/example-configs.data.xml local-1x1-config plasorak-test
 [14:10:01] INFO     "_convert_oks_to_boot_request":                                                                                                                 process_manager_driver.py:35
                     /cvmfs/dunedaq-development.opensciencegrid.org/[...]/config/daqsystemtest/example-configs.data.xml
-           INFO     "collect_apps": Ignoring disabled app ru-02                                                                                                                 oks_parser.py:95
+           INFO     "collect_apps": Ignoring excluded app ru-02                                                                                                                 oks_parser.py:95
            INFO     "process_manager_driver": RTE script was not supplied in the OKS configuration, using the one from local enviroment instead                     process_manager_driver.py:82
 'root-controller' (a61ffe46-dfa2-4a90-b888-7901fa5755b2) process started
 [...many more process booted...]
@@ -123,9 +123,9 @@ See `terminate`'s documentation [here](https://dune-daq-sw.readthedocs.io/en/lat
 _Last git commit to the markdown source of this page:_
 
 
-_Author: PawelPlesniak_
+_Author: Your Name_
 
-_Date: Tue Jul 7 15:32:51 2026 +0200_
+_Date: Sat Aug 22 08:29:48 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>

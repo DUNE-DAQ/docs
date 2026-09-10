@@ -1,0 +1,7 @@
+DetectorStream,1847,127
+DetectorToDaqConnection,627,684
+DetDataReceiver,488,301
+DetDataSender,1779,662
+ExcludableEntitySetAND,1302,676
+ExcludableEntitySet,1146,400
+ExcludableEntity,1176,111
