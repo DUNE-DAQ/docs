@@ -71,6 +71,9 @@ A manager for a repo serves to:
 **daq-docker**: John Freeman, Andrew Mogan
 
 
+**daq-kube**: Pat Riehecky
+
+
 **daqpytools**: Pawel Plesniak, Emir Muhammad
 
 
@@ -310,7 +313,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Your Name_
 
-_Date: Tue Sep 22 11:08:25 2026 -0500_
+_Date: Tue Sep 22 11:15:16 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
