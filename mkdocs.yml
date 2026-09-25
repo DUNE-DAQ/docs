@@ -291,6 +291,10 @@ nav:
              - packages/drunc/Controller.md
              - packages/drunc/FAQ.md
              - packages/drunc/FSM.md
+             - packages/drunc/graph/overall/classes.md
+             - packages/drunc/graph/overall/packages.md
+             - packages/drunc/graph/overall/README.md
+             - packages/drunc/graph/README.md
              - packages/drunc/Messaging-format.md
              - packages/drunc/Process-manager-interface.md
              - packages/drunc/Process-manager.md
