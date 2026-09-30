@@ -99,7 +99,7 @@ import sys
 import conffwk
 import confmodel
 
-import daqconf.enable as enable
+import daqconf.include as include
 
 def generate( path:str ) -> bool :
 
@@ -108,8 +108,8 @@ def generate( path:str ) -> bool :
 
     session=base.get_session_name()
 
-    # enable all the det streams for the daphne
-    enable.enable(entry, False, ["np02-pds107-s00-sid50"], session)
+    # include all the det streams for the daphne
+    include.include(entry, False, ["np02-pds107-s00-sid50"], session)
 
     db = base.get_database(path)
 
@@ -166,9 +166,9 @@ Therefore its objects are not duplicated.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: MRiganSUSX_
+_Author: Your Name_
 
-_Date: Tue Apr 8 12:49:40 2025 +0200_
+_Date: Sun Aug 23 11:21:52 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconftools/issues](https://github.com/DUNE-DAQ/runconftools/issues)_
 </font>

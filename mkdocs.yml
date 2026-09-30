@@ -142,9 +142,21 @@ nav:
              - packages/daq-release/development_workflow_gitflow.md
              - packages/daq-release/doxygen_mainpage.md
              - packages/daq-release/publish_to_cvmfs.md
+             - packages/daq-release/repo_managers.md
              - packages/daq-release/team_repos.md
           - daqpytools:
-             - About daqpytools: packages/daqpytools/README.md
+             - packages/daqpytools/environment-configs.md
+             - packages/daqpytools/explanation.md
+             - packages/daqpytools/how-to/add-handlers-at-runtime.md
+             - packages/daqpytools/how-to/best-practices.md
+             - packages/daqpytools/how-to/configure-ers.md
+             - packages/daqpytools/how-to/route-messages.md
+             - packages/daqpytools/how-to/upgrade-package.md
+             - packages/daqpytools/how-to/use-handlers.md
+             - packages/daqpytools/index.md
+             - packages/daqpytools/reference/troubleshooting.md
+             - packages/daqpytools/severitylevels.md
+             - packages/daqpytools/tutorial.md
           - daqsystemtest:
              - About daqsystemtest: packages/daqsystemtest/README.md
              - packages/daqsystemtest/bundle_script_overview.md
@@ -152,6 +164,8 @@ nav:
           - integrationtest:
              - About integrationtest: packages/integrationtest/README.md
              - packages/integrationtest/DataFileCheckParameters.md
+             - packages/integrationtest/InformationAboutSpecialVariables.md
+             - packages/integrationtest/SurveyOfTriggersUsedInIntegtestsSummer2026.md
           - styleguide:
              - About styleguide: packages/styleguide/README.md
        - Core:   
@@ -159,7 +173,6 @@ nav:
              - About appfwk: packages/appfwk/README.md
              - packages/appfwk/ActionPlans.md
              - packages/appfwk/Daq-Application.md
-             - packages/appfwk/schema/README.md
           - cmdlib:
              - About cmdlib: packages/cmdlib/README.md
              - packages/cmdlib/Home.md
@@ -276,6 +289,7 @@ nav:
              - packages/drunc/Process-manager-interface.md
              - packages/drunc/Process-manager.md
              - packages/drunc/Release-notes.md
+             - packages/drunc/rich_error_handling_overview.md
              - packages/drunc/Running-drunc.md
              - packages/drunc/Unified-shell-reference.md
           - restcmd:
@@ -287,8 +301,9 @@ nav:
              - packages/runconftools/workflow.md
           - runconf-ui:
              - About runconf-ui: packages/runconf-ui/README.md
-             - packages/runconf-ui/dev_instructions.md
-             - packages/runconf-ui/runconf_ui_config.md
+             - packages/runconf-ui/configuration.md
+             - packages/runconf-ui/developer_guide.md
+             - packages/runconf-ui/quick_start.md
        - Dataflow (logical):
           - dfmessages:
              - About dfmessages: packages/dfmessages/README.md
@@ -307,6 +322,7 @@ nav:
           - tpglibs:
              - About tpglibs: packages/tpglibs/README.md
              - packages/tpglibs/testapp/BinaryFormatSpecification.md
+             - packages/tpglibs/TPGStateHarvester/build.md
           - trgtools:
              - About trgtools: packages/trgtools/README.md
              - packages/trgtools/convert-tplatencies.md

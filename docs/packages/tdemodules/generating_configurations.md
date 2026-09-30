@@ -51,7 +51,7 @@ A few objects need to be created:
 - DPDKPortConfiguration
 - DPDKReceiver
 - NetworkDevice
-- ProcessingResource (lcores)
+- HostCores (lcores)
 - TDEAMCModuleConf
 - TDECrateApplication"
 
@@ -83,9 +83,9 @@ oks_dump --files-only <xml-file>
 _Last git commit to the markdown source of this page:_
 
 
-_Author: ShyamB97_
+_Author: Your Name_
 
-_Date: Wed Jun 25 15:30:57 2025 +0200_
+_Date: Wed Aug 19 18:19:34 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/tdemodules/issues](https://github.com/DUNE-DAQ/tdemodules/issues)_
 </font>
