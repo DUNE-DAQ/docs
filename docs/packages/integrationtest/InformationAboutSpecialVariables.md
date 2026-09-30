@@ -1,6 +1,6 @@
 # Special variables that are used by the integrationtest infrastructure
 
-18-Aug-2026, Kurt Biery
+21-Sep-2026, Kurt Biery
 
 ## Introduction
 
@@ -77,47 +77,65 @@ class DAQSessionIngredients:
 class DAQControlApplication:
     alias: str  # a short-hand name for the process that is started
     startup_strings: list[str]  # the elements of the command string that should be used to start the application
-    wait_time_after_start: int = 2  # seconds to sleep after spawning the process
+    startup_wait_params: ConsoleOutputWaitParameters = None
 
 @dataclass
 class DAQCommandSet:
     target: str  # the name of the process that should receive the commands
-    command_list: list[str]  $ the list of commands, e.g. ["boot", "conf"]
-    wait_params: CommandWaitParameters = field(default_factory=lambda: CommandWaitParameters())
+    command_list: list[str]  # the list of commands, e.g. ["boot", "conf"]
+    wait_params: ConsoleOutputWaitParameters = None
+    wait_for_command_completion: bool = True
 
 @dataclass
-class CommandWaitParameters:  # please see the comments below for information about this class, etc.
-    wait_for_command_completion: bool = True
-    style: CommandWaitStyle = CommandWaitStyle.TIME
+class ConsoleOutputWaitParameters:
     timeout_waiting_for_first_msg: int = 2  # seconds
     wait_time_after_last_msg: int = 2  # seconds
-    timeout_waiting_for_exit: int = 5  # seconds
 
-class CommandWaitStyle(Enum):
-    ECHO = "echo"
-    TIME = "time"
-    TIME_PLUS_EXIT = "time_plus_exit"
-    NONE = "none"
+@dataclass
+class KeyPhraseWaitParameters(ConsoleOutputWaitParameters):
+    timeout_waiting_for_first_msg: int = 30  # seconds
+    wait_time_after_last_msg: int = 30  # seconds
+    search_phrase: str = None
+
+@dataclass
+class EchoCommandWaitParameters(ConsoleOutputWaitParameters):
+    timeout_waiting_for_first_msg: int = 999999  # seconds
+    wait_time_after_last_msg: int = 999999  # seconds
+    search_phrase: str = "*** COMMAND HAS COMPLETED ***"
+
+@dataclass
+class ProcessExitWaitParameters(ConsoleOutputWaitParameters):
+    timeout_waiting_for_first_msg: int = 30  # seconds
+    wait_time_after_last_msg: int = 30  # seconds
+    process: asyncio.subprocess.Process = None
 ```
 
 
-* Here is some additional information about `CommandWaitParameters`:
+* Here is some additional information about `ConsoleOutputWaitParameters` and its child classes:
 
     * the commands that are specified in a `DAQCommandSet` are sent individually to the target process without any delay between them.  So, we typically send all of the commands in the set in a fraction of a second, while the target process could take tens of seconds to execute all of them.
 
-    * when there is only one control process in an integtest, this rapid-fire approach may be all that we need, because a single process handles the throttling of the commands, running them one after another.  However, when there are multiple control processes in an integtest, we may want to send a set of commands to Process1, wait for those to finish, and only then send a set of commands to Process2.  This demonstrates a need to allow an `integrationtest` developer to specify whether they want the integrationtest infrastructure to wait for each command set to finish before moving on to the next set of commands, and if so, what style of waiting they would like be used.  This is the motivation for the `CommandWaitParameters` class.
+    * when there is only one control process in an integtest, this rapid-fire approach may be all that we need, because a single process handles the throttling of the commands, running them one after another.  However, when there are multiple control processes in an integtest, we may want to send a set of commands to Process1, wait for those to finish, and only then send a set of commands to Process2.  This demonstrates a need to allow an `integrationtest` developer to specify whether they want the `integrationtest` infrastructure to wait for each command set to finish before moving on to the next set of commands, and if so, what style of waiting they would like be used.  This is the motivation for the `ConsoleOutputWaitParameters` class and its child classes.
 
         * of course, there are also situations in which we want to wait for all of the requested commands to finish running even when there is only one control process in the integtest.  For example, we will likely want to allow a single process to finish executing all of the requested commands before the `integrationtest` infrastructure starts shutting down that process.
 
-    * the currently-supported wait styles are ECHO, TIME, and TIME_PLUS_EXIT.
+    * the currently-supported wait styles are _console-output_, _echo-command_, _key-phrase_, and _process-exit_.
 
-    * the ECHO wait style makes use of the `echo` command that is available in some of our control applications to clearly identify when a set of commands has finished.  So, if a user specifies a command set that contains commands `['boot', 'conf']` and has a wait style of ECHO, the `integrationtest` infrastructure appends an `echo` command with a special string to the set, i.e. `['boot', 'conf', 'echo "<special string>"']`.  When the `integrationtest` infrastructure sees the special string in the output of the target process, it knows that the command set has finished.
+    * the _console-output_ wait style simply waits for configured amounts of time for console output to start and then stop.  The idea here is to use the console output as an indicator of activity, and when the console output stops, we presume that activity related to the requested command(s) has stopped.
 
-        * this wait style is the most robust since we know that all of the commands before the `echo` command have been run when the `echo` results are seen in the process output.  However, some applications don't provide `echo` functionality.
+    * the _echo-command_ wait style makes use of the `echo` command that is available in some of our control applications to clearly identify when a set of commands has finished.  So, if a user specifies a command set that contains commands `['boot', 'conf']` and has a wait style of _echo-command_, the `integrationtest` infrastructure appends an `echo` command with a special string to the set, i.e. `['boot', 'conf', 'echo "<special string>"']`.  When the `integrationtest` infrastructure sees that special string in the output of the target process, it knows that the command set has finished.
 
-    * the TIME wait style simply waits for configured amounts of time for console output to start and then stop.  The idea here is to use the console output as an indicator of activity, and when the console output stops, presume that activity related to the requested command(s) has stopped.
+        * this wait style is quite robust since we know that all of the commands before the `echo` command have been run when the `echo` results are seen in the process output.  However, some applications don't provide `echo` functionality.  In the unlikely even that this wait style is requested from an application type that doesn't support it, the `integrationtest` infrastructure will switch to a _console-output_ wait style with timeout values taken from the _key-phrase_ defaults.
 
-    * the TIME_PLUS_EXIT wait style is intended to be used with "exit" commands.  The idea here is to wait for console output to stop and then wait for the process to exit (within a configurable timeout).
+        * this wait style inherits from the _console-output_ wait style, so, in principle, it will time out if the special echo string is not seen in the console output.  However, the default values for the console output timeouts are set very long so that we don't accidentally time out too soon (for example, if an integtest includes a 300-second data-taking run).  Of course, integtest developers can choose smaller timeout values for special situations.
+
+    * the _key-phrase_ wait style looks for a specific phrase in the console output, and the `integrationtest` infrastructure stops waiting when it sees that phrase.
+
+        * if the phrase is not found before the console output times out based on the timeout values in the `KeyPhraseWaitParameters` instance, then the infrastructure will stop waiting and print out a warning message.
+
+    * the _process-exit_ wait style is intended to be used with "exit" commands.  The idea here is to wait for console output to stop and the process to exit (within a configurable timeout).
+
+        * if, for some reason, the process does not exit in response to the 'exit' command, the timeout values in the ProcessExitWaitParameters object are used to stop waiting in a reasonable amount of time.
 
 * There are several strings that are dynamically determined by the `integrationtest` infrastructure that we may want to include in the `startup_strings` field in our `DAQControlApplication` declarations.  To take this into account, placeholder strings have been defined.  These placeholder strings can be used in `DAQControlApplication` declarations and the `integrationtest` infrastructure will substitute the appropriate value at runtime.  The placeholders that are currently available are the following:
 
@@ -144,10 +162,12 @@ Here is a snippet of code from the `basic_multapp_test.py` that shows how the `D
 ```python
 # The commands to run in dunerc and the process manager shell
 dunerc_commands_1 = (
-    "boot conf start --run-number 101 wait 1 enable-triggers wait ".split()
-    + [str(run_duration)] + ["disable-triggers"]
+    "boot conf start --run-number 101 wait 1".split()
 )
 dunerc_commands_2 = (
+    "enable-triggers wait".split() + [str(run_duration)] + ["disable-triggers"]
+)
+dunerc_commands_3 = (
     "drain-dataflow stop-trigger-sources stop wait 2 scrap terminate".split()
 )
 pmshell_command = ["ps"]
@@ -157,23 +177,31 @@ pm_port = find_free_port(50020, 52000)
 
 # The command lines that should be used to start the applications
 procmsg_startup_commands = ["drunc-process-manager", "<proc_mgr_choice>", str(pm_port)]
-pmapp = DAQControlApplication("pm", procmsg_startup_commands)
+pmapp = idc.DAQControlApplication("pm", procmsg_startup_commands,
+                                       idc.KeyPhraseWaitParameters(search_phrase="communicating through",
+                                                                   timeout_waiting_for_first_msg=5,
+                                                                   wait_time_after_last_msg=5))
 
 pmshell_startup_commands = ["drunc-process-manager-shell", f"grpc://localhost:{pm_port}"]
-pmshellapp = DAQControlApplication("pmshell", pmshell_startup_commands)
+pmshellapp = idc.DAQControlApplication("pmshell", pmshell_startup_commands,
+                                       idc.KeyPhraseWaitParameters(search_phrase="Ready"))
 
-drunc_startup_commands = ["drunc-unified-shell", f"grpc://localhost:{pm_port}", "<config_data_file>", "<config_session_name>", "<daq_session_name>"]
-druncapp = DAQControlApplication("drunc", drunc_startup_commands)
+drunc_startup_commands = ["drunc-unified-shell", f"grpc://localhost:{pm_port}",
+                          "<config_data_file>", "<config_session_name>", "<daq_session_name>"]
+druncapp = idc.DAQControlApplication("drunc", drunc_startup_commands,
+                                     idc.KeyPhraseWaitParameters(search_phrase="unified_shell ready"))
 
 # Packaging up the commands into DAQCommandSets
-cmd_set_1 = DAQCommandSet("drunc", dunerc_commands_1, CommandWaitParameters(style=CommandWaitStyle.ECHO))
-cmd_set_2 = DAQCommandSet("pmshell", pmshell_command, CommandWaitParameters(style=CommandWaitStyle.TIME))
-cmd_set_3 = DAQCommandSet("drunc", dunerc_commands_2, CommandWaitParameters(style=CommandWaitStyle.ECHO))
+cmd_set_1 = idc.DAQCommandSet("drunc", dunerc_commands_1, idc.EchoCommandWaitParameters())
+cmd_set_2 = idc.DAQCommandSet("pmshell", pmshell_command, wait_for_command_completion=False)
+cmd_set_3 = idc.DAQCommandSet("drunc", dunerc_commands_2, idc.EchoCommandWaitParameters())
+cmd_set_4 = idc.DAQCommandSet("pmshell", pmshell_command, idc.KeyPhraseWaitParameters(search_phrase="mlt"))
+cmd_set_5 = idc.DAQCommandSet("drunc", dunerc_commands_3, idc.EchoCommandWaitParameters())
 
 # Putting everything together into a DAQSessionIngredients object
 app_list = [ pmapp, pmshellapp, druncapp ]
-cmd_set_list = [ cmd_set_1, cmd_set_2, cmd_set_3 ]
-dsi = DAQSessionIngredients(app_list, cmd_set_list)
+cmd_set_list = [ cmd_set_1, cmd_set_2, cmd_set_3, cmd_set_4, cmd_set_5 ]
+dsi = idc.DAQSessionIngredients(app_list, cmd_set_list)
 
 # Declare the special variable that tells the integrationtest infrastructure what we want to run
 daq_session_ingredients = {"MultiRCAppSession": dsi}
@@ -188,7 +216,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Kurt Biery_
 
-_Date: Wed Aug 19 09:38:48 2026 -0500_
+_Date: Tue Sep 22 14:12:42 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/integrationtest/issues](https://github.com/DUNE-DAQ/integrationtest/issues)_
 </font>
