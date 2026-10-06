@@ -1353,9 +1353,9 @@ the comment `// NOLINT(<name of complaint>)` at the end of a line can be used - 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Your Name_
+_Author: Eric Flumerfelt_
 
-_Date: Wed Jun 10 13:31:29 2026 -0500_
+_Date: Tue Oct 6 09:25:27 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>
