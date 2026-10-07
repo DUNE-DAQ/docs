@@ -111,9 +111,9 @@ for package in $package_list ; do
     cd $tmpdir/$package
 
     if [[ "$package" =~ "daq-buildtools" ]]; then
-	git checkout fddaq-v5.6.2_for_docs
+	git checkout fddaq-v5.7.1_for_docs
     else
-	git checkout coredaq-v5.6.2 || git checkout fddaq-v5.6.2
+	git checkout coredaq-v5.7.1 || git checkout fddaq-v5.7.1
     fi
     echo $tmpdir/$package
 
