@@ -20,7 +20,7 @@ A manager for a repo serves to:
 **asiolibs**: Deniz Tuana Ergonul Uzun, Roland Sipos
 
 
-**cibmodules**: Nuno Barros, Marco Roda
+**cibmodules**: Marco Roda, David Rivera
 
 
 **cmdlib**: Marco Roda, Alex Tapper
@@ -164,7 +164,7 @@ A manager for a repo serves to:
 **hdf5libs**: Kurt Biery, Andrew Mogan
 
 
-**hermesmodules**: Alessandro Thea
+**hermesmodules**: Alessandro Thea, Shyam Bhuller, Roland Sipos
 
 
 **hsilibs**: Stoyan Trilov
@@ -194,7 +194,7 @@ A manager for a repo serves to:
 **logging**: Ron Rechenmacher, John Freeman
 
 
-**microservices**: Marco Roda
+**microservices**: Marco Roda, John Freeman
 
 
 **nddaqconf**: Asher Kaboth
@@ -215,13 +215,13 @@ A manager for a repo serves to:
 **oksconflibs**: John Freeman, Marco Roda
 
 
-**oksdalgen**: John Freeman
+**oksdalgen**: John Freeman, Andrew Mogan
 
 
-**okssystem**: John Freeman
+**okssystem**: John Freeman, Andrew Mogan
 
 
-**oksutils**: John Freeman
+**oksutils**: John Freeman, Andrew Mogan
 
 
 **opmonlib**: Marco Roda, Alex Tapper
@@ -242,7 +242,7 @@ A manager for a repo serves to:
 **rawdatautils**: Wes Ketchum
 
 
-**rcif**: John Freeman
+**rcif**: John Freeman, Andrew Mogan
 
 
 **resource-manager**: Marco Roda
@@ -251,13 +251,13 @@ A manager for a repo serves to:
 **restcmd**: Eric Flumerfelt
 
 
-**runconftools**: Marco Roda
+**runconftools**: Marco Roda, Henry Wallace
 
 
 **runconf-ui**: Henry Wallace, Marco Roda
 
 
-**serialization**: Eric Flumerfelt
+**serialization**: Eric Flumerfelt, John Freeman
 
 
 **snbmodules**: Eric Flumerfelt, Deniz Tuana Ergonul Uzun
@@ -296,7 +296,7 @@ A manager for a repo serves to:
 **triggeralgs**: Alessandro Thea
 
 
-**uhallibs**: John Freeman
+**uhallibs**: John Freeman, Andrew Mogan
 
 
 **utilities**: Eric Flumerfelt, Kurt Biery
@@ -313,7 +313,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Your Name_
 
-_Date: Tue Sep 22 11:15:16 2026 -0500_
+_Date: Thu Oct 8 09:40:22 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
