@@ -20,11 +20,11 @@ We have four types of branch in our workflow:
 
 * **Common branches** 
 
-    * The default branch of each repository. As of Mar-16-2026, the default branch for all repositories is `develop`. This branch exists permanently and, shared among all developers, is not generally meant to be worked on (i.e., committed to) directly; it can only be updated via Pull Requests (PRs). Changes to the `develop` branch are made via feature branches (described below). At a minimum it should be established that no changes to the `develop` branch should cause unit test failures (`dbt-build --unittest <repo name>`) or fail the simplest integration test (`pytest -v -s $DAQSYSTEMTEST_SHARE/integtest/minimal_system_quick_test.py`).
+    * The default branch of each repository. As of Mar-16-2026, the default branch for all repositories is `develop`. This branch exists permanently and, shared among all developers, is not generally meant to be worked on (i.e., committed to) directly; it can only be updated via Pull Requests (PRs). Changes to the `develop` branch are made via feature branches (described below). Unless the change is trivial (a version bump, a documentation change), it should be established that no changes to the `develop` branch should cause unit test failures (`dbt-build --unittest <repo name>`) or fail the simplest integration test (`dunedaq_integtest_bundle.sh -k minimal_system_quick_test`).
 
 * **Feature branches**
 
-    * Forked off of the `develop` branch, and where developers are meant to do their work for a specific task. When work on this branch is complete, it is merged into the `develop` branch via a PR.  
+    * Forked off of the `develop` branch, and where developers are meant to do their work for a specific task. When work on this branch is complete, it is merged into the `develop` branch via a PR.
 
 * **Release preparation branches** 
 
@@ -212,7 +212,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Your Name_
 
-_Date: Fri Oct 9 11:15:24 2026 -0500_
+_Date: Fri Oct 9 11:19:03 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
