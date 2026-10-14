@@ -10,7 +10,7 @@ To boot a `process_manager`, you will need to choose the most appropriate config
 
 * `ssh-standalone-paramiko-client.json`: `ssh` based implementation without a `kafka` feed. Uses paramiko library to manage ssh connections from the python process. Currently NOT maintained but may be revisited in future - use `ssh-standalone` only for now.
 
-* `ssh-pocket-kafka.json`: `ssh` based implementation with `pocket`'s `kafka` for message broadcasting.
+* `ssh-pocket-kafka.json`: `ssh` based implementation with `pocket`'s `kafka`.
 
 * `ssh-CERN-kafka.json`: `ssh` based implementation with `kafka` service running at ENH1.
 
@@ -23,18 +23,15 @@ Note that this runs the process manager service, _you will not be able to do any
 
 This goes as
 ```bash
-drunc-process-manager configuration_file
+drunc-process-manager configuration_file port_number
 ```
 
 ### Example
 To start the ssh version without kafka:
 ```bash
-drunc-process-manager ssh-standalone
-Using 'file://src/drunc/data/process_manager/ssh-standalone.json' as the ProcessManager configuration
-Starting 'SSHProcessManager'
-[12:43:26] INFO     "BroadcastSenderConfHandler": None                                                                                                                                                  configuration.py:25
-           INFO     "Controller": DummyAuthoriser ready                                                                                                                                              dummy_authoriser.py:13
-ProcessManager was started on np04-srv-019:10054
+drunc-process-manager ssh-standalone 50000
+[2026/09/16 10:27:23 UTC] INFO       process_manager.py:122                   drunc.process_manager      
+process_manager communicating through address np04-srv-028:50000
 ```
 Once this is done, you will not be able to send commands to the process from the current shell with the `process_manager` acting in the foreground. To interact with a standalone instance of `process_manager` you will need to connect to it (see below).
 
@@ -49,7 +46,7 @@ drunc-process-manager-shell grpc://<hostname>:<port>
 ### Example
 For the example spawned above, in the `process-manager-shell` this is
 ```bash
-drunc-process-manager-shell grpc://localhost:10054
+drunc-process-manager-shell grpc://np04-srv-028:10054
 ```
 
 ## Commands
@@ -81,21 +78,22 @@ Caveats:
 
 #### Example
 ```bash
-boot config/daqsystemtest/example-configs.data.xml local-1x1-config plasorak-test
-[14:10:01] INFO     "_convert_oks_to_boot_request":                                                                                                                 process_manager_driver.py:35
-                    /cvmfs/dunedaq-development.opensciencegrid.org/[...]/config/daqsystemtest/example-configs.data.xml
-           INFO     "collect_apps": Ignoring disabled app ru-02                                                                                                                 oks_parser.py:95
-           INFO     "process_manager_driver": RTE script was not supplied in the OKS configuration, using the one from local enviroment instead                     process_manager_driver.py:82
-'root-controller' (a61ffe46-dfa2-4a90-b888-7901fa5755b2) process started
-[...many more process booted...]
-'local-connection-server' (1285a63b-637b-4ac8-a30a-62cd419505bc) process started
-                                                ╭─────────────────────────────────────────────────────────────────────────────────────────────╮
-                                                │                                                                                             │
-                                                │                                                                                             │
-                                                │      Controller endpoint: 'localhost:3333', point your 'drunc-controller-shell' to it.      │
-                                                │                                                                                             │
-                                                │                                                                                             │
-                                                ╰─────────────────────────────────────────────────────────────────────────────────────────────╯
+drunc-process-manager > boot config/daqsystemtest/example-configs.data.xml local-1x1-config emir-test
+[2026/09/16 10:29:08 UTC] INFO       process_manager_driver.py:123            
+drunc.process_manager_driver                       Booting session emir-test
+...
+[2026/09/16 10:29:15 UTC] INFO       process_manager_driver.py:615            
+drunc.process_manager_driver                       Looking for top controller 'root-controller' in the 
+connectivity service at http://np04-srv-028:30221
+  Looking for root-controller on the connectivity service... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0:00:00 0:00:00
+   ╭─────────────────────────────────────────────────────────────────────────────────────────────────╮   
+   │                                                                                                 │   
+   │                                                                                                 │   
+   │      Controller endpoint: 'np04-srv-028:31190', point your 'drunc-controller-shell' to it.      │   
+   │                                                                                                 │   
+   │                                                                                                 │   
+   ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯   
+drunc-process-manager > 
 ```
 
 ### `ps`
@@ -125,9 +123,9 @@ See `terminate`'s documentation [here](https://dune-daq-sw.readthedocs.io/en/lat
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Aurash Karimi_
+_Author: Emir Muhammad_
 
-_Date: Fri Feb 6 17:11:29 2026 +0000_
+_Date: Wed Sep 16 12:30:14 2026 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>

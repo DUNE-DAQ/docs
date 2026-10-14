@@ -1,3 +1,6 @@
+# ers README
+<!-- DUNE DAQ modification notice: This file has been modified from the original ATLAS ers source for the DUNE DAQ project. Fork baseline commit: 8267df82a4f6fe6bf02c4014923eba19eddc4614 (2020-04-14). Renamed since fork: yes (from README.md to docs/README.md). Original copyright: Copyright (C) 2001-2020 CERN for the benefit of the ATLAS collaboration. Licensed under the Apache License, Version 2.0. -->
+
 # Error Reporting Service (ERS)
 
 The Error Reporting System (ERS) software package provides a common API for error reporting
@@ -518,9 +521,9 @@ catch( ers::Issue & ex ) {
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Wesley Ketchum_
 
-_Date: Fri Sep 3 21:10:03 2021 -0500_
+_Date: Wed Jun 10 14:24:46 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/ers/issues](https://github.com/DUNE-DAQ/ers/issues)_
 </font>

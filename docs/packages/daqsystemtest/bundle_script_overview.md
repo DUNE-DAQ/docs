@@ -115,7 +115,7 @@ The following tests will be run:
 
 The following tests will be run:
   asiolibs/socket_reader_test.py
-  crtmodules/crt_reader_test.py
+  crtmodules/crt_frame_builder_test.py
 
 (dbt) [biery@daq]$ dunedaq_integtest_bundle.sh -r local -k tp --list-only
 
@@ -146,7 +146,7 @@ The following tests will be run:
 Looking for integtests in _all_ repos...
 
 asiolibs/socket_reader_test.py
-crtmodules/crt_reader_test.py
+crtmodules/crt_frame_builder_test.py
 daqsystemtest/3ru_1df_multirun_test.py
 daqsystemtest/3ru_3df_multirun_test.py
 daqsystemtest/example_system_test.py
@@ -208,7 +208,7 @@ dfmodules/trmonrequestor_test.py
 Looking for integtests in the _asiolibs crtmodules_ repo(s)...
 
 asiolibs/socket_reader_test.py
-crtmodules/crt_reader_test.py
+crtmodules/crt_frame_builder_test.py
 
 (dbt) [biery@daq]$ list_available_integtests.sh asdf jklp
 
@@ -262,9 +262,9 @@ trigger
 _Last git commit to the markdown source of this page:_
 
 
-_Author: bieryAtFnal_
+_Author: Deniz Tuana Ergonul Uzun_
 
-_Date: Wed Jan 28 09:33:03 2026 -0600_
+_Date: Mon Mar 23 13:09:40 2026 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqsystemtest/issues](https://github.com/DUNE-DAQ/daqsystemtest/issues)_
 </font>

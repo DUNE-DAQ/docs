@@ -40,6 +40,8 @@ If are developing a user interface for `drunc`, you can get help here:
 
 * [Controller endpoint description](https://dune-daq-sw.readthedocs.io/en/latest/packages/drunc/Controller-interface)
 
+* [Graph](graph/) (interactive UML class/package diagrams)
+
 There is more developer information in the [drunc wiki](https://github.com/DUNE-DAQ/drunc/wiki).
 
 # Release notes
@@ -52,9 +54,9 @@ There is more developer information in the [drunc wiki](https://github.com/DUNE-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Pawel Plesniak_
+_Author: Emir Muhammad_
 
-_Date: Wed Dec 10 16:50:49 2025 +0100_
+_Date: Thu Sep 17 15:29:00 2026 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>

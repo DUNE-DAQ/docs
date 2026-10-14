@@ -708,16 +708,16 @@ If a class contains member data, each of its copy constructor, copy
 
 ### 5.4  Structs vs. Classes 
 
-Always use a `class` rather than `struct` unless you're creating:
+In general, use a `class` rather than a `struct` unless you're creating:
 
  - A passive object only meant to carry data
  - A small callable with an `operator()` defined
+ - An overlay type meant to structure access to a "blob-of-bytes"
 
-If using a struct to carry data, all fields must be public, and accessed directly rather than
-through getter/setter methods. Any functions must not provide behavior
-but should only be used to set up the data members, e.g., constructor,
-destructor, `initialize()`, `reset()`.
-
+...i.e., an object which can best be conceived of as a collection of
+data rather than a collection of behaviors. If using a struct to carry
+data, all fields must be public. Note that member functions for the
+convenience of users of `structs` are fine. 
 
 ### 5.5  Structs vs. Pairs and Tuples 
 
@@ -1353,9 +1353,9 @@ the comment `// NOLINT(<name of complaint>)` at the end of a line can be used - 
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Your Name_
+_Author: Eric Flumerfelt_
 
-_Date: Tue May 26 12:11:02 2026 -0500_
+_Date: Tue Oct 6 09:25:27 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/styleguide/issues](https://github.com/DUNE-DAQ/styleguide/issues)_
 </font>

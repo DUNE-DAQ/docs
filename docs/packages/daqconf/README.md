@@ -14,8 +14,8 @@ Commandline utility to generate a graphical flow diagram of a full configuration
 
 ## Manipulation Tools
 
-### `oks_enable`
-  Add Resource objects to or remove from the `disabled` relationship of a Session
+### `oks_include`
+  Add ExcludableEntity objects to or remove from the `excluded` relationship of a Session
 
 ### `consolidate`
   Merge the contents of several database files, putting all objects into a single output file. The output file's include list will contain the schema files included by the source databases (or their includes), but will not contain any object databases (the schema themselves).
@@ -32,8 +32,8 @@ Commandline utility to generate a graphical flow diagram of a full configuration
 ### `oks-format`
   Ensure that database files are in the "DBE format", alphabetized and with correct spacing
 
-### `oks_enable_tpg`
-  Enable or disable TPG for a Session's ReadoutApplications
+### `oks_include_tpg`
+  Include or exclude TPG for a Session's ReadoutApplications
 
 ### `validate`
   Attempt to determine if a given Session configuration is valid and does not contain common errors
@@ -81,9 +81,9 @@ you specify on the commad line.
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Henry Wallace_
+_Author: Your Name_
 
-_Date: Wed Feb 4 09:59:28 2026 +0000_
+_Date: Fri Aug 21 21:15:59 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqconf/issues](https://github.com/DUNE-DAQ/daqconf/issues)_
 </font>

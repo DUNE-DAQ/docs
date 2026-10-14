@@ -28,6 +28,8 @@ To learn how to keep track of assets (files, etc. which affect the behavior of t
 
 Tools to simplify DAQ development in Python can be found in [daqpytools](packages/daqpytools/README.md)
 
+Each repo has one or more managers who can serve as points of contact for the repo; the list of them is [here](packages/daq-release/repo_managers.md)
+
 --------------
 
 For the other packages, please click on one of the links below. To learn how to edit a package's documentation, click [here](editing_package_documentation.md). Packages marked with an asterix don't yet have any official documentation; please see their Issues page to remedy this. 

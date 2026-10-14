@@ -15,6 +15,7 @@ This documentation is split into two sections depending on your role:
 |---|---|
 | [Tutorial](./tutorial.md) | Get a working logger running from scratch |
 | [Concepts & explanation](./explanation.md) | Understand how Python logging and daqpytools work |
+| [Severity levels](./severitylevels.md) | Quick reference for `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL` |
 | [How to use handlers and filters](./how-to/use-handlers.md) | Descriptions and examples for each handler and filter |
 | [How to route messages](./how-to/route-messages.md) | Direct records to specific handlers using HandlerType and LogHandlerConf |
 | [How to add handlers at runtime](./how-to/add-handlers-at-runtime.md) | Attach handlers after logger creation; pass kwargs |
@@ -23,6 +24,7 @@ This documentation is split into two sections depending on your role:
 | [Best practices](./how-to/best-practices.md) | Recommended patterns for structuring logging in your application |
 | [Troubleshooting](./reference/troubleshooting.md) | Common symptoms, causes, and fixes |
 | [API reference](../APIref/) | Auto-generated kwargs, types, and defaults for all public APIs (redirects to MKDocs website) |
+| [Environment configs](./environment-configs.md) | Extra information on how to configure your local copy of the logging. |
 
 
 
@@ -32,9 +34,9 @@ This documentation is split into two sections depending on your role:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Emir Muhammad_
+_Author: Pawel Plesniak_
 
-_Date: Wed Apr 15 15:41:46 2026 +0200_
+_Date: Tue Jul 7 17:11:42 2026 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daqpytools/issues](https://github.com/DUNE-DAQ/daqpytools/issues)_
 </font>
