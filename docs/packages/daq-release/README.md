@@ -2,11 +2,11 @@
 
 [![AL9 Spack Nightly Workflow (dev, v5) ](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-alma9.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/build-nightly-release-alma9.yml)
 
-[![Nightly v5 Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/integration_tests.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/integration_tests.yml)
+[![Core Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/integration_tests.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/integration_tests.yml)
+
+[![Extended Integration Test Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/extended_integration_tests.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/extended_integration_tests.yml)
 
 [![Nightly daq-buildtools Workflow](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-dbt-tests.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-dbt-tests.yml)
-
-[![Nightly unit tests and clang format check](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-code-check.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/nightly-code-check.yml)
 
 [![Weekly linting](https://github.com/DUNE-DAQ/daq-release/actions/workflows/weekly-linting.yml/badge.svg)](https://github.com/DUNE-DAQ/daq-release/actions/workflows/weekly-linting.yml)
 
@@ -56,9 +56,9 @@ This is a repo containing DUNE DAQ release making tools, configuration files, an
 _Last git commit to the markdown source of this page:_
 
 
-_Author: John Freeman_
+_Author: Andrew Mogan_
 
-_Date: Fri Feb 13 15:02:55 2026 -0600_
+_Date: Thu Oct 15 09:38:17 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
