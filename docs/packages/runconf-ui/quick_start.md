@@ -23,10 +23,10 @@ Environment setup scripts are provided to replicate the environment required for
 ```bash
 source runconf_<YOUR DETECTOR NAME>_env_setup.sh
 ```
+Please note that these are just helpers. In a deployment context, daq experts can completely disregard them and/or develop new ones for other detectors not listed in this repo.
+Please check the script directory of this repo to see the available environments. 
 
-Currently provided detectors are `np02` and `np04`.
-
-The app can be booted in two modes (`-t`): `local` or `remote`. Remote mode requires the ops and base repositories to be provided as well as the name of the configuration file (containing a `Session`) you wish to use. Emulation is not a separate mode: select it by passing the emulation apparatus (e.g. `-a np02_emu`) with either mode.
+The app can be booted in two modes (`-t`): `local` or `remote`. Remote mode requires the ops and base repositories to be provided as well as the name of the configuration file (containing a `Session`) you wish to use. Emulation is not a separate mode: select it by passing the emulation apparatus (e.g. `-a np02_emu`) with either mode. Note that from the point of view of `runconf-ui` there is no technical difference between emulation and real detector setups.
 
 ### Options
 
@@ -121,9 +121,9 @@ Adjustable elements (trigger rates, etc.) are accessed via the **Adjustable** ta
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Your Name_
+_Author: Marco Roda_
 
-_Date: Wed Sep 9 10:09:34 2026 -0500_
+_Date: Fri Sep 25 18:03:11 2026 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconf-ui/issues](https://github.com/DUNE-DAQ/runconf-ui/issues)_
 </font>

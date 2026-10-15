@@ -9,10 +9,12 @@ Shifters will use these interfaces indirectly via the shifter interface.
 
 ## High level view
 According to our configuration model, the different configurations to be used for operations are stored in different branches of operation repositories. 
-There is one operation repository for each apparatus: `np02`, `np04`. To be decided if coldboxes will have their own separate repositories. 
-The current repositores are https://gitlab.cern.ch/dune-daq/online/np02-configs-operation and https://gitlab.cern.ch/dune-daq/online/np04-configs-operations but NO ONE should interface directly with those repositories. 
-Changes should only be performed using the interfaces of this package. 
-The branches in the operation repoitories are derived using configuration generation functions (known as generators), starting from a base repository. 
+No one is expected to interface directly with those repositories: all operations are expected to be done via the interfaces defined in `runconftools`.
+There is one operation repository for each apparatus.  
+The definition of which apparati are available depends on the base repository. 
+In the interfaces defined in `runconftools` we simply provide default values for apparati and their URLs. By no means should this stop the development of other repos.
+
+The branches in the operation repositories are derived using configuration generation functions (known as generators), starting from a base repository. 
 The base repository contains both OKS objects and generators used to create operation configurations. 
 
 ## Configuration branches
@@ -75,7 +77,7 @@ Usage: cpm-setup [OPTIONS] PATH
   inspection.
 
 Options:
-  -a, --apparatus [np02|np04]  Selection of the apparatus  [default: np02]
+  -a, --apparatus TEXT         Selection of the apparatus  [default: np02]
   --base_url TEXT              [default: https://gitlab.cern.ch/dune-
                                daq/online/ehn1-daqconfigs.git]
   --operation_url TEXT
@@ -109,7 +111,7 @@ Usage: cpm-update [OPTIONS] PATH
   branches are not pushed, use -p  or --push-only to perform the push
 
 Options:
-  -a, --apparatus [np02|np04]  Selection of the apparatus  [default: np02]
+  -a, --apparatus TEXT         Selection of the apparatus  [default: np02]
   --base_url TEXT              Git location of the remote base repo  [default:
                                ssh://git@gitlab.cern.ch:7999/dune-
                                daq/online/ehn1-daqconfigs.git]
@@ -165,7 +167,7 @@ Usage: cpm-purge [OPTIONS] PATH
   a given release
 
 Options:
-  -a, --apparatus [np02|np04]  Selection of the apparatus  [default: np02]
+  -a, --apparatus TEXT         Selection of the apparatus  [default: np02]
   --base_url TEXT              Git location of the remote base repo  [default:
                                ssh://git@gitlab.cern.ch:7999/dune-
                                daq/online/ehn1-daqconfigs.git]
@@ -192,7 +194,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Marco Roda_
 
-_Date: Wed Jun 25 15:08:04 2025 +0200_
+_Date: Fri Sep 25 17:57:02 2026 +0100_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/runconftools/issues](https://github.com/DUNE-DAQ/runconftools/issues)_
 </font>
