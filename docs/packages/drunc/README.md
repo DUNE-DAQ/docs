@@ -3,6 +3,8 @@
 [![Lint](https://github.com/DUNE-DAQ/drunc/actions/workflows/lint.yml/badge.svg)](https://github.com/DUNE-DAQ/drunc/actions/workflows/lint.yml)
 [![pytest](https://github.com/DUNE-DAQ/drunc/actions/workflows/run_pytest.yml/badge.svg)](https://github.com/DUNE-DAQ/drunc/actions/workflows/run_pytest.yml)
 
+[Develop test coverage report](https://dune-daq.github.io/drunc/coverage/develop/)
+
 Users - see the [documentation](https://dune-daq.github.io/drunc/)
 
 This software defines a flexible run control infrastructure for a distributed DAQ system defined in a set of configuration files used at run time for DUNE. Operation of the experiment is defined through a finite state machine (FSM) which describes the operational state of the DAQ.
@@ -54,9 +56,9 @@ There is more developer information in the [drunc wiki](https://github.com/DUNE-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Emir Muhammad_
+_Author: PawelPlesniak_
 
-_Date: Thu Sep 17 15:29:00 2026 +0200_
+_Date: Tue Oct 20 22:09:44 2026 +0200_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
