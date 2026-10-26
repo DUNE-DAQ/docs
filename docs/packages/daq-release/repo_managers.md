@@ -167,7 +167,7 @@ A manager for a repo serves to:
 **hermesmodules**: Alessandro Thea, Shyam Bhuller, Roland Sipos
 
 
-**hsilibs**: Stoyan Trilov
+**hsilibs**: Stoyan Trilov, Dennis Lindebaum
 
 
 **integrationtest**: Kurt Biery, John Freeman
@@ -275,10 +275,10 @@ A manager for a repo serves to:
 **template-repo**: John Freeman, Andrew Mogan
 
 
-**timing**: Stoyan Trilov
+**timing**: Stoyan Trilov, Dennis Lindebaum
 
 
-**timinglibs**: Stoyan Trilov
+**timinglibs**: Stoyan Trilov, Dennis Lindebaum
 
 
 **tpglibs**: Shyam Bhuller, Alessandro Thea
@@ -313,7 +313,7 @@ _Last git commit to the markdown source of this page:_
 
 _Author: Your Name_
 
-_Date: Thu Oct 8 09:40:22 2026 -0500_
+_Date: Mon Oct 26 08:47:58 2026 -0500_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
