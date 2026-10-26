@@ -1,7 +1,6 @@
 # DUNE Run Control (drunc)
 
-[![Lint](https://github.com/DUNE-DAQ/drunc/actions/workflows/lint.yml/badge.svg)](https://github.com/DUNE-DAQ/drunc/actions/workflows/lint.yml)
-[![pytest](https://github.com/DUNE-DAQ/drunc/actions/workflows/run_pytest.yml/badge.svg)](https://github.com/DUNE-DAQ/drunc/actions/workflows/run_pytest.yml)
+[![Tests](https://github.com/DUNE-DAQ/drunc/actions/workflows/testing.yml/badge.svg?branch=develop)](https://github.com/DUNE-DAQ/drunc/actions/workflows/testing.yml)
 
 [Develop test coverage report](https://dune-daq.github.io/drunc/coverage/develop/)
 
@@ -56,9 +55,9 @@ There is more developer information in the [drunc wiki](https://github.com/DUNE-
 _Last git commit to the markdown source of this page:_
 
 
-_Author: PawelPlesniak_
+_Author: Aurash Karimi_
 
-_Date: Tue Oct 20 22:09:44 2026 +0200_
+_Date: Thu Oct 22 10:24:43 2026 +0000_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/drunc/issues](https://github.com/DUNE-DAQ/drunc/issues)_
 </font>
