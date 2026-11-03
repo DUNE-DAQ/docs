@@ -251,6 +251,9 @@ A manager for a repo serves to:
 **restcmd**: Eric Flumerfelt
 
 
+**runconfschema**: Marco Roda, Pawel Plesniak, Henry Wallace
+
+
 **runconftools**: Marco Roda, Henry Wallace
 
 
@@ -311,9 +314,9 @@ A manager for a repo serves to:
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Your Name_
+_Author: John Freeman_
 
-_Date: Mon Oct 26 08:47:58 2026 -0500_
+_Date: Tue Nov 3 14:14:55 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-release/issues](https://github.com/DUNE-DAQ/daq-release/issues)_
 </font>
