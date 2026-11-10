@@ -1,6 +1,6 @@
 # DUNE DAQ Buildtools
 
-_This document was last edited Sep-11-2026_
+_This document was last edited Nov-10-2026_
 
 `daq-buildtools` is the toolset to simplify the development of DUNE DAQ packages. It provides environment and building utilities for the DAQ Suite.
 
@@ -16,12 +16,12 @@ Simply do:
 source /cvmfs/dunedaq.opensciencegrid.org/setup_dunedaq.sh
 setup_dbt latest
 ```
-Note that `latest` is aliased to `v8.14.0`. 
+Note that `latest` is aliased to `v8.14.3`. 
 
 After running these two commands, then you'll see something like:
 ```
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.14.0/bin -> PATH
-Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.14.0/scripts -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.14.3/bin -> PATH
+Added /cvmfs/dunedaq.opensciencegrid.org/tools/dbt/v8.14.3/scripts -> PATH
 DBT setuptools loaded
 ```
 
@@ -35,10 +35,10 @@ Each time that you log into a fresh Linux shell and want to either (1) set up an
 If you only want access to a DUNE DAQ software release (its executables, etc.) without actually developing DUNE DAQ software itself, you'll want to run a release from cvmfs. Please note that in general, stable releases (especially patch stable releases) are intended for this scenario, and _not_ for development. After setting up daq-buildtools, you can simply run the following command if you wish to use a stable release:
 
 ```sh
-dbt-setup-release <release> # fddaq-v5.6.2-a9 the latest stable release as of Jul-16-2026
+dbt-setup-release <release> # fddaq-v5.7.1-a9 the latest stable release as of Oct-07-2026
 ```
 
-Note that if you set up a stable release you'll get a message along the lines of `Release "fddaq-v5.6.2-a9" requested; interpreting this as release "fddaq-v5.6.2-a9-1"`; this simply reflects that the latest build iteration of the stable release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
+Note that if you set up a stable release you'll get a message along the lines of `Release "fddaq-v5.7.1-a9" requested; interpreting this as release "fddaq-v5.7.1-a9-1"`; this simply reflects that the latest build iteration of the stable release (`-1`, `-2`, etc.) has been alias'd out for the convenience of the user.
 
 Instead of a stable release you can also set up nightly releases or candidate releases using the same arguments as are described later for `dbt-create`; e.g. if you want to set up candidate release `fddaq-v5.2.0-rc3-a9` you can do:
 ```
@@ -169,7 +169,10 @@ dbt-build --clean --unittest  # Blow away the contents of ./build, run config+ge
 ```
 ..where in the above case, you blow away the contents of `./build`,  run config+generate+build, install the result in `$DBT_INSTALL_DIR` and then run the unit tests. Be aware that for many packages, unit tests will only (fully) work if you've also rerun `dbt-workarea-env`. 
 
-To run any integration tests your repos may contain (e.g., `dfmodules`) , you can pass the `--integtest` option to `dbt-build`.  
+Before `v8.14.3` of daq-buildtools (released Nov-10-2026), there was
+an `--integtest` option to run integration tests from your local
+repos. This is now deprecated and the expectation is that developers
+will use `dunedaq_integtest_bundle.sh` to run integration tests.
 
 To check for deviations from the coding rules described in the [DUNE C++ Style Guide](https://dune-daq-sw.readthedocs.io/en/latest/packages/styleguide/), run with the `--lint` option:
 ```
@@ -326,9 +329,9 @@ produced and placed in your installation area (`$DBT_INSTALL_DIR`). You generall
 _Last git commit to the markdown source of this page:_
 
 
-_Author: Your Name_
+_Author: John Freeman_
 
-_Date: Fri Sep 11 15:13:31 2026 -0500_
+_Date: Tue Nov 10 11:02:26 2026 -0600_
 
 _If you see a problem with the documentation on this page, please file an Issue at [https://github.com/DUNE-DAQ/daq-buildtools/issues](https://github.com/DUNE-DAQ/daq-buildtools/issues)_
 </font>
