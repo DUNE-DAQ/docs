@@ -275,6 +275,8 @@ nav:
              - About confmodel: packages/confmodel/README.md
           - connectivityserver:
              - About connectivityserver: packages/connectivityserver/README.md
+             - packages/connectivityserver/Architecture.md
+             - packages/connectivityserver/Connections.md
              - packages/connectivityserver/deploy/README.md
           - daqconf:
              - About daqconf: packages/daqconf/README.md
